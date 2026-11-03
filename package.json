@@ -1,0 +1,12 @@
+{
+  "dependencies": {},
+  "description": "Haxe externs for hxmc: the declarations iOS and Mac Catalyst share (UIKit and most iOS frameworks).",
+  "haxe": {
+    "classPath": "src",
+    "name": "apple-shared-uikit"
+  },
+  "license": "MIT",
+  "name": "@hx-objc/apple-shared-uikit",
+  "repository": "github:hx-objc/apple-shared-uikit",
+  "version": "0.1.0"
+}
