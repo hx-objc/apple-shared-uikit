@@ -11,41 +11,77 @@ import foundation.NSLocale;
 import foundation.NSStringArg;
 import foundation.NSTimeZone;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarView extends UIView {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICalendarView extends UIView {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICalendarView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearance():UICalendarView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):UICalendarView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UICalendarView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<UICalendarViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<UICalendarViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<UICalendarViewDelegate>):Null<UICalendarViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectionBehavior(get, set) : Null<UICalendarSelection>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectionBehavior():Null<UICalendarSelection>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectionBehavior(v:Null<UICalendarSelection>):Null<UICalendarSelection>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var locale(get, set) : NSLocale;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_locale():NSLocale;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_locale(v:NSLocale):NSLocale;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var calendar(get, set) : NSCalendar;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_calendar():NSCalendar;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_calendar(v:NSCalendar):NSCalendar;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var timeZone(get, set) : Null<NSTimeZone>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_timeZone():Null<NSTimeZone>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_timeZone(v:Null<NSTimeZone>):Null<NSTimeZone>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var fontDesign(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_fontDesign():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_fontDesign(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var availableDateRange(get, set) : NSDateInterval;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_availableDateRange():NSDateInterval;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_availableDateRange(v:NSDateInterval):NSDateInterval;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var visibleDateComponents(get, set) : NSDateComponents;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_visibleDateComponents():NSDateComponents;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_visibleDateComponents(v:NSDateComponents):NSDateComponents;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var wantsDateDecorations(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_wantsDateDecorations():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_wantsDateDecorations(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setVisibleDateComponents(dateComponents:NSDateComponents, animated:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function reloadDecorationsForDateComponents(dates:NSArray<NSDateComponents>, animated:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UICalendarView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<UICalendarView>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithFrame(frame:CGRect):UICalendarView;
 }

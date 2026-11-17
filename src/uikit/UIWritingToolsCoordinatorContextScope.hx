@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorContextScope(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var UserSelection = 0;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var FullDocument = 1;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var VisibleArea = 2;
 	inline function new(v:I64) this = v;
 }

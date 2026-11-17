@@ -23,8 +23,11 @@ import objc.NSObject;
 	var playsHapticsOnly(get, set) : Bool;
 	function get_playsHapticsOnly():Bool;
 	function set_playsHapticsOnly(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var playsAudioOnly(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_playsAudioOnly():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_playsAudioOnly(v:Bool):Bool;
 	var isMutedForAudio(get, set) : Bool;
 	function get_isMutedForAudio():Bool;

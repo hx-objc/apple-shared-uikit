@@ -46,6 +46,7 @@ import foundation.NSString;
 	public static final MPMediaItemPropertyIsCloudItem : NSString;
 	public static final MPMediaItemPropertyIsCompilation : NSString;
 	public static final MPMediaItemPropertyIsExplicit : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final MPMediaItemPropertyIsPreorder : NSString;
 	public static final MPMediaItemPropertyLastPlayedDate : NSString;
 	public static final MPMediaItemPropertyLyrics : NSString;
@@ -134,22 +135,29 @@ import foundation.NSString;
 	public static final MPMusicPlayerControllerQueueDidChangeNotification : NSString;
 	public static final MPMusicPlayerControllerVolumeDidChangeNotification : NSString;
 	public static final MPNowPlayingInfoCollectionIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final MPNowPlayingInfoProperty1x1AnimatedArtwork : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final MPNowPlayingInfoProperty3x4AnimatedArtwork : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final MPNowPlayingInfoPropertyAdTimeRanges : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final MPNowPlayingInfoPropertyAppEntityIdentifiers : NSString;
 	public static final MPNowPlayingInfoPropertyAssetURL : NSString;
 	public static final MPNowPlayingInfoPropertyAvailableLanguageOptions : NSString;
 	public static final MPNowPlayingInfoPropertyChapterCount : NSString;
 	public static final MPNowPlayingInfoPropertyChapterNumber : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final MPNowPlayingInfoPropertyCreditsStartTime : NSString;
 	public static final MPNowPlayingInfoPropertyCurrentLanguageOptions : NSString;
 	public static final MPNowPlayingInfoPropertyCurrentPlaybackDate : NSString;
 	public static final MPNowPlayingInfoPropertyDefaultPlaybackRate : NSString;
 	public static final MPNowPlayingInfoPropertyElapsedPlaybackTime : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MPNowPlayingInfoPropertyExcludeFromSuggestions : NSString;
 	public static final MPNowPlayingInfoPropertyExternalContentIdentifier : NSString;
 	public static final MPNowPlayingInfoPropertyExternalUserProfileIdentifier : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MPNowPlayingInfoPropertyInternationalStandardRecordingCode : NSString;
 	public static final MPNowPlayingInfoPropertyIsLiveStream : NSString;
 	public static final MPNowPlayingInfoPropertyMediaType : NSString;

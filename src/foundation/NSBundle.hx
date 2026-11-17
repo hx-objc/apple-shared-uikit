@@ -90,7 +90,9 @@ import objc.NSObject;
 	overload function pathsForResourcesOfType(ext:Null<NSStringArg>, inDirectory:Null<NSStringArg>):NSArray<NSString>;
 	overload function pathsForResourcesOfType(ext:Null<NSStringArg>, inDirectory:Null<NSStringArg>, forLocalization:Null<NSStringArg>):NSArray<NSString>;
 	overload function localizedStringForKey(key:NSStringArg, value:Null<NSStringArg>, table:Null<NSStringArg>):NSString;
+	@:hxmc.available(macos >= 12.0)
 	function localizedAttributedStringForKey(key:NSStringArg, value:Null<NSStringArg>, table:Null<NSStringArg>):NSAttributedString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function localizedStringForKey(key:NSStringArg, value:Null<NSStringArg>, table:Null<NSStringArg>, localizations:NSArray<NSString>):NSString;
 	function objectForInfoDictionaryKey(key:NSStringArg):Null<Id>;
 	function classNamed(className:NSStringArg):ObjCClass;

@@ -3,13 +3,21 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarViewDecoration extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICalendarViewDecoration extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithImage(image:Null<UIImage>, color:Null<UIColor>, size:UICalendarViewDecorationSize):UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithCustomViewProvider(customViewProvider:() -> UIView):UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function decorationWithColor(color:Null<UIColor>, size:UICalendarViewDecorationSize):UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function decorationWithImage(image:Null<UIImage>):UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function decorationWithImage(image:Null<UIImage>, color:Null<UIColor>, size:UICalendarViewDecorationSize):UICalendarViewDecoration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function decorationWithCustomViewProvider(customViewProvider:() -> UIView):UICalendarViewDecoration;
 }

@@ -54,14 +54,20 @@ import objc.NSObject;
 	function get_firmwareVersion():Null<NSStringArg>;
 	var supportsIdentify(get, never) : Bool;
 	function get_supportsIdentify():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var matterNodeID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_matterNodeID():Null<NSNumberArg>;
 	var cameraProfiles(get, never) : Null<NSArray<HMCameraProfile>>;
 	function get_cameraProfiles():Null<NSArray<HMCameraProfile>>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var vendorAccessory(get, never) : Bool;
 	@:selector("isVendorAccessory")
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_vendorAccessory():Bool;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var HAPInstanceID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_HAPInstanceID():Null<NSNumberArg>;
 	function updateName(name:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
 	function identifyWithCompletionHandler(completion:Null<NSError> -> Void):Void;

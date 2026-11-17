@@ -4,16 +4,24 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKPaymentAuthorizationStatus(I64) to I64 {
+	@:hxmc.available(macos >= 11.0)
 	var Success = 0;
+	@:hxmc.available(macos >= 11.0)
 	var Failure = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var InvalidBillingPostalAddress = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var InvalidShippingPostalAddress = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var InvalidShippingContact = 4;
+	@:hxmc.available(macos >= 11.0)
 	var PINRequired = 5;
+	@:hxmc.available(macos >= 11.0)
 	var PINIncorrect = 6;
+	@:hxmc.available(macos >= 11.0)
 	var PINLockout = 7;
 	inline function new(v:I64) this = v;
 }

@@ -7,9 +7,13 @@ import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.objc("MTLRenderCommandEncoder") extern interface MTLRenderCommandEncoder extends MTLCommandEncoder {
+	@:hxmc.available(macos >= 11.0)
 	var tileWidth(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_tileWidth():I64;
+	@:hxmc.available(macos >= 11.0)
 	var tileHeight(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_tileHeight():I64;
 	function setRenderPipelineState(pipelineState:MTLRenderPipelineState):Void;
 	@:selector("setVertexBytes:length:atIndex:")
@@ -21,12 +25,16 @@ import hxmc.unsafe.Ptr;
 	@:selector("setVertexBuffers:offsets:withRange:")
 	function setVertexBuffersOffsetsWithRange(buffers:Ptr, offsets:Ptr, withRange:NSRange):Void;
 	@:selector("setVertexBuffer:offset:attributeStride:atIndex:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setVertexBufferOffsetAttributeStrideAtIndex(buffer:Null<MTLBuffer>, offset:I64, attributeStride:I64, atIndex:I64):Void;
 	@:selector("setVertexBuffers:offsets:attributeStrides:withRange:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setVertexBuffersOffsetsAttributeStridesWithRange(buffers:Ptr, offsets:Ptr, attributeStrides:Ptr, withRange:NSRange):Void;
 	@:selector("setVertexBufferOffset:attributeStride:atIndex:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setVertexBufferOffsetAttributeStrideAtIndex_(offset:I64, attributeStride:I64, atIndex:I64):Void;
 	@:selector("setVertexBytes:length:attributeStride:atIndex:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setVertexBytesLengthAttributeStrideAtIndex(bytes:Ptr, length:I64, attributeStride:I64, atIndex:I64):Void;
 	function setVertexTexture(texture:Null<MTLTexture>, atIndex:I64):Void;
 	function setVertexTextures(textures:Ptr, withRange:NSRange):Void;
@@ -38,18 +46,25 @@ import hxmc.unsafe.Ptr;
 	function setVertexSamplerStateLodMinClampLodMaxClampAtIndex(sampler:Null<MTLSamplerState>, lodMinClamp:Float32, lodMaxClamp:Float32, atIndex:I64):Void;
 	@:selector("setVertexSamplerStates:lodMinClamps:lodMaxClamps:withRange:")
 	function setVertexSamplerStatesLodMinClampsLodMaxClampsWithRange(samplers:Ptr, lodMinClamps:Ptr, lodMaxClamps:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setVertexVisibleFunctionTable(functionTable:Null<MTLVisibleFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setVertexVisibleFunctionTables(functionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setVertexIntersectionFunctionTable(intersectionFunctionTable:Null<MTLIntersectionFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setVertexIntersectionFunctionTables(intersectionFunctionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setVertexAccelerationStructure(accelerationStructure:Null<MTLAccelerationStructure>, atBufferIndex:I64):Void;
 	function setViewport(viewport:MTLViewport):Void;
 	function setViewports(viewports:Ptr, count:I64):Void;
 	function setFrontFacingWinding(frontFacingWinding:MTLWinding):Void;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function setVertexAmplificationCount(count:I64, viewMappings:Ptr):Void;
 	function setCullMode(cullMode:MTLCullMode):Void;
 	function setDepthClipMode(depthClipMode:MTLDepthClipMode):Void;
 	function setDepthBias(depthBias:Float32, slopeScale:Float32, clamp:Float32):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setDepthTestMinBound(minBound:Float32, maxBound:Float32):Void;
 	function setScissorRect(rect:MTLScissorRect):Void;
 	function setScissorRects(scissorRects:Ptr, count:I64):Void;
@@ -68,10 +83,15 @@ import hxmc.unsafe.Ptr;
 	function setFragmentSamplerStateLodMinClampLodMaxClampAtIndex(sampler:Null<MTLSamplerState>, lodMinClamp:Float32, lodMaxClamp:Float32, atIndex:I64):Void;
 	@:selector("setFragmentSamplerStates:lodMinClamps:lodMaxClamps:withRange:")
 	function setFragmentSamplerStatesLodMinClampsLodMaxClampsWithRange(samplers:Ptr, lodMinClamps:Ptr, lodMaxClamps:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setFragmentVisibleFunctionTable(functionTable:Null<MTLVisibleFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setFragmentVisibleFunctionTables(functionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setFragmentIntersectionFunctionTable(intersectionFunctionTable:Null<MTLIntersectionFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setFragmentIntersectionFunctionTables(intersectionFunctionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setFragmentAccelerationStructure(accelerationStructure:Null<MTLAccelerationStructure>, atBufferIndex:I64):Void;
 	function setBlendColorRed(red:Float32, green:Float32, blue:Float32, alpha:Float32):Void;
 	function setDepthStencilState(depthStencilState:Null<MTLDepthStencilState>):Void;
@@ -87,37 +107,61 @@ import hxmc.unsafe.Ptr;
 	function setDepthStoreActionOptions(storeActionOptions:MTLStoreActionOptions):Void;
 	@:deprecated
 	function setStencilStoreActionOptions(storeActionOptions:MTLStoreActionOptions):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectBytes(bytes:Ptr, length:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectBuffer(buffer:Null<MTLBuffer>, offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectBufferOffset(offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectBuffers(buffers:Ptr, offsets:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectTexture(texture:Null<MTLTexture>, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectTextures(textures:Ptr, withRange:NSRange):Void;
 	@:selector("setObjectSamplerState:atIndex:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectSamplerStateAtIndex(sampler:Null<MTLSamplerState>, atIndex:I64):Void;
 	@:selector("setObjectSamplerStates:withRange:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectSamplerStatesWithRange(samplers:Ptr, withRange:NSRange):Void;
 	@:selector("setObjectSamplerState:lodMinClamp:lodMaxClamp:atIndex:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectSamplerStateLodMinClampLodMaxClampAtIndex(sampler:Null<MTLSamplerState>, lodMinClamp:Float32, lodMaxClamp:Float32, atIndex:I64):Void;
 	@:selector("setObjectSamplerStates:lodMinClamps:lodMaxClamps:withRange:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectSamplerStatesLodMinClampsLodMaxClampsWithRange(samplers:Ptr, lodMinClamps:Ptr, lodMaxClamps:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setObjectThreadgroupMemoryLength(length:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshBytes(bytes:Ptr, length:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshBuffer(buffer:Null<MTLBuffer>, offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshBufferOffset(offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshBuffers(buffers:Ptr, offsets:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshTexture(texture:Null<MTLTexture>, atIndex:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshTextures(textures:Ptr, withRange:NSRange):Void;
 	@:selector("setMeshSamplerState:atIndex:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshSamplerStateAtIndex(sampler:Null<MTLSamplerState>, atIndex:I64):Void;
 	@:selector("setMeshSamplerStates:withRange:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshSamplerStatesWithRange(samplers:Ptr, withRange:NSRange):Void;
 	@:selector("setMeshSamplerState:lodMinClamp:lodMaxClamp:atIndex:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshSamplerStateLodMinClampLodMaxClampAtIndex(sampler:Null<MTLSamplerState>, lodMinClamp:Float32, lodMaxClamp:Float32, atIndex:I64):Void;
 	@:selector("setMeshSamplerStates:lodMinClamps:lodMaxClamps:withRange:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function setMeshSamplerStatesLodMinClampsLodMaxClampsWithRange(samplers:Ptr, lodMinClamps:Ptr, lodMaxClamps:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function drawMeshThreadgroups(threadgroupsPerGrid:MTLSize, threadsPerObjectThreadgroup:MTLSize, threadsPerMeshThreadgroup:MTLSize):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function drawMeshThreads(threadsPerGrid:MTLSize, threadsPerObjectThreadgroup:MTLSize, threadsPerMeshThreadgroup:MTLSize):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function drawMeshThreadgroupsWithIndirectBuffer(indirectBuffer:MTLBuffer, indirectBufferOffset:I64, threadsPerObjectThreadgroup:MTLSize, threadsPerMeshThreadgroup:MTLSize):Void;
 	@:selector("drawPrimitives:vertexStart:vertexCount:instanceCount:")
 	function drawPrimitivesVertexStartVertexCountInstanceCount(primitiveType:MTLPrimitiveType, vertexStart:I64, vertexCount:I64, instanceCount:I64):Void;
@@ -147,26 +191,43 @@ import hxmc.unsafe.Ptr;
 	function drawIndexedPatchesPatchStartPatchCountPatchIndexBufferPatchIndexBufferOffsetControlPointIndexBufferControlPointIndexBufferOffsetInstanceCountBaseInstance(numberOfPatchControlPoints:I64, patchStart:I64, patchCount:I64, patchIndexBuffer:Null<MTLBuffer>, patchIndexBufferOffset:I64, controlPointIndexBuffer:MTLBuffer, controlPointIndexBufferOffset:I64, instanceCount:I64, baseInstance:I64):Void;
 	@:selector("drawIndexedPatches:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:indirectBuffer:indirectBufferOffset:")
 	function drawIndexedPatchesPatchIndexBufferPatchIndexBufferOffsetControlPointIndexBufferControlPointIndexBufferOffsetIndirectBufferIndirectBufferOffset(numberOfPatchControlPoints:I64, patchIndexBuffer:Null<MTLBuffer>, patchIndexBufferOffset:I64, controlPointIndexBuffer:MTLBuffer, controlPointIndexBufferOffset:I64, indirectBuffer:MTLBuffer, indirectBufferOffset:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileBytes(bytes:Ptr, length:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileBuffer(buffer:Null<MTLBuffer>, offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileBufferOffset(offset:I64, atIndex:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileBuffers(buffers:Ptr, offsets:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileTexture(texture:Null<MTLTexture>, atIndex:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setTileTextures(textures:Ptr, withRange:NSRange):Void;
 	@:selector("setTileSamplerState:atIndex:")
+	@:hxmc.available(macos >= 11.0)
 	function setTileSamplerStateAtIndex(sampler:Null<MTLSamplerState>, atIndex:I64):Void;
 	@:selector("setTileSamplerStates:withRange:")
+	@:hxmc.available(macos >= 11.0)
 	function setTileSamplerStatesWithRange(samplers:Ptr, withRange:NSRange):Void;
 	@:selector("setTileSamplerState:lodMinClamp:lodMaxClamp:atIndex:")
+	@:hxmc.available(macos >= 11.0)
 	function setTileSamplerStateLodMinClampLodMaxClampAtIndex(sampler:Null<MTLSamplerState>, lodMinClamp:Float32, lodMaxClamp:Float32, atIndex:I64):Void;
 	@:selector("setTileSamplerStates:lodMinClamps:lodMaxClamps:withRange:")
+	@:hxmc.available(macos >= 11.0)
 	function setTileSamplerStatesLodMinClampsLodMaxClampsWithRange(samplers:Ptr, lodMinClamps:Ptr, lodMaxClamps:Ptr, withRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setTileVisibleFunctionTable(functionTable:Null<MTLVisibleFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setTileVisibleFunctionTables(functionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setTileIntersectionFunctionTable(intersectionFunctionTable:Null<MTLIntersectionFunctionTable>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setTileIntersectionFunctionTables(intersectionFunctionTables:Ptr, withBufferRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setTileAccelerationStructure(accelerationStructure:Null<MTLAccelerationStructure>, atBufferIndex:I64):Void;
+	@:hxmc.available(macos >= 11.0)
 	function dispatchThreadsPerTile(threadsPerTile:MTLSize):Void;
+	@:hxmc.available(macos >= 11.0)
 	function setThreadgroupMemoryLength(length:I64, offset:I64, atIndex:I64):Void;
 	@:selector("useResource:usage:")
 	@:deprecated
@@ -191,8 +252,11 @@ import hxmc.unsafe.Ptr;
 	function executeCommandsInBufferWithRange(indirectCommandBuffer:MTLIndirectCommandBuffer, withRange:NSRange):Void;
 	@:selector("executeCommandsInBuffer:indirectBuffer:indirectBufferOffset:")
 	function executeCommandsInBufferIndirectBufferIndirectBufferOffset(indirectCommandbuffer:MTLIndirectCommandBuffer, indirectBuffer:MTLBuffer, indirectBufferOffset:I64):Void;
+	@:hxmc.available(ios >= 16.0)
 	function memoryBarrierWithScope(scope:MTLBarrierScope, afterStages:MTLRenderStages, beforeStages:MTLRenderStages):Void;
+	@:hxmc.available(ios >= 16.0)
 	function memoryBarrierWithResources(resources:Ptr, count:I64, afterStages:MTLRenderStages, beforeStages:MTLRenderStages):Void;
 	function sampleCountersInBuffer(sampleBuffer:MTLCounterSampleBuffer, atSampleIndex:I64, withBarrier:Bool):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function setColorAttachmentMap(mapping:Null<MTLLogicalToPhysicalColorAttachmentMap>):Void;
 }

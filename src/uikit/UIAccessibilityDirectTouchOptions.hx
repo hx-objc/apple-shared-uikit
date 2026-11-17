@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIAccessibilityDirectTouchOptions(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var None = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var SilentOnTouch = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var RequiresActivation = 2;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

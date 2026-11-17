@@ -10,7 +10,9 @@ enum abstract ARErrorCode(I64) to I64 {
 	var CameraUnauthorized = 103;
 	var MicrophoneUnauthorized = 104;
 	var LocationUnauthorized = 105;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var HighResolutionFrameCaptureInProgress = 106;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var HighResolutionFrameCaptureFailed = 107;
 	var WorldTrackingFailed = 200;
 	var GeoTrackingNotAvailableAtLocation = 201;

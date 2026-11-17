@@ -14,8 +14,11 @@ import objc.NSObject;
 	static function registerAppForAdNetworkAttribution():Void;
 	@:deprecated
 	static function updateConversionValue(conversionValue:I64):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	static overload function updatePostbackConversionValue(conversionValue:I64, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	static overload function updatePostbackConversionValue(fineValue:I64, coarseValue:NSStringArg, completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	static overload function updatePostbackConversionValue(fineValue:I64, coarseValue:NSStringArg, lockWindow:Bool, completionHandler:Null<Null<NSError> -> Void>):Void;
 	override function init():SKAdNetwork;
 }

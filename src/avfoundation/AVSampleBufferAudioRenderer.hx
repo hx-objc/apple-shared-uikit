@@ -18,13 +18,18 @@ import objc.NSObject;
 	var audioTimePitchAlgorithm(get, set) : NSStringArg;
 	function get_audioTimePitchAlgorithm():NSStringArg;
 	function set_audioTimePitchAlgorithm(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var allowedAudioSpatializationFormats(get, set) : AVAudioSpatializationFormats;
+	@:hxmc.available(macos >= 12.0)
 	function get_allowedAudioSpatializationFormats():AVAudioSpatializationFormats;
+	@:hxmc.available(macos >= 12.0)
 	function set_allowedAudioSpatializationFormats(v:AVAudioSpatializationFormats):AVAudioSpatializationFormats;
 	var readyForMoreMediaData(get, never) : Bool;
 	@:selector("isReadyForMoreMediaData")
 	function get_readyForMoreMediaData():Bool;
+	@:hxmc.available(macos >= 11.3)
 	var hasSufficientMediaDataForReliablePlaybackStart(get, never) : Bool;
+	@:hxmc.available(macos >= 11.3)
 	function get_hasSufficientMediaDataForReliablePlaybackStart():Bool;
 	var volume(get, set) : Float32;
 	function get_volume():Float32;

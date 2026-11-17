@@ -10,14 +10,23 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import uikit.UIViewController;
 
-@:hxmc.framework("StoreKit") @:hxmc.objc extern class SKStoreProductViewController extends UIViewController {
+@:hxmc.framework("StoreKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class SKStoreProductViewController extends UIViewController {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():SKStoreProductViewController;
+	@:hxmc.available(macos >= 11.0)
 	var delegate(get, set) : Null<SKStoreProductViewControllerDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_delegate():Null<SKStoreProductViewControllerDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function set_delegate(v:Null<SKStoreProductViewControllerDelegate>):Null<SKStoreProductViewControllerDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	overload function loadProductWithParameters(parameters:NSDictionary<NSString, Id>, completionBlock:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 16.0)
 	overload function loadProductWithParameters(parameters:NSDictionary<NSString, Id>, impression:SKAdImpression, completionBlock:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():SKStoreProductViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<SKStoreProductViewController>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):SKStoreProductViewController;
 }

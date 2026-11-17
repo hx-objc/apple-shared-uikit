@@ -24,5 +24,6 @@ import objc.NSObject;
 	function updatePrimaryHome(home:HMHome, completionHandler:Null<NSError> -> Void):Void;
 	function addHomeWithName(homeName:NSStringArg, completionHandler:(Null<HMHome>, Null<NSError>) -> Void):Void;
 	function removeHome(home:HMHome, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function findVendorAccessoryWithHAPPublicKey(hapPublicKey:NSData, completionHandler:(Null<HMAccessory>, Null<NSError>) -> Void):Void;
 }

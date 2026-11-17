@@ -5,30 +5,52 @@ import foundation.NSError;
 import hxmc.unsafe.Float32;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVPlaybackUserInterfacePlaybackControllable") extern interface AVPlaybackUserInterfacePlaybackControllable extends NSObjectProtocol {
+@:hxmc.objc("AVPlaybackUserInterfacePlaybackControllable") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVPlaybackUserInterfacePlaybackControllable extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ready(get, never) : Bool;
 	@:selector("isReady")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_ready():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var playing(get, set) : Bool;
 	@:selector("isPlaying")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_playing():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_playing(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var buffering(get, never) : Bool;
 	@:selector("isBuffering")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_buffering():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var playbackSpeed(get, set) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_playbackSpeed():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_playbackSpeed(v:Float32):Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var scanSpeed(get, set) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_scanSpeed():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_scanSpeed(v:Float32):Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var state(get, set) : AVPlaybackUserInterfacePlaybackState;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_state():AVPlaybackUserInterfacePlaybackState;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_state(v:AVPlaybackUserInterfacePlaybackState):AVPlaybackUserInterfacePlaybackState;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var supportedSeekCapabilities(get, never) : AVPlaybackUserInterfaceSeekCapabilities;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_supportedSeekCapabilities():AVPlaybackUserInterfaceSeekCapabilities;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var containsLiveStreamingContent(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_containsLiveStreamingContent():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var error(get, never) : Null<NSError>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_error():Null<NSError>;
 }

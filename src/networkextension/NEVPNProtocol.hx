@@ -42,20 +42,35 @@ import objc.NSObject;
 	var excludeLocalNetworks(get, set) : Bool;
 	function get_excludeLocalNetworks():Bool;
 	function set_excludeLocalNetworks(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var excludeCellularServices(get, set) : Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_excludeCellularServices():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_excludeCellularServices(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var excludeAPNs(get, set) : Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_excludeAPNs():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_excludeAPNs(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var excludeDeviceCommunication(get, set) : Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_excludeDeviceCommunication():Bool;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_excludeDeviceCommunication(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var enforceRoutes(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_enforceRoutes():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_enforceRoutes(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sliceUUID(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sliceUUID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_sliceUUID(v:Null<NSStringArg>):Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

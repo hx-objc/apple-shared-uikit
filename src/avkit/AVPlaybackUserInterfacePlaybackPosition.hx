@@ -10,16 +10,24 @@ import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfacePlaybackPosition extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfacePlaybackPosition extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfacePlaybackPosition;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var position(get, never) : CMTime;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_position():CMTime;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hostTime(get, never) : CMTime;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hostTime():CMTime;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var rate(get, never) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_rate():Float32;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPosition(position:CMTime, hostTime:CMTime, rate:Float32):AVPlaybackUserInterfacePlaybackPosition;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

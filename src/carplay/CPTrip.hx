@@ -17,9 +17,13 @@ import objc.NSObject;
 	@:deprecated
 	var destination(get, never) : MKMapItem;
 	function get_destination():MKMapItem;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var originWaypoint(get, never) : CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_originWaypoint():CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var destinationWaypoint(get, never) : CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_destinationWaypoint():CPNavigationWaypoint;
 	var routeChoices(get, never) : NSArray<CPRouteChoice>;
 	function get_routeChoices():NSArray<CPRouteChoice>;
@@ -27,17 +31,27 @@ import objc.NSObject;
 	function get_userInfo():Null<Id>;
 	function set_userInfo(v:Null<Id>):Null<Id>;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var destinationNameVariants(get, set) : Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_destinationNameVariants():Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_destinationNameVariants(v:Null<NSArray<NSString>>):Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var hasShareableDestination(get, set) : Bool;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_hasShareableDestination():Bool;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_hasShareableDestination(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var routeSegmentsAvailableForRegion(get, set) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_routeSegmentsAvailableForRegion():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_routeSegmentsAvailableForRegion(v:Bool):Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithOriginWaypoint(origin:CPNavigationWaypoint, destinationWaypoint:CPNavigationWaypoint, routeChoices:NSArray<CPRouteChoice>):CPTrip;
 	@:deprecated
 	function initWithOrigin(origin:MKMapItem, destination:MKMapItem, routeChoices:NSArray<CPRouteChoice>):CPTrip;

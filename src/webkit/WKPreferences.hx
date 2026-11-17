@@ -17,23 +17,38 @@ import objc.NSObject;
 	@:selector("isFraudulentWebsiteWarningEnabled")
 	function get_fraudulentWebsiteWarningEnabled():Bool;
 	function set_fraudulentWebsiteWarningEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var shouldPrintBackgrounds(get, set) : Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_shouldPrintBackgrounds():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_shouldPrintBackgrounds(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.3)
 	var textInteractionEnabled(get, set) : Bool;
 	@:selector("isTextInteractionEnabled")
+	@:hxmc.available(macos >= 11.3)
 	function get_textInteractionEnabled():Bool;
+	@:hxmc.available(macos >= 11.3)
 	function set_textInteractionEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	var siteSpecificQuirksModeEnabled(get, set) : Bool;
 	@:selector("isSiteSpecificQuirksModeEnabled")
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function get_siteSpecificQuirksModeEnabled():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function set_siteSpecificQuirksModeEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	var elementFullscreenEnabled(get, set) : Bool;
 	@:selector("isElementFullscreenEnabled")
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function get_elementFullscreenEnabled():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function set_elementFullscreenEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var inactiveSchedulingPolicy(get, set) : WKInactiveSchedulingPolicy;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_inactiveSchedulingPolicy():WKInactiveSchedulingPolicy;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_inactiveSchedulingPolicy(v:WKInactiveSchedulingPolicy):WKInactiveSchedulingPolicy;
 	@:deprecated
 	var javaScriptEnabled(get, set) : Bool;

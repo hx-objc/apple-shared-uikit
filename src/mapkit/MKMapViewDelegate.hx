@@ -41,12 +41,15 @@ import uikit.UIControl;
 	@:optional
 	function mapViewDidDeselectAnnotationView(mapView:MKMapView, didDeselectAnnotationView:MKAnnotationView):Void;
 	@:selector("mapView:didSelectAnnotation:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function mapViewDidSelectAnnotation(mapView:MKMapView, didSelectAnnotation:MKAnnotation):Void;
 	@:selector("mapView:didDeselectAnnotation:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function mapViewDidDeselectAnnotation(mapView:MKMapView, didDeselectAnnotation:MKAnnotation):Void;
 	@:selector("mapView:selectionAccessoryForAnnotation:")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function mapViewSelectionAccessoryForAnnotation(mapView:MKMapView, selectionAccessoryForAnnotation:MKAnnotation):Null<MKSelectionAccessory>;
 	@:optional
@@ -63,6 +66,7 @@ import uikit.UIControl;
 	@:optional
 	function mapViewAnnotationViewDidChangeDragStateFromOldState(mapView:MKMapView, annotationView:MKAnnotationView, didChangeDragState:MKAnnotationViewDragState, fromOldState:MKAnnotationViewDragState):Void;
 	@:selector("mapView:didChangeUserTrackingMode:animated:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function mapViewDidChangeUserTrackingModeAnimated(mapView:MKMapView, didChangeUserTrackingMode:MKUserTrackingMode, animated:Bool):Void;
 	@:selector("mapView:rendererForOverlay:")

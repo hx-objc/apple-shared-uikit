@@ -9,13 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRElectrocardiogramSession extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRElectrocardiogramSession extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRElectrocardiogramSession;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var state(get, never) : SRElectrocardiogramSessionState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_state():SRElectrocardiogramSessionState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var sessionGuidance(get, never) : SRElectrocardiogramSessionGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_sessionGuidance():SRElectrocardiogramSessionGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_identifier():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

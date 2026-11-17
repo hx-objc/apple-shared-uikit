@@ -8,14 +8,21 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uiutilities.UIAxis;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIArrangementViewState extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIArrangementViewState extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIArrangementViewState;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var zIndex(get, never) : I64;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_zIndex():I64;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var splitAxis(get, never) : UIAxis;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_splitAxis():UIAxis;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var hidden(get, never) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_hidden():Bool;
 	function copyWithZone(zone:Ptr):Id;
 }

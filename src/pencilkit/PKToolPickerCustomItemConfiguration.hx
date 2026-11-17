@@ -12,35 +12,64 @@ import uikit.UIColor;
 import uikit.UIImage;
 import uikit.UIViewController;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKToolPickerCustomItemConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class PKToolPickerCustomItemConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():PKToolPickerCustomItemConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var identifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_identifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var name(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_name():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_name(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var imageProvider(get, set) : Null<PKToolPickerCustomItem -> UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_imageProvider():Null<PKToolPickerCustomItem -> UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_imageProvider(v:Null<PKToolPickerCustomItem -> UIImage>):Null<PKToolPickerCustomItem -> UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var viewControllerProvider(get, set) : Null<PKToolPickerCustomItem -> UIViewController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_viewControllerProvider():Null<PKToolPickerCustomItem -> UIViewController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_viewControllerProvider(v:Null<PKToolPickerCustomItem -> UIViewController>):Null<PKToolPickerCustomItem -> UIViewController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var defaultWidth(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_defaultWidth():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_defaultWidth(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var widthVariants(get, set) : NSDictionary<NSNumber, UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_widthVariants():NSDictionary<NSNumber, UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_widthVariants(v:NSDictionary<NSNumber, UIImage>):NSDictionary<NSNumber, UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var defaultColor(get, set) : UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_defaultColor():UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_defaultColor(v:UIColor):UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var allowsColorSelection(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowsColorSelection():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsColorSelection(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var toolAttributeControls(get, set) : PKToolPickerCustomItemControlOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_toolAttributeControls():PKToolPickerCustomItemControlOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_toolAttributeControls(v:PKToolPickerCustomItemControlOptions):PKToolPickerCustomItemControlOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithIdentifier(identifier:NSStringArg, name:NSStringArg):PKToolPickerCustomItemConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 }

@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchCallHistoryIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchCallHistoryIntent;
 	var dateCreated(get, never) : Null<INDateComponentsRange>;
 	function get_dateCreated():Null<INDateComponentsRange>;
@@ -22,6 +23,7 @@ import foundation.NSNumberArg;
 	function initWithDateCreated(dateCreated:Null<INDateComponentsRange>, recipient:Null<INPerson>, callCapabilities:INCallCapabilityOptions, callTypes:INCallRecordTypeOptions, unseen:Null<NSNumberArg>):INSearchCallHistoryIntent;
 	@:deprecated
 	function initWithCallType(callType:INCallRecordType, dateCreated:Null<INDateComponentsRange>, recipient:Null<INPerson>, callCapabilities:INCallCapabilityOptions):INSearchCallHistoryIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchCallHistoryIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchCallHistoryIntent>;
 }

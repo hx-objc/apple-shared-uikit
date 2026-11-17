@@ -66,9 +66,12 @@ import hxmc.objc.Id;
 	function set_showsScopeBar(v:Bool):Bool;
 	@:selector("setInputAccessoryView:")
 	function set_inputAccessoryView(v:Null<UIView>):Void;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function set_enabled(v:Bool):Bool;
 	var backgroundImage(get, set) : Null<UIImage>;
 	function get_backgroundImage():Null<UIImage>;
@@ -82,9 +85,12 @@ import hxmc.objc.Id;
 	var searchTextPositionAdjustment(get, set) : UIOffset;
 	function get_searchTextPositionAdjustment():UIOffset;
 	function set_searchTextPositionAdjustment(v:UIOffset):UIOffset;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var lookToDictateEnabled(get, set) : Bool;
 	@:selector("isLookToDictateEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_lookToDictateEnabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_lookToDictateEnabled(v:Bool):Bool;
 	var barPosition(get, never) : UIBarPosition;
 	function get_barPosition():UIBarPosition;

@@ -5,18 +5,31 @@ import coregraphics.CGRect;
 import foundation.NSArray;
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIBackgroundExtensionView extends UIView {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIBackgroundExtensionView extends UIView {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIBackgroundExtensionView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function appearance():UIBackgroundExtensionView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):UIBackgroundExtensionView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIBackgroundExtensionView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var contentView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentView():Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_contentView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var automaticallyPlacesContentView(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_automaticallyPlacesContentView():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_automaticallyPlacesContentView(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIBackgroundExtensionView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(coder:NSCoder):Null<UIBackgroundExtensionView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithFrame(frame:CGRect):UIBackgroundExtensionView;
 }

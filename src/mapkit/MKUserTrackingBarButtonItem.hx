@@ -20,6 +20,7 @@ import uikit.UIView;
 	static function appearance():MKUserTrackingBarButtonItem;
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):MKUserTrackingBarButtonItem;
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):MKUserTrackingBarButtonItem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function fixedSpaceItem():MKUserTrackingBarButtonItem;
 	static function fixedSpaceItemOfWidth(width:Float):MKUserTrackingBarButtonItem;
 	static function flexibleSpaceItem():MKUserTrackingBarButtonItem;
@@ -30,6 +31,7 @@ import uikit.UIView;
 	override function init():MKUserTrackingBarButtonItem;
 	override overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
 	override overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, primaryAction:Null<UIAction>):MKUserTrackingBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, primaryAction:Null<UIAction>, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
 	override overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, target:Null<Id>, action:Selector):MKUserTrackingBarButtonItem;
 	override function initWithCoder(coder:NSCoder):Null<MKUserTrackingBarButtonItem>;
@@ -38,7 +40,9 @@ import uikit.UIView;
 	override overload function initWithImage(image:Null<UIImage>, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
 	override overload function initWithImage(image:Null<UIImage>, style:UIBarButtonItemStyle, target:Null<Id>, action:Selector):MKUserTrackingBarButtonItem;
 	override overload function initWithPrimaryAction(primaryAction:Null<UIAction>):MKUserTrackingBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override overload function initWithPrimaryAction(primaryAction:Null<UIAction>, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override overload function initWithTitle(title:Null<NSStringArg>, image:Null<UIImage>, target:Null<Id>, action:Selector, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
 	override overload function initWithTitle(title:Null<NSStringArg>, menu:Null<UIMenu>):MKUserTrackingBarButtonItem;
 	override overload function initWithTitle(title:Null<NSStringArg>, style:UIBarButtonItemStyle, target:Null<Id>, action:Selector):MKUserTrackingBarButtonItem;

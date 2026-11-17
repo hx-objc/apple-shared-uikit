@@ -8,8 +8,10 @@ import foundation.NSURL;
 import objc.NSObject;
 
 @:hxmc.framework("ReplayKit") @:hxmc.objc @:deprecated extern class RPBroadcastMP4ClipHandler extends RPBroadcastHandler {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():RPBroadcastMP4ClipHandler;
 	function processMP4ClipWithURL(mp4ClipURL:Null<NSURL>, setupInfo:Null<NSDictionary<NSString, NSObject>>, finished:Bool):Void;
 	function finishedProcessingMP4ClipWithUpdatedBroadcastConfiguration(broadcastConfiguration:Null<RPBroadcastConfiguration>, error:Null<NSError>):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():RPBroadcastMP4ClipHandler;
 }

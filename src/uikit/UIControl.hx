@@ -63,9 +63,12 @@ import hxmc.unsafe.Ptr;
 	function set_toolTip(v:Null<NSStringArg>):Null<NSStringArg>;
 	var toolTipInteraction(get, never) : Null<UIToolTipInteraction>;
 	function get_toolTipInteraction():Null<UIToolTipInteraction>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var symbolAnimationEnabled(get, set) : Bool;
 	@:selector("isSymbolAnimationEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_symbolAnimationEnabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_symbolAnimationEnabled(v:Bool):Bool;
 	override function initWithFrame(frame:CGRect):UIControl;
 	override function initWithCoder(coder:NSCoder):Null<UIControl>;
@@ -80,6 +83,7 @@ import hxmc.unsafe.Ptr;
 	function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;
 	function removeAction(action:UIAction, forControlEvents:UIControlEvents):Void;
 	function removeActionForIdentifier(actionIdentifier:NSStringArg, forControlEvents:UIControlEvents):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function performPrimaryAction():Void;
 	function actionsForTarget(target:Null<Id>, forControlEvent:UIControlEvents):Null<NSArray<NSString>>;
 	function enumerateEventHandlers(iterator:(Null<UIAction>, Null<Id>, Selector, UIControlEvents, Ptr) -> Void):Void;

@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSpeakableStringResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSpeakableStringResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INSpeakableStringResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INSpeakableStringResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INSpeakableStringResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INSpeakableStringResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INSpeakableStringResolutionResult;
 	static function successWithResolvedString(resolvedString:INSpeakableString):INSpeakableStringResolutionResult;
 	static function disambiguationWithStringsToDisambiguate(stringsToDisambiguate:NSArray<INSpeakableString>):INSpeakableStringResolutionResult;

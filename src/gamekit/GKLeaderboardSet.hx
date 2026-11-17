@@ -22,6 +22,7 @@ import uikit.UIImage;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	static function loadLeaderboardSetsWithCompletionHandler(completionHandler:Null<(Null<NSArray<GKLeaderboardSet>>, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function loadLeaderboardsWithHandler(handler:(Null<NSArray<GKLeaderboard>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function loadLeaderboardsWithCompletionHandler(completionHandler:Null<(Null<NSArray<GKLeaderboard>>, Null<NSError>) -> Void>):Void;

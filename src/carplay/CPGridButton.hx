@@ -14,7 +14,9 @@ import uikit.UIImage;
 	@:selector("isEnabled")
 	function get_enabled():Bool;
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var messageConfiguration(get, never) : Null<CPMessageGridItemConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_messageConfiguration():Null<CPMessageGridItemConfiguration>;
 	var image(get, never) : UIImage;
 	function get_image():UIImage;
@@ -23,8 +25,11 @@ import uikit.UIImage;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	overload function initWithTitleVariants(titleVariants:NSArray<NSString>, image:UIImage, handler:Null<CPGridButton -> Void>):CPGridButton;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithTitleVariants(titleVariants:NSArray<NSString>, image:UIImage, messageConfiguration:Null<CPMessageGridItemConfiguration>, handler:Null<CPGridButton -> Void>):CPGridButton;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateImage(image:UIImage):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateTitleVariants(titleVariants:NSArray<NSString>):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPGridButton>;

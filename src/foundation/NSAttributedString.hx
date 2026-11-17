@@ -38,17 +38,25 @@ import uikit.NSTextAttachment;
 	function initWithAttributedString(attrStr:NSAttributedString):NSAttributedString;
 	function enumerateAttributesInRange(enumerationRange:NSRange, options:NSAttributedStringEnumerationOptions, usingBlock:(NSDictionary<NSString, Id>, NSRange, Ptr) -> Void):Void;
 	function enumerateAttribute(attrName:NSStringArg, inRange:NSRange, options:NSAttributedStringEnumerationOptions, usingBlock:(Null<Id>, NSRange, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function initWithContentsOfMarkdownFileAtURL(markdownFile:NSURL, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithMarkdown(markdown:NSData, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithMarkdownString(markdownString:NSStringArg, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, arguments:Ptr):NSAttributedString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, context:NSDictionary<NSString, Id>, arguments:Ptr):NSAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	function attributedStringByInflectingString():NSAttributedString;
 	@:hxmc.framework("UIKit")
 	static overload function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static overload function attributedStringWithAttachment(attachment:NSTextAttachment, attributes:NSDictionary<NSString, Id>):NSAttributedString;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function attributedStringWithAdaptiveImageGlyph(adaptiveImageGlyph:NSAdaptiveImageGlyph, attributes:NSDictionary<NSString, Id>):NSAttributedString;
 	@:hxmc.framework("UIKit")
 	function initWithURL(url:NSURL, options:NSDictionary<NSString, Id>, documentAttributes:Ptr, error:Ptr):Null<NSAttributedString>;
@@ -61,6 +69,7 @@ import uikit.NSTextAttachment;
 	@:hxmc.framework("UIKit")
 	function containsAttachmentsInRange(range:NSRange):Bool;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function prefersRTFDInRange(range:NSRange):Bool;
 	@:hxmc.framework("UIKit")
 	@:deprecated

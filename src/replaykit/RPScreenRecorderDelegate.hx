@@ -4,16 +4,19 @@ package replaykit;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("RPScreenRecorderDelegate") @:deprecated extern interface RPScreenRecorderDelegate extends NSObjectProtocol {
+@:hxmc.objc("RPScreenRecorderDelegate") @:deprecated @:hxmc.available(macos >= 11.0) extern interface RPScreenRecorderDelegate extends NSObjectProtocol {
 	@:selector("screenRecorder:didStopRecordingWithError:previewViewController:")
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function screenRecorderDidStopRecordingWithErrorPreviewViewController(screenRecorder:RPScreenRecorder, didStopRecordingWithError:NSError, previewViewController:Null<RPPreviewViewController>):Void;
 	@:selector("screenRecorder:didStopRecordingWithPreviewViewController:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function screenRecorderDidStopRecordingWithPreviewViewControllerError(screenRecorder:RPScreenRecorder, didStopRecordingWithPreviewViewController:Null<RPPreviewViewController>, error:Null<NSError>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function screenRecorderDidChangeAvailability(screenRecorder:RPScreenRecorder):Void;
 }

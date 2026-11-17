@@ -37,8 +37,11 @@ import uniformtypeidentifiers.UTType;
 	var thumbnailData(get, set) : Null<NSData>;
 	function get_thumbnailData():Null<NSData>;
 	function set_thumbnailData(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 12.0)
 	var darkThumbnailURL(get, set) : Null<NSURL>;
+	@:hxmc.available(macos >= 12.0)
 	function get_darkThumbnailURL():Null<NSURL>;
+	@:hxmc.available(macos >= 12.0)
 	function set_darkThumbnailURL(v:Null<NSURL>):Null<NSURL>;
 	var relatedUniqueIdentifier(get, set) : Null<NSStringArg>;
 	function get_relatedUniqueIdentifier():Null<NSStringArg>;
@@ -82,10 +85,15 @@ import uniformtypeidentifiers.UTType;
 	var domainIdentifier(get, set) : Null<NSStringArg>;
 	function get_domainIdentifier():Null<NSStringArg>;
 	function set_domainIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var textContentSummary(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_textContentSummary():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var transcribedTextContent(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_transcribedTextContent():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_transcribedTextContent(v:Null<NSStringArg>):Null<NSStringArg>;
 	var supportsPhoneCall(get, set) : Null<NSNumberArg>;
 	function get_supportsPhoneCall():Null<NSNumberArg>;
@@ -241,7 +249,9 @@ import uniformtypeidentifiers.UTType;
 	@:selector("isLikelyJunk")
 	function get_likelyJunk():NSNumberArg;
 	function set_likelyJunk(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var isPriority(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_isPriority():Null<NSNumberArg>;
 	var editors(get, set) : Null<NSArray<NSString>>;
 	function get_editors():Null<NSArray<NSString>>;
@@ -600,6 +610,7 @@ import uniformtypeidentifiers.UTType;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function initWithItemContentType(itemContentType:NSStringArg):CSSearchableItemAttributeSet;
+	@:hxmc.available(macos >= 11.0)
 	function initWithContentType(contentType:UTType):CSSearchableItemAttributeSet;
 	function setValue(value:Null<NSSecureCoding>, forCustomKey:CSCustomAttributeKey):Void;
 	function valueForCustomKey(key:CSCustomAttributeKey):Null<NSSecureCoding>;

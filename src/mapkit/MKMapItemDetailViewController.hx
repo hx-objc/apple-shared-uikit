@@ -6,17 +6,29 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapItemDetailViewController extends UIViewController {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0) extern class MKMapItemDetailViewController extends UIViewController {
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():MKMapItemDetailViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var mapItem(get, set) : Null<MKMapItem>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_mapItem():Null<MKMapItem>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_mapItem(v:Null<MKMapItem>):Null<MKMapItem>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var delegate(get, set) : Null<MKMapItemDetailViewControllerDelegate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_delegate():Null<MKMapItemDetailViewControllerDelegate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_delegate(v:Null<MKMapItemDetailViewControllerDelegate>):Null<MKMapItemDetailViewControllerDelegate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithMapItem(mapItem:Null<MKMapItem>, displaysMap:Bool):MKMapItemDetailViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithMapItem(mapItem:Null<MKMapItem>):MKMapItemDetailViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function init():MKMapItemDetailViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithCoder(coder:NSCoder):Null<MKMapItemDetailViewController>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):MKMapItemDetailViewController;
 }

@@ -8,21 +8,34 @@ import objc.NSObject;
 import uikit.UIColor;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPImageOverlay extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPImageOverlay extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPImageOverlay;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var text(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_text():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var textColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_textColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var backgroundColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_backgroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var image(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var alignment(get, never) : CPImageOverlayAlignment;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_alignment():CPImageOverlayAlignment;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithImage(image:UIImage, alignment:CPImageOverlayAlignment):CPImageOverlay;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithText(text:NSStringArg, textColor:UIColor, backgroundColor:UIColor, alignment:CPImageOverlayAlignment):CPImageOverlay;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPImageOverlay>;

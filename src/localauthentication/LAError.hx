@@ -21,6 +21,7 @@ enum abstract LAError(I64) to I64 {
 	var BiometryNotEnrolled = -7;
 	var BiometryLockout = -8;
 	var NotInteractive = -1004;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var CompanionNotAvailable = -11;
 	inline function new(v:I64) this = v;
 }

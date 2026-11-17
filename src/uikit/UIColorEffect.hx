@@ -5,6 +5,7 @@ import foundation.NSCoder;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIColorEffect extends UIVisualEffect {
 	static function alloc():UIColorEffect;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	static function effectWithColor(color:Null<UIColor>):UIColorEffect;
 	override function init():UIColorEffect;
 	override function initWithCoder(coder:NSCoder):Null<UIColorEffect>;

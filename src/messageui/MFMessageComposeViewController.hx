@@ -41,6 +41,7 @@ import uikit.UIViewController;
 	function disableUserAttachments():Void;
 	function addAttachmentURL(attachmentURL:NSURL, withAlternateFilename:Null<NSStringArg>):Bool;
 	function addAttachmentData(attachmentData:NSData, typeIdentifier:NSStringArg, filename:NSStringArg):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function insertCollaborationItemProvider(itemProvider:NSItemProvider):Bool;
 	override function init():MFMessageComposeViewController;
 	override function initWithCoder(coder:NSCoder):Null<MFMessageComposeViewController>;

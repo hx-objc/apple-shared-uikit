@@ -7,20 +7,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIImageReaderConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIImageReaderConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIImageReaderConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var prefersHighDynamicRange(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_prefersHighDynamicRange():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_prefersHighDynamicRange(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preparesImagesForDisplay(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preparesImagesForDisplay():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preparesImagesForDisplay(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredThumbnailSize(get, set) : CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredThumbnailSize():CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredThumbnailSize(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var pixelsPerInch(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_pixelsPerInch():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_pixelsPerInch(v:Float):Float;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIImageReaderConfiguration;
 }

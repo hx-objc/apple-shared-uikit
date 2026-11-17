@@ -4,11 +4,16 @@ package homekit;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("HomeKit") @:hxmc.objc extern class HMAccessorySetupManager extends NSObject {
+@:hxmc.framework("HomeKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, maccatalyst >= 27.0) extern class HMAccessorySetupManager extends NSObject {
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	static function alloc():HMAccessorySetupManager;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static var supported(get, never) : Bool;
 	@:selector("isSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static function get_supported():Bool;
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	override function init():HMAccessorySetupManager;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function performAccessorySetupUsingRequest(request:HMAccessorySetupRequest, completionHandler:(Null<HMAccessorySetupResult>, Null<NSError>) -> Void):Void;
 }

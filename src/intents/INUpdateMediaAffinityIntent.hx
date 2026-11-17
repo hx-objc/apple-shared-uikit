@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INUpdateMediaAffinityIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INUpdateMediaAffinityIntent;
 	var mediaItems(get, never) : Null<NSArray<INMediaItem>>;
 	function get_mediaItems():Null<NSArray<INMediaItem>>;
@@ -13,6 +14,7 @@ import foundation.NSCoder;
 	var affinityType(get, never) : INMediaAffinityType;
 	function get_affinityType():INMediaAffinityType;
 	function initWithMediaItems(mediaItems:Null<NSArray<INMediaItem>>, mediaSearch:Null<INMediaSearch>, affinityType:INMediaAffinityType):INUpdateMediaAffinityIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INUpdateMediaAffinityIntent;
 	override function initWithCoder(coder:NSCoder):Null<INUpdateMediaAffinityIntent>;
 }

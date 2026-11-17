@@ -32,7 +32,9 @@ import objc.NSObject;
 	function get_primaryService():Bool;
 	var linkedServices(get, never) : Null<NSArray<HMService>>;
 	function get_linkedServices():Null<NSArray<HMService>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var matterEndpointID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_matterEndpointID():Null<NSNumberArg>;
 	function updateName(name:NSStringArg, completionHandler:Null<NSError> -> Void):Void;
 	function updateAssociatedServiceType(serviceType:Null<NSStringArg>, completionHandler:Null<NSError> -> Void):Void;

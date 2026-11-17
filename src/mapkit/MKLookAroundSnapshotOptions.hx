@@ -5,16 +5,27 @@ import coregraphics.CGSize;
 import objc.NSObject;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKLookAroundSnapshotOptions extends NSObject {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class MKLookAroundSnapshotOptions extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKLookAroundSnapshotOptions;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var pointOfInterestFilter(get, set) : Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_pointOfInterestFilter():Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_pointOfInterestFilter(v:Null<MKPointOfInterestFilter>):Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var size(get, set) : CGSize;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_size():CGSize;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_size(v:CGSize):CGSize;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var traitCollection(get, set) : UITraitCollection;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_traitCollection():UITraitCollection;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_traitCollection(v:UITraitCollection):UITraitCollection;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MKLookAroundSnapshotOptions;
 }

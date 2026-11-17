@@ -36,8 +36,11 @@ import uikit.UIImage;
 	var userInfo(get, set) : Null<Id>;
 	function get_userInfo():Null<Id>;
 	function set_userInfo(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var leadingDetailTextImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_leadingDetailTextImage():Null<UIImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_leadingDetailTextImage(v:Null<UIImage>):Null<UIImage>;
 	function initWithConversationIdentifier(conversationIdentifier:NSStringArg, text:NSStringArg, leadingConfiguration:CPMessageListItemLeadingConfiguration, trailingConfiguration:Null<CPMessageListItemTrailingConfiguration>, detailText:Null<NSStringArg>, trailingText:Null<NSStringArg>):CPMessageListItem;
 	function initWithFullName(fullName:NSStringArg, phoneOrEmailAddress:NSStringArg, leadingConfiguration:CPMessageListItemLeadingConfiguration, trailingConfiguration:Null<CPMessageListItemTrailingConfiguration>, detailText:Null<NSStringArg>, trailingText:Null<NSStringArg>):CPMessageListItem;

@@ -51,9 +51,13 @@ import uikit.UIColor;
 	function dismissPanningInterfaceAnimated(animated:Bool):Void;
 	function presentNavigationAlert(navigationAlert:CPNavigationAlert, animated:Bool):Void;
 	function dismissNavigationAlertAnimated(animated:Bool, completion:Bool -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function showPanel(panel:CPMapPanel, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function pushPanel(panel:CPMapPanel, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function popPanelWithCompletion(completion:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function hidePanelWithCompletion(completion:Null<(Bool, Null<NSError>) -> Void>):Void;
 	override function init():CPMapTemplate;
 	override function initWithCoder(coder:NSCoder):Null<CPMapTemplate>;

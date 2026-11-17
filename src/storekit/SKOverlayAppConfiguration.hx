@@ -30,5 +30,6 @@ import hxmc.objc.Id;
 	function initWithAppIdentifier(appIdentifier:NSStringArg, position:SKOverlayPosition):SKOverlayAppConfiguration;
 	function setAdditionalValue(value:Null<Id>, forKey:NSStringArg):Void;
 	function additionalValueForKey(key:NSStringArg):Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setAdImpression(impression:SKAdImpression):Void;
 }

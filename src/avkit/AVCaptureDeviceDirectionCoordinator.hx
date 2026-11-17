@@ -6,9 +6,13 @@ import foundation.NSString;
 import objc.NSObject;
 import uikit.UIView;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureDeviceDirectionCoordinator extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class AVCaptureDeviceDirectionCoordinator extends NSObject {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():AVCaptureDeviceDirectionCoordinator;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var deviceDirections(get, never) : AVCaptureDeviceDirectionMap;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_deviceDirections():AVCaptureDeviceDirectionMap;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function initWithView(view:UIView, deviceTypes:NSArray<NSString>, changeHandler:Null<AVCaptureDeviceDirectionMap -> Void>):AVCaptureDeviceDirectionCoordinator;
 }

@@ -30,11 +30,16 @@ import objc.NSObject;
 	function valueTypeForDimension(dimension:NSTextBlockDimension):NSTextBlockValueType;
 	function setContentWidth(contentWidth:Float, type:NSTextBlockValueType):Void;
 	overload function setWidth(width:Float, type:NSTextBlockValueType, forLayer:NSTextBlockLayer):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	overload function setWidth(width:Float, type:NSTextBlockValueType, forLayer:NSTextBlockLayer, rectEdge:CGRectEdge):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function widthForLayer(layer:NSTextBlockLayer, rectEdge:CGRectEdge):Float;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function widthValueTypeForLayer(layer:NSTextBlockLayer, rectEdge:CGRectEdge):NSTextBlockValueType;
 	overload function setBorderColor(color:Null<UIColor>):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	overload function setBorderColor(borderColor:Null<UIColor>, rectEdge:CGRectEdge):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function borderColorForRectEdge(rectEdge:CGRectEdge):Null<UIColor>;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function copyWithZone(zone:Ptr):Id;

@@ -8,32 +8,55 @@ import foundation.NSSecureCoding;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("MetricKit") @:hxmc.objc extern class MXMetaData extends NSObject implements NSSecureCoding {
+@:hxmc.framework("MetricKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class MXMetaData extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():MXMetaData;
+	@:hxmc.available(macos >= 12.0)
 	var regionFormat(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_regionFormat():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var osVersion(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_osVersion():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var deviceType(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_deviceType():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var applicationBuildVersion(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_applicationBuildVersion():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var platformArchitecture(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_platformArchitecture():NSStringArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var lowPowerModeEnabled(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_lowPowerModeEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var isTestFlightApp(get, never) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_isTestFlightApp():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var pid(get, never) : Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_pid():Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var bundleIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_bundleIdentifier():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function JSONRepresentation():NSData;
+	@:hxmc.available(macos >= 12.0)
 	function DictionaryRepresentation():NSDictionary;
+	@:hxmc.available(macos >= 12.0)
 	function dictionaryRepresentation():NSDictionary;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MXMetaData>;
+	@:hxmc.available(macos >= 12.0)
 	override function init():MXMetaData;
 }

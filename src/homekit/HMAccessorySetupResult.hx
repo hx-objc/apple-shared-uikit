@@ -8,11 +8,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("HomeKit") @:hxmc.objc extern class HMAccessorySetupResult extends NSObject implements NSCopying {
+@:hxmc.framework("HomeKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0) extern class HMAccessorySetupResult extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	static function alloc():HMAccessorySetupResult;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var homeUniqueIdentifier(get, never) : NSUUID;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_homeUniqueIdentifier():NSUUID;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var accessoryUniqueIdentifiers(get, never) : NSArray<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_accessoryUniqueIdentifiers():NSArray<NSUUID>;
 	function copyWithZone(zone:Ptr):Id;
 }

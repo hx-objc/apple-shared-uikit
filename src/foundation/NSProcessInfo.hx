@@ -36,17 +36,23 @@ import objc.NSObjectProtocol;
 	function get_systemUptime():Float;
 	var thermalState(get, never) : NSProcessInfoThermalState;
 	function get_thermalState():NSProcessInfoThermalState;
+	@:hxmc.available(macos >= 12.0)
 	var lowPowerModeEnabled(get, never) : Bool;
 	@:selector("isLowPowerModeEnabled")
+	@:hxmc.available(macos >= 12.0)
 	function get_lowPowerModeEnabled():Bool;
 	var macCatalystApp(get, never) : Bool;
 	@:selector("isMacCatalystApp")
 	function get_macCatalystApp():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var iOSAppOnMac(get, never) : Bool;
 	@:selector("isiOSAppOnMac")
+	@:hxmc.available(macos >= 11.0)
 	function get_iOSAppOnMac():Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var iOSAppOnVision(get, never) : Bool;
 	@:selector("isiOSAppOnVision")
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_iOSAppOnVision():Bool;
 	@:deprecated
 	function operatingSystem():I64;
@@ -58,8 +64,10 @@ import objc.NSObjectProtocol;
 	function performActivityWithOptions(options:NSActivityOptions, reason:NSStringArg, usingBlock:() -> Void):Void;
 	function performExpiringActivityWithReason(reason:NSStringArg, usingBlock:Bool -> Void):Void;
 	@:hxmc.framework("Metal")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function isDeviceCertifiedFor(performanceTier:I64):Bool;
 	@:hxmc.framework("Metal")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function hasPerformanceProfile(performanceProfile:I64):Bool;
 	override function init():NSProcessInfo;
 }

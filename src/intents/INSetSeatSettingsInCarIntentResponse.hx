@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetSeatSettingsInCarIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetSeatSettingsInCarIntentResponse;
 	var code(get, never) : INSetSeatSettingsInCarIntentResponseCode;
 	function get_code():INSetSeatSettingsInCarIntentResponseCode;

@@ -9,27 +9,45 @@ import foundation.NSDictionary;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("MetricKit") @:hxmc.objc extern class MXDiagnosticPayload extends NSObject implements NSSecureCoding {
+@:hxmc.framework("MetricKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class MXDiagnosticPayload extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():MXDiagnosticPayload;
+	@:hxmc.available(macos >= 12.0)
 	var cpuExceptionDiagnostics(get, never) : Null<NSArray<MXCPUExceptionDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_cpuExceptionDiagnostics():Null<NSArray<MXCPUExceptionDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	var diskWriteExceptionDiagnostics(get, never) : Null<NSArray<MXDiskWriteExceptionDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_diskWriteExceptionDiagnostics():Null<NSArray<MXDiskWriteExceptionDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	var hangDiagnostics(get, never) : Null<NSArray<MXHangDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_hangDiagnostics():Null<NSArray<MXHangDiagnostic>>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	var appLaunchDiagnostics(get, never) : Null<NSArray<MXAppLaunchDiagnostic>>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_appLaunchDiagnostics():Null<NSArray<MXAppLaunchDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	var crashDiagnostics(get, never) : Null<NSArray<MXCrashDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_crashDiagnostics():Null<NSArray<MXCrashDiagnostic>>;
+	@:hxmc.available(macos >= 12.0)
 	var timeStampBegin(get, never) : NSDate;
+	@:hxmc.available(macos >= 12.0)
 	function get_timeStampBegin():NSDate;
+	@:hxmc.available(macos >= 12.0)
 	var timeStampEnd(get, never) : NSDate;
+	@:hxmc.available(macos >= 12.0)
 	function get_timeStampEnd():NSDate;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function JSONRepresentation():NSData;
+	@:hxmc.available(macos >= 12.0)
 	function dictionaryRepresentation():NSDictionary;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MXDiagnosticPayload>;
+	@:hxmc.available(macos >= 12.0)
 	override function init():MXDiagnosticPayload;
 }

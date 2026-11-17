@@ -4,14 +4,23 @@ package coremotion;
 import foundation.NSCoder;
 import foundation.NSDate;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMHighFrequencyHeartRateData extends CMLogItem {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class CMHighFrequencyHeartRateData extends CMLogItem {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():CMHighFrequencyHeartRateData;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var heartRate(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_heartRate():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var confidence(get, never) : CMHighFrequencyHeartRateDataConfidence;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_confidence():CMHighFrequencyHeartRateDataConfidence;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var date(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_date():Null<NSDate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():CMHighFrequencyHeartRateData;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithCoder(coder:NSCoder):Null<CMHighFrequencyHeartRateData>;
 }

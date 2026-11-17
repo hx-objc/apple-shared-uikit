@@ -11,39 +11,72 @@ import objc.NSObject;
 import photos.PHPhotoLibrary;
 import uikit.NSDirectionalRectEdge;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHPickerConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 13) extern class PHPickerConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13)
 	static function alloc():PHPickerConfiguration;
+	@:hxmc.available(macos >= 13)
 	var preferredAssetRepresentationMode(get, set) : PHPickerConfigurationAssetRepresentationMode;
+	@:hxmc.available(macos >= 13)
 	function get_preferredAssetRepresentationMode():PHPickerConfigurationAssetRepresentationMode;
+	@:hxmc.available(macos >= 13)
 	function set_preferredAssetRepresentationMode(v:PHPickerConfigurationAssetRepresentationMode):PHPickerConfigurationAssetRepresentationMode;
+	@:hxmc.available(macos >= 13)
 	var selection(get, set) : PHPickerConfigurationSelection;
+	@:hxmc.available(macos >= 13)
 	function get_selection():PHPickerConfigurationSelection;
+	@:hxmc.available(macos >= 13)
 	function set_selection(v:PHPickerConfigurationSelection):PHPickerConfigurationSelection;
+	@:hxmc.available(macos >= 13)
 	var selectionLimit(get, set) : I64;
+	@:hxmc.available(macos >= 13)
 	function get_selectionLimit():I64;
+	@:hxmc.available(macos >= 13)
 	function set_selectionLimit(v:I64):I64;
+	@:hxmc.available(macos >= 13)
 	var filter(get, set) : Null<PHPickerFilter>;
+	@:hxmc.available(macos >= 13)
 	function get_filter():Null<PHPickerFilter>;
+	@:hxmc.available(macos >= 13)
 	function set_filter(v:Null<PHPickerFilter>):Null<PHPickerFilter>;
+	@:hxmc.available(macos >= 13)
 	var preselectedAssetIdentifiers(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 13)
 	function get_preselectedAssetIdentifiers():NSArray<NSString>;
+	@:hxmc.available(macos >= 13)
 	function set_preselectedAssetIdentifiers(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var mode(get, set) : PHPickerMode;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_mode():PHPickerMode;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_mode(v:PHPickerMode):PHPickerMode;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var edgesWithoutContentMargins(get, set) : NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_edgesWithoutContentMargins():NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_edgesWithoutContentMargins(v:NSDirectionalRectEdge):NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var disabledCapabilities(get, set) : PHPickerCapabilities;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_disabledCapabilities():PHPickerCapabilities;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_disabledCapabilities(v:PHPickerCapabilities):PHPickerCapabilities;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var metadataOptions(get, set) : PHPickerMetadataOptions;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_metadataOptions():PHPickerMetadataOptions;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_metadataOptions(v:PHPickerMetadataOptions):PHPickerMetadataOptions;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var searchText(get, set) : Null<PHPickerSearchText>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_searchText():Null<PHPickerSearchText>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_searchText(v:Null<PHPickerSearchText>):Null<PHPickerSearchText>;
+	@:hxmc.available(macos >= 13)
 	function initWithPhotoLibrary(photoLibrary:PHPhotoLibrary):PHPickerConfiguration;
+	@:hxmc.available(macos >= 13)
 	override function init():PHPickerConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 }

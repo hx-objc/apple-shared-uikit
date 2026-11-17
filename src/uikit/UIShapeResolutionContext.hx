@@ -3,8 +3,11 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIShapeResolutionContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIShapeResolutionContext extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIShapeResolutionContext;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var contentShape(get, never) : UIResolvedShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_contentShape():UIResolvedShape;
 }

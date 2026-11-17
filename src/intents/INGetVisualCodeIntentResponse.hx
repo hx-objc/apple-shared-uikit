@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INGetVisualCodeIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetVisualCodeIntentResponse;
 	var code(get, never) : INGetVisualCodeIntentResponseCode;
 	function get_code():INGetVisualCodeIntentResponseCode;

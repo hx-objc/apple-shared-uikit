@@ -33,7 +33,9 @@ import hxmc.objc.ObjCClass;
 	function set_delegate(v:Null<UINavigationControllerDelegate>):Null<UINavigationControllerDelegate>;
 	var interactivePopGestureRecognizer(get, never) : Null<UIGestureRecognizer>;
 	function get_interactivePopGestureRecognizer():Null<UIGestureRecognizer>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var interactiveContentPopGestureRecognizer(get, never) : Null<UIGestureRecognizer>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_interactiveContentPopGestureRecognizer():Null<UIGestureRecognizer>;
 	var hidesBarsWhenKeyboardAppears(get, set) : Bool;
 	function get_hidesBarsWhenKeyboardAppears():Bool;

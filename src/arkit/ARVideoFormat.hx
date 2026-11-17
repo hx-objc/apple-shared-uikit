@@ -22,14 +22,22 @@ import objc.NSObject;
 	function get_imageResolution():CGSize;
 	var framesPerSecond(get, never) : I64;
 	function get_framesPerSecond():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var isRecommendedForHighResolutionFrameCapturing(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_isRecommendedForHighResolutionFrameCapturing():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var videoHDRSupported(get, never) : Bool;
 	@:selector("isVideoHDRSupported")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_videoHDRSupported():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var defaultColorSpace(get, never) : AVCaptureColorSpace;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_defaultColorSpace():AVCaptureColorSpace;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var defaultPhotoSettings(get, never) : AVCapturePhotoSettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_defaultPhotoSettings():AVCapturePhotoSettings;
 	function copyWithZone(zone:Ptr):Id;
 }

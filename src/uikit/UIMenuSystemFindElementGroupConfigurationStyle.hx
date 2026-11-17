@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIMenuSystemFindElementGroupConfigurationStyle(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Search = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var NonEditableText = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var EditableText = 3;
 	inline function new(v:I64) this = v;
 }

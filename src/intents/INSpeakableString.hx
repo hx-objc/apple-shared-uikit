@@ -10,21 +10,33 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INSpeakableString extends NSObject implements INSpeakable implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INSpeakableString extends NSObject implements INSpeakable implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSpeakableString;
+	@:hxmc.available(macos >= 11.0)
 	var spokenPhrase(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_spokenPhrase():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var pronunciationHint(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_pronunciationHint():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var vocabularyIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_vocabularyIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var alternativeSpeakableMatches(get, never) : Null<NSArray<INSpeakable>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_alternativeSpeakableMatches():Null<NSArray<INSpeakable>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function initWithVocabularyIdentifier(vocabularyIdentifier:NSStringArg, spokenPhrase:NSStringArg, pronunciationHint:Null<NSStringArg>):INSpeakableString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function initWithIdentifier(identifier:NSStringArg, spokenPhrase:NSStringArg, pronunciationHint:Null<NSStringArg>):INSpeakableString;
+	@:hxmc.available(macos >= 11.0)
 	function initWithSpokenPhrase(spokenPhrase:NSStringArg):INSpeakableString;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

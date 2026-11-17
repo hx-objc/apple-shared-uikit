@@ -4,9 +4,13 @@ package carplay;
 import hxmc.I64;
 
 enum abstract CPInstrumentClusterSetting(I64) to I64 {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var Unspecified = 0;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var Enabled = 1;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var Disabled = 2;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var UserPreference = 3;
 	inline function new(v:I64) this = v;
 }

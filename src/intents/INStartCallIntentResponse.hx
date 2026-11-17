@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INStartCallIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartCallIntentResponse;
 	var code(get, never) : INStartCallIntentResponseCode;
 	function get_code():INStartCallIntentResponseCode;

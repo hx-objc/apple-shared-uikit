@@ -3,11 +3,17 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIZoomTransitionAlignmentRectContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIZoomTransitionAlignmentRectContext extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIZoomTransitionAlignmentRectContext;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sourceView(get, never) : UIView;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sourceView():UIView;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var zoomedViewController(get, never) : UIViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_zoomedViewController():UIViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UIZoomTransitionAlignmentRectContext;
 }

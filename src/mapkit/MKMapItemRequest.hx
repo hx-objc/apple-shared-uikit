@@ -4,23 +4,38 @@ package mapkit;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapItemRequest extends NSObject {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0) extern class MKMapItemRequest extends NSObject {
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKMapItemRequest;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var mapItemIdentifier(get, never) : Null<MKMapItemIdentifier>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_mapItemIdentifier():Null<MKMapItemIdentifier>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var mapFeatureAnnotation(get, never) : Null<MKMapFeatureAnnotation>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_mapFeatureAnnotation():Null<MKMapFeatureAnnotation>;
 	@:deprecated
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	var featureAnnotation(get, never) : MKMapFeatureAnnotation;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_featureAnnotation():MKMapFeatureAnnotation;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	var cancelled(get, never) : Bool;
 	@:selector("isCancelled")
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_cancelled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	var loading(get, never) : Bool;
 	@:selector("isLoading")
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_loading():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function initWithMapItemIdentifier(identifier:MKMapItemIdentifier):MKMapItemRequest;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithMapFeatureAnnotation(mapFeatureAnnotation:MKMapFeatureAnnotation):MKMapItemRequest;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function getMapItemWithCompletionHandler(completionHandler:(Null<MKMapItem>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 16.0, maccatalyst >= 16.0)
 	function cancel():Void;
 }

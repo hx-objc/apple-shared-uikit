@@ -12,6 +12,7 @@ enum abstract INStartCallContactUnsupportedReason(I64) to I64 {
 	@:deprecated
 	var NoCallHistoryForRedial = 6;
 	var NoUsableHandleForRedial = 7;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var RequiringInAppAuthentication = 8;
 	inline function new(v:I64) this = v;
 }

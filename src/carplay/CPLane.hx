@@ -11,28 +11,45 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPLane extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class CPLane extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():CPLane;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var status(get, set) : CPLaneStatus;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_status():CPLaneStatus;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_status(v:CPLaneStatus):CPLaneStatus;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var primaryAngle(get, set) : NSMeasurement<NSUnitAngle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_primaryAngle():NSMeasurement<NSUnitAngle>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_primaryAngle(v:NSMeasurement<NSUnitAngle>):NSMeasurement<NSUnitAngle>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var highlightedAngle(get, never) : Null<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_highlightedAngle():Null<NSMeasurement<NSUnitAngle>>;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var secondaryAngles(get, set) : NSArray<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_secondaryAngles():NSArray<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_secondaryAngles(v:NSArray<NSMeasurement<NSUnitAngle>>):NSArray<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var angles(get, never) : NSArray<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_angles():NSArray<NSMeasurement<NSUnitAngle>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():CPLane;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithAngles(angles:NSArray<NSMeasurement<NSUnitAngle>>):CPLane;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithAngles(angles:NSArray<NSMeasurement<NSUnitAngle>>, highlightedAngle:NSMeasurement<NSUnitAngle>, isPreferred:Bool):CPLane;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

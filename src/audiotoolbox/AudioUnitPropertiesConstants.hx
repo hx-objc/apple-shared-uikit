@@ -113,10 +113,15 @@ final class AudioUnitPropertiesConstants {
 	public static inline var kAudioUnitProperty_SpatialMixerAttenuationCurve : Int = 3013;
 	public static inline var kAudioUnitProperty_SpatialMixerOutputType : Int = 3100;
 	public static inline var kAudioUnitProperty_SpatialMixerPointSourceInHeadMode : Int = 3103;
+	@:hxmc.available(macos >= 12.3, ios >= 18.0, maccatalyst >= 18.0)
 	public static inline var kAudioUnitProperty_SpatialMixerEnableHeadTracking : Int = 3111;
+	@:hxmc.available(macos >= 13.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static inline var kAudioUnitProperty_SpatialMixerPersonalizedHRTFMode : Int = 3113;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static inline var kAudioUnitProperty_SpatialMixerAnyInputIsUsingPersonalizedHRTF : Int = 3116;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static inline var kAUAudioMixProperty_SpatialAudioMixMetadata : Int = 5000;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static inline var kAUAudioMixProperty_EnableSpatialization : Int = 5001;
 	public static inline var kAudioUnitProperty_3DMixerDistanceParams : Int = 3010;
 	public static inline var kAudioUnitProperty_3DMixerAttenuationCurve : Int = 3013;

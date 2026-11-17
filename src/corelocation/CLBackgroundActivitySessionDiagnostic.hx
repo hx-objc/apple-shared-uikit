@@ -3,19 +3,33 @@ package corelocation;
 
 import objc.NSObject;
 
-@:hxmc.framework("CoreLocation") @:hxmc.objc extern class CLBackgroundActivitySessionDiagnostic extends NSObject {
+@:hxmc.framework("CoreLocation") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class CLBackgroundActivitySessionDiagnostic extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():CLBackgroundActivitySessionDiagnostic;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var authorizationDenied(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_authorizationDenied():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var authorizationDeniedGlobally(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_authorizationDeniedGlobally():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var authorizationRestricted(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_authorizationRestricted():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var insufficientlyInUse(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_insufficientlyInUse():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var serviceSessionRequired(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_serviceSessionRequired():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var authorizationRequestInProgress(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_authorizationRequestInProgress():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():CLBackgroundActivitySessionDiagnostic;
 }

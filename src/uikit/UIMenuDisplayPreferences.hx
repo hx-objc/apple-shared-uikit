@@ -9,15 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIMenuDisplayPreferences extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class UIMenuDisplayPreferences extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():UIMenuDisplayPreferences;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var maximumNumberOfTitleLines(get, set) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_maximumNumberOfTitleLines():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_maximumNumberOfTitleLines(v:I64):I64;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIMenuDisplayPreferences>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():UIMenuDisplayPreferences;
 }

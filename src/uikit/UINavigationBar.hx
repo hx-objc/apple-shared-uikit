@@ -33,12 +33,19 @@ import hxmc.objc.Id;
 	var prefersLargeTitles(get, set) : Bool;
 	function get_prefersLargeTitles():Bool;
 	function set_prefersLargeTitles(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var currentNSToolbarSection(get, never) : UINavigationBarNSToolbarSection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_currentNSToolbarSection():UINavigationBarNSToolbarSection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var behavioralStyle(get, never) : UIBehavioralStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_behavioralStyle():UIBehavioralStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredBehavioralStyle(get, set) : UIBehavioralStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredBehavioralStyle():UIBehavioralStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredBehavioralStyle(v:UIBehavioralStyle):UIBehavioralStyle;
 	var barTintColor(get, set) : Null<UIColor>;
 	function get_barTintColor():Null<UIColor>;

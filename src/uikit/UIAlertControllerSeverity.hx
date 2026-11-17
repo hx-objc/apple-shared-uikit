@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIAlertControllerSeverity(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Critical = 1;
 	inline function new(v:I64) this = v;
 }

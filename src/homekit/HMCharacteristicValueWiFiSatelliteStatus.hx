@@ -4,8 +4,11 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueWiFiSatelliteStatus(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Connected = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var NotConnected = 2;
 	inline function new(v:I64) this = v;
 }

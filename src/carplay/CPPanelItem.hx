@@ -7,21 +7,33 @@ import foundation.NSSecureCoding;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPPanelItem extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPPanelItem extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var showsBottomSeparator(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_showsBottomSeparator():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_showsBottomSeparator(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var userInfo(get, set) : Null<Id>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_userInfo():Null<Id>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_userInfo(v:Null<Id>):Null<Id>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithListItem(listItem:CPListItem):CPPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithGridButtons(gridButtons:NSArray<CPGridButton>):CPPanelItem;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPPanelItem>;

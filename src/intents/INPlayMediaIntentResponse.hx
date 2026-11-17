@@ -8,6 +8,7 @@ import foundation.NSUserActivity;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPlayMediaIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPlayMediaIntentResponse;
 	var code(get, never) : INPlayMediaIntentResponseCode;
 	function get_code():INPlayMediaIntentResponseCode;

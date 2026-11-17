@@ -8,17 +8,29 @@ import foundation.NSString;
 import hxmc.I64;
 import hxmc.objc.Id;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextListElement extends NSTextParagraph {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class NSTextListElement extends NSTextParagraph {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():NSTextListElement;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var textList(get, never) : NSTextList;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_textList():NSTextList;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var contents(get, never) : Null<NSAttributedString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_contents():Null<NSAttributedString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var markerAttributes(get, never) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_markerAttributes():Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithParentElement(parent:Null<NSTextListElement>, textList:NSTextList, contents:Null<NSAttributedString>, markerAttributes:Null<NSDictionary<NSString, Id>>, childElements:Null<NSArray<NSTextListElement>>):NSTextListElement;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function textListElementWithContents(contents:NSAttributedString, markerAttributes:Null<NSDictionary<NSString, Id>>, textList:NSTextList, childElements:Null<NSArray<NSTextListElement>>):NSTextListElement;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function textListElementWithChildElements(children:NSArray<NSTextListElement>, textList:NSTextList, nestingLevel:I64):Null<NSTextListElement>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():NSTextListElement;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithTextContentManager(textContentManager:Null<NSTextContentManager>):NSTextListElement;
 }

@@ -5,20 +5,34 @@ import coregraphics.CGRect;
 import foundation.NSArray;
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPasteControl extends UIControl {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIPasteControl extends UIControl {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearance():UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var configuration(get, never) : UIPasteControlConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_configuration():UIPasteControlConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var target(get, set) : Null<UIPasteConfigurationSupporting>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_target():Null<UIPasteConfigurationSupporting>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_target(v:Null<UIPasteConfigurationSupporting>):Null<UIPasteConfigurationSupporting>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithConfiguration(configuration:UIPasteControlConfiguration):UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<UIPasteControl>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithFrame(frame:CGRect):UIPasteControl;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UIPasteControl;
 	@:selector("initWithFrame:primaryAction:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithFramePrimaryAction(frame:CGRect, primaryAction:Null<UIAction>):UIPasteControl;
 }

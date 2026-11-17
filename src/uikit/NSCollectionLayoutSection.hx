@@ -19,13 +19,18 @@ import objc.NSObject;
 	var contentInsetsReference(get, set) : UIContentInsetsReference;
 	function get_contentInsetsReference():UIContentInsetsReference;
 	function set_contentInsetsReference(v:UIContentInsetsReference):UIContentInsetsReference;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var supplementaryContentInsetsReference(get, set) : UIContentInsetsReference;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_supplementaryContentInsetsReference():UIContentInsetsReference;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_supplementaryContentInsetsReference(v:UIContentInsetsReference):UIContentInsetsReference;
 	var orthogonalScrollingBehavior(get, set) : UICollectionLayoutSectionOrthogonalScrollingBehavior;
 	function get_orthogonalScrollingBehavior():UICollectionLayoutSectionOrthogonalScrollingBehavior;
 	function set_orthogonalScrollingBehavior(v:UICollectionLayoutSectionOrthogonalScrollingBehavior):UICollectionLayoutSectionOrthogonalScrollingBehavior;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var orthogonalScrollingProperties(get, never) : UICollectionLayoutSectionOrthogonalScrollingProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_orthogonalScrollingProperties():UICollectionLayoutSectionOrthogonalScrollingProperties;
 	var boundarySupplementaryItems(get, set) : NSArray<NSCollectionLayoutBoundarySupplementaryItem>;
 	function get_boundarySupplementaryItems():NSArray<NSCollectionLayoutBoundarySupplementaryItem>;

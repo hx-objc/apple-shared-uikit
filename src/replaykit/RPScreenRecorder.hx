@@ -7,57 +7,87 @@ import foundation.NSURL;
 import objc.NSObject;
 import uikit.UIView;
 
-@:hxmc.framework("ReplayKit") @:hxmc.objc @:deprecated extern class RPScreenRecorder extends NSObject {
+@:hxmc.framework("ReplayKit") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 11.0) extern class RPScreenRecorder extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():RPScreenRecorder;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var delegate(get, set) : Null<RPScreenRecorderDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_delegate():Null<RPScreenRecorderDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function set_delegate(v:Null<RPScreenRecorderDelegate>):Null<RPScreenRecorderDelegate>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var available(get, never) : Bool;
 	@:selector("isAvailable")
+	@:hxmc.available(macos >= 11.0)
 	function get_available():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var recording(get, never) : Bool;
 	@:selector("isRecording")
+	@:hxmc.available(macos >= 11.0)
 	function get_recording():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var microphoneEnabled(get, set) : Bool;
 	@:selector("isMicrophoneEnabled")
+	@:hxmc.available(macos >= 11.0)
 	function get_microphoneEnabled():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_microphoneEnabled(v:Bool):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var cameraEnabled(get, set) : Bool;
 	@:selector("isCameraEnabled")
+	@:hxmc.available(macos >= 11.0)
 	function get_cameraEnabled():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_cameraEnabled(v:Bool):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var cameraPosition(get, set) : RPCameraPosition;
+	@:hxmc.available(macos >= 11.0)
 	function get_cameraPosition():RPCameraPosition;
+	@:hxmc.available(macos >= 11.0)
 	function set_cameraPosition(v:RPCameraPosition):RPCameraPosition;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var cameraPreviewView(get, never) : Null<UIView>;
+	@:hxmc.available(macos >= 11.0)
 	function get_cameraPreviewView():Null<UIView>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function sharedRecorder():RPScreenRecorder;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function startRecordingWithMicrophoneEnabled(microphoneEnabled:Bool, handler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function startRecordingWithHandler(handler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function stopRecordingWithHandler(handler:Null<(Null<RPPreviewViewController>, Null<NSError>) -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function stopRecordingWithOutputURL(url:NSURL, completionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function discardRecordingWithHandler(handler:() -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function startCaptureWithHandler(captureHandler:Null<(CMSampleBuffer, RPSampleBufferType, Null<NSError>) -> Void>, completionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function stopCaptureWithHandler(handler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	function startClipBufferingWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	function stopClipBufferingWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	function exportClipToURL(url:NSURL, duration:Float, completionHandler:Null<Null<NSError> -> Void>):Void;
 }

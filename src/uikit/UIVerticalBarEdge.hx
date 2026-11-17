@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIVerticalBarEdge(I64) to I64 {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Unspecified = 0;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Leading = 1;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Trailing = 2;
 	inline function new(v:I64) this = v;
 }

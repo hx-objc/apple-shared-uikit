@@ -4,10 +4,15 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIPageControlDirection(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Natural = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LeftToRight = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var RightToLeft = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TopToBottom = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var BottomToTop = 4;
 	inline function new(v:I64) this = v;
 }

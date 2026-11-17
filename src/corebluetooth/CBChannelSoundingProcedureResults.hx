@@ -3,8 +3,11 @@ package corebluetooth;
 
 import objc.NSObject;
 
-@:hxmc.framework("CoreBluetooth") @:hxmc.objc extern class CBChannelSoundingProcedureResults extends NSObject {
+@:hxmc.framework("CoreBluetooth") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CBChannelSoundingProcedureResults extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CBChannelSoundingProcedureResults;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var distance(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_distance():Float;
 }

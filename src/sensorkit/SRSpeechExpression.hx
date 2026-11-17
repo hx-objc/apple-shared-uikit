@@ -10,21 +10,36 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRSpeechExpression extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class SRSpeechExpression extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SRSpeechExpression;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var version(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_version():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var timeRange(get, never) : CMTimeRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_timeRange():CMTimeRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var confidence(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_confidence():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var mood(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_mood():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var valence(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_valence():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var activation(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_activation():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var dominance(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_dominance():Float;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

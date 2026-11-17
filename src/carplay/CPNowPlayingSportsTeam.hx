@@ -7,23 +7,37 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingSportsTeam extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingSportsTeam extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var name(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_name():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var logo(get, never) : CPNowPlayingSportsTeamLogo;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_logo():CPNowPlayingSportsTeamLogo;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var teamStandings(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_teamStandings():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var eventScore(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_eventScore():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var possessionIndicator(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_possessionIndicator():Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var favorite(get, never) : Bool;
 	@:selector("isFavorite")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_favorite():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithName(name:NSStringArg, logo:CPNowPlayingSportsTeamLogo, teamStandings:Null<NSStringArg>, eventScore:NSStringArg, possessionIndicator:Null<UIImage>, favorite:Bool):CPNowPlayingSportsTeam;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNowPlayingSportsTeam>;

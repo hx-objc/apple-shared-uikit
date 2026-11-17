@@ -3,11 +3,17 @@ package uikit;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIGlassContainerEffect extends UIVisualEffect {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIGlassContainerEffect extends UIVisualEffect {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIGlassContainerEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var spacing(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_spacing():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_spacing(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIGlassContainerEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(coder:NSCoder):Null<UIGlassContainerEffect>;
 }

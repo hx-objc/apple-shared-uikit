@@ -6,55 +6,101 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITab extends NSObject implements UIPopoverPresentationControllerSourceItem implements UISpringLoadedInteractionSupporting implements UIAccessibilityIdentification {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITab extends NSObject implements UIPopoverPresentationControllerSourceItem implements UISpringLoadedInteractionSupporting implements UIAccessibilityIdentification {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITab;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var image(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_image(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var selectedImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_selectedImage():Null<UIImage>;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_selectedImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var badgeValue(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_badgeValue():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_badgeValue(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var preferredPlacement(get, set) : UITabPlacement;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_preferredPlacement():UITabPlacement;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_preferredPlacement(v:UITabPlacement):UITabPlacement;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var userInfo(get, set) : Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_userInfo():Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_userInfo(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var parent(get, never) : Null<UITabGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_parent():Null<UITabGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tabBarController(get, never) : Null<UITabBarController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tabBarController():Null<UITabBarController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var viewController(get, never) : Null<UIViewController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_viewController():Null<UIViewController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var managingTabGroup(get, never) : Null<UITabGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_managingTabGroup():Null<UITabGroup>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_hidden(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var hiddenByDefault(get, set) : Bool;
 	@:selector("isHiddenByDefault")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_hiddenByDefault():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_hiddenByDefault(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var allowsHiding(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowsHiding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsHiding(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var hasVisiblePlacement(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_hasVisiblePlacement():Bool;
 	var springLoaded(get, set) : Bool;
 	@:selector("isSpringLoaded")
@@ -63,6 +109,8 @@ import objc.NSObject;
 	var accessibilityIdentifier(get, set) : Null<NSStringArg>;
 	function get_accessibilityIdentifier():Null<NSStringArg>;
 	function set_accessibilityIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithTitle(title:NSStringArg, image:Null<UIImage>, identifier:NSStringArg, viewControllerProvider:Null<UITab -> UIViewController>):UITab;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 }

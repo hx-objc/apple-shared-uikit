@@ -5,19 +5,33 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityRequest extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityRequest extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityRequest;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var descriptor(get, set) : Null<PKIdentityDocumentDescriptor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_descriptor():Null<PKIdentityDocumentDescriptor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_descriptor(v:Null<PKIdentityDocumentDescriptor>):Null<PKIdentityDocumentDescriptor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var nonce(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_nonce():Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_nonce(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var merchantIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_merchantIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_merchantIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var usageDescriptionKey(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_usageDescriptionKey():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function set_usageDescriptionKey(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():PKIdentityRequest;
 }

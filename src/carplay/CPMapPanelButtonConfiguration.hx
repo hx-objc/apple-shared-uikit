@@ -3,15 +3,24 @@ package carplay;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMapPanelButtonConfiguration extends CPPanelButtonConfiguration {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPMapPanelButtonConfiguration extends CPPanelButtonConfiguration {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPMapPanelButtonConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var travelEstimates(get, set) : Null<CPTravelEstimates>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_travelEstimates():Null<CPTravelEstimates>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_travelEstimates(v:Null<CPTravelEstimates>):Null<CPTravelEstimates>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var secondaryButton(get, never) : Null<CPButton>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_secondaryButton():Null<CPButton>;
 	@:selector("initWithPrimaryAction:secondaryButton:travelEstimates:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPrimaryActionSecondaryButtonTravelEstimates(primaryAction:CPTextButton, secondaryButton:Null<CPButton>, travelEstimates:CPTravelEstimates):CPMapPanelButtonConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithCoder(coder:NSCoder):Null<CPMapPanelButtonConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithPrimaryAction(primaryAction:CPTextButton, secondaryAction:Null<CPTextButton>):CPMapPanelButtonConfiguration;
 }

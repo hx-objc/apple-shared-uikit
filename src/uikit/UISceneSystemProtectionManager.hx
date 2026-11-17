@@ -3,9 +3,12 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneSystemProtectionManager extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UISceneSystemProtectionManager extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UISceneSystemProtectionManager;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var userAuthenticationEnabled(get, never) : Bool;
 	@:selector("isUserAuthenticationEnabled")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_userAuthenticationEnabled():Bool;
 }

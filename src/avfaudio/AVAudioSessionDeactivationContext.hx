@@ -3,10 +3,15 @@ package avfaudio;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVFAudio") @:hxmc.objc extern class AVAudioSessionDeactivationContext extends NSObject {
+@:hxmc.framework("AVFAudio") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVAudioSessionDeactivationContext extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVAudioSessionDeactivationContext;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var source(get, never) : AVAudioSessionDeactivationSource;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_source():AVAudioSessionDeactivationSource;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var interruptionContext(get, never) : Null<AVAudioSessionInterruptionContext>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_interruptionContext():Null<AVAudioSessionInterruptionContext>;
 }

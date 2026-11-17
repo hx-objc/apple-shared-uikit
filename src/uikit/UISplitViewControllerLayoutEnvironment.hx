@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UISplitViewControllerLayoutEnvironment(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var None = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Expanded = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Collapsed = 2;
 	inline function new(v:I64) this = v;
 }

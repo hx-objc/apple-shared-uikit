@@ -4,14 +4,20 @@ package cfnetwork;
 import corefoundation.CFAllocator;
 import corefoundation.CFRunLoop;
 import corefoundation.CFRunLoopSource;
+import corefoundation.CFStreamClientContext;
+import corefoundation.CFStreamError;
+import foundation.NSArray;
 import foundation.NSData;
 import foundation.NSDictionary;
+import foundation.NSError;
 import foundation.NSInputStream;
 import foundation.NSOutputStream;
 import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.Span;
+import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("CFNetwork") extern class CFNetwork {
@@ -20,14 +26,17 @@ import hxmc.unsafe.Ptr;
 	public static function CFHTTPAuthenticationAppliesToRequest(auth:Ptr, request:Ptr):Bool;
 	public static function CFHTTPAuthenticationCreateFromResponse(alloc:Null<CFAllocator>, response:Ptr):Ptr;
 	public static function CFHTTPAuthenticationGetTypeID():I64;
-	public static function CFHTTPAuthenticationIsValid(auth:Ptr, error:Ptr):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFHTTPAuthenticationIsValid(auth:Ptr, error:Span<CFStreamError>):Bool;
 	public static function CFHTTPAuthenticationRequiresAccountDomain(auth:Ptr):Bool;
 	public static function CFHTTPAuthenticationRequiresOrderedRequests(auth:Ptr):Bool;
 	public static function CFHTTPAuthenticationRequiresUserNameAndPassword(auth:Ptr):Bool;
 	public static function CFHTTPMessageAddAuthentication(request:Ptr, authenticationFailureResponse:Ptr, username:NSStringArg, password:NSStringArg, authenticationScheme:Null<NSStringArg>, forProxy:Bool):Bool;
 	public static function CFHTTPMessageAppendBytes(message:Ptr, newBytes:Ptr, numBytes:I64):Bool;
-	public static function CFHTTPMessageApplyCredentialDictionary(request:Ptr, auth:Ptr, dict:NSDictionary, error:Ptr):Bool;
-	public static function CFHTTPMessageApplyCredentials(request:Ptr, auth:Ptr, username:Null<NSStringArg>, password:Null<NSStringArg>, error:Ptr):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFHTTPMessageApplyCredentialDictionary(request:Ptr, auth:Ptr, dict:NSDictionary, error:Span<CFStreamError>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFHTTPMessageApplyCredentials(request:Ptr, auth:Ptr, username:Null<NSStringArg>, password:Null<NSStringArg>, error:Span<CFStreamError>):Bool;
 	public static function CFHTTPMessageCreateCopy(alloc:Null<CFAllocator>, message:Ptr):Ptr;
 	public static function CFHTTPMessageCreateEmpty(alloc:Null<CFAllocator>, isRequest:Bool):Ptr;
 	public static function CFHTTPMessageCreateRequest(alloc:Null<CFAllocator>, requestMethod:NSStringArg, url:NSURL, httpVersion:NSStringArg):Ptr;
@@ -44,8 +53,10 @@ import hxmc.unsafe.Ptr;
 	public static function CFHostCreateWithName(allocator:Null<CFAllocator>, hostname:NSStringArg):Ptr;
 	public static function CFHostGetTypeID():I64;
 	public static function CFHostScheduleWithRunLoop(theHost:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFHostSetClient(theHost:Ptr, clientCB:Ptr, clientContext:Ptr):Bool;
-	public static function CFHostStartInfoResolution(theHost:Ptr, info:CFHostInfoType, error:Ptr):Bool;
+	@:hxmc.len(clientContext, 1)
+	public static function CFHostSetClient(theHost:Ptr, clientCB:Ptr, clientContext:Span<CFHostClientContext>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFHostStartInfoResolution(theHost:Ptr, info:CFHostInfoType, error:Span<CFStreamError>):Bool;
 	public static function CFHostUnscheduleFromRunLoop(theHost:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
 	@:deprecated
 	public static function CFNetDiagnosticCopyNetworkStatusPassively(details:Ptr, description:Ptr):I64;
@@ -57,36 +68,48 @@ import hxmc.unsafe.Ptr;
 	public static function CFNetDiagnosticDiagnoseProblemInteractively(details:Ptr):I64;
 	@:deprecated
 	public static function CFNetDiagnosticSetName(details:Ptr, name:NSStringArg):Void;
-	public static function CFNetServiceBrowserCreate(alloc:Null<CFAllocator>, clientCB:Ptr, clientContext:Ptr):Ptr;
+	@:hxmc.len(clientContext, 1)
+	public static function CFNetServiceBrowserCreate(alloc:Null<CFAllocator>, clientCB:(Ptr, I64, Null<Id>, Ptr, Ptr) -> Void, clientContext:Span<CFNetServiceClientContext>):Ptr;
 	public static function CFNetServiceBrowserGetTypeID():I64;
 	public static function CFNetServiceBrowserInvalidate(browser:Ptr):Void;
 	public static function CFNetServiceBrowserScheduleWithRunLoop(browser:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFNetServiceBrowserSearchForDomains(browser:Ptr, registrationDomains:Bool, error:Ptr):Bool;
-	public static function CFNetServiceBrowserSearchForServices(browser:Ptr, domain:NSStringArg, serviceType:NSStringArg, error:Ptr):Bool;
-	public static function CFNetServiceBrowserStopSearch(browser:Ptr, error:Ptr):Void;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceBrowserSearchForDomains(browser:Ptr, registrationDomains:Bool, error:Span<CFStreamError>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceBrowserSearchForServices(browser:Ptr, domain:NSStringArg, serviceType:NSStringArg, error:Span<CFStreamError>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceBrowserStopSearch(browser:Ptr, error:Span<CFStreamError>):Void;
 	public static function CFNetServiceBrowserUnscheduleFromRunLoop(browser:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
 	public static function CFNetServiceCancel(theService:Ptr):Void;
 	public static function CFNetServiceCreate(alloc:Null<CFAllocator>, domain:NSStringArg, serviceType:NSStringArg, name:NSStringArg, port:Int):Ptr;
 	public static function CFNetServiceCreateCopy(alloc:Null<CFAllocator>, service:Ptr):Ptr;
 	public static function CFNetServiceGetPortNumber(theService:Ptr):Int;
 	public static function CFNetServiceGetTypeID():I64;
-	public static function CFNetServiceMonitorCreate(alloc:Null<CFAllocator>, theService:Ptr, clientCB:Ptr, clientContext:Ptr):Ptr;
+	@:hxmc.len(clientContext, 1)
+	public static function CFNetServiceMonitorCreate(alloc:Null<CFAllocator>, theService:Ptr, clientCB:(Ptr, Ptr, CFNetServiceMonitorType, Null<NSData>, Ptr, Ptr) -> Void, clientContext:Span<CFNetServiceClientContext>):Ptr;
 	public static function CFNetServiceMonitorGetTypeID():I64;
 	public static function CFNetServiceMonitorInvalidate(monitor:Ptr):Void;
 	public static function CFNetServiceMonitorScheduleWithRunLoop(monitor:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFNetServiceMonitorStart(monitor:Ptr, recordType:CFNetServiceMonitorType, error:Ptr):Bool;
-	public static function CFNetServiceMonitorStop(monitor:Ptr, error:Ptr):Void;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceMonitorStart(monitor:Ptr, recordType:CFNetServiceMonitorType, error:Span<CFStreamError>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceMonitorStop(monitor:Ptr, error:Span<CFStreamError>):Void;
 	public static function CFNetServiceMonitorUnscheduleFromRunLoop(monitor:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFNetServiceRegisterWithOptions(theService:Ptr, options:I64, error:Ptr):Bool;
-	public static function CFNetServiceResolveWithTimeout(theService:Ptr, timeout:Float, error:Ptr):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceRegisterWithOptions(theService:Ptr, options:I64, error:Span<CFStreamError>):Bool;
+	@:hxmc.len(error, 1)
+	public static function CFNetServiceResolveWithTimeout(theService:Ptr, timeout:Float, error:Span<CFStreamError>):Bool;
 	public static function CFNetServiceScheduleWithRunLoop(theService:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFNetServiceSetClient(theService:Ptr, clientCB:Ptr, clientContext:Ptr):Bool;
+	@:hxmc.len(clientContext, 1)
+	public static function CFNetServiceSetClient(theService:Ptr, clientCB:Ptr, clientContext:Span<CFNetServiceClientContext>):Bool;
 	public static function CFNetServiceSetTXTData(theService:Ptr, txtRecord:NSData):Bool;
 	public static function CFNetServiceUnscheduleFromRunLoop(theService:Ptr, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
 	@:hxmc.retained
-	public static function CFNetworkExecuteProxyAutoConfigurationScript(proxyAutoConfigurationScript:NSStringArg, targetURL:NSURL, cb:Ptr, clientContext:Ptr):CFRunLoopSource;
+	@:hxmc.len(clientContext, 1)
+	public static function CFNetworkExecuteProxyAutoConfigurationScript(proxyAutoConfigurationScript:NSStringArg, targetURL:NSURL, cb:(Ptr, NSArray, Null<NSError>) -> Void, clientContext:Span<CFStreamClientContext>):CFRunLoopSource;
 	@:hxmc.retained
-	public static function CFNetworkExecuteProxyAutoConfigurationURL(proxyAutoConfigURL:NSURL, targetURL:NSURL, cb:Ptr, clientContext:Ptr):CFRunLoopSource;
+	@:hxmc.len(clientContext, 1)
+	public static function CFNetworkExecuteProxyAutoConfigurationURL(proxyAutoConfigURL:NSURL, targetURL:NSURL, cb:(Ptr, NSArray, Null<NSError>) -> Void, clientContext:Span<CFStreamClientContext>):CFRunLoopSource;
 	public static function CFStreamCreatePairWithSocketToCFHost(alloc:Null<CFAllocator>, host:Ptr, port:Int, readStream:Ptr, writeStream:Ptr):Void;
 	public static function CFStreamCreatePairWithSocketToNetService(alloc:Null<CFAllocator>, service:Ptr, readStream:Ptr, writeStream:Ptr):Void;
 	public static final kCFDNSServiceFailureKey : NSString;

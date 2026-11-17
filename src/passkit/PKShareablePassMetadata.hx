@@ -14,17 +14,24 @@ import objc.NSObject;
 	@:deprecated
 	var templateIdentifier(get, never) : NSStringArg;
 	function get_templateIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cardTemplateIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cardTemplateIdentifier():NSStringArg;
 	var cardConfigurationIdentifier(get, never) : NSStringArg;
 	function get_cardConfigurationIdentifier():NSStringArg;
 	var requiresUnifiedAccessCapableDevice(get, set) : Bool;
 	function get_requiresUnifiedAccessCapableDevice():Bool;
 	function set_requiresUnifiedAccessCapableDevice(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var serverEnvironmentIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_serverEnvironmentIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_serverEnvironmentIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preview(get, never) : PKShareablePassMetadataPreview;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preview():PKShareablePassMetadataPreview;
 	@:deprecated
 	var passThumbnailImage(get, never) : CGImage;
@@ -45,8 +52,10 @@ import objc.NSObject;
 	overload function initWithProvisioningCredentialIdentifier(credentialIdentifier:NSStringArg, cardConfigurationIdentifier:NSStringArg, sharingInstanceIdentifier:NSStringArg, passThumbnailImage:CGImage, ownerDisplayName:NSStringArg, localizedDescription:NSStringArg):Null<PKShareablePassMetadata>;
 	@:deprecated
 	overload function initWithProvisioningCredentialIdentifier(credentialIdentifier:NSStringArg, sharingInstanceIdentifier:NSStringArg, passThumbnailImage:CGImage, ownerDisplayName:NSStringArg, localizedDescription:NSStringArg, accountHash:NSStringArg, templateIdentifier:NSStringArg, relyingPartyIdentifier:NSStringArg, requiresUnifiedAccessCapableDevice:Bool):PKShareablePassMetadata;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithProvisioningCredentialIdentifier(credentialIdentifier:NSStringArg, sharingInstanceIdentifier:NSStringArg, cardTemplateIdentifier:NSStringArg, preview:PKShareablePassMetadataPreview):PKShareablePassMetadata;
 	@:selector("initWithProvisioningCredentialIdentifier:sharingInstanceIdentifier:cardConfigurationIdentifier:preview:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithProvisioningCredentialIdentifierSharingInstanceIdentifierCardConfigurationIdentifierPreview(credentialIdentifier:NSStringArg, sharingInstanceIdentifier:NSStringArg, cardConfigurationIdentifier:NSStringArg, preview:PKShareablePassMetadataPreview):PKShareablePassMetadata;
 	override function init():PKShareablePassMetadata;
 }

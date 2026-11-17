@@ -6,13 +6,21 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("Messages") @:hxmc.objc extern class MSUPIRequest extends NSObject {
+@:hxmc.framework("Messages") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class MSUPIRequest extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():MSUPIRequest;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var validationToken(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_validationToken():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var recipients(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_recipients():NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithValidationToken(validationToken:NSStringArg, recipients:NSArray<NSString>):MSUPIRequest;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function sendWithCompletionHandler(completionHandler:Bool -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():MSUPIRequest;
 }

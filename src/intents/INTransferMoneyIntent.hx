@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INTransferMoneyIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTransferMoneyIntent;
 	var fromAccount(get, never) : Null<INPaymentAccount>;
 	function get_fromAccount():Null<INPaymentAccount>;
@@ -17,6 +18,7 @@ import foundation.NSStringArg;
 	var transactionNote(get, never) : Null<NSStringArg>;
 	function get_transactionNote():Null<NSStringArg>;
 	function initWithFromAccount(fromAccount:Null<INPaymentAccount>, toAccount:Null<INPaymentAccount>, transactionAmount:Null<INPaymentAmount>, transactionScheduledDate:Null<INDateComponentsRange>, transactionNote:Null<NSStringArg>):INTransferMoneyIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INTransferMoneyIntent;
 	override function initWithCoder(coder:NSCoder):Null<INTransferMoneyIntent>;
 }

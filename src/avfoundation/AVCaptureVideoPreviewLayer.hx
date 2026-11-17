@@ -43,12 +43,17 @@ import quartzcore.CALayer;
 	@:selector("isMirrored")
 	function get_mirrored():Bool;
 	function set_mirrored(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var deferredStartSupported(get, never) : Bool;
 	@:selector("isDeferredStartSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_deferredStartSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var deferredStartEnabled(get, set) : Bool;
 	@:selector("isDeferredStartEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_deferredStartEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_deferredStartEnabled(v:Bool):Bool;
 	static function layerWithSession(session:AVCaptureSession):AVCaptureVideoPreviewLayer;
 	function initWithSession(session:AVCaptureSession):AVCaptureVideoPreviewLayer;

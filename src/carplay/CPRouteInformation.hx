@@ -4,19 +4,33 @@ package carplay;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPRouteInformation extends NSObject {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class CPRouteInformation extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():CPRouteInformation;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var maneuvers(get, never) : NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_maneuvers():NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var laneGuidances(get, never) : NSArray<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_laneGuidances():NSArray<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var currentManeuvers(get, never) : NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_currentManeuvers():NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var currentLaneGuidance(get, never) : CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_currentLaneGuidance():CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var tripTravelEstimates(get, never) : CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_tripTravelEstimates():CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var maneuverTravelEstimates(get, never) : CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_maneuverTravelEstimates():CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithManeuvers(maneuvers:NSArray<CPManeuver>, laneGuidances:NSArray<CPLaneGuidance>, currentManeuvers:NSArray<CPManeuver>, currentLaneGuidance:CPLaneGuidance, tripTravelEstimates:CPTravelEstimates, maneuverTravelEstimates:CPTravelEstimates):CPRouteInformation;
 }

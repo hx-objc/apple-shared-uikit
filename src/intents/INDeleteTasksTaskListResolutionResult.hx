@@ -6,14 +6,20 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INDeleteTasksTaskListResolutionResult extends INTaskListResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDeleteTasksTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INDeleteTasksTaskListResolutionResult;
 	static function confirmationRequiredWithTaskListToConfirm(taskListToConfirm:Null<INTaskList>):INDeleteTasksTaskListResolutionResult;
 	static function disambiguationWithTaskListsToDisambiguate(taskListsToDisambiguate:NSArray<INTaskList>):INDeleteTasksTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INDeleteTasksTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INDeleteTasksTaskListResolutionResult;
 	static function successWithResolvedTaskList(resolvedTaskList:INTaskList):INDeleteTasksTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INDeleteTasksTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INDeleteTasksTaskListResolutionResult;
 	static function unsupportedForReason(reason:INDeleteTasksTaskListUnsupportedReason):INDeleteTasksTaskListResolutionResult;
 	function initWithTaskListResolutionResult(taskListResolutionResult:INTaskListResolutionResult):INDeleteTasksTaskListResolutionResult;

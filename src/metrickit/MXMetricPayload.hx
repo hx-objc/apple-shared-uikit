@@ -42,11 +42,17 @@ import objc.NSObject;
 	function get_memoryMetrics():Null<MXMemoryMetric>;
 	var displayMetrics(get, never) : Null<MXDisplayMetric>;
 	function get_displayMetrics():Null<MXDisplayMetric>;
+	@:hxmc.available(macos >= 11.0)
 	var animationMetrics(get, never) : Null<MXAnimationMetric>;
+	@:hxmc.available(macos >= 11.0)
 	function get_animationMetrics():Null<MXAnimationMetric>;
+	@:hxmc.available(macos >= 11.0)
 	var applicationExitMetrics(get, never) : Null<MXAppExitMetric>;
+	@:hxmc.available(macos >= 11.0)
 	function get_applicationExitMetrics():Null<MXAppExitMetric>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var diskSpaceUsageMetrics(get, never) : Null<MXDiskSpaceUsageMetric>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_diskSpaceUsageMetrics():Null<MXDiskSpaceUsageMetric>;
 	var signpostMetrics(get, never) : Null<NSArray<MXSignpostMetric>>;
 	function get_signpostMetrics():Null<NSArray<MXSignpostMetric>>;
@@ -56,6 +62,7 @@ import objc.NSObject;
 	static function get_supportsSecureCoding():Bool;
 	function JSONRepresentation():NSData;
 	function DictionaryRepresentation():NSDictionary;
+	@:hxmc.available(macos >= 11.0)
 	function dictionaryRepresentation():NSDictionary;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MXMetricPayload>;

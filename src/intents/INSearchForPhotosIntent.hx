@@ -8,6 +8,7 @@ import foundation.NSString;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForPhotosIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForPhotosIntent;
 	var dateCreated(get, never) : Null<INDateComponentsRange>;
 	function get_dateCreated():Null<INDateComponentsRange>;
@@ -28,6 +29,7 @@ import foundation.NSStringArg;
 	var peopleInPhotoOperator(get, never) : INConditionalOperator;
 	function get_peopleInPhotoOperator():INConditionalOperator;
 	function initWithDateCreated(dateCreated:Null<INDateComponentsRange>, locationCreated:Null<CLPlacemark>, albumName:Null<NSStringArg>, searchTerms:Null<NSArray<NSString>>, includedAttributes:INPhotoAttributeOptions, excludedAttributes:INPhotoAttributeOptions, peopleInPhoto:Null<NSArray<INPerson>>):INSearchForPhotosIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForPhotosIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForPhotosIntent>;
 }

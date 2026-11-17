@@ -3,11 +3,14 @@ package uikit;
 
 import foundation.NSStringArg;
 
-@:hxmc.objc("UITraitDefinition") extern interface UITraitDefinition extends hxmc.objc.Id {
+@:hxmc.objc("UITraitDefinition") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITraitDefinition extends hxmc.objc.Id {
 	static var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_identifier():NSStringArg;
 	static var name(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_name():NSStringArg;
 	static var affectsColorAppearance(get, never) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_affectsColorAppearance():Bool;
 }

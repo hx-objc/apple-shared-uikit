@@ -8,21 +8,31 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRAcousticSettingsAccessibility extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SRAcousticSettingsAccessibility extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SRAcousticSettingsAccessibility;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var leftRightBalance(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_leftRightBalance():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var monoAudioEnabled(get, never) : Bool;
 	@:selector("isMonoAudioEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_monoAudioEnabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var backgroundSounds(get, never) : SRAcousticSettingsAccessibilityBackgroundSounds;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_backgroundSounds():SRAcousticSettingsAccessibilityBackgroundSounds;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var headphoneAccommodations(get, never) : SRAcousticSettingsAccessibilityHeadphoneAccommodations;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_headphoneAccommodations():SRAcousticSettingsAccessibilityHeadphoneAccommodations;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<SRAcousticSettingsAccessibility>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():SRAcousticSettingsAccessibility;
 }

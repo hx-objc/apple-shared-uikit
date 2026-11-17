@@ -9,6 +9,7 @@ import uikit.UIWindow;
 @:hxmc.objc("PKPaymentAuthorizationControllerDelegate") extern interface PKPaymentAuthorizationControllerDelegate extends NSObjectProtocol {
 	function paymentAuthorizationControllerDidFinish(controller:PKPaymentAuthorizationController):Void;
 	@:selector("paymentAuthorizationController:didAuthorizePayment:handler:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function paymentAuthorizationControllerDidAuthorizePaymentHandler(controller:PKPaymentAuthorizationController, didAuthorizePayment:PKPayment, handler:PKPaymentAuthorizationResult -> Void):Void;
 	@:selector("paymentAuthorizationController:didAuthorizePayment:completion:")
@@ -18,18 +19,23 @@ import uikit.UIWindow;
 	@:optional
 	function paymentAuthorizationControllerWillAuthorizePayment(controller:PKPaymentAuthorizationController):Void;
 	@:selector("paymentAuthorizationController:didRequestMerchantSessionUpdate:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function paymentAuthorizationControllerDidRequestMerchantSessionUpdate(controller:PKPaymentAuthorizationController, didRequestMerchantSessionUpdate:PKPaymentRequestMerchantSessionUpdate -> Void):Void;
 	@:selector("paymentAuthorizationController:didChangeCouponCode:handler:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function paymentAuthorizationControllerDidChangeCouponCodeHandler(controller:PKPaymentAuthorizationController, didChangeCouponCode:NSStringArg, handler:PKPaymentRequestCouponCodeUpdate -> Void):Void;
 	@:selector("paymentAuthorizationController:didSelectShippingMethod:handler:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function paymentAuthorizationControllerDidSelectShippingMethodHandler(controller:PKPaymentAuthorizationController, didSelectShippingMethod:PKShippingMethod, handler:PKPaymentRequestShippingMethodUpdate -> Void):Void;
 	@:selector("paymentAuthorizationController:didSelectShippingContact:handler:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function paymentAuthorizationControllerDidSelectShippingContactHandler(controller:PKPaymentAuthorizationController, didSelectShippingContact:PKContact, handler:PKPaymentRequestShippingContactUpdate -> Void):Void;
 	@:selector("paymentAuthorizationController:didSelectPaymentMethod:handler:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function paymentAuthorizationControllerDidSelectPaymentMethodHandler(controller:PKPaymentAuthorizationController, didSelectPaymentMethod:PKPaymentMethod, handler:PKPaymentRequestPaymentMethodUpdate -> Void):Void;
 	@:selector("paymentAuthorizationController:didSelectShippingMethod:completion:")

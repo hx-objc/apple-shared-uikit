@@ -8,16 +8,24 @@ import foundation.NSString;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingSportsEventStatus extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingSportsEventStatus extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingSportsEventStatus;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var eventStatusText(get, never) : Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_eventStatusText():Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var eventClock(get, never) : Null<CPNowPlayingSportsClock>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_eventClock():Null<CPNowPlayingSportsClock>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var eventStatusImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_eventStatusImage():Null<UIImage>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithEventStatusText(eventStatusText:Null<NSArray<NSString>>, eventStatusImage:Null<UIImage>, eventClock:Null<CPNowPlayingSportsClock>):CPNowPlayingSportsEventStatus;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNowPlayingSportsEventStatus>;

@@ -13,7 +13,9 @@ import objc.NSObject;
 	var indexDelegate(get, set) : Null<CSSearchableIndexDelegate>;
 	function get_indexDelegate():Null<CSSearchableIndexDelegate>;
 	function set_indexDelegate(v:Null<CSSearchableIndexDelegate>):Null<CSSearchableIndexDelegate>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var protectionClass(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_protectionClass():NSStringArg;
 	static function isIndexingAvailable():Bool;
 	static function defaultSearchableIndex():CSSearchableIndex;
@@ -24,6 +26,7 @@ import objc.NSObject;
 	function deleteSearchableItemsWithDomainIdentifiers(domainIdentifiers:NSArray<NSString>, completionHandler:Null<Null<NSError> -> Void>):Void;
 	function deleteAllSearchableItemsWithCompletionHandler(completionHandler:Null<Null<NSError> -> Void>):Void;
 	function beginIndexBatch():Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function endIndexBatchWithExpectedClientState(expectedClientState:Null<NSData>, newClientState:NSData, completionHandler:Null<Null<NSError> -> Void>):Void;
 	function endIndexBatchWithClientState(clientState:NSData, completionHandler:Null<Null<NSError> -> Void>):Void;
 	function fetchLastClientStateWithCompletionHandler(completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;

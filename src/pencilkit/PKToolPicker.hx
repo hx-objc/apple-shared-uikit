@@ -13,22 +13,35 @@ import uikit.UIWindow;
 
 @:hxmc.framework("PencilKit") @:hxmc.objc extern class PKToolPicker extends NSObject {
 	static function alloc():PKToolPicker;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var delegate(get, set) : Null<PKToolPickerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_delegate():Null<PKToolPickerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_delegate(v:Null<PKToolPickerDelegate>):Null<PKToolPickerDelegate>;
 	@:deprecated
 	var selectedTool(get, set) : PKTool;
 	function get_selectedTool():PKTool;
 	function set_selectedTool(v:PKTool):PKTool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var selectedToolItem(get, set) : PKToolPickerItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_selectedToolItem():PKToolPickerItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_selectedToolItem(v:PKToolPickerItem):PKToolPickerItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var selectedToolItemIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_selectedToolItemIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_selectedToolItemIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var toolItems(get, never) : NSArray<PKToolPickerItem>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_toolItems():NSArray<PKToolPickerItem>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var defaultToolItems(get, never) : NSArray<PKToolPickerItem>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_defaultToolItems():NSArray<PKToolPickerItem>;
 	var rulerActive(get, set) : Bool;
 	@:selector("isRulerActive")
@@ -39,8 +52,11 @@ import uikit.UIWindow;
 	var stateAutosaveName(get, set) : Null<NSStringArg>;
 	function get_stateAutosaveName():Null<NSStringArg>;
 	function set_stateAutosaveName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var maximumSupportedContentVersion(get, set) : PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_maximumSupportedContentVersion():PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_maximumSupportedContentVersion(v:PKContentVersion):PKContentVersion;
 	var overrideUserInterfaceStyle(get, set) : UIUserInterfaceStyle;
 	function get_overrideUserInterfaceStyle():UIUserInterfaceStyle;
@@ -51,11 +67,17 @@ import uikit.UIWindow;
 	var showsDrawingPolicyControls(get, set) : Bool;
 	function get_showsDrawingPolicyControls():Bool;
 	function set_showsDrawingPolicyControls(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessoryItem(get, set) : Null<UIBarButtonItem>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessoryItem():Null<UIBarButtonItem>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessoryItem(v:Null<UIBarButtonItem>):Null<UIBarButtonItem>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var colorMaximumLinearExposure(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_colorMaximumLinearExposure():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_colorMaximumLinearExposure(v:Float):Float;
 	function addObserver(observer:PKToolPickerObserver):Void;
 	function removeObserver(observer:PKToolPickerObserver):Void;
@@ -64,5 +86,6 @@ import uikit.UIWindow;
 	@:deprecated
 	static function sharedToolPickerForWindow(window:UIWindow):Null<PKToolPicker>;
 	override function init():PKToolPicker;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithToolItems(items:NSArray<PKToolPickerItem>):PKToolPicker;
 }

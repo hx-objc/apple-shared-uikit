@@ -15,9 +15,13 @@ import objc.NSObject;
 	function get_reportApplicationIdentifier():NSStringArg;
 	var textInputSessions(get, never) : NSArray<SRTextInputSession>;
 	function get_textInputSessions():NSArray<SRTextInputSession>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var supplementalCategories(get, never) : NSArray<SRSupplementalCategory>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_supplementalCategories():NSArray<SRSupplementalCategory>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var relativeStartTime(get, never) : Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_relativeStartTime():Float;
 	override function init():SRApplicationUsage;
 }

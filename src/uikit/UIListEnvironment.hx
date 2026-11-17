@@ -4,12 +4,19 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIListEnvironment(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Unspecified = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var None = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Plain = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Grouped = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var InsetGrouped = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Sidebar = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SidebarPlain = 6;
 	inline function new(v:I64) this = v;
 }

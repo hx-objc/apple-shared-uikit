@@ -22,7 +22,9 @@ import uikit.UIImage;
 	@:deprecated
 	var rawFeaturePoints(get, never) : ARPointCloud;
 	function get_rawFeaturePoints():ARPointCloud;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var usdzFile(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_usdzFile():Null<NSURL>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

@@ -17,7 +17,9 @@ import uikit.UIImage;
 	function get_alias():NSStringArg;
 	var guestIdentifier(get, never) : Null<NSStringArg>;
 	function get_guestIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var isInvitable(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_isInvitable():Bool;
 	@:deprecated
 	var isFriend(get, never) : Bool;

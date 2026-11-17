@@ -8,21 +8,36 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRHeadphoneSettings extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class SRHeadphoneSettings extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():SRHeadphoneSettings;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var adaptiveAudioStrength(get, never) : SRHeadphoneSettingsAdaptiveAudioStrength;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_adaptiveAudioStrength():SRHeadphoneSettingsAdaptiveAudioStrength;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var listeningMode(get, never) : SRHeadphoneSettingsListeningMode;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_listeningMode():SRHeadphoneSettingsListeningMode;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var personalizedVolumeEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_personalizedVolumeEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var conversationAwarenessEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_conversationAwarenessEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var spatialAudioEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_spatialAudioEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var personalizedSpatialAudioEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_personalizedSpatialAudioEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingAssistance(get, never) : Null<SRHeadphoneSettingsHearingAssistance>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingAssistance():Null<SRHeadphoneSettingsHearingAssistance>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

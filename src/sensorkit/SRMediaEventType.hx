@@ -4,7 +4,9 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRMediaEventType(I64) to I64 {
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var OnScreen = 1;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var OffScreen = 2;
 	inline function new(v:I64) this = v;
 }

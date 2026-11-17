@@ -9,35 +9,65 @@ import uikit.UIMenu;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("SharedWithYou") @:hxmc.objc extern class SWAttributionView extends UIView {
+@:hxmc.framework("SharedWithYou") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class SWAttributionView extends UIView {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():SWAttributionView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearance():SWAttributionView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):SWAttributionView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):SWAttributionView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var highlight(get, set) : Null<SWHighlight>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_highlight():Null<SWHighlight>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_highlight(v:Null<SWHighlight>):Null<SWHighlight>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var displayContext(get, set) : SWAttributionViewDisplayContext;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_displayContext():SWAttributionViewDisplayContext;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_displayContext(v:SWAttributionViewDisplayContext):SWAttributionViewDisplayContext;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var horizontalAlignment(get, set) : SWAttributionViewHorizontalAlignment;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_horizontalAlignment():SWAttributionViewHorizontalAlignment;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_horizontalAlignment(v:SWAttributionViewHorizontalAlignment):SWAttributionViewHorizontalAlignment;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var backgroundStyle(get, set) : SWAttributionViewBackgroundStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_backgroundStyle():SWAttributionViewBackgroundStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_backgroundStyle(v:SWAttributionViewBackgroundStyle):SWAttributionViewBackgroundStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredMaxLayoutWidth(get, set) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredMaxLayoutWidth():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredMaxLayoutWidth(v:Float):Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var highlightMenu(get, never) : UIMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_highlightMenu():UIMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var menuTitleForHideAction(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_menuTitleForHideAction():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_menuTitleForHideAction(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var supplementalMenu(get, set) : Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_supplementalMenu():Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_supplementalMenu(v:Null<UIMenu>):Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():SWAttributionView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<SWAttributionView>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithFrame(frame:CGRect):SWAttributionView;
 }

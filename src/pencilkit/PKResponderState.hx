@@ -3,13 +3,21 @@ package pencilkit;
 
 import objc.NSObject;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKResponderState extends NSObject {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class PKResponderState extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():PKResponderState;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var toolPickerVisibility(get, set) : PKToolPickerVisibility;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_toolPickerVisibility():PKToolPickerVisibility;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_toolPickerVisibility(v:PKToolPickerVisibility):PKToolPickerVisibility;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var activeToolPicker(get, set) : Null<PKToolPicker>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_activeToolPicker():Null<PKToolPicker>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_activeToolPicker(v:Null<PKToolPicker>):Null<PKToolPicker>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():PKResponderState;
 }

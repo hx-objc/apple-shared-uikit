@@ -10,7 +10,9 @@ import objc.NSObject;
 	static var supported(get, never) : Bool;
 	@:selector("isSupported")
 	static function get_supported():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var deviceCapabilities(get, never) : NIDeviceCapability;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_deviceCapabilities():NIDeviceCapability;
 	var delegate(get, set) : Null<NISessionDelegate>;
 	function get_delegate():Null<NISessionDelegate>;
@@ -25,7 +27,9 @@ import objc.NSObject;
 	function runWithConfiguration(configuration:NIConfiguration):Void;
 	function pause():Void;
 	function invalidate():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setARSession(session:ARSession):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function updateMotionState(motionState:NIMotionActivityState, forObjectWithToken:NIDiscoveryToken):Void;
 	override function init():NISession;
 }

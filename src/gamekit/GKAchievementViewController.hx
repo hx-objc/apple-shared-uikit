@@ -13,14 +13,20 @@ import uikit.UIViewController;
 	function get_achievementDelegate():GKAchievementViewControllerDelegate;
 	function set_achievementDelegate(v:GKAchievementViewControllerDelegate):GKAchievementViewControllerDelegate;
 	override function init():GKAchievementViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithAchievementID(achievementID:NSStringArg):GKAchievementViewController;
 	override function initWithCoder(coder:NSCoder):Null<GKAchievementViewController>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithLeaderboard(leaderboard:GKLeaderboard, playerScope:GKLeaderboardPlayerScope):GKAchievementViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithLeaderboardID(leaderboardID:NSStringArg, playerScope:GKLeaderboardPlayerScope, timeScope:GKLeaderboardTimeScope):GKAchievementViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithLeaderboardSetID(leaderboardSetID:NSStringArg):GKAchievementViewController;
 	override function initWithNavigationBarClass(navigationBarClass:ObjCClass, toolbarClass:ObjCClass):GKAchievementViewController;
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):GKAchievementViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithPlayer(player:GKPlayer):GKAchievementViewController;
 	override function initWithRootViewController(rootViewController:UIViewController):GKAchievementViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithState(state:GKGameCenterViewControllerState):GKAchievementViewController;
 }

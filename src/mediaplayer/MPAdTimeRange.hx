@@ -7,11 +7,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("MediaPlayer") @:hxmc.objc extern class MPAdTimeRange extends NSObject implements NSCopying {
+@:hxmc.framework("MediaPlayer") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class MPAdTimeRange extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MPAdTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var timeRange(get, set) : CMTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_timeRange():CMTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_timeRange(v:CMTimeRange):CMTimeRange;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithTimeRange(timeRange:CMTimeRange):MPAdTimeRange;
 	function copyWithZone(zone:Ptr):Id;
 }

@@ -7,22 +7,33 @@ import foundation.NSSecureCoding;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKAudiogramSensitivityPoint extends NSObject implements NSSecureCoding {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKAudiogramSensitivityPoint extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKAudiogramSensitivityPoint;
+	@:hxmc.available(macos >= 13.0)
 	var frequency(get, never) : HKQuantity;
+	@:hxmc.available(macos >= 13.0)
 	function get_frequency():HKQuantity;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var leftEarSensitivity(get, never) : Null<HKQuantity>;
+	@:hxmc.available(macos >= 13.0)
 	function get_leftEarSensitivity():Null<HKQuantity>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var rightEarSensitivity(get, never) : Null<HKQuantity>;
+	@:hxmc.available(macos >= 13.0)
 	function get_rightEarSensitivity():Null<HKQuantity>;
+	@:hxmc.available(macos >= 15.1, ios >= 18.1, maccatalyst >= 18.1)
 	var tests(get, never) : NSArray<HKAudiogramSensitivityTest>;
+	@:hxmc.available(macos >= 15.1, ios >= 18.1, maccatalyst >= 18.1)
 	function get_tests():NSArray<HKAudiogramSensitivityTest>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static overload function sensitivityPointWithFrequency(frequency:HKQuantity, leftEarSensitivity:Null<HKQuantity>, rightEarSensitivity:Null<HKQuantity>, error:Ptr):Null<HKAudiogramSensitivityPoint>;
+	@:hxmc.available(macos >= 15.1, ios >= 18.1, maccatalyst >= 18.1)
 	static overload function sensitivityPointWithFrequency(frequency:HKQuantity, tests:NSArray<HKAudiogramSensitivityTest>, error:Ptr):Null<HKAudiogramSensitivityPoint>;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<HKAudiogramSensitivityPoint>;

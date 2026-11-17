@@ -5,11 +5,15 @@ import coregraphics.CGPoint;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIImpactFeedbackGenerator extends UIFeedbackGenerator {
 	static function alloc():UIImpactFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorForView(view:UIView):UIImpactFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorWithStyle(style:UIImpactFeedbackStyle, forView:UIView):UIImpactFeedbackGenerator;
 	function impactOccurred():Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function impactOccurredAtLocation(location:CGPoint):Void;
 	overload function impactOccurredWithIntensity(intensity:Float):Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	overload function impactOccurredWithIntensity(intensity:Float, atLocation:CGPoint):Void;
 	function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
 	override function init():UIImpactFeedbackGenerator;

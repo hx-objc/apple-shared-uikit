@@ -5,6 +5,7 @@ import hxmc.I64;
 
 enum abstract UIBarButtonItemStyle(I64) to I64 {
 	var Plain = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Prominent = 2;
 	@:deprecated
 	var Bordered = 1;

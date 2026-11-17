@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCreateNoteIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCreateNoteIntent;
 	var title(get, never) : Null<INSpeakableString>;
 	function get_title():Null<INSpeakableString>;
@@ -12,6 +13,7 @@ import foundation.NSCoder;
 	var groupName(get, never) : Null<INSpeakableString>;
 	function get_groupName():Null<INSpeakableString>;
 	function initWithTitle(title:Null<INSpeakableString>, content:Null<INNoteContent>, groupName:Null<INSpeakableString>):INCreateNoteIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INCreateNoteIntent;
 	override function initWithCoder(coder:NSCoder):Null<INCreateNoteIntent>;
 }

@@ -38,8 +38,11 @@ import objc.NSObject;
 	var headerTopPadding(get, set) : Float;
 	function get_headerTopPadding():Float;
 	function set_headerTopPadding(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var contentHuggingElements(get, set) : UICollectionLayoutListContentHuggingElements;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentHuggingElements():UICollectionLayoutListContentHuggingElements;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_contentHuggingElements(v:UICollectionLayoutListContentHuggingElements):UICollectionLayoutListContentHuggingElements;
 	function initWithAppearance(appearance:UICollectionLayoutListAppearance):UICollectionLayoutListConfiguration;
 	function copyWithZone(zone:Ptr):Id;

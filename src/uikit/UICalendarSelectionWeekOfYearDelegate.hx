@@ -4,10 +4,12 @@ package uikit;
 import foundation.NSDateComponents;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UICalendarSelectionWeekOfYearDelegate") extern interface UICalendarSelectionWeekOfYearDelegate extends NSObjectProtocol {
+@:hxmc.objc("UICalendarSelectionWeekOfYearDelegate") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface UICalendarSelectionWeekOfYearDelegate extends NSObjectProtocol {
 	@:selector("weekOfYearSelection:didSelectWeekOfYear:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function weekOfYearSelectionDidSelectWeekOfYear(selection:UICalendarSelectionWeekOfYear, didSelectWeekOfYear:Null<NSDateComponents>):Void;
 	@:selector("weekOfYearSelection:canSelectWeekOfYear:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function weekOfYearSelectionCanSelectWeekOfYear(selection:UICalendarSelectionWeekOfYear, canSelectWeekOfYear:Null<NSDateComponents>):Bool;
 }

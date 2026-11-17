@@ -4,6 +4,6 @@ package uikit;
 import foundation.NSCopying;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIHoverEffect") extern interface UIHoverEffect extends NSObjectProtocol extends NSCopying {
+@:hxmc.objc("UIHoverEffect") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIHoverEffect extends NSObjectProtocol extends NSCopying {
 
 }

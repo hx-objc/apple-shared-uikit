@@ -7,6 +7,7 @@ import foundation.NSPersonNameComponents;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INRestaurantGuest extends INPerson {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRestaurantGuest;
 	var phoneNumber(get, set) : Null<NSStringArg>;
 	function get_phoneNumber():Null<NSStringArg>;
@@ -22,11 +23,16 @@ import foundation.NSStringArg;
 	override overload function initWithHandle(handle:NSStringArg, nameComponents:NSPersonNameComponents, contactIdentifier:Null<NSStringArg>):INRestaurantGuest;
 	@:deprecated
 	override overload function initWithHandle(handle:NSStringArg, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>):INRestaurantGuest;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>):INRestaurantGuest;
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, aliases:Null<NSArray<INPersonHandle>>, suggestionType:INPersonSuggestionType):INRestaurantGuest;
 	@:selector("initWithPersonHandle:nameComponents:displayName:image:contactIdentifier:customIdentifier:isContactSuggestion:suggestionType:")
+	@:hxmc.available(macos >= 12.0)
 	override function initWithPersonHandleNameComponentsDisplayNameImageContactIdentifierCustomIdentifierIsContactSuggestionSuggestionType(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isContactSuggestion:Bool, suggestionType:INPersonSuggestionType):INRestaurantGuest;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool):INRestaurantGuest;
+	@:hxmc.available(macos >= 12.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool, suggestionType:INPersonSuggestionType):INRestaurantGuest;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, relationship:Null<NSStringArg>):INRestaurantGuest;
 }

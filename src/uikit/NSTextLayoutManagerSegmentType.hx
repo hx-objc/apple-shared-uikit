@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextLayoutManagerSegmentType(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var Standard = 0;
+	@:hxmc.available(macos >= 12.0)
 	var Selection = 1;
+	@:hxmc.available(macos >= 12.0)
 	var Highlight = 2;
 	inline function new(v:I64) this = v;
 }

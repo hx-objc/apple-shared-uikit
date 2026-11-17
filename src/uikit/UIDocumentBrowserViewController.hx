@@ -17,7 +17,9 @@ import uniformtypeidentifiers.UTType;
 	var allowsDocumentCreation(get, set) : Bool;
 	function get_allowsDocumentCreation():Bool;
 	function set_allowsDocumentCreation(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var activeDocumentCreationIntent(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_activeDocumentCreationIntent():Null<NSStringArg>;
 	var allowsPickingMultipleItems(get, set) : Bool;
 	function get_allowsPickingMultipleItems():Bool;
@@ -56,6 +58,7 @@ import uniformtypeidentifiers.UTType;
 	function initForOpeningContentTypes(contentTypes:Null<NSArray<UTType>>):UIDocumentBrowserViewController;
 	function revealDocumentAtURL(url:NSURL, importIfNeeded:Bool, completion:Null<(Null<NSURL>, Null<NSError>) -> Void>):Void;
 	function importDocumentAtURL(documentURL:NSURL, nextToDocumentAtURL:NSURL, mode:UIDocumentBrowserImportMode, completionHandler:(Null<NSURL>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function renameDocumentAtURL(documentURL:NSURL, proposedName:NSStringArg, completionHandler:(Null<NSURL>, Null<NSError>) -> Void):Void;
 	function transitionControllerForDocumentAtURL(documentURL:NSURL):UIDocumentBrowserTransitionController;
 	@:deprecated

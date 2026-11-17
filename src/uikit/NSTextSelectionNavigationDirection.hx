@@ -4,11 +4,17 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextSelectionNavigationDirection(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var Forward = 0;
+	@:hxmc.available(macos >= 12.0)
 	var Backward = 1;
+	@:hxmc.available(macos >= 12.0)
 	var Right = 2;
+	@:hxmc.available(macos >= 12.0)
 	var Left = 3;
+	@:hxmc.available(macos >= 12.0)
 	var Up = 4;
+	@:hxmc.available(macos >= 12.0)
 	var Down = 5;
 	inline function new(v:I64) this = v;
 }

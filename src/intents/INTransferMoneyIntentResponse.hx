@@ -6,6 +6,7 @@ import foundation.NSStringArg;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INTransferMoneyIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTransferMoneyIntentResponse;
 	var code(get, never) : INTransferMoneyIntentResponseCode;
 	function get_code():INTransferMoneyIntentResponseCode;

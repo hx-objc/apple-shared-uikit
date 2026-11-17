@@ -6,14 +6,20 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INUpdateMediaAffinityMediaItemResolutionResult extends INMediaItemResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INUpdateMediaAffinityMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INUpdateMediaAffinityMediaItemResolutionResult;
 	static function confirmationRequiredWithMediaItemToConfirm(mediaItemToConfirm:Null<INMediaItem>):INUpdateMediaAffinityMediaItemResolutionResult;
 	static function disambiguationWithMediaItemsToDisambiguate(mediaItemsToDisambiguate:NSArray<INMediaItem>):INUpdateMediaAffinityMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INUpdateMediaAffinityMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INUpdateMediaAffinityMediaItemResolutionResult;
 	static function successWithResolvedMediaItem(resolvedMediaItem:INMediaItem):INUpdateMediaAffinityMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INUpdateMediaAffinityMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INUpdateMediaAffinityMediaItemResolutionResult;
 	static function successesWithResolvedMediaItems(resolvedMediaItems:NSArray<INMediaItem>):NSArray<INUpdateMediaAffinityMediaItemResolutionResult>;
 	static function unsupportedForReason(reason:INUpdateMediaAffinityMediaItemUnsupportedReason):INUpdateMediaAffinityMediaItemResolutionResult;

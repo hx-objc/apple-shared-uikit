@@ -19,6 +19,7 @@ import objc.NSObjectProtocol;
 	function pasteAndGo(sender:Null<Id>):Void;
 	@:optional
 	function pasteAndSearch(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function newFromPasteboard(sender:Null<Id>):Void;
 	@:optional
@@ -41,42 +42,58 @@ import objc.NSObjectProtocol;
 	function increaseSize(sender:Null<Id>):Void;
 	@:optional
 	function decreaseSize(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function alignLeft(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function alignCenter(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function alignJustified(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function alignRight(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function find(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function findAndReplace(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function findNext(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function findPrevious(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function useSelectionForFind(sender:Null<Id>):Void;
 	@:optional
 	function updateTextAttributesWithConversionHandler(conversionHandler:NSDictionary<NSString, Id> -> NSDictionary<NSString, Id>):Void;
 	@:optional
 	function print(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function rename(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function duplicate(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function move(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function export(sender:Null<Id>):Void;
 	@:optional
 	function toggleSidebar(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function toggleInspector(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function performClose(sender:Null<Id>):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function showWritingTools(sender:Id):Void;
 }

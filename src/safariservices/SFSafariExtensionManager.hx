@@ -5,7 +5,9 @@ import foundation.NSError;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("SafariServices") @:hxmc.objc extern class SFSafariExtensionManager extends NSObject {
+@:hxmc.framework("SafariServices") @:hxmc.objc @:hxmc.available(ios >= 26.2, maccatalyst >= 26.2) extern class SFSafariExtensionManager extends NSObject {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():SFSafariExtensionManager;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function getStateOfExtensionWithIdentifier(identifier:NSStringArg, completionHandler:(Null<SFSafariExtensionState>, Null<NSError>) -> Void):Void;
 }

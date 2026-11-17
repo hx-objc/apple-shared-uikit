@@ -22,10 +22,15 @@ import quartzcore.CALayer;
 	function get_currentFrame():Null<ARFrame>;
 	var configuration(get, never) : Null<ARConfiguration>;
 	function get_configuration():Null<ARConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var viewLayer(get, set) : Null<CALayer>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_viewLayer():Null<CALayer>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_viewLayer(v:Null<CALayer>):Null<CALayer>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var viewRotationAngle(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_viewRotationAngle():Float;
 	overload function runWithConfiguration(configuration:ARConfiguration):Void;
 	overload function runWithConfiguration(configuration:ARConfiguration, options:ARSessionRunOptions):Void;
@@ -36,7 +41,9 @@ import quartzcore.CALayer;
 	function raycast(query:ARRaycastQuery):NSArray<ARRaycastResult>;
 	function trackedRaycast(query:ARRaycastQuery, updateHandler:NSArray<ARRaycastResult> -> Void):Null<ARTrackedRaycast>;
 	function updateWithCollaborationData(collaborationData:ARCollaborationData):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function captureHighResolutionFrameWithCompletion(completion:(Null<ARFrame>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function captureHighResolutionFrameUsingPhotoSettings(photoSettings:Null<AVCapturePhotoSettings>, completion:(Null<ARFrame>, Null<NSError>) -> Void):Void;
 	override function init():ARSession;
 }

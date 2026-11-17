@@ -3,11 +3,17 @@ package avfaudio;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVFAudio") @:hxmc.objc extern class AVAudioSessionPortExtensionBluetoothMicrophone extends NSObject {
+@:hxmc.framework("AVFAudio") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVAudioSessionPortExtensionBluetoothMicrophone extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVAudioSessionPortExtensionBluetoothMicrophone;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var highQualityRecording(get, never) : AVAudioSessionCapability;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_highQualityRecording():AVAudioSessionCapability;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var farFieldCapture(get, never) : AVAudioSessionCapability;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_farFieldCapture():AVAudioSessionCapability;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():AVAudioSessionPortExtensionBluetoothMicrophone;
 }

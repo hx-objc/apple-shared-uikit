@@ -5,17 +5,25 @@ import foundation.NSArray;
 import foundation.NSCoder;
 import foundation.NSUserActivity;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INSendMessageIntentResponse extends INIntentResponse {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class INSendMessageIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():INSendMessageIntentResponse;
+	@:hxmc.available(macos >= 12.0)
 	var code(get, never) : INSendMessageIntentResponseCode;
+	@:hxmc.available(macos >= 12.0)
 	function get_code():INSendMessageIntentResponseCode;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	var sentMessages(get, set) : Null<NSArray<INMessage>>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_sentMessages():Null<NSArray<INMessage>>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_sentMessages(v:Null<NSArray<INMessage>>):Null<NSArray<INMessage>>;
 	@:deprecated
 	var sentMessage(get, set) : Null<INMessage>;
 	function get_sentMessage():Null<INMessage>;
 	function set_sentMessage(v:Null<INMessage>):Null<INMessage>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCode(code:INSendMessageIntentResponseCode, userActivity:Null<NSUserActivity>):INSendMessageIntentResponse;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithCoder(coder:NSCoder):Null<INSendMessageIntentResponse>;
 }

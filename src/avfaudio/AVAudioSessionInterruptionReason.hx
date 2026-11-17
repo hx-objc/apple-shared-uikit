@@ -8,6 +8,7 @@ enum abstract AVAudioSessionInterruptionReason(I64) to I64 {
 	@:deprecated
 	var AppWasSuspended = 1;
 	var BuiltInMicMuted = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var RouteDisconnected = 4;
 	inline function new(v:I64) this = v;
 }

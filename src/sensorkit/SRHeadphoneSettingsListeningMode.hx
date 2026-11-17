@@ -4,9 +4,13 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRHeadphoneSettingsListeningMode(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Normal = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ActiveNoiseCancelling = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Transparency = 3;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var AutoActiveNoiseCancelling = 4;
 	inline function new(v:I64) this = v;
 }

@@ -11,12 +11,16 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceContentArtwork extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceContentArtwork extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceContentArtwork;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var size(get, never) : CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_size():CGSize;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function artworkWithURL(url:NSURL, contentType:UTType, size:CGSize):AVPlaybackUserInterfaceContentURLArtwork;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

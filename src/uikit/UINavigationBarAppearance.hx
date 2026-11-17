@@ -14,14 +14,20 @@ import hxmc.objc.Id;
 	var titlePositionAdjustment(get, set) : UIOffset;
 	function get_titlePositionAdjustment():UIOffset;
 	function set_titlePositionAdjustment(v:UIOffset):UIOffset;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitleTextAttributes(get, set) : NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitleTextAttributes():NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitleTextAttributes(v:NSDictionary<NSString, Id>):NSDictionary<NSString, Id>;
 	var largeTitleTextAttributes(get, set) : NSDictionary<NSString, Id>;
 	function get_largeTitleTextAttributes():NSDictionary<NSString, Id>;
 	function set_largeTitleTextAttributes(v:NSDictionary<NSString, Id>):NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var largeSubtitleTextAttributes(get, set) : NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_largeSubtitleTextAttributes():NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_largeSubtitleTextAttributes(v:NSDictionary<NSString, Id>):NSDictionary<NSString, Id>;
 	var buttonAppearance(get, set) : UIBarButtonItemAppearance;
 	function get_buttonAppearance():UIBarButtonItemAppearance;

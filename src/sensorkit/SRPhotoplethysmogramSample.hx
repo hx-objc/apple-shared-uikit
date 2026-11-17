@@ -14,19 +14,32 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRPhotoplethysmogramSample extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRPhotoplethysmogramSample extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRPhotoplethysmogramSample;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var startDate(get, never) : NSDate;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_startDate():NSDate;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var nanosecondsSinceStart(get, never) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_nanosecondsSinceStart():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var usage(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_usage():NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var opticalSamples(get, never) : NSArray<SRPhotoplethysmogramOpticalSample>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_opticalSamples():NSArray<SRPhotoplethysmogramOpticalSample>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var accelerometerSamples(get, never) : NSArray<SRPhotoplethysmogramAccelerometerSample>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_accelerometerSamples():NSArray<SRPhotoplethysmogramAccelerometerSample>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var temperature(get, never) : Null<NSMeasurement<NSUnitTemperature>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_temperature():Null<NSMeasurement<NSUnitTemperature>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

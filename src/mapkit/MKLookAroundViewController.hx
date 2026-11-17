@@ -7,31 +7,54 @@ import foundation.NSSecureCoding;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKLookAroundViewController extends UIViewController implements NSSecureCoding {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class MKLookAroundViewController extends UIViewController implements NSSecureCoding {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKLookAroundViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<MKLookAroundViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<MKLookAroundViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<MKLookAroundViewControllerDelegate>):Null<MKLookAroundViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var scene(get, set) : Null<MKLookAroundScene>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_scene():Null<MKLookAroundScene>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_scene(v:Null<MKLookAroundScene>):Null<MKLookAroundScene>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var navigationEnabled(get, set) : Bool;
 	@:selector("isNavigationEnabled")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_navigationEnabled():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_navigationEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var showsRoadLabels(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_showsRoadLabels():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_showsRoadLabels(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var pointOfInterestFilter(get, set) : Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_pointOfInterestFilter():Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_pointOfInterestFilter(v:Null<MKPointOfInterestFilter>):Null<MKPointOfInterestFilter>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var badgePosition(get, set) : MKLookAroundBadgePosition;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_badgePosition():MKLookAroundBadgePosition;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_badgePosition(v:MKLookAroundBadgePosition):MKLookAroundBadgePosition;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function initWithScene(scene:MKLookAroundScene):MKLookAroundViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):MKLookAroundViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<MKLookAroundViewController>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MKLookAroundViewController;
 }

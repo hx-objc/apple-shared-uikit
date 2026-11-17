@@ -12,8 +12,11 @@ import uikit.UITraitCollection;
 	static function get_pictureInPictureButtonStartImage():UIImage;
 	static var pictureInPictureButtonStopImage(get, never) : UIImage;
 	static function get_pictureInPictureButtonStopImage():UIImage;
+	@:hxmc.available(macos >= 12.0)
 	var contentSource(get, set) : Null<AVPictureInPictureControllerContentSource>;
+	@:hxmc.available(macos >= 12.0)
 	function get_contentSource():Null<AVPictureInPictureControllerContentSource>;
+	@:hxmc.available(macos >= 12.0)
 	function set_contentSource(v:Null<AVPictureInPictureControllerContentSource>):Null<AVPictureInPictureControllerContentSource>;
 	var playerLayer(get, never) : AVPlayerLayer;
 	function get_playerLayer():AVPlayerLayer;
@@ -29,8 +32,11 @@ import uikit.UITraitCollection;
 	var pictureInPictureSuspended(get, never) : Bool;
 	@:selector("isPictureInPictureSuspended")
 	function get_pictureInPictureSuspended():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var requiresLinearPlayback(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_requiresLinearPlayback():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_requiresLinearPlayback(v:Bool):Bool;
 	var canStartPictureInPictureAutomaticallyFromInline(get, set) : Bool;
 	function get_canStartPictureInPictureAutomaticallyFromInline():Bool;
@@ -38,10 +44,12 @@ import uikit.UITraitCollection;
 	static function isPictureInPictureSupported():Bool;
 	static function pictureInPictureButtonStartImageCompatibleWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImage;
 	static function pictureInPictureButtonStopImageCompatibleWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImage;
+	@:hxmc.available(macos >= 12.0)
 	function initWithContentSource(contentSource:AVPictureInPictureControllerContentSource):AVPictureInPictureController;
 	function initWithPlayerLayer(playerLayer:AVPlayerLayer):Null<AVPictureInPictureController>;
 	function startPictureInPicture():Void;
 	function stopPictureInPicture():Void;
+	@:hxmc.available(macos >= 12.0)
 	function invalidatePlaybackState():Void;
 	override function init():AVPictureInPictureController;
 }

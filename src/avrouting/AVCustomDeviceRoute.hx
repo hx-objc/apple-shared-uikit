@@ -4,11 +4,17 @@ package avrouting;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVCustomDeviceRoute extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVCustomDeviceRoute extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVCustomDeviceRoute;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var networkEndpoint(get, never) : Null<NSObject>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_networkEndpoint():Null<NSObject>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var bluetoothIdentifier(get, never) : Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_bluetoothIdentifier():Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AVCustomDeviceRoute;
 }

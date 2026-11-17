@@ -8,28 +8,50 @@ import foundation.NSDate;
 import foundation.NSString;
 import foundation.NSStringArg;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKVerifiableClinicalRecord extends HKSample {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKVerifiableClinicalRecord extends HKSample {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKVerifiableClinicalRecord;
+	@:hxmc.available(macos >= 13.0)
 	var recordTypes(get, never) : NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0)
 	function get_recordTypes():NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0)
 	var issuerIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 13.0)
 	function get_issuerIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 13.0)
 	var subject(get, never) : HKVerifiableClinicalRecordSubject;
+	@:hxmc.available(macos >= 13.0)
 	function get_subject():HKVerifiableClinicalRecordSubject;
+	@:hxmc.available(macos >= 13.0)
 	var issuedDate(get, never) : NSDate;
+	@:hxmc.available(macos >= 13.0)
 	function get_issuedDate():NSDate;
+	@:hxmc.available(macos >= 13.0)
 	var relevantDate(get, never) : NSDate;
+	@:hxmc.available(macos >= 13.0)
 	function get_relevantDate():NSDate;
+	@:hxmc.available(macos >= 13.0)
 	var expirationDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 13.0)
 	function get_expirationDate():Null<NSDate>;
+	@:hxmc.available(macos >= 13.0)
 	var itemNames(get, never) : NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0)
 	function get_itemNames():NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	var sourceType(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	function get_sourceType():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	var dataRepresentation(get, never) : NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	function get_dataRepresentation():NSData;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var JWSRepresentation(get, never) : NSData;
+	@:hxmc.available(macos >= 13.0)
 	function get_JWSRepresentation():NSData;
+	@:hxmc.available(macos >= 13.0)
 	override function initWithCoder(coder:NSCoder):Null<HKVerifiableClinicalRecord>;
 }

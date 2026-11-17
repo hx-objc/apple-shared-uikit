@@ -7,6 +7,7 @@ enum abstract NFCPollingOption(I64) to I64 {
 	var ISO14443 = 1;
 	var ISO15693 = 2;
 	var ISO18092 = 4;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PACE = 8;
 	inline function new(v:I64) this = v;
 	var None = 0;

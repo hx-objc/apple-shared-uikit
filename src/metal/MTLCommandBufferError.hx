@@ -14,7 +14,9 @@ enum abstract MTLCommandBufferError(I64) to I64 {
 	var NotPermitted = 7;
 	var OutOfMemory = 8;
 	var InvalidResource = 9;
+	@:hxmc.available(macos >= 11.0)
 	var Memoryless = 10;
+	@:hxmc.available(macos >= 12.0)
 	var StackOverflow = 12;
 	inline function new(v:I64) this = v;
 }

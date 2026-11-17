@@ -20,7 +20,9 @@ import objc.NSObject;
 	var videoSettings(get, set) : NSDictionary<NSString, Id>;
 	function get_videoSettings():NSDictionary<NSString, Id>;
 	function set_videoSettings(v:NSDictionary<NSString, Id>):NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var recommendedMediaTimeScaleForAssetWriter(get, never) : Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_recommendedMediaTimeScaleForAssetWriter():Int;
 	var availableVideoCVPixelFormatTypes(get, never) : NSArray<NSNumber>;
 	function get_availableVideoCVPixelFormatTypes():NSArray<NSNumber>;
@@ -39,11 +41,17 @@ import objc.NSObject;
 	var deliversPreviewSizedOutputBuffers(get, set) : Bool;
 	function get_deliversPreviewSizedOutputBuffers():Bool;
 	function set_deliversPreviewSizedOutputBuffers(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preparesCellularRadioForNetworkConnection(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preparesCellularRadioForNetworkConnection():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preparesCellularRadioForNetworkConnection(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var preservesDynamicHDRMetadata(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_preservesDynamicHDRMetadata():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_preservesDynamicHDRMetadata(v:Bool):Bool;
 	override function init():AVCaptureVideoDataOutput;
 	@:selector("new")
@@ -52,6 +60,8 @@ import objc.NSObject;
 	function recommendedVideoSettingsForAssetWriterWithOutputFileType(outputFileType:NSStringArg):Null<NSDictionary<NSString, Id>>;
 	function availableVideoCodecTypesForAssetWriterWithOutputFileType(outputFileType:NSStringArg):NSArray<NSString>;
 	overload function recommendedVideoSettingsForVideoCodecType(videoCodecType:NSStringArg, assetWriterOutputFileType:NSStringArg):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	overload function recommendedVideoSettingsForVideoCodecType(videoCodecType:NSStringArg, assetWriterOutputFileType:NSStringArg, outputFileURL:Null<NSURL>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function recommendedMovieMetadataForVideoCodecType(videoCodecType:NSStringArg, assetWriterOutputFileType:NSStringArg):Null<NSArray<AVMetadataItem>>;
 }

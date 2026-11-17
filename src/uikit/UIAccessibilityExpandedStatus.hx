@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIAccessibilityExpandedStatus(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Unsupported = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Expanded = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Collapsed = 2;
 	inline function new(v:I64) this = v;
 }

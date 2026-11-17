@@ -10,15 +10,22 @@ import objc.NSObject;
 import symbols.NSSymbolContentTransition;
 import symbols.NSSymbolEffectOptions;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISymbolContentTransition extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UISymbolContentTransition extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UISymbolContentTransition;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var contentTransition(get, never) : NSSymbolContentTransition;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentTransition():NSSymbolContentTransition;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var options(get, never) : NSSymbolEffectOptions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_options():NSSymbolEffectOptions;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function transitionWithContentTransition(contentTransition:NSSymbolContentTransition):UISymbolContentTransition;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function transitionWithContentTransition(contentTransition:NSSymbolContentTransition, options:NSSymbolEffectOptions):UISymbolContentTransition;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

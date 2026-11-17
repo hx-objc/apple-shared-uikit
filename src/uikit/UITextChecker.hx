@@ -23,7 +23,9 @@ import objc.NSObject;
 	static function learnWord(word:NSStringArg):Void;
 	static function hasLearnedWord(word:NSStringArg):Bool;
 	static function unlearnWord(word:NSStringArg):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function requestGrammarCheckingOfString(stringToCheck:NSStringArg, range:NSRange, waitForAllResults:Bool, completionHandler:Null<NSArray<NSTextCheckingResult> -> Void>):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function ignoreGrammarRange(grammarRange:NSRange, inSentence:NSStringArg):Void;
 	override function init():UITextChecker;
 }

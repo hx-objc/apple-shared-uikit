@@ -9,9 +9,11 @@ import objc.NSObjectProtocol;
 	@:selector("contextMenuInteraction:configurationForMenuAtLocation:")
 	function contextMenuInteractionConfigurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):Null<UIContextMenuConfiguration>;
 	@:selector("contextMenuInteraction:configuration:highlightPreviewForItemWithIdentifier:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function contextMenuInteractionConfigurationHighlightPreviewForItemWithIdentifier(interaction:UIContextMenuInteraction, configuration:UIContextMenuConfiguration, highlightPreviewForItemWithIdentifier:NSCopying):Null<UITargetedPreview>;
 	@:selector("contextMenuInteraction:configuration:dismissalPreviewForItemWithIdentifier:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function contextMenuInteractionConfigurationDismissalPreviewForItemWithIdentifier(interaction:UIContextMenuInteraction, configuration:UIContextMenuConfiguration, dismissalPreviewForItemWithIdentifier:NSCopying):Null<UITargetedPreview>;
 	@:selector("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator:")

@@ -17,36 +17,61 @@ import hxmc.objc.Id;
 	function set_metadata(v:Null<NSArray<AVMetadataItem>>):Null<NSArray<AVMetadataItem>>;
 	var availableVideoCodecTypes(get, never) : NSArray<NSString>;
 	function get_availableVideoCodecTypes():NSArray<NSString>;
+	@:hxmc.available(macos >= 12.0)
 	var primaryConstituentDeviceSwitchingBehaviorForRecordingEnabled(get, set) : Bool;
 	@:selector("isPrimaryConstituentDeviceSwitchingBehaviorForRecordingEnabled")
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryConstituentDeviceSwitchingBehaviorForRecordingEnabled():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_primaryConstituentDeviceSwitchingBehaviorForRecordingEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var primaryConstituentDeviceSwitchingBehaviorForRecording(get, never) : AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryConstituentDeviceSwitchingBehaviorForRecording():AVCapturePrimaryConstituentDeviceSwitchingBehavior;
+	@:hxmc.available(macos >= 12.0)
 	var primaryConstituentDeviceRestrictedSwitchingBehaviorConditionsForRecording(get, never) : AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryConstituentDeviceRestrictedSwitchingBehaviorConditionsForRecording():AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var spatialVideoCaptureSupported(get, never) : Bool;
 	@:selector("isSpatialVideoCaptureSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_spatialVideoCaptureSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var spatialVideoCaptureEnabled(get, set) : Bool;
 	@:selector("isSpatialVideoCaptureEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_spatialVideoCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_spatialVideoCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var cinematicVideoMetadataCaptureSupported(get, never) : Bool;
 	@:selector("isCinematicVideoMetadataCaptureSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_cinematicVideoMetadataCaptureSupported():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyAdjustsCinematicVideoMetadataCaptureEnabled(get, set) : Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyAdjustsCinematicVideoMetadataCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_automaticallyAdjustsCinematicVideoMetadataCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var cinematicVideoMetadataCaptureEnabled(get, set) : Bool;
 	@:selector("isCinematicVideoMetadataCaptureEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_cinematicVideoMetadataCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_cinematicVideoMetadataCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var proVideoStorageSupported(get, never) : Bool;
 	@:selector("isProVideoStorageSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_proVideoStorageSupported():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var usesProVideoStorage(get, set) : Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_usesProVideoStorage():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_usesProVideoStorage(v:Bool):Bool;
 	override function init():AVCaptureMovieFileOutput;
 	@:selector("new")
@@ -56,5 +81,6 @@ import hxmc.objc.Id;
 	function setOutputSettings(outputSettings:Null<NSDictionary<NSString, Id>>, forConnection:AVCaptureConnection):Void;
 	function recordsVideoOrientationAndMirroringChangesAsMetadataTrackForConnection(connection:AVCaptureConnection):Bool;
 	function setRecordsVideoOrientationAndMirroringChanges(doRecordChanges:Bool, asMetadataTrackForConnection:AVCaptureConnection):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setPrimaryConstituentDeviceSwitchingBehaviorForRecording(switchingBehavior:AVCapturePrimaryConstituentDeviceSwitchingBehavior, restrictedSwitchingBehaviorConditions:AVCapturePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions):Void;
 }

@@ -6,24 +6,43 @@ import foundation.NSCoder;
 import foundation.NSRange;
 import hxmc.I64;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextContentStorage extends NSTextContentManager implements NSTextStorageObserving {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextContentStorage extends NSTextContentManager implements NSTextStorageObserving {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextContentStorage;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var includesTextListMarkers(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_includesTextListMarkers():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_includesTextListMarkers(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var attributedString(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	function get_attributedString():Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	function set_attributedString(v:Null<NSAttributedString>):Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	var textStorage(get, set) : Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textStorage():Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textStorage(v:Null<NSTextStorage>):Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function attributedStringForTextElement(textElement:NSTextElement):Null<NSAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	function textElementForAttributedString(attributedString:NSAttributedString):Null<NSTextElement>;
+	@:hxmc.available(macos >= 12.0)
 	function locationFromLocation(location:NSTextLocation, withOffset:I64):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function offsetFromLocation(from:NSTextLocation, toLocation:NSTextLocation):I64;
+	@:hxmc.available(macos >= 12.0)
 	function adjustedRangeFromRange(textRange:NSTextRange, forEditingTextSelection:Bool):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function processEditingForTextStorage(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:NSRange, changeInLength:I64, invalidatedRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function performEditingTransactionForTextStorage(textStorage:NSTextStorage, usingBlock:() -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	override function init():NSTextContentStorage;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithCoder(coder:NSCoder):Null<NSTextContentStorage>;
 }

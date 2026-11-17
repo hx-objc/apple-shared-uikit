@@ -6,6 +6,7 @@ import foundation.NSNumberArg;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartPhotoPlaybackIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartPhotoPlaybackIntentResponse;
 	var code(get, never) : INStartPhotoPlaybackIntentResponseCode;
 	function get_code():INStartPhotoPlaybackIntentResponseCode;

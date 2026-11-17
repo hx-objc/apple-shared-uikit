@@ -6,20 +6,33 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIHoverStyle extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIHoverStyle extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIHoverStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var effect(get, set) : UIHoverEffect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_effect():UIHoverEffect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_effect(v:UIHoverEffect):UIHoverEffect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var shape(get, set) : Null<UIShape>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_shape():Null<UIShape>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_shape(v:Null<UIShape>):Null<UIShape>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function styleWithEffect(effect:UIHoverEffect, shape:Null<UIShape>):UIHoverStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function styleWithShape(shape:Null<UIShape>):UIHoverStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function automaticStyle():UIHoverStyle;
 	function copyWithZone(zone:Ptr):Id;
 }

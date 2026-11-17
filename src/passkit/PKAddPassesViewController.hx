@@ -17,9 +17,13 @@ import uikit.UIViewController;
 	function set_delegate(v:Null<PKAddPassesViewControllerDelegate>):Null<PKAddPassesViewControllerDelegate>;
 	function initWithPass(pass:PKPass):Null<PKAddPassesViewController>;
 	function initWithPasses(passes:NSArray<PKPass>):Null<PKAddPassesViewController>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPassesData(passesData:NSArray<NSData>):Null<PKAddPassesViewController>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPassesArchiveAtFileURL(passesArchiveFileURL:NSURL):Null<PKAddPassesViewController>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPassesArchiveData(passesArchiveData:NSData):Null<PKAddPassesViewController>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function initWithIssuerData(issuerData:NSData, signature:NSData, error:Ptr):Null<PKAddPassesViewController>;
 	static function canAddPasses():Bool;
 	override function init():PKAddPassesViewController;

@@ -6,14 +6,23 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSendPaymentCurrencyAmountResolutionResult extends INCurrencyAmountResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithCurrencyAmountToConfirm(currencyAmountToConfirm:Null<INCurrencyAmount>):INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function disambiguationWithCurrencyAmountsToDisambiguate(currencyAmountsToDisambiguate:NSArray<INCurrencyAmount>):INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function successWithResolvedCurrencyAmount(resolvedCurrencyAmount:INCurrencyAmount):INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INSendPaymentCurrencyAmountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INSendPaymentCurrencyAmountResolutionResult;
 	static function unsupportedForReason(reason:INSendPaymentCurrencyAmountUnsupportedReason):INSendPaymentCurrencyAmountResolutionResult;
 	function initWithCurrencyAmountResolutionResult(currencyAmountResolutionResult:INCurrencyAmountResolutionResult):INSendPaymentCurrencyAmountResolutionResult;

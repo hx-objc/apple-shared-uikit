@@ -15,6 +15,7 @@ enum abstract INPlayMediaIntentResponseCode(I64) to I64 {
 	var FailureUnknownMediaType = 8;
 	var FailureNoUnplayedContent = 9;
 	var FailureRestrictedContent = 10;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var FailureMaxStreamLimitReached = 11;
 	inline function new(v:I64) this = v;
 }

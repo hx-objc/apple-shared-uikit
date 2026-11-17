@@ -3,13 +3,21 @@ package uikit;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICellAccessoryPopUpMenu extends UICellAccessory {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICellAccessoryPopUpMenu extends UICellAccessory {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICellAccessoryPopUpMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var menu(get, never) : UIMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_menu():UIMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedElementDidChangeHandler(get, set) : Null<UIMenu -> Void>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedElementDidChangeHandler():Null<UIMenu -> Void>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectedElementDidChangeHandler(v:Null<UIMenu -> Void>):Null<UIMenu -> Void>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithMenu(menu:UIMenu):UICellAccessoryPopUpMenu;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<UICellAccessoryPopUpMenu>;
 }

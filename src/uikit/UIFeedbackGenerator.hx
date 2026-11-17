@@ -7,6 +7,7 @@ import objc.NSObject;
 	static function alloc():UIFeedbackGenerator;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorForView(view:UIView):UIFeedbackGenerator;
 	override function init():UIFeedbackGenerator;
 	function prepare():Void;

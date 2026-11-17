@@ -3,9 +3,13 @@ package corenfc;
 
 import objc.NSObject;
 
-@:hxmc.framework("CoreNFC") @:hxmc.objc extern class NFCPaymentTagReaderSession extends NFCTagReaderSession {
+@:hxmc.framework("CoreNFC") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class NFCPaymentTagReaderSession extends NFCTagReaderSession {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():NFCPaymentTagReaderSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithDelegate(delegate:NFCTagReaderSessionDelegate, queue:Null<NSObject>):NFCPaymentTagReaderSession;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function initWithConfiguration(configuration:NFCTagReaderSessionConfiguration, delegate:NFCTagReaderSessionDelegate, queue:NSObject):NFCPaymentTagReaderSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithPollingOption(pollingOption:NFCPollingOption, delegate:NFCTagReaderSessionDelegate, queue:Null<NSObject>):NFCPaymentTagReaderSession;
 }

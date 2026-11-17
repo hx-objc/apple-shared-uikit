@@ -5,16 +5,27 @@ import avfoundation.AVPlayer;
 import objc.NSObject;
 import uikit.UIMenu;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVLegibleMediaOptionsMenuController extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4) extern class AVLegibleMediaOptionsMenuController extends NSObject {
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():AVLegibleMediaOptionsMenuController;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var player(get, set) : AVPlayer;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_player():AVPlayer;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function set_player(v:AVPlayer):AVPlayer;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var delegate(get, set) : Null<AVLegibleMediaOptionsMenuControllerDelegate>;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_delegate():Null<AVLegibleMediaOptionsMenuControllerDelegate>;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function set_delegate(v:Null<AVLegibleMediaOptionsMenuControllerDelegate>):Null<AVLegibleMediaOptionsMenuControllerDelegate>;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var menuState(get, never) : AVLegibleMediaOptionsMenuState;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_menuState():AVLegibleMediaOptionsMenuState;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function initWithPlayer(player:Null<AVPlayer>):AVLegibleMediaOptionsMenuController;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function menuWithContents(contents:AVLegibleMediaOptionsMenuContents):Null<UIMenu>;
 }

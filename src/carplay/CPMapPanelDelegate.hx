@@ -3,9 +3,11 @@ package carplay;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("CPMapPanelDelegate") extern interface CPMapPanelDelegate extends NSObjectProtocol {
+@:hxmc.objc("CPMapPanelDelegate") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface CPMapPanelDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function panelDidShow(panel:CPMapPanel):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function panelDidHide(panel:CPMapPanel):Void;
 }

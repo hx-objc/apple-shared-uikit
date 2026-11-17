@@ -120,8 +120,11 @@ import hxmc.objc.Id;
 	var adjustsFontForContentSizeCategory(get, set) : Bool;
 	function get_adjustsFontForContentSizeCategory():Bool;
 	function set_adjustsFontForContentSizeCategory(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sizingRule(get, set) : UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sizingRule():UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_sizingRule(v:UILetterformAwareSizingRule):UILetterformAwareSizingRule;
 	var textDragDelegate(get, set) : Null<UITextDragDelegate>;
 	function get_textDragDelegate():Null<UITextDragDelegate>;

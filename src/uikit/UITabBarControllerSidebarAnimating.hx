@@ -3,7 +3,9 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITabBarControllerSidebarAnimating") extern interface UITabBarControllerSidebarAnimating extends NSObjectProtocol {
+@:hxmc.objc("UITabBarControllerSidebarAnimating") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface UITabBarControllerSidebarAnimating extends NSObjectProtocol {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function addAnimations(animations:() -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function addCompletion(completion:() -> Void):Void;
 }

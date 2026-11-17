@@ -5,26 +5,42 @@ import foundation.NSArray;
 import foundation.NSCoder;
 import usernotifications.UNNotificationContentProviding;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INStartCallIntent extends INIntent implements UNNotificationContentProviding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class INStartCallIntent extends INIntent implements UNNotificationContentProviding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():INStartCallIntent;
+	@:hxmc.available(macos >= 12.0)
 	var callRecordFilter(get, never) : Null<INCallRecordFilter>;
+	@:hxmc.available(macos >= 12.0)
 	function get_callRecordFilter():Null<INCallRecordFilter>;
+	@:hxmc.available(macos >= 12.0)
 	var callRecordToCallBack(get, never) : Null<INCallRecord>;
+	@:hxmc.available(macos >= 12.0)
 	function get_callRecordToCallBack():Null<INCallRecord>;
+	@:hxmc.available(macos >= 12.0)
 	var audioRoute(get, never) : INCallAudioRoute;
+	@:hxmc.available(macos >= 12.0)
 	function get_audioRoute():INCallAudioRoute;
+	@:hxmc.available(macos >= 12.0)
 	var destinationType(get, never) : INCallDestinationType;
+	@:hxmc.available(macos >= 12.0)
 	function get_destinationType():INCallDestinationType;
+	@:hxmc.available(macos >= 12.0)
 	var contacts(get, never) : Null<NSArray<INPerson>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_contacts():Null<NSArray<INPerson>>;
+	@:hxmc.available(macos >= 12.0)
 	var callCapability(get, never) : INCallCapability;
+	@:hxmc.available(macos >= 12.0)
 	function get_callCapability():INCallCapability;
 	@:deprecated
 	var recordTypeForRedialing(get, never) : INCallRecordType;
 	function get_recordTypeForRedialing():INCallRecordType;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCallRecordFilter(callRecordFilter:Null<INCallRecordFilter>, callRecordToCallBack:Null<INCallRecord>, audioRoute:INCallAudioRoute, destinationType:INCallDestinationType, contacts:Null<NSArray<INPerson>>, callCapability:INCallCapability):INStartCallIntent;
 	@:deprecated
 	function initWithAudioRoute(audioRoute:INCallAudioRoute, destinationType:INCallDestinationType, contacts:Null<NSArray<INPerson>>, recordTypeForRedialing:INCallRecordType, callCapability:INCallCapability):INStartCallIntent;
+	@:hxmc.available(macos >= 12.0)
 	override function init():INStartCallIntent;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithCoder(coder:NSCoder):Null<INStartCallIntent>;
 }

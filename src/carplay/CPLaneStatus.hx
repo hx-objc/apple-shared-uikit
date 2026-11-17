@@ -4,8 +4,11 @@ package carplay;
 import hxmc.I64;
 
 enum abstract CPLaneStatus(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var NotGood = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Good = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Preferred = 2;
 	inline function new(v:I64) this = v;
 }

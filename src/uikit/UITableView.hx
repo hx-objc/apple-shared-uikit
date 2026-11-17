@@ -64,8 +64,11 @@ import hxmc.objc.ObjCClass;
 	var separatorInsetReference(get, set) : UITableViewSeparatorInsetReference;
 	function get_separatorInsetReference():UITableViewSeparatorInsetReference;
 	function set_separatorInsetReference(v:UITableViewSeparatorInsetReference):UITableViewSeparatorInsetReference;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selfSizingInvalidation(get, set) : UITableViewSelfSizingInvalidation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selfSizingInvalidation():UITableViewSelfSizingInvalidation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selfSizingInvalidation(v:UITableViewSelfSizingInvalidation):UITableViewSelfSizingInvalidation;
 	var backgroundView(get, set) : Null<UIView>;
 	function get_backgroundView():Null<UIView>;
@@ -152,8 +155,11 @@ import hxmc.objc.ObjCClass;
 	function get_hasActiveDrag():Bool;
 	var hasActiveDrop(get, never) : Bool;
 	function get_hasActiveDrop():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var contentHuggingElements(get, set) : UITableViewContentHuggingElements;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentHuggingElements():UITableViewContentHuggingElements;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_contentHuggingElements(v:UITableViewContentHuggingElements):UITableViewContentHuggingElements;
 	var springLoaded(get, set) : Bool;
 	@:selector("isSpringLoaded")

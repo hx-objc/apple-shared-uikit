@@ -30,11 +30,17 @@ import hxmc.unsafe.Float32;
 	@:selector("isContinuous")
 	function get_continuous():Bool;
 	function set_continuous(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var trackConfiguration(get, set) : Null<UISliderTrackConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_trackConfiguration():Null<UISliderTrackConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_trackConfiguration(v:Null<UISliderTrackConfiguration>):Null<UISliderTrackConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var sliderStyle(get, set) : UISliderStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_sliderStyle():UISliderStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_sliderStyle(v:UISliderStyle):UISliderStyle;
 	var minimumTrackTintColor(get, set) : Null<UIColor>;
 	function get_minimumTrackTintColor():Null<UIColor>;

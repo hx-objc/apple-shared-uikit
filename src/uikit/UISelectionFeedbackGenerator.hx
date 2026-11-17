@@ -5,8 +5,10 @@ import coregraphics.CGPoint;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UISelectionFeedbackGenerator extends UIFeedbackGenerator {
 	static function alloc():UISelectionFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorForView(view:UIView):UISelectionFeedbackGenerator;
 	function selectionChanged():Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function selectionChangedAtLocation(location:CGPoint):Void;
 	override function init():UISelectionFeedbackGenerator;
 }

@@ -4,6 +4,7 @@ package uikit;
 import foundation.NSComparisonResult;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextLocation") extern interface NSTextLocation extends NSObjectProtocol {
+@:hxmc.objc("NSTextLocation") @:hxmc.available(macos >= 12.0) extern interface NSTextLocation extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	function compare(location:NSTextLocation):NSComparisonResult;
 }

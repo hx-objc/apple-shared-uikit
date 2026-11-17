@@ -8,15 +8,18 @@ import foundation.NSURL;
 import objc.NSObject;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("RPBroadcastControllerDelegate") @:deprecated extern interface RPBroadcastControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("RPBroadcastControllerDelegate") @:deprecated @:hxmc.available(macos >= 11.0) extern interface RPBroadcastControllerDelegate extends NSObjectProtocol {
 	@:selector("broadcastController:didFinishWithError:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function broadcastControllerDidFinishWithError(broadcastController:RPBroadcastController, didFinishWithError:Null<NSError>):Void;
 	@:selector("broadcastController:didUpdateServiceInfo:")
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function broadcastControllerDidUpdateServiceInfo(broadcastController:RPBroadcastController, didUpdateServiceInfo:NSDictionary<NSString, NSObject>):Void;
 	@:selector("broadcastController:didUpdateBroadcastURL:")
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function broadcastControllerDidUpdateBroadcastURL(broadcastController:RPBroadcastController, didUpdateBroadcastURL:NSURL):Void;
 }

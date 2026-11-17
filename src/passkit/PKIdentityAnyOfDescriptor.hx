@@ -5,16 +5,27 @@ import foundation.NSArray;
 import foundation.NSData;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityAnyOfDescriptor extends NSObject implements PKIdentityDocumentDescriptor {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class PKIdentityAnyOfDescriptor extends NSObject implements PKIdentityDocumentDescriptor {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():PKIdentityAnyOfDescriptor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var descriptors(get, never) : NSArray<PKIdentityDocumentDescriptor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_descriptors():NSArray<PKIdentityDocumentDescriptor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var elements(get, never) : NSArray<PKIdentityElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_elements():NSArray<PKIdentityElement>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var issuerIdentifiers(get, set) : NSArray<NSData>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_issuerIdentifiers():NSArray<NSData>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_issuerIdentifiers(v:NSArray<NSData>):NSArray<NSData>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithDescriptors(descriptors:NSArray<PKIdentityDocumentDescriptor>):PKIdentityAnyOfDescriptor;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function intentToStoreForElement(element:PKIdentityElement):Null<PKIdentityIntentToStore>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function addElements(elements:NSArray<PKIdentityElement>, withIntentToStore:PKIdentityIntentToStore):Void;
 }

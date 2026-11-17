@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIBarMinimizationRestorationBehavior(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var AtScrollEdge = 1;
 	inline function new(v:I64) this = v;
 }

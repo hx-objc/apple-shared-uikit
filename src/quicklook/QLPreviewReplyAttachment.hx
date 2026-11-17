@@ -5,12 +5,19 @@ import foundation.NSData;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("QuickLook") @:hxmc.objc extern class QLPreviewReplyAttachment extends NSObject {
+@:hxmc.framework("QuickLook") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class QLPreviewReplyAttachment extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():QLPreviewReplyAttachment;
+	@:hxmc.available(macos >= 12.0)
 	var data(get, never) : NSData;
+	@:hxmc.available(macos >= 12.0)
 	function get_data():NSData;
+	@:hxmc.available(macos >= 12.0)
 	var contentType(get, never) : UTType;
+	@:hxmc.available(macos >= 12.0)
 	function get_contentType():UTType;
+	@:hxmc.available(macos >= 12.0)
 	function initWithData(data:NSData, contentType:UTType):QLPreviewReplyAttachment;
+	@:hxmc.available(macos >= 12.0)
 	override function init():QLPreviewReplyAttachment;
 }

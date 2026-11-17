@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITraitNavigationTitleAlignment extends NSObject implements UINSIntegerTraitDefinition {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.2, maccatalyst >= 27.2) extern class UITraitNavigationTitleAlignment extends NSObject implements UINSIntegerTraitDefinition {
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	static function alloc():UITraitNavigationTitleAlignment;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultValue(get, never) : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():I64;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	override function init():UITraitNavigationTitleAlignment;
 }

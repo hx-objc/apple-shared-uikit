@@ -5,17 +5,28 @@ import coregraphics.CGRect;
 import foundation.NSArray;
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIStandardTextCursorView extends UIView implements UITextCursorView {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class UIStandardTextCursorView extends UIView implements UITextCursorView {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():UIStandardTextCursorView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearance():UIStandardTextCursorView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):UIStandardTextCursorView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIStandardTextCursorView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var blinking(get, set) : Bool;
 	@:selector("isBlinking")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_blinking():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_blinking(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resetBlinkAnimation():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():UIStandardTextCursorView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithCoder(coder:NSCoder):Null<UIStandardTextCursorView>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function initWithFrame(frame:CGRect):UIStandardTextCursorView;
 }

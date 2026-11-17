@@ -4,11 +4,17 @@ package uikit;
 import foundation.NSStringCompareOptions;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextSearchOptions extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UITextSearchOptions extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UITextSearchOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var wordMatchMethod(get, never) : UITextSearchMatchMethod;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_wordMatchMethod():UITextSearchMatchMethod;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var stringCompareOptions(get, never) : NSStringCompareOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_stringCompareOptions():NSStringCompareOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UITextSearchOptions;
 }

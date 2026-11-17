@@ -8,25 +8,39 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableButtonProperties extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableButtonProperties extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableButtonProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var primaryAction(get, set) : Null<UIAction>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_primaryAction():Null<UIAction>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_primaryAction(v:Null<UIAction>):Null<UIAction>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var menu(get, set) : Null<UIMenu>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_menu():Null<UIMenu>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_menu(v:Null<UIMenu>):Null<UIMenu>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var role(get, set) : UIButtonRole;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_role():UIButtonRole;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_role(v:UIButtonRole):UIButtonRole;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIContentUnavailableButtonProperties>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIContentUnavailableButtonProperties;
 }

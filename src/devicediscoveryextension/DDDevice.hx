@@ -8,73 +8,138 @@ import foundation.NSUUID;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("DeviceDiscoveryExtension") @:hxmc.objc extern class DDDevice extends NSObject {
+@:hxmc.framework("DeviceDiscoveryExtension") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class DDDevice extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():DDDevice;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var deviceSupports(get, set) : DDDeviceSupports;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_deviceSupports():DDDeviceSupports;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_deviceSupports(v:DDDeviceSupports):DDDeviceSupports;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var bluetoothIdentifier(get, set) : Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_bluetoothIdentifier():Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_bluetoothIdentifier(v:Null<NSUUID>):Null<NSUUID>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var category(get, set) : DDDeviceCategory;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_category():DDDeviceCategory;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_category(v:DDDeviceCategory):DDDeviceCategory;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var displayImageName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_displayImageName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_displayImageName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var displayName(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_displayName(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var identifier(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_identifier(v:NSStringArg):NSStringArg;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var mediaPlaybackState(get, set) : DDDeviceMediaPlaybackState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_mediaPlaybackState():DDDeviceMediaPlaybackState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_mediaPlaybackState(v:DDDeviceMediaPlaybackState):DDDeviceMediaPlaybackState;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var mediaContentTitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_mediaContentTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_mediaContentTitle(v:Null<NSStringArg>):Null<NSStringArg>;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var mediaContentSubtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_mediaContentSubtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_mediaContentSubtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var networkEndpoint(get, set) : Null<NSObject>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_networkEndpoint():Null<NSObject>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_networkEndpoint(v:Null<NSObject>):Null<NSObject>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var protocol(get, set) : DDDeviceProtocol;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_protocol():DDDeviceProtocol;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_protocol(v:DDDeviceProtocol):DDDeviceProtocol;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var protocolType(get, set) : UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_protocolType():UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_protocolType(v:UTType):UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var state(get, set) : DDDeviceState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_state():DDDeviceState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_state(v:DDDeviceState):DDDeviceState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SSID(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_SSID():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_SSID(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var supportsGrouping(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_supportsGrouping():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_supportsGrouping(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var txtRecordData(get, set) : Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_txtRecordData():Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_txtRecordData(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var url(get, set) : NSURL;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_url():NSURL;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_url(v:NSURL):NSURL;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareServiceName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareServiceName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareServiceName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareServiceRole(get, set) : DDDeviceWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareServiceRole():DDDeviceWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareServiceRole(v:DDDeviceWiFiAwareServiceRole):DDDeviceWiFiAwareServiceRole;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareModelName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareModelName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareModelName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var wifiAwareVendorName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_wifiAwareVendorName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_wifiAwareVendorName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithDisplayName(displayName:NSStringArg, category:DDDeviceCategory, protocolType:UTType, identifier:NSStringArg):DDDevice;
 }

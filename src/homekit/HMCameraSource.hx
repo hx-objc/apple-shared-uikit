@@ -5,7 +5,9 @@ import objc.NSObject;
 
 @:hxmc.framework("HomeKit") @:hxmc.objc extern class HMCameraSource extends NSObject {
 	static function alloc():HMCameraSource;
+	@:hxmc.available(macos >= 11.3)
 	var aspectRatio(get, never) : Float;
+	@:hxmc.available(macos >= 11.3)
 	function get_aspectRatio():Float;
 	@:deprecated
 	override function init():HMCameraSource;

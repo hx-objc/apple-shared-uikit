@@ -12,6 +12,7 @@ enum abstract INSearchForMessagesIntentResponseCode(I64) to I64 {
 	var FailureRequiringAppLaunch = 5;
 	var FailureMessageServiceNotAvailable = 6;
 	var FailureMessageTooManyResults = 7;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var FailureRequiringInAppAuthentication = 8;
 	inline function new(v:I64) this = v;
 }

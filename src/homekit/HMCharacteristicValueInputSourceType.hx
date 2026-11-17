@@ -4,16 +4,27 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueInputSourceType(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Other = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var HomeScreen = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Tuner = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var HDMI = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var CompositeVideo = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SVideo = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ComponentVideo = 6;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var DVI = 7;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var AirPlay = 8;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var USB = 9;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Application = 10;
 	inline function new(v:I64) this = v;
 }

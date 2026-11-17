@@ -6,14 +6,20 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INAddMediaMediaDestinationResolutionResult extends INMediaDestinationResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddMediaMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INAddMediaMediaDestinationResolutionResult;
 	static function confirmationRequiredWithMediaDestinationToConfirm(mediaDestinationToConfirm:Null<INMediaDestination>):INAddMediaMediaDestinationResolutionResult;
 	static function disambiguationWithMediaDestinationsToDisambiguate(mediaDestinationsToDisambiguate:NSArray<INMediaDestination>):INAddMediaMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INAddMediaMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INAddMediaMediaDestinationResolutionResult;
 	static function successWithResolvedMediaDestination(resolvedMediaDestination:INMediaDestination):INAddMediaMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INAddMediaMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INAddMediaMediaDestinationResolutionResult;
 	static function unsupportedForReason(reason:INAddMediaMediaDestinationUnsupportedReason):INAddMediaMediaDestinationResolutionResult;
 	function initWithMediaDestinationResolutionResult(mediaDestinationResolutionResult:INMediaDestinationResolutionResult):INAddMediaMediaDestinationResolutionResult;

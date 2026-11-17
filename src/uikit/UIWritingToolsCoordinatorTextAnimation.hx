@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorTextAnimation(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Anticipate = 0;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Remove = 1;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Insert = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var IndicateGrammar = 10;
 	inline function new(v:I64) this = v;
 }

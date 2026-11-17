@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsBehavior(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var None = -1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Complete = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Limited = 2;
 	inline function new(v:I64) this = v;
 }

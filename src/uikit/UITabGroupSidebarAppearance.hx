@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITabGroupSidebarAppearance(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Inline = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var RootSection = 2;
 	inline function new(v:I64) this = v;
 }

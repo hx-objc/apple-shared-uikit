@@ -7,8 +7,11 @@ package uikit;
 	var preferredPresentationStyle(get, set) : UIWindowScenePresentationStyle;
 	function get_preferredPresentationStyle():UIWindowScenePresentationStyle;
 	function set_preferredPresentationStyle(v:UIWindowScenePresentationStyle):UIWindowScenePresentationStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var placement(get, set) : Null<UIWindowScenePlacement>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_placement():Null<UIWindowScenePlacement>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_placement(v:Null<UIWindowScenePlacement>):Null<UIWindowScenePlacement>;
 	override function init():UIWindowSceneActivationRequestOptions;
 }

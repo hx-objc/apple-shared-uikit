@@ -42,40 +42,70 @@ import objc.NSObjectProtocol;
 	function get_legibilityWeight():UILegibilityWeight;
 	var activeAppearance(get, never) : UIUserInterfaceActiveAppearance;
 	function get_activeAppearance():UIUserInterfaceActiveAppearance;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var toolbarItemPresentationSize(get, never) : UINSToolbarItemPresentationSize;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function get_toolbarItemPresentationSize():UINSToolbarItemPresentationSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var imageDynamicRange(get, never) : UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_imageDynamicRange():UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var typesettingLanguage(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_typesettingLanguage():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sceneCaptureState(get, never) : UISceneCaptureState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sceneCaptureState():UISceneCaptureState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var listEnvironment(get, never) : UIListEnvironment;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_listEnvironment():UIListEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tabAccessoryEnvironment(get, never) : UITabAccessoryEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tabAccessoryEnvironment():UITabAccessoryEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var splitViewControllerLayoutEnvironment(get, never) : UISplitViewControllerLayoutEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_splitViewControllerLayoutEnvironment():UISplitViewControllerLayoutEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var hdrHeadroomUsageLimit(get, never) : UIHDRHeadroomUsageLimit;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_hdrHeadroomUsageLimit():UIHDRHeadroomUsageLimit;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var resolvesNaturalAlignmentWithBaseWritingDirection(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_resolvesNaturalAlignmentWithBaseWritingDirection():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var systemPrefersReducedResourceUsage(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_systemPrefersReducedResourceUsage():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var systemTraitsAffectingColorAppearance(get, never) : NSArray;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_systemTraitsAffectingColorAppearance():NSArray;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var systemTraitsAffectingImageLookup(get, never) : NSArray;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_systemTraitsAffectingImageLookup():NSArray;
 	static var currentTraitCollection(get, set) : UITraitCollection;
 	static function get_currentTraitCollection():UITraitCollection;
 	static function set_currentTraitCollection(v:UITraitCollection):UITraitCollection;
 	var imageConfiguration(get, never) : UIImageConfiguration;
 	function get_imageConfiguration():UIImageConfiguration;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	var navigationTitleAlignment(get, never) : UINavigationItemTitleAlignment;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	function get_navigationTitleAlignment():UINavigationItemTitleAlignment;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var verticalBarEdge(get, never) : UIVerticalBarEdge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_verticalBarEdge():UIVerticalBarEdge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static var systemTraitsAffectingVerticalBarEdge(get, never) : NSArray;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function get_systemTraitsAffectingVerticalBarEdge():NSArray;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
@@ -98,26 +128,47 @@ import objc.NSObjectProtocol;
 	static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel):UITraitCollection;
 	static function traitCollectionWithLegibilityWeight(legibilityWeight:UILegibilityWeight):UITraitCollection;
 	static function traitCollectionWithActiveAppearance(userInterfaceActiveAppearance:UIUserInterfaceActiveAppearance):UITraitCollection;
+	@:hxmc.available(maccatalyst >= 16.0)
 	static function traitCollectionWithToolbarItemPresentationSize(toolbarItemPresentationSize:UINSToolbarItemPresentationSize):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithImageDynamicRange(imageDynamicRange:UIImageDynamicRange):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithTypesettingLanguage(language:NSStringArg):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithSceneCaptureState(sceneCaptureState:UISceneCaptureState):UITraitCollection;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function traitCollectionWithListEnvironment(listEnvironment:UIListEnvironment):UITraitCollection;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function traitCollectionWithTabAccessoryEnvironment(tabAccessoryEnvironment:UITabAccessoryEnvironment):UITraitCollection;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function traitCollectionWithHDRHeadroomUsageLimit(hdrHeadroomUsageLimit:UIHDRHeadroomUsageLimit):UITraitCollection;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function traitCollectionWithResolvesNaturalAlignmentWithBaseWritingDirection(resolvesNaturalAlignmentWithBaseWritingDirection:Bool):UITraitCollection;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function traitCollectionWithSystemPrefersReducedResourceUsage(systemPrefersReducedResourceUsage:Bool):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithTraits(mutations:UIMutableTraits -> Void):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function traitCollectionByModifyingTraits(mutations:UIMutableTraits -> Void):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithCGFloatValue(value:Float, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function traitCollectionByReplacingCGFloatValue(value:Float, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function valueForCGFloatTrait(trait:ObjCClass):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithNSIntegerValue(value:I64, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function traitCollectionByReplacingNSIntegerValue(value:I64, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function valueForNSIntegerTrait(trait:ObjCClass):I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function traitCollectionWithObject(object:Null<NSObjectProtocol>, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function traitCollectionByReplacingObject(object:Null<NSObjectProtocol>, forTrait:ObjCClass):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function objectForTrait(trait:ObjCClass):Null<NSObjectProtocol>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function changedTraitsFromTraitCollection(traitCollection:Null<UITraitCollection>):NSSet;
 	function performAsCurrentTraitCollection(actions:() -> Void):Void;
 	function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:Null<UITraitCollection>):Bool;

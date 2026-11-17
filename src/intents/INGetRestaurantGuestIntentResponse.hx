@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetRestaurantGuestIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetRestaurantGuestIntentResponse;
 	var guest(get, set) : Null<INRestaurantGuest>;
 	function get_guest():Null<INRestaurantGuest>;
@@ -15,6 +16,7 @@ import foundation.NSUserActivity;
 	var code(get, never) : INGetRestaurantGuestIntentResponseCode;
 	function get_code():INGetRestaurantGuestIntentResponseCode;
 	function initWithCode(code:INGetRestaurantGuestIntentResponseCode, userActivity:Null<NSUserActivity>):INGetRestaurantGuestIntentResponse;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetRestaurantGuestIntentResponse;
 	override function initWithCoder(coder:NSCoder):Null<INGetRestaurantGuestIntentResponse>;
 }

@@ -23,6 +23,7 @@ import uikit.UIUserInterfaceStyle;
 	@:selector("templateApplicationScene:didSelectManeuver:")
 	@:optional
 	function templateApplicationSceneDidSelectManeuver(templateApplicationScene:CPTemplateApplicationScene, didSelectManeuver:CPManeuver):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function contentStyleDidChange(contentStyle:UIUserInterfaceStyle):Void;
 }

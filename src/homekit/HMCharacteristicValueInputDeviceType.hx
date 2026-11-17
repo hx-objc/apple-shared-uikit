@@ -4,12 +4,19 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueInputDeviceType(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Other = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var TV = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Recording = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Tuner = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Playback = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var AudioSystem = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var None = 6;
 	inline function new(v:I64) this = v;
 }

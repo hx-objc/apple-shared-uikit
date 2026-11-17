@@ -16,15 +16,25 @@ import uikit.UIKeyModifierFlags;
 	function get_navigationType():WKNavigationType;
 	var request(get, never) : NSURLRequest;
 	function get_request():NSURLRequest;
+	@:hxmc.available(macos >= 11.3)
 	var shouldPerformDownload(get, never) : Bool;
+	@:hxmc.available(macos >= 11.3)
 	function get_shouldPerformDownload():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var isContentRuleListRedirect(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_isContentRuleListRedirect():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var mainFrameNavigation(get, never) : Null<WKNavigation>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_mainFrameNavigation():Null<WKNavigation>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var modifierFlags(get, never) : UIKeyModifierFlags;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_modifierFlags():UIKeyModifierFlags;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var buttonNumber(get, never) : UIEventButtonMask;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_buttonNumber():UIEventButtonMask;
 	override function init():WKNavigationAction;
 }

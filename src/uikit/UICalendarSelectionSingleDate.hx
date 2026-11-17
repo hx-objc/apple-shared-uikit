@@ -3,13 +3,21 @@ package uikit;
 
 import foundation.NSDateComponents;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarSelectionSingleDate extends UICalendarSelection {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICalendarSelectionSingleDate extends UICalendarSelection {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICalendarSelectionSingleDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, never) : Null<UICalendarSelectionSingleDateDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<UICalendarSelectionSingleDateDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedDate(get, set) : Null<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedDate():Null<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectedDate(v:Null<NSDateComponents>):Null<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setSelectedDate(selectedDate:Null<NSDateComponents>, animated:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithDelegate(delegate:Null<UICalendarSelectionSingleDateDelegate>):UICalendarSelectionSingleDate;
 }

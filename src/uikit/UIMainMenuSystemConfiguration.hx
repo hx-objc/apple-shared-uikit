@@ -6,34 +6,62 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIMainMenuSystemConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIMainMenuSystemConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIMainMenuSystemConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var newScenePreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_newScenePreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_newScenePreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var documentPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_documentPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_documentPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var printingPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_printingPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_printingPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var findingPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_findingPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_findingPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var findingConfiguration(get, never) : UIMenuSystemFindElementGroupConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_findingConfiguration():UIMenuSystemFindElementGroupConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var toolbarPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_toolbarPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_toolbarPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var sidebarPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_sidebarPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_sidebarPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var inspectorPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_inspectorPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_inspectorPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var textFormattingPreference(get, set) : UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_textFormattingPreference():UIMenuSystemElementGroupPreference;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_textFormattingPreference(v:UIMenuSystemElementGroupPreference):UIMenuSystemElementGroupPreference;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIMainMenuSystemConfiguration;
 }

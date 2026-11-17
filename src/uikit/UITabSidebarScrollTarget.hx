@@ -3,10 +3,15 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabSidebarScrollTarget extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITabSidebarScrollTarget extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITabSidebarScrollTarget;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function targetForHeader():UITabSidebarScrollTarget;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function targetForFooter():UITabSidebarScrollTarget;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function targetForTab(tab:UITab):UITabSidebarScrollTarget;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UITabSidebarScrollTarget;
 }

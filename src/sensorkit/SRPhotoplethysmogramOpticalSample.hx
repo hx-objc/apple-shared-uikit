@@ -16,33 +16,60 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRPhotoplethysmogramOpticalSample extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRPhotoplethysmogramOpticalSample extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRPhotoplethysmogramOpticalSample;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var emitter(get, never) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_emitter():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var activePhotodiodeIndexes(get, never) : NSIndexSet;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_activePhotodiodeIndexes():NSIndexSet;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var signalIdentifier(get, never) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_signalIdentifier():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var nominalWavelength(get, never) : NSMeasurement<NSUnitLength>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_nominalWavelength():NSMeasurement<NSUnitLength>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var effectiveWavelength(get, never) : NSMeasurement<NSUnitLength>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_effectiveWavelength():NSMeasurement<NSUnitLength>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var samplingFrequency(get, never) : NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_samplingFrequency():NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var nanosecondsSinceStart(get, never) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_nanosecondsSinceStart():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var normalizedReflectance(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_normalizedReflectance():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var whiteNoise(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_whiteNoise():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var pinkNoise(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_pinkNoise():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var backgroundNoise(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_backgroundNoise():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var backgroundNoiseOffset(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_backgroundNoiseOffset():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var conditions(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_conditions():NSArray<NSString>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

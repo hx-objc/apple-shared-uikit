@@ -12,23 +12,40 @@ import objc.NSObject;
 import soundanalysis.SNClassificationResult;
 import speech.SFSpeechRecognitionResult;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRSpeechMetrics extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class SRSpeechMetrics extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SRSpeechMetrics;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sessionIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sessionIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sessionFlags(get, never) : SRSpeechMetricsSessionFlags;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sessionFlags():SRSpeechMetricsSessionFlags;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var timestamp(get, never) : NSDate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_timestamp():NSDate;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var timeSinceAudioStart(get, never) : Float;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function get_timeSinceAudioStart():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var audioLevel(get, never) : Null<SRAudioLevel>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_audioLevel():Null<SRAudioLevel>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var speechRecognition(get, never) : Null<SFSpeechRecognitionResult>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_speechRecognition():Null<SFSpeechRecognitionResult>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var soundClassification(get, never) : Null<SNClassificationResult>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_soundClassification():Null<SNClassificationResult>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var speechExpression(get, never) : Null<SRSpeechExpression>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_speechExpression():Null<SRSpeechExpression>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

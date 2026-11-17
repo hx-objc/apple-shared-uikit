@@ -15,8 +15,11 @@ import foundation.NSStringArg;
 	@:selector("isUpNextButtonEnabled")
 	function get_upNextButtonEnabled():Bool;
 	function set_upNextButtonEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var allowsMiniPlayer(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_allowsMiniPlayer():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_allowsMiniPlayer(v:Bool):Bool;
 	var upNextTitle(get, set) : NSStringArg;
 	function get_upNextTitle():NSStringArg;
@@ -25,8 +28,11 @@ import foundation.NSStringArg;
 	@:selector("isAlbumArtistButtonEnabled")
 	function get_albumArtistButtonEnabled():Bool;
 	function set_albumArtistButtonEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var nowPlayingMode(get, set) : Null<CPNowPlayingMode>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_nowPlayingMode():Null<CPNowPlayingMode>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_nowPlayingMode(v:Null<CPNowPlayingMode>):Null<CPNowPlayingMode>;
 	function addObserver(observer:CPNowPlayingTemplateObserver):Void;
 	function removeObserver(observer:CPNowPlayingTemplateObserver):Void;

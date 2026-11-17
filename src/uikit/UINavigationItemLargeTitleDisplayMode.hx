@@ -7,6 +7,7 @@ enum abstract UINavigationItemLargeTitleDisplayMode(I64) to I64 {
 	var Automatic = 0;
 	var Always = 1;
 	var Never = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Inline = 3;
 	inline function new(v:I64) this = v;
 }

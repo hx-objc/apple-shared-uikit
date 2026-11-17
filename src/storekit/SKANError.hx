@@ -4,17 +4,29 @@ package storekit;
 import hxmc.I64;
 
 enum abstract SKANError(I64) to I64 {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var ImpressionMissingRequiredValue = 0;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var Unsupported = 1;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var AdNetworkIdMissing = 2;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var MismatchedSourceAppId = 3;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var ImpressionNotFound = 4;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var InvalidCampaignId = 5;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var InvalidConversionValue = 6;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var InvalidSourceAppId = 7;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var InvalidAdvertisedAppId = 8;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var InvalidVersion = 9;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var Unknown = 10;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var ImpressionTooShort = 11;
 	inline function new(v:I64) this = v;
 }

@@ -8,16 +8,27 @@ import healthkit.HKActivitySummary;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("HealthKitUI") @:hxmc.objc extern class HKActivityRingView extends UIView {
+@:hxmc.framework("HealthKitUI") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKActivityRingView extends UIView {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKActivityRingView;
+	@:hxmc.available(macos >= 13.0)
 	static function appearance():HKActivityRingView;
+	@:hxmc.available(macos >= 13.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):HKActivityRingView;
+	@:hxmc.available(macos >= 13.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):HKActivityRingView;
+	@:hxmc.available(macos >= 13.0)
 	var activitySummary(get, set) : Null<HKActivitySummary>;
+	@:hxmc.available(macos >= 13.0)
 	function get_activitySummary():Null<HKActivitySummary>;
+	@:hxmc.available(macos >= 13.0)
 	function set_activitySummary(v:Null<HKActivitySummary>):Null<HKActivitySummary>;
+	@:hxmc.available(macos >= 13.0)
 	function setActivitySummary(activitySummary:Null<HKActivitySummary>, animated:Bool):Void;
+	@:hxmc.available(macos >= 13.0)
 	override function init():HKActivityRingView;
+	@:hxmc.available(macos >= 13.0)
 	override function initWithCoder(coder:NSCoder):Null<HKActivityRingView>;
+	@:hxmc.available(macos >= 13.0)
 	override function initWithFrame(frame:CGRect):HKActivityRingView;
 }

@@ -5,19 +5,31 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKPaymentToken extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKPaymentToken extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKPaymentToken;
+	@:hxmc.available(macos >= 11.0)
 	var paymentMethod(get, never) : PKPaymentMethod;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentMethod():PKPaymentMethod;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var paymentInstrumentName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentInstrumentName():NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var paymentNetwork(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentNetwork():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var transactionIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_transactionIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var paymentData(get, never) : NSData;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentData():NSData;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKPaymentToken;
 }

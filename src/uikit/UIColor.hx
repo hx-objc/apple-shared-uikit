@@ -55,11 +55,17 @@ import objc.NSObject;
 	function get_CGColor():CGColor;
 	var CIColor(get, never) : CIColor;
 	function get_CIColor():CIColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var linearExposure(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_linearExposure():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var standardDynamicRangeColor(get, never) : UIColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_standardDynamicRangeColor():UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var prominence(get, never) : UIColorProminence;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_prominence():UIColorProminence;
 	static var systemRedColor(get, never) : UIColor;
 	static function get_systemRedColor():UIColor;
@@ -151,7 +157,9 @@ import objc.NSObject;
 	@:deprecated
 	static var underPageBackgroundColor(get, never) : UIColor;
 	static function get_underPageBackgroundColor():UIColor;
+	@:hxmc.available(macos >= 11.0)
 	var accessibilityName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_accessibilityName():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
@@ -173,12 +181,17 @@ import objc.NSObject;
 	function initWithCGColor(cgColor:CGColor):UIColor;
 	function initWithPatternImage(image:UIImage):UIColor;
 	function initWithCIColor(ciColor:CIColor):UIColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithRed(red:Float, green:Float, blue:Float, alpha:Float, exposure:Float):UIColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function colorWithRed(red:Float, green:Float, blue:Float, alpha:Float, exposure:Float):UIColor;
 	@:selector("initWithRed:green:blue:alpha:linearExposure:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithRedGreenBlueAlphaLinearExposure(red:Float, green:Float, blue:Float, alpha:Float, linearExposure:Float):UIColor;
 	@:selector("colorWithRed:green:blue:alpha:linearExposure:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function colorWithRedGreenBlueAlphaLinearExposure(red:Float, green:Float, blue:Float, alpha:Float, linearExposure:Float):UIColor;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function colorByApplyingContentHeadroom(contentHeadroom:Float):UIColor;
 	function set():Void;
 	function setFill():Void;
@@ -192,6 +205,7 @@ import objc.NSObject;
 	static function colorWithDynamicProvider(dynamicProvider:UITraitCollection -> UIColor):UIColor;
 	function initWithDynamicProvider(dynamicProvider:UITraitCollection -> UIColor):UIColor;
 	function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function colorWithProminence(prominence:UIColorProminence):UIColor;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIColor>;

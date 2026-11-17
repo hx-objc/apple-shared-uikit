@@ -12,8 +12,11 @@ import objc.NSObject;
 	var multipleRoutesDetected(get, never) : Bool;
 	function get_multipleRoutesDetected():Bool;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var detectsCustomRoutes(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_detectsCustomRoutes():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_detectsCustomRoutes(v:Bool):Bool;
 	override function init():AVRouteDetector;
 }

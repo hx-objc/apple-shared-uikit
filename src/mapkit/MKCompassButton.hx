@@ -7,19 +7,33 @@ import foundation.NSCoder;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKCompassButton extends UIView {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class MKCompassButton extends UIView {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	static function appearance():MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	var mapView(get, set) : Null<MKMapView>;
+	@:hxmc.available(macos >= 11.0)
 	function get_mapView():Null<MKMapView>;
+	@:hxmc.available(macos >= 11.0)
 	function set_mapView(v:Null<MKMapView>):Null<MKMapView>;
+	@:hxmc.available(macos >= 11.0)
 	var compassVisibility(get, set) : MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function get_compassVisibility():MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function set_compassVisibility(v:MKFeatureVisibility):MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	static function compassButtonWithMapView(mapView:Null<MKMapView>):MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	override function init():MKCompassButton;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<MKCompassButton>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithFrame(frame:CGRect):MKCompassButton;
 }

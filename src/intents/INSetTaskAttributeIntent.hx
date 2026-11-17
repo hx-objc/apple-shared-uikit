@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetTaskAttributeIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetTaskAttributeIntent;
 	var targetTask(get, never) : Null<INTask>;
 	function get_targetTask():Null<INTask>;
@@ -20,6 +21,7 @@ import foundation.NSCoder;
 	overload function initWithTargetTask(targetTask:Null<INTask>, taskTitle:Null<INSpeakableString>, status:INTaskStatus, priority:INTaskPriority, spatialEventTrigger:Null<INSpatialEventTrigger>, temporalEventTrigger:Null<INTemporalEventTrigger>):INSetTaskAttributeIntent;
 	@:deprecated
 	overload function initWithTargetTask(targetTask:Null<INTask>, status:INTaskStatus, spatialEventTrigger:Null<INSpatialEventTrigger>, temporalEventTrigger:Null<INTemporalEventTrigger>):INSetTaskAttributeIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetTaskAttributeIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetTaskAttributeIntent>;
 }

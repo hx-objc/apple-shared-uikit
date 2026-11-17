@@ -23,16 +23,22 @@ import networkextension.NEHotspotHelperCommand;
 	@:selector("setAllowsConstrainedNetworkAccess:")
 	function set_allowsConstrainedNetworkAccess(v:Bool):Void;
 	@:selector("setAllowsUltraConstrainedNetworkAccess:")
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function set_allowsUltraConstrainedNetworkAccess(v:Bool):Void;
 	@:selector("setAssumesHTTP3Capable:")
+	@:hxmc.available(macos >= 11.3)
 	function set_assumesHTTP3Capable(v:Bool):Void;
 	@:selector("setAttribution:")
+	@:hxmc.available(macos >= 12.0)
 	function set_attribution(v:NSURLRequestAttribution):Void;
 	@:selector("setRequiresDNSSECValidation:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_requiresDNSSECValidation(v:Bool):Void;
 	@:selector("setAllowsPersistentDNS:")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsPersistentDNS(v:Bool):Void;
 	@:selector("setCookiePartitionIdentifier:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function set_cookiePartitionIdentifier(v:Null<NSStringArg>):Void;
 	@:selector("setHTTPMethod:")
 	function set_HTTPMethod(v:NSStringArg):Void;

@@ -3,12 +3,19 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneWindowingControlStyle extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UISceneWindowingControlStyle extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var automaticStyle(get, never) : UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_automaticStyle():UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var unifiedStyle(get, never) : UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_unifiedStyle():UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var minimalStyle(get, never) : UISceneWindowingControlStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_minimalStyle():UISceneWindowingControlStyle;
 }

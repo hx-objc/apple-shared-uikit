@@ -39,34 +39,52 @@ import hxmc.I64;
 	public static final SRDeviceUsageCategoryUtilities : NSString;
 	public static final SRDeviceUsageCategoryWeather : NSString;
 	public static final SRErrorDomain : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramOpticalSampleConditionSignalSaturation : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramOpticalSampleConditionUnreliableNoise : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramSampleUsageBackgroundSystem : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramSampleUsageDeepBreathing : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramSampleUsageForegroundBloodOxygen : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRPhotoplethysmogramSampleUsageForegroundHeartRate : NSString;
 	public static final SRSensorAccelerometer : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final SRSensorAcousticSettings : NSString;
 	public static final SRSensorAmbientLightSensor : NSString;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final SRSensorAmbientPressure : NSString;
 	public static final SRSensorDeviceUsageReport : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRSensorElectrocardiogram : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final SRSensorFaceMetrics : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final SRSensorHeadphoneMotion : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final SRSensorHeadphoneSettings : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final SRSensorHeartRate : NSString;
 	public static final SRSensorKeyboardMetrics : NSString;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	public static final SRSensorMediaEvents : NSString;
 	public static final SRSensorMessagesUsageReport : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final SRSensorOdometer : NSString;
 	public static final SRSensorOnWristState : NSString;
 	public static final SRSensorPedometerData : NSString;
 	public static final SRSensorPhoneUsageReport : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final SRSensorPhotoplethysmogram : NSString;
 	public static final SRSensorRotationRate : NSString;
 	public static final SRSensorSiriSpeechMetrics : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final SRSensorSleepSessions : NSString;
 	public static final SRSensorTelephonySpeechMetrics : NSString;
 	public static final SRSensorVisits : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final SRSensorWristTemperature : NSString;
 }

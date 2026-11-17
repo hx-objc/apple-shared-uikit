@@ -23,20 +23,30 @@ import uikit.UIScene;
 
 @:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapItem extends NSObject implements NSSecureCoding implements NSItemProviderReading implements NSItemProviderWriting {
 	static function alloc():MKMapItem;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var identifier(get, never) : Null<MKMapItemIdentifier>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_identifier():Null<MKMapItemIdentifier>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var alternateIdentifiers(get, never) : NSSet<MKMapItemIdentifier>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_alternateIdentifiers():NSSet<MKMapItemIdentifier>;
 	@:deprecated
 	var placemark(get, never) : MKPlacemark;
 	function get_placemark():MKPlacemark;
 	var isCurrentLocation(get, never) : Bool;
 	function get_isCurrentLocation():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var location(get, never) : CLLocation;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_location():CLLocation;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var address(get, never) : Null<MKAddress>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_address():Null<MKAddress>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var addressRepresentations(get, never) : Null<MKAddressRepresentations>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_addressRepresentations():Null<MKAddressRepresentations>;
 	var name(get, set) : Null<NSStringArg>;
 	function get_name():Null<NSStringArg>;
@@ -62,6 +72,7 @@ import uikit.UIScene;
 	static function mapItemForCurrentLocation():MKMapItem;
 	@:deprecated
 	function initWithPlacemark(placemark:MKPlacemark):MKMapItem;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function initWithLocation(location:CLLocation, address:Null<MKAddress>):MKMapItem;
 	overload function openInMapsWithLaunchOptions(launchOptions:Null<NSDictionary<NSString, Id>>):Bool;
 	static overload function openMapsWithItems(mapItems:NSArray<MKMapItem>, launchOptions:Null<NSDictionary<NSString, Id>>):Bool;

@@ -34,10 +34,14 @@ import objc.NSObject;
 	function containsPass(pass:PKPass):Bool;
 	function replacePassWithPass(pass:PKPass):Bool;
 	function addPasses(passes:NSArray<PKPass>, withCompletionHandler:Null<PKPassLibraryAddPassesStatus -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function addPassesWithData(passesData:NSArray<NSData>, completionHandler:PKPassLibraryAddPassesStatus -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function addPassesFromArchiveAtFileURL(passesArchiveFileURL:NSURL, completionHandler:PKPassLibraryAddPassesStatus -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function addPassesFromArchiveWithData(passesArchiveData:NSData, completionHandler:PKPassLibraryAddPassesStatus -> Void):Void;
 	function openPaymentSetup():Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function openPaymentSetupWithMerchantIdentifier(merchantIdentifier:NSStringArg):Void;
 	function presentPaymentPass(pass:PKPaymentPass):Void;
 	function presentSecureElementPass(pass:PKSecureElementPass):Void;
@@ -50,9 +54,12 @@ import objc.NSObject;
 	function activateSecureElementPass(secureElementPass:PKSecureElementPass, withActivationData:NSData, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
 	@:deprecated
 	function signData(signData:NSData, withSecureElementPass:PKSecureElementPass, completion:(Null<NSData>, Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function encryptedServiceProviderDataForSecureElementPass(secureElementPass:PKSecureElementPass, completion:(Null<NSDictionary>, Null<NSError>) -> Void):Void;
 	function serviceProviderDataForSecureElementPass(secureElementPass:PKSecureElementPass, completion:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function authorizationStatusForCapability(capability:PKPassLibraryCapability):PKPassLibraryAuthorizationStatus;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function requestAuthorizationForCapability(capability:PKPassLibraryCapability, completion:PKPassLibraryAuthorizationStatus -> Void):Void;
 	override function init():PKPassLibrary;
 }

@@ -4,19 +4,33 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValuePictureMode(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Standard = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Movie = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Sport = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Game = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Photo = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Vivid = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Dark = 6;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Bright = 7;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Computer = 8;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Night = 9;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Calibrated = 10;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Custom1 = 11;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Custom2 = 12;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Custom3 = 13;
 	inline function new(v:I64) this = v;
 }

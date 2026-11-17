@@ -5,136 +5,264 @@ import foundation.NSNumber;
 import foundation.NSOperatingSystemVersion;
 import foundation.NSSet;
 import foundation.NSString;
+import hxmc.I64;
+import hxmc.Span;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("HealthKit") extern class HealthKit {
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function HKAppleSleepingBreathingDisturbancesClassificationForQuantity(value:HKQuantity):Null<NSNumber>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function HKAppleSleepingBreathingDisturbancesMinimumQuantityForClassification(classification:HKAppleSleepingBreathingDisturbancesClassification):HKQuantity;
-	public static function HKAppleWalkingSteadinessClassificationForQuantity(value:HKQuantity, classificationOut:Ptr, errorOut:Ptr):Bool;
+	@:hxmc.available(macos >= 13.0)
+	@:hxmc.len(classificationOut, 1)
+	public static function HKAppleWalkingSteadinessClassificationForQuantity(value:HKQuantity, classificationOut:Span<I64>, errorOut:Ptr):Bool;
+	@:hxmc.available(macos >= 13.0)
 	public static function HKAppleWalkingSteadinessMaximumQuantityForClassification(classification:HKAppleWalkingSteadinessClassification):HKQuantity;
+	@:hxmc.available(macos >= 13.0)
 	public static function HKAppleWalkingSteadinessMinimumQuantityForClassification(classification:HKAppleWalkingSteadinessClassification):HKQuantity;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function HKCategoryValueSleepAnalysisAsleepValues():NSSet<NSNumber>;
 	public static function HKStateOfMindValenceClassificationForValence(valence:Float):Null<NSNumber>;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierAbdominalCramps : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierAcne : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierAppetiteChanges : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierAppleStandHour : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierAppleWalkingSteadinessEvent : NSString;
 	@:deprecated
 	public static final HKCategoryTypeIdentifierAudioExposureEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierBladderIncontinence : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final HKCategoryTypeIdentifierBleedingAfterMenopause : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKCategoryTypeIdentifierBleedingAfterPregnancy : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKCategoryTypeIdentifierBleedingDuringPregnancy : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierBloating : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierBreastPain : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierCervicalMucusQuality : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierChestTightnessOrPain : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierChills : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierConstipation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierContraceptive : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierCoughing : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierDiarrhea : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierDizziness : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierDrySkin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierEnvironmentalAudioExposureEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierFainting : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierFatigue : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierFever : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierGeneralizedBodyAche : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHairLoss : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHandwashingEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHeadache : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHeadphoneAudioExposureEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHeartburn : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHighHeartRateEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierHotFlashes : NSString;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	public static final HKCategoryTypeIdentifierHypertensionEvent : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKCategoryTypeIdentifierInfrequentMenstrualCycles : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierIntermenstrualBleeding : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierIrregularHeartRhythmEvent : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKCategoryTypeIdentifierIrregularMenstrualCycles : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLactation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLossOfSmell : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLossOfTaste : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLowCardioFitnessEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLowHeartRateEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierLowerBackPain : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierMemoryLapse : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final HKCategoryTypeIdentifierMenopausalState : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierMenstrualFlow : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierMindfulSession : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierMoodChanges : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierNausea : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierNightSweats : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierOvulationTestResult : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierPelvicPain : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKCategoryTypeIdentifierPersistentIntermenstrualBleeding : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierPregnancy : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierPregnancyTestResult : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierProgesteroneTestResult : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKCategoryTypeIdentifierProlongedMenstrualPeriods : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierRapidPoundingOrFlutteringHeartbeat : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierRunnyNose : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSexualActivity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierShortnessOfBreath : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSinusCongestion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSkippedHeartbeat : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSleepAnalysis : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKCategoryTypeIdentifierSleepApneaEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSleepChanges : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierSoreThroat : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierToothbrushingEvent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierVaginalDryness : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierVomiting : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCategoryTypeIdentifierWheezing : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierActivityMoveMode : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierBiologicalSex : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierBloodType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierDateOfBirth : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierFitzpatrickSkinType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCharacteristicTypeIdentifierWheelchairUse : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierAllergyRecord : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final HKClinicalTypeIdentifierClinicalNoteRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierConditionRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierCoverageRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierImmunizationRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierLabResultRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierMedicationRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierProcedureRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKClinicalTypeIdentifierVitalSignRecord : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCorrelationTypeIdentifierBloodPressure : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKCorrelationTypeIdentifierFood : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDataTypeIdentifierHeartbeatSeries : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0, maccatalyst >= 17.0)
 	public static final HKDataTypeIdentifierStateOfMind : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKDataTypeIdentifierUserAnnotatedMedicationConcept : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDetailedCDAValidationErrorKey : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyFirmwareVersion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyHardwareVersion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyLocalIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyManufacturer : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyModel : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeySoftwareVersion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDevicePropertyKeyUDIDeviceIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKDocumentTypeIdentifierCDA : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKErrorDomain : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRReleaseDSTU2 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRReleaseR4 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRReleaseUnknown : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeAllergyIntolerance : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeCondition : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeCoverage : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final HKFHIRResourceTypeDiagnosticReport : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final HKFHIRResourceTypeDocumentReference : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeImmunization : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeMedicationDispense : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeMedicationOrder : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeMedicationRequest : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeMedicationStatement : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeObservation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKFHIRResourceTypeProcedure : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKHealthConceptDomainMedication : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKMedicationDoseEventTypeIdentifierMedicationDoseEvent : NSString;
 	public static final HKMedicationGeneralFormCapsule : NSString;
 	public static final HKMedicationGeneralFormCream : NSString;
@@ -154,277 +282,547 @@ import hxmc.unsafe.Ptr;
 	public static final HKMedicationGeneralFormTablet : NSString;
 	public static final HKMedicationGeneralFormTopical : NSString;
 	public static final HKMedicationGeneralFormUnknown : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyActivityType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAlgorithmVersion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAlpineSlopeGrade : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAppleDeviceCalibrated : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAppleECGAlgorithmVersion : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final HKMetadataKeyAppleFitnessPlusCatalogIdentifier : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyAppleFitnessPlusSession : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAudioExposureDuration : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAudioExposureLevel : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAverageMETs : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyAverageSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyBarometricPressure : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyBloodGlucoseMealTime : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyBodyTemperatureSensorLocation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyCoachedWorkout : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyCrossTrainerDistance : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyCyclingFunctionalThresholdPowerTestType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDateOfEarliestDataUsedForEstimate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDeviceManufacturerName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDeviceName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDevicePlacementSide : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDeviceSerialNumber : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyDigitalSignature : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyElevationAscended : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyElevationDescended : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyExternalUUID : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyFitnessMachineDuration : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyFoodType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyGlassesPrescriptionDescription : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyGroupFitness : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final HKMetadataKeyHeadphoneGain : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyHeartRateEventThreshold : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyHeartRateMotionContext : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyHeartRateRecoveryActivityDuration : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyHeartRateRecoveryActivityType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyHeartRateRecoveryMaxObservedRecoveryHeartRate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyHeartRateRecoveryTestType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyHeartRateSensorLocation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyIndoorBikeDistance : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyIndoorWorkout : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyInsulinDeliveryReason : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyLapLength : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyLowCardioFitnessEventThreshold : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyMaximumLightIntensity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyMaximumSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyMenstrualCycleStart : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyPhysicalEffortEstimationType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyQuantityClampedToLowerBound : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyQuantityClampedToUpperBound : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyReferenceRangeLowerLimit : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyReferenceRangeUpperLimit : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeySWOLFScore : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeySessionEstimate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeySexualActivityProtectionUsed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeySwimmingLocationType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeySwimmingStrokeStyle : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeySyncIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeySyncVersion : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyTimeZone : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyUDIDeviceIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyUDIProductionIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKMetadataKeyUserMotionContext : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyVO2MaxTestType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyVO2MaxValue : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWasTakenInLab : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWasUserEntered : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKMetadataKeyWaterSalinity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWeatherCondition : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWeatherHumidity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWeatherTemperature : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKMetadataKeyWorkoutBrandName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathAverage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathAverageHeartRate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCDAAuthorName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCDACustodianName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCDAPatientName : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCDATitle : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCategoryValue : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathClinicalRecordFHIRResourceIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathClinicalRecordFHIRResourceType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCorrelation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathCount : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathDateComponents : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathDevice : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathECGClassification : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathECGSymptomsStatus : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathEndDate : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKPredicateKeyPathLogOrigin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMax : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKPredicateKeyPathMedicationConceptIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMetadata : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMostRecent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMostRecentDuration : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMostRecentEndDate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathMostRecentStartDate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathQuantity : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKPredicateKeyPathScheduledDate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathSource : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathSourceRevision : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathStartDate : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKPredicateKeyPathStatus : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathSum : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathUUID : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkout : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityAverageQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityDuration : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityEndDate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityMaximumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityMinimumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityStartDate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivitySumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutActivityType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutAverageQuantity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutDuration : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKPredicateKeyPathWorkoutEffortRelationship : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutMaximumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutMinimumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKPredicateKeyPathWorkoutSumQuantity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutTotalDistance : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutTotalEnergyBurned : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutTotalFlightsClimbed : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutTotalSwimmingStrokeCount : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKPredicateKeyPathWorkoutType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierActiveEnergyBurned : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierAppleExerciseTime : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierAppleMoveTime : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierAppleSleepingBreathingDisturbances : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierAppleSleepingWristTemperature : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierAppleStandTime : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierAppleWalkingSteadiness : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierAtrialFibrillationBurden : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBasalBodyTemperature : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBasalEnergyBurned : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBloodAlcoholContent : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBloodGlucose : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBloodPressureDiastolic : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBloodPressureSystolic : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBodyFatPercentage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBodyMass : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBodyMassIndex : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierBodyTemperature : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierCrossCountrySkiingSpeed : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierCyclingCadence : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierCyclingFunctionalThresholdPower : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierCyclingPower : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierCyclingSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryBiotin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryCaffeine : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryCalcium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryCarbohydrates : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryChloride : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryCholesterol : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryChromium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryCopper : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryEnergyConsumed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFatMonounsaturated : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFatPolyunsaturated : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFatSaturated : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFatTotal : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFiber : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryFolate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryIodine : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryIron : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryMagnesium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryManganese : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryMolybdenum : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryNiacin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryPantothenicAcid : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryPhosphorus : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryPotassium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryProtein : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryRiboflavin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietarySelenium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietarySodium : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietarySugar : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryThiamin : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminA : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminB12 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminB6 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminC : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminD : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminE : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryVitaminK : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryWater : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDietaryZinc : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierDistanceCrossCountrySkiing : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDistanceCycling : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDistanceDownhillSnowSports : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierDistancePaddleSports : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierDistanceRowing : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierDistanceSkatingSports : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDistanceSwimming : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDistanceWalkingRunning : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierDistanceWheelchair : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierElectrodermalActivity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierEnvironmentalAudioExposure : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierEnvironmentalSoundReduction : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierEstimatedWorkoutEffortScore : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierFlightsClimbed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierForcedExpiratoryVolume1 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierForcedVitalCapacity : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierHeadphoneAudioExposure : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierHeartRate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierHeartRateRecoveryOneMinute : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final HKQuantityTypeIdentifierHeartRateVariabilityRMSSD : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierHeartRateVariabilitySDNN : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierHeight : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierInhalerUsage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierInsulinDelivery : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierLeanBodyMass : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierNikeFuel : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierNumberOfAlcoholicBeverages : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierNumberOfTimesFallen : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierOxygenSaturation : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierPaddleSportsSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierPeakExpiratoryFlowRate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierPeripheralPerfusionIndex : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierPhysicalEffort : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierPushCount : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierRespiratoryRate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierRestingHeartRate : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierRowingSpeed : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierRunningGroundContactTime : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierRunningPower : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierRunningSpeed : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierRunningStrideLength : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierRunningVerticalOscillation : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierSixMinuteWalkTestDistance : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierStairAscentSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierStairDescentSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierStepCount : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierSwimmingStrokeCount : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final HKQuantityTypeIdentifierTimeInDaylight : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierUVExposure : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierUnderwaterDepth : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierVO2Max : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWaistCircumference : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWalkingAsymmetryPercentage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWalkingDoubleSupportPercentage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWalkingHeartRateAverage : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWalkingSpeed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKQuantityTypeIdentifierWalkingStepLength : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKQuantityTypeIdentifierWaterTemperature : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final HKQuantityTypeIdentifierWorkoutEffortScore : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKSampleSortIdentifierEndDate : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKSampleSortIdentifierStartDate : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0, maccatalyst >= 17.0)
 	public static final HKScoredAssessmentTypeIdentifierGAD7 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 18.0, maccatalyst >= 17.0)
 	public static final HKScoredAssessmentTypeIdentifierPHQ9 : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKSourceRevisionAnyOperatingSystem : NSOperatingSystemVersion;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKSourceRevisionAnyProductType : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKSourceRevisionAnyVersion : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKUserAnnotatedMedicationPredicateKeyPathHasSchedule : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final HKUserAnnotatedMedicationPredicateKeyPathIsArchived : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKUserPreferencesDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordCredentialTypeCOVID19 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordCredentialTypeImmunization : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordCredentialTypeLaboratory : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordCredentialTypeRecovery : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordSourceTypeEUDigitalCOVIDCertificate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 15.4, maccatalyst >= 15.4)
 	public static final HKVerifiableClinicalRecordSourceTypeSMARTHealthCard : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final HKVisionPrescriptionTypeIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutRouteTypeIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutSortIdentifierDuration : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutSortIdentifierTotalDistance : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutSortIdentifierTotalEnergyBurned : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutSortIdentifierTotalFlightsClimbed : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutSortIdentifierTotalSwimmingStrokeCount : NSString;
+	@:hxmc.available(macos >= 13.0)
 	public static final HKWorkoutTypeIdentifier : NSString;
 }

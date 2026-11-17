@@ -34,16 +34,26 @@ import objc.NSObject;
 	function get_preferredInput():Null<AVAudioSessionPortDescription>;
 	var prefersNoInterruptionsFromSystemAlerts(get, never) : Bool;
 	function get_prefersNoInterruptionsFromSystemAlerts():Bool;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var renderingMode(get, never) : AVAudioSessionRenderingMode;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function get_renderingMode():AVAudioSessionRenderingMode;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var prefersEchoCancelledInput(get, never) : Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_prefersEchoCancelledInput():Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var isEchoCancelledInputEnabled(get, never) : Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_isEchoCancelledInputEnabled():Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var isEchoCancelledInputAvailable(get, never) : Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_isEchoCancelledInputAvailable():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var outputMuted(get, never) : Bool;
 	@:selector("isOutputMuted")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_outputMuted():Bool;
 	var preferredSampleRate(get, never) : Float;
 	function get_preferredSampleRate():Float;
@@ -89,7 +99,9 @@ import objc.NSObject;
 	function get_outputLatency():Float;
 	var IOBufferDuration(get, never) : Float;
 	function get_IOBufferDuration():Float;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var supportedOutputChannelLayouts(get, never) : NSArray<AVAudioChannelLayout>;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	function get_supportedOutputChannelLayouts():NSArray<AVAudioChannelLayout>;
 	var otherAudioPlaying(get, never) : Bool;
 	@:selector("isOtherAudioPlaying")
@@ -106,11 +118,17 @@ import objc.NSObject;
 	function get_currentRoute():AVAudioSessionRouteDescription;
 	var supportsMultichannelContent(get, never) : Bool;
 	function get_supportsMultichannelContent():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var prefersInterruptionOnRouteDisconnect(get, never) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_prefersInterruptionOnRouteDisconnect():Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var preferredMicrophoneInjectionMode(get, never) : AVAudioSessionMicrophoneInjectionMode;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_preferredMicrophoneInjectionMode():AVAudioSessionMicrophoneInjectionMode;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var isMicrophoneInjectionAvailable(get, never) : Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_isMicrophoneInjectionAvailable():Bool;
 	@:deprecated
 	var delegate(get, set) : Null<AVAudioSessionDelegate>;
@@ -143,11 +161,15 @@ import objc.NSObject;
 	function overrideOutputAudioPort(portOverride:AVAudioSessionPortOverride, error:Ptr):Bool;
 	function setPreferredInput(inPort:Null<AVAudioSessionPortDescription>, error:Ptr):Bool;
 	function setPrefersNoInterruptionsFromSystemAlerts(inValue:Bool, error:Ptr):Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function setPrefersEchoCancelledInput(value:Bool, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setOutputMuted(muted:Bool, error:Ptr):Bool;
 	overload function setActive(active:Bool, error:Ptr):Bool;
 	overload function setActive(active:Bool, withOptions:AVAudioSessionSetActiveOptions, error:Ptr):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function activateWithOptions(options:AVAudioSessionActivationOptions, completionHandler:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function deactivateWithOptions(options:AVAudioSessionDeactivationOptions, completionHandler:(Bool, Null<NSError>) -> Void):Void;
 	function setPreferredSampleRate(sampleRate:Float, error:Ptr):Bool;
 	function setPreferredIOBufferDuration(duration:Float, error:Ptr):Bool;
@@ -159,7 +181,9 @@ import objc.NSObject;
 	function setOutputDataSource(dataSource:Null<AVAudioSessionDataSourceDescription>, error:Ptr):Bool;
 	function setAggregatedIOPreference(inIOType:AVAudioSessionIOType, error:Ptr):Bool;
 	function setSupportsMultichannelContent(inValue:Bool, error:Ptr):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setPrefersInterruptionOnRouteDisconnect(inValue:Bool, error:Ptr):Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function setPreferredMicrophoneInjectionMode(inValue:AVAudioSessionMicrophoneInjectionMode, error:Ptr):Bool;
 	@:deprecated
 	override function init():AVAudioSession;

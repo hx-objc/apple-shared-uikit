@@ -41,8 +41,11 @@ import objc.NSObject;
 	var adjustsFontForContentSizeCategory(get, set) : Bool;
 	function get_adjustsFontForContentSizeCategory():Bool;
 	function set_adjustsFontForContentSizeCategory(v:Bool):Bool;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var showsExpansionTextWhenTruncated(get, set) : Bool;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function get_showsExpansionTextWhenTruncated():Bool;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function set_showsExpansionTextWhenTruncated(v:Bool):Bool;
 	var transform(get, set) : UIListContentTextTransform;
 	function get_transform():UIListContentTextTransform;

@@ -18,25 +18,45 @@ import uikit.UIImage;
 	function get_title():Null<NSStringArg>;
 	var groupIdentifier(get, never) : Null<NSStringArg>;
 	function get_groupIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var baseLeaderboardID(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_baseLeaderboardID():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var type(get, never) : GKLeaderboardType;
+	@:hxmc.available(macos >= 11.0)
 	function get_type():GKLeaderboardType;
+	@:hxmc.available(macos >= 11.0)
 	var startDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_startDate():Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	var nextStartDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_nextStartDate():Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	var duration(get, never) : Float;
+	@:hxmc.available(macos >= 11.0)
 	function get_duration():Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var leaderboardDescription(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_leaderboardDescription():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var releaseState(get, never) : GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_releaseState():GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activityIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activityIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activityProperties(get, never) : NSDictionary<NSString, NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activityProperties():NSDictionary<NSString, NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var isHidden(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_isHidden():Bool;
 	@:deprecated
 	var category(get, set) : Null<NSStringArg>;
@@ -71,11 +91,17 @@ import uikit.UIImage;
 	var loading(get, never) : Bool;
 	@:selector("isLoading")
 	function get_loading():Bool;
+	@:hxmc.available(macos >= 11.0)
 	static function loadLeaderboardsWithIDs(leaderboardIDs:Null<NSArray<NSString>>, completionHandler:(Null<NSArray<GKLeaderboard>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function loadPreviousOccurrenceWithCompletionHandler(completionHandler:(Null<GKLeaderboard>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function submitScore(score:I64, context:I64, player:GKPlayer, leaderboardIDs:NSArray<NSString>, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function submitScore(score:I64, context:I64, player:GKPlayer, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function loadEntriesForPlayerScope(playerScope:GKLeaderboardPlayerScope, timeScope:GKLeaderboardTimeScope, range:NSRange, completionHandler:(Null<GKLeaderboardEntry>, Null<NSArray<GKLeaderboardEntry>>, I64, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function loadEntriesForPlayers(players:NSArray<GKPlayer>, timeScope:GKLeaderboardTimeScope, completionHandler:(Null<GKLeaderboardEntry>, Null<NSArray<GKLeaderboardEntry>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function initWithPlayerIDs(playerIDs:Null<NSArray<NSString>>):Null<GKLeaderboard>;

@@ -17,11 +17,17 @@ import foundation.NSString;
 	var excludedActivityTypes(get, set) : Null<NSArray<NSString>>;
 	function get_excludedActivityTypes():Null<NSArray<NSString>>;
 	function set_excludedActivityTypes(v:Null<NSArray<NSString>>):Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var excludedActivitySectionTypes(get, set) : UIActivitySectionTypes;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_excludedActivitySectionTypes():UIActivitySectionTypes;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_excludedActivitySectionTypes(v:UIActivitySectionTypes):UIActivitySectionTypes;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var allowsProminentActivity(get, set) : Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_allowsProminentActivity():Bool;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_allowsProminentActivity(v:Bool):Bool;
 	function initWithActivityItems(activityItems:NSArray, applicationActivities:Null<NSArray<UIActivity>>):UIActivityViewController;
 	function initWithActivityItemsConfiguration(activityItemsConfiguration:UIActivityItemsConfigurationReading):UIActivityViewController;

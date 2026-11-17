@@ -6,16 +6,27 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextItem extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITextItem extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITextItem;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var contentType(get, never) : UITextItemContentType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_contentType():UITextItemContentType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var range(get, never) : NSRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_range():NSRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var link(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_link():Null<NSURL>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var textAttachment(get, never) : Null<NSTextAttachment>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_textAttachment():Null<NSTextAttachment>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var tagIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_tagIdentifier():Null<NSStringArg>;
 }

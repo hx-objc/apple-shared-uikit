@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITextGrammarCheckingType(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var No = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Yes = 2;
 	inline function new(v:I64) this = v;
 }

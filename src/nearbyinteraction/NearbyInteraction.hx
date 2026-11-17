@@ -6,12 +6,18 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Float32;
 
 @:hxmc.c @:hxmc.framework("NearbyInteraction") extern class NearbyInteraction {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function NIAlgorithmConvergenceStatusReasonDescription(reason:NSStringArg):NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final NIAlgorithmConvergenceStatusReasonInsufficientHorizontalSweep : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final NIAlgorithmConvergenceStatusReasonInsufficientLighting : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final NIAlgorithmConvergenceStatusReasonInsufficientMovement : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final NIAlgorithmConvergenceStatusReasonInsufficientVerticalSweep : NSString;
 	public static final NIErrorDomain : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static var NINearbyObjectAngleNotAvailable : Float32;
 	public static var NINearbyObjectDistanceNotAvailable : Float32;
 }

@@ -12,8 +12,10 @@ import objc.NSObject;
 	function get_network():Null<NEHotspotNetwork>;
 	var networkList(get, never) : Null<NSArray<NEHotspotNetwork>>;
 	function get_networkList():Null<NSArray<NEHotspotNetwork>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var interface_(get, never) : NSObject;
 	@:selector("interface")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_interface_():NSObject;
 	function createResponse(result:NEHotspotHelperResult):NEHotspotHelperResponse;
 	@:deprecated

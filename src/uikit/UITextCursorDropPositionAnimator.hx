@@ -3,14 +3,23 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextCursorDropPositionAnimator extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class UITextCursorDropPositionAnimator extends NSObject {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():UITextCursorDropPositionAnimator;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var cursorView(get, never) : UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_cursorView():UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var textInput(get, never) : UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_textInput():UIView;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function initWithTextCursorView(cursorView:UIView, textInput:UIView):UITextCursorDropPositionAnimator;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setCursorVisible(visible:Bool, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function placeCursorAtPosition(position:UITextPosition, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function animateAlongsideChanges(animation:Null<() -> Void>, completion:Null<() -> Void>):Void;
 }

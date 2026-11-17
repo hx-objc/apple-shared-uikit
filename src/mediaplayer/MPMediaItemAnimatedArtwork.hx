@@ -7,7 +7,9 @@ import foundation.NSURL;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("MediaPlayer") @:hxmc.objc extern class MPMediaItemAnimatedArtwork extends NSObject {
+@:hxmc.framework("MediaPlayer") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern class MPMediaItemAnimatedArtwork extends NSObject {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():MPMediaItemAnimatedArtwork;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function initWithArtworkID(artworkID:NSStringArg, previewImageRequestHandler:(CGSize, Null<UIImage> -> Void) -> Void, videoAssetFileURLRequestHandler:(CGSize, Null<NSURL> -> Void) -> Void):MPMediaItemAnimatedArtwork;
 }

@@ -4,14 +4,22 @@ package avkit;
 import hxmc.unsafe.Float32;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVPlaybackUserInterfaceVolumeControllable") extern interface AVPlaybackUserInterfaceVolumeControllable extends NSObjectProtocol {
+@:hxmc.objc("AVPlaybackUserInterfaceVolumeControllable") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVPlaybackUserInterfaceVolumeControllable extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hasAudio(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hasAudio():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var muted(get, set) : Bool;
 	@:selector("isMuted")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_muted():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_muted(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var volume(get, set) : Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_volume():Float32;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_volume(v:Float32):Float32;
 }

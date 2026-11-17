@@ -5,13 +5,21 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVCustomRoutingActionItem extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVCustomRoutingActionItem extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVCustomRoutingActionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var type(get, set) : UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_type():UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_type(v:UTType):UTType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var overrideTitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_overrideTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_overrideTitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AVCustomRoutingActionItem;
 }

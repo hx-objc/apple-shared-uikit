@@ -25,7 +25,9 @@ import objc.NSObject;
 	function get_height():NSMeasurement<NSUnitLength>;
 	var inputModes(get, never) : NSArray<NSString>;
 	function get_inputModes():NSArray<NSString>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var sessionIdentifiers(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_sessionIdentifiers():NSArray<NSString>;
 	var totalWords(get, never) : I64;
 	function get_totalWords():I64;
@@ -91,7 +93,9 @@ import objc.NSObject;
 	function get_shortWordCharKeyTouchDownUp():SRKeyboardProbabilityMetric<NSUnitDuration>;
 	var touchDownDown(get, never) : SRKeyboardProbabilityMetric<NSUnitDuration>;
 	function get_touchDownDown():SRKeyboardProbabilityMetric<NSUnitDuration>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var touchUpDown(get, never) : SRKeyboardProbabilityMetric<NSUnitDuration>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_touchUpDown():SRKeyboardProbabilityMetric<NSUnitDuration>;
 	var charKeyToPrediction(get, never) : SRKeyboardProbabilityMetric<NSUnitDuration>;
 	function get_charKeyToPrediction():SRKeyboardProbabilityMetric<NSUnitDuration>;
@@ -155,7 +159,9 @@ import objc.NSObject;
 	function get_longWordTouchDownUp():NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
 	var longWordTouchDownDown(get, never) : NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
 	function get_longWordTouchDownDown():NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var longWordTouchUpDown(get, never) : NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_longWordTouchUpDown():NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
 	var deleteToDeletes(get, never) : NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;
 	function get_deleteToDeletes():NSArray<SRKeyboardProbabilityMetric<NSUnitDuration>>;

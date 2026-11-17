@@ -5,18 +5,30 @@ import coregraphics.CGSize;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemElement extends NSObject implements CPPlayableItem {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemElement extends NSObject implements CPPlayableItem {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var image(get, set) : UIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_image():UIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_image(v:UIImage):UIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumImageSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_enabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var playbackConfiguration(get, set) : Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_playbackConfiguration():Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_playbackConfiguration(v:Null<CPPlaybackConfiguration>):Null<CPPlaybackConfiguration>;
 }

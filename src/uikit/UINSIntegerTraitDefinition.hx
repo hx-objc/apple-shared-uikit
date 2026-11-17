@@ -3,7 +3,8 @@ package uikit;
 
 import hxmc.I64;
 
-@:hxmc.objc("UINSIntegerTraitDefinition") extern interface UINSIntegerTraitDefinition extends UITraitDefinition {
+@:hxmc.objc("UINSIntegerTraitDefinition") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UINSIntegerTraitDefinition extends UITraitDefinition {
 	static var defaultValue(get, never) : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():I64;
 }

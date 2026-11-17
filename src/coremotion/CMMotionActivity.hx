@@ -4,24 +4,43 @@ package coremotion;
 import foundation.NSCoder;
 import foundation.NSDate;
 
-@:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMMotionActivity extends CMLogItem {
+@:hxmc.framework("CoreMotion") @:hxmc.objc @:hxmc.available(macos >= 15.0) extern class CMMotionActivity extends CMLogItem {
+	@:hxmc.available(macos >= 15.0)
 	static function alloc():CMMotionActivity;
+	@:hxmc.available(macos >= 15.0)
 	var confidence(get, never) : CMMotionActivityConfidence;
+	@:hxmc.available(macos >= 15.0)
 	function get_confidence():CMMotionActivityConfidence;
+	@:hxmc.available(macos >= 15.0)
 	var startDate(get, never) : NSDate;
+	@:hxmc.available(macos >= 15.0)
 	function get_startDate():NSDate;
+	@:hxmc.available(macos >= 15.0)
 	var unknown(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_unknown():Bool;
+	@:hxmc.available(macos >= 15.0)
 	var stationary(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_stationary():Bool;
+	@:hxmc.available(macos >= 15.0)
 	var walking(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_walking():Bool;
+	@:hxmc.available(macos >= 15.0)
 	var running(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_running():Bool;
+	@:hxmc.available(macos >= 15.0)
 	var automotive(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_automotive():Bool;
+	@:hxmc.available(macos >= 15.0)
 	var cycling(get, never) : Bool;
+	@:hxmc.available(macos >= 15.0)
 	function get_cycling():Bool;
+	@:hxmc.available(macos >= 15.0)
 	override function init():CMMotionActivity;
+	@:hxmc.available(macos >= 15.0)
 	override function initWithCoder(coder:NSCoder):Null<CMMotionActivity>;
 }

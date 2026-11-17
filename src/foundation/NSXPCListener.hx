@@ -14,6 +14,7 @@ import objc.NSObject;
 	static function anonymousListener():NSXPCListener;
 	function resume():Void;
 	function suspend():Void;
+	@:hxmc.available(macos >= 11.0)
 	function activate():Void;
 	function invalidate():Void;
 	override function init():NSXPCListener;

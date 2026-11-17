@@ -5,10 +5,12 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartVideoCallIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartVideoCallIntent;
 	var contacts(get, never) : Null<NSArray<INPerson>>;
 	function get_contacts():Null<NSArray<INPerson>>;
 	function initWithContacts(contacts:Null<NSArray<INPerson>>):INStartVideoCallIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INStartVideoCallIntent;
 	override function initWithCoder(coder:NSCoder):Null<INStartVideoCallIntent>;
 }

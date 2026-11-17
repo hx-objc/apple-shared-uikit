@@ -31,7 +31,9 @@ import foundation.NSString;
 	public static final CIRAWDecoderVersion7DNG : NSString;
 	public static final CIRAWDecoderVersion8 : NSString;
 	public static final CIRAWDecoderVersion8DNG : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final CIRAWDecoderVersion9 : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final CIRAWDecoderVersion9DNG : NSString;
 	public static final CIRAWDecoderVersionNone : NSString;
 	public static final kCIActiveKeys : NSString;
@@ -90,9 +92,11 @@ import foundation.NSString;
 	public static final kCICategoryTransition : NSString;
 	public static final kCICategoryVideo : NSString;
 	public static final kCIContextAllowLowPower : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIContextCVMetalTextureCache : NSString;
 	public static final kCIContextCacheIntermediates : NSString;
 	public static final kCIContextHighQualityDownsample : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCIContextMemoryLimit : NSString;
 	public static final kCIContextName : NSString;
 	public static final kCIContextOutputColorSpace : NSString;
@@ -101,8 +105,11 @@ import foundation.NSString;
 	public static final kCIContextUseSoftwareRenderer : NSString;
 	public static final kCIContextWorkingColorSpace : NSString;
 	public static final kCIContextWorkingFormat : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIDynamicRangeConstrainedHigh : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIDynamicRangeHigh : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIDynamicRangeStandard : NSString;
 	public static final kCIFormatA16 : Int;
 	public static final kCIFormatA8 : Int;
@@ -123,6 +130,7 @@ import foundation.NSString;
 	public static final kCIFormatR8 : Int;
 	public static final kCIFormatRG16 : Int;
 	public static final kCIFormatRG8 : Int;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCIFormatRGB10 : Int;
 	public static final kCIFormatRGBA16 : Int;
 	public static final kCIFormatRGBA8 : Int;
@@ -130,12 +138,15 @@ import foundation.NSString;
 	public static final kCIFormatRGBAh : Int;
 	public static final kCIFormatRGBX16 : Int;
 	public static final kCIFormatRGBX8 : Int;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCIFormatRGBXf : Int;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCIFormatRGBXh : Int;
 	public static final kCIFormatRGf : Int;
 	public static final kCIFormatRGh : Int;
 	public static final kCIFormatRf : Int;
 	public static final kCIFormatRh : Int;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIImageApplyCleanAperture : NSString;
 	public static final kCIImageApplyOrientationProperty : NSString;
 	public static final kCIImageAutoAdjustCrop : NSString;
@@ -154,8 +165,11 @@ import foundation.NSString;
 	public static final kCIImageAuxiliarySemanticSegmentationTeethMatte : NSString;
 	public static final kCIImageCacheImmediately : NSString;
 	public static final kCIImageColorSpace : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIImageContentAverageLightLevel : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCIImageContentHeadroom : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCIImageExpandToHDR : NSString;
 	public static final kCIImageNearestSampling : NSString;
 	public static final kCIImageProperties : NSString;
@@ -166,8 +180,10 @@ import foundation.NSString;
 	public static final kCIImageRepresentationAVSemanticSegmentationMattes : NSString;
 	public static final kCIImageRepresentationDepthImage : NSString;
 	public static final kCIImageRepresentationDisparityImage : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCIImageRepresentationHDRGainMapAsRGB : NSString;
 	public static final kCIImageRepresentationHDRGainMapImage : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCIImageRepresentationHDRImage : NSString;
 	public static final kCIImageRepresentationPortraitEffectsMatteImage : NSString;
 	public static final kCIImageRepresentationSemanticSegmentationGlassesMatteImage : NSString;
@@ -175,29 +191,38 @@ import foundation.NSString;
 	public static final kCIImageRepresentationSemanticSegmentationSkinMatteImage : NSString;
 	public static final kCIImageRepresentationSemanticSegmentationSkyMatteImage : NSString;
 	public static final kCIImageRepresentationSemanticSegmentationTeethMatteImage : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCIImageSubsampleFactor : NSString;
 	public static final kCIImageToneMapHDRtoSDR : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCIImageTypeIdentifierHint : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCIImageUseHardwareAcceleration : NSString;
 	public static final kCIInputAllowDraftModeKey : NSString;
 	public static final kCIInputAmountKey : NSString;
 	public static final kCIInputAngleKey : NSString;
 	public static final kCIInputAspectRatioKey : NSString;
 	public static final kCIInputBackgroundImageKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputBacksideImageKey : NSString;
 	public static final kCIInputBaselineExposureKey : NSString;
 	public static final kCIInputBiasKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputBiasVectorKey : NSString;
 	public static final kCIInputBoostKey : NSString;
 	public static final kCIInputBoostShadowAmountKey : NSString;
 	public static final kCIInputBrightnessKey : NSString;
 	public static final kCIInputCenterKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputColor0Key : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputColor1Key : NSString;
 	public static final kCIInputColorKey : NSString;
 	public static final kCIInputColorNoiseReductionAmountKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputColorSpaceKey : NSString;
 	public static final kCIInputContrastKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputCountKey : NSString;
 	public static final kCIInputDecoderVersionKey : NSString;
 	public static final kCIInputDepthImageKey : NSString;
@@ -209,6 +234,7 @@ import foundation.NSString;
 	public static final kCIInputEnableSharpeningKey : NSString;
 	public static final kCIInputEnableVendorLensCorrectionKey : NSString;
 	public static final kCIInputExtentKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputExtrapolateKey : NSString;
 	public static final kCIInputGradientImageKey : NSString;
 	public static final kCIInputIgnoreImageOrientationKey : NSString;
@@ -216,6 +242,7 @@ import foundation.NSString;
 	public static final kCIInputImageOrientationKey : NSString;
 	public static final kCIInputIntensityKey : NSString;
 	public static final kCIInputLinearSpaceFilter : NSString;
+	@:hxmc.available(macos >= 11.1)
 	public static final kCIInputLocalToneMapAmountKey : NSString;
 	public static final kCIInputLuminanceNoiseReductionAmountKey : NSString;
 	public static final kCIInputMaskImageKey : NSString;
@@ -230,11 +257,17 @@ import foundation.NSString;
 	public static final kCIInputNoiseReductionContrastAmountKey : NSString;
 	public static final kCIInputNoiseReductionDetailAmountKey : NSString;
 	public static final kCIInputNoiseReductionSharpnessAmountKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputPaletteImageKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputPerceptualKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputPoint0Key : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputPoint1Key : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputRadius0Key : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputRadius1Key : NSString;
 	public static final kCIInputRadiusKey : NSString;
 	public static final kCIInputRefractionKey : NSString;
@@ -244,6 +277,7 @@ import foundation.NSString;
 	public static final kCIInputShadingImageKey : NSString;
 	public static final kCIInputSharpnessKey : NSString;
 	public static final kCIInputTargetImageKey : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCIInputThresholdKey : NSString;
 	public static final kCIInputTimeKey : NSString;
 	public static final kCIInputTransformKey : NSString;
@@ -252,6 +286,7 @@ import foundation.NSString;
 	public static final kCIInputWidthKey : NSString;
 	public static final kCIOutputImageKey : NSString;
 	public static final kCIOutputNativeSizeKey : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCIPropertiesKey : NSString;
 	public static final kCISamplerAffineMatrix : NSString;
 	public static final kCISamplerColorSpace : NSString;

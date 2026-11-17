@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INLocationSearchTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INLocationSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INLocationSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INLocationSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INLocationSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INLocationSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INLocationSearchTypeResolutionResult;
 	static function successWithResolvedLocationSearchType(resolvedLocationSearchType:INLocationSearchType):INLocationSearchTypeResolutionResult;
 	static function confirmationRequiredWithLocationSearchTypeToConfirm(locationSearchTypeToConfirm:INLocationSearchType):INLocationSearchTypeResolutionResult;

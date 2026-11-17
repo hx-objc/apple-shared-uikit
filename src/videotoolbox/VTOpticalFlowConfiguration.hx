@@ -10,28 +10,50 @@ import hxmc.I64;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("VideoToolbox") @:hxmc.objc extern class VTOpticalFlowConfiguration extends NSObject implements VTFrameProcessorConfiguration {
+@:hxmc.framework("VideoToolbox") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0) extern class VTOpticalFlowConfiguration extends NSObject implements VTFrameProcessorConfiguration {
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():VTOpticalFlowConfiguration;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var frameWidth(get, never) : I64;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_frameWidth():I64;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var frameHeight(get, never) : I64;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_frameHeight():I64;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var qualityPrioritization(get, never) : VTOpticalFlowConfigurationQualityPrioritization;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_qualityPrioritization():VTOpticalFlowConfigurationQualityPrioritization;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var revision(get, never) : VTOpticalFlowConfigurationRevision;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_revision():VTOpticalFlowConfigurationRevision;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static var supportedRevisions(get, never) : NSIndexSet;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static function get_supportedRevisions():NSIndexSet;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static var defaultRevision(get, never) : VTOpticalFlowConfigurationRevision;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static function get_defaultRevision():VTOpticalFlowConfigurationRevision;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var frameSupportedPixelFormats(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_frameSupportedPixelFormats():NSArray<NSNumber>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var sourcePixelBufferAttributes(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_sourcePixelBufferAttributes():NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	var destinationPixelBufferAttributes(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function get_destinationPixelBufferAttributes():NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static var supported(get, never) : Bool;
 	@:selector("isSupported")
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	static function get_supported():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	function initWithFrameWidth(frameWidth:I64, frameHeight:I64, qualityPrioritization:VTOpticalFlowConfigurationQualityPrioritization, revision:VTOpticalFlowConfigurationRevision):Null<VTOpticalFlowConfiguration>;
 }

@@ -3,9 +3,11 @@ package mediaplayer;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MPNowPlayingSessionDelegate") extern interface MPNowPlayingSessionDelegate extends NSObjectProtocol {
+@:hxmc.objc("MPNowPlayingSessionDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface MPNowPlayingSessionDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function nowPlayingSessionDidChangeActive(nowPlayingSession:MPNowPlayingSession):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function nowPlayingSessionDidChangeCanBecomeActive(nowPlayingSession:MPNowPlayingSession):Void;
 }

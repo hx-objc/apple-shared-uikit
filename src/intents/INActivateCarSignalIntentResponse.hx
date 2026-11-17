@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INActivateCarSignalIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INActivateCarSignalIntentResponse;
 	var code(get, never) : INActivateCarSignalIntentResponseCode;
 	function get_code():INActivateCarSignalIntentResponseCode;

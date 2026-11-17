@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITableViewSelfSizingInvalidation(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Disabled = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Enabled = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var EnabledIncludingConstraints = 2;
 	inline function new(v:I64) this = v;
 }

@@ -3,17 +3,28 @@ package photos;
 
 import foundation.NSURLRequest;
 
-@:hxmc.framework("Photos") @:hxmc.objc extern class PHAssetResourceUploadJobChangeRequest extends PHChangeRequest {
+@:hxmc.framework("Photos") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0) extern class PHAssetResourceUploadJobChangeRequest extends PHChangeRequest {
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function alloc():PHAssetResourceUploadJobChangeRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	var placeholderForCreatedAssetResourceUploadJob(get, never) : Null<PHObjectPlaceholder>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function get_placeholderForCreatedAssetResourceUploadJob():Null<PHObjectPlaceholder>;
 	@:deprecated
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function createJobWithDestination(destination:NSURLRequest, resource:PHAssetResource):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	static function creationRequestForJobWithDestination(destination:NSURLRequest, resource:PHAssetResource):PHAssetResourceUploadJobChangeRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	static function creationRequestForDownloadJobWithResource(resource:PHAssetResource):PHAssetResourceUploadJobChangeRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	static function changeRequestForUploadJob(job:PHAssetResourceUploadJob):Null<PHAssetResourceUploadJobChangeRequest>;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function acknowledge():Void;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	function retryWithDestination(destination:Null<NSURLRequest>):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 26.4, maccatalyst >= 27.0)
 	function cancel():Void;
+	@:hxmc.available(macos >= 27.0, ios >= 26.1, maccatalyst >= 27.0)
 	override function init():PHAssetResourceUploadJobChangeRequest;
 }

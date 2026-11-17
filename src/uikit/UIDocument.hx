@@ -70,8 +70,10 @@ import objc.NSObject;
 	function revertToContentsOfURL(url:NSURL, completionHandler:Null<Bool -> Void>):Void;
 	function updateUserActivityState(userActivity:NSUserActivity):Void;
 	function restoreUserActivityState(userActivity:NSUserActivity):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function navigationItem(navigationItem:UINavigationItem, didEndRenamingWithTitle:NSStringArg):Void;
 	override function init():UIDocument;
 	@:selector("navigationItem:didEndRenamingWithTitle:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function navigationItemDidEndRenamingWithTitle(navigationItem:UINavigationItem, didEndRenamingWithTitle:NSStringArg):Void;
 }

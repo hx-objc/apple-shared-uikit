@@ -4,10 +4,15 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextSelectionGranularity(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var Character = 0;
+	@:hxmc.available(macos >= 12.0)
 	var Word = 1;
+	@:hxmc.available(macos >= 12.0)
 	var Paragraph = 2;
+	@:hxmc.available(macos >= 12.0)
 	var Line = 3;
+	@:hxmc.available(macos >= 12.0)
 	var Sentence = 4;
 	inline function new(v:I64) this = v;
 }

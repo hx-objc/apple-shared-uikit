@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSnoozeTasksIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSnoozeTasksIntentResponse;
 	var code(get, never) : INSnoozeTasksIntentResponseCode;
 	function get_code():INSnoozeTasksIntentResponseCode;

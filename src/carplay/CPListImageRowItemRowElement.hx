@@ -4,13 +4,21 @@ package carplay;
 import foundation.NSStringArg;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemRowElement extends CPListImageRowItemElement {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemRowElement extends CPListImageRowItemElement {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemRowElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithImage(image:UIImage, title:Null<NSStringArg>, subtitle:Null<NSStringArg>):CPListImageRowItemRowElement;
 }

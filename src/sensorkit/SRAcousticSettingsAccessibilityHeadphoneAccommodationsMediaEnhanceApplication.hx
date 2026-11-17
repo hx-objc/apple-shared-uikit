@@ -4,9 +4,13 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRAcousticSettingsAccessibilityHeadphoneAccommodationsMediaEnhanceApplication(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var None = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Phone = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Media = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var PhoneAndMedia = 4;
 	inline function new(v:I64) this = v;
 }

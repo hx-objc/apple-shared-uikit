@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INUpdateMediaAffinityIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INUpdateMediaAffinityIntentResponse;
 	var code(get, never) : INUpdateMediaAffinityIntentResponseCode;
 	function get_code():INUpdateMediaAffinityIntentResponseCode;

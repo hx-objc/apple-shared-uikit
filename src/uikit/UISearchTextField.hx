@@ -25,8 +25,11 @@ import hxmc.I64;
 	var allowsCopyingTokens(get, set) : Bool;
 	function get_allowsCopyingTokens():Bool;
 	function set_allowsCopyingTokens(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchSuggestions(get, set) : Null<NSArray<UISearchSuggestion>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchSuggestions():Null<NSArray<UISearchSuggestion>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_searchSuggestions(v:Null<NSArray<UISearchSuggestion>>):Null<NSArray<UISearchSuggestion>>;
 	function insertToken(token:UISearchToken, atIndex:I64):Void;
 	function removeTokenAtIndex(tokenIndex:I64):Void;

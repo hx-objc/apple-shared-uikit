@@ -7,12 +7,19 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CryptoTokenKit") @:hxmc.objc extern class TKSmartCardTokenRegistrationManager extends NSObject {
+@:hxmc.framework("CryptoTokenKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TKSmartCardTokenRegistrationManager extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TKSmartCardTokenRegistrationManager;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var defaultManager(get, never) : TKSmartCardTokenRegistrationManager;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_defaultManager():TKSmartCardTokenRegistrationManager;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var registeredSmartCardTokens(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_registeredSmartCardTokens():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function registerSmartCardWithTokenID(tokenID:NSStringArg, promptMessage:NSStringArg, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function unregisterSmartCardWithTokenID(tokenID:NSStringArg, error:Ptr):Bool;
 }

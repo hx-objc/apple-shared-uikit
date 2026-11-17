@@ -15,11 +15,16 @@ import uikit.UIViewController;
 	function set_delegate(v:Null<PKPaymentAuthorizationViewControllerDelegate>):Null<PKPaymentAuthorizationViewControllerDelegate>;
 	static function canMakePayments():Bool;
 	static overload function canMakePaymentsUsingNetworks(supportedNetworks:NSArray<NSString>):Bool;
+	@:hxmc.available(macos >= 11.0)
 	static overload function canMakePaymentsUsingNetworks(supportedNetworks:NSArray<NSString>, capabilities:PKMerchantCapability):Bool;
 	function initWithPaymentRequest(request:PKPaymentRequest):Null<PKPaymentAuthorizationViewController>;
+	@:hxmc.available(macos >= 15.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function supportsDisbursements():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 17.0, maccatalyst >= 17.0)
 	static overload function supportsDisbursementsUsingNetworks(supportedNetworks:NSArray<NSString>):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 17.0, maccatalyst >= 17.0)
 	static overload function supportsDisbursementsUsingNetworks(supportedNetworks:NSArray<NSString>, capabilities:PKMerchantCapability):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithDisbursementRequest(request:PKDisbursementRequest):PKPaymentAuthorizationViewController;
 	override function init():PKPaymentAuthorizationViewController;
 	override function initWithCoder(coder:NSCoder):Null<PKPaymentAuthorizationViewController>;

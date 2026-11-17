@@ -15,9 +15,13 @@ import objc.NSObject;
 	function get_discoveryToken():NIDiscoveryToken;
 	var distance(get, never) : Float32;
 	function get_distance():Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var verticalDirectionEstimate(get, never) : NINearbyObjectVerticalDirectionEstimate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_verticalDirectionEstimate():NINearbyObjectVerticalDirectionEstimate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var horizontalAngle(get, never) : Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_horizontalAngle():Float32;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

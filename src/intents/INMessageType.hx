@@ -36,8 +36,11 @@ enum abstract INMessageType(I64) to I64 {
 	var ActivitySnippet = 23;
 	var File = 24;
 	var Link = 25;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Reaction = 26;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var MediaAnimatedImage = 27;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ThirdPartyAttachment = 28;
 	inline function new(v:I64) this = v;
 }

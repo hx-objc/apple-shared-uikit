@@ -7,10 +7,13 @@ import foundation.NSStringArg;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIDeferredMenuElement extends UIMenuElement {
 	static function alloc():UIDeferredMenuElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_identifier():NSStringArg;
 	static function elementWithProvider(elementProvider:(NSArray<UIMenuElement> -> Void) -> Void):UIDeferredMenuElement;
 	static function elementWithUncachedProvider(elementProvider:(NSArray<UIMenuElement> -> Void) -> Void):UIDeferredMenuElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function elementUsingFocusWithIdentifier(identifier:NSStringArg, shouldCacheItems:Bool):UIDeferredMenuElement;
 	override function initWithCoder(coder:NSCoder):Null<UIDeferredMenuElement>;
 }

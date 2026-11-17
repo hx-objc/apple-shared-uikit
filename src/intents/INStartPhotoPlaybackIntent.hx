@@ -8,6 +8,7 @@ import foundation.NSString;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartPhotoPlaybackIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartPhotoPlaybackIntent;
 	var dateCreated(get, never) : Null<INDateComponentsRange>;
 	function get_dateCreated():Null<INDateComponentsRange>;
@@ -28,6 +29,7 @@ import foundation.NSStringArg;
 	var peopleInPhotoOperator(get, never) : INConditionalOperator;
 	function get_peopleInPhotoOperator():INConditionalOperator;
 	function initWithDateCreated(dateCreated:Null<INDateComponentsRange>, locationCreated:Null<CLPlacemark>, albumName:Null<NSStringArg>, searchTerms:Null<NSArray<NSString>>, includedAttributes:INPhotoAttributeOptions, excludedAttributes:INPhotoAttributeOptions, peopleInPhoto:Null<NSArray<INPerson>>):INStartPhotoPlaybackIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INStartPhotoPlaybackIntent;
 	override function initWithCoder(coder:NSCoder):Null<INStartPhotoPlaybackIntent>;
 }

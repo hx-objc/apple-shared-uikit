@@ -15,6 +15,8 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSTimer;
 import hxmc.I64;
+import hxmc.ReadOnlySpan;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.Int8;
@@ -29,10 +31,14 @@ import objc.NSObject;
 	public static function CMAudioFormatDescriptionCreateFromBigEndianSoundDescriptionBlockBuffer(allocator:Null<CFAllocator>, soundDescriptionBlockBuffer:CMBlockBuffer, flavor:Null<NSStringArg>, formatDescriptionOut:Ptr):Int;
 	public static function CMAudioFormatDescriptionCreateFromBigEndianSoundDescriptionData(allocator:Null<CFAllocator>, soundDescriptionData:Ptr, size:I64, flavor:Null<NSStringArg>, formatDescriptionOut:Ptr):Int;
 	public static function CMAudioFormatDescriptionCreateSummary(allocator:Null<CFAllocator>, formatDescriptionArray:NSArray, flags:Int, formatDescriptionOut:Ptr):Int;
-	public static function CMAudioFormatDescriptionEqual(formatDescription:CMAudioFormatDescription, otherFormatDescription:CMAudioFormatDescription, equalityMask:Int, equalityMaskOut:Ptr):Bool;
-	public static function CMAudioFormatDescriptionGetChannelLayout(desc:CMAudioFormatDescription, sizeOut:Ptr):Ptr;
-	public static function CMAudioFormatDescriptionGetFormatList(desc:CMAudioFormatDescription, sizeOut:Ptr):Ptr;
-	public static function CMAudioFormatDescriptionGetMagicCookie(desc:CMAudioFormatDescription, sizeOut:Ptr):Ptr;
+	@:hxmc.len(equalityMaskOut, 1)
+	public static function CMAudioFormatDescriptionEqual(formatDescription:CMAudioFormatDescription, otherFormatDescription:CMAudioFormatDescription, equalityMask:Int, equalityMaskOut:Span<Int>):Bool;
+	@:hxmc.len(sizeOut, 1)
+	public static function CMAudioFormatDescriptionGetChannelLayout(desc:CMAudioFormatDescription, sizeOut:Span<I64>):Ptr;
+	@:hxmc.len(sizeOut, 1)
+	public static function CMAudioFormatDescriptionGetFormatList(desc:CMAudioFormatDescription, sizeOut:Span<I64>):Ptr;
+	@:hxmc.len(sizeOut, 1)
+	public static function CMAudioFormatDescriptionGetMagicCookie(desc:CMAudioFormatDescription, sizeOut:Span<I64>):Ptr;
 	public static function CMAudioFormatDescriptionGetMostCompatibleFormat(desc:CMAudioFormatDescription):Ptr;
 	public static function CMAudioFormatDescriptionGetRichestDecodableFormat(desc:CMAudioFormatDescription):Ptr;
 	public static function CMAudioFormatDescriptionGetStreamBasicDescription(desc:CMAudioFormatDescription):Ptr;
@@ -50,13 +56,16 @@ import objc.NSObject;
 	public static function CMBlockBufferCreateWithMemoryBlock(structureAllocator:Null<CFAllocator>, memoryBlock:Ptr, blockLength:I64, blockAllocator:Null<CFAllocator>, customBlockSource:Ptr, offsetToData:I64, dataLength:I64, flags:Int, blockBufferOut:Ptr):Int;
 	public static function CMBlockBufferFillDataBytes(fillByte:Int8, destinationBuffer:CMBlockBuffer, offsetIntoDestination:I64, dataLength:I64):Int;
 	public static function CMBlockBufferGetDataLength(theBuffer:CMBlockBuffer):I64;
-	public static function CMBlockBufferGetDataPointer(theBuffer:CMBlockBuffer, offset:I64, lengthAtOffsetOut:Ptr, totalLengthOut:Ptr, dataPointerOut:Ptr):Int;
+	@:hxmc.len(lengthAtOffsetOut, 1)
+	@:hxmc.len(totalLengthOut, 1)
+	public static function CMBlockBufferGetDataPointer(theBuffer:CMBlockBuffer, offset:I64, lengthAtOffsetOut:Span<I64>, totalLengthOut:Span<I64>, dataPointerOut:Ptr):Int;
 	public static function CMBlockBufferGetTypeID():I64;
 	public static function CMBlockBufferIsEmpty(theBuffer:CMBlockBuffer):Bool;
 	public static function CMBlockBufferIsRangeContiguous(theBuffer:CMBlockBuffer, offset:I64, length:I64):Bool;
 	public static function CMBlockBufferReplaceDataBytes(sourceBytes:Ptr, destinationBuffer:CMBlockBuffer, offsetIntoDestination:I64, dataLength:I64):Int;
-	public static function CMBufferQueueCallForEachBuffer(queue:CMBufferQueue, callback:Ptr, refcon:Ptr):Int;
+	public static function CMBufferQueueCallForEachBuffer(queue:CMBufferQueue, callback:(Ptr, Ptr) -> Int, refcon:Ptr):Int;
 	public static function CMBufferQueueContainsEndOfData(queue:CMBufferQueue):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMBufferQueueCopyHead(queue:CMBufferQueue):Ptr;
 	public static function CMBufferQueueCreate(allocator:Null<CFAllocator>, capacity:I64, callbacks:Ptr, queueOut:Ptr):Int;
 	public static function CMBufferQueueCreateWithHandlers(allocator:Null<CFAllocator>, capacity:I64, handlers:Ptr, queueOut:Ptr):Int;
@@ -84,16 +93,22 @@ import objc.NSObject;
 	public static function CMBufferQueueMarkEndOfData(queue:CMBufferQueue):Int;
 	public static function CMBufferQueueRemoveTrigger(queue:CMBufferQueue, triggerToken:Ptr):Int;
 	public static function CMBufferQueueReset(queue:CMBufferQueue):Int;
-	public static function CMBufferQueueResetWithCallback(queue:CMBufferQueue, callback:Ptr, refcon:Ptr):Int;
-	public static function CMBufferQueueSetValidationCallback(queue:CMBufferQueue, callback:Ptr, refcon:Ptr):Int;
+	public static function CMBufferQueueResetWithCallback(queue:CMBufferQueue, callback:(Ptr, Ptr) -> Void, refcon:Ptr):Int;
+	public static function CMBufferQueueSetValidationCallback(queue:CMBufferQueue, callback:(CMBufferQueue, Ptr, Ptr) -> Int, refcon:Ptr):Int;
 	public static function CMBufferQueueSetValidationHandler(queue:CMBufferQueue, handler:Block<(CMBufferQueue, Ptr) -> Int>):Int;
 	public static function CMBufferQueueTestTrigger(queue:CMBufferQueue, triggerToken:Ptr):Bool;
 	public static function CMClockConvertHostTimeToSystemUnits(hostTime:CMTime):I64;
-	public static function CMClockGetAnchorTime(clock:CMClock, clockTimeOut:Ptr, referenceClockTimeOut:Ptr):Int;
+	@:hxmc.len(clockTimeOut, 1)
+	@:hxmc.len(referenceClockTimeOut, 1)
+	public static function CMClockGetAnchorTime(clock:CMClock, clockTimeOut:Span<CMTime>, referenceClockTimeOut:Span<CMTime>):Int;
 	public static function CMClockGetHostTimeClock():CMClock;
-	public static function CMClockGetPreferredStartTimePattern(clock:CMClock, outClockStartTime:Ptr, outHostClockStartTime:Ptr, outDeltaBetweenPreferredStartTimes:Ptr):Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
+	@:hxmc.len(outClockStartTime, 1)
+	@:hxmc.len(outHostClockStartTime, 1)
+	public static function CMClockGetPreferredStartTimePattern(clock:CMClock, outClockStartTime:Span<CMTime>, outHostClockStartTime:Span<CMTime>, outDeltaBetweenPreferredStartTimes:Ptr):Int;
 	public static function CMClockGetTime(clock:CMClock):CMTime;
 	public static function CMClockGetTypeID():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function CMClockImplementsGetPreferredStartTimePattern(clock:CMClock):Bool;
 	public static function CMClockInvalidate(clock:CMClock):Void;
 	public static function CMClockMakeHostTimeFromSystemUnits(hostTime:I64):CMTime;
@@ -112,7 +127,8 @@ import objc.NSObject;
 	public static function CMFormatDescriptionGetMediaSubType(desc:CMAudioFormatDescription):Int;
 	public static function CMFormatDescriptionGetMediaType(desc:CMAudioFormatDescription):Int;
 	public static function CMFormatDescriptionGetTypeID():I64;
-	public static function CMGetAttachment(target:Ptr, key:NSStringArg, attachmentModeOut:Ptr):Null<Id>;
+	@:hxmc.len(attachmentModeOut, 1)
+	public static function CMGetAttachment(target:Ptr, key:NSStringArg, attachmentModeOut:Span<Int>):Null<Id>;
 	@:hxmc.retained
 	public static function CMMemoryPoolCreate(options:Null<NSDictionary>):CMMemoryPool;
 	public static function CMMemoryPoolFlush(pool:CMMemoryPool):Void;
@@ -145,22 +161,27 @@ import objc.NSObject;
 	public static function CMRemoveAllAttachments(target:Ptr):Void;
 	public static function CMRemoveAttachment(target:Ptr, key:NSStringArg):Void;
 	public static function CMSampleBufferCallBlockForEachSample(sbuf:CMSampleBuffer, handler:Block<(CMSampleBuffer, I64) -> Int>):Int;
-	public static function CMSampleBufferCallForEachSample(sbuf:CMSampleBuffer, callback:Ptr, refcon:Ptr):Int;
+	public static function CMSampleBufferCallForEachSample(sbuf:CMSampleBuffer, callback:(CMSampleBuffer, I64, Ptr) -> Int, refcon:Ptr):Int;
 	public static function CMSampleBufferCopyPCMDataIntoAudioBufferList(sbuf:CMSampleBuffer, frameOffset:Int, numFrames:Int, bufferList:Ptr):Int;
 	public static function CMSampleBufferCopySampleBufferForRange(allocator:Null<CFAllocator>, sbuf:CMSampleBuffer, sampleRange:CFRange, sampleBufferOut:Ptr):Int;
 	public static function CMSampleBufferCreate(allocator:Null<CFAllocator>, dataBuffer:Null<CMBlockBuffer>, dataReady:Bool, makeDataReadyCallback:Ptr, makeDataReadyRefcon:Ptr, formatDescription:Null<CMAudioFormatDescription>, numSamples:I64, numSampleTimingEntries:I64, sampleTimingArray:Ptr, numSampleSizeEntries:I64, sampleSizeArray:Ptr, sampleBufferOut:Ptr):Int;
 	public static function CMSampleBufferCreateCopy(allocator:Null<CFAllocator>, sbuf:CMSampleBuffer, sampleBufferOut:Ptr):Int;
 	public static function CMSampleBufferCreateCopyWithNewTiming(allocator:Null<CFAllocator>, originalSBuf:CMSampleBuffer, numSampleTimingEntries:I64, sampleTimingArray:Ptr, sampleBufferOut:Ptr):Int;
-	public static function CMSampleBufferCreateForImageBuffer(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, dataReady:Bool, makeDataReadyCallback:Ptr, makeDataReadyRefcon:Ptr, formatDescription:CMAudioFormatDescription, sampleTiming:Ptr, sampleBufferOut:Ptr):Int;
-	public static function CMSampleBufferCreateForImageBufferWithMakeDataReadyHandler(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, dataReady:Bool, formatDescription:CMAudioFormatDescription, sampleTiming:Ptr, sampleBufferOut:Ptr, makeDataReadyHandler:Null<Block<CMSampleBuffer -> Int>>):Int;
+	@:hxmc.len(sampleTiming, 1)
+	public static function CMSampleBufferCreateForImageBuffer(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, dataReady:Bool, makeDataReadyCallback:Ptr, makeDataReadyRefcon:Ptr, formatDescription:CMAudioFormatDescription, sampleTiming:ReadOnlySpan<CMSampleTimingInfo>, sampleBufferOut:Ptr):Int;
+	@:hxmc.len(sampleTiming, 1)
+	public static function CMSampleBufferCreateForImageBufferWithMakeDataReadyHandler(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, dataReady:Bool, formatDescription:CMAudioFormatDescription, sampleTiming:ReadOnlySpan<CMSampleTimingInfo>, sampleBufferOut:Ptr, makeDataReadyHandler:Null<Block<CMSampleBuffer -> Int>>):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMSampleBufferCreateForTaggedBufferGroup(allocator:Null<CFAllocator>, taggedBufferGroup:CMTaggedBufferGroup, sbufPTS:CMTime, sbufDuration:CMTime, formatDescription:CMAudioFormatDescription, sBufOut:Ptr):Int;
 	public static function CMSampleBufferCreateReady(allocator:Null<CFAllocator>, dataBuffer:Null<CMBlockBuffer>, formatDescription:Null<CMAudioFormatDescription>, numSamples:I64, numSampleTimingEntries:I64, sampleTimingArray:Ptr, numSampleSizeEntries:I64, sampleSizeArray:Ptr, sampleBufferOut:Ptr):Int;
-	public static function CMSampleBufferCreateReadyWithImageBuffer(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, formatDescription:CMAudioFormatDescription, sampleTiming:Ptr, sampleBufferOut:Ptr):Int;
+	@:hxmc.len(sampleTiming, 1)
+	public static function CMSampleBufferCreateReadyWithImageBuffer(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, formatDescription:CMAudioFormatDescription, sampleTiming:ReadOnlySpan<CMSampleTimingInfo>, sampleBufferOut:Ptr):Int;
 	public static function CMSampleBufferCreateWithMakeDataReadyHandler(allocator:Null<CFAllocator>, dataBuffer:Null<CMBlockBuffer>, dataReady:Bool, formatDescription:Null<CMAudioFormatDescription>, numSamples:I64, numSampleTimingEntries:I64, sampleTimingArray:Ptr, numSampleSizeEntries:I64, sampleSizeArray:Ptr, sampleBufferOut:Ptr, makeDataReadyHandler:Null<Block<CMSampleBuffer -> Int>>):Int;
 	public static function CMSampleBufferDataIsReady(sbuf:CMSampleBuffer):Bool;
 	public static function CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer(sbuf:CMSampleBuffer, bufferListSizeNeededOut:Ptr, bufferListOut:Ptr, bufferListSize:I64, blockBufferStructureAllocator:Null<CFAllocator>, blockBufferBlockAllocator:Null<CFAllocator>, flags:Int, blockBufferOut:Ptr):Int;
 	public static function CMSampleBufferGetAudioStreamPacketDescriptions(sbuf:CMSampleBuffer, packetDescriptionsSize:I64, packetDescriptionsOut:Ptr, packetDescriptionsSizeNeededOut:Ptr):Int;
-	public static function CMSampleBufferGetAudioStreamPacketDescriptionsPtr(sbuf:CMSampleBuffer, packetDescriptionsPointerOut:Ptr, packetDescriptionsSizeOut:Ptr):Int;
+	@:hxmc.len(packetDescriptionsSizeOut, 1)
+	public static function CMSampleBufferGetAudioStreamPacketDescriptionsPtr(sbuf:CMSampleBuffer, packetDescriptionsPointerOut:Ptr, packetDescriptionsSizeOut:Span<I64>):Int;
 	public static function CMSampleBufferGetDataBuffer(sbuf:CMSampleBuffer):Null<CMBlockBuffer>;
 	public static function CMSampleBufferGetDecodeTimeStamp(sbuf:CMSampleBuffer):CMTime;
 	public static function CMSampleBufferGetDuration(sbuf:CMSampleBuffer):CMTime;
@@ -170,17 +191,22 @@ import objc.NSObject;
 	public static function CMSampleBufferGetOutputDecodeTimeStamp(sbuf:CMSampleBuffer):CMTime;
 	public static function CMSampleBufferGetOutputDuration(sbuf:CMSampleBuffer):CMTime;
 	public static function CMSampleBufferGetOutputPresentationTimeStamp(sbuf:CMSampleBuffer):CMTime;
-	public static function CMSampleBufferGetOutputSampleTimingInfoArray(sbuf:CMSampleBuffer, timingArrayEntries:I64, timingArrayOut:Ptr, timingArrayEntriesNeededOut:Ptr):Int;
+	@:hxmc.len(timingArrayOut, 1)
+	@:hxmc.len(timingArrayEntriesNeededOut, 1)
+	public static function CMSampleBufferGetOutputSampleTimingInfoArray(sbuf:CMSampleBuffer, timingArrayEntries:I64, timingArrayOut:Span<CMSampleTimingInfo>, timingArrayEntriesNeededOut:Span<I64>):Int;
 	public static function CMSampleBufferGetPresentationTimeStamp(sbuf:CMSampleBuffer):CMTime;
 	public static function CMSampleBufferGetSampleAttachmentsArray(sbuf:CMSampleBuffer, createIfNecessary:Bool):Null<NSArray>;
 	public static function CMSampleBufferGetSampleSize(sbuf:CMSampleBuffer, sampleIndex:I64):I64;
 	public static function CMSampleBufferGetSampleSizeArray(sbuf:CMSampleBuffer, sizeArrayEntries:I64, sizeArrayOut:Ptr, sizeArrayEntriesNeededOut:Ptr):Int;
-	public static function CMSampleBufferGetSampleTimingInfo(sbuf:CMSampleBuffer, sampleIndex:I64, timingInfoOut:Ptr):Int;
+	@:hxmc.len(timingInfoOut, 1)
+	public static function CMSampleBufferGetSampleTimingInfo(sbuf:CMSampleBuffer, sampleIndex:I64, timingInfoOut:Span<CMSampleTimingInfo>):Int;
 	public static function CMSampleBufferGetSampleTimingInfoArray(sbuf:CMSampleBuffer, numSampleTimingEntries:I64, timingArrayOut:Ptr, timingArrayEntriesNeededOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMSampleBufferGetTaggedBufferGroup(sbuf:CMSampleBuffer):Null<CMTaggedBufferGroup>;
 	public static function CMSampleBufferGetTotalSampleSize(sbuf:CMSampleBuffer):I64;
 	public static function CMSampleBufferGetTypeID():I64;
-	public static function CMSampleBufferHasDataFailed(sbuf:CMSampleBuffer, statusOut:Ptr):Bool;
+	@:hxmc.len(statusOut, 1)
+	public static function CMSampleBufferHasDataFailed(sbuf:CMSampleBuffer, statusOut:Span<Int>):Bool;
 	public static function CMSampleBufferInvalidate(sbuf:CMSampleBuffer):Int;
 	public static function CMSampleBufferIsValid(sbuf:CMSampleBuffer):Bool;
 	public static function CMSampleBufferMakeDataReady(sbuf:CMSampleBuffer):Int;
@@ -188,7 +214,7 @@ import objc.NSObject;
 	public static function CMSampleBufferSetDataBufferFromAudioBufferList(sbuf:CMSampleBuffer, blockBufferStructureAllocator:Null<CFAllocator>, blockBufferBlockAllocator:Null<CFAllocator>, flags:Int, bufferList:Ptr):Int;
 	public static function CMSampleBufferSetDataFailed(sbuf:CMSampleBuffer, status:Int):Int;
 	public static function CMSampleBufferSetDataReady(sbuf:CMSampleBuffer):Int;
-	public static function CMSampleBufferSetInvalidateCallback(sbuf:CMSampleBuffer, invalidateCallback:Ptr, invalidateRefCon:I64):Int;
+	public static function CMSampleBufferSetInvalidateCallback(sbuf:CMSampleBuffer, invalidateCallback:(CMSampleBuffer, I64) -> Void, invalidateRefCon:I64):Int;
 	public static function CMSampleBufferSetInvalidateHandler(sbuf:CMSampleBuffer, invalidateHandler:Block<CMSampleBuffer -> Void>):Int;
 	public static function CMSampleBufferSetOutputPresentationTimeStamp(sbuf:CMSampleBuffer, outputPresentationTimeStamp:CMTime):Int;
 	public static function CMSampleBufferTrackDataReadiness(sbuf:CMSampleBuffer, sampleBufferToTrack:CMSampleBuffer):Int;
@@ -216,88 +242,169 @@ import objc.NSObject;
 	public static function CMSwapHostEndianTimeCodeDescriptionToBig(timeCodeDescriptionData:Ptr, timeCodeDescriptionSize:I64):Int;
 	public static function CMSyncConvertTime(time:CMTime, fromClockOrTimebase:Ptr, toClockOrTimebase:Ptr):CMTime;
 	public static function CMSyncGetRelativeRate(ofClockOrTimebase:Ptr, relativeToClockOrTimebase:Ptr):Float;
-	public static function CMSyncGetRelativeRateAndAnchorTime(ofClockOrTimebase:Ptr, relativeToClockOrTimebase:Ptr, outRelativeRate:Ptr, outOfClockOrTimebaseAnchorTime:Ptr, outRelativeToClockOrTimebaseAnchorTime:Ptr):Int;
+	@:hxmc.len(outRelativeRate, 1)
+	@:hxmc.len(outOfClockOrTimebaseAnchorTime, 1)
+	@:hxmc.len(outRelativeToClockOrTimebaseAnchorTime, 1)
+	public static function CMSyncGetRelativeRateAndAnchorTime(ofClockOrTimebase:Ptr, relativeToClockOrTimebase:Ptr, outRelativeRate:Span<Float>, outOfClockOrTimebaseAnchorTime:Span<CMTime>, outRelativeToClockOrTimebaseAnchorTime:Span<CMTime>):Int;
 	public static function CMSyncGetTime(clockOrTimebase:Ptr):CMTime;
 	public static function CMSyncMightDrift(clockOrTimebase1:Ptr, clockOrTimebase2:Ptr):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionAddTag(tagCollection:CMMutableTagCollection, tagToAdd:CMTag):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionAddTagsFromArray(tagCollection:CMMutableTagCollection, tags:Ptr, tagCount:I64):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionAddTagsFromCollection(tagCollection:CMMutableTagCollection, collectionWithTagsToAdd:CMTagCollection):Int;
-	public static function CMTagCollectionApply(tagCollection:CMTagCollection, applier:Ptr, context:Ptr):Void;
-	public static function CMTagCollectionApplyUntil(tagCollection:CMTagCollection, applier:Ptr, context:Ptr):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	public static function CMTagCollectionApply(tagCollection:CMTagCollection, applier:(CMTag, Ptr) -> Void, context:Ptr):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	public static function CMTagCollectionApplyUntil(tagCollection:CMTagCollection, applier:(CMTag, Ptr) -> Bool, context:Ptr):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionContainsCategory(tagCollection:CMTagCollection, category:CMTagCategory):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionContainsSpecifiedTags(tagCollection:CMTagCollection, containedTags:Ptr, containedTagCount:I64):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionContainsTag(tagCollection:CMTagCollection, tag:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionContainsTagsOfCollection(tagCollection:CMTagCollection, containedTagCollection:CMTagCollection):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function CMTagCollectionCopyAsData(tagCollection:CMTagCollection, allocator:Null<CFAllocator>):Null<NSData>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function CMTagCollectionCopyAsDictionary(tagCollection:CMTagCollection, allocator:Null<CFAllocator>):Null<NSDictionary>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function CMTagCollectionCopyDescription(allocator:Null<CFAllocator>, tagCollection:Null<CMTagCollection>):Null<NSString>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCopyTagsOfCategories(allocator:Null<CFAllocator>, tagCollection:CMTagCollection, categories:Ptr, categoriesCount:I64, collectionWithTagsOfCategories:Ptr):Int;
-	public static function CMTagCollectionCountTagsWithFilterFunction(tagCollection:CMTagCollection, filterApplier:Ptr, context:Ptr):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	public static function CMTagCollectionCountTagsWithFilterFunction(tagCollection:CMTagCollection, filterApplier:(CMTag, Ptr) -> Bool, context:Ptr):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreate(allocator:Null<CFAllocator>, tags:Ptr, tagCount:I64, newCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateCopy(tagCollection:CMTagCollection, allocator:Null<CFAllocator>, newCollectionCopyOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateDifference(tagCollectionMinuend:Null<CMTagCollection>, tagCollectionSubtrahend:Null<CMTagCollection>, tagCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateExclusiveOr(tagCollection1:Null<CMTagCollection>, tagCollection2:Null<CMTagCollection>, tagCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateFromData(data:NSData, allocator:Null<CFAllocator>, newCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateFromDictionary(dict:NSDictionary, allocator:Null<CFAllocator>, newCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateIntersection(tagCollection1:Null<CMTagCollection>, tagCollection2:Null<CMTagCollection>, tagCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateMutable(allocator:Null<CFAllocator>, capacity:I64, newMutableCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateMutableCopy(tagCollection:CMTagCollection, allocator:Null<CFAllocator>, newMutableCollectionCopyOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionCreateUnion(tagCollection1:Null<CMTagCollection>, tagCollection2:Null<CMTagCollection>, tagCollectionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionGetCount(tagCollection:CMTagCollection):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionGetCountOfCategory(tagCollection:CMTagCollection, category:CMTagCategory):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionGetTags(tagCollection:CMTagCollection, tagBuffer:Ptr, tagBufferCount:I64, numberOfTagsCopied:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionGetTagsWithCategory(tagCollection:CMTagCollection, category:CMTagCategory, tagBuffer:Ptr, tagBufferCount:I64, numberOfTagsCopied:Ptr):Int;
-	public static function CMTagCollectionGetTagsWithFilterFunction(tagCollection:CMTagCollection, tagBuffer:Ptr, tagBufferCount:I64, numberOfTagsCopied:Ptr, filter:Ptr, context:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	public static function CMTagCollectionGetTagsWithFilterFunction(tagCollection:CMTagCollection, tagBuffer:Ptr, tagBufferCount:I64, numberOfTagsCopied:Ptr, filter:(CMTag, Ptr) -> Bool, context:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionGetTypeID():I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionIsEmpty(tagCollection:CMTagCollection):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionRemoveAllTags(tagCollection:CMMutableTagCollection):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionRemoveAllTagsOfCategory(tagCollection:CMMutableTagCollection, category:CMTagCategory):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCollectionRemoveTag(tagCollection:CMMutableTagCollection, tagToRemove:CMTag):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagCompare(tag1:CMTag, tag2:CMTag):CFComparisonResult;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function CMTagCopyAsDictionary(tag:CMTag, allocator:Null<CFAllocator>):Null<NSDictionary>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function CMTagCopyDescription(allocator:Null<CFAllocator>, tag:CMTag):Null<NSString>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagEqualToTag(tag1:CMTag, tag2:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagGetFlagsValue(tag:CMTag):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagGetFloat64Value(tag:CMTag):Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagGetOSTypeValue(tag:CMTag):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagGetSInt64Value(tag:CMTag):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagGetValueDataType(tag:CMTag):CMTagDataType;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagHasFlagsValue(tag:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagHasFloat64Value(tag:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagHasOSTypeValue(tag:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagHasSInt64Value(tag:CMTag):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagHash(tag:CMTag):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagMakeFromDictionary(dict:NSDictionary):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagMakeWithFlagsValue(category:CMTagCategory, flagsForTag:I64):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagMakeWithFloat64Value(category:CMTagCategory, value:Float):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagMakeWithOSTypeValue(category:CMTagCategory, value:Int):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTagMakeWithSInt64Value(category:CMTagCategory, value:I64):CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupCreate(allocator:Null<CFAllocator>, tagCollections:NSArray, buffers:NSArray, groupOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupCreateCombined(allocator:Null<CFAllocator>, taggedBufferGroups:NSArray, groupOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupFormatDescriptionCreateForTaggedBufferGroup(allocator:Null<CFAllocator>, taggedBufferGroup:CMTaggedBufferGroup, formatDescriptionOut:Ptr):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CMTaggedBufferGroupFormatDescriptionCreateForTaggedBufferGroupWithExtensions(allocator:Null<CFAllocator>, taggedBufferGroup:CMTaggedBufferGroup, extensions:Null<NSDictionary>, formatDescriptionOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupFormatDescriptionMatchesTaggedBufferGroup(desc:CMAudioFormatDescription, taggedBufferGroup:CMTaggedBufferGroup):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetCMSampleBufferAtIndex(group:CMTaggedBufferGroup, index:I64):Null<CMSampleBuffer>;
-	public static function CMTaggedBufferGroupGetCMSampleBufferForTag(group:CMTaggedBufferGroup, tag:CMTag, indexOut:Ptr):Null<CMSampleBuffer>;
-	public static function CMTaggedBufferGroupGetCMSampleBufferForTagCollection(group:CMTaggedBufferGroup, tagCollection:CMTagCollection, indexOut:Ptr):Null<CMSampleBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(indexOut, 1)
+	public static function CMTaggedBufferGroupGetCMSampleBufferForTag(group:CMTaggedBufferGroup, tag:CMTag, indexOut:Span<I64>):Null<CMSampleBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(indexOut, 1)
+	public static function CMTaggedBufferGroupGetCMSampleBufferForTagCollection(group:CMTaggedBufferGroup, tagCollection:CMTagCollection, indexOut:Span<I64>):Null<CMSampleBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetCVPixelBufferAtIndex(group:CMTaggedBufferGroup, index:I64):Null<CVBuffer>;
-	public static function CMTaggedBufferGroupGetCVPixelBufferForTag(group:CMTaggedBufferGroup, tag:CMTag, indexOut:Ptr):Null<CVBuffer>;
-	public static function CMTaggedBufferGroupGetCVPixelBufferForTagCollection(group:CMTaggedBufferGroup, tagCollection:CMTagCollection, indexOut:Ptr):Null<CVBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(indexOut, 1)
+	public static function CMTaggedBufferGroupGetCVPixelBufferForTag(group:CMTaggedBufferGroup, tag:CMTag, indexOut:Span<I64>):Null<CVBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(indexOut, 1)
+	public static function CMTaggedBufferGroupGetCVPixelBufferForTagCollection(group:CMTaggedBufferGroup, tagCollection:CMTagCollection, indexOut:Span<I64>):Null<CVBuffer>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetCount(group:CMTaggedBufferGroup):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetNumberOfMatchesForTagCollection(group:CMTaggedBufferGroup, tagCollection:CMTagCollection):I64;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetTagCollectionAtIndex(group:CMTaggedBufferGroup, index:I64):Null<CMTagCollection>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMTaggedBufferGroupGetTypeID():I64;
 	public static function CMTextFormatDescriptionCopyAsBigEndianTextDescriptionBlockBuffer(allocator:Null<CFAllocator>, textFormatDescription:CMAudioFormatDescription, flavor:Null<NSStringArg>, blockBufferOut:Ptr):Int;
 	public static function CMTextFormatDescriptionCreateFromBigEndianTextDescriptionBlockBuffer(allocator:Null<CFAllocator>, textDescriptionBlockBuffer:CMBlockBuffer, flavor:Null<NSStringArg>, mediaType:Int, formatDescriptionOut:Ptr):Int;
 	public static function CMTextFormatDescriptionCreateFromBigEndianTextDescriptionData(allocator:Null<CFAllocator>, textDescriptionData:Ptr, size:I64, flavor:Null<NSStringArg>, mediaType:Int, formatDescriptionOut:Ptr):Int;
-	public static function CMTextFormatDescriptionGetDefaultStyle(desc:CMAudioFormatDescription, localFontIDOut:Ptr, boldOut:Ptr, italicOut:Ptr, underlineOut:Ptr, fontSizeOut:Ptr, colorComponentsOut:Ptr):Int;
-	public static function CMTextFormatDescriptionGetDefaultTextBox(desc:CMAudioFormatDescription, originIsAtTopLeft:Bool, heightOfTextTrack:Float, defaultTextBoxOut:Ptr):Int;
-	public static function CMTextFormatDescriptionGetDisplayFlags(desc:CMAudioFormatDescription, displayFlagsOut:Ptr):Int;
+	@:hxmc.len(boldOut, 1)
+	@:hxmc.len(italicOut, 1)
+	@:hxmc.len(underlineOut, 1)
+	@:hxmc.len(fontSizeOut, 1)
+	public static function CMTextFormatDescriptionGetDefaultStyle(desc:CMAudioFormatDescription, localFontIDOut:Ptr, boldOut:Span<Bool>, italicOut:Span<Bool>, underlineOut:Span<Bool>, fontSizeOut:Span<Float>, colorComponentsOut:Ptr):Int;
+	@:hxmc.len(defaultTextBoxOut, 1)
+	public static function CMTextFormatDescriptionGetDefaultTextBox(desc:CMAudioFormatDescription, originIsAtTopLeft:Bool, heightOfTextTrack:Float, defaultTextBoxOut:Span<CGRect>):Int;
+	@:hxmc.len(displayFlagsOut, 1)
+	public static function CMTextFormatDescriptionGetDisplayFlags(desc:CMAudioFormatDescription, displayFlagsOut:Span<Int>):Int;
 	public static function CMTextFormatDescriptionGetFontName(desc:CMAudioFormatDescription, localFontID:UInt16, fontNameOut:Ptr):Int;
 	public static function CMTextFormatDescriptionGetJustification(desc:CMAudioFormatDescription, horizontaJustificationlOut:Ptr, verticalJustificationOut:Ptr):Int;
 	public static function CMTimeAbsoluteValue(time:CMTime):CMTime;
@@ -373,7 +480,9 @@ import objc.NSObject;
 	public static function CMTimebaseGetMasterTimebase(timebase:CMTimebase):Null<CMTimebase>;
 	public static function CMTimebaseGetRate(timebase:CMTimebase):Float;
 	public static function CMTimebaseGetTime(timebase:CMTimebase):CMTime;
-	public static function CMTimebaseGetTimeAndRate(timebase:CMTimebase, timeOut:Ptr, rateOut:Ptr):Int;
+	@:hxmc.len(timeOut, 1)
+	@:hxmc.len(rateOut, 1)
+	public static function CMTimebaseGetTimeAndRate(timebase:CMTimebase, timeOut:Span<CMTime>, rateOut:Span<Float>):Int;
 	public static function CMTimebaseGetTimeWithTimeScale(timebase:CMTimebase, timescale:Int, method:CMTimeRoundingMethod):CMTime;
 	public static function CMTimebaseGetTypeID():I64;
 	@:deprecated
@@ -392,6 +501,7 @@ import objc.NSObject;
 	public static function CMTimebaseSetTimerNextFireTime(timebase:CMTimebase, timer:NSTimer, fireTime:CMTime, flags:Int):Int;
 	public static function CMTimebaseSetTimerToFireImmediately(timebase:CMTimebase, timer:NSTimer):Int;
 	public static function CMVideoFormatDescriptionCopyAsBigEndianImageDescriptionBlockBuffer(allocator:Null<CFAllocator>, videoFormatDescription:CMAudioFormatDescription, stringEncoding:Int, flavor:Null<NSStringArg>, blockBufferOut:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function CMVideoFormatDescriptionCopyTagCollectionArray(formatDescription:CMAudioFormatDescription, tagCollectionsOut:Ptr):Int;
 	public static function CMVideoFormatDescriptionCreate(allocator:Null<CFAllocator>, codecType:Int, width:Int, height:Int, extensions:Null<NSDictionary>, formatDescriptionOut:Ptr):Int;
 	public static function CMVideoFormatDescriptionCreateForImageBuffer(allocator:Null<CFAllocator>, imageBuffer:CVBuffer, formatDescriptionOut:Ptr):Int;
@@ -402,30 +512,55 @@ import objc.NSObject;
 	public static function CMVideoFormatDescriptionGetCleanAperture(videoDesc:CMAudioFormatDescription, originIsAtTopLeft:Bool):CGRect;
 	public static function CMVideoFormatDescriptionGetDimensions(videoDesc:CMAudioFormatDescription):CMVideoDimensions;
 	public static function CMVideoFormatDescriptionGetExtensionKeysCommonWithImageBuffers():NSArray;
-	public static function CMVideoFormatDescriptionGetH264ParameterSetAtIndex(videoDesc:CMAudioFormatDescription, parameterSetIndex:I64, parameterSetPointerOut:Ptr, parameterSetSizeOut:Ptr, parameterSetCountOut:Ptr, NALUnitHeaderLengthOut:Ptr):Int;
-	public static function CMVideoFormatDescriptionGetHEVCParameterSetAtIndex(videoDesc:CMAudioFormatDescription, parameterSetIndex:I64, parameterSetPointerOut:Ptr, parameterSetSizeOut:Ptr, parameterSetCountOut:Ptr, NALUnitHeaderLengthOut:Ptr):Int;
+	@:hxmc.len(parameterSetSizeOut, 1)
+	@:hxmc.len(parameterSetCountOut, 1)
+	@:hxmc.len(NALUnitHeaderLengthOut, 1)
+	public static function CMVideoFormatDescriptionGetH264ParameterSetAtIndex(videoDesc:CMAudioFormatDescription, parameterSetIndex:I64, parameterSetPointerOut:Ptr, parameterSetSizeOut:Span<I64>, parameterSetCountOut:Span<I64>, NALUnitHeaderLengthOut:Span<Int>):Int;
+	@:hxmc.len(parameterSetSizeOut, 1)
+	@:hxmc.len(parameterSetCountOut, 1)
+	@:hxmc.len(NALUnitHeaderLengthOut, 1)
+	public static function CMVideoFormatDescriptionGetHEVCParameterSetAtIndex(videoDesc:CMAudioFormatDescription, parameterSetIndex:I64, parameterSetPointerOut:Ptr, parameterSetSizeOut:Span<I64>, parameterSetCountOut:Span<I64>, NALUnitHeaderLengthOut:Span<Int>):Int;
 	public static function CMVideoFormatDescriptionGetPresentationDimensions(videoDesc:CMAudioFormatDescription, usePixelAspectRatio:Bool, useCleanAperture:Bool):CGSize;
 	public static function CMVideoFormatDescriptionMatchesImageBuffer(desc:CMAudioFormatDescription, imageBuffer:CVBuffer):Bool;
 	public static final kCMFormatDescriptionAlphaChannelMode_PremultipliedAlpha : NSString;
 	public static final kCMFormatDescriptionAlphaChannelMode_StraightAlpha : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationExtrinsicOriginSource_StereoCameraSystemBaseline : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationLensAlgorithmKind_ParametricLens : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationLensDomain_Color : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationLensRole_Left : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationLensRole_Mono : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibrationLensRole_Right : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_ExtrinsicOrientationQuaternion : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_ExtrinsicOriginSource : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_IntrinsicMatrix : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_IntrinsicMatrixProjectionOffset : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_IntrinsicMatrixReferenceDimensions : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensAlgorithmKind : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensDistortions : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensDomain : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialX : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialY : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_LensRole : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionCameraCalibration_RadialAngleLimit : NSString;
 	public static final kCMFormatDescriptionChromaLocation_Bottom : NSString;
 	public static final kCMFormatDescriptionChromaLocation_BottomLeft : NSString;
@@ -445,18 +580,23 @@ import objc.NSObject;
 	public static final kCMFormatDescriptionExtensionKey_MetadataKeyTable : NSString;
 	public static final kCMFormatDescriptionExtension_AlphaChannelMode : NSString;
 	public static final kCMFormatDescriptionExtension_AlternativeTransferCharacteristics : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCMFormatDescriptionExtension_AmbientViewingEnvironment : NSString;
 	public static final kCMFormatDescriptionExtension_AuxiliaryTypeInfo : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCMFormatDescriptionExtension_BitsPerComponent : NSString;
 	public static final kCMFormatDescriptionExtension_BytesPerRow : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection : NSString;
 	public static final kCMFormatDescriptionExtension_ChromaLocationBottomField : NSString;
 	public static final kCMFormatDescriptionExtension_ChromaLocationTopField : NSString;
 	public static final kCMFormatDescriptionExtension_CleanAperture : NSString;
 	public static final kCMFormatDescriptionExtension_ColorPrimaries : NSString;
 	public static final kCMFormatDescriptionExtension_ContainsAlphaChannel : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_ContentColorVolume : NSString;
 	public static final kCMFormatDescriptionExtension_ContentLightLevelInfo : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionExtension_ConvertedFromExternalSphericalTags : NSString;
 	public static final kCMFormatDescriptionExtension_Depth : NSString;
 	public static final kCMFormatDescriptionExtension_FieldCount : NSString;
@@ -464,22 +604,32 @@ import objc.NSObject;
 	public static final kCMFormatDescriptionExtension_FormatName : NSString;
 	public static final kCMFormatDescriptionExtension_FullRangeVideo : NSString;
 	public static final kCMFormatDescriptionExtension_GammaLevel : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_HasAdditionalViews : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_HasLeftStereoEyeView : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_HasRightStereoEyeView : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_HeroEye : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_HorizontalDisparityAdjustment : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCMFormatDescriptionExtension_HorizontalFieldOfView : NSString;
 	public static final kCMFormatDescriptionExtension_ICCProfile : NSString;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	public static final kCMFormatDescriptionExtension_LogTransferFunction : NSString;
 	public static final kCMFormatDescriptionExtension_MasteringDisplayColorVolume : NSString;
 	public static final kCMFormatDescriptionExtension_OriginalCompressionSettings : NSString;
 	public static final kCMFormatDescriptionExtension_PixelAspectRatio : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionExtension_ProjectionKind : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCMFormatDescriptionExtension_ProtectedContentOriginalFormat : NSString;
 	public static final kCMFormatDescriptionExtension_RevisionLevel : NSString;
 	public static final kCMFormatDescriptionExtension_SampleDescriptionExtensionAtoms : NSString;
 	public static final kCMFormatDescriptionExtension_SpatialQuality : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionExtension_StereoCameraBaseline : NSString;
 	public static final kCMFormatDescriptionExtension_TemporalQuality : NSString;
 	public static final kCMFormatDescriptionExtension_TransferFunction : NSString;
@@ -488,13 +638,16 @@ import objc.NSObject;
 	public static final kCMFormatDescriptionExtension_VerbatimImageDescription : NSString;
 	public static final kCMFormatDescriptionExtension_VerbatimSampleDescription : NSString;
 	public static final kCMFormatDescriptionExtension_Version : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionExtension_ViewPackingKind : NSString;
 	public static final kCMFormatDescriptionExtension_YCbCrMatrix : NSString;
 	public static final kCMFormatDescriptionFieldDetail_SpatialFirstLineEarly : NSString;
 	public static final kCMFormatDescriptionFieldDetail_SpatialFirstLineLate : NSString;
 	public static final kCMFormatDescriptionFieldDetail_TemporalBottomFirst : NSString;
 	public static final kCMFormatDescriptionFieldDetail_TemporalTopFirst : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionHeroEye_Left : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMFormatDescriptionHeroEye_Right : NSString;
 	public static final kCMFormatDescriptionKey_CleanApertureHeight : NSString;
 	public static final kCMFormatDescriptionKey_CleanApertureHeightRational : NSString;
@@ -506,12 +659,19 @@ import objc.NSObject;
 	public static final kCMFormatDescriptionKey_CleanApertureWidthRational : NSString;
 	public static final kCMFormatDescriptionKey_PixelAspectRatioHorizontalSpacing : NSString;
 	public static final kCMFormatDescriptionKey_PixelAspectRatioVerticalSpacing : NSString;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	public static final kCMFormatDescriptionLogTransferFunction_AppleLog : NSString;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	public static final kCMFormatDescriptionLogTransferFunction_AppleLog2 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionProjectionKind_AppleImmersiveVideo : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionProjectionKind_Equirectangular : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionProjectionKind_HalfEquirectangular : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMFormatDescriptionProjectionKind_ParametricImmersive : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionProjectionKind_Rectilinear : NSString;
 	public static final kCMFormatDescriptionTransferFunction_ITU_R_2020 : NSString;
 	public static final kCMFormatDescriptionTransferFunction_ITU_R_2100_HLG : NSString;
@@ -523,7 +683,9 @@ import objc.NSObject;
 	public static final kCMFormatDescriptionTransferFunction_UseGamma : NSString;
 	public static final kCMFormatDescriptionTransferFunction_sRGB : NSString;
 	public static final kCMFormatDescriptionVendor_Apple : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionViewPackingKind_OverUnder : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMFormatDescriptionViewPackingKind_SideBySide : NSString;
 	public static final kCMFormatDescriptionYCbCrMatrix_ITU_R_2020 : NSString;
 	public static final kCMFormatDescriptionYCbCrMatrix_ITU_R_601_4 : NSString;
@@ -538,25 +700,30 @@ import objc.NSObject;
 	public static final kCMHEVCTemporalLevelInfoKey_TierFlag : NSString;
 	public static final kCMImageDescriptionFlavor_3GPFamily : NSString;
 	public static final kCMImageDescriptionFlavor_ISOFamily : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kCMImageDescriptionFlavor_ISOFamilyWithAppleExtensions : NSString;
 	public static final kCMImageDescriptionFlavor_QuickTimeMovie : NSString;
 	public static final kCMMemoryPoolOption_AgeOutPeriod : NSString;
 	public static final kCMMetadataBaseDataType_AffineTransformF64 : NSString;
 	public static final kCMMetadataBaseDataType_BMP : NSString;
 	public static final kCMMetadataBaseDataType_DimensionsF32 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataBaseDataType_ExtendedRasterRectangleValue : NSString;
 	public static final kCMMetadataBaseDataType_Float32 : NSString;
 	public static final kCMMetadataBaseDataType_Float64 : NSString;
 	public static final kCMMetadataBaseDataType_GIF : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataBaseDataType_ISOLatin1 : NSString;
 	public static final kCMMetadataBaseDataType_JPEG : NSString;
 	public static final kCMMetadataBaseDataType_JSON : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataBaseDataType_MacRoman : NSString;
 	public static final kCMMetadataBaseDataType_PNG : NSString;
 	public static final kCMMetadataBaseDataType_PerspectiveTransformF64 : NSString;
 	public static final kCMMetadataBaseDataType_PointF32 : NSString;
 	public static final kCMMetadataBaseDataType_PolygonF32 : NSString;
 	public static final kCMMetadataBaseDataType_PolylineF32 : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataBaseDataType_RasterRectangleValue : NSString;
 	public static final kCMMetadataBaseDataType_RawData : NSString;
 	public static final kCMMetadataBaseDataType_RectF32 : NSString;
@@ -572,12 +739,16 @@ import objc.NSObject;
 	public static final kCMMetadataBaseDataType_UTF8 : NSString;
 	public static final kCMMetadataDataType_QuickTimeMetadataDirection : NSString;
 	public static final kCMMetadataDataType_QuickTimeMetadataLocation_ISO6709 : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMMetadataDataType_QuickTimeMetadataMilliLux : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataDataType_QuickTimeMetadataSMPTE2094_50 : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMMetadataDataType_QuickTimeMetadataUUID : NSString;
 	public static final kCMMetadataFormatDescriptionKey_ConformingDataTypes : NSString;
 	public static final kCMMetadataFormatDescriptionKey_DataType : NSString;
 	public static final kCMMetadataFormatDescriptionKey_DataTypeNamespace : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataFormatDescriptionKey_HumanReadableString : NSString;
 	public static final kCMMetadataFormatDescriptionKey_LanguageTag : NSString;
 	public static final kCMMetadataFormatDescriptionKey_LocalID : NSString;
@@ -587,23 +758,33 @@ import objc.NSObject;
 	public static final kCMMetadataFormatDescriptionKey_Value : NSString;
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_DataType : NSString;
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_ExtendedLanguageTag : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_HumanReadableString : NSString;
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_Identifier : NSString;
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_SetupData : NSString;
 	public static final kCMMetadataFormatDescriptionMetadataSpecificationKey_StructuralDependency : NSString;
 	public static final kCMMetadataFormatDescription_StructuralDependencyKey_DependencyIsInvalidFlag : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kCMMetadataIdentifier_ITUT_T35MetadataSMPTE2094_50 : NSString;
 	public static final kCMMetadataIdentifier_QuickTimeMetadataDirection_Facing : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataDisplayMaskRectangleMono : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataDisplayMaskRectangleStereoLeft : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataDisplayMaskRectangleStereoRight : NSString;
 	public static final kCMMetadataIdentifier_QuickTimeMetadataLivePhotoStillImageTransform : NSString;
+	@:hxmc.available(macos >= version("10.15.1"))
 	public static final kCMMetadataIdentifier_QuickTimeMetadataLivePhotoStillImageTransformReferenceDimensions : NSString;
 	public static final kCMMetadataIdentifier_QuickTimeMetadataLocation_ISO6709 : NSString;
 	public static final kCMMetadataIdentifier_QuickTimeMetadataPreferredAffineTransform : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataPresentationImmersiveMedia : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataSceneIlluminance : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataSegmentIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMMetadataIdentifier_QuickTimeMetadataSpatialAudioMix : NSString;
 	public static final kCMMetadataIdentifier_QuickTimeMetadataVideoOrientation : NSString;
 	public static final kCMMetadataKeySpace_HLSDateRange : NSString;
@@ -614,11 +795,13 @@ import objc.NSObject;
 	public static final kCMMetadataKeySpace_QuickTimeUserData : NSString;
 	public static final kCMMetadataKeySpace_iTunes : NSString;
 	public static final kCMSampleAttachmentKey_AudioIndependentSampleDecoderRefreshCount : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kCMSampleAttachmentKey_CryptorSubsampleAuxiliaryData : NSString;
 	public static final kCMSampleAttachmentKey_DependsOnOthers : NSString;
 	public static final kCMSampleAttachmentKey_DisplayImmediately : NSString;
 	public static final kCMSampleAttachmentKey_DoNotDisplay : NSString;
 	public static final kCMSampleAttachmentKey_EarlierDisplayTimesAllowed : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kCMSampleAttachmentKey_HDR10PlusPerFrameData : NSString;
 	public static final kCMSampleAttachmentKey_HEVCStepwiseTemporalSubLayerAccess : NSString;
 	public static final kCMSampleAttachmentKey_HEVCSyncSampleNALUnitType : NSString;
@@ -673,27 +856,49 @@ import objc.NSObject;
 	public static final kCMSoundDescriptionFlavor_ISOFamily : NSString;
 	public static final kCMSoundDescriptionFlavor_QuickTimeMovie : NSString;
 	public static final kCMSoundDescriptionFlavor_QuickTimeMovieV2 : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagCategoryKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagCollectionTagsArrayKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagDataTypeKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagInvalid : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagMediaSubTypeMebx : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagMediaTypeAudio : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagMediaTypeMetadata : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagMediaTypeVideo : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagPackingTypeNone : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagPackingTypeOverUnder : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagPackingTypeSideBySide : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagProjectionTypeEquirectangular : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagProjectionTypeFisheye : CMTag;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCMTagProjectionTypeHalfEquirectangular : CMTag;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCMTagProjectionTypeParametricImmersive : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagProjectionTypeRectangular : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagStereoInterpretationOrderReversed : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagStereoLeftAndRightEye : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagStereoLeftEye : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagStereoNone : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagStereoRightEye : CMTag;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCMTagValueKey : NSString;
 	public static final kCMTextFormatDescriptionColor_Alpha : NSString;
 	public static final kCMTextFormatDescriptionColor_Blue : NSString;
@@ -732,6 +937,7 @@ import objc.NSObject;
 	public static final kCMTextMarkupAttribute_CharacterBackgroundColorARGB : NSString;
 	public static final kCMTextMarkupAttribute_CharacterEdgeStyle : NSString;
 	public static final kCMTextMarkupAttribute_FontFamilyName : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kCMTextMarkupAttribute_FontFamilyNameList : NSString;
 	public static final kCMTextMarkupAttribute_ForegroundColorARGB : NSString;
 	public static final kCMTextMarkupAttribute_GenericFontFamilyName : NSString;

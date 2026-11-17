@@ -21,6 +21,8 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.ReadOnlySpan;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
@@ -97,19 +99,25 @@ import uikit.UIFontDescriptor;
 	@:hxmc.retained
 	public static function CTFontCreateForStringWithLanguage(currentFont:UIFont, string:NSStringArg, range:CFRange, language:Null<NSStringArg>):UIFont;
 	@:hxmc.retained
-	public static function CTFontCreatePathForGlyph(font:UIFont, glyph:UInt16, matrix:Ptr):Null<CGPath>;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreatePathForGlyph(font:UIFont, glyph:UInt16, matrix:ReadOnlySpan<CGAffineTransform>):Null<CGPath>;
 	@:hxmc.retained
 	public static function CTFontCreateUIFontForLanguage(uiType:CTFontUIFontType, size:Float, language:Null<NSStringArg>):Null<UIFont>;
 	@:hxmc.retained
-	public static function CTFontCreateWithFontDescriptor(descriptor:UIFontDescriptor, size:Float, matrix:Ptr):UIFont;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreateWithFontDescriptor(descriptor:UIFontDescriptor, size:Float, matrix:ReadOnlySpan<CGAffineTransform>):UIFont;
 	@:hxmc.retained
-	public static function CTFontCreateWithFontDescriptorAndOptions(descriptor:UIFontDescriptor, size:Float, matrix:Ptr, options:CTFontOptions):UIFont;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreateWithFontDescriptorAndOptions(descriptor:UIFontDescriptor, size:Float, matrix:ReadOnlySpan<CGAffineTransform>, options:CTFontOptions):UIFont;
 	@:hxmc.retained
-	public static function CTFontCreateWithGraphicsFont(graphicsFont:CGFont, size:Float, matrix:Ptr, attributes:Null<UIFontDescriptor>):UIFont;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreateWithGraphicsFont(graphicsFont:CGFont, size:Float, matrix:ReadOnlySpan<CGAffineTransform>, attributes:Null<UIFontDescriptor>):UIFont;
 	@:hxmc.retained
-	public static function CTFontCreateWithName(name:NSStringArg, size:Float, matrix:Ptr):UIFont;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreateWithName(name:NSStringArg, size:Float, matrix:ReadOnlySpan<CGAffineTransform>):UIFont;
 	@:hxmc.retained
-	public static function CTFontCreateWithNameAndOptions(name:NSStringArg, size:Float, matrix:Ptr, options:CTFontOptions):UIFont;
+	@:hxmc.len(matrix, 1)
+	public static function CTFontCreateWithNameAndOptions(name:NSStringArg, size:Float, matrix:ReadOnlySpan<CGAffineTransform>, options:CTFontOptions):UIFont;
 	@:hxmc.retained
 	public static function CTFontDescriptorCopyAttribute(descriptor:UIFontDescriptor, attribute:NSStringArg):Null<Id>;
 	@:hxmc.retained
@@ -136,32 +144,46 @@ import uikit.UIFontDescriptor;
 	public static function CTFontDescriptorCreateWithNameAndSize(name:NSStringArg, size:Float):UIFontDescriptor;
 	public static function CTFontDescriptorGetTypeID():I64;
 	public static function CTFontDescriptorMatchFontDescriptorsWithProgressHandler(descriptors:NSArray, mandatoryAttributes:Null<NSSet>, progressBlock:Block<(CTFontDescriptorMatchingState, NSDictionary) -> Bool>):Bool;
-	public static function CTFontDrawGlyphs(font:UIFont, glyphs:Ptr, positions:Ptr, count:I64, context:CGContext):Void;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(positions, count)
+	public static function CTFontDrawGlyphs(font:UIFont, glyphs:ReadOnlySpan<UInt16>, positions:ReadOnlySpan<CGPoint>, count:I64, context:CGContext):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CTFontDrawImageFromAdaptiveImageProviderAtPoint(font:UIFont, provider:CTAdaptiveImageProviding, point:CGPoint, context:CGContext):Void;
-	public static function CTFontGetAdvancesForGlyphs(font:UIFont, orientation:CTFontOrientation, glyphs:Ptr, advances:Ptr, count:I64):Float;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(advances, count)
+	public static function CTFontGetAdvancesForGlyphs(font:UIFont, orientation:CTFontOrientation, glyphs:ReadOnlySpan<UInt16>, advances:Span<CGSize>, count:I64):Float;
 	public static function CTFontGetAscent(font:UIFont):Float;
 	public static function CTFontGetBoundingBox(font:UIFont):CGRect;
-	public static function CTFontGetBoundingRectsForGlyphs(font:UIFont, orientation:CTFontOrientation, glyphs:Ptr, boundingRects:Ptr, count:I64):CGRect;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(boundingRects, count)
+	public static function CTFontGetBoundingRectsForGlyphs(font:UIFont, orientation:CTFontOrientation, glyphs:ReadOnlySpan<UInt16>, boundingRects:Span<CGRect>, count:I64):CGRect;
 	public static function CTFontGetCapHeight(font:UIFont):Float;
 	public static function CTFontGetDescent(font:UIFont):Float;
 	public static function CTFontGetGlyphCount(font:UIFont):I64;
 	public static function CTFontGetGlyphWithName(font:UIFont, glyphName:NSStringArg):UInt16;
-	public static function CTFontGetGlyphsForCharacters(font:UIFont, characters:Ptr, glyphs:Ptr, count:I64):Bool;
+	@:hxmc.len(characters, count)
+	@:hxmc.len(glyphs, count)
+	public static function CTFontGetGlyphsForCharacters(font:UIFont, characters:ReadOnlySpan<UInt16>, glyphs:Span<UInt16>, count:I64):Bool;
 	public static function CTFontGetLeading(font:UIFont):Float;
 	public static function CTFontGetLigatureCaretPositions(font:UIFont, glyph:UInt16, positions:Ptr, maxPositions:I64):I64;
 	public static function CTFontGetMatrix(font:UIFont):CGAffineTransform;
-	public static function CTFontGetOpticalBoundsForGlyphs(font:UIFont, glyphs:Ptr, boundingRects:Ptr, count:I64, options:I64):CGRect;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(boundingRects, count)
+	public static function CTFontGetOpticalBoundsForGlyphs(font:UIFont, glyphs:ReadOnlySpan<UInt16>, boundingRects:Span<CGRect>, count:I64, options:I64):CGRect;
 	public static function CTFontGetSize(font:UIFont):Float;
 	public static function CTFontGetSlantAngle(font:UIFont):Float;
 	public static function CTFontGetStringEncoding(font:UIFont):Int;
 	public static function CTFontGetSymbolicTraits(font:UIFont):CTFontSymbolicTraits;
 	public static function CTFontGetTypeID():I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CTFontGetTypographicBoundsForAdaptiveImageProvider(font:UIFont, provider:Null<CTAdaptiveImageProviding>):CGRect;
 	public static function CTFontGetUIFontType(font:UIFont):CTFontUIFontType;
 	public static function CTFontGetUnderlinePosition(font:UIFont):Float;
 	public static function CTFontGetUnderlineThickness(font:UIFont):Float;
 	public static function CTFontGetUnitsPerEm(font:UIFont):Int;
-	public static function CTFontGetVerticalTranslationsForGlyphs(font:UIFont, glyphs:Ptr, translations:Ptr, count:I64):Void;
+	@:hxmc.len(glyphs, count)
+	@:hxmc.len(translations, count)
+	public static function CTFontGetVerticalTranslationsForGlyphs(font:UIFont, glyphs:ReadOnlySpan<UInt16>, translations:Span<CGSize>, count:I64):Void;
 	public static function CTFontGetXHeight(font:UIFont):Float;
 	public static function CTFontHasTable(font:UIFont, tag:Int):Bool;
 	@:hxmc.retained
@@ -208,7 +230,8 @@ import uikit.UIFontDescriptor;
 	public static function CTFramesetterCreateWithTypesetter(typesetter:CTTypesetter):CTFramesetter;
 	public static function CTFramesetterGetTypeID():I64;
 	public static function CTFramesetterGetTypesetter(framesetter:CTFramesetter):CTTypesetter;
-	public static function CTFramesetterSuggestFrameSizeWithConstraints(framesetter:CTFramesetter, stringRange:CFRange, frameAttributes:Null<NSDictionary>, constraints:CGSize, fitRange:Ptr):CGSize;
+	@:hxmc.len(fitRange, 1)
+	public static function CTFramesetterSuggestFrameSizeWithConstraints(framesetter:CTFramesetter, stringRange:CFRange, frameAttributes:Null<NSDictionary>, constraints:CGSize, fitRange:Span<CFRange>):CGSize;
 	@:deprecated
 	public static function CTGetCoreTextVersion():Int;
 	@:hxmc.retained
@@ -234,13 +257,17 @@ import uikit.UIFontDescriptor;
 	public static function CTLineGetGlyphCount(line:CTLine):I64;
 	public static function CTLineGetGlyphRuns(line:CTLine):NSArray;
 	public static function CTLineGetImageBounds(line:CTLine, context:Null<CGContext>):CGRect;
-	public static function CTLineGetOffsetForStringIndex(line:CTLine, charIndex:I64, secondaryOffset:Ptr):Float;
+	@:hxmc.len(secondaryOffset, 1)
+	public static function CTLineGetOffsetForStringIndex(line:CTLine, charIndex:I64, secondaryOffset:Span<Float>):Float;
 	public static function CTLineGetPenOffsetForFlush(line:CTLine, flushFactor:Float, flushWidth:Float):Float;
 	public static function CTLineGetStringIndexForPosition(line:CTLine, position:CGPoint):I64;
 	public static function CTLineGetStringRange(line:CTLine):CFRange;
 	public static function CTLineGetTrailingWhitespaceWidth(line:CTLine):Float;
 	public static function CTLineGetTypeID():I64;
-	public static function CTLineGetTypographicBounds(line:CTLine, ascent:Ptr, descent:Ptr, leading:Ptr):Float;
+	@:hxmc.len(ascent, 1)
+	@:hxmc.len(descent, 1)
+	@:hxmc.len(leading, 1)
+	public static function CTLineGetTypographicBounds(line:CTLine, ascent:Span<Float>, descent:Span<Float>, leading:Span<Float>):Float;
 	public static function CTParagraphStyleCreate(settings:Ptr, settingCount:I64):Ptr;
 	public static function CTParagraphStyleCreateCopy(paragraphStyle:Ptr):Ptr;
 	public static function CTParagraphStyleGetTypeID():I64;
@@ -277,7 +304,10 @@ import uikit.UIFontDescriptor;
 	public static function CTRunGetStringRange(run:CTRun):CFRange;
 	public static function CTRunGetTextMatrix(run:CTRun):CGAffineTransform;
 	public static function CTRunGetTypeID():I64;
-	public static function CTRunGetTypographicBounds(run:CTRun, range:CFRange, ascent:Ptr, descent:Ptr, leading:Ptr):Float;
+	@:hxmc.len(ascent, 1)
+	@:hxmc.len(descent, 1)
+	@:hxmc.len(leading, 1)
+	public static function CTRunGetTypographicBounds(run:CTRun, range:CFRange, ascent:Span<Float>, descent:Span<Float>, leading:Span<Float>):Float;
 	public static function CTTextTabCreate(alignment:CTTextAlignment, location:Float, options:Null<NSDictionary>):Ptr;
 	public static function CTTextTabGetAlignment(tab:Ptr):CTTextAlignment;
 	public static function CTTextTabGetLocation(tab:Ptr):Float;
@@ -296,6 +326,7 @@ import uikit.UIFontDescriptor;
 	public static function CTTypesetterSuggestClusterBreakWithOffset(typesetter:CTTypesetter, startIndex:I64, width:Float, offset:Float):I64;
 	public static function CTTypesetterSuggestLineBreak(typesetter:CTTypesetter, startIndex:I64, width:Float):I64;
 	public static function CTTypesetterSuggestLineBreakWithOffset(typesetter:CTTypesetter, startIndex:I64, width:Float, offset:Float):I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCTAdaptiveImageProviderAttributeName : NSString;
 	public static final kCTBackgroundColorAttributeName : NSString;
 	public static final kCTBaselineClassAttributeName : NSString;

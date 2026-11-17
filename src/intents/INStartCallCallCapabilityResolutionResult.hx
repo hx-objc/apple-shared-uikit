@@ -5,13 +5,21 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INStartCallCallCapabilityResolutionResult extends INCallCapabilityResolutionResult {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function confirmationRequiredWithCallCapabilityToConfirm(callCapabilityToConfirm:INCallCapability):INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function needsValue():INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function notRequired():INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function successWithResolvedCallCapability(resolvedCallCapability:INCallCapability):INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function unsupported():INStartCallCallCapabilityResolutionResult;
+	@:hxmc.available(macos >= 12.0)
 	static function unsupportedWithReason(reason:I64):INStartCallCallCapabilityResolutionResult;
 	static function unsupportedForReason(reason:INStartCallCallCapabilityUnsupportedReason):INStartCallCallCapabilityResolutionResult;
 	function initWithCallCapabilityResolutionResult(callCapabilityResolutionResult:INCallCapabilityResolutionResult):INStartCallCallCapabilityResolutionResult;

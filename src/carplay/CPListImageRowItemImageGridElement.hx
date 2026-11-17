@@ -4,15 +4,25 @@ package carplay;
 import foundation.NSStringArg;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemImageGridElement extends CPListImageRowItemElement {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemImageGridElement extends CPListImageRowItemElement {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemImageGridElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var accessorySymbolName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_accessorySymbolName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_accessorySymbolName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var imageShape(get, never) : CPListImageRowItemImageGridElementShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_imageShape():CPListImageRowItemImageGridElementShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithImage(image:UIImage, imageShape:CPListImageRowItemImageGridElementShape, title:NSStringArg, accessorySymbolName:Null<NSStringArg>):CPListImageRowItemImageGridElement;
 }

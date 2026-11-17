@@ -3,7 +3,9 @@ package carplay;
 
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemGridElement extends CPListImageRowItemElement {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemGridElement extends CPListImageRowItemElement {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemGridElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithImage(image:UIImage):CPListImageRowItemGridElement;
 }

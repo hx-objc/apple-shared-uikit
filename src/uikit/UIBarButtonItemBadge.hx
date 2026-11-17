@@ -10,24 +10,40 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIBarButtonItemBadge extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIBarButtonItemBadge extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIBarButtonItemBadge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var stringValue(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_stringValue():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var backgroundColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_backgroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_backgroundColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var foregroundColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_foregroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_foregroundColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var font(get, set) : Null<UIFont>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_font():Null<UIFont>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_font(v:Null<UIFont>):Null<UIFont>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function badgeWithCount(count:I64):UIBarButtonItemBadge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function badgeWithString(stringValue:NSStringArg):UIBarButtonItemBadge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function indicatorBadge():UIBarButtonItemBadge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIBarButtonItemBadge;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

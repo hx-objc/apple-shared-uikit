@@ -5,8 +5,10 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIHoverHighlightEffect extends NSObject implements UIHoverEffect {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIHoverHighlightEffect extends NSObject implements UIHoverEffect {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIHoverHighlightEffect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function effect():UIHoverHighlightEffect;
 	function copyWithZone(zone:Ptr):Id;
 }

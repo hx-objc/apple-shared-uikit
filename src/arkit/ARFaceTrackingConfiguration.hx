@@ -16,9 +16,12 @@ import hxmc.I64;
 	@:selector("isWorldTrackingEnabled")
 	function get_worldTrackingEnabled():Bool;
 	function set_worldTrackingEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var environmentTexturingEnabled(get, set) : Bool;
 	@:selector("isEnvironmentTexturingEnabled")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_environmentTexturingEnabled():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_environmentTexturingEnabled(v:Bool):Bool;
 	override function init():ARFaceTrackingConfiguration;
 	@:selector("new")

@@ -6,6 +6,7 @@ import foundation.NSDateComponents;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INCancelRideIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCancelRideIntentResponse;
 	var code(get, never) : INCancelRideIntentResponseCode;
 	function get_code():INCancelRideIntentResponseCode;

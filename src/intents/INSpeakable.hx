@@ -5,18 +5,28 @@ import foundation.NSArray;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("INSpeakable") extern interface INSpeakable extends NSObjectProtocol {
+@:hxmc.objc("INSpeakable") @:hxmc.available(macos >= 11.0) extern interface INSpeakable extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0)
 	var spokenPhrase(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_spokenPhrase():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var pronunciationHint(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_pronunciationHint():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var vocabularyIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_vocabularyIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var alternativeSpeakableMatches(get, never) : Null<NSArray<INSpeakable>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_alternativeSpeakableMatches():Null<NSArray<INSpeakable>>;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var identifier(get, never) : Null<NSStringArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_identifier():Null<NSStringArg>;
 }

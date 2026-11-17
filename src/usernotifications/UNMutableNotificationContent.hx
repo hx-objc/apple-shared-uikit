@@ -39,10 +39,13 @@ import hxmc.I64;
 	@:selector("setTargetContentIdentifier:")
 	function set_targetContentIdentifier(v:Null<NSStringArg>):Void;
 	@:selector("setInterruptionLevel:")
+	@:hxmc.available(macos >= 12.0)
 	function set_interruptionLevel(v:UNNotificationInterruptionLevel):Void;
 	@:selector("setRelevanceScore:")
+	@:hxmc.available(macos >= 12.0)
 	function set_relevanceScore(v:Float):Void;
 	@:selector("setFilterCriteria:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_filterCriteria(v:Null<NSStringArg>):Void;
 	override function init():UNMutableNotificationContent;
 	override function initWithCoder(coder:NSCoder):Null<UNMutableNotificationContent>;

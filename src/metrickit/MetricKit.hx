@@ -4,5 +4,6 @@ package metrickit;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("MetricKit") extern class MetricKit {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final MXErrorDomain : NSString;
 }

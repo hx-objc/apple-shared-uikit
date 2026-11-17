@@ -5,12 +5,14 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSearchForMediaIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForMediaIntent;
 	var mediaItems(get, never) : Null<NSArray<INMediaItem>>;
 	function get_mediaItems():Null<NSArray<INMediaItem>>;
 	var mediaSearch(get, never) : Null<INMediaSearch>;
 	function get_mediaSearch():Null<INMediaSearch>;
 	function initWithMediaItems(mediaItems:Null<NSArray<INMediaItem>>, mediaSearch:Null<INMediaSearch>):INSearchForMediaIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForMediaIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForMediaIntent>;
 }

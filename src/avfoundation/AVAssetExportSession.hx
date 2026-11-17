@@ -64,8 +64,11 @@ import objc.NSObject;
 	function set_videoComposition(v:Null<AVVideoComposition>):Null<AVVideoComposition>;
 	var customVideoCompositor(get, never) : Null<AVVideoCompositing>;
 	function get_customVideoCompositor():Null<AVVideoCompositing>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var audioTrackGroupHandling(get, set) : AVAssetTrackGroupOutputHandling;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_audioTrackGroupHandling():AVAssetTrackGroupOutputHandling;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_audioTrackGroupHandling(v:AVAssetTrackGroupOutputHandling):AVAssetTrackGroupOutputHandling;
 	var canPerformMultiplePassesOverSourceMediaData(get, set) : Bool;
 	function get_canPerformMultiplePassesOverSourceMediaData():Bool;
@@ -84,5 +87,6 @@ import objc.NSObject;
 	function determineCompatibleFileTypesWithCompletionHandler(handler:NSArray<NSString> -> Void):Void;
 	function estimateMaximumDurationWithCompletionHandler(handler:(CMTime, Null<NSError>) -> Void):Void;
 	function estimateOutputFileLengthWithCompletionHandler(handler:(I64, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function configureForResumableExportWithCompletionHandler(handler:AVAssetExportSessionResumptionState -> Void):Void;
 }

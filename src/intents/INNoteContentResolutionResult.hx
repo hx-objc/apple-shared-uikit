@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INNoteContentResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INNoteContentResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INNoteContentResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INNoteContentResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INNoteContentResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INNoteContentResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INNoteContentResolutionResult;
 	static function successWithResolvedNoteContent(resolvedNoteContent:INNoteContent):INNoteContentResolutionResult;
 	static function disambiguationWithNoteContentsToDisambiguate(noteContentsToDisambiguate:NSArray<INNoteContent>):INNoteContentResolutionResult;

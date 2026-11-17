@@ -5,12 +5,19 @@ import foundation.NSCoder;
 import foundation.NSMeasurement;
 import foundation.NSUnitDuration;
 
-@:hxmc.framework("MetricKit") @:hxmc.objc extern class MXAppLaunchDiagnostic extends MXDiagnostic {
+@:hxmc.framework("MetricKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class MXAppLaunchDiagnostic extends MXDiagnostic {
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MXAppLaunchDiagnostic;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var callStackTree(get, never) : MXCallStackTree;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_callStackTree():MXCallStackTree;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var launchDuration(get, never) : NSMeasurement<NSUnitDuration>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_launchDuration():NSMeasurement<NSUnitDuration>;
+	@:hxmc.available(macos >= 12.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MXAppLaunchDiagnostic;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<MXAppLaunchDiagnostic>;
 }

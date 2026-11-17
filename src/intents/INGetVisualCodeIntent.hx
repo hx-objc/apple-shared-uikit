@@ -4,10 +4,12 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INGetVisualCodeIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetVisualCodeIntent;
 	var visualCodeType(get, never) : INVisualCodeType;
 	function get_visualCodeType():INVisualCodeType;
 	function initWithVisualCodeType(visualCodeType:INVisualCodeType):INGetVisualCodeIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetVisualCodeIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetVisualCodeIntent>;
 }

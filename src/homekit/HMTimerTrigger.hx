@@ -20,6 +20,7 @@ import foundation.NSTimeZone;
 	@:deprecated
 	var recurrenceCalendar(get, never) : Null<NSCalendar>;
 	function get_recurrenceCalendar():Null<NSCalendar>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithName(name:NSStringArg, fireDate:NSDate, recurrence:Null<NSDateComponents>):HMTimerTrigger;
 	@:deprecated
 	overload function initWithName(name:NSStringArg, fireDate:NSDate, timeZone:Null<NSTimeZone>, recurrence:Null<NSDateComponents>, recurrenceCalendar:Null<NSCalendar>):HMTimerTrigger;

@@ -8,19 +8,29 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMultiStopCardConfiguration extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPMultiStopCardConfiguration extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPMultiStopCardConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var title(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var image(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var buttons(get, never) : NSArray<CPTextButton>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_buttons():NSArray<CPTextButton>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithTitle(title:Null<NSStringArg>, buttons:NSArray<CPTextButton>):CPMultiStopCardConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithTitle(title:Null<NSStringArg>, buttons:NSArray<CPTextButton>, image:Null<UIImage>):CPMultiStopCardConfiguration;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPMultiStopCardConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():CPMultiStopCardConfiguration;
 }

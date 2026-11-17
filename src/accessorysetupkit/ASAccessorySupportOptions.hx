@@ -6,6 +6,7 @@ import hxmc.I64;
 enum abstract ASAccessorySupportOptions(I64) to I64 {
 	var BluetoothPairingLE = 2;
 	var BluetoothTransportBridging = 4;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var BluetoothHID = 8;
 	inline function new(v:I64) this = v;
 	var None = 0;

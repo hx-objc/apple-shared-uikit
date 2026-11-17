@@ -4,9 +4,13 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueCurrentVisibilityState(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Shown = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Hidden = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Connected = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var AlwaysShown = 3;
 	inline function new(v:I64) this = v;
 }

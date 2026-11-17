@@ -3,7 +3,8 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIObjectTraitDefinition") extern interface UIObjectTraitDefinition extends UITraitDefinition {
+@:hxmc.objc("UIObjectTraitDefinition") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIObjectTraitDefinition extends UITraitDefinition {
 	static var defaultValue(get, never) : Null<NSObjectProtocol>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():Null<NSObjectProtocol>;
 }

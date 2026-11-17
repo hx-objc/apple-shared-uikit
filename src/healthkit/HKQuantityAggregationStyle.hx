@@ -4,11 +4,16 @@ package healthkit;
 import hxmc.I64;
 
 enum abstract HKQuantityAggregationStyle(I64) to I64 {
+	@:hxmc.available(macos >= 13.0)
 	var Cumulative = 0;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteArithmetic = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var Discrete = 1;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteTemporallyWeighted = 2;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteEquivalentContinuousLevel = 3;
 	inline function new(v:I64) this = v;
 }

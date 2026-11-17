@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INRadioTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRadioTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INRadioTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INRadioTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INRadioTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INRadioTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INRadioTypeResolutionResult;
 	static function successWithResolvedRadioType(resolvedRadioType:INRadioType):INRadioTypeResolutionResult;
 	@:deprecated

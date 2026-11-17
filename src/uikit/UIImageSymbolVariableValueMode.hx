@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIImageSymbolVariableValueMode(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Color = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Draw = 2;
 	inline function new(v:I64) this = v;
 }

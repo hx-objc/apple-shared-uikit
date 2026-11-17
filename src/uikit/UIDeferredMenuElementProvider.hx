@@ -4,7 +4,9 @@ package uikit;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIDeferredMenuElementProvider extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIDeferredMenuElementProvider extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIDeferredMenuElementProvider;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function providerWithElementProvider(elementProvider:(NSArray<UIMenuElement> -> Void) -> Void):UIDeferredMenuElementProvider;
 }

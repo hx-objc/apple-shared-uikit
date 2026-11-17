@@ -3,10 +3,15 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabSidebarItemRequest extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITabSidebarItemRequest extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITabSidebarItemRequest;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tab(get, never) : Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tab():Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var action(get, never) : Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_action():Null<UIAction>;
 }

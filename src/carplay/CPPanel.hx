@@ -6,16 +6,23 @@ import foundation.NSSecureCoding;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPPanel extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPPanel extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPPanel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var maximumPanelItemsCount(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_maximumPanelItemsCount():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var showsCloseButton(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_showsCloseButton():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_showsCloseButton(v:Bool):Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPPanel>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():CPPanel;
 }

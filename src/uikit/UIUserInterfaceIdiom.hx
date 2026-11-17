@@ -10,6 +10,7 @@ enum abstract UIUserInterfaceIdiom(I64) to I64 {
 	var TV = 2;
 	var CarPlay = 3;
 	var Mac = 5;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Vision = 6;
 	inline function new(v:I64) this = v;
 }

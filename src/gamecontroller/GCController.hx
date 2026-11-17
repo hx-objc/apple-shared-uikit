@@ -7,14 +7,19 @@ import objc.NSObject;
 
 @:hxmc.framework("GameController") @:hxmc.objc extern class GCController extends NSObject implements GCDevice {
 	static function alloc():GCController;
+	@:hxmc.available(macos >= 11.0)
 	static var current(get, never) : Null<GCController>;
+	@:hxmc.available(macos >= 11.0)
 	static function get_current():Null<GCController>;
 	@:deprecated
 	var controllerPausedHandler(get, set) : Null<GCController -> Void>;
 	function get_controllerPausedHandler():Null<GCController -> Void>;
 	function set_controllerPausedHandler(v:Null<GCController -> Void>):Null<GCController -> Void>;
+	@:hxmc.available(macos >= 11.3)
 	static var shouldMonitorBackgroundEvents(get, set) : Bool;
+	@:hxmc.available(macos >= 11.3)
 	static function get_shouldMonitorBackgroundEvents():Bool;
+	@:hxmc.available(macos >= 11.3)
 	static function set_shouldMonitorBackgroundEvents(v:Bool):Bool;
 	var attachedToDevice(get, never) : Bool;
 	@:selector("isAttachedToDevice")
@@ -22,11 +27,17 @@ import objc.NSObject;
 	var playerIndex(get, set) : GCControllerPlayerIndex;
 	function get_playerIndex():GCControllerPlayerIndex;
 	function set_playerIndex(v:GCControllerPlayerIndex):GCControllerPlayerIndex;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var input(get, never) : GCControllerLiveInput;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_input():GCControllerLiveInput;
+	@:hxmc.available(macos >= 11.0)
 	var battery(get, never) : Null<GCDeviceBattery>;
+	@:hxmc.available(macos >= 11.0)
 	function get_battery():Null<GCDeviceBattery>;
+	@:hxmc.available(macos >= 11.0)
 	var physicalInputProfile(get, never) : GCPhysicalInputProfile;
+	@:hxmc.available(macos >= 11.0)
 	function get_physicalInputProfile():GCPhysicalInputProfile;
 	@:deprecated
 	var gamepad(get, never) : Null<GCGamepad>;
@@ -37,19 +48,30 @@ import objc.NSObject;
 	function get_extendedGamepad():Null<GCExtendedGamepad>;
 	var motion(get, never) : Null<GCMotion>;
 	function get_motion():Null<GCMotion>;
+	@:hxmc.available(macos >= 11.0)
 	var light(get, never) : Null<GCDeviceLight>;
+	@:hxmc.available(macos >= 11.0)
 	function get_light():Null<GCDeviceLight>;
+	@:hxmc.available(macos >= 11.0)
 	var haptics(get, never) : Null<GCDeviceHaptics>;
+	@:hxmc.available(macos >= 11.0)
 	function get_haptics():Null<GCDeviceHaptics>;
 	var snapshot(get, never) : Bool;
 	@:selector("isSnapshot")
 	function get_snapshot():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var handlerQueue(get, set) : NSObject;
+	@:hxmc.available(macos >= 11.0)
 	function get_handlerQueue():NSObject;
+	@:hxmc.available(macos >= 11.0)
 	function set_handlerQueue(v:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	var vendorName(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_vendorName():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var productCategory(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_productCategory():NSStringArg;
 	static function controllers():NSArray<GCController>;
 	function capture():GCController;

@@ -4,18 +4,30 @@ package avfaudio;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVFAudio") @:hxmc.objc extern class AVAudioApplication extends NSObject {
+@:hxmc.framework("AVFAudio") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class AVAudioApplication extends NSObject {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():AVAudioApplication;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static var sharedInstance(get, never) : AVAudioApplication;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function get_sharedInstance():AVAudioApplication;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var inputMuted(get, never) : Bool;
 	@:selector("isInputMuted")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_inputMuted():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var recordPermission(get, never) : AVAudioApplicationRecordPermission;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_recordPermission():AVAudioApplicationRecordPermission;
+	@:hxmc.available(macos >= 14.0, ios >= 18.2, maccatalyst >= 18.2)
 	var microphoneInjectionPermission(get, never) : AVAudioApplicationMicrophoneInjectionPermission;
+	@:hxmc.available(macos >= 14.0, ios >= 18.2, maccatalyst >= 18.2)
 	function get_microphoneInjectionPermission():AVAudioApplicationMicrophoneInjectionPermission;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setInputMuted(muted:Bool, error:Ptr):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function requestRecordPermissionWithCompletionHandler(response:Bool -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 18.2, maccatalyst >= 18.2)
 	static function requestMicrophoneInjectionPermissionWithCompletionHandler(response:AVAudioApplicationMicrophoneInjectionPermission -> Void):Void;
 }

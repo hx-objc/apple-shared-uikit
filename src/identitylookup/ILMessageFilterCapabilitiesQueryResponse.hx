@@ -7,17 +7,25 @@ import foundation.NSNumber;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("IdentityLookup") @:hxmc.objc extern class ILMessageFilterCapabilitiesQueryResponse extends NSObject implements NSSecureCoding {
+@:hxmc.framework("IdentityLookup") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class ILMessageFilterCapabilitiesQueryResponse extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():ILMessageFilterCapabilitiesQueryResponse;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var transactionalSubActions(get, set) : NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_transactionalSubActions():NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_transactionalSubActions(v:NSArray<NSNumber>):NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var promotionalSubActions(get, set) : NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_promotionalSubActions():NSArray<NSNumber>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_promotionalSubActions(v:NSArray<NSNumber>):NSArray<NSNumber>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<ILMessageFilterCapabilitiesQueryResponse>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():ILMessageFilterCapabilitiesQueryResponse;
 }

@@ -4,9 +4,13 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRWristTemperatureCondition(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var None = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var OffWrist = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var OnCharger = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var InMotion = 4;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

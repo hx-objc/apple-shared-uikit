@@ -4,20 +4,27 @@ package uikit;
 import coregraphics.CGRect;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextViewportLayoutControllerDelegate") extern interface NSTextViewportLayoutControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("NSTextViewportLayoutControllerDelegate") @:hxmc.available(macos >= 12.0) extern interface NSTextViewportLayoutControllerDelegate extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	function viewportBoundsForTextViewportLayoutController(textViewportLayoutController:NSTextViewportLayoutController):CGRect;
 	@:selector("textViewportLayoutController:configureRenderingSurfaceForTextLayoutFragment:")
+	@:hxmc.available(macos >= 12.0)
 	function textViewportLayoutControllerConfigureRenderingSurfaceForTextLayoutFragment(textViewportLayoutController:NSTextViewportLayoutController, configureRenderingSurfaceForTextLayoutFragment:NSTextLayoutFragment):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textViewportLayoutControllerWillLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textViewportLayoutControllerDidLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
 	@:selector("textViewportLayoutController:cacheRenderingSurface:forKey:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textViewportLayoutControllerCacheRenderingSurfaceForKey(textViewportLayoutController:NSTextViewportLayoutController, cacheRenderingSurface:NSTextViewportRenderingSurface, forKey:NSTextViewportRenderingSurfaceKey):Void;
 	@:selector("textViewportLayoutController:retrieveCachedRenderingSurfaceForKey:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textViewportLayoutControllerRetrieveCachedRenderingSurfaceForKey(textViewportLayoutController:NSTextViewportLayoutController, retrieveCachedRenderingSurfaceForKey:NSTextViewportRenderingSurfaceKey):NSTextViewportRenderingSurface;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textViewportLayoutControllerReceivedSetNeedsLayout(textViewportLayoutController:NSTextViewportLayoutController):Void;
 }

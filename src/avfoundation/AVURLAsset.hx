@@ -19,17 +19,23 @@ import uniformtypeidentifiers.UTType;
 @:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVURLAsset extends AVAsset implements NSItemProviderReading implements NSItemProviderWriting implements AVContentKeyRecipient {
 	static function alloc():AVURLAsset;
 	static function assetWithURL(URL:NSURL):AVURLAsset;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static var audiovisualContentTypes(get, never) : NSArray<UTType>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function get_audiovisualContentTypes():NSArray<UTType>;
 	var URL(get, never) : NSURL;
 	function get_URL():NSURL;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var httpSessionIdentifier(get, never) : NSUUID;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_httpSessionIdentifier():NSUUID;
 	var resourceLoader(get, never) : AVAssetResourceLoader;
 	function get_resourceLoader():AVAssetResourceLoader;
 	var assetCache(get, never) : Null<AVAssetCache>;
 	function get_assetCache():Null<AVAssetCache>;
+	@:hxmc.available(macos >= 12.0)
 	var variants(get, never) : NSArray<AVAssetVariant>;
+	@:hxmc.available(macos >= 12.0)
 	function get_variants():NSArray<AVAssetVariant>;
 	var mayRequireContentKeysForMediaDataProcessing(get, never) : Bool;
 	function get_mayRequireContentKeysForMediaDataProcessing():Bool;
@@ -45,6 +51,7 @@ import uniformtypeidentifiers.UTType;
 	function initWithURL(URL:NSURL, options:Null<NSDictionary<NSString, Id>>):AVURLAsset;
 	@:deprecated
 	function compatibleTrackForCompositionTrack(compositionTrack:AVCompositionTrack):Null<AVAssetTrack>;
+	@:hxmc.available(macos >= 12.0)
 	function findCompatibleTrackForCompositionTrack(compositionTrack:AVCompositionTrack, completionHandler:(Null<AVAssetTrack>, Null<NSError>) -> Void):Void;
 	static function objectWithItemProviderData(data:NSData, typeIdentifier:NSStringArg, error:Ptr):Null<AVURLAsset>;
 	function loadDataWithTypeIdentifier(typeIdentifier:NSStringArg, forItemProviderCompletionHandler:(Null<NSData>, Null<NSError>) -> Void):Null<NSProgress>;

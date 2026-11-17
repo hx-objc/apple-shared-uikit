@@ -9,21 +9,32 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPPlaybackConfiguration extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPPlaybackConfiguration extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPPlaybackConfiguration;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var preferredPresentation(get, never) : CPPlaybackPresentation;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_preferredPresentation():CPPlaybackPresentation;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var playbackAction(get, never) : CPPlaybackAction;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_playbackAction():CPPlaybackAction;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var elapsedTime(get, never) : CMTime;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_elapsedTime():CMTime;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var duration(get, never) : CMTime;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_duration():CMTime;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithPreferredPresentation(preferredPresentation:CPPlaybackPresentation, playbackAction:CPPlaybackAction, elapsedTime:CMTime, duration:CMTime):CPPlaybackConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function init():CPPlaybackConfiguration;
 }

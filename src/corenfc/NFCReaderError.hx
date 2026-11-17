@@ -10,7 +10,9 @@ enum abstract NFCReaderError(I64) to I64 {
 	var ReaderErrorInvalidParameterLength = 4;
 	var ReaderErrorParameterOutOfBound = 5;
 	var ReaderErrorRadioDisabled = 6;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var ReaderErrorIneligible = 7;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var ReaderErrorAccessNotAccepted = 8;
 	var ReaderTransceiveErrorTagConnectionLost = 100;
 	var ReaderTransceiveErrorRetryExceeded = 101;
@@ -28,8 +30,11 @@ enum abstract NFCReaderError(I64) to I64 {
 	var NdefReaderSessionErrorTagUpdateFailure = 401;
 	var NdefReaderSessionErrorTagSizeTooSmall = 402;
 	var NdefReaderSessionErrorZeroLengthMessage = 403;
+	@:hxmc.available(ios >= 26.6, maccatalyst >= 26.6)
 	var PaymentTagReaderSessionErrorLocationAuthorizationDenied = 500;
+	@:hxmc.available(ios >= 26.6, maccatalyst >= 26.6)
 	var PaymentTagReaderSessionErrorLocationServiceRestricted = 501;
+	@:hxmc.available(ios >= 26.6, maccatalyst >= 26.6)
 	var PaymentTagReaderSessionErrorOnDeviceLocationUnavailable = 502;
 	inline function new(v:I64) this = v;
 }

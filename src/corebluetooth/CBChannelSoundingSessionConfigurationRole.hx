@@ -4,6 +4,7 @@ package corebluetooth;
 import hxmc.I64;
 
 enum abstract CBChannelSoundingSessionConfigurationRole(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Initiator = 0;
 	inline function new(v:I64) this = v;
 }

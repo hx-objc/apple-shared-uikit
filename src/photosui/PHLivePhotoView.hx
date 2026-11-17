@@ -21,8 +21,11 @@ import uikit.UIView;
 	var livePhoto(get, set) : Null<PHLivePhoto>;
 	function get_livePhoto():Null<PHLivePhoto>;
 	function set_livePhoto(v:Null<PHLivePhoto>):Null<PHLivePhoto>;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var contentsRect(get, set) : CGRect;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_contentsRect():CGRect;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_contentsRect(v:CGRect):CGRect;
 	var muted(get, set) : Bool;
 	@:selector("isMuted")

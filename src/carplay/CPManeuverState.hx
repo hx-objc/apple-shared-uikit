@@ -4,9 +4,13 @@ package carplay;
 import hxmc.I64;
 
 enum abstract CPManeuverState(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Continue = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Initial = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Prepare = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Execute = 3;
 	inline function new(v:I64) this = v;
 }

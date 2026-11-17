@@ -42,7 +42,9 @@ import objc.NSObject;
 	function get_paragraphSpacingBefore():Float;
 	var hyphenationFactor(get, never) : Float32;
 	function get_hyphenationFactor():Float32;
+	@:hxmc.available(macos >= 12.0)
 	var usesDefaultHyphenation(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_usesDefaultHyphenation():Bool;
 	var tabStops(get, never) : NSArray<NSTextTab>;
 	function get_tabStops():NSArray<NSTextTab>;

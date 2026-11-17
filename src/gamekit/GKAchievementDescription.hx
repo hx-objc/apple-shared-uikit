@@ -34,13 +34,21 @@ import uikit.UIImage;
 	var replayable(get, never) : Bool;
 	@:selector("isReplayable")
 	function get_replayable():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var rarityPercent(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_rarityPercent():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var releaseState(get, never) : GKReleaseState;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_releaseState():GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activityIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activityIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activityProperties(get, never) : NSDictionary<NSString, NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activityProperties():NSDictionary<NSString, NSString>;
 	@:deprecated
 	var image(get, never) : Null<UIImage>;

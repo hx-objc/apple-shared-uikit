@@ -8,6 +8,7 @@ enum abstract UITouchProperties(I64) to I64 {
 	var PropertyAzimuth = 2;
 	var PropertyAltitude = 4;
 	var PropertyLocation = 8;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var PropertyRoll = 16;
 	inline function new(v:I64) this = v;
 	var None = 0;

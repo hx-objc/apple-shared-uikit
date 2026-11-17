@@ -7,24 +7,34 @@ import uikit.UIColor;
 import usernotifications.UNNotification;
 import usernotifications.UNNotificationResponse;
 
-@:hxmc.objc("UNNotificationContentExtension") extern interface UNNotificationContentExtension extends NSObjectProtocol {
+@:hxmc.objc("UNNotificationContentExtension") @:hxmc.available(macos >= 11.0) extern interface UNNotificationContentExtension extends NSObjectProtocol {
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var mediaPlayPauseButtonType(get, never) : UNNotificationContentExtensionMediaPlayPauseButtonType;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_mediaPlayPauseButtonType():UNNotificationContentExtensionMediaPlayPauseButtonType;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var mediaPlayPauseButtonFrame(get, never) : CGRect;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_mediaPlayPauseButtonFrame():CGRect;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	var mediaPlayPauseButtonTintColor(get, never) : UIColor;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function get_mediaPlayPauseButtonTintColor():UIColor;
+	@:hxmc.available(macos >= 11.0)
 	function didReceiveNotification(notification:UNNotification):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function didReceiveNotificationResponse(response:UNNotificationResponse, completionHandler:UNNotificationContentExtensionResponseOption -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function mediaPlay():Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function mediaPause():Void;
 }

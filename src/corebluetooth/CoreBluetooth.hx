@@ -13,6 +13,7 @@ import foundation.NSString;
 	public static final CBAdvertisementDataServiceUUIDsKey : NSString;
 	public static final CBAdvertisementDataSolicitedServiceUUIDsKey : NSString;
 	public static final CBAdvertisementDataTxPowerLevelKey : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final CBCentralManagerOptionDeviceAccessForMedia : NSString;
 	public static final CBCentralManagerOptionRestoreIdentifierKey : NSString;
 	public static final CBCentralManagerOptionShowPowerAlertKey : NSString;
@@ -21,6 +22,7 @@ import foundation.NSString;
 	public static final CBCentralManagerRestoredStateScanServicesKey : NSString;
 	public static final CBCentralManagerScanOptionAllowDuplicatesKey : NSString;
 	public static final CBCentralManagerScanOptionSolicitedServiceUUIDsKey : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final CBConnectPeripheralOptionEnableAutoReconnect : NSString;
 	public static final CBConnectPeripheralOptionEnableTransportBridgingKey : NSString;
 	public static final CBConnectPeripheralOptionNotifyOnConnectionKey : NSString;

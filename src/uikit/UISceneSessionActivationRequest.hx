@@ -8,20 +8,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneSessionActivationRequest extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UISceneSessionActivationRequest extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UISceneSessionActivationRequest;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var role(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_role():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var session(get, never) : Null<UISceneSession>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_session():Null<UISceneSession>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var userActivity(get, set) : Null<NSUserActivity>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_userActivity():Null<NSUserActivity>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_userActivity(v:Null<NSUserActivity>):Null<NSUserActivity>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var options(get, set) : Null<UISceneActivationRequestOptions>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_options():Null<UISceneActivationRequestOptions>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_options(v:Null<UISceneActivationRequestOptions>):Null<UISceneActivationRequestOptions>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function request():UISceneSessionActivationRequest;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function requestWithRole(role:NSStringArg):UISceneSessionActivationRequest;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function requestWithSession(session:UISceneSession):UISceneSessionActivationRequest;
 	function copyWithZone(zone:Ptr):Id;
 }

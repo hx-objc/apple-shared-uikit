@@ -10,25 +10,42 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIActivityCollaborationModeRestriction extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIActivityCollaborationModeRestriction extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIActivityCollaborationModeRestriction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var disabledMode(get, never) : UIActivityCollaborationMode;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_disabledMode():UIActivityCollaborationMode;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alertTitle(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alertTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alertMessage(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alertMessage():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alertDismissButtonTitle(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alertDismissButtonTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alertRecoverySuggestionButtonTitle(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alertRecoverySuggestionButtonTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alertRecoverySuggestionButtonLaunchURL(get, never) : Null<NSURL>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alertRecoverySuggestionButtonLaunchURL():Null<NSURL>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithDisabledMode(disabledMode:UIActivityCollaborationMode):UIActivityCollaborationModeRestriction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithDisabledMode(disabledMode:UIActivityCollaborationMode, alertTitle:NSStringArg, alertMessage:NSStringArg):UIActivityCollaborationModeRestriction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithDisabledMode(disabledMode:UIActivityCollaborationMode, alertTitle:NSStringArg, alertMessage:NSStringArg, alertDismissButtonTitle:NSStringArg):UIActivityCollaborationModeRestriction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithDisabledMode(disabledMode:UIActivityCollaborationMode, alertTitle:NSStringArg, alertMessage:NSStringArg, alertDismissButtonTitle:NSStringArg, alertRecoverySuggestionButtonTitle:NSStringArg, alertRecoverySuggestionButtonLaunchURL:NSURL):UIActivityCollaborationModeRestriction;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIActivityCollaborationModeRestriction>;

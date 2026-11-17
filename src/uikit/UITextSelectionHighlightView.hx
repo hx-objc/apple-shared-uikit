@@ -4,8 +4,11 @@ package uikit;
 import foundation.NSArray;
 import uiutilities.UICoordinateSpace;
 
-@:hxmc.objc("UITextSelectionHighlightView") extern interface UITextSelectionHighlightView extends UICoordinateSpace {
+@:hxmc.objc("UITextSelectionHighlightView") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITextSelectionHighlightView extends UICoordinateSpace {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var selectionRects(get, set) : NSArray<UITextSelectionRect>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_selectionRects():NSArray<UITextSelectionRect>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_selectionRects(v:NSArray<UITextSelectionRect>):NSArray<UITextSelectionRect>;
 }

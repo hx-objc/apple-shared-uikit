@@ -19,14 +19,20 @@ import uikit.UIViewController;
 	function get_leaderboardDelegate():GKLeaderboardViewControllerDelegate;
 	function set_leaderboardDelegate(v:GKLeaderboardViewControllerDelegate):GKLeaderboardViewControllerDelegate;
 	override function init():GKLeaderboardViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithAchievementID(achievementID:NSStringArg):GKLeaderboardViewController;
 	override function initWithCoder(coder:NSCoder):Null<GKLeaderboardViewController>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithLeaderboard(leaderboard:GKLeaderboard, playerScope:GKLeaderboardPlayerScope):GKLeaderboardViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithLeaderboardID(leaderboardID:NSStringArg, playerScope:GKLeaderboardPlayerScope, timeScope:GKLeaderboardTimeScope):GKLeaderboardViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithLeaderboardSetID(leaderboardSetID:NSStringArg):GKLeaderboardViewController;
 	override function initWithNavigationBarClass(navigationBarClass:ObjCClass, toolbarClass:ObjCClass):GKLeaderboardViewController;
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):GKLeaderboardViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithPlayer(player:GKPlayer):GKLeaderboardViewController;
 	override function initWithRootViewController(rootViewController:UIViewController):GKLeaderboardViewController;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithState(state:GKGameCenterViewControllerState):GKLeaderboardViewController;
 }

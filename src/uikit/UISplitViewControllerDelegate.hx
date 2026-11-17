@@ -62,9 +62,11 @@ import hxmc.objc.Id;
 	@:optional
 	function splitViewControllerWillHideColumn(svc:UISplitViewController, willHideColumn:UISplitViewControllerColumn):Void;
 	@:selector("splitViewController:didShowColumn:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function splitViewControllerDidShowColumn(svc:UISplitViewController, didShowColumn:UISplitViewControllerColumn):Void;
 	@:selector("splitViewController:didHideColumn:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function splitViewControllerDidHideColumn(svc:UISplitViewController, didHideColumn:UISplitViewControllerColumn):Void;
 	@:optional

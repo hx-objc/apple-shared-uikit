@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UILetterformAwareSizingRule(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Typographic = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Oversize = 1;
 	inline function new(v:I64) this = v;
 }

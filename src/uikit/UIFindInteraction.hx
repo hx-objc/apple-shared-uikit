@@ -5,31 +5,53 @@ import foundation.NSArray;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIFindInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIFindInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIFindInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findNavigatorVisible(get, never) : Bool;
 	@:selector("isFindNavigatorVisible")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findNavigatorVisible():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var activeFindSession(get, never) : Null<UIFindSession>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_activeFindSession():Null<UIFindSession>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchText(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_searchText(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var replacementText(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_replacementText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_replacementText(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var optionsMenuProvider(get, set) : Null<NSArray<UIMenuElement> -> Null<UIMenu>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_optionsMenuProvider():Null<NSArray<UIMenuElement> -> Null<UIMenu>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_optionsMenuProvider(v:Null<NSArray<UIMenuElement> -> Null<UIMenu>>):Null<NSArray<UIMenuElement> -> Null<UIMenu>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, never) : Null<UIFindInteractionDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<UIFindInteractionDelegate>;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithSessionDelegate(sessionDelegate:UIFindInteractionDelegate):UIFindInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function presentFindNavigatorShowingReplace(showingReplace:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function dismissFindNavigator():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function findNext():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function findPrevious():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function updateResultCount():Void;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

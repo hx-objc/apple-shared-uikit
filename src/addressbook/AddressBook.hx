@@ -9,6 +9,7 @@ import foundation.NSNumber;
 import foundation.NSString;
 import foundation.NSStringArg;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
@@ -37,7 +38,7 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static function ABAddressBookHasUnsavedChanges(addressBook:Ptr):Bool;
 	@:deprecated
-	public static function ABAddressBookRegisterExternalChangeCallback(addressBook:Ptr, callback:Ptr, context:Ptr):Void;
+	public static function ABAddressBookRegisterExternalChangeCallback(addressBook:Ptr, callback:(Ptr, NSDictionary, Ptr) -> Void, context:Ptr):Void;
 	@:deprecated
 	public static function ABAddressBookRemoveRecord(addressBook:Ptr, record:Ptr, error:Ptr):Bool;
 	@:deprecated
@@ -47,7 +48,7 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static function ABAddressBookSave(addressBook:Ptr, error:Ptr):Bool;
 	@:deprecated
-	public static function ABAddressBookUnregisterExternalChangeCallback(addressBook:Ptr, callback:Ptr, context:Ptr):Void;
+	public static function ABAddressBookUnregisterExternalChangeCallback(addressBook:Ptr, callback:(Ptr, NSDictionary, Ptr) -> Void, context:Ptr):Void;
 	@:deprecated
 	public static function ABGroupAddMember(group:Ptr, person:Ptr, error:Ptr):Bool;
 	@:deprecated
@@ -59,7 +60,8 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static function ABGroupRemoveMember(group:Ptr, member:Ptr, error:Ptr):Bool;
 	@:deprecated
-	public static function ABMultiValueAddValueAndLabel(multiValue:Ptr, value:Id, label:NSStringArg, outIdentifier:Ptr):Bool;
+	@:hxmc.len(outIdentifier, 1)
+	public static function ABMultiValueAddValueAndLabel(multiValue:Ptr, value:Id, label:NSStringArg, outIdentifier:Span<Int>):Bool;
 	@:deprecated
 	public static function ABMultiValueCreateMutable(type:Int):Ptr;
 	@:deprecated
@@ -75,7 +77,8 @@ import hxmc.unsafe.Ptr;
 	@:deprecated
 	public static function ABMultiValueGetPropertyType(multiValue:Ptr):Int;
 	@:deprecated
-	public static function ABMultiValueInsertValueAndLabelAtIndex(multiValue:Ptr, value:Id, label:NSStringArg, index:I64, outIdentifier:Ptr):Bool;
+	@:hxmc.len(outIdentifier, 1)
+	public static function ABMultiValueInsertValueAndLabelAtIndex(multiValue:Ptr, value:Id, label:NSStringArg, index:I64, outIdentifier:Span<Int>):Bool;
 	@:deprecated
 	public static function ABMultiValueRemoveValueAndLabelAtIndex(multiValue:Ptr, index:I64):Bool;
 	@:deprecated

@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INDateComponentsRangeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDateComponentsRangeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INDateComponentsRangeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INDateComponentsRangeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INDateComponentsRangeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INDateComponentsRangeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INDateComponentsRangeResolutionResult;
 	static function successWithResolvedDateComponentsRange(resolvedDateComponentsRange:INDateComponentsRange):INDateComponentsRangeResolutionResult;
 	static function disambiguationWithDateComponentsRangesToDisambiguate(dateComponentsRangesToDisambiguate:NSArray<INDateComponentsRange>):INDateComponentsRangeResolutionResult;

@@ -6,77 +6,149 @@ import hxmc.I64;
 import hxmc.objc.ObjCClass;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIMutableTraits") extern interface UIMutableTraits extends NSObjectProtocol {
+@:hxmc.objc("UIMutableTraits") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIMutableTraits extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var userInterfaceIdiom(get, set) : UIUserInterfaceIdiom;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_userInterfaceIdiom():UIUserInterfaceIdiom;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_userInterfaceIdiom(v:UIUserInterfaceIdiom):UIUserInterfaceIdiom;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var userInterfaceStyle(get, set) : UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_userInterfaceStyle():UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_userInterfaceStyle(v:UIUserInterfaceStyle):UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var layoutDirection(get, set) : UITraitEnvironmentLayoutDirection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_layoutDirection():UITraitEnvironmentLayoutDirection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_layoutDirection(v:UITraitEnvironmentLayoutDirection):UITraitEnvironmentLayoutDirection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var displayScale(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_displayScale():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_displayScale(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var horizontalSizeClass(get, set) : UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_horizontalSizeClass():UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_horizontalSizeClass(v:UIUserInterfaceSizeClass):UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var verticalSizeClass(get, set) : UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_verticalSizeClass():UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_verticalSizeClass(v:UIUserInterfaceSizeClass):UIUserInterfaceSizeClass;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var forceTouchCapability(get, set) : UIForceTouchCapability;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_forceTouchCapability():UIForceTouchCapability;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_forceTouchCapability(v:UIForceTouchCapability):UIForceTouchCapability;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredContentSizeCategory(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredContentSizeCategory():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredContentSizeCategory(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var displayGamut(get, set) : UIDisplayGamut;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_displayGamut():UIDisplayGamut;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_displayGamut(v:UIDisplayGamut):UIDisplayGamut;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityContrast(get, set) : UIAccessibilityContrast;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityContrast():UIAccessibilityContrast;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityContrast(v:UIAccessibilityContrast):UIAccessibilityContrast;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var userInterfaceLevel(get, set) : UIUserInterfaceLevel;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_userInterfaceLevel():UIUserInterfaceLevel;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_userInterfaceLevel(v:UIUserInterfaceLevel):UIUserInterfaceLevel;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var legibilityWeight(get, set) : UILegibilityWeight;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_legibilityWeight():UILegibilityWeight;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_legibilityWeight(v:UILegibilityWeight):UILegibilityWeight;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var activeAppearance(get, set) : UIUserInterfaceActiveAppearance;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_activeAppearance():UIUserInterfaceActiveAppearance;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_activeAppearance(v:UIUserInterfaceActiveAppearance):UIUserInterfaceActiveAppearance;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var toolbarItemPresentationSize(get, set) : UINSToolbarItemPresentationSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_toolbarItemPresentationSize():UINSToolbarItemPresentationSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_toolbarItemPresentationSize(v:UINSToolbarItemPresentationSize):UINSToolbarItemPresentationSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var imageDynamicRange(get, set) : UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_imageDynamicRange():UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_imageDynamicRange(v:UIImageDynamicRange):UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sceneCaptureState(get, set) : UISceneCaptureState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sceneCaptureState():UISceneCaptureState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_sceneCaptureState(v:UISceneCaptureState):UISceneCaptureState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var typesettingLanguage(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_typesettingLanguage():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_typesettingLanguage(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var listEnvironment(get, set) : UIListEnvironment;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_listEnvironment():UIListEnvironment;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_listEnvironment(v:UIListEnvironment):UIListEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tabAccessoryEnvironment(get, set) : UITabAccessoryEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tabAccessoryEnvironment():UITabAccessoryEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_tabAccessoryEnvironment(v:UITabAccessoryEnvironment):UITabAccessoryEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var splitViewControllerLayoutEnvironment(get, set) : UISplitViewControllerLayoutEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_splitViewControllerLayoutEnvironment():UISplitViewControllerLayoutEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_splitViewControllerLayoutEnvironment(v:UISplitViewControllerLayoutEnvironment):UISplitViewControllerLayoutEnvironment;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var resolvesNaturalAlignmentWithBaseWritingDirection(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_resolvesNaturalAlignmentWithBaseWritingDirection():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_resolvesNaturalAlignmentWithBaseWritingDirection(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var systemPrefersReducedResourceUsage(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_systemPrefersReducedResourceUsage():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_systemPrefersReducedResourceUsage(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setCGFloatValue(value:Float, forTrait:ObjCClass):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function valueForCGFloatTrait(trait:ObjCClass):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setNSIntegerValue(value:I64, forTrait:ObjCClass):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function valueForNSIntegerTrait(trait:ObjCClass):I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setObject(object:Null<NSObjectProtocol>, forTrait:ObjCClass):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function objectForTrait(trait:ObjCClass):Null<NSObjectProtocol>;
 }

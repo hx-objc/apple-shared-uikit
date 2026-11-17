@@ -24,14 +24,18 @@ import objc.NSObject;
 	var mixToTelephonyUplink(get, set) : Bool;
 	function get_mixToTelephonyUplink():Bool;
 	function set_mixToTelephonyUplink(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static var personalVoiceAuthorizationStatus(get, never) : AVSpeechSynthesisPersonalVoiceAuthorizationStatus;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function get_personalVoiceAuthorizationStatus():AVSpeechSynthesisPersonalVoiceAuthorizationStatus;
 	function speakUtterance(utterance:AVSpeechUtterance):Void;
 	overload function writeUtterance(utterance:AVSpeechUtterance, toBufferCallback:AVAudioBuffer -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function writeUtterance(utterance:AVSpeechUtterance, toBufferCallback:AVAudioBuffer -> Void, toMarkerCallback:NSArray<AVSpeechSynthesisMarker> -> Void):Void;
 	function stopSpeakingAtBoundary(boundary:AVSpeechBoundary):Bool;
 	function pauseSpeakingAtBoundary(boundary:AVSpeechBoundary):Bool;
 	function continueSpeaking():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function requestPersonalVoiceAuthorizationWithCompletionHandler(handler:AVSpeechSynthesisPersonalVoiceAuthorizationStatus -> Void):Void;
 	override function init():AVSpeechSynthesizer;
 }

@@ -6,30 +6,55 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISearchSuggestionItem extends NSObject implements UISearchSuggestion {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UISearchSuggestionItem extends NSObject implements UISearchSuggestion {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var localizedAttributedSuggestion(get, never) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_localizedAttributedSuggestion():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var localizedSuggestion(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_localizedSuggestion():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var localizedDescription(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_localizedDescription():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var iconImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_iconImage():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var representedObject(get, set) : Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_representedObject():Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_representedObject(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedSuggestion(suggestion:NSStringArg):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedSuggestion(suggestion:NSStringArg, descriptionString:Null<NSStringArg>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedSuggestion(suggestion:NSStringArg, descriptionString:Null<NSStringArg>, iconImage:Null<UIImage>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedAttributedSuggestion(suggestion:NSAttributedString):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedAttributedSuggestion(suggestion:NSAttributedString, descriptionString:Null<NSStringArg>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function suggestionWithLocalizedAttributedSuggestion(suggestion:NSAttributedString, descriptionString:Null<NSStringArg>, iconImage:Null<UIImage>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedSuggestion(suggestion:NSStringArg):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedSuggestion(suggestion:NSStringArg, localizedDescription:Null<NSStringArg>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedSuggestion(suggestion:NSStringArg, localizedDescription:Null<NSStringArg>, iconImage:Null<UIImage>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedAttributedSuggestion(suggestion:NSAttributedString):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedAttributedSuggestion(suggestion:NSAttributedString, localizedDescription:Null<NSStringArg>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocalizedAttributedSuggestion(suggestion:NSAttributedString, localizedDescription:Null<NSStringArg>, iconImage:Null<UIImage>):UISearchSuggestionItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UISearchSuggestionItem;
 }

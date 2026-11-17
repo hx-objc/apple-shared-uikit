@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPlaybackRepeatModeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPlaybackRepeatModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INPlaybackRepeatModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INPlaybackRepeatModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INPlaybackRepeatModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INPlaybackRepeatModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INPlaybackRepeatModeResolutionResult;
 	static function successWithResolvedPlaybackRepeatMode(resolvedPlaybackRepeatMode:INPlaybackRepeatMode):INPlaybackRepeatModeResolutionResult;
 	static function confirmationRequiredWithPlaybackRepeatModeToConfirm(playbackRepeatModeToConfirm:INPlaybackRepeatMode):INPlaybackRepeatModeResolutionResult;

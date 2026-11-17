@@ -5,43 +5,79 @@ import foundation.NSArray;
 import foundation.NSString;
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabGroup extends UITab {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITabGroup extends UITab {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITabGroup;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var selectedChild(get, set) : Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_selectedChild():Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_selectedChild(v:Null<UITab>):Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var defaultChildIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_defaultChildIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_defaultChildIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var children(get, set) : NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_children():NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_children(v:NSArray<UITab>):NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var allowsReordering(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowsReordering():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsReordering(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var displayOrderIdentifiers(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_displayOrderIdentifiers():NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_displayOrderIdentifiers(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var displayOrder(get, never) : NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_displayOrder():NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var managingNavigationController(get, set) : Null<UINavigationController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_managingNavigationController():Null<UINavigationController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_managingNavigationController(v:Null<UINavigationController>):Null<UINavigationController>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sidebarActions(get, set) : NSArray<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sidebarActions():NSArray<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_sidebarActions(v:NSArray<UIAction>):NSArray<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sidebarAppearance(get, set) : UITabGroupSidebarAppearance;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sidebarAppearance():UITabGroupSidebarAppearance;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_sidebarAppearance(v:UITabGroupSidebarAppearance):UITabGroupSidebarAppearance;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var isSidebarDestination(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_isSidebarDestination():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_isSidebarDestination(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	var collapsedByDefault(get, set) : Bool;
 	@:selector("isCollapsedByDefault")
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function get_collapsedByDefault():Bool;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	function set_collapsedByDefault(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function tabForIdentifier(identifier:NSStringArg):Null<UITab>;
 	@:selector("initWithTitle:image:identifier:children:viewControllerProvider:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithTitleImageIdentifierChildrenViewControllerProvider(title:NSStringArg, image:Null<UIImage>, identifier:NSStringArg, children:NSArray<UITab>, viewControllerProvider:Null<UITab -> UIViewController>):UITabGroup;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithTitle(title:NSStringArg, image:Null<UIImage>, identifier:NSStringArg, viewControllerProvider:Null<UITab -> UIViewController>):UITabGroup;
 }

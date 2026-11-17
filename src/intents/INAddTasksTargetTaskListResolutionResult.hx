@@ -6,13 +6,19 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INAddTasksTargetTaskListResolutionResult extends INTaskListResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddTasksTargetTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INAddTasksTargetTaskListResolutionResult;
 	static function disambiguationWithTaskListsToDisambiguate(taskListsToDisambiguate:NSArray<INTaskList>):INAddTasksTargetTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INAddTasksTargetTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INAddTasksTargetTaskListResolutionResult;
 	static function successWithResolvedTaskList(resolvedTaskList:INTaskList):INAddTasksTargetTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INAddTasksTargetTaskListResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INAddTasksTargetTaskListResolutionResult;
 	static function confirmationRequiredWithTaskListToConfirm(taskListToConfirm:Null<INTaskList>, forReason:INAddTasksTargetTaskListConfirmationReason):INAddTasksTargetTaskListResolutionResult;
 	function initWithTaskListResolutionResult(taskListResolutionResult:INTaskListResolutionResult):INAddTasksTargetTaskListResolutionResult;

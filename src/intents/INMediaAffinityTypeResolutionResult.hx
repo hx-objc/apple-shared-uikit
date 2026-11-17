@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INMediaAffinityTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INMediaAffinityTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INMediaAffinityTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INMediaAffinityTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INMediaAffinityTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INMediaAffinityTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INMediaAffinityTypeResolutionResult;
 	static function successWithResolvedMediaAffinityType(resolvedMediaAffinityType:INMediaAffinityType):INMediaAffinityTypeResolutionResult;
 	static function confirmationRequiredWithMediaAffinityTypeToConfirm(mediaAffinityTypeToConfirm:INMediaAffinityType):INMediaAffinityTypeResolutionResult;

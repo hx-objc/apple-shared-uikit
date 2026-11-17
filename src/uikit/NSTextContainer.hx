@@ -12,7 +12,9 @@ import objc.NSObject;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextContainer extends NSObject implements NSSecureCoding implements NSTextLayoutOrientationProvider {
 	static function alloc():NSTextContainer;
+	@:hxmc.available(macos >= 12.0)
 	var textLayoutManager(get, never) : Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLayoutManager():Null<NSTextLayoutManager>;
 	var size(get, set) : CGSize;
 	function get_size():CGSize;

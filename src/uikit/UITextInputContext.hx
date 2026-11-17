@@ -3,19 +3,30 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextInputContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.4, maccatalyst >= 16.4) extern class UITextInputContext extends NSObject {
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():UITextInputContext;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var pencilInputExpected(get, set) : Bool;
 	@:selector("isPencilInputExpected")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_pencilInputExpected():Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function set_pencilInputExpected(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var dictationInputExpected(get, set) : Bool;
 	@:selector("isDictationInputExpected")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_dictationInputExpected():Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function set_dictationInputExpected(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var hardwareKeyboardInputExpected(get, set) : Bool;
 	@:selector("isHardwareKeyboardInputExpected")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_hardwareKeyboardInputExpected():Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function set_hardwareKeyboardInputExpected(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	static function current():UITextInputContext;
 }

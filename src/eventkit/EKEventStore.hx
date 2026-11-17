@@ -24,9 +24,13 @@ import objc.NSObject;
 	var defaultCalendarForNewEvents(get, never) : Null<EKCalendar>;
 	function get_defaultCalendarForNewEvents():Null<EKCalendar>;
 	static function authorizationStatusForEntityType(entityType:EKEntityType):EKAuthorizationStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithSources(sources:NSArray<EKSource>):EKEventStore;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function requestFullAccessToEventsWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function requestWriteOnlyAccessToEventsWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function requestFullAccessToRemindersWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function requestAccessToEntityType(entityType:EKEntityType, completion:(Bool, Null<NSError>) -> Void):Void;

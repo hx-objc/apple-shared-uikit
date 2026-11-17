@@ -5,10 +5,15 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CryptoTokenKit") @:hxmc.objc extern class TKSmartCardSlotNFCSession extends NSObject {
+@:hxmc.framework("CryptoTokenKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class TKSmartCardSlotNFCSession extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():TKSmartCardSlotNFCSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var slotName(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_slotName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateWithMessage(message:NSStringArg, error:Ptr):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function endSession():Void;
 }

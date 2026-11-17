@@ -4,29 +4,49 @@ package uikit;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextSelectionDisplayInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITextSelectionDisplayInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITextSelectionDisplayInteraction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var activated(get, set) : Bool;
 	@:selector("isActivated")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_activated():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_activated(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var textInput(get, never) : Null<UITextInput>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_textInput():Null<UITextInput>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var delegate(get, never) : Null<UITextSelectionDisplayInteractionDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_delegate():Null<UITextSelectionDisplayInteractionDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var cursorView(get, set) : UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_cursorView():UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_cursorView(v:UIView):UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var highlightView(get, set) : UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_highlightView():UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_highlightView(v:UIView):UIView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var handleViews(get, set) : NSArray<UIView>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_handleViews():NSArray<UIView>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_handleViews(v:NSArray<UIView>):NSArray<UIView>;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithTextInput(textInput:UITextInput, delegate:UITextSelectionDisplayInteractionDelegate):UITextSelectionDisplayInteraction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function layoutManagedSubviews():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setNeedsSelectionUpdate():Void;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

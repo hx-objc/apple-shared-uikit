@@ -5,12 +5,16 @@ import foundation.NSArray;
 import hxmc.objc.Id;
 import hxmc.objc.Selector;
 
-@:hxmc.objc("UITraitChangeObservable") extern interface UITraitChangeObservable extends hxmc.objc.Id {
+@:hxmc.objc("UITraitChangeObservable") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITraitChangeObservable extends hxmc.objc.Id {
 	@:selector("registerForTraitChanges:withHandler:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithHandler(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withTarget:action:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithTargetAction(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withAction:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithAction(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function unregisterForTraitChanges(registration:UITraitChangeRegistration):Void;
 }

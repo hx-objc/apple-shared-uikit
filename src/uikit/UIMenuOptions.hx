@@ -7,6 +7,7 @@ enum abstract UIMenuOptions(I64) to I64 {
 	var DisplayInline = 1;
 	var Destructive = 2;
 	var SingleSelection = 32;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var DisplayAsPalette = 128;
 	inline function new(v:I64) this = v;
 	var None = 0;

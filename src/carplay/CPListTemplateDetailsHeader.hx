@@ -10,39 +10,68 @@ import foundation.NSStringArg;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListTemplateDetailsHeader extends NSObject implements NSSecureCoding implements CPPlayableItem {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPListTemplateDetailsHeader extends NSObject implements NSSecureCoding implements CPPlayableItem {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPListTemplateDetailsHeader;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var thumbnail(get, set) : CPThumbnailImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_thumbnail():CPThumbnailImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_thumbnail(v:CPThumbnailImage):CPThumbnailImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var title(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var bodyVariants(get, set) : NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_bodyVariants():NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_bodyVariants(v:NSArray<NSAttributedString>):NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var actionButtons(get, set) : NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_actionButtons():NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_actionButtons(v:NSArray<CPButton>):NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var adaptiveBackgroundStyle(get, set) : Bool;
 	@:selector("wantsAdaptiveBackgroundStyle")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_adaptiveBackgroundStyle():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_adaptiveBackgroundStyle(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var maximumActionButtonCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_maximumActionButtonCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var maximumActionButtonSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_maximumActionButtonSize():CGSize;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var playbackConfiguration(get, set) : Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_playbackConfiguration():Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_playbackConfiguration(v:Null<CPPlaybackConfiguration>):Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithThumbnail(thumbnail:CPThumbnailImage, title:Null<NSStringArg>, subtitle:Null<NSStringArg>, actionButtons:NSArray<CPButton>):CPListTemplateDetailsHeader;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithThumbnail(thumbnail:CPThumbnailImage, title:Null<NSStringArg>, subtitle:Null<NSStringArg>, bodyVariants:NSArray<NSAttributedString>, actionButtons:NSArray<CPButton>):CPListTemplateDetailsHeader;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPListTemplateDetailsHeader>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function init():CPListTemplateDetailsHeader;
 }

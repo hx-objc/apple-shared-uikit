@@ -3,13 +3,21 @@ package uikit;
 
 import uiutilities.UIAxis;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISplitArrangement extends UIArrangement {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UISplitArrangement extends UIArrangement {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UISplitArrangement;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var axes(get, set) : UIAxis;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_axes():UIAxis;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_axes(v:UIAxis):UIAxis;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var defaultViewProperties(get, never) : UISplitArrangementViewProperties;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_defaultViewProperties():UISplitArrangementViewProperties;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function splitArrangement():UISplitArrangement;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function setViewProperties(viewProperties:UISplitArrangementViewProperties, forPlacement:UIArrangementViewControllerViewPlacement):Void;
 }

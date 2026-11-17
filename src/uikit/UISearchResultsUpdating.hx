@@ -6,6 +6,7 @@ import objc.NSObjectProtocol;
 @:hxmc.objc("UISearchResultsUpdating") extern interface UISearchResultsUpdating extends NSObjectProtocol {
 	function updateSearchResultsForSearchController(searchController:UISearchController):Void;
 	@:selector("updateSearchResultsForSearchController:selectingSearchSuggestion:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function updateSearchResultsForSearchControllerSelectingSearchSuggestion(searchController:UISearchController, selectingSearchSuggestion:UISearchSuggestion):Void;
 }

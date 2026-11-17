@@ -14,7 +14,9 @@ import uikit.UIImage;
 	function get_CGImage():CGImage;
 	var UIImage(get, never) : UIImage;
 	function get_UIImage():UIImage;
+	@:hxmc.available(macos >= 12.0)
 	var contentRect(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_contentRect():CGRect;
 	override function init():QLThumbnailRepresentation;
 }

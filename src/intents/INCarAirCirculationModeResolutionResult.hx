@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCarAirCirculationModeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCarAirCirculationModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INCarAirCirculationModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INCarAirCirculationModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INCarAirCirculationModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INCarAirCirculationModeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INCarAirCirculationModeResolutionResult;
 	static function successWithResolvedCarAirCirculationMode(resolvedCarAirCirculationMode:INCarAirCirculationMode):INCarAirCirculationModeResolutionResult;
 	@:deprecated

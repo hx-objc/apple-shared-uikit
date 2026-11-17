@@ -10,9 +10,12 @@ import objc.NSObject;
 	var elements(get, set) : NSSet<NSString>;
 	function get_elements():NSSet<NSString>;
 	function set_elements(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_hidden(v:Bool):Bool;
 	override function init():GCVirtualControllerConfiguration;
 }

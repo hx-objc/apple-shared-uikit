@@ -9,11 +9,17 @@ import foundation.NSStringArg;
 	var sourceView(get, set) : Null<UIView>;
 	function get_sourceView():Null<UIView>;
 	function set_sourceView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var preferredPlacement(get, set) : UISheetPresentationControllerPlacement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_preferredPlacement():UISheetPresentationControllerPlacement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_preferredPlacement(v:UISheetPresentationControllerPlacement):UISheetPresentationControllerPlacement;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var prefersPageSizing(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_prefersPageSizing():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_prefersPageSizing(v:Bool):Bool;
 	var prefersEdgeAttachedInCompactHeight(get, set) : Bool;
 	function get_prefersEdgeAttachedInCompactHeight():Bool;
@@ -39,6 +45,7 @@ import foundation.NSStringArg;
 	var prefersScrollingExpandsWhenScrolledToEdge(get, set) : Bool;
 	function get_prefersScrollingExpandsWhenScrolledToEdge():Bool;
 	function set_prefersScrollingExpandsWhenScrolledToEdge(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function invalidateDetents():Void;
 	function animateChanges(changes:() -> Void):Void;
 	override function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:Null<UIViewController>):UISheetPresentationController;

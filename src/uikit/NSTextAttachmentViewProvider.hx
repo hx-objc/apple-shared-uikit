@@ -8,21 +8,37 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextAttachmentViewProvider extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextAttachmentViewProvider extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextAttachmentViewProvider;
+	@:hxmc.available(macos >= 12.0)
 	var textAttachment(get, never) : Null<NSTextAttachment>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textAttachment():Null<NSTextAttachment>;
+	@:hxmc.available(macos >= 12.0)
 	var textLayoutManager(get, never) : Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLayoutManager():Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	var location(get, never) : NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	function get_location():NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	var view(get, set) : Null<UIView>;
+	@:hxmc.available(macos >= 12.0)
 	function get_view():Null<UIView>;
+	@:hxmc.available(macos >= 12.0)
 	function set_view(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(macos >= 12.0)
 	var tracksTextAttachmentViewBounds(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_tracksTextAttachmentViewBounds():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_tracksTextAttachmentViewBounds(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithTextAttachment(textAttachment:NSTextAttachment, parentView:Null<UIView>, textLayoutManager:Null<NSTextLayoutManager>, location:NSTextLocation):NSTextAttachmentViewProvider;
+	@:hxmc.available(macos >= 12.0)
 	function loadView():Void;
+	@:hxmc.available(macos >= 12.0)
 	function attachmentBoundsForAttributes(attributes:NSDictionary<NSString, Id>, location:NSTextLocation, textContainer:Null<NSTextContainer>, proposedLineFragment:CGRect, position:CGPoint):CGRect;
 }

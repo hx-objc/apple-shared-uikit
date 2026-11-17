@@ -7,6 +7,7 @@ import foundation.NSStringArg;
 import hxmc.I64;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INBookRestaurantReservationIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INBookRestaurantReservationIntent;
 	var restaurant(get, set) : INRestaurant;
 	function get_restaurant():INRestaurant;
@@ -30,6 +31,7 @@ import hxmc.I64;
 	function get_guestProvidedSpecialRequestText():Null<NSStringArg>;
 	function set_guestProvidedSpecialRequestText(v:Null<NSStringArg>):Null<NSStringArg>;
 	function initWithRestaurant(restaurant:INRestaurant, bookingDateComponents:NSDateComponents, partySize:I64, bookingIdentifier:Null<NSStringArg>, guest:Null<INRestaurantGuest>, selectedOffer:Null<INRestaurantOffer>, guestProvidedSpecialRequestText:Null<NSStringArg>):INBookRestaurantReservationIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INBookRestaurantReservationIntent;
 	override function initWithCoder(coder:NSCoder):Null<INBookRestaurantReservationIntent>;
 }

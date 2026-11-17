@@ -5,26 +5,46 @@ import foundation.NSStringArg;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIFindSession extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIFindSession extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIFindSession;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var resultCount(get, never) : I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_resultCount():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var highlightedResultIndex(get, never) : I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_highlightedResultIndex():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchResultDisplayStyle(get, set) : UIFindSessionSearchResultDisplayStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchResultDisplayStyle():UIFindSessionSearchResultDisplayStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_searchResultDisplayStyle(v:UIFindSessionSearchResultDisplayStyle):UIFindSessionSearchResultDisplayStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var supportsReplacement(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_supportsReplacement():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var allowsReplacementForCurrentlyHighlightedResult(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_allowsReplacementForCurrentlyHighlightedResult():Bool;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var allowsReplacement(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_allowsReplacement():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performSearchWithQuery(query:NSStringArg, options:Null<UITextSearchOptions>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performSingleReplacementWithSearchQuery(searchQuery:NSStringArg, replacementString:NSStringArg, options:Null<UITextSearchOptions>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function replaceAllInstancesOfSearchQuery(searchQuery:NSStringArg, withReplacementString:NSStringArg, options:Null<UITextSearchOptions>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function highlightNextResultInDirection(direction:UITextStorageDirection):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function invalidateFoundResults():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UIFindSession;
 }

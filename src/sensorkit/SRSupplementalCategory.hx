@@ -9,9 +9,12 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRSupplementalCategory extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 16.4, maccatalyst >= 16.4) extern class SRSupplementalCategory extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():SRSupplementalCategory;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_identifier():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

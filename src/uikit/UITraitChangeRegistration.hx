@@ -4,6 +4,6 @@ package uikit;
 import foundation.NSCopying;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITraitChangeRegistration") extern interface UITraitChangeRegistration extends NSObjectProtocol extends NSCopying {
+@:hxmc.objc("UITraitChangeRegistration") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITraitChangeRegistration extends NSObjectProtocol extends NSCopying {
 
 }

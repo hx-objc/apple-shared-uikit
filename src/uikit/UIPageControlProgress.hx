@@ -4,16 +4,26 @@ package uikit;
 import hxmc.unsafe.Float32;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPageControlProgress extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIPageControlProgress extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIPageControlProgress;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var delegate(get, set) : Null<UIPageControlProgressDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_delegate():Null<UIPageControlProgressDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_delegate(v:Null<UIPageControlProgressDelegate>):Null<UIPageControlProgressDelegate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var currentProgress(get, set) : Float32;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_currentProgress():Float32;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_currentProgress(v:Float32):Float32;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var progressVisible(get, never) : Bool;
 	@:selector("isProgressVisible")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_progressVisible():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIPageControlProgress;
 }

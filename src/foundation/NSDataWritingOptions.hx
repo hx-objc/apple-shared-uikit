@@ -6,11 +6,17 @@ import hxmc.I64;
 enum abstract NSDataWritingOptions(I64) to I64 {
 	var DataWritingAtomic = 1;
 	var DataWritingWithoutOverwriting = 2;
+	@:hxmc.available(macos >= 11.0)
 	var DataWritingFileProtectionNone = 268435456;
+	@:hxmc.available(macos >= 11.0)
 	var DataWritingFileProtectionComplete = 536870912;
+	@:hxmc.available(macos >= 11.0)
 	var DataWritingFileProtectionCompleteUnlessOpen = 805306368;
+	@:hxmc.available(macos >= 11.0)
 	var DataWritingFileProtectionCompleteUntilFirstUserAuthentication = 1073741824;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var DataWritingFileProtectionCompleteWhenUserInactive = 1342177280;
+	@:hxmc.available(macos >= 11.0)
 	public static final DataWritingFileProtectionMask : NSDataWritingOptions = new NSDataWritingOptions(0x00000000F0000000i64);
 	var AtomicWrite = 1;
 	inline function new(v:I64) this = v;

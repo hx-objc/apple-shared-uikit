@@ -5,8 +5,10 @@ import foundation.NSExtensionContext;
 import foundation.NSExtensionRequestHandling;
 import objc.NSObject;
 
-@:hxmc.framework("QuickLook") @:hxmc.objc extern class QLPreviewProvider extends NSObject implements NSExtensionRequestHandling {
+@:hxmc.framework("QuickLook") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class QLPreviewProvider extends NSObject implements NSExtensionRequestHandling {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():QLPreviewProvider;
 	function beginRequestWithExtensionContext(context:NSExtensionContext):Void;
+	@:hxmc.available(macos >= 12.0)
 	override function init():QLPreviewProvider;
 }

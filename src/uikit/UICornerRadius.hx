@@ -6,10 +6,14 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICornerRadius extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UICornerRadius extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UICornerRadius;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function fixedRadius(radius:Float):UICornerRadius;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function containerConcentricRadius():UICornerRadius;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function containerConcentricRadiusWithMinimum(minimum:Float):UICornerRadius;
 	function copyWithZone(zone:Ptr):Id;
 }

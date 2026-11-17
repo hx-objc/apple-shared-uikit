@@ -11,15 +11,21 @@ import foundation.NSStringArg;
 	function get_identifier():NSStringArg;
 	var options(get, never) : UIMenuOptions;
 	function get_options():UIMenuOptions;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredElementSize(get, set) : UIMenuElementSize;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredElementSize():UIMenuElementSize;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredElementSize(v:UIMenuElementSize):UIMenuElementSize;
 	var children(get, never) : NSArray<UIMenuElement>;
 	function get_children():NSArray<UIMenuElement>;
 	var selectedElements(get, never) : NSArray<UIMenuElement>;
 	function get_selectedElements():NSArray<UIMenuElement>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var displayPreferences(get, set) : Null<UIMenuDisplayPreferences>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_displayPreferences():Null<UIMenuDisplayPreferences>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_displayPreferences(v:Null<UIMenuDisplayPreferences>):Null<UIMenuDisplayPreferences>;
 	static function menuWithChildren(children:NSArray<UIMenuElement>):UIMenu;
 	static overload function menuWithTitle(title:NSStringArg, children:NSArray<UIMenuElement>):UIMenu;

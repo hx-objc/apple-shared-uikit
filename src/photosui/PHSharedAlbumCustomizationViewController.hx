@@ -5,12 +5,19 @@ import foundation.NSStringArg;
 import photos.PHPhotoLibrary;
 import uikit.UIViewController;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHSharedAlbumCustomizationViewController extends UIViewController {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27) extern class PHSharedAlbumCustomizationViewController extends UIViewController {
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	static function alloc():PHSharedAlbumCustomizationViewController;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var delegate(get, set) : Null<PHSharedAlbumCustomizationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_delegate():Null<PHSharedAlbumCustomizationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_delegate(v:Null<PHSharedAlbumCustomizationViewControllerDelegate>):Null<PHSharedAlbumCustomizationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var albumIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_albumIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function initWithAlbumIdentifier(albumIdentifier:NSStringArg, photoLibrary:PHPhotoLibrary):PHSharedAlbumCustomizationViewController;
 }

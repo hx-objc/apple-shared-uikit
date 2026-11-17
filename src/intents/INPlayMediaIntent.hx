@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPlayMediaIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPlayMediaIntent;
 	var mediaItems(get, never) : Null<NSArray<INMediaItem>>;
 	function get_mediaItems():Null<NSArray<INMediaItem>>;
@@ -26,6 +27,7 @@ import foundation.NSNumberArg;
 	overload function initWithMediaItems(mediaItems:Null<NSArray<INMediaItem>>, mediaContainer:Null<INMediaItem>, playShuffled:Null<NSNumberArg>, playbackRepeatMode:INPlaybackRepeatMode, resumePlayback:Null<NSNumberArg>, playbackQueueLocation:INPlaybackQueueLocation, playbackSpeed:Null<NSNumberArg>, mediaSearch:Null<INMediaSearch>):INPlayMediaIntent;
 	@:deprecated
 	overload function initWithMediaItems(mediaItems:Null<NSArray<INMediaItem>>, mediaContainer:Null<INMediaItem>, playShuffled:Null<NSNumberArg>, playbackRepeatMode:INPlaybackRepeatMode, resumePlayback:Null<NSNumberArg>):INPlayMediaIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INPlayMediaIntent;
 	override function initWithCoder(coder:NSCoder):Null<INPlayMediaIntent>;
 }

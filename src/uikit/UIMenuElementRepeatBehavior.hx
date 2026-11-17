@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIMenuElementRepeatBehavior(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Repeatable = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var NonRepeatable = 2;
 	inline function new(v:I64) this = v;
 }

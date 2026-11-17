@@ -8,9 +8,11 @@ import objc.NSObjectProtocol;
 	@:optional
 	function pencilInteractionDidTap(interaction:UIPencilInteraction):Void;
 	@:selector("pencilInteraction:didReceiveTap:")
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	@:optional
 	function pencilInteractionDidReceiveTap(interaction:UIPencilInteraction, didReceiveTap:UIPencilInteractionTap):Void;
 	@:selector("pencilInteraction:didReceiveSqueeze:")
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	@:optional
 	function pencilInteractionDidReceiveSqueeze(interaction:UIPencilInteraction, didReceiveSqueeze:UIPencilInteractionSqueeze):Void;
 }

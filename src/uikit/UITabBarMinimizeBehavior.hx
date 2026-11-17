@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITabBarMinimizeBehavior(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Never = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var OnScrollDown = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var OnScrollUp = 3;
 	inline function new(v:I64) this = v;
 }

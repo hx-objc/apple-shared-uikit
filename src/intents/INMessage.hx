@@ -32,32 +32,51 @@ import objc.NSObject;
 	function get_messageType():INMessageType;
 	var serviceName(get, never) : Null<NSStringArg>;
 	function get_serviceName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var attachmentFiles(get, never) : Null<NSArray<INFile>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_attachmentFiles():Null<NSArray<INFile>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var numberOfAttachments(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_numberOfAttachments():Null<NSNumberArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var audioMessageFile(get, never) : Null<INFile>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_audioMessageFile():Null<INFile>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var linkMetadata(get, never) : Null<INMessageLinkMetadata>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_linkMetadata():Null<INMessageLinkMetadata>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var sticker(get, set) : Null<INSticker>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_sticker():Null<INSticker>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_sticker(v:Null<INSticker>):Null<INSticker>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var reaction(get, set) : Null<INMessageReaction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_reaction():Null<INMessageReaction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_reaction(v:Null<INMessageReaction>):Null<INMessageReaction>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, messageType:INMessageType, serviceName:Null<NSStringArg>, attachmentFiles:Null<NSArray<INFile>>):INMessage;
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, messageType:INMessageType, serviceName:Null<NSStringArg>, audioMessageFile:Null<INFile>):INMessage;
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, messageType:INMessageType, serviceName:Null<NSStringArg>):INMessage;
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, messageType:INMessageType):INMessage;
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, messageType:INMessageType):INMessage;
 	overload function initWithIdentifier(identifier:NSStringArg, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>):INMessage;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, serviceName:Null<NSStringArg>, linkMetadata:Null<INMessageLinkMetadata>):INMessage;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, serviceName:Null<NSStringArg>, messageType:INMessageType, numberOfAttachments:Null<NSNumberArg>):INMessage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, serviceName:Null<NSStringArg>, messageType:INMessageType, referencedMessage:Null<INMessage>, reaction:Null<INMessageReaction>):INMessage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithIdentifier(identifier:NSStringArg, conversationIdentifier:Null<NSStringArg>, content:Null<NSStringArg>, dateSent:Null<NSDate>, sender:Null<INPerson>, recipients:Null<NSArray<INPerson>>, groupName:Null<INSpeakableString>, serviceName:Null<NSStringArg>, messageType:INMessageType, referencedMessage:Null<INMessage>, sticker:Null<INSticker>, reaction:Null<INMessageReaction>):INMessage;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

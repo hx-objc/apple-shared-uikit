@@ -9,12 +9,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceContentVideoProperties extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceContentVideoProperties extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceContentVideoProperties;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var presentationSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_presentationSize():CGSize;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPresentationSize(presentationSize:CGSize):AVPlaybackUserInterfaceContentVideoProperties;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

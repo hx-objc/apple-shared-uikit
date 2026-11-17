@@ -5,8 +5,10 @@ import coregraphics.CGPoint;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UINotificationFeedbackGenerator extends UIFeedbackGenerator {
 	static function alloc():UINotificationFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorForView(view:UIView):UINotificationFeedbackGenerator;
 	overload function notificationOccurred(notificationType:UINotificationFeedbackType):Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	overload function notificationOccurred(notificationType:UINotificationFeedbackType, atLocation:CGPoint):Void;
 	override function init():UINotificationFeedbackGenerator;
 }

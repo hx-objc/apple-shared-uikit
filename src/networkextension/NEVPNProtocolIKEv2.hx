@@ -35,8 +35,11 @@ import hxmc.I64;
 	var enablePFS(get, set) : Bool;
 	function get_enablePFS():Bool;
 	function set_enablePFS(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var allowPostQuantumKeyExchangeFallback(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_allowPostQuantumKeyExchangeFallback():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_allowPostQuantumKeyExchangeFallback(v:Bool):Bool;
 	var enableRevocationCheck(get, set) : Bool;
 	function get_enableRevocationCheck():Bool;
@@ -53,11 +56,17 @@ import hxmc.I64;
 	var enableFallback(get, set) : Bool;
 	function get_enableFallback():Bool;
 	function set_enableFallback(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var mtu(get, set) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_mtu():I64;
+	@:hxmc.available(macos >= 11.0)
 	function set_mtu(v:I64):I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var ppkConfiguration(get, set) : Null<NEVPNIKEv2PPKConfiguration>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_ppkConfiguration():Null<NEVPNIKEv2PPKConfiguration>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_ppkConfiguration(v:Null<NEVPNIKEv2PPKConfiguration>):Null<NEVPNIKEv2PPKConfiguration>;
 	override function init():NEVPNProtocolIKEv2;
 	override function initWithCoder(coder:NSCoder):Null<NEVPNProtocolIKEv2>;

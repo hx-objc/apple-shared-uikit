@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INAddMediaIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddMediaIntentResponse;
 	var code(get, never) : INAddMediaIntentResponseCode;
 	function get_code():INAddMediaIntentResponseCode;

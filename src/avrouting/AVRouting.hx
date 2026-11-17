@@ -4,5 +4,6 @@ package avrouting;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("AVRouting") extern class AVRouting {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVCustomRoutingControllerAuthorizedRoutesDidChangeNotification : NSString;
 }

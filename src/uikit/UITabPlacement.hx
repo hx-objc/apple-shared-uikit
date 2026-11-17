@@ -4,12 +4,19 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITabPlacement(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Default = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Optional = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Movable = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Pinned = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Fixed = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SidebarOnly = 6;
 	inline function new(v:I64) this = v;
 }

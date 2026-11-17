@@ -7,17 +7,26 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableConfigurationState extends NSObject implements UIConfigurationState {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableConfigurationState extends NSObject implements UIConfigurationState {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableConfigurationState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var traitCollection(get, set) : UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_traitCollection():UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_traitCollection(v:UITraitCollection):UITraitCollection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var searchText(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_searchText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_searchText(v:Null<NSStringArg>):Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithTraitCollection(traitCollection:UITraitCollection):UIContentUnavailableConfigurationState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithCoder(coder:NSCoder):Null<UIContentUnavailableConfigurationState>;
 	function customStateForKey(key:NSStringArg):Null<Id>;
 	function setCustomState(customState:Null<Id>, forKey:NSStringArg):Void;

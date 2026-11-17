@@ -52,6 +52,7 @@ import objc.NSObjectProtocol;
 	@:deprecated
 	@:optional
 	function locationManagerDidChangeAuthorizationStatus(manager:CLLocationManager, didChangeAuthorizationStatus:CLAuthorizationStatus):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:optional
 	function locationManagerDidChangeAuthorization(manager:CLLocationManager):Void;
 	@:selector("locationManager:didStartMonitoringForRegion:")

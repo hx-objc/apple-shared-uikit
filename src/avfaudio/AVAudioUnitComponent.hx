@@ -39,11 +39,17 @@ import uikit.UIImage;
 	function get_allTagNames():NSArray<NSString>;
 	var audioComponentDescription(get, never) : AudioComponentDescription;
 	function get_audioComponentDescription():AudioComponentDescription;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var icon(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_icon():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var passesAUVal(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_passesAUVal():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var configurationDictionary(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_configurationDictionary():NSDictionary<NSString, Id>;
 	override function init():AVAudioUnitComponent;
 }

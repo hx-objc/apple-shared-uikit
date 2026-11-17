@@ -7,15 +7,22 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingSportsTeamLogo extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingSportsTeamLogo extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingSportsTeamLogo;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var logo(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_logo():Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var initials(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_initials():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithTeamLogo(teamLogo:UIImage):CPNowPlayingSportsTeamLogo;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithTeamInitials(teamInitials:NSStringArg):CPNowPlayingSportsTeamLogo;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNowPlayingSportsTeamLogo>;

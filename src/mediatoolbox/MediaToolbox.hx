@@ -9,6 +9,7 @@ import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("MediaToolbox") extern class MediaToolbox {
 	public static function MTAudioProcessingTapCreate(allocator:Null<CFAllocator>, callbacks:Ptr, flags:Int, tapOut:Ptr):Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static function MTAudioProcessingTapCreateWithPreferredFormat(allocator:Null<CFAllocator>, callbacks:Ptr, flags:Int, preferredFormat:Null<CMAudioFormatDescription>, tapOut:Ptr):Int;
 	public static function MTAudioProcessingTapGetSourceAudio(tap:MTAudioProcessingTap, numberFrames:I64, bufferListInOut:Ptr, flagsOut:Ptr, timeRangeOut:Ptr, numberFramesOut:Ptr):Int;
 	public static function MTAudioProcessingTapGetStorage(tap:MTAudioProcessingTap):Ptr;

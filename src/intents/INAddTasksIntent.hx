@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INAddTasksIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddTasksIntent;
 	var targetTaskList(get, never) : Null<INTaskList>;
 	function get_targetTaskList():Null<INTaskList>;
@@ -19,6 +20,7 @@ import foundation.NSCoder;
 	overload function initWithTargetTaskList(targetTaskList:Null<INTaskList>, taskTitles:Null<NSArray<INSpeakableString>>, spatialEventTrigger:Null<INSpatialEventTrigger>, temporalEventTrigger:Null<INTemporalEventTrigger>, priority:INTaskPriority):INAddTasksIntent;
 	@:deprecated
 	overload function initWithTargetTaskList(targetTaskList:Null<INTaskList>, taskTitles:Null<NSArray<INSpeakableString>>, spatialEventTrigger:Null<INSpatialEventTrigger>, temporalEventTrigger:Null<INTemporalEventTrigger>):INAddTasksIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INAddTasksIntent;
 	override function initWithCoder(coder:NSCoder):Null<INAddTasksIntent>;
 }

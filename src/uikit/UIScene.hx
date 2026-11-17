@@ -23,12 +23,17 @@ import foundation.NSURL;
 	var activationConditions(get, set) : UISceneActivationConditions;
 	function get_activationConditions():UISceneActivationConditions;
 	function set_activationConditions(v:UISceneActivationConditions):UISceneActivationConditions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var destructionConditions(get, set) : NSSet<UISceneDestructionCondition>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_destructionConditions():NSSet<UISceneDestructionCondition>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_destructionConditions(v:NSSet<UISceneDestructionCondition>):NSSet<UISceneDestructionCondition>;
 	var pointerLockState(get, never) : Null<UIPointerLockState>;
 	function get_pointerLockState():Null<UIPointerLockState>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var systemProtectionManager(get, never) : Null<UISceneSystemProtectionManager>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_systemProtectionManager():Null<UISceneSystemProtectionManager>;
 	function initWithSession(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIScene;
 	function openURL(url:NSURL, options:Null<UISceneOpenExternalURLOptions>, completionHandler:Null<Bool -> Void>):Void;

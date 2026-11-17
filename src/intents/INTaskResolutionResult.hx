@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INTaskResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INTaskResolutionResult;
 	static function successWithResolvedTask(resolvedTask:INTask):INTaskResolutionResult;
 	static function disambiguationWithTasksToDisambiguate(tasksToDisambiguate:NSArray<INTask>):INTaskResolutionResult;

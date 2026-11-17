@@ -7,43 +7,77 @@ import foundation.NSRange;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIWritingToolsCoordinator extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class UIWritingToolsCoordinator extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():UIWritingToolsCoordinator;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static var isWritingToolsAvailable(get, never) : Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function get_isWritingToolsAvailable():Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var delegate(get, never) : Null<UIWritingToolsCoordinatorDelegate>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_delegate():Null<UIWritingToolsCoordinatorDelegate>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var effectContainerView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_effectContainerView():Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_effectContainerView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var decorationContainerView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_decorationContainerView():Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_decorationContainerView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var state(get, never) : UIWritingToolsCoordinatorState;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_state():UIWritingToolsCoordinatorState;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var preferredBehavior(get, set) : UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_preferredBehavior():UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_preferredBehavior(v:UIWritingToolsBehavior):UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var behavior(get, never) : UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_behavior():UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var preferredResultOptions(get, set) : UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_preferredResultOptions():UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_preferredResultOptions(v:UIWritingToolsResultOptions):UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var includesTextListMarkers(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_includesTextListMarkers():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_includesTextListMarkers(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var resultOptions(get, never) : UIWritingToolsResultOptions;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_resultOptions():UIWritingToolsResultOptions;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function initWithDelegate(delegate:Null<UIWritingToolsCoordinatorDelegate>):UIWritingToolsCoordinator;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function stopWritingTools():Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function updateRange(range:NSRange, withText:NSAttributedString, reason:UIWritingToolsCoordinatorTextUpdateReason, forContextWithIdentifier:NSUUID):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function updateForReflowedTextInContextWithIdentifier(contextID:NSUUID):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function startTextAnimation(textAnimation:UIWritingToolsCoordinatorTextAnimation, forRange:NSRange, inContext:UIWritingToolsCoordinatorContext, writingDirection:NSWritingDirection):Null<NSUUID>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function cancelTextAnimationsWithIdentifiers(identifiers:NSArray<NSUUID>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function showGrammarPresentationForRange(range:NSRange, inContext:UIWritingToolsCoordinatorContext):Bool;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	override function init():UIWritingToolsCoordinator;
 }

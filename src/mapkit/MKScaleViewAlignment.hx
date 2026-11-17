@@ -6,6 +6,7 @@ import hxmc.I64;
 enum abstract MKScaleViewAlignment(I64) to I64 {
 	var Leading = 0;
 	var Trailing = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Center = 2;
 	inline function new(v:I64) this = v;
 }

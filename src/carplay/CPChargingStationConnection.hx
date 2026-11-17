@@ -11,19 +11,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPChargingStationConnection extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPChargingStationConnection extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPChargingStationConnection;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var connector(get, never) : CPChargingStationConnectionConnector;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_connector():CPChargingStationConnectionConnector;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var voltage(get, never) : NSMeasurement<NSUnitElectricPotentialDifference>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_voltage():NSMeasurement<NSUnitElectricPotentialDifference>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var power(get, never) : NSMeasurement<NSUnitPower>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_power():NSMeasurement<NSUnitPower>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithConnector(connector:CPChargingStationConnectionConnector, voltage:NSMeasurement<NSUnitElectricPotentialDifference>, power:NSMeasurement<NSUnitPower>):CPChargingStationConnection;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPChargingStationConnection>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():CPChargingStationConnection;
 }

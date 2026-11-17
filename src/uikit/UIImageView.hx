@@ -42,10 +42,15 @@ import symbols.NSSymbolEffectOptions;
 	var animating(get, never) : Bool;
 	@:selector("isAnimating")
 	function get_animating():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredImageDynamicRange(get, set) : UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredImageDynamicRange():UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredImageDynamicRange(v:UIImageDynamicRange):UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var imageDynamicRange(get, never) : UIImageDynamicRange;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_imageDynamicRange():UIImageDynamicRange;
 	var adjustsImageSizeForAccessibilityContentSizeCategory(get, set) : Bool;
 	function get_adjustsImageSizeForAccessibilityContentSizeCategory():Bool;
@@ -54,19 +59,33 @@ import symbols.NSSymbolEffectOptions;
 	overload function initWithImage(image:Null<UIImage>, highlightedImage:Null<UIImage>):UIImageView;
 	function startAnimating():Void;
 	function stopAnimating():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool, completion:Null<UISymbolEffectCompletionContext -> Void>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool, completion:Null<UISymbolEffectCompletionContext -> Void>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function removeAllSymbolEffects():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeAllSymbolEffectsWithOptions(options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeAllSymbolEffectsWithOptions(options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function setSymbolImage(symbolImage:UIImage, withContentTransition:NSSymbolContentTransition):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function setSymbolImage(symbolImage:UIImage, withContentTransition:NSSymbolContentTransition, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function setSymbolImage(symbolImage:UIImage, withContentTransition:NSSymbolContentTransition, options:NSSymbolEffectOptions, completion:Null<UISymbolEffectCompletionContext -> Void>):Void;
 	override function init():UIImageView;
 	override function initWithCoder(coder:NSCoder):Null<UIImageView>;

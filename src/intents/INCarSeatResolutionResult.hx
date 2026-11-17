@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCarSeatResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCarSeatResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INCarSeatResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INCarSeatResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INCarSeatResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INCarSeatResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INCarSeatResolutionResult;
 	static function successWithResolvedCarSeat(resolvedCarSeat:INCarSeat):INCarSeatResolutionResult;
 	@:deprecated

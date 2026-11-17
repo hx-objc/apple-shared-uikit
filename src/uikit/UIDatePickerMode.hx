@@ -8,6 +8,7 @@ enum abstract UIDatePickerMode(I64) to I64 {
 	var Date = 1;
 	var DateAndTime = 2;
 	var CountDownTimer = 3;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var YearAndMonth = 4;
 	inline function new(v:I64) this = v;
 }

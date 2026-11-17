@@ -6,18 +6,30 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICornerConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UICornerConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithRadius(radius:UICornerRadius):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithTopLeftRadius(topLeftRadius:Null<UICornerRadius>, topRightRadius:Null<UICornerRadius>, bottomLeftRadius:Null<UICornerRadius>, bottomRightRadius:Null<UICornerRadius>):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function capsuleConfiguration():UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function capsuleConfigurationWithMaximumRadius(maximumRadius:Float):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithUniformRadius(radius:UICornerRadius):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function configurationWithUniformTopRadius(topRadius:UICornerRadius, uniformBottomRadius:UICornerRadius):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function configurationWithUniformLeftRadius(leftRadius:UICornerRadius, uniformRightRadius:UICornerRadius):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function configurationWithUniformTopRadius(topRadius:UICornerRadius, bottomLeftRadius:Null<UICornerRadius>, bottomRightRadius:Null<UICornerRadius>):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithUniformBottomRadius(bottomRadius:UICornerRadius, topLeftRadius:Null<UICornerRadius>, topRightRadius:Null<UICornerRadius>):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function configurationWithUniformLeftRadius(leftRadius:UICornerRadius, topRightRadius:Null<UICornerRadius>, bottomRightRadius:Null<UICornerRadius>):UICornerConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithUniformRightRadius(rightRadius:UICornerRadius, topLeftRadius:Null<UICornerRadius>, bottomLeftRadius:Null<UICornerRadius>):UICornerConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 }

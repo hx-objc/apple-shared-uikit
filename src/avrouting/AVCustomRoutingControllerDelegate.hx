@@ -3,13 +3,16 @@ package avrouting;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVCustomRoutingControllerDelegate") extern interface AVCustomRoutingControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("AVCustomRoutingControllerDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface AVCustomRoutingControllerDelegate extends NSObjectProtocol {
 	@:selector("customRoutingController:handleEvent:completionHandler:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function customRoutingControllerHandleEventCompletionHandler(controller:AVCustomRoutingController, handleEvent:AVCustomRoutingEvent, completionHandler:Bool -> Void):Void;
 	@:selector("customRoutingController:eventDidTimeOut:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function customRoutingControllerEventDidTimeOut(controller:AVCustomRoutingController, eventDidTimeOut:AVCustomRoutingEvent):Void;
 	@:selector("customRoutingController:didSelectItem:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function customRoutingControllerDidSelectItem(controller:AVCustomRoutingController, didSelectItem:AVCustomRoutingActionItem):Void;
 }

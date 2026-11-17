@@ -5,11 +5,13 @@ import foundation.NSArray;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("CoreML") extern class CoreML {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function MLAllComputeDevices():NSArray<MLComputeDeviceProtocol>;
 	public static final MLFeatureValueImageOptionCropAndScale : NSString;
 	public static final MLFeatureValueImageOptionCropRect : NSString;
 	public static final MLModelAuthorKey : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final MLModelCollectionDidChangeNotification : NSString;
 	public static final MLModelCreatorDefinedKey : NSString;
 	public static final MLModelDescriptionKey : NSString;

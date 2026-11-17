@@ -3,6 +3,7 @@ package network;
 
 import foundation.NSString;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.CString;
@@ -14,19 +15,23 @@ import objc.NSObject;
 @:hxmc.c @:hxmc.framework("Network") extern class Network {
 	@:hxmc.retained
 	public static function nw_advertise_descriptor_copy_txt_record_object(advertise_descriptor:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function nw_advertise_descriptor_create_application_service(application_service_name:CString):NSObject;
 	@:hxmc.retained
 	public static function nw_advertise_descriptor_create_bonjour_service(name:CString, type:CString, domain:CString):Null<NSObject>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_advertise_descriptor_get_application_service_name(advertise_descriptor:NSObject):CString;
 	public static function nw_advertise_descriptor_get_no_auto_rename(advertise_descriptor:NSObject):Bool;
 	public static function nw_advertise_descriptor_set_no_auto_rename(advertise_descriptor:NSObject, no_auto_rename:Bool):Void;
 	public static function nw_advertise_descriptor_set_txt_record(advertise_descriptor:NSObject, txt_record:Ptr, txt_length:I64):Void;
 	public static function nw_advertise_descriptor_set_txt_record_object(advertise_descriptor:NSObject, txt_record:Null<NSObject>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function nw_browse_descriptor_create_application_service(application_service_name:CString):NSObject;
 	@:hxmc.retained
 	public static function nw_browse_descriptor_create_bonjour_service(type:CString, domain:CString):NSObject;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_browse_descriptor_get_application_service_name(descriptor:NSObject):CString;
 	public static function nw_browse_descriptor_get_bonjour_service_domain(descriptor:NSObject):CString;
 	public static function nw_browse_descriptor_get_bonjour_service_type(descriptor:NSObject):CString;
@@ -69,32 +74,51 @@ import objc.NSObject;
 	public static function nw_connection_create_new_data_transfer_report(connection:NSObject):NSObject;
 	public static function nw_connection_force_cancel(connection:NSObject):Void;
 	public static function nw_connection_get_maximum_datagram_size(connection:NSObject):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_cancel(group:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_copy_descriptor(group:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_copy_local_endpoint_for_message(group:NSObject, context:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_copy_parameters(group:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_copy_path_for_message(group:NSObject, context:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_connection_group_copy_protocol_metadata(group:NSObject, definition:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_connection_group_copy_protocol_metadata_for_message(group:NSObject, context:NSObject, definition:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_copy_remote_endpoint_for_message(group:NSObject, context:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_create(group_descriptor:NSObject, parameters:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_connection_group_extract_connection(group:NSObject, endpoint:Null<NSObject>, protocol_options:Null<NSObject>):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_connection_group_extract_connection_for_message(group:NSObject, context:NSObject):Null<NSObject>;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_connection_group_reinsert_extracted_connection(group:NSObject, connection:NSObject):Bool;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_reply(group:NSObject, inbound_message:NSObject, outbound_message:NSObject, content:Null<NSObject>):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_send_message(group:NSObject, content:Null<NSObject>, endpoint:Null<NSObject>, context:NSObject, completion:Block<Null<NSObject> -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_connection_group_set_new_connection_handler(group:NSObject, new_connection_handler:Null<Block<NSObject -> Void>>):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_set_queue(group:NSObject, queue:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_set_receive_handler(group:NSObject, maximum_message_size:Int, reject_oversized_messages:Bool, receive_handler:Null<Block<(Null<NSObject>, NSObject, Bool) -> Void>>):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_set_state_changed_handler(group:NSObject, state_changed_handler:Null<Block<(Nw_connection_group_state_t, Null<NSObject>) -> Void>>):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_connection_group_start(group:NSObject):Void;
 	public static function nw_connection_receive(connection:NSObject, minimum_incomplete_length:Int, maximum_length:Int, completion:Block<(Null<NSObject>, Null<NSObject>, Bool, Null<NSObject>) -> Void>):Void;
 	public static function nw_connection_receive_message(connection:NSObject, completion:Block<(Null<NSObject>, Null<NSObject>, Bool, Null<NSObject>) -> Void>):Void;
@@ -127,6 +151,7 @@ import objc.NSObject;
 	public static function nw_data_transfer_report_copy_path_interface(report:NSObject, path_index:Int):NSObject;
 	public static function nw_data_transfer_report_get_duration_milliseconds(report:NSObject):I64;
 	public static function nw_data_transfer_report_get_path_count(report:NSObject):Int;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_data_transfer_report_get_path_radio_type(report:NSObject, path_index:Int):Nw_interface_radio_type_t;
 	public static function nw_data_transfer_report_get_received_application_byte_count(report:NSObject, path_index:Int):I64;
 	public static function nw_data_transfer_report_get_received_ip_packet_count(report:NSObject, path_index:Int):I64;
@@ -143,6 +168,7 @@ import objc.NSObject;
 	public static function nw_data_transfer_report_get_transport_smoothed_rtt_milliseconds(report:NSObject, path_index:Int):I64;
 	public static function nw_endpoint_copy_address_string(endpoint:NSObject):Ptr;
 	public static function nw_endpoint_copy_port_string(endpoint:NSObject):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function nw_endpoint_copy_txt_record(endpoint:NSObject):Null<NSObject>;
 	@:hxmc.retained
@@ -159,7 +185,9 @@ import objc.NSObject;
 	public static function nw_endpoint_get_bonjour_service_type(endpoint:NSObject):CString;
 	public static function nw_endpoint_get_hostname(endpoint:NSObject):CString;
 	public static function nw_endpoint_get_port(endpoint:NSObject):UInt16;
-	public static function nw_endpoint_get_signature(endpoint:NSObject, out_signature_length:Ptr):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
+	@:hxmc.len(out_signature_length, 1)
+	public static function nw_endpoint_get_signature(endpoint:NSObject, out_signature_length:Span<I64>):Ptr;
 	public static function nw_endpoint_get_type(endpoint:NSObject):Nw_endpoint_type_t;
 	public static function nw_endpoint_get_url(endpoint:NSObject):CString;
 	public static function nw_error_get_error_code(error:NSObject):Int;
@@ -167,6 +195,7 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function nw_establishment_report_copy_proxy_endpoint(report:NSObject):Null<NSObject>;
 	public static function nw_establishment_report_enumerate_protocols(report:NSObject, enumerate_block:Block<(NSObject, I64, I64) -> Bool>):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_establishment_report_enumerate_resolution_reports(report:NSObject, enumerate_block:Block<NSObject -> Bool>):Void;
 	public static function nw_establishment_report_enumerate_resolutions(report:NSObject, enumerate_block:Block<(Nw_report_resolution_source_t, I64, Int, NSObject, NSObject) -> Bool>):Void;
 	public static function nw_establishment_report_get_attempt_started_after_milliseconds(report:NSObject):I64;
@@ -177,6 +206,7 @@ import objc.NSObject;
 	public static function nw_framer_async(framer:NSObject, async_block:Block<() -> Void>):Void;
 	@:hxmc.retained
 	public static function nw_framer_copy_local_endpoint(framer:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	@:hxmc.retained
 	public static function nw_framer_copy_options(framer:NSObject):NSObject;
 	@:hxmc.retained
@@ -198,8 +228,10 @@ import objc.NSObject;
 	public static function nw_framer_message_create(framer:NSObject):NSObject;
 	public static function nw_framer_message_set_object_value(message:NSObject, key:CString, value:Null<Id>):Void;
 	public static function nw_framer_message_set_value(message:NSObject, key:CString, value:Ptr, dispose_value:Null<Block<Ptr -> Void>>):Void;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	@:hxmc.retained
 	public static function nw_framer_options_copy_object_value(options:NSObject, key:CString):Null<Id>;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static function nw_framer_options_set_object_value(options:NSObject, key:CString, value:Null<Id>):Void;
 	public static function nw_framer_parse_input(framer:NSObject, minimum_incomplete_length:I64, maximum_length:I64, temp_buffer:Ptr, parse:Block<(Ptr, I64, Bool) -> I64>):Bool;
 	public static function nw_framer_parse_output(framer:NSObject, minimum_incomplete_length:I64, maximum_length:I64, temp_buffer:Ptr, parse:Block<(Ptr, I64, Bool) -> I64>):Bool;
@@ -217,11 +249,15 @@ import objc.NSObject;
 	public static function nw_framer_write_output(framer:NSObject, output_buffer:Ptr, output_length:I64):Void;
 	public static function nw_framer_write_output_data(framer:NSObject, output_data:NSObject):Void;
 	public static function nw_framer_write_output_no_copy(framer:NSObject, output_length:I64):Bool;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_group_descriptor_add_endpoint(descriptor:NSObject, endpoint:NSObject):Bool;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_group_descriptor_create_multicast(multicast_group:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_group_descriptor_create_multiplex(remote_endpoint:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_group_descriptor_enumerate_endpoints(descriptor:NSObject, enumerate_block:Block<NSObject -> Bool>):Void;
 	public static function nw_interface_get_index(interface_:NSObject):Int;
 	public static function nw_interface_get_name(interface_:NSObject):CString;
@@ -235,6 +271,7 @@ import objc.NSObject;
 	public static function nw_ip_metadata_set_service_class(metadata:NSObject, service_class:Nw_service_class_t):Void;
 	public static function nw_ip_options_set_calculate_receive_time(options:NSObject, calculate_receive_time:Bool):Void;
 	public static function nw_ip_options_set_disable_fragmentation(options:NSObject, disable_fragmentation:Bool):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_ip_options_set_disable_multicast_loopback(options:NSObject, disable_multicast_loopback:Bool):Void;
 	public static function nw_ip_options_set_hop_limit(options:NSObject, hop_limit:UInt8):Void;
 	public static function nw_ip_options_set_local_address_preference(options:NSObject, preference:Nw_ip_local_address_preference_t):Void;
@@ -251,14 +288,18 @@ import objc.NSObject;
 	public static function nw_listener_get_port(listener:NSObject):UInt16;
 	public static function nw_listener_set_advertise_descriptor(listener:NSObject, advertise_descriptor:Null<NSObject>):Void;
 	public static function nw_listener_set_advertised_endpoint_changed_handler(listener:NSObject, handler:Null<Block<(NSObject, Bool) -> Void>>):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_listener_set_new_connection_group_handler(listener:NSObject, handler:Null<Block<NSObject -> Void>>):Void;
 	public static function nw_listener_set_new_connection_handler(listener:NSObject, handler:Null<Block<NSObject -> Void>>):Void;
 	public static function nw_listener_set_new_connection_limit(listener:NSObject, new_connection_limit:Int):Void;
 	public static function nw_listener_set_queue(listener:NSObject, queue:NSObject):Void;
 	public static function nw_listener_set_state_changed_handler(listener:NSObject, handler:Null<Block<(Nw_listener_state_t, Null<NSObject>) -> Void>>):Void;
 	public static function nw_listener_start(listener:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_multicast_group_descriptor_get_disable_unicast_traffic(multicast_descriptor:NSObject):Bool;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_multicast_group_descriptor_set_disable_unicast_traffic(multicast_descriptor:NSObject, disable_unicast_traffic:Bool):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_multicast_group_descriptor_set_specific_source(multicast_descriptor:NSObject, source:NSObject):Void;
 	public static function nw_parameters_clear_prohibited_interface_types(parameters:NSObject):Void;
 	public static function nw_parameters_clear_prohibited_interfaces(parameters:NSObject):Void;
@@ -272,15 +313,19 @@ import objc.NSObject;
 	public static function nw_parameters_copy_required_interface(parameters:NSObject):Null<NSObject>;
 	@:hxmc.retained
 	public static function nw_parameters_create():NSObject;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function nw_parameters_create_application_service():NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_parameters_create_quic(configure_quic:Block<NSObject -> Void>):NSObject;
 	@:hxmc.retained
 	public static function nw_parameters_create_secure_tcp(configure_tls:Block<NSObject -> Void>, configure_tcp:Block<NSObject -> Void>):NSObject;
 	@:hxmc.retained
 	public static function nw_parameters_create_secure_udp(configure_dtls:Block<NSObject -> Void>, configure_udp:Block<NSObject -> Void>):NSObject;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function nw_parameters_get_allow_ultra_constrained(parameters:NSObject):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_parameters_get_attribution(parameters:NSObject):Nw_parameters_attribution_t;
 	public static function nw_parameters_get_expired_dns_behavior(parameters:NSObject):Nw_parameters_expired_dns_behavior_t;
 	public static function nw_parameters_get_fast_open_enabled(parameters:NSObject):Bool;
@@ -298,8 +343,11 @@ import objc.NSObject;
 	public static function nw_parameters_prohibit_interface(parameters:NSObject, interface_:NSObject):Void;
 	public static function nw_parameters_prohibit_interface_type(parameters:NSObject, interface_type:Nw_interface_type_t):Void;
 	public static function nw_parameters_require_interface(parameters:NSObject, interface_:Null<NSObject>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_parameters_requires_dnssec_validation(parameters:NSObject):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function nw_parameters_set_allow_ultra_constrained(parameters:NSObject, allow_ultra_constrained:Bool):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_parameters_set_attribution(parameters:NSObject, attribution:Nw_parameters_attribution_t):Void;
 	public static function nw_parameters_set_expired_dns_behavior(parameters:NSObject, expired_dns_behavior:Nw_parameters_expired_dns_behavior_t):Void;
 	public static function nw_parameters_set_fast_open_enabled(parameters:NSObject, fast_open_enabled:Bool):Void;
@@ -308,10 +356,12 @@ import objc.NSObject;
 	public static function nw_parameters_set_local_only(parameters:NSObject, local_only:Bool):Void;
 	public static function nw_parameters_set_multipath_service(parameters:NSObject, multipath_service:Nw_multipath_service_t):Void;
 	public static function nw_parameters_set_prefer_no_proxy(parameters:NSObject, prefer_no_proxy:Bool):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_parameters_set_privacy_context(parameters:NSObject, privacy_context:NSObject):Void;
 	public static function nw_parameters_set_prohibit_constrained(parameters:NSObject, prohibit_constrained:Bool):Void;
 	public static function nw_parameters_set_prohibit_expensive(parameters:NSObject, prohibit_expensive:Bool):Void;
 	public static function nw_parameters_set_required_interface_type(parameters:NSObject, interface_type:Nw_interface_type_t):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_parameters_set_requires_dnssec_validation(parameters:NSObject, requires_dnssec_validation:Bool):Void;
 	public static function nw_parameters_set_reuse_local_address(parameters:NSObject, reuse_local_address:Bool):Void;
 	public static function nw_parameters_set_service_class(parameters:NSObject, service_class:Nw_service_class_t):Void;
@@ -321,8 +371,10 @@ import objc.NSObject;
 	public static function nw_path_copy_effective_remote_endpoint(path:NSObject):Null<NSObject>;
 	public static function nw_path_enumerate_gateways(path:NSObject, enumerate_block:Block<NSObject -> Bool>):Void;
 	public static function nw_path_enumerate_interfaces(path:NSObject, enumerate_block:Block<NSObject -> Bool>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function nw_path_get_link_quality(path:NSObject):Nw_link_quality_t;
 	public static function nw_path_get_status(path:NSObject):Nw_path_status_t;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_path_get_unsatisfied_reason(path:NSObject):Nw_path_unsatisfied_reason_t;
 	public static function nw_path_has_dns(path:NSObject):Bool;
 	public static function nw_path_has_ipv4(path:NSObject):Bool;
@@ -330,27 +382,36 @@ import objc.NSObject;
 	public static function nw_path_is_constrained(path:NSObject):Bool;
 	public static function nw_path_is_equal(path:NSObject, other_path:NSObject):Bool;
 	public static function nw_path_is_expensive(path:NSObject):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function nw_path_is_ultra_constrained(path:NSObject):Bool;
 	public static function nw_path_monitor_cancel(monitor:NSObject):Void;
 	@:hxmc.retained
 	public static function nw_path_monitor_create():NSObject;
 	@:hxmc.retained
 	public static function nw_path_monitor_create_with_type(required_interface_type:Nw_interface_type_t):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_path_monitor_prohibit_interface_type(monitor:NSObject, interface_type:Nw_interface_type_t):Void;
 	public static function nw_path_monitor_set_cancel_handler(monitor:NSObject, cancel_handler:Block<() -> Void>):Void;
 	public static function nw_path_monitor_set_queue(monitor:NSObject, queue:NSObject):Void;
 	public static function nw_path_monitor_set_update_handler(monitor:NSObject, update_handler:Block<NSObject -> Void>):Void;
 	public static function nw_path_monitor_start(monitor:NSObject):Void;
 	public static function nw_path_uses_interface_type(path:NSObject, interface_type:Nw_interface_type_t):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_privacy_context_add_proxy(privacy_context:NSObject, proxy_config:NSObject):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_privacy_context_clear_proxies(privacy_context:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_privacy_context_create(description:CString):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_privacy_context_disable_logging(privacy_context:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_privacy_context_flush_cache(privacy_context:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_privacy_context_require_encrypted_name_resolution(privacy_context:NSObject, require_encrypted_name_resolution:Bool, fallback_resolver_config:Null<NSObject>):Void;
 	@:hxmc.retained
 	public static function nw_protocol_copy_ip_definition():NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_protocol_copy_quic_definition():NSObject;
 	@:hxmc.retained
@@ -366,6 +427,7 @@ import objc.NSObject;
 	public static function nw_protocol_metadata_copy_definition(metadata:NSObject):NSObject;
 	public static function nw_protocol_metadata_is_framer_message(metadata:NSObject):Bool;
 	public static function nw_protocol_metadata_is_ip(metadata:NSObject):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_protocol_metadata_is_quic(metadata:NSObject):Bool;
 	public static function nw_protocol_metadata_is_tcp(metadata:NSObject):Bool;
 	public static function nw_protocol_metadata_is_tls(metadata:NSObject):Bool;
@@ -373,6 +435,7 @@ import objc.NSObject;
 	public static function nw_protocol_metadata_is_ws(metadata:NSObject):Bool;
 	@:hxmc.retained
 	public static function nw_protocol_options_copy_definition(options:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_protocol_options_is_quic(options:NSObject):Bool;
 	public static function nw_protocol_stack_clear_application_protocols(stack:NSObject):Void;
 	@:hxmc.retained
@@ -382,84 +445,151 @@ import objc.NSObject;
 	public static function nw_protocol_stack_iterate_application_protocols(stack:NSObject, iterate_block:Block<NSObject -> Void>):Void;
 	public static function nw_protocol_stack_prepend_application_protocol(stack:NSObject, protocol:NSObject):Void;
 	public static function nw_protocol_stack_set_transport_protocol(stack:NSObject, protocol:NSObject):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_add_excluded_domain(config:NSObject, excluded_domain:CString):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_add_match_domain(config:NSObject, match_domain:CString):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_clear_excluded_domains(config:NSObject):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_clear_match_domains(config:NSObject):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function nw_proxy_config_create_http_connect(proxy_endpoint:NSObject, proxy_tls_options:Null<NSObject>):NSObject;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function nw_proxy_config_create_oblivious_http(relay:NSObject, relay_resource_path:CString, gateway_key_config:Ptr, gateway_key_config_length:I64):NSObject;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function nw_proxy_config_create_relay(first_hop:NSObject, second_hop:Null<NSObject>):NSObject;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function nw_proxy_config_create_socksv5(proxy_endpoint:NSObject):NSObject;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_enumerate_excluded_domains(config:NSObject, enumerator:Block<CString -> Void>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_enumerate_match_domains(config:NSObject, enumerator:Block<CString -> Void>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_get_failover_allowed(proxy_config:NSObject):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_set_failover_allowed(proxy_config:NSObject, failover_allowed:Bool):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_proxy_config_set_username_and_password(proxy_config:NSObject, username:CString, password:CString):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_add_tls_application_protocol(options:NSObject, application_protocol:CString):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_quic_copy_sec_protocol_metadata(metadata:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_quic_copy_sec_protocol_options(options:NSObject):NSObject;
+	@:hxmc.available(macos >= 12.0)
 	@:hxmc.retained
 	public static function nw_quic_create_options():NSObject;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_application_error(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_application_error_reason(metadata:NSObject):CString;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_idle_timeout(options:NSObject):Int;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_data(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_stream_data_bidirectional_local(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_stream_data_bidirectional_remote(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_stream_data_unidirectional(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_streams_bidirectional(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_initial_max_streams_unidirectional(options:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_keepalive_interval(metadata:NSObject):UInt16;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_local_max_streams_bidirectional(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_local_max_streams_unidirectional(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_quic_get_max_datagram_frame_size(options:NSObject):UInt16;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_max_udp_payload_size(options:NSObject):UInt16;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_remote_idle_timeout(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_remote_max_streams_bidirectional(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_remote_max_streams_unidirectional(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_stream_application_error(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_stream_id(metadata:NSObject):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_quic_get_stream_is_datagram(options:NSObject):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_stream_is_unidirectional(options:NSObject):Bool;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_get_stream_type(stream_metadata:NSObject):UInt8;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_quic_get_stream_usable_datagram_frame_size(metadata:NSObject):UInt16;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_application_error(metadata:NSObject, application_error:I64, reason:CString):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_idle_timeout(options:NSObject, idle_timeout:Int):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_data(options:NSObject, initial_max_data:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_stream_data_bidirectional_local(options:NSObject, initial_max_stream_data_bidirectional_local:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_stream_data_bidirectional_remote(options:NSObject, initial_max_stream_data_bidirectional_remote:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_stream_data_unidirectional(options:NSObject, initial_max_stream_data_unidirectional:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_streams_bidirectional(options:NSObject, initial_max_streams_bidirectional:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_initial_max_streams_unidirectional(options:NSObject, initial_max_streams_unidirectional:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_keepalive_interval(metadata:NSObject, keepalive_interval:UInt16):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_local_max_streams_bidirectional(metadata:NSObject, max_streams_bidirectional:I64):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_local_max_streams_unidirectional(metadata:NSObject, max_streams_unidirectional:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_quic_set_max_datagram_frame_size(options:NSObject, max_datagram_frame_size:UInt16):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_max_udp_payload_size(options:NSObject, max_udp_payload_size:UInt16):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_stream_application_error(metadata:NSObject, application_error:I64):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function nw_quic_set_stream_is_datagram(options:NSObject, is_datagram:Bool):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_quic_set_stream_is_unidirectional(options:NSObject, is_unidirectional:Bool):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function nw_relay_hop_add_additional_http_header_field(relay_hop:NSObject, field_name:CString, field_value:CString):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:hxmc.retained
 	public static function nw_relay_hop_create(http3_relay_endpoint:Null<NSObject>, http2_relay_endpoint:Null<NSObject>, relay_tls_options:Null<NSObject>):NSObject;
 	public static function nw_release(obj:Ptr):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_resolution_report_copy_preferred_endpoint(resolution_report:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_resolution_report_copy_successful_endpoint(resolution_report:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_resolution_report_get_endpoint_count(resolution_report:NSObject):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_resolution_report_get_milliseconds(resolution_report:NSObject):I64;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_resolution_report_get_protocol(resolution_report:NSObject):Nw_report_resolution_protocol_t;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_resolution_report_get_source(resolution_report:NSObject):Nw_report_resolution_source_t;
+	@:hxmc.available(macos >= 11.0)
 	public static function nw_resolver_config_add_server_address(config:NSObject, server_address:NSObject):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_resolver_config_create_https(url_endpoint:NSObject):NSObject;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function nw_resolver_config_create_tls(server_endpoint:NSObject):NSObject;
 	public static function nw_retain(obj:Ptr):Ptr;
@@ -476,6 +606,7 @@ import objc.NSObject;
 	public static function nw_tcp_options_set_keepalive_idle_time(options:NSObject, keepalive_idle_time:Int):Void;
 	public static function nw_tcp_options_set_keepalive_interval(options:NSObject, keepalive_interval:Int):Void;
 	public static function nw_tcp_options_set_maximum_segment_size(options:NSObject, maximum_segment_size:Int):Void;
+	@:hxmc.available(macos >= 12.0)
 	public static function nw_tcp_options_set_multipath_force_version(options:NSObject, multipath_force_version:Nw_multipath_version_t):Void;
 	public static function nw_tcp_options_set_no_delay(options:NSObject, no_delay:Bool):Void;
 	public static function nw_tcp_options_set_no_options(options:NSObject, no_options:Bool):Void;
@@ -537,5 +668,6 @@ import objc.NSObject;
 	public static final kNWErrorDomainDNS : NSString;
 	public static final kNWErrorDomainPOSIX : NSString;
 	public static final kNWErrorDomainTLS : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kNWErrorDomainWiFiAware : NSString;
 }

@@ -26,7 +26,9 @@ import objc.NSObject;
 	function get_productKind():Null<NSStringArg>;
 	var icon(get, never) : Null<CGImage>;
 	function get_icon():Null<CGImage>;
+	@:hxmc.available(macos >= 12.0, ios >= 15.2, maccatalyst >= 15.2)
 	var systemSymbolName(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0, ios >= 15.2, maccatalyst >= 15.2)
 	function get_systemSymbolName():Null<NSStringArg>;
 	var transportType(get, never) : Null<NSStringArg>;
 	function get_transportType():Null<NSStringArg>;

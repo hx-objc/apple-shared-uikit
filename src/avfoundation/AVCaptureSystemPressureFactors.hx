@@ -8,7 +8,9 @@ enum abstract AVCaptureSystemPressureFactors(I64) to I64 {
 	var SystemTemperature = 1;
 	var PeakPower = 2;
 	var DepthModuleTemperature = 4;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var CameraTemperature = 8;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var BatteryStress = 16;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

@@ -65,7 +65,9 @@ import objc.NSObject;
 	function get_configuration():Null<UIImageConfiguration>;
 	var symbolConfiguration(get, never) : Null<UIImageSymbolConfiguration>;
 	function get_symbolConfiguration():Null<UIImageSymbolConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var isHighDynamicRange(get, never) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_isHighDynamicRange():Bool;
 	static var actionsImage(get, never) : UIImage;
 	static function get_actionsImage():UIImage;
@@ -95,10 +97,12 @@ import objc.NSObject;
 	static overload function systemImageNamed(name:NSStringArg):Null<UIImage>;
 	static overload function systemImageNamed(name:NSStringArg, withConfiguration:Null<UIImageConfiguration>):Null<UIImage>;
 	static overload function systemImageNamed(name:NSStringArg, compatibleWithTraitCollection:Null<UITraitCollection>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function systemImageNamed(name:NSStringArg, variableValue:Float, withConfiguration:Null<UIImageConfiguration>):Null<UIImage>;
 	static overload function imageNamed(name:NSStringArg):Null<UIImage>;
 	static overload function imageNamed(name:NSStringArg, inBundle:Null<NSBundle>, withConfiguration:Null<UIImageConfiguration>):Null<UIImage>;
 	static overload function imageNamed(name:NSStringArg, inBundle:Null<NSBundle>, compatibleWithTraitCollection:Null<UITraitCollection>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function imageNamed(name:NSStringArg, inBundle:Null<NSBundle>, variableValue:Float, withConfiguration:Null<UIImageConfiguration>):Null<UIImage>;
 	static function imageWithContentsOfFile(path:NSStringArg):Null<UIImage>;
 	static overload function imageWithData(data:NSData):Null<UIImage>;
@@ -139,6 +143,7 @@ import objc.NSObject;
 	function prepareForDisplayWithCompletionHandler(completionHandler:Null<UIImage> -> Void):Void;
 	function imageByPreparingThumbnailOfSize(size:CGSize):Null<UIImage>;
 	function prepareThumbnailOfSize(size:CGSize, completionHandler:Null<UIImage> -> Void):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function imageRestrictedToStandardDynamicRange():UIImage;
 	function stretchableImageWithLeftCapWidth(leftCapWidth:I64, topCapHeight:I64):UIImage;
 	function encodeWithCoder(coder:NSCoder):Void;

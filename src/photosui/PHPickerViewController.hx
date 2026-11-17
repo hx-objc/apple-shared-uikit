@@ -6,18 +6,31 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHPickerViewController extends UIViewController {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 13) extern class PHPickerViewController extends UIViewController {
+	@:hxmc.available(macos >= 13)
 	static function alloc():PHPickerViewController;
+	@:hxmc.available(macos >= 13)
 	var configuration(get, never) : PHPickerConfiguration;
+	@:hxmc.available(macos >= 13)
 	function get_configuration():PHPickerConfiguration;
+	@:hxmc.available(macos >= 13)
 	var delegate(get, set) : PHPickerViewControllerDelegate;
+	@:hxmc.available(macos >= 13)
 	function get_delegate():PHPickerViewControllerDelegate;
+	@:hxmc.available(macos >= 13)
 	function set_delegate(v:PHPickerViewControllerDelegate):PHPickerViewControllerDelegate;
+	@:hxmc.available(macos >= 13)
 	function initWithConfiguration(configuration:PHPickerConfiguration):PHPickerViewController;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function updatePickerUsingConfiguration(configuration:PHPickerUpdateConfiguration):Void;
+	@:hxmc.available(macos >= 13, ios >= 16, maccatalyst >= 16)
 	function deselectAssetsWithIdentifiers(identifiers:NSArray<NSString>):Void;
+	@:hxmc.available(macos >= 13, ios >= 16, maccatalyst >= 16)
 	function moveAssetWithIdentifier(identifier:NSStringArg, afterAssetWithIdentifier:Null<NSStringArg>):Void;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function scrollToInitialPosition():Void;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function zoomIn():Void;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function zoomOut():Void;
 }

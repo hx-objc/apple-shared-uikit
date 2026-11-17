@@ -4,18 +4,31 @@ package identitylookup;
 import hxmc.I64;
 
 enum abstract ILMessageFilterSubAction(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var None = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalOthers = 10000;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalFinance = 10001;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalOrders = 10002;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalReminders = 10003;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalHealth = 10004;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalWeather = 10005;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalCarrier = 10006;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalRewards = 10007;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var TransactionalPublicServices = 10008;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PromotionalOthers = 20000;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PromotionalOffers = 20001;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PromotionalCoupons = 20002;
 	inline function new(v:I64) this = v;
 }

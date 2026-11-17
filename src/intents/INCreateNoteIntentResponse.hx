@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCreateNoteIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCreateNoteIntentResponse;
 	var code(get, never) : INCreateNoteIntentResponseCode;
 	function get_code():INCreateNoteIntentResponseCode;

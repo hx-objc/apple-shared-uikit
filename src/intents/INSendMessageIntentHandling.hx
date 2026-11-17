@@ -4,24 +4,32 @@ package intents;
 import foundation.NSArray;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("INSendMessageIntentHandling") extern interface INSendMessageIntentHandling extends NSObjectProtocol {
+@:hxmc.objc("INSendMessageIntentHandling") @:hxmc.available(macos >= 12.0) extern interface INSendMessageIntentHandling extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	function handleSendMessage(intent:INSendMessageIntent, completion:INSendMessageIntentResponse -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function confirmSendMessage(intent:INSendMessageIntent, completion:INSendMessageIntentResponse -> Void):Void;
 	@:selector("resolveRecipientsForSendMessage:withCompletion:")
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveRecipientsForSendMessageWithCompletion(intent:INSendMessageIntent, withCompletion:NSArray<INPersonResolutionResult> -> Void):Void;
 	@:selector("resolveRecipientsForSendMessage:completion:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveRecipientsForSendMessageCompletion(intent:INSendMessageIntent, completion:NSArray<INSendMessageRecipientResolutionResult> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveGroupNameForSendMessage(intent:INSendMessageIntent, withCompletion:INStringResolutionResult -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveOutgoingMessageTypeForSendMessage(intent:INSendMessageIntent, withCompletion:INOutgoingMessageTypeResolutionResult -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveContentForSendMessage(intent:INSendMessageIntent, withCompletion:INStringResolutionResult -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveSpeakableGroupNameForSendMessage(intent:INSendMessageIntent, withCompletion:INSpeakableStringResolutionResult -> Void):Void;
 }

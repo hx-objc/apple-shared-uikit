@@ -4,18 +4,31 @@ package carplay;
 import foundation.NSStringArg;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemCondensedElement extends CPListImageRowItemElement {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemCondensedElement extends CPListImageRowItemElement {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemCondensedElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var accessorySymbolName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_accessorySymbolName():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_accessorySymbolName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var imageShape(get, never) : CPListImageRowItemCondensedElementShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_imageShape():CPListImageRowItemCondensedElementShape;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithImage(image:UIImage, imageShape:CPListImageRowItemCondensedElementShape, title:NSStringArg, subtitle:Null<NSStringArg>, accessorySymbolName:Null<NSStringArg>):CPListImageRowItemCondensedElement;
 }

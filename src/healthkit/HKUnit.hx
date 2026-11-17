@@ -13,19 +13,30 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKUnit extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKUnit extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	var unitString(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 13.0)
 	function get_unitString():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 13.0)
 	static function unitFromString(string:NSStringArg):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function unitFromMassFormatterUnit(massFormatterUnit:NSMassFormatterUnit):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function massFormatterUnitFromUnit(unit:HKUnit):NSMassFormatterUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function unitFromLengthFormatterUnit(lengthFormatterUnit:NSLengthFormatterUnit):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function lengthFormatterUnitFromUnit(unit:HKUnit):NSLengthFormatterUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function unitFromEnergyFormatterUnit(energyFormatterUnit:NSEnergyFormatterUnit):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function energyFormatterUnitFromUnit(unit:HKUnit):NSEnergyFormatterUnit;
+	@:hxmc.available(macos >= 13.0)
 	function isNull():Bool;
 	static function gramUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
 	static function gramUnit():HKUnit;
@@ -38,6 +49,7 @@ import objc.NSObject;
 	static function meterUnit():HKUnit;
 	static function inchUnit():HKUnit;
 	static function footUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function yardUnit():HKUnit;
 	static function mileUnit():HKUnit;
 	static function literUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
@@ -46,14 +58,18 @@ import objc.NSObject;
 	static function fluidOunceImperialUnit():HKUnit;
 	static function pintUSUnit():HKUnit;
 	static function pintImperialUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function cupUSUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function cupImperialUnit():HKUnit;
 	static function pascalUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
 	static function pascalUnit():HKUnit;
 	static function millimeterOfMercuryUnit():HKUnit;
 	static function centimeterOfWaterUnit():HKUnit;
 	static function atmosphereUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function decibelAWeightedSoundPressureLevelUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function inchesOfMercuryUnit():HKUnit;
 	static function secondUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
 	static function secondUnit():HKUnit;
@@ -63,7 +79,9 @@ import objc.NSObject;
 	static function jouleUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
 	static function jouleUnit():HKUnit;
 	static function kilocalorieUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function smallCalorieUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function largeCalorieUnit():HKUnit;
 	@:deprecated
 	static function calorieUnit():HKUnit;
@@ -72,27 +90,43 @@ import objc.NSObject;
 	static function kelvinUnit():HKUnit;
 	static function siemenUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
 	static function siemenUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function internationalUnit():HKUnit;
 	static function countUnit():HKUnit;
 	static function percentUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function decibelHearingLevelUnit():HKUnit;
 	function unitMultipliedByUnit(unit:HKUnit):HKUnit;
 	function unitDividedByUnit(unit:HKUnit):HKUnit;
 	function unitRaisedToPower(power:I64):HKUnit;
 	function reciprocalUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function hertzUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function hertzUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function voltUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
+	@:hxmc.available(macos >= 13.0)
 	static function voltUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function wattUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function wattUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function diopterUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function prismDiopterUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function radianAngleUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function radianAngleUnit():HKUnit;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function degreeAngleUnit():HKUnit;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function luxUnitWithMetricPrefix(prefix:HKMetricPrefix):HKUnit;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function luxUnit():HKUnit;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function appleEffortScoreUnit():HKUnit;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<HKUnit>;

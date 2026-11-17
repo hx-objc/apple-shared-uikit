@@ -32,6 +32,8 @@ import foundation.NSTimeZone;
 import foundation.NSTimer;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.ReadOnlySpan;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.CString;
@@ -57,20 +59,25 @@ import objc.NSObject;
 	@:deprecated
 	public static function CFAbsoluteTimeGetWeekOfYear(at:Float, tz:NSTimeZone):Int;
 	public static function CFAllocatorAllocate(allocator:CFAllocator, size:I64, hint:I64):Ptr;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CFAllocatorAllocateBytes(allocator:CFAllocator, size:I64, hint:I64):Ptr;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CFAllocatorAllocateTyped(allocator:CFAllocator, size:I64, descriptor:I64, hint:I64):Ptr;
 	public static function CFAllocatorDeallocate(allocator:CFAllocator, ptr:Ptr):Void;
-	public static function CFAllocatorGetContext(allocator:CFAllocator, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFAllocatorGetContext(allocator:CFAllocator, context:Span<CFAllocatorContext>):Void;
 	public static function CFAllocatorGetPreferredSizeForSize(allocator:CFAllocator, size:I64, hint:I64):I64;
 	public static function CFAllocatorGetTypeID():I64;
 	public static function CFAllocatorReallocate(allocator:CFAllocator, ptr:Ptr, newsize:I64, hint:I64):Ptr;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CFAllocatorReallocateBytes(allocator:CFAllocator, ptr:Ptr, newsize:I64, hint:I64):Ptr;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function CFAllocatorReallocateTyped(allocator:CFAllocator, ptr:Ptr, newsize:I64, descriptor:I64, hint:I64):Ptr;
 	public static function CFAllocatorSetDefault(allocator:CFAllocator):Void;
 	public static function CFArrayAppendArray(theArray:NSMutableArray, otherArray:NSArray, otherRange:CFRange):Void;
 	public static function CFArrayAppendValue(theArray:NSMutableArray, value:Ptr):Void;
-	public static function CFArrayApplyFunction(theArray:NSArray, range:CFRange, applier:Ptr, context:Ptr):Void;
-	public static function CFArrayBSearchValues(theArray:NSArray, range:CFRange, value:Ptr, comparator:Ptr, context:Ptr):I64;
+	public static function CFArrayApplyFunction(theArray:NSArray, range:CFRange, applier:(Ptr, Ptr) -> Void, context:Ptr):Void;
+	public static function CFArrayBSearchValues(theArray:NSArray, range:CFRange, value:Ptr, comparator:(Ptr, Ptr, Ptr) -> CFComparisonResult, context:Ptr):I64;
 	public static function CFArrayContainsValue(theArray:NSArray, range:CFRange, value:Ptr):Bool;
 	@:hxmc.retained
 	public static function CFArrayCreate(allocator:CFAllocator, values:Ptr, numValues:I64, callBacks:Ptr):NSArray;
@@ -93,7 +100,7 @@ import objc.NSObject;
 	public static function CFArrayRemoveValueAtIndex(theArray:NSMutableArray, idx:I64):Void;
 	public static function CFArrayReplaceValues(theArray:NSMutableArray, range:CFRange, newValues:Ptr, newCount:I64):Void;
 	public static function CFArraySetValueAtIndex(theArray:NSMutableArray, idx:I64, value:Ptr):Void;
-	public static function CFArraySortValues(theArray:NSMutableArray, range:CFRange, comparator:Ptr, context:Ptr):Void;
+	public static function CFArraySortValues(theArray:NSMutableArray, range:CFRange, comparator:(Ptr, Ptr, Ptr) -> CFComparisonResult, context:Ptr):Void;
 	public static function CFAttributedStringBeginEditing(aStr:NSMutableAttributedString):Void;
 	@:hxmc.retained
 	public static function CFAttributedStringCreate(alloc:CFAllocator, str:NSStringArg, attributes:NSDictionary):NSAttributedString;
@@ -106,13 +113,18 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFAttributedStringCreateWithSubstring(alloc:CFAllocator, aStr:NSAttributedString, range:CFRange):NSAttributedString;
 	public static function CFAttributedStringEndEditing(aStr:NSMutableAttributedString):Void;
-	public static function CFAttributedStringGetAttribute(aStr:NSAttributedString, loc:I64, attrName:NSStringArg, effectiveRange:Ptr):Id;
-	public static function CFAttributedStringGetAttributeAndLongestEffectiveRange(aStr:NSAttributedString, loc:I64, attrName:NSStringArg, inRange:CFRange, longestEffectiveRange:Ptr):Id;
-	public static function CFAttributedStringGetAttributes(aStr:NSAttributedString, loc:I64, effectiveRange:Ptr):NSDictionary;
-	public static function CFAttributedStringGetAttributesAndLongestEffectiveRange(aStr:NSAttributedString, loc:I64, inRange:CFRange, longestEffectiveRange:Ptr):NSDictionary;
+	@:hxmc.len(effectiveRange, 1)
+	public static function CFAttributedStringGetAttribute(aStr:NSAttributedString, loc:I64, attrName:NSStringArg, effectiveRange:Span<CFRange>):Id;
+	@:hxmc.len(longestEffectiveRange, 1)
+	public static function CFAttributedStringGetAttributeAndLongestEffectiveRange(aStr:NSAttributedString, loc:I64, attrName:NSStringArg, inRange:CFRange, longestEffectiveRange:Span<CFRange>):Id;
+	@:hxmc.len(effectiveRange, 1)
+	public static function CFAttributedStringGetAttributes(aStr:NSAttributedString, loc:I64, effectiveRange:Span<CFRange>):NSDictionary;
+	@:hxmc.len(longestEffectiveRange, 1)
+	public static function CFAttributedStringGetAttributesAndLongestEffectiveRange(aStr:NSAttributedString, loc:I64, inRange:CFRange, longestEffectiveRange:Span<CFRange>):NSDictionary;
 	public static function CFAttributedStringGetBidiLevelsAndResolvedDirections(attributedString:NSAttributedString, range:CFRange, baseDirection:Int8, bidiLevels:Ptr, baseDirections:Ptr):Bool;
 	public static function CFAttributedStringGetLength(aStr:NSAttributedString):I64;
 	public static function CFAttributedStringGetMutableString(aStr:NSMutableAttributedString):NSMutableString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function CFAttributedStringGetStatisticalWritingDirections(attributedString:NSAttributedString, range:CFRange, baseDirection:Int8, bidiLevels:Ptr, baseDirections:Ptr):Bool;
 	public static function CFAttributedStringGetString(aStr:NSAttributedString):NSString;
 	public static function CFAttributedStringGetTypeID():I64;
@@ -122,7 +134,7 @@ import objc.NSObject;
 	public static function CFAttributedStringSetAttribute(aStr:NSMutableAttributedString, range:CFRange, attrName:NSStringArg, value:Id):Void;
 	public static function CFAttributedStringSetAttributes(aStr:NSMutableAttributedString, range:CFRange, replacement:NSDictionary, clearOtherAttributes:Bool):Void;
 	public static function CFBagAddValue(theBag:CFMutableBag, value:Ptr):Void;
-	public static function CFBagApplyFunction(theBag:CFBag, applier:Ptr, context:Ptr):Void;
+	public static function CFBagApplyFunction(theBag:CFBag, applier:(Ptr, Ptr) -> Void, context:Ptr):Void;
 	public static function CFBagContainsValue(theBag:CFBag, value:Ptr):Bool;
 	@:hxmc.retained
 	public static function CFBagCreate(allocator:CFAllocator, values:Ptr, numValues:I64, callBacks:Ptr):CFBag;
@@ -143,10 +155,11 @@ import objc.NSObject;
 	public static function CFBagReplaceValue(theBag:CFMutableBag, value:Ptr):Void;
 	public static function CFBagSetValue(theBag:CFMutableBag, value:Ptr):Void;
 	public static function CFBinaryHeapAddValue(heap:CFBinaryHeap, value:Ptr):Void;
-	public static function CFBinaryHeapApplyFunction(heap:CFBinaryHeap, applier:Ptr, context:Ptr):Void;
+	public static function CFBinaryHeapApplyFunction(heap:CFBinaryHeap, applier:(Ptr, Ptr) -> Void, context:Ptr):Void;
 	public static function CFBinaryHeapContainsValue(heap:CFBinaryHeap, value:Ptr):Bool;
 	@:hxmc.retained
-	public static function CFBinaryHeapCreate(allocator:CFAllocator, capacity:I64, callBacks:Ptr, compareContext:Ptr):CFBinaryHeap;
+	@:hxmc.len(compareContext, 1)
+	public static function CFBinaryHeapCreate(allocator:CFAllocator, capacity:I64, callBacks:Ptr, compareContext:ReadOnlySpan<CFBinaryHeapCompareContext>):CFBinaryHeap;
 	@:hxmc.retained
 	public static function CFBinaryHeapCreateCopy(allocator:CFAllocator, capacity:I64, heap:CFBinaryHeap):CFBinaryHeap;
 	public static function CFBinaryHeapGetCount(heap:CFBinaryHeap):I64;
@@ -205,6 +218,7 @@ import objc.NSObject;
 	public static function CFBundleCopyLocalizationsForURL(url:NSURL):NSArray;
 	@:hxmc.retained
 	public static function CFBundleCopyLocalizedString(bundle:CFBundle, key:NSStringArg, value:NSStringArg, tableName:NSStringArg):NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:hxmc.retained
 	public static function CFBundleCopyLocalizedStringForLocalizations(bundle:CFBundle, key:NSStringArg, value:NSStringArg, tableName:NSStringArg, localizations:NSArray):NSString;
 	@:hxmc.retained
@@ -246,8 +260,12 @@ import objc.NSObject;
 	public static function CFBundleGetInfoDictionary(bundle:CFBundle):NSDictionary;
 	public static function CFBundleGetLocalInfoDictionary(bundle:CFBundle):NSDictionary;
 	public static function CFBundleGetMainBundle():CFBundle;
-	public static function CFBundleGetPackageInfo(bundle:CFBundle, packageType:Ptr, packageCreator:Ptr):Void;
-	public static function CFBundleGetPackageInfoInDirectory(url:NSURL, packageType:Ptr, packageCreator:Ptr):Bool;
+	@:hxmc.len(packageType, 1)
+	@:hxmc.len(packageCreator, 1)
+	public static function CFBundleGetPackageInfo(bundle:CFBundle, packageType:Span<Int>, packageCreator:Span<Int>):Void;
+	@:hxmc.len(packageType, 1)
+	@:hxmc.len(packageCreator, 1)
+	public static function CFBundleGetPackageInfoInDirectory(url:NSURL, packageType:Span<Int>, packageCreator:Span<Int>):Bool;
 	public static function CFBundleGetPlugIn(bundle:CFBundle):CFBundle;
 	public static function CFBundleGetTypeID():I64;
 	public static function CFBundleGetValueForInfoDictionaryKey(bundle:CFBundle, key:NSStringArg):Id;
@@ -272,7 +290,9 @@ import objc.NSObject;
 	public static function CFCalendarGetMinimumRangeOfUnit(calendar:NSCalendar, unit:CFCalendarUnit):CFRange;
 	public static function CFCalendarGetOrdinalityOfUnit(calendar:NSCalendar, smallerUnit:CFCalendarUnit, biggerUnit:CFCalendarUnit, at:Float):I64;
 	public static function CFCalendarGetRangeOfUnit(calendar:NSCalendar, smallerUnit:CFCalendarUnit, biggerUnit:CFCalendarUnit, at:Float):CFRange;
-	public static function CFCalendarGetTimeRangeOfUnit(calendar:NSCalendar, unit:CFCalendarUnit, at:Float, startp:Ptr, tip:Ptr):Bool;
+	@:hxmc.len(startp, 1)
+	@:hxmc.len(tip, 1)
+	public static function CFCalendarGetTimeRangeOfUnit(calendar:NSCalendar, unit:CFCalendarUnit, at:Float, startp:Span<Float>, tip:Span<Float>):Bool;
 	public static function CFCalendarGetTypeID():I64;
 	public static function CFCalendarSetFirstWeekday(calendar:NSCalendar, wkdy:I64):Void;
 	public static function CFCalendarSetLocale(calendar:NSCalendar, locale:NSLocale):Void;
@@ -344,14 +364,17 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFDateFormatterCreateDateFormatFromTemplate(allocator:CFAllocator, tmplate:NSStringArg, options:I64, locale:NSLocale):NSString;
 	@:hxmc.retained
-	public static function CFDateFormatterCreateDateFromString(allocator:CFAllocator, formatter:CFDateFormatter, string:NSStringArg, rangep:Ptr):NSDate;
+	@:hxmc.len(rangep, 1)
+	public static function CFDateFormatterCreateDateFromString(allocator:CFAllocator, formatter:CFDateFormatter, string:NSStringArg, rangep:Span<CFRange>):NSDate;
 	@:hxmc.retained
 	public static function CFDateFormatterCreateISO8601Formatter(allocator:CFAllocator, formatOptions:CFISO8601DateFormatOptions):CFDateFormatter;
 	@:hxmc.retained
 	public static function CFDateFormatterCreateStringWithAbsoluteTime(allocator:CFAllocator, formatter:CFDateFormatter, at:Float):NSString;
 	@:hxmc.retained
 	public static function CFDateFormatterCreateStringWithDate(allocator:CFAllocator, formatter:CFDateFormatter, date:NSDate):NSString;
-	public static function CFDateFormatterGetAbsoluteTimeFromString(formatter:CFDateFormatter, string:NSStringArg, rangep:Ptr, atp:Ptr):Bool;
+	@:hxmc.len(rangep, 1)
+	@:hxmc.len(atp, 1)
+	public static function CFDateFormatterGetAbsoluteTimeFromString(formatter:CFDateFormatter, string:NSStringArg, rangep:Span<CFRange>, atp:Span<Float>):Bool;
 	public static function CFDateFormatterGetDateStyle(formatter:CFDateFormatter):CFDateFormatterStyle;
 	public static function CFDateFormatterGetFormat(formatter:CFDateFormatter):NSString;
 	public static function CFDateFormatterGetLocale(formatter:CFDateFormatter):NSLocale;
@@ -363,7 +386,7 @@ import objc.NSObject;
 	public static function CFDateGetTimeIntervalSinceDate(theDate:NSDate, otherDate:NSDate):Float;
 	public static function CFDateGetTypeID():I64;
 	public static function CFDictionaryAddValue(theDict:NSMutableDictionary, key:Ptr, value:Ptr):Void;
-	public static function CFDictionaryApplyFunction(theDict:NSDictionary, applier:Ptr, context:Ptr):Void;
+	public static function CFDictionaryApplyFunction(theDict:NSDictionary, applier:(Ptr, Ptr, Ptr) -> Void, context:Ptr):Void;
 	public static function CFDictionaryContainsKey(theDict:NSDictionary, key:Ptr):Bool;
 	public static function CFDictionaryContainsValue(theDict:NSDictionary, value:Ptr):Bool;
 	@:hxmc.retained
@@ -402,12 +425,14 @@ import objc.NSObject;
 	public static function CFErrorGetDomain(err:NSError):NSString;
 	public static function CFErrorGetTypeID():I64;
 	@:hxmc.retained
-	public static function CFFileDescriptorCreate(allocator:CFAllocator, fd:Int, closeOnInvalidate:Bool, callout:Ptr, context:Ptr):CFFileDescriptor;
+	@:hxmc.len(context, 1)
+	public static function CFFileDescriptorCreate(allocator:CFAllocator, fd:Int, closeOnInvalidate:Bool, callout:(CFFileDescriptor, I64, Ptr) -> Void, context:ReadOnlySpan<CFFileDescriptorContext>):CFFileDescriptor;
 	@:hxmc.retained
 	public static function CFFileDescriptorCreateRunLoopSource(allocator:CFAllocator, f:CFFileDescriptor, order:I64):CFRunLoopSource;
 	public static function CFFileDescriptorDisableCallBacks(f:CFFileDescriptor, callBackTypes:I64):Void;
 	public static function CFFileDescriptorEnableCallBacks(f:CFFileDescriptor, callBackTypes:I64):Void;
-	public static function CFFileDescriptorGetContext(f:CFFileDescriptor, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFFileDescriptorGetContext(f:CFFileDescriptor, context:Span<CFFileDescriptorContext>):Void;
 	public static function CFFileDescriptorGetNativeDescriptor(f:CFFileDescriptor):Int;
 	public static function CFFileDescriptorGetTypeID():I64;
 	public static function CFFileDescriptorInvalidate(f:CFFileDescriptor):Void;
@@ -420,9 +445,11 @@ import objc.NSObject;
 	public static function CFFileSecurityCreate(allocator:CFAllocator):NSFileSecurity;
 	@:hxmc.retained
 	public static function CFFileSecurityCreateCopy(allocator:CFAllocator, fileSec:NSFileSecurity):NSFileSecurity;
-	public static function CFFileSecurityGetGroup(fileSec:NSFileSecurity, group:Ptr):Bool;
+	@:hxmc.len(group, 1)
+	public static function CFFileSecurityGetGroup(fileSec:NSFileSecurity, group:Span<Int>):Bool;
 	public static function CFFileSecurityGetMode(fileSec:NSFileSecurity, mode:Ptr):Bool;
-	public static function CFFileSecurityGetOwner(fileSec:NSFileSecurity, owner:Ptr):Bool;
+	@:hxmc.len(owner, 1)
+	public static function CFFileSecurityGetOwner(fileSec:NSFileSecurity, owner:Span<Int>):Bool;
 	public static function CFFileSecurityGetTypeID():I64;
 	public static function CFFileSecuritySetAccessControlList(fileSec:NSFileSecurity, accessControlList:Ptr):Bool;
 	public static function CFFileSecuritySetGroup(fileSec:NSFileSecurity, group:Int):Bool;
@@ -478,25 +505,31 @@ import objc.NSObject;
 	public static function CFLocaleGetValue(locale:NSLocale, key:NSStringArg):Id;
 	public static function CFLocaleGetWindowsLocaleCodeFromLocaleIdentifier(localeIdentifier:NSStringArg):Int;
 	@:hxmc.retained
-	public static function CFMachPortCreate(allocator:CFAllocator, callout:Ptr, context:Ptr, shouldFreeInfo:Ptr):NSMachPort;
+	@:hxmc.len(context, 1)
+	@:hxmc.len(shouldFreeInfo, 1)
+	public static function CFMachPortCreate(allocator:CFAllocator, callout:(NSMachPort, Ptr, I64, Ptr) -> Void, context:Span<CFMachPortContext>, shouldFreeInfo:Span<Bool>):NSMachPort;
 	@:hxmc.retained
 	public static function CFMachPortCreateRunLoopSource(allocator:CFAllocator, port:NSMachPort, order:I64):CFRunLoopSource;
 	@:hxmc.retained
-	public static function CFMachPortCreateWithPort(allocator:CFAllocator, portNum:Int, callout:Ptr, context:Ptr, shouldFreeInfo:Ptr):NSMachPort;
-	public static function CFMachPortGetContext(port:NSMachPort, context:Ptr):Void;
+	public static function CFMachPortCreateWithPort(allocator:CFAllocator, portNum:Int, callout:(NSMachPort, Ptr, I64, Ptr) -> Void, context:Ptr, shouldFreeInfo:Ptr):NSMachPort;
+	@:hxmc.len(context, 1)
+	public static function CFMachPortGetContext(port:NSMachPort, context:Span<CFMachPortContext>):Void;
 	public static function CFMachPortGetInvalidationCallBack(port:NSMachPort):Ptr;
 	public static function CFMachPortGetPort(port:NSMachPort):Int;
 	public static function CFMachPortGetTypeID():I64;
 	public static function CFMachPortInvalidate(port:NSMachPort):Void;
 	public static function CFMachPortIsValid(port:NSMachPort):Bool;
-	public static function CFMachPortSetInvalidationCallBack(port:NSMachPort, callout:Ptr):Void;
+	public static function CFMachPortSetInvalidationCallBack(port:NSMachPort, callout:(NSMachPort, Ptr) -> Void):Void;
 	@:hxmc.retained
-	public static function CFMessagePortCreateLocal(allocator:CFAllocator, name:NSStringArg, callout:Ptr, context:Ptr, shouldFreeInfo:Ptr):NSMessagePort;
+	@:hxmc.len(context, 1)
+	@:hxmc.len(shouldFreeInfo, 1)
+	public static function CFMessagePortCreateLocal(allocator:CFAllocator, name:NSStringArg, callout:(NSMessagePort, Int, NSData, Ptr) -> NSData, context:Span<CFMessagePortContext>, shouldFreeInfo:Span<Bool>):NSMessagePort;
 	@:hxmc.retained
 	public static function CFMessagePortCreateRemote(allocator:CFAllocator, name:NSStringArg):NSMessagePort;
 	@:hxmc.retained
 	public static function CFMessagePortCreateRunLoopSource(allocator:CFAllocator, local:NSMessagePort, order:I64):CFRunLoopSource;
-	public static function CFMessagePortGetContext(ms:NSMessagePort, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFMessagePortGetContext(ms:NSMessagePort, context:Span<CFMessagePortContext>):Void;
 	public static function CFMessagePortGetInvalidationCallBack(ms:NSMessagePort):Ptr;
 	public static function CFMessagePortGetName(ms:NSMessagePort):NSString;
 	public static function CFMessagePortGetTypeID():I64;
@@ -505,9 +538,9 @@ import objc.NSObject;
 	public static function CFMessagePortIsValid(ms:NSMessagePort):Bool;
 	public static function CFMessagePortSendRequest(remote:NSMessagePort, msgid:Int, data:NSData, sendTimeout:Float, rcvTimeout:Float, replyMode:NSStringArg, returnData:Ptr):Int;
 	public static function CFMessagePortSetDispatchQueue(ms:NSMessagePort, queue:NSObject):Void;
-	public static function CFMessagePortSetInvalidationCallBack(ms:NSMessagePort, callout:Ptr):Void;
+	public static function CFMessagePortSetInvalidationCallBack(ms:NSMessagePort, callout:(NSMessagePort, Ptr) -> Void):Void;
 	public static function CFMessagePortSetName(ms:NSMessagePort, newName:NSStringArg):Bool;
-	public static function CFNotificationCenterAddObserver(center:CFNotificationCenter, observer:Ptr, callBack:Ptr, name:NSStringArg, object:Ptr, suspensionBehavior:CFNotificationSuspensionBehavior):Void;
+	public static function CFNotificationCenterAddObserver(center:CFNotificationCenter, observer:Ptr, callBack:(CFNotificationCenter, Ptr, NSString, Ptr, NSDictionary) -> Void, name:NSStringArg, object:Ptr, suspensionBehavior:CFNotificationSuspensionBehavior):Void;
 	public static function CFNotificationCenterGetDarwinNotifyCenter():CFNotificationCenter;
 	public static function CFNotificationCenterGetLocalCenter():CFNotificationCenter;
 	public static function CFNotificationCenterGetTypeID():I64;
@@ -524,17 +557,20 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFNumberFormatterCreate(allocator:CFAllocator, locale:NSLocale, style:CFNumberFormatterStyle):CFNumberFormatter;
 	@:hxmc.retained
-	public static function CFNumberFormatterCreateNumberFromString(allocator:CFAllocator, formatter:CFNumberFormatter, string:NSStringArg, rangep:Ptr, options:I64):NSNumber;
+	@:hxmc.len(rangep, 1)
+	public static function CFNumberFormatterCreateNumberFromString(allocator:CFAllocator, formatter:CFNumberFormatter, string:NSStringArg, rangep:Span<CFRange>, options:I64):NSNumber;
 	@:hxmc.retained
 	public static function CFNumberFormatterCreateStringWithNumber(allocator:CFAllocator, formatter:CFNumberFormatter, number:NSNumberArg):NSString;
 	@:hxmc.retained
 	public static function CFNumberFormatterCreateStringWithValue(allocator:CFAllocator, formatter:CFNumberFormatter, numberType:CFNumberType, valuePtr:Ptr):NSString;
-	public static function CFNumberFormatterGetDecimalInfoForCurrencyCode(currencyCode:NSStringArg, defaultFractionDigits:Ptr, roundingIncrement:Ptr):Bool;
+	@:hxmc.len(roundingIncrement, 1)
+	public static function CFNumberFormatterGetDecimalInfoForCurrencyCode(currencyCode:NSStringArg, defaultFractionDigits:Ptr, roundingIncrement:Span<Float>):Bool;
 	public static function CFNumberFormatterGetFormat(formatter:CFNumberFormatter):NSString;
 	public static function CFNumberFormatterGetLocale(formatter:CFNumberFormatter):NSLocale;
 	public static function CFNumberFormatterGetStyle(formatter:CFNumberFormatter):CFNumberFormatterStyle;
 	public static function CFNumberFormatterGetTypeID():I64;
-	public static function CFNumberFormatterGetValueFromString(formatter:CFNumberFormatter, string:NSStringArg, rangep:Ptr, numberType:CFNumberType, valuePtr:Ptr):Bool;
+	@:hxmc.len(rangep, 1)
+	public static function CFNumberFormatterGetValueFromString(formatter:CFNumberFormatter, string:NSStringArg, rangep:Span<CFRange>, numberType:CFNumberType, valuePtr:Ptr):Bool;
 	public static function CFNumberFormatterSetFormat(formatter:CFNumberFormatter, formatString:NSStringArg):Void;
 	public static function CFNumberFormatterSetProperty(formatter:CFNumberFormatter, key:NSStringArg, value:Id):Void;
 	public static function CFNumberGetByteSize(number:NSNumberArg):I64;
@@ -554,7 +590,7 @@ import objc.NSObject;
 	public static function CFPlugInInstanceCreate(allocator:CFAllocator, factoryUUID:CFUUID, typeUUID:CFUUID):Ptr;
 	@:deprecated
 	@:hxmc.retained
-	public static function CFPlugInInstanceCreateWithInstanceDataSize(allocator:CFAllocator, instanceDataSize:I64, deallocateInstanceFunction:Ptr, factoryName:NSStringArg, getInterfaceFunction:Ptr):CFPlugInInstance;
+	public static function CFPlugInInstanceCreateWithInstanceDataSize(allocator:CFAllocator, instanceDataSize:I64, deallocateInstanceFunction:Ptr -> Void, factoryName:NSStringArg, getInterfaceFunction:(CFPlugInInstance, NSString, Ptr) -> Bool):CFPlugInInstance;
 	@:deprecated
 	@:hxmc.retained
 	public static function CFPlugInInstanceGetFactoryName(instance:CFPlugInInstance):NSString;
@@ -565,7 +601,7 @@ import objc.NSObject;
 	@:deprecated
 	public static function CFPlugInInstanceGetTypeID():I64;
 	public static function CFPlugInIsLoadOnDemand(plugIn:CFBundle):Bool;
-	public static function CFPlugInRegisterFactoryFunction(factoryUUID:CFUUID, func:Ptr):Bool;
+	public static function CFPlugInRegisterFactoryFunction(factoryUUID:CFUUID, func:(CFAllocator, CFUUID) -> Ptr):Bool;
 	public static function CFPlugInRegisterFactoryFunctionByName(factoryUUID:CFUUID, plugIn:CFBundle, functionName:NSStringArg):Bool;
 	public static function CFPlugInRegisterPlugInType(factoryUUID:CFUUID, typeUUID:CFUUID):Bool;
 	public static function CFPlugInRemoveInstanceForFactory(factoryID:CFUUID):Void;
@@ -584,8 +620,10 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFPreferencesCopyMultiple(keysToFetch:Null<NSArray>, applicationID:NSStringArg, userName:NSStringArg, hostName:NSStringArg):NSDictionary;
 	public static function CFPreferencesCopyValue(key:NSStringArg, applicationID:NSStringArg, userName:NSStringArg, hostName:NSStringArg):Ptr;
-	public static function CFPreferencesGetAppBooleanValue(key:NSStringArg, applicationID:NSStringArg, keyExistsAndHasValidFormat:Ptr):Bool;
-	public static function CFPreferencesGetAppIntegerValue(key:NSStringArg, applicationID:NSStringArg, keyExistsAndHasValidFormat:Ptr):I64;
+	@:hxmc.len(keyExistsAndHasValidFormat, 1)
+	public static function CFPreferencesGetAppBooleanValue(key:NSStringArg, applicationID:NSStringArg, keyExistsAndHasValidFormat:Span<Bool>):Bool;
+	@:hxmc.len(keyExistsAndHasValidFormat, 1)
+	public static function CFPreferencesGetAppIntegerValue(key:NSStringArg, applicationID:NSStringArg, keyExistsAndHasValidFormat:Span<Bool>):I64;
 	public static function CFPreferencesRemoveSuitePreferencesFromApp(applicationID:NSStringArg, suiteID:NSStringArg):Void;
 	public static function CFPreferencesSetAppValue(key:NSStringArg, value:Ptr, applicationID:NSStringArg):Void;
 	public static function CFPreferencesSetMultiple(keysToSet:Null<NSDictionary>, keysToRemove:Null<NSArray>, applicationID:NSStringArg, userName:NSStringArg, hostName:NSStringArg):Void;
@@ -596,7 +634,8 @@ import objc.NSObject;
 	public static function CFPropertyListCreateFromStream(allocator:CFAllocator, stream:NSInputStream, streamLength:I64, mutabilityOption:I64, format:Ptr, errorString:Ptr):Ptr;
 	@:deprecated
 	public static function CFPropertyListCreateFromXMLData(allocator:CFAllocator, xmlData:NSData, mutabilityOption:I64, errorString:Ptr):Ptr;
-	public static function CFPropertyListCreateWithData(allocator:CFAllocator, data:NSData, options:I64, format:Ptr, error:Ptr):Ptr;
+	@:hxmc.len(format, 1)
+	public static function CFPropertyListCreateWithData(allocator:CFAllocator, data:NSData, options:I64, format:Span<I64>, error:Ptr):Ptr;
 	public static function CFPropertyListCreateWithStream(allocator:CFAllocator, stream:NSInputStream, streamLength:I64, options:I64, format:Ptr, error:Ptr):Ptr;
 	public static function CFPropertyListIsValid(plist:Ptr, format:CFPropertyListFormat):Bool;
 	public static function CFPropertyListWrite(propertyList:Ptr, stream:NSOutputStream, format:CFPropertyListFormat, options:I64, error:Ptr):I64;
@@ -612,7 +651,8 @@ import objc.NSObject;
 	public static function CFReadStreamCreateWithBytesNoCopy(alloc:CFAllocator, bytes:Ptr, length:I64, bytesDeallocator:CFAllocator):NSInputStream;
 	@:hxmc.retained
 	public static function CFReadStreamCreateWithFile(alloc:CFAllocator, fileURL:NSURL):NSInputStream;
-	public static function CFReadStreamGetBuffer(stream:NSInputStream, maxBytesToRead:I64, numBytesRead:Ptr):Ptr;
+	@:hxmc.len(numBytesRead, 1)
+	public static function CFReadStreamGetBuffer(stream:NSInputStream, maxBytesToRead:I64, numBytesRead:Span<I64>):Ptr;
 	public static function CFReadStreamGetError(stream:NSInputStream):CFStreamError;
 	public static function CFReadStreamGetStatus(stream:NSInputStream):CFStreamStatus;
 	public static function CFReadStreamGetTypeID():I64;
@@ -620,7 +660,8 @@ import objc.NSObject;
 	public static function CFReadStreamOpen(stream:NSInputStream):Bool;
 	public static function CFReadStreamRead(stream:NSInputStream, buffer:Ptr, bufferLength:I64):I64;
 	public static function CFReadStreamScheduleWithRunLoop(stream:NSInputStream, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFReadStreamSetClient(stream:NSInputStream, streamEvents:I64, clientCB:Ptr, clientContext:Ptr):Bool;
+	@:hxmc.len(clientContext, 1)
+	public static function CFReadStreamSetClient(stream:NSInputStream, streamEvents:I64, clientCB:(NSInputStream, CFStreamEventType, Ptr) -> Void, clientContext:Span<CFStreamClientContext>):Bool;
 	public static function CFReadStreamSetDispatchQueue(stream:NSInputStream, q:NSObject):Void;
 	public static function CFReadStreamSetProperty(stream:NSInputStream, propertyName:NSStringArg, propertyValue:Id):Bool;
 	public static function CFReadStreamUnscheduleFromRunLoop(stream:NSInputStream, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
@@ -641,12 +682,14 @@ import objc.NSObject;
 	public static function CFRunLoopGetTypeID():I64;
 	public static function CFRunLoopIsWaiting(rl:CFRunLoop):Bool;
 	@:hxmc.retained
-	public static function CFRunLoopObserverCreate(allocator:CFAllocator, activities:I64, repeats:Bool, order:I64, callout:Ptr, context:Ptr):CFRunLoopObserver;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopObserverCreate(allocator:CFAllocator, activities:I64, repeats:Bool, order:I64, callout:(CFRunLoopObserver, CFRunLoopActivity, Ptr) -> Void, context:Span<CFRunLoopObserverContext>):CFRunLoopObserver;
 	@:hxmc.retained
 	public static function CFRunLoopObserverCreateWithHandler(allocator:CFAllocator, activities:I64, repeats:Bool, order:I64, block:Block<(CFRunLoopObserver, CFRunLoopActivity) -> Void>):CFRunLoopObserver;
 	public static function CFRunLoopObserverDoesRepeat(observer:CFRunLoopObserver):Bool;
 	public static function CFRunLoopObserverGetActivities(observer:CFRunLoopObserver):I64;
-	public static function CFRunLoopObserverGetContext(observer:CFRunLoopObserver, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopObserverGetContext(observer:CFRunLoopObserver, context:Span<CFRunLoopObserverContext>):Void;
 	public static function CFRunLoopObserverGetOrder(observer:CFRunLoopObserver):I64;
 	public static function CFRunLoopObserverGetTypeID():I64;
 	public static function CFRunLoopObserverInvalidate(observer:CFRunLoopObserver):Void;
@@ -658,8 +701,10 @@ import objc.NSObject;
 	public static function CFRunLoopRun():Void;
 	public static function CFRunLoopRunInMode(mode:NSStringArg, seconds:Float, returnAfterSourceHandled:Bool):CFRunLoopRunResult;
 	@:hxmc.retained
-	public static function CFRunLoopSourceCreate(allocator:CFAllocator, order:I64, context:Ptr):CFRunLoopSource;
-	public static function CFRunLoopSourceGetContext(source:CFRunLoopSource, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopSourceCreate(allocator:CFAllocator, order:I64, context:Span<CFRunLoopSourceContext>):CFRunLoopSource;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopSourceGetContext(source:CFRunLoopSource, context:Span<CFRunLoopSourceContext>):Void;
 	public static function CFRunLoopSourceGetOrder(source:CFRunLoopSource):I64;
 	public static function CFRunLoopSourceGetTypeID():I64;
 	public static function CFRunLoopSourceInvalidate(source:CFRunLoopSource):Void;
@@ -667,11 +712,13 @@ import objc.NSObject;
 	public static function CFRunLoopSourceSignal(source:CFRunLoopSource):Void;
 	public static function CFRunLoopStop(rl:CFRunLoop):Void;
 	@:hxmc.retained
-	public static function CFRunLoopTimerCreate(allocator:CFAllocator, fireDate:Float, interval:Float, flags:I64, order:I64, callout:Ptr, context:Ptr):NSTimer;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopTimerCreate(allocator:CFAllocator, fireDate:Float, interval:Float, flags:I64, order:I64, callout:(NSTimer, Ptr) -> Void, context:Span<CFRunLoopTimerContext>):NSTimer;
 	@:hxmc.retained
 	public static function CFRunLoopTimerCreateWithHandler(allocator:CFAllocator, fireDate:Float, interval:Float, flags:I64, order:I64, block:Block<NSTimer -> Void>):NSTimer;
 	public static function CFRunLoopTimerDoesRepeat(timer:NSTimer):Bool;
-	public static function CFRunLoopTimerGetContext(timer:NSTimer, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFRunLoopTimerGetContext(timer:NSTimer, context:Span<CFRunLoopTimerContext>):Void;
 	public static function CFRunLoopTimerGetInterval(timer:NSTimer):Float;
 	public static function CFRunLoopTimerGetNextFireDate(timer:NSTimer):Float;
 	public static function CFRunLoopTimerGetOrder(timer:NSTimer):I64;
@@ -683,7 +730,7 @@ import objc.NSObject;
 	public static function CFRunLoopTimerSetTolerance(timer:NSTimer, tolerance:Float):Void;
 	public static function CFRunLoopWakeUp(rl:CFRunLoop):Void;
 	public static function CFSetAddValue(theSet:NSMutableSet, value:Ptr):Void;
-	public static function CFSetApplyFunction(theSet:NSSet, applier:Ptr, context:Ptr):Void;
+	public static function CFSetApplyFunction(theSet:NSSet, applier:(Ptr, Ptr) -> Void, context:Ptr):Void;
 	public static function CFSetContainsValue(theSet:NSSet, value:Ptr):Bool;
 	@:hxmc.retained
 	public static function CFSetCreate(allocator:CFAllocator, values:Ptr, numValues:I64, callBacks:Ptr):NSSet;
@@ -710,36 +757,51 @@ import objc.NSObject;
 	public static function CFSocketCopyAddress(s:CFSocket):NSData;
 	@:hxmc.retained
 	public static function CFSocketCopyPeerAddress(s:CFSocket):NSData;
-	public static function CFSocketCopyRegisteredSocketSignature(nameServerSignature:Ptr, timeout:Float, name:NSStringArg, signature:Ptr, nameServerAddress:Ptr):CFSocketError;
-	public static function CFSocketCopyRegisteredValue(nameServerSignature:Ptr, timeout:Float, name:NSStringArg, value:Ptr, nameServerAddress:Ptr):CFSocketError;
+	@:hxmc.len(nameServerSignature, 1)
+	@:hxmc.len(signature, 1)
+	public static function CFSocketCopyRegisteredSocketSignature(nameServerSignature:ReadOnlySpan<CFSocketSignature>, timeout:Float, name:NSStringArg, signature:Span<CFSocketSignature>, nameServerAddress:Ptr):CFSocketError;
+	@:hxmc.len(nameServerSignature, 1)
+	public static function CFSocketCopyRegisteredValue(nameServerSignature:ReadOnlySpan<CFSocketSignature>, timeout:Float, name:NSStringArg, value:Ptr, nameServerAddress:Ptr):CFSocketError;
 	@:hxmc.retained
-	public static function CFSocketCreate(allocator:CFAllocator, protocolFamily:Int, socketType:Int, protocol:Int, callBackTypes:I64, callout:Ptr, context:Ptr):CFSocket;
+	@:hxmc.len(context, 1)
+	public static function CFSocketCreate(allocator:CFAllocator, protocolFamily:Int, socketType:Int, protocol:Int, callBackTypes:I64, callout:(CFSocket, CFSocketCallBackType, NSData, Ptr, Ptr) -> Void, context:ReadOnlySpan<CFSocketContext>):CFSocket;
 	@:hxmc.retained
-	public static function CFSocketCreateConnectedToSocketSignature(allocator:CFAllocator, signature:Ptr, callBackTypes:I64, callout:Ptr, context:Ptr, timeout:Float):CFSocket;
+	@:hxmc.len(signature, 1)
+	@:hxmc.len(context, 1)
+	public static function CFSocketCreateConnectedToSocketSignature(allocator:CFAllocator, signature:ReadOnlySpan<CFSocketSignature>, callBackTypes:I64, callout:(CFSocket, CFSocketCallBackType, NSData, Ptr, Ptr) -> Void, context:ReadOnlySpan<CFSocketContext>, timeout:Float):CFSocket;
 	@:hxmc.retained
 	public static function CFSocketCreateRunLoopSource(allocator:CFAllocator, s:CFSocket, order:I64):CFRunLoopSource;
 	@:hxmc.retained
-	public static function CFSocketCreateWithNative(allocator:CFAllocator, sock:Int, callBackTypes:I64, callout:Ptr, context:Ptr):CFSocket;
+	@:hxmc.len(context, 1)
+	public static function CFSocketCreateWithNative(allocator:CFAllocator, sock:Int, callBackTypes:I64, callout:(CFSocket, CFSocketCallBackType, NSData, Ptr, Ptr) -> Void, context:ReadOnlySpan<CFSocketContext>):CFSocket;
 	@:hxmc.retained
-	public static function CFSocketCreateWithSocketSignature(allocator:CFAllocator, signature:Ptr, callBackTypes:I64, callout:Ptr, context:Ptr):CFSocket;
+	@:hxmc.len(signature, 1)
+	@:hxmc.len(context, 1)
+	public static function CFSocketCreateWithSocketSignature(allocator:CFAllocator, signature:ReadOnlySpan<CFSocketSignature>, callBackTypes:I64, callout:(CFSocket, CFSocketCallBackType, NSData, Ptr, Ptr) -> Void, context:ReadOnlySpan<CFSocketContext>):CFSocket;
 	public static function CFSocketDisableCallBacks(s:CFSocket, callBackTypes:I64):Void;
 	public static function CFSocketEnableCallBacks(s:CFSocket, callBackTypes:I64):Void;
-	public static function CFSocketGetContext(s:CFSocket, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFSocketGetContext(s:CFSocket, context:Span<CFSocketContext>):Void;
 	public static function CFSocketGetDefaultNameRegistryPortNumber():UInt16;
 	public static function CFSocketGetNative(s:CFSocket):Int;
 	public static function CFSocketGetSocketFlags(s:CFSocket):I64;
 	public static function CFSocketGetTypeID():I64;
 	public static function CFSocketInvalidate(s:CFSocket):Void;
 	public static function CFSocketIsValid(s:CFSocket):Bool;
-	public static function CFSocketRegisterSocketSignature(nameServerSignature:Ptr, timeout:Float, name:NSStringArg, signature:Ptr):CFSocketError;
-	public static function CFSocketRegisterValue(nameServerSignature:Ptr, timeout:Float, name:NSStringArg, value:Ptr):CFSocketError;
+	@:hxmc.len(nameServerSignature, 1)
+	@:hxmc.len(signature, 1)
+	public static function CFSocketRegisterSocketSignature(nameServerSignature:ReadOnlySpan<CFSocketSignature>, timeout:Float, name:NSStringArg, signature:ReadOnlySpan<CFSocketSignature>):CFSocketError;
+	@:hxmc.len(nameServerSignature, 1)
+	public static function CFSocketRegisterValue(nameServerSignature:ReadOnlySpan<CFSocketSignature>, timeout:Float, name:NSStringArg, value:Ptr):CFSocketError;
 	public static function CFSocketSendData(s:CFSocket, address:NSData, data:NSData, timeout:Float):CFSocketError;
 	public static function CFSocketSetAddress(s:CFSocket, address:NSData):CFSocketError;
 	public static function CFSocketSetDefaultNameRegistryPortNumber(port:UInt16):Void;
 	public static function CFSocketSetSocketFlags(s:CFSocket, flags:I64):Void;
-	public static function CFSocketUnregister(nameServerSignature:Ptr, timeout:Float, name:NSStringArg):CFSocketError;
+	@:hxmc.len(nameServerSignature, 1)
+	public static function CFSocketUnregister(nameServerSignature:ReadOnlySpan<CFSocketSignature>, timeout:Float, name:NSStringArg):CFSocketError;
 	public static function CFStreamCreateBoundPair(alloc:CFAllocator, readStream:Ptr, writeStream:Ptr, transferBufferSize:I64):Void;
-	public static function CFStreamCreatePairWithPeerSocketSignature(alloc:CFAllocator, signature:Ptr, readStream:Ptr, writeStream:Ptr):Void;
+	@:hxmc.len(signature, 1)
+	public static function CFStreamCreatePairWithPeerSocketSignature(alloc:CFAllocator, signature:ReadOnlySpan<CFSocketSignature>, readStream:Ptr, writeStream:Ptr):Void;
 	public static function CFStreamCreatePairWithSocket(alloc:CFAllocator, sock:Int, readStream:Ptr, writeStream:Ptr):Void;
 	public static function CFStreamCreatePairWithSocketToHost(alloc:CFAllocator, host:NSStringArg, port:Int, readStream:Ptr, writeStream:Ptr):Void;
 	public static function CFStringAppend(theString:NSMutableString, appendedString:NSStringArg):Void;
@@ -775,6 +837,7 @@ import objc.NSObject;
 	public static function CFStringCreateMutableCopy(alloc:CFAllocator, maxLength:I64, theString:NSStringArg):NSMutableString;
 	@:hxmc.retained
 	public static function CFStringCreateMutableWithExternalCharactersNoCopy(alloc:CFAllocator, chars:Ptr, numChars:I64, capacity:I64, externalCharactersAllocator:CFAllocator):NSMutableString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:hxmc.retained
 	public static function CFStringCreateStringWithValidatedFormatAndArguments(alloc:CFAllocator, formatOptions:NSDictionary, validFormatSpecifiers:NSStringArg, format:NSStringArg, arguments:Ptr, errorPtr:Ptr):NSString;
 	@:hxmc.retained
@@ -802,11 +865,15 @@ import objc.NSObject;
 	public static function CFStringDelete(theString:NSMutableString, range:CFRange):Void;
 	public static function CFStringFind(theString:NSStringArg, stringToFind:NSStringArg, compareOptions:CFStringCompareFlags):CFRange;
 	public static function CFStringFindAndReplace(theString:NSMutableString, stringToFind:NSStringArg, replacementString:NSStringArg, rangeToSearch:CFRange, compareOptions:CFStringCompareFlags):I64;
-	public static function CFStringFindCharacterFromSet(theString:NSStringArg, theSet:NSCharacterSet, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, result:Ptr):Bool;
-	public static function CFStringFindWithOptions(theString:NSStringArg, stringToFind:NSStringArg, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, result:Ptr):Bool;
-	public static function CFStringFindWithOptionsAndLocale(theString:NSStringArg, stringToFind:NSStringArg, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, locale:NSLocale, result:Ptr):Bool;
+	@:hxmc.len(result, 1)
+	public static function CFStringFindCharacterFromSet(theString:NSStringArg, theSet:NSCharacterSet, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, result:Span<CFRange>):Bool;
+	@:hxmc.len(result, 1)
+	public static function CFStringFindWithOptions(theString:NSStringArg, stringToFind:NSStringArg, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, result:Span<CFRange>):Bool;
+	@:hxmc.len(result, 1)
+	public static function CFStringFindWithOptionsAndLocale(theString:NSStringArg, stringToFind:NSStringArg, rangeToSearch:CFRange, searchOptions:CFStringCompareFlags, locale:NSLocale, result:Span<CFRange>):Bool;
 	public static function CFStringFold(theString:NSMutableString, theFlags:CFStringCompareFlags, theLocale:NSLocale):Void;
-	public static function CFStringGetBytes(theString:NSStringArg, range:CFRange, encoding:Int, lossByte:UInt8, isExternalRepresentation:Bool, buffer:Ptr, maxBufLen:I64, usedBufLen:Ptr):I64;
+	@:hxmc.len(usedBufLen, 1)
+	public static function CFStringGetBytes(theString:NSStringArg, range:CFRange, encoding:Int, lossByte:UInt8, isExternalRepresentation:Bool, buffer:Ptr, maxBufLen:I64, usedBufLen:Span<I64>):I64;
 	public static function CFStringGetCString(theString:NSStringArg, buffer:Ptr, bufferSize:I64, encoding:Int):Bool;
 	public static function CFStringGetCStringPtr(theString:NSStringArg, encoding:Int):CString;
 	public static function CFStringGetCharacterAtIndex(theString:NSStringArg, idx:I64):UInt16;
@@ -815,16 +882,23 @@ import objc.NSObject;
 	public static function CFStringGetDoubleValue(str:NSStringArg):Float;
 	public static function CFStringGetFastestEncoding(theString:NSStringArg):Int;
 	public static function CFStringGetFileSystemRepresentation(string:NSStringArg, buffer:Ptr, maxBufLen:I64):Bool;
-	public static function CFStringGetHyphenationLocationBeforeIndex(string:NSStringArg, location:I64, limitRange:CFRange, options:I64, locale:NSLocale, character:Ptr):I64;
+	@:hxmc.len(character, 1)
+	public static function CFStringGetHyphenationLocationBeforeIndex(string:NSStringArg, location:I64, limitRange:CFRange, options:I64, locale:NSLocale, character:Span<Int>):I64;
 	public static function CFStringGetIntValue(str:NSStringArg):Int;
 	public static function CFStringGetLength(theString:NSStringArg):I64;
-	public static function CFStringGetLineBounds(theString:NSStringArg, range:CFRange, lineBeginIndex:Ptr, lineEndIndex:Ptr, contentsEndIndex:Ptr):Void;
+	@:hxmc.len(lineBeginIndex, 1)
+	@:hxmc.len(lineEndIndex, 1)
+	@:hxmc.len(contentsEndIndex, 1)
+	public static function CFStringGetLineBounds(theString:NSStringArg, range:CFRange, lineBeginIndex:Span<I64>, lineEndIndex:Span<I64>, contentsEndIndex:Span<I64>):Void;
 	public static function CFStringGetListOfAvailableEncodings():Ptr;
 	public static function CFStringGetMaximumSizeForEncoding(length:I64, encoding:Int):I64;
 	public static function CFStringGetMaximumSizeOfFileSystemRepresentation(string:NSStringArg):I64;
 	public static function CFStringGetMostCompatibleMacStringEncoding(encoding:Int):Int;
 	public static function CFStringGetNameOfEncoding(encoding:Int):NSString;
-	public static function CFStringGetParagraphBounds(string:NSStringArg, range:CFRange, parBeginIndex:Ptr, parEndIndex:Ptr, contentsEndIndex:Ptr):Void;
+	@:hxmc.len(parBeginIndex, 1)
+	@:hxmc.len(parEndIndex, 1)
+	@:hxmc.len(contentsEndIndex, 1)
+	public static function CFStringGetParagraphBounds(string:NSStringArg, range:CFRange, parBeginIndex:Span<I64>, parEndIndex:Span<I64>, contentsEndIndex:Span<I64>):Void;
 	public static function CFStringGetPascalString(theString:NSStringArg, buffer:Ptr, bufferSize:I64, encoding:Int):Bool;
 	public static function CFStringGetPascalStringPtr(theString:NSStringArg, encoding:Int):Ptr;
 	public static function CFStringGetRangeOfComposedCharactersAtIndex(theString:NSStringArg, theIndex:I64):CFRange;
@@ -854,7 +928,8 @@ import objc.NSObject;
 	public static function CFStringTokenizerGetTypeID():I64;
 	public static function CFStringTokenizerGoToTokenAtIndex(tokenizer:CFStringTokenizer, index:I64):CFStringTokenizerTokenType;
 	public static function CFStringTokenizerSetString(tokenizer:CFStringTokenizer, string:NSStringArg, range:CFRange):Void;
-	public static function CFStringTransform(string:NSMutableString, range:Ptr, transform:NSStringArg, reverse:Bool):Bool;
+	@:hxmc.len(range, 1)
+	public static function CFStringTransform(string:NSMutableString, range:Span<CFRange>, transform:NSStringArg, reverse:Bool):Bool;
 	public static function CFStringTrim(theString:NSMutableString, trimString:NSStringArg):Void;
 	public static function CFStringTrimWhitespace(theString:NSMutableString):Void;
 	public static function CFStringUppercase(theString:NSMutableString, locale:NSLocale):Void;
@@ -887,14 +962,16 @@ import objc.NSObject;
 	public static function CFTimeZoneSetAbbreviationDictionary(dict:NSDictionary):Void;
 	public static function CFTimeZoneSetDefault(tz:NSTimeZone):Void;
 	public static function CFTreeAppendChild(tree:CFTree, newChild:CFTree):Void;
-	public static function CFTreeApplyFunctionToChildren(tree:CFTree, applier:Ptr, context:Ptr):Void;
+	public static function CFTreeApplyFunctionToChildren(tree:CFTree, applier:(Ptr, Ptr) -> Void, context:Ptr):Void;
 	@:hxmc.retained
-	public static function CFTreeCreate(allocator:CFAllocator, context:Ptr):CFTree;
+	@:hxmc.len(context, 1)
+	public static function CFTreeCreate(allocator:CFAllocator, context:ReadOnlySpan<CFTreeContext>):CFTree;
 	public static function CFTreeFindRoot(tree:CFTree):CFTree;
 	public static function CFTreeGetChildAtIndex(tree:CFTree, idx:I64):CFTree;
 	public static function CFTreeGetChildCount(tree:CFTree):I64;
 	public static function CFTreeGetChildren(tree:CFTree, children:Ptr):Void;
-	public static function CFTreeGetContext(tree:CFTree, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFTreeGetContext(tree:CFTree, context:Span<CFTreeContext>):Void;
 	public static function CFTreeGetFirstChild(tree:CFTree):CFTree;
 	public static function CFTreeGetNextSibling(tree:CFTree):CFTree;
 	public static function CFTreeGetParent(tree:CFTree):CFTree;
@@ -903,8 +980,9 @@ import objc.NSObject;
 	public static function CFTreePrependChild(tree:CFTree, newChild:CFTree):Void;
 	public static function CFTreeRemove(tree:CFTree):Void;
 	public static function CFTreeRemoveAllChildren(tree:CFTree):Void;
-	public static function CFTreeSetContext(tree:CFTree, context:Ptr):Void;
-	public static function CFTreeSortChildren(tree:CFTree, comparator:Ptr, context:Ptr):Void;
+	@:hxmc.len(context, 1)
+	public static function CFTreeSetContext(tree:CFTree, context:ReadOnlySpan<CFTreeContext>):Void;
+	public static function CFTreeSortChildren(tree:CFTree, comparator:(Ptr, Ptr, Ptr) -> CFComparisonResult, context:Ptr):Void;
 	public static function CFURLCanBeDecomposed(anURL:NSURL):Bool;
 	public static function CFURLClearResourcePropertyCache(url:NSURL):Void;
 	public static function CFURLClearResourcePropertyCacheForKey(url:NSURL, key:NSStringArg):Void;
@@ -937,7 +1015,8 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFURLCopyScheme(anURL:NSURL):NSString;
 	@:hxmc.retained
-	public static function CFURLCopyStrictPath(anURL:NSURL, isAbsolute:Ptr):NSString;
+	@:hxmc.len(isAbsolute, 1)
+	public static function CFURLCopyStrictPath(anURL:NSURL, isAbsolute:Span<Bool>):NSString;
 	@:hxmc.retained
 	public static function CFURLCopyUserName(anURL:NSURL):NSString;
 	@:hxmc.retained
@@ -953,7 +1032,8 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFURLCreateData(allocator:CFAllocator, url:NSURL, encoding:Int, escapeWhitespace:Bool):NSData;
 	@:deprecated
-	public static function CFURLCreateDataAndPropertiesFromResource(alloc:CFAllocator, url:NSURL, resourceData:Ptr, properties:Ptr, desiredProperties:NSArray, errorCode:Ptr):Bool;
+	@:hxmc.len(errorCode, 1)
+	public static function CFURLCreateDataAndPropertiesFromResource(alloc:CFAllocator, url:NSURL, resourceData:Ptr, properties:Ptr, desiredProperties:NSArray, errorCode:Span<Int>):Bool;
 	@:deprecated
 	@:hxmc.retained
 	public static function CFURLCreateFromFSRef(allocator:CFAllocator, fsRef:Ptr):NSURL;
@@ -963,7 +1043,8 @@ import objc.NSObject;
 	public static function CFURLCreateFromFileSystemRepresentationRelativeToBase(allocator:CFAllocator, buffer:Ptr, bufLen:I64, isDirectory:Bool, baseURL:NSURL):NSURL;
 	@:deprecated
 	@:hxmc.retained
-	public static function CFURLCreatePropertyFromResource(alloc:CFAllocator, url:NSURL, property:NSStringArg, errorCode:Ptr):Id;
+	@:hxmc.len(errorCode, 1)
+	public static function CFURLCreatePropertyFromResource(alloc:CFAllocator, url:NSURL, property:NSStringArg, errorCode:Span<Int>):Id;
 	@:deprecated
 	@:hxmc.retained
 	public static function CFURLCreateStringByAddingPercentEscapes(allocator:CFAllocator, originalString:NSStringArg, charactersToLeaveUnescaped:NSStringArg, legalURLCharactersToBeEscaped:NSStringArg, encoding:Int):NSString;
@@ -981,7 +1062,8 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function CFURLCreateWithString(allocator:CFAllocator, URLString:NSStringArg, baseURL:NSURL):NSURL;
 	@:deprecated
-	public static function CFURLDestroyResource(url:NSURL, errorCode:Ptr):Bool;
+	@:hxmc.len(errorCode, 1)
+	public static function CFURLDestroyResource(url:NSURL, errorCode:Span<Int>):Bool;
 	@:hxmc.retained
 	public static function CFURLEnumeratorCreateForDirectoryURL(alloc:CFAllocator, directoryURL:NSURL, option:CFURLEnumeratorOptions, propertyKeys:NSArray):CFURLEnumerator;
 	@:hxmc.retained
@@ -1011,7 +1093,8 @@ import objc.NSObject;
 	public static function CFURLStopAccessingSecurityScopedResource(url:NSURL):Void;
 	public static function CFURLWriteBookmarkDataToFile(bookmarkRef:NSData, fileURL:NSURL, options:I64, errorRef:Ptr):Bool;
 	@:deprecated
-	public static function CFURLWriteDataAndPropertiesToResource(url:NSURL, dataToWrite:NSData, propertiesToWrite:NSDictionary, errorCode:Ptr):Bool;
+	@:hxmc.len(errorCode, 1)
+	public static function CFURLWriteDataAndPropertiesToResource(url:NSURL, dataToWrite:NSData, propertiesToWrite:NSDictionary, errorCode:Span<Int>):Bool;
 	@:hxmc.retained
 	public static function CFUUIDCreate(alloc:CFAllocator):CFUUID;
 	@:hxmc.retained
@@ -1043,7 +1126,8 @@ import objc.NSObject;
 	public static function CFWriteStreamGetTypeID():I64;
 	public static function CFWriteStreamOpen(stream:NSOutputStream):Bool;
 	public static function CFWriteStreamScheduleWithRunLoop(stream:NSOutputStream, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
-	public static function CFWriteStreamSetClient(stream:NSOutputStream, streamEvents:I64, clientCB:Ptr, clientContext:Ptr):Bool;
+	@:hxmc.len(clientContext, 1)
+	public static function CFWriteStreamSetClient(stream:NSOutputStream, streamEvents:I64, clientCB:(NSOutputStream, CFStreamEventType, Ptr) -> Void, clientContext:Span<CFStreamClientContext>):Bool;
 	public static function CFWriteStreamSetDispatchQueue(stream:NSOutputStream, q:NSObject):Void;
 	public static function CFWriteStreamSetProperty(stream:NSOutputStream, propertyName:NSStringArg, propertyValue:Id):Bool;
 	public static function CFWriteStreamUnscheduleFromRunLoop(stream:NSOutputStream, runLoop:CFRunLoop, runLoopMode:NSStringArg):Void;
@@ -1056,6 +1140,7 @@ import objc.NSObject;
 	public static final kCFAllocatorNull : CFAllocator;
 	public static final kCFAllocatorSystemDefault : CFAllocator;
 	public static final kCFAllocatorUseContext : CFAllocator;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFBanglaCalendar : NSString;
 	public static final kCFBooleanFalse : NSNumber;
 	public static final kCFBooleanTrue : NSNumber;
@@ -1072,6 +1157,7 @@ import objc.NSObject;
 	public static final kCFCopyStringDictionaryKeyCallBacks : CFDictionaryKeyCallBacks;
 	public static final kCFCopyStringSetCallBacks : CFSetCallBacks;
 	public static final kCFCoreFoundationVersionNumber : Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFDangiCalendar : NSString;
 	public static final kCFDateFormatterAMSymbol : NSString;
 	public static final kCFDateFormatterCalendar : NSString;
@@ -1115,6 +1201,7 @@ import objc.NSObject;
 	public static final kCFErrorURLKey : NSString;
 	public static final kCFErrorUnderlyingErrorKey : NSString;
 	public static final kCFGregorianCalendar : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFGujaratiCalendar : NSString;
 	public static final kCFHebrewCalendar : NSString;
 	public static final kCFISO8601Calendar : NSString;
@@ -1124,6 +1211,7 @@ import objc.NSObject;
 	public static final kCFIslamicTabularCalendar : NSString;
 	public static final kCFIslamicUmmAlQuraCalendar : NSString;
 	public static final kCFJapaneseCalendar : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFKannadaCalendar : NSString;
 	public static final kCFLocaleAlternateQuotationBeginDelimiterKey : NSString;
 	public static final kCFLocaleAlternateQuotationEndDelimiterKey : NSString;
@@ -1146,7 +1234,9 @@ import objc.NSObject;
 	public static final kCFLocaleScriptCode : NSString;
 	public static final kCFLocaleUsesMetricSystem : NSString;
 	public static final kCFLocaleVariantCode : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFMalayalamCalendar : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFMarathiCalendar : NSString;
 	public static final kCFNull : NSNull;
 	public static final kCFNumberFormatterAlwaysShowDecimalSeparator : NSString;
@@ -1167,6 +1257,7 @@ import objc.NSObject;
 	public static final kCFNumberFormatterMaxIntegerDigits : NSString;
 	public static final kCFNumberFormatterMaxSignificantDigits : NSString;
 	public static final kCFNumberFormatterMinFractionDigits : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kCFNumberFormatterMinGroupingDigits : NSString;
 	public static final kCFNumberFormatterMinIntegerDigits : NSString;
 	public static final kCFNumberFormatterMinSignificantDigits : NSString;
@@ -1191,6 +1282,7 @@ import objc.NSObject;
 	public static final kCFNumberNaN : NSNumber;
 	public static final kCFNumberNegativeInfinity : NSNumber;
 	public static final kCFNumberPositiveInfinity : NSNumber;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFOdiaCalendar : NSString;
 	public static final kCFPersianCalendar : NSString;
 	public static final kCFPlugInDynamicRegisterFunctionKey : NSString;
@@ -1256,7 +1348,9 @@ import objc.NSObject;
 	public static final kCFStringTransformToLatin : NSString;
 	public static final kCFStringTransformToUnicodeName : NSString;
 	public static final kCFStringTransformToXMLHex : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFTamilCalendar : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFTeluguCalendar : NSString;
 	public static final kCFTimeZoneSystemTimeZoneDidChangeNotification : NSString;
 	public static final kCFTypeArrayCallBacks : CFArrayCallBacks;
@@ -1272,16 +1366,19 @@ import objc.NSObject;
 	public static final kCFURLCreationDateKey : NSString;
 	@:deprecated
 	public static final kCFURLCustomIconKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCFURLDirectoryEntryCountKey : NSString;
 	public static final kCFURLDocumentIdentifierKey : NSString;
 	@:deprecated
 	public static final kCFURLEffectiveIconKey : NSString;
 	public static final kCFURLFileAllocatedSizeKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLFileContentIdentifierKey : NSString;
 	@:deprecated
 	public static final kCFURLFileDirectoryContents : NSString;
 	@:deprecated
 	public static final kCFURLFileExists : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final kCFURLFileIdentifierKey : NSString;
 	@:deprecated
 	public static final kCFURLFileLastModificationTime : NSString;
@@ -1294,6 +1391,7 @@ import objc.NSObject;
 	public static final kCFURLFileProtectionComplete : NSString;
 	public static final kCFURLFileProtectionCompleteUnlessOpen : NSString;
 	public static final kCFURLFileProtectionCompleteUntilFirstUserAuthentication : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kCFURLFileProtectionCompleteWhenUserInactive : NSString;
 	public static final kCFURLFileProtectionKey : NSString;
 	public static final kCFURLFileProtectionNone : NSString;
@@ -1323,9 +1421,11 @@ import objc.NSObject;
 	public static final kCFURLIsHiddenKey : NSString;
 	public static final kCFURLIsMountTriggerKey : NSString;
 	public static final kCFURLIsPackageKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLIsPurgeableKey : NSString;
 	public static final kCFURLIsReadableKey : NSString;
 	public static final kCFURLIsRegularFileKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLIsSparseKey : NSString;
 	public static final kCFURLIsSymbolicLinkKey : NSString;
 	public static final kCFURLIsSystemImmutableKey : NSString;
@@ -1341,7 +1441,9 @@ import objc.NSObject;
 	public static final kCFURLLocalizedLabelKey : NSString;
 	public static final kCFURLLocalizedNameKey : NSString;
 	public static final kCFURLLocalizedTypeDescriptionKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLMayHaveExtendedAttributesKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLMayShareFileContentKey : NSString;
 	public static final kCFURLNameKey : NSString;
 	public static final kCFURLParentDirectoryURLKey : NSString;
@@ -1359,7 +1461,9 @@ import objc.NSObject;
 	@:deprecated
 	public static final kCFURLUbiquitousItemIsDownloadedKey : NSString;
 	public static final kCFURLUbiquitousItemIsDownloadingKey : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final kCFURLUbiquitousItemIsExcludedFromSyncKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFURLUbiquitousItemIsSyncPausedKey : NSString;
 	public static final kCFURLUbiquitousItemIsUploadedKey : NSString;
 	public static final kCFURLUbiquitousItemIsUploadingKey : NSString;
@@ -1367,6 +1471,7 @@ import objc.NSObject;
 	public static final kCFURLUbiquitousItemPercentDownloadedKey : NSString;
 	@:deprecated
 	public static final kCFURLUbiquitousItemPercentUploadedKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFURLUbiquitousItemSupportedSyncControlsKey : NSString;
 	public static final kCFURLUbiquitousItemUploadingErrorKey : NSString;
 	public static final kCFURLVolumeAvailableCapacityForImportantUsageKey : NSString;
@@ -1387,9 +1492,11 @@ import objc.NSObject;
 	public static final kCFURLVolumeLocalizedFormatDescriptionKey : NSString;
 	public static final kCFURLVolumeLocalizedNameKey : NSString;
 	public static final kCFURLVolumeMaximumFileSizeKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final kCFURLVolumeMountFromLocationKey : NSString;
 	public static final kCFURLVolumeNameKey : NSString;
 	public static final kCFURLVolumeResourceCountKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final kCFURLVolumeSubtypeKey : NSString;
 	public static final kCFURLVolumeSupportsAccessPermissionsKey : NSString;
 	public static final kCFURLVolumeSupportsAdvisoryFileLockingKey : NSString;
@@ -1399,6 +1506,7 @@ import objc.NSObject;
 	public static final kCFURLVolumeSupportsExclusiveRenamingKey : NSString;
 	public static final kCFURLVolumeSupportsExtendedSecurityKey : NSString;
 	public static final kCFURLVolumeSupportsFileCloningKey : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kCFURLVolumeSupportsFileProtectionKey : NSString;
 	public static final kCFURLVolumeSupportsHardLinksKey : NSString;
 	public static final kCFURLVolumeSupportsImmutableFilesKey : NSString;
@@ -1412,10 +1520,13 @@ import objc.NSObject;
 	public static final kCFURLVolumeSupportsVolumeSizesKey : NSString;
 	public static final kCFURLVolumeSupportsZeroRunsKey : NSString;
 	public static final kCFURLVolumeTotalCapacityKey : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final kCFURLVolumeTypeNameKey : NSString;
 	public static final kCFURLVolumeURLForRemountingKey : NSString;
 	public static final kCFURLVolumeURLKey : NSString;
 	public static final kCFURLVolumeUUIDStringKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFVietnameseCalendar : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kCFVikramCalendar : NSString;
 }

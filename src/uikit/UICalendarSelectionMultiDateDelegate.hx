@@ -4,15 +4,19 @@ package uikit;
 import foundation.NSDateComponents;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UICalendarSelectionMultiDateDelegate") extern interface UICalendarSelectionMultiDateDelegate extends NSObjectProtocol {
+@:hxmc.objc("UICalendarSelectionMultiDateDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UICalendarSelectionMultiDateDelegate extends NSObjectProtocol {
 	@:selector("multiDateSelection:didSelectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function multiDateSelectionDidSelectDate(selection:UICalendarSelectionMultiDate, didSelectDate:NSDateComponents):Void;
 	@:selector("multiDateSelection:didDeselectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function multiDateSelectionDidDeselectDate(selection:UICalendarSelectionMultiDate, didDeselectDate:NSDateComponents):Void;
 	@:selector("multiDateSelection:canSelectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function multiDateSelectionCanSelectDate(selection:UICalendarSelectionMultiDate, canSelectDate:NSDateComponents):Bool;
 	@:selector("multiDateSelection:canDeselectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function multiDateSelectionCanDeselectDate(selection:UICalendarSelectionMultiDate, canDeselectDate:NSDateComponents):Bool;
 }

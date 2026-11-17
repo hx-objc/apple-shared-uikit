@@ -6,19 +6,28 @@ import avfoundation.AVSampleBufferDisplayLayer;
 import objc.NSObject;
 import uikit.UIView;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPictureInPictureControllerContentSource extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class AVPictureInPictureControllerContentSource extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():AVPictureInPictureControllerContentSource;
+	@:hxmc.available(macos >= 12.0)
 	var playerLayer(get, never) : Null<AVPlayerLayer>;
+	@:hxmc.available(macos >= 12.0)
 	function get_playerLayer():Null<AVPlayerLayer>;
+	@:hxmc.available(macos >= 12.0)
 	var sampleBufferDisplayLayer(get, never) : Null<AVSampleBufferDisplayLayer>;
+	@:hxmc.available(macos >= 12.0)
 	function get_sampleBufferDisplayLayer():Null<AVSampleBufferDisplayLayer>;
+	@:hxmc.available(macos >= 12.0)
 	var sampleBufferPlaybackDelegate(get, never) : Null<AVPictureInPictureSampleBufferPlaybackDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function get_sampleBufferPlaybackDelegate():Null<AVPictureInPictureSampleBufferPlaybackDelegate>;
 	var activeVideoCallSourceView(get, never) : Null<UIView>;
 	function get_activeVideoCallSourceView():Null<UIView>;
 	var activeVideoCallContentViewController(get, never) : AVPictureInPictureVideoCallViewController;
 	function get_activeVideoCallContentViewController():AVPictureInPictureVideoCallViewController;
+	@:hxmc.available(macos >= 12.0)
 	function initWithPlayerLayer(playerLayer:AVPlayerLayer):AVPictureInPictureControllerContentSource;
+	@:hxmc.available(macos >= 12.0)
 	function initWithSampleBufferDisplayLayer(sampleBufferDisplayLayer:AVSampleBufferDisplayLayer, playbackDelegate:AVPictureInPictureSampleBufferPlaybackDelegate):AVPictureInPictureControllerContentSource;
 	function initWithActiveVideoCallSourceView(sourceView:UIView, contentViewController:AVPictureInPictureVideoCallViewController):AVPictureInPictureControllerContentSource;
 }

@@ -4,7 +4,9 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRSpeechMetricsSessionFlags(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var BypassVoiceProcessing = 1;
 	inline function new(v:I64) this = v;
 	var None = 0;

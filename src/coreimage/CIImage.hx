@@ -63,15 +63,21 @@ import uikit.UIImage;
 	function get_url():Null<NSURL>;
 	var colorSpace(get, never) : Null<CGColorSpace>;
 	function get_colorSpace():Null<CGColorSpace>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var contentHeadroom(get, never) : Float32;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentHeadroom():Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var contentAverageLightLevel(get, never) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentAverageLightLevel():Float32;
 	var pixelBuffer(get, never) : Null<CVBuffer>;
 	function get_pixelBuffer():Null<CVBuffer>;
 	var CGImage(get, never) : Null<CGImage>;
 	function get_CGImage():Null<CGImage>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var metalTexture(get, never) : Null<MTLTexture>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_metalTexture():Null<MTLTexture>;
 	var depthData(get, never) : Null<AVDepthData>;
 	function get_depthData():Null<AVDepthData>;
@@ -141,15 +147,22 @@ import uikit.UIImage;
 	function imageBySamplingNearest():CIImage;
 	overload function imageByInsertingIntermediate():CIImage;
 	overload function imageByInsertingIntermediate(cache:Bool):CIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function imageByInsertingTiledIntermediate():CIImage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function imageByApplyingGainMap(gainmap:CIImage):CIImage;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function imageByApplyingGainMap(gainmap:CIImage, headroom:Float32):CIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function imageBySettingContentHeadroom(headroom:Float32):CIImage;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function imageBySettingContentAverageLightLevel(average:Float32):CIImage;
 	function regionOfInterestForImage(image:CIImage, inRect:CGRect):CGRect;
 	function autoAdjustmentFilters():NSArray<CIFilter>;
 	function autoAdjustmentFiltersWithOptions(options:Null<NSDictionary<NSString, Id>>):NSArray<CIFilter>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function imageByConvertingWorkingSpaceToLab():CIImage;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function imageByConvertingLabToWorkingSpace():CIImage;
 	overload function initWithDepthData(data:AVDepthData, options:Null<NSDictionary<NSString, Id>>):Null<CIImage>;
 	overload function initWithDepthData(data:AVDepthData):Null<CIImage>;

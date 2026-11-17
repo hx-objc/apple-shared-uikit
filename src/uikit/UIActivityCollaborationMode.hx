@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIActivityCollaborationMode(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var SendCopy = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Collaborate = 1;
 	inline function new(v:I64) this = v;
 }

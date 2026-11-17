@@ -5,8 +5,12 @@ import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("AccessorySetupKit") extern class AccessorySetupKit {
 	public static final ASErrorDomain : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final ASPickerDisplaySettingsDiscoveryTimeoutLong : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final ASPickerDisplaySettingsDiscoveryTimeoutMedium : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final ASPickerDisplaySettingsDiscoveryTimeoutShort : Float;
+	@:hxmc.available(ios >= 26.1, maccatalyst >= 26.1)
 	public static final ASPickerDisplaySettingsDiscoveryTimeoutUnbounded : Float;
 }

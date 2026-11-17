@@ -43,8 +43,11 @@ import symbols.NSSymbolEffectOptions;
 	var menu(get, set) : Null<UIMenu>;
 	function get_menu():Null<UIMenu>;
 	function set_menu(v:Null<UIMenu>):Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredMenuElementOrder(get, set) : UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredMenuElementOrder():UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredMenuElementOrder(v:UIContextMenuConfigurationElementOrder):UIContextMenuConfigurationElementOrder;
 	var changesSelectionAsPrimaryAction(get, set) : Bool;
 	function get_changesSelectionAsPrimaryAction():Bool;
@@ -53,44 +56,74 @@ import symbols.NSSymbolEffectOptions;
 	@:selector("isSelected")
 	function get_selected():Bool;
 	function set_selected(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_hidden(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var symbolAnimationEnabled(get, set) : Bool;
 	@:selector("isSymbolAnimationEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_symbolAnimationEnabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_symbolAnimationEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var visibilityPriority(get, set) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_visibilityPriority():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_visibilityPriority(v:I64):I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var paddingRemoved(get, set) : Bool;
 	@:selector("isPaddingRemoved")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_paddingRemoved():Bool;
 	@:selector("setPaddingRemoved:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_paddingRemoved(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var axisBehavior(get, set) : UIBarButtonItemAxisBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_axisBehavior():UIBarButtonItemAxisBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_axisBehavior(v:UIBarButtonItemAxisBehavior):UIBarButtonItemAxisBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var menuRepresentation(get, set) : Null<UIMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_menuRepresentation():Null<UIMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_menuRepresentation(v:Null<UIMenuElement>):Null<UIMenuElement>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var hidesSharedBackground(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_hidesSharedBackground():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_hidesSharedBackground(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var sharesBackground(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_sharesBackground():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_sharesBackground(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var identifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_identifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_identifier(v:Null<NSStringArg>):Null<NSStringArg>;
 	var tintColor(get, set) : Null<UIColor>;
 	function get_tintColor():Null<UIColor>;
 	function set_tintColor(v:Null<UIColor>):Null<UIColor>;
 	var buttonGroup(get, never) : Null<UIBarButtonItemGroup>;
 	function get_buttonGroup():Null<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var badge(get, set) : Null<UIBarButtonItemBadge>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_badge():Null<UIBarButtonItemBadge>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_badge(v:Null<UIBarButtonItemBadge>):Null<UIBarButtonItemBadge>;
 	var springLoaded(get, set) : Bool;
 	@:selector("isSpringLoaded")
@@ -108,14 +141,21 @@ import symbols.NSSymbolEffectOptions;
 	overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, menu:Null<UIMenu>):UIBarButtonItem;
 	overload function initWithTitle(title:Null<NSStringArg>, menu:Null<UIMenu>):UIBarButtonItem;
 	overload function initWithImage(image:Null<UIImage>, menu:Null<UIMenu>):UIBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithPrimaryAction(primaryAction:Null<UIAction>, menu:Null<UIMenu>):UIBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, primaryAction:Null<UIAction>, menu:Null<UIMenu>):UIBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithTitle(title:Null<NSStringArg>, image:Null<UIImage>, target:Null<Id>, action:Selector, menu:Null<UIMenu>):UIBarButtonItem;
 	static function fixedSpaceItemOfWidth(width:Float):UIBarButtonItem;
 	static function flexibleSpaceItem():UIBarButtonItem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function fixedSpaceItem():UIBarButtonItem;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function creatingFixedGroup():UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function creatingMovableGroupWithCustomizationIdentifier(customizationIdentifier:NSStringArg):UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function creatingOptionalGroupWithCustomizationIdentifier(customizationIdentifier:NSStringArg, inDefaultCustomization:Bool):UIBarButtonItemGroup;
 	overload function setBackgroundImage(backgroundImage:Null<UIImage>, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 	overload function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics):Null<UIImage>;
@@ -131,16 +171,28 @@ import symbols.NSSymbolEffectOptions;
 	function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):UIOffset;
 	function setBackButtonBackgroundVerticalPositionAdjustment(adjustment:Float, forBarMetrics:UIBarMetrics):Void;
 	function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function addSymbolEffect(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeSymbolEffectOfType(symbolEffect:NSSymbolEffect, options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function removeAllSymbolEffects():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeAllSymbolEffectsWithOptions(options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function removeAllSymbolEffectsWithOptions(options:NSSymbolEffectOptions, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function setSymbolImage(symbolImage:UIImage, withContentTransition:NSSymbolContentTransition):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function setSymbolImage(symbolImage:UIImage, withContentTransition:NSSymbolContentTransition, options:NSSymbolEffectOptions):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 }

@@ -19,8 +19,11 @@ import hxmc.objc.ObjCClass;
 	var canOverlapSourceViewRect(get, set) : Bool;
 	function get_canOverlapSourceViewRect():Bool;
 	function set_canOverlapSourceViewRect(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var sourceItem(get, set) : Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_sourceItem():Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_sourceItem(v:Null<UIPopoverPresentationControllerSourceItem>):Null<UIPopoverPresentationControllerSourceItem>;
 	var barButtonItem(get, set) : Null<UIBarButtonItem>;
 	function get_barButtonItem():Null<UIBarButtonItem>;

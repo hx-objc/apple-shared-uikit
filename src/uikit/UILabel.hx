@@ -23,8 +23,11 @@ import hxmc.I64;
 	var textColor(get, set) : Null<UIColor>;
 	function get_textColor():Null<UIColor>;
 	function set_textColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredVibrancy(get, set) : UILabelVibrancy;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredVibrancy():UILabelVibrancy;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredVibrancy(v:UILabelVibrancy):UILabelVibrancy;
 	var shadowColor(get, set) : Null<UIColor>;
 	function get_shadowColor():Null<UIColor>;
@@ -87,8 +90,11 @@ import hxmc.I64;
 	var adjustsFontForContentSizeCategory(get, set) : Bool;
 	function get_adjustsFontForContentSizeCategory():Bool;
 	function set_adjustsFontForContentSizeCategory(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sizingRule(get, set) : UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sizingRule():UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_sizingRule(v:UILetterformAwareSizingRule):UILetterformAwareSizingRule;
 	function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:I64):CGRect;
 	function drawTextInRect(rect:CGRect):Void;

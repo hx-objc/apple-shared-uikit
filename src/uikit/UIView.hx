@@ -73,8 +73,11 @@ import uiutilities.UICoordinateSpace;
 	var contentScaleFactor(get, set) : Float;
 	function get_contentScaleFactor():Float;
 	function set_contentScaleFactor(v:Float):Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var anchorPoint(get, set) : CGPoint;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_anchorPoint():CGPoint;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_anchorPoint(v:CGPoint):CGPoint;
 	var multipleTouchEnabled(get, set) : Bool;
 	@:selector("isMultipleTouchEnabled")
@@ -221,10 +224,15 @@ import uiutilities.UICoordinateSpace;
 	function set_maximumContentSizeCategory(v:Null<NSStringArg>):Null<NSStringArg>;
 	var appliedContentSizeCategoryLimitsDescription(get, never) : NSStringArg;
 	function get_appliedContentSizeCategoryLimitsDescription():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var traitOverrides(get, never) : UITraitOverrides;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_traitOverrides():UITraitOverrides;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var cornerConfiguration(get, set) : Null<UICornerConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_cornerConfiguration():Null<UICornerConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_cornerConfiguration(v:Null<UICornerConfiguration>):Null<UICornerConfiguration>;
 	var interactions(get, set) : NSArray<UIInteraction>;
 	function get_interactions():NSArray<UIInteraction>;
@@ -247,8 +255,11 @@ import uiutilities.UICoordinateSpace;
 	var largeContentImageInsets(get, set) : UIEdgeInsets;
 	function get_largeContentImageInsets():UIEdgeInsets;
 	function set_largeContentImageInsets(v:UIEdgeInsets):UIEdgeInsets;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var hoverStyle(get, set) : Null<UIHoverStyle>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_hoverStyle():Null<UIHoverStyle>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_hoverStyle(v:Null<UIHoverStyle>):Null<UIHoverStyle>;
 	var traitCollection(get, never) : UITraitCollection;
 	function get_traitCollection():UITraitCollection;
@@ -295,8 +306,11 @@ import uiutilities.UICoordinateSpace;
 	function didMoveToWindow():Void;
 	function isDescendantOfView(view:UIView):Bool;
 	function viewWithTag(tag:I64):Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setNeedsUpdateProperties():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updateProperties():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function updatePropertiesIfNeeded():Void;
 	function setNeedsLayout():Void;
 	function layoutIfNeeded():Void;
@@ -312,6 +326,7 @@ import uiutilities.UICoordinateSpace;
 	static overload function animateWithDuration(duration:Float, delay:Float, options:UIViewAnimationOptions, animations:() -> Void, completion:Null<Bool -> Void>):Void;
 	static overload function animateWithDuration(duration:Float, animations:() -> Void, completion:Null<Bool -> Void>):Void;
 	static overload function animateWithDuration(duration:Float, animations:() -> Void):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function animateWithSpringDuration(duration:Float, bounce:Float, initialSpringVelocity:Float, delay:Float, options:UIViewAnimationOptions, animations:() -> Void, completion:Null<Bool -> Void>):Void;
 	static overload function animateWithDuration(duration:Float, delay:Float, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:() -> Void, completion:Null<Bool -> Void>):Void;
 	static function transitionWithView(view:UIView, duration:Float, options:UIViewAnimationOptions, animations:Null<() -> Void>, completion:Null<Bool -> Void>):Void;
@@ -379,12 +394,19 @@ import uiutilities.UICoordinateSpace;
 	static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool):Void;
 	@:deprecated
 	static function setAnimationTransition(transition:UIViewAnimationTransition, forView:UIView, cache:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function updateTraitsIfNeeded():Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function layoutGuideForLayoutRegion(layoutRegion:UIViewLayoutRegion):UILayoutGuide;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function edgeInsetsForLayoutRegion(layoutRegion:UIViewLayoutRegion):UIEdgeInsets;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function directionalEdgeInsetsForLayoutRegion(layoutRegion:UIViewLayoutRegion):NSDirectionalEdgeInsets;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function reservedRegionsOfKind(kind:UIViewReservedRegionKind):NSArray<UIViewReservedRegion>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function reservedRegionsOfKind(kind:UIViewReservedRegionKind, options:UIViewReservedRegionQueryOptions):NSArray<UIViewReservedRegion>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function effectiveRadiusForCorner(corner:UIRectCorner):Float;
 	function addInteraction(interaction:UIInteraction):Void;
 	function removeInteraction(interaction:UIInteraction):Void;
@@ -409,19 +431,27 @@ import uiutilities.UICoordinateSpace;
 	function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
 	function didUpdateFocusInContext(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 	function focusItemsInRect(rect:CGRect):NSArray<UIFocusItem>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function registerForTraitChanges(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function unregisterForTraitChanges(registration:UITraitChangeRegistration):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 	@:selector("convertPoint:toCoordinateSpace:")
 	function convertPointToCoordinateSpace(point:CGPoint, toCoordinateSpace:UICoordinateSpace):CGPoint;
 	@:selector("convertRect:toCoordinateSpace:")
 	function convertRectToCoordinateSpace(rect:CGRect, toCoordinateSpace:UICoordinateSpace):CGRect;
 	@:selector("registerForTraitChanges:withHandler:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithHandler(traits:NSArray, withHandler:(UITraitEnvironment, UITraitCollection) -> Void):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withTarget:action:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithTargetAction(traits:NSArray, withTarget:Id, action:Selector):UITraitChangeRegistration;
 	@:selector("registerForTraitChanges:withAction:")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function registerForTraitChangesWithAction(traits:NSArray, withAction:Selector):UITraitChangeRegistration;
 }

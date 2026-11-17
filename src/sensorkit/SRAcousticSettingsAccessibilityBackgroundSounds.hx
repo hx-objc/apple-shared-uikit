@@ -8,27 +8,41 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRAcousticSettingsAccessibilityBackgroundSounds extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SRAcousticSettingsAccessibilityBackgroundSounds extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SRAcousticSettingsAccessibilityBackgroundSounds;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var enabled(get, never) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var soundName(get, never) : SRAcousticSettingsAccessibilityBackgroundSoundsName;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_soundName():SRAcousticSettingsAccessibilityBackgroundSoundsName;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var relativeVolume(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_relativeVolume():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var playWithMediaEnabled(get, never) : Bool;
 	@:selector("isPlayWithMediaEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_playWithMediaEnabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var relativeVolumeWithMedia(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_relativeVolumeWithMedia():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var stopOnLockEnabled(get, never) : Bool;
 	@:selector("isStopOnLockEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_stopOnLockEnabled():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<SRAcousticSettingsAccessibilityBackgroundSounds>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():SRAcousticSettingsAccessibilityBackgroundSounds;
 }

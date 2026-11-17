@@ -50,5 +50,6 @@ import hxmc.objc.Id;
 	function finishedUnselectedImage():Null<UIImage>;
 	function setBadgeTextAttributes(textAttributes:Null<NSDictionary<NSString, Id>>, forState:UIControlState):Void;
 	function badgeTextAttributesForState(state:UIControlState):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 }

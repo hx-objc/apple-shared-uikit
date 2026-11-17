@@ -30,6 +30,7 @@ enum abstract UIBarButtonSystemItem(I64) to I64 {
 	@:deprecated
 	var PageCurl = 23;
 	var Close = 24;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var WritingTools = 25;
 	inline function new(v:I64) this = v;
 }

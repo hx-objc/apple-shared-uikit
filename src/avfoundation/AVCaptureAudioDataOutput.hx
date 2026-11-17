@@ -13,8 +13,11 @@ import objc.NSObject;
 	function get_sampleBufferDelegate():Null<AVCaptureAudioDataOutputSampleBufferDelegate>;
 	var sampleBufferCallbackQueue(get, never) : Null<NSObject>;
 	function get_sampleBufferCallbackQueue():Null<NSObject>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var spatialAudioChannelLayoutTag(get, set) : Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_spatialAudioChannelLayoutTag():Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_spatialAudioChannelLayoutTag(v:Int):Int;
 	override function init():AVCaptureAudioDataOutput;
 	@:selector("new")

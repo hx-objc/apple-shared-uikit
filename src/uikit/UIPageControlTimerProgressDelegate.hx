@@ -3,9 +3,11 @@ package uikit;
 
 import hxmc.I64;
 
-@:hxmc.objc("UIPageControlTimerProgressDelegate") extern interface UIPageControlTimerProgressDelegate extends UIPageControlProgressDelegate {
+@:hxmc.objc("UIPageControlTimerProgressDelegate") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIPageControlTimerProgressDelegate extends UIPageControlProgressDelegate {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function pageControlTimerProgressDidChange(progress:UIPageControlTimerProgress):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function pageControlTimerProgress(progress:UIPageControlTimerProgress, shouldAdvanceToPage:I64):Bool;
 }

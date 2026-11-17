@@ -11,21 +11,32 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CoreSpotlight") @:hxmc.objc extern class CSSearchQueryContext extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("CoreSpotlight") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class CSSearchQueryContext extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():CSSearchQueryContext;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var fetchAttributes(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_fetchAttributes():NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_fetchAttributes(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var filterQueries(get, set) : NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_filterQueries():NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_filterQueries(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var keyboardLanguage(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_keyboardLanguage():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_keyboardLanguage(v:Null<NSStringArg>):Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CSSearchQueryContext>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():CSSearchQueryContext;
 }

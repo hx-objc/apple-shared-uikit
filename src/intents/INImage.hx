@@ -14,14 +14,20 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INImage extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INImage extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INImage;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	static function imageNamed(name:NSStringArg):INImage;
+	@:hxmc.available(macos >= 11.0)
 	static function systemImageNamed(systemImageName:NSStringArg):INImage;
+	@:hxmc.available(macos >= 11.0)
 	static function imageWithImageData(imageData:NSData):INImage;
+	@:hxmc.available(macos >= 11.0)
 	static overload function imageWithURL(URL:NSURL):Null<INImage>;
+	@:hxmc.available(macos >= 11.0)
 	static overload function imageWithURL(URL:NSURL, width:Float, height:Float):Null<INImage>;
 	@:hxmc.framework("IntentsUI")
 	static function imageWithCGImage(imageRef:CGImage):INImage;
@@ -34,5 +40,6 @@ import uikit.UIImage;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<INImage>;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INImage;
 }

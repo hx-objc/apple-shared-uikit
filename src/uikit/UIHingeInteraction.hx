@@ -3,14 +3,19 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIHingeInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIHingeInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIHingeInteraction;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_enabled():Bool;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_enabled(v:Bool):Bool;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function initWithUpdateHandler(updateHandler:(UIHingeInteraction, UIHingeInteractionUpdate) -> Void):UIHingeInteraction;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

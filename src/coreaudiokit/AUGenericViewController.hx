@@ -7,12 +7,19 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("CoreAudioKit") @:hxmc.objc extern class AUGenericViewController extends UIViewController {
+@:hxmc.framework("CoreAudioKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class AUGenericViewController extends UIViewController {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AUGenericViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var auAudioUnit(get, set) : Null<AUAudioUnit>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_auAudioUnit():Null<AUAudioUnit>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_auAudioUnit(v:Null<AUAudioUnit>):Null<AUAudioUnit>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AUGenericViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<AUGenericViewController>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):AUGenericViewController;
 }

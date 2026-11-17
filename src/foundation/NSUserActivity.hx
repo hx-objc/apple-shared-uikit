@@ -78,11 +78,15 @@ import objc.NSObject;
 	function get_mapItem():MKMapItem;
 	@:hxmc.framework("MapKit")
 	function set_mapItem(v:MKMapItem):MKMapItem;
+	@:hxmc.available(macos >= 11.0)
 	var isClassKitDeepLink(get, never) : Bool;
 	@:hxmc.framework("ClassKit")
+	@:hxmc.available(macos >= 11.0)
 	function get_isClassKitDeepLink():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var contextIdentifierPath(get, never) : Null<NSArray<NSString>>;
 	@:hxmc.framework("ClassKit")
+	@:hxmc.available(macos >= 11.0)
 	function get_contextIdentifierPath():Null<NSArray<NSString>>;
 	var ndefMessagePayload(get, never) : Null<NFCNDEFMessage>;
 	@:hxmc.framework("CoreNFC")
@@ -92,13 +96,18 @@ import objc.NSObject;
 	function get_contentAttributeSet():Null<CSSearchableItemAttributeSet>;
 	@:hxmc.framework("CoreSpotlight")
 	function set_contentAttributeSet(v:Null<CSSearchableItemAttributeSet>):Null<CSSearchableItemAttributeSet>;
+	@:hxmc.available(macos >= 12.0)
 	var interaction(get, never) : Null<INInteraction>;
 	@:hxmc.framework("Intents")
+	@:hxmc.available(macos >= 12.0)
 	function get_interaction():Null<INInteraction>;
+	@:hxmc.available(macos >= 12.0)
 	var suggestedInvocationPhrase(get, set) : Null<NSStringArg>;
 	@:hxmc.framework("Intents")
+	@:hxmc.available(macos >= 12.0)
 	function get_suggestedInvocationPhrase():Null<NSStringArg>;
 	@:hxmc.framework("Intents")
+	@:hxmc.available(macos >= 12.0)
 	function set_suggestedInvocationPhrase(v:Null<NSStringArg>):Null<NSStringArg>;
 	var shortcutAvailability(get, set) : INShortcutAvailabilityOptions;
 	@:hxmc.framework("Intents")

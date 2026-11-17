@@ -8,17 +8,24 @@ import hxmc.unsafe.CString;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("Metal") extern class Metal {
+	@:hxmc.available(ios >= 18.0)
 	@:hxmc.retained
 	public static function MTLCopyAllDevices():NSArray<MTLDevice>;
 	@:hxmc.retained
 	public static function MTLCreateSystemDefaultDevice():Null<MTLDevice>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function MTLIOCompressionContextAppendData(context:Ptr, data:Ptr, size:I64):Void;
 	public static function MTLIOCompressionContextDefaultChunkSize():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function MTLIOCreateCompressionContext(path:CString, type:MTLIOCompressionMethod, chunkSize:I64):Ptr;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function MTLIOFlushAndDestroyCompressionContext(context:Ptr):MTLIOCompressionStatus;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final MTL4CommandQueueErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final MTLBinaryArchiveDomain : NSString;
 	public static final MTLCaptureErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final MTLCommandBufferEncoderInfoErrorKey : NSString;
 	public static final MTLCommandBufferErrorDomain : NSString;
 	public static final MTLCommonCounterClipperInvocations : NSString;
@@ -40,14 +47,23 @@ import hxmc.unsafe.Ptr;
 	public static final MTLCommonCounterVertexCycles : NSString;
 	public static final MTLCommonCounterVertexInvocations : NSString;
 	public static final MTLCounterErrorDomain : NSString;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	public static final MTLDeviceErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final MTLDynamicLibraryDomain : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final MTLIOErrorDomain : NSString;
 	public static final MTLLibraryErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MTLLogStateErrorDomain : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final MTLTensorDomain : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSDeviceCertificationiPhonePerformanceGaming : I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSProcessInfoPerformanceProfileDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSProcessPerformanceProfileDefault : I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSProcessPerformanceProfileSustained : I64;
 }

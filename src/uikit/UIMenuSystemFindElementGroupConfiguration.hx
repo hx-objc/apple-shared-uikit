@@ -3,9 +3,13 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIMenuSystemFindElementGroupConfiguration extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIMenuSystemFindElementGroupConfiguration extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIMenuSystemFindElementGroupConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var style(get, set) : UIMenuSystemFindElementGroupConfigurationStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_style():UIMenuSystemFindElementGroupConfigurationStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_style(v:UIMenuSystemFindElementGroupConfigurationStyle):UIMenuSystemFindElementGroupConfigurationStyle;
 }

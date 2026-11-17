@@ -16,28 +16,39 @@ import hxmc.I64;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKQuery extends NSObject {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKQuery extends NSObject {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKQuery;
+	@:hxmc.available(macos >= 13.0)
 	var objectType(get, never) : Null<HKObjectType>;
+	@:hxmc.available(macos >= 13.0)
 	function get_objectType():Null<HKObjectType>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var sampleType(get, never) : Null<HKSampleType>;
+	@:hxmc.available(macos >= 13.0)
 	function get_sampleType():Null<HKSampleType>;
+	@:hxmc.available(macos >= 13.0)
 	var predicate(get, never) : Null<NSPredicate>;
+	@:hxmc.available(macos >= 13.0)
 	function get_predicate():Null<NSPredicate>;
 	static overload function predicateForObjectsWithMetadataKey(key:NSStringArg):NSPredicate;
 	static overload function predicateForObjectsWithMetadataKey(key:NSStringArg, allowedValues:NSArray):NSPredicate;
 	static overload function predicateForObjectsWithMetadataKey(key:NSStringArg, operatorType:NSPredicateOperatorType, value:Id):NSPredicate;
 	static function predicateForObjectsFromSource(source:HKSource):NSPredicate;
 	static function predicateForObjectsFromSources(sources:NSSet<HKSource>):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForObjectsFromSourceRevisions(sourceRevisions:NSSet<HKSourceRevision>):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForObjectsFromDevices(devices:NSSet<HKDevice>):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForObjectsWithDeviceProperty(key:NSStringArg, allowedValues:NSSet<NSString>):NSPredicate;
 	static function predicateForObjectWithUUID(UUID:NSUUID):NSPredicate;
 	static function predicateForObjectsWithUUIDs(UUIDs:NSSet<NSUUID>):NSPredicate;
 	static function predicateForObjectsWithNoCorrelation():NSPredicate;
 	static function predicateForObjectsFromWorkout(workout:HKWorkout):NSPredicate;
 	static function predicateForObjectsAssociatedWithElectrocardiogram(electrocardiogram:HKElectrocardiogram):NSPredicate;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function predicateForWorkoutEffortSamplesRelatedToWorkout(workout:HKWorkout, activity:Null<HKWorkoutActivity>):NSPredicate;
 	static function predicateForSamplesWithStartDate(startDate:Null<NSDate>, endDate:Null<NSDate>, options:HKQueryOptions):NSPredicate;
 	static function predicateForQuantitySamplesWithOperatorType(operatorType:NSPredicateOperatorType, quantity:HKQuantity):NSPredicate;
@@ -46,51 +57,83 @@ import objc.NSObject;
 	static function predicateForWorkoutsWithWorkoutActivityType(workoutActivityType:HKWorkoutActivityType):NSPredicate;
 	static overload function predicateForWorkoutsWithOperatorType(operatorType:NSPredicateOperatorType, duration:Float):NSPredicate;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static overload function predicateForWorkoutsWithOperatorType(operatorType:NSPredicateOperatorType, totalEnergyBurned:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:totalDistance:")
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForWorkoutsWithOperatorTypeTotalDistance(operatorType:NSPredicateOperatorType, totalDistance:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:totalSwimmingStrokeCount:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForWorkoutsWithOperatorTypeTotalSwimmingStrokeCount(operatorType:NSPredicateOperatorType, totalSwimmingStrokeCount:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:totalFlightsClimbed:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForWorkoutsWithOperatorTypeTotalFlightsClimbed(operatorType:NSPredicateOperatorType, totalFlightsClimbed:HKQuantity):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static overload function predicateForWorkoutsWithOperatorType(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, sumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:quantityType:minimumQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutsWithOperatorTypeQuantityTypeMinimumQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, minimumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:quantityType:maximumQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutsWithOperatorTypeQuantityTypeMaximumQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, maximumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutsWithOperatorType:quantityType:averageQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutsWithOperatorTypeQuantityTypeAverageQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, averageQuantity:HKQuantity):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutActivitiesWithWorkoutActivityType(workoutActivityType:HKWorkoutActivityType):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static overload function predicateForWorkoutActivitiesWithOperatorType(operatorType:NSPredicateOperatorType, duration:Float):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutActivitiesWithStartDate(startDate:Null<NSDate>, endDate:Null<NSDate>, options:HKQueryOptions):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static overload function predicateForWorkoutActivitiesWithOperatorType(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, sumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutActivitiesWithOperatorType:quantityType:minimumQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutActivitiesWithOperatorTypeQuantityTypeMinimumQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, minimumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutActivitiesWithOperatorType:quantityType:maximumQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutActivitiesWithOperatorTypeQuantityTypeMaximumQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, maximumQuantity:HKQuantity):NSPredicate;
 	@:selector("predicateForWorkoutActivitiesWithOperatorType:quantityType:averageQuantity:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutActivitiesWithOperatorTypeQuantityTypeAverageQuantity(operatorType:NSPredicateOperatorType, quantityType:HKQuantityType, averageQuantity:HKQuantity):NSPredicate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function predicateForWorkoutsWithActivityPredicate(activityPredicate:NSPredicate):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForActivitySummaryWithDateComponents(dateComponents:NSDateComponents):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForActivitySummariesBetweenStartDateComponents(startDateComponents:NSDateComponents, endDateComponents:NSDateComponents):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForClinicalRecordsWithFHIRResourceType(resourceType:NSStringArg):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForClinicalRecordsFromSource(source:HKSource, FHIRResourceType:NSStringArg, identifier:NSStringArg):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForElectrocardiogramsWithClassification(classification:HKElectrocardiogramClassification):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForElectrocardiogramsWithSymptomsStatus(symptomsStatus:HKElectrocardiogramSymptomsStatus):NSPredicate;
+	@:hxmc.available(macos >= 13.0)
 	static function predicateForVerifiableClinicalRecordsWithRelevantDateWithinDateInterval(dateInterval:NSDateInterval):NSPredicate;
 	static function predicateForStatesOfMindWithValence(valence:Float, operatorType:NSPredicateOperatorType):NSPredicate;
 	static function predicateForStatesOfMindWithKind(kind:HKStateOfMindKind):NSPredicate;
 	static function predicateForStatesOfMindWithLabel(label:HKStateOfMindLabel):NSPredicate;
 	static function predicateForStatesOfMindWithAssociation(association:HKStateOfMindAssociation):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithStatus(status:HKMedicationDoseEventLogStatus):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithStatuses(statuses:NSSet<NSNumber>):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithScheduledDate(scheduledDate:NSDate):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithScheduledDates(scheduledDates:NSSet<NSDate>):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithScheduledStartDate(startDate:Null<NSDate>, endDate:Null<NSDate>):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithMedicationConceptIdentifier(medicationConceptIdentifier:HKHealthConceptIdentifier):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForMedicationDoseEventWithMedicationConceptIdentifiers(medicationConceptIdentifiers:NSSet<HKHealthConceptIdentifier>):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForUserAnnotatedMedicationsWithIsArchived(isArchived:Bool):NSPredicate;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function predicateForUserAnnotatedMedicationsWithHasSchedule(hasSchedule:Bool):NSPredicate;
 }

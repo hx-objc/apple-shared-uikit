@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSendPaymentIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSendPaymentIntentResponse;
 	var code(get, never) : INSendPaymentIntentResponseCode;
 	function get_code():INSendPaymentIntentResponseCode;

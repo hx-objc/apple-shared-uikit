@@ -4,6 +4,7 @@ package intents;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("Intents") extern class Intents {
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	public static final INAnswerCallIntentIdentifier : NSString;
 	public static final INCancelWorkoutIntentIdentifier : NSString;
 	public static final INCarChargingConnectorTypeCCS1 : NSString;
@@ -13,25 +14,39 @@ import foundation.NSString;
 	public static final INCarChargingConnectorTypeGBTDC : NSString;
 	public static final INCarChargingConnectorTypeJ1772 : NSString;
 	public static final INCarChargingConnectorTypeMennekes : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final INCarChargingConnectorTypeNACSAC : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final INCarChargingConnectorTypeNACSDC : NSString;
 	@:deprecated
 	public static final INCarChargingConnectorTypeTesla : NSString;
 	public static final INEndWorkoutIntentIdentifier : NSString;
 	public static final INGetRideStatusIntentIdentifier : NSString;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	public static final INHangUpCallIntentIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INIntentErrorDomain : NSString;
 	public static final INListRideOptionsIntentIdentifier : NSString;
 	public static final INPauseWorkoutIntentIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelHome : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelHomeFax : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelMain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelMobile : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelOther : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelPager : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelSchool : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelWork : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabelWorkFax : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final INPersonHandleLabeliPhone : NSString;
 	public static final INPersonRelationshipAssistant : NSString;
 	public static final INPersonRelationshipBrother : NSString;

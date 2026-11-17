@@ -8,6 +8,7 @@ enum abstract CNAuthorizationStatus(I64) to I64 {
 	var Restricted = 1;
 	var Denied = 2;
 	var Authorized = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Limited = 4;
 	inline function new(v:I64) this = v;
 }

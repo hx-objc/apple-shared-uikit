@@ -20,16 +20,24 @@ import uikit.UIImage;
 	function get_identifier():NSStringArg;
 	var repeats(get, never) : Bool;
 	function get_repeats():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var actionButtons(get, set) : NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_actionButtons():NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_actionButtons(v:NSArray<CPButton>):NSArray<CPButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var maximumActionButtonCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_maximumActionButtonCount():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var backgroundImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_backgroundImage():Null<UIImage>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	overload function initWithIdentifier(identifier:NSStringArg, titleVariants:Null<NSArray<NSString>>, image:Null<UIImage>, repeats:Bool):CPVoiceControlState;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithIdentifier(identifier:NSStringArg, titleVariants:Null<NSArray<NSString>>, image:Null<UIImage>, backgroundImage:Null<UIImage>, repeats:Bool):CPVoiceControlState;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPVoiceControlState>;

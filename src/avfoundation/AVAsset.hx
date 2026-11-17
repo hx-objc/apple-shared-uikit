@@ -87,27 +87,35 @@ import objc.NSObject;
 	function cancelLoading():Void;
 	@:deprecated
 	function trackWithTrackID(trackID:Int):Null<AVAssetTrack>;
+	@:hxmc.available(macos >= 12.0)
 	function loadTrackWithTrackID(trackID:Int, completionHandler:(Null<AVAssetTrack>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function tracksWithMediaType(mediaType:NSStringArg):NSArray<AVAssetTrack>;
+	@:hxmc.available(macos >= 12.0)
 	function loadTracksWithMediaType(mediaType:NSStringArg, completionHandler:(Null<NSArray<AVAssetTrack>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function tracksWithMediaCharacteristic(mediaCharacteristic:NSStringArg):NSArray<AVAssetTrack>;
+	@:hxmc.available(macos >= 12.0)
 	function loadTracksWithMediaCharacteristic(mediaCharacteristic:NSStringArg, completionHandler:(Null<NSArray<AVAssetTrack>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function metadataForFormat(format:NSStringArg):NSArray<AVMetadataItem>;
+	@:hxmc.available(macos >= 12.0)
 	function loadMetadataForFormat(format:NSStringArg, completionHandler:(Null<NSArray<AVMetadataItem>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function chapterMetadataGroupsWithTitleLocale(locale:NSLocale, containingItemsWithCommonKeys:Null<NSArray<NSString>>):NSArray<AVTimedMetadataGroup>;
+	@:hxmc.available(macos >= 12.0)
 	function loadChapterMetadataGroupsWithTitleLocale(locale:NSLocale, containingItemsWithCommonKeys:NSArray<NSString>, completionHandler:(Null<NSArray<AVTimedMetadataGroup>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function chapterMetadataGroupsBestMatchingPreferredLanguages(preferredLanguages:NSArray<NSString>):NSArray<AVTimedMetadataGroup>;
+	@:hxmc.available(macos >= 12.0)
 	function loadChapterMetadataGroupsBestMatchingPreferredLanguages(preferredLanguages:NSArray<NSString>, completionHandler:(Null<NSArray<AVTimedMetadataGroup>>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function mediaSelectionGroupForMediaCharacteristic(mediaCharacteristic:NSStringArg):Null<AVMediaSelectionGroup>;
+	@:hxmc.available(macos >= 12.0)
 	function loadMediaSelectionGroupForMediaCharacteristic(mediaCharacteristic:NSStringArg, completionHandler:(Null<AVMediaSelectionGroup>, Null<NSError>) -> Void):Void;
 	@:deprecated
 	function unusedTrackID():Int;
+	@:hxmc.available(macos >= 12.0)
 	function findUnusedTrackIDWithCompletionHandler(completionHandler:(Int, Null<NSError>) -> Void):Void;
 	function copyWithZone(zone:Ptr):Id;
 	function statusOfValueForKey(key:NSStringArg, error:Ptr):AVKeyValueStatus;

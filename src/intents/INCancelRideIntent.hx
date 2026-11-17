@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INCancelRideIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCancelRideIntent;
 	var rideIdentifier(get, never) : NSStringArg;
 	function get_rideIdentifier():NSStringArg;

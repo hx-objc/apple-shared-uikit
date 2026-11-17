@@ -50,6 +50,7 @@ final class FoundationErrorsConstants {
 	public static inline var NSXPCConnectionInterrupted : I64 = 4097;
 	public static inline var NSXPCConnectionInvalid : I64 = 4099;
 	public static inline var NSXPCConnectionReplyInvalid : I64 = 4101;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static inline var NSXPCConnectionCodeSigningRequirementFailure : I64 = 4102;
 	public static inline var NSXPCConnectionErrorMinimum : I64 = 4096;
 	public static inline var NSXPCConnectionErrorMaximum : I64 = 4224;

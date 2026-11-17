@@ -12,23 +12,35 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKWorkoutEvent extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKWorkoutEvent extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKWorkoutEvent;
+	@:hxmc.available(macos >= 13.0)
 	var type(get, never) : HKWorkoutEventType;
+	@:hxmc.available(macos >= 13.0)
 	function get_type():HKWorkoutEventType;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var date(get, never) : NSDate;
+	@:hxmc.available(macos >= 13.0)
 	function get_date():NSDate;
+	@:hxmc.available(macos >= 13.0)
 	var dateInterval(get, never) : NSDateInterval;
+	@:hxmc.available(macos >= 13.0)
 	function get_dateInterval():NSDateInterval;
+	@:hxmc.available(macos >= 13.0)
 	var metadata(get, never) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0)
 	function get_metadata():Null<NSDictionary<NSString, Id>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static overload function workoutEventWithType(type:HKWorkoutEventType, date:NSDate):HKWorkoutEvent;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static overload function workoutEventWithType(type:HKWorkoutEventType, date:NSDate, metadata:NSDictionary<NSString, Id>):HKWorkoutEvent;
+	@:hxmc.available(macos >= 13.0)
 	static overload function workoutEventWithType(type:HKWorkoutEventType, dateInterval:NSDateInterval, metadata:Null<NSDictionary<NSString, Id>>):HKWorkoutEvent;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<HKWorkoutEvent>;

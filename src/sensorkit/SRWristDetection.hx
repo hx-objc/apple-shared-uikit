@@ -12,9 +12,13 @@ import objc.NSObject;
 	function get_wristLocation():SRWristLocation;
 	var crownOrientation(get, never) : SRCrownOrientation;
 	function get_crownOrientation():SRCrownOrientation;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var onWristDate(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_onWristDate():Null<NSDate>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var offWristDate(get, never) : Null<NSDate>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_offWristDate():Null<NSDate>;
 	override function init():SRWristDetection;
 }

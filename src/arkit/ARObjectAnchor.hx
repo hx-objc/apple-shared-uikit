@@ -7,7 +7,9 @@ import foundation.NSCoder;
 	static function alloc():ARObjectAnchor;
 	var referenceObject(get, never) : ARReferenceObject;
 	function get_referenceObject():ARReferenceObject;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var isTracked(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_isTracked():Bool;
 	override function initWithAnchor(anchor:ARAnchor):ARObjectAnchor;
 	override function initWithCoder(coder:NSCoder):Null<ARObjectAnchor>;

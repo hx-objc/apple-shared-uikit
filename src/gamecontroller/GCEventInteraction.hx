@@ -5,16 +5,24 @@ import objc.NSObject;
 import uikit.UIInteraction;
 import uikit.UIView;
 
-@:hxmc.framework("GameController") @:hxmc.objc extern class GCEventInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("GameController") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class GCEventInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():GCEventInteraction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var handledEventTypes(get, set) : GCUIEventTypes;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_handledEventTypes():GCUIEventTypes;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_handledEventTypes(v:GCUIEventTypes):GCUIEventTypes;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var receivesEventsInView(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_receivesEventsInView():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_receivesEventsInView(v:Bool):Bool;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():GCEventInteraction;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

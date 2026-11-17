@@ -4,14 +4,22 @@ package carplay;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMessageGridItemConfiguration extends NSObject {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPMessageGridItemConfiguration extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPMessageGridItemConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var unread(get, set) : Bool;
 	@:selector("isUnread")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_unread():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_unread(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var conversationIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_conversationIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithConversationIdentifier(conversationIdentifier:NSStringArg, unread:Bool):CPMessageGridItemConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():CPMessageGridItemConfiguration;
 }

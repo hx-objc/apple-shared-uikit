@@ -20,9 +20,13 @@ import uikit.UIImage;
 	function get_imageSet():Null<CPImageSet>;
 	var image(get, never) : Null<UIImage>;
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var avatarImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_avatarImage():Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var alertImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_alertImage():Null<UIImage>;
 	var primaryAction(get, never) : CPAlertAction;
 	function get_primaryAction():CPAlertAction;
@@ -30,24 +34,37 @@ import uikit.UIImage;
 	function get_secondaryAction():Null<CPAlertAction>;
 	var duration(get, never) : Float;
 	function get_duration():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var actions(get, never) : NSArray<CPAlertAction>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_actions():NSArray<CPAlertAction>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var maximumActionsCount(get, never) : I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_maximumActionsCount():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var maximumAlertImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_maximumAlertImageSize():CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var maximumAvatarImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_maximumAvatarImageSize():CGSize;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var showsCloseButton(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_showsCloseButton():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_showsCloseButton(v:Bool):Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	@:deprecated
 	overload function initWithTitleVariants(titleVariants:NSArray<NSString>, subtitleVariants:Null<NSArray<NSString>>, imageSet:Null<CPImageSet>, primaryAction:CPAlertAction, secondaryAction:Null<CPAlertAction>, duration:Float):CPNavigationAlert;
 	overload function initWithTitleVariants(titleVariants:NSArray<NSString>, subtitleVariants:Null<NSArray<NSString>>, image:Null<UIImage>, primaryAction:CPAlertAction, secondaryAction:Null<CPAlertAction>, duration:Float):CPNavigationAlert;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithTitleVariants(titleVariants:NSArray<NSString>, subtitleVariants:NSArray<NSString>, avatarImage:Null<UIImage>, alertImage:Null<UIImage>, actions:NSArray<CPAlertAction>, duration:Float):CPNavigationAlert;
 	overload function updateTitleVariants(newTitleVariants:NSArray<NSString>, subtitleVariants:NSArray<NSString>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function updateTitleVariants(newTitleVariants:NSArray<NSString>, subtitleVariants:NSArray<NSString>, avatarImage:Null<UIImage>, alertImage:Null<UIImage>, actions:NSArray<CPAlertAction>, duration:Float):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNavigationAlert>;

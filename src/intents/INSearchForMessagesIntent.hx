@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSString;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSearchForMessagesIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForMessagesIntent;
 	var recipients(get, never) : Null<NSArray<INPerson>>;
 	function get_recipients():Null<NSArray<INPerson>>;
@@ -51,6 +52,7 @@ import foundation.NSString;
 	@:selector("initWithRecipients:senders:searchTerms:attributes:dateTimeRange:identifiers:notificationIdentifiers:speakableGroupNames:")
 	@:deprecated
 	function initWithRecipientsSendersSearchTermsAttributesDateTimeRangeIdentifiersNotificationIdentifiersSpeakableGroupNames(recipients:Null<NSArray<INPerson>>, senders:Null<NSArray<INPerson>>, searchTerms:Null<NSArray<NSString>>, attributes:INMessageAttributeOptions, dateTimeRange:Null<INDateComponentsRange>, identifiers:Null<NSArray<NSString>>, notificationIdentifiers:Null<NSArray<NSString>>, speakableGroupNames:Null<NSArray<INSpeakableString>>):INSearchForMessagesIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForMessagesIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForMessagesIntent>;
 }

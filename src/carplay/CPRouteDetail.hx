@@ -16,28 +16,48 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIColor;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPRouteDetail extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPRouteDetail extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var symbolTintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_symbolTintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_symbolTintColor(v:Null<UIColor>):Null<UIColor>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithTollAmount(value:Float, locale:NSLocale):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithFuelLevel(fuelLevel:NSMeasurement<NSUnitVolume>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithFuelEnergy(fuelEnergy:NSMeasurement<NSUnitEnergy>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithFuelMass(fuelMass:NSMeasurement<NSUnitMass>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithBatteryLevel(batteryLevel:Float):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithKilowattHours(kilowattHours:NSMeasurement<NSUnitEnergy>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithCarbonFootprint(carbonFootprint:NSMeasurement<NSUnitMass>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithEcoScore(value:Float):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithEmissions(emissions:NSMeasurement<NSUnitMass>):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithRating(rating:Float):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithHOV(hovInfo:NSStringArg):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithTrafficLights(trafficLights:I64):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithWarning(warning:NSStringArg):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithInfo(info:NSStringArg):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithParking(parking:NSStringArg):CPRouteDetail;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function routeDetailWithSymbolName(symbolName:NSStringArg, value:NSStringArg):CPRouteDetail;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

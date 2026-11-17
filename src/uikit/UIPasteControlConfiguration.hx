@@ -5,29 +5,49 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPasteControlConfiguration extends NSObject implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIPasteControlConfiguration extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIPasteControlConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var displayMode(get, set) : UIPasteControlDisplayMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_displayMode():UIPasteControlDisplayMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_displayMode(v:UIPasteControlDisplayMode):UIPasteControlDisplayMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cornerStyle(get, set) : UIButtonConfigurationCornerStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cornerStyle():UIButtonConfigurationCornerStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cornerStyle(v:UIButtonConfigurationCornerStyle):UIButtonConfigurationCornerStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cornerRadius(get, set) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cornerRadius():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cornerRadius(v:Float):Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var imagePlacement(get, set) : NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_imagePlacement():NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_imagePlacement(v:NSDirectionalRectEdge):NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var baseForegroundColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_baseForegroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_baseForegroundColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var baseBackgroundColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_baseBackgroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_baseBackgroundColor(v:Null<UIColor>):Null<UIColor>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIPasteControlConfiguration>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():UIPasteControlConfiguration;
 }

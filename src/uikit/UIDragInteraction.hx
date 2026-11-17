@@ -10,11 +10,17 @@ import objc.NSObject;
 	var allowsSimultaneousRecognitionDuringLift(get, set) : Bool;
 	function get_allowsSimultaneousRecognitionDuringLift():Bool;
 	function set_allowsSimultaneousRecognitionDuringLift(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var allowsPointerDragBeforeLiftDelay(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_allowsPointerDragBeforeLiftDelay():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_allowsPointerDragBeforeLiftDelay(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var liftBehavior(get, set) : UIDragLiftBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_liftBehavior():UIDragLiftBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_liftBehavior(v:UIDragLiftBehavior):UIDragLiftBehavior;
 	var enabled(get, set) : Bool;
 	@:selector("isEnabled")

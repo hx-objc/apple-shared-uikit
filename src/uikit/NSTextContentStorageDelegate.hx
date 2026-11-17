@@ -3,7 +3,8 @@ package uikit;
 
 import foundation.NSRange;
 
-@:hxmc.objc("NSTextContentStorageDelegate") extern interface NSTextContentStorageDelegate extends NSTextContentManagerDelegate {
+@:hxmc.objc("NSTextContentStorageDelegate") @:hxmc.available(macos >= 12.0) extern interface NSTextContentStorageDelegate extends NSTextContentManagerDelegate {
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textContentStorage(textContentStorage:NSTextContentStorage, textParagraphWithRange:NSRange):Null<NSTextParagraph>;
 }

@@ -8,11 +8,17 @@ import foundation.NSCoder;
 	var followsUndockedKeyboard(get, set) : Bool;
 	function get_followsUndockedKeyboard():Bool;
 	function set_followsUndockedKeyboard(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var usesBottomSafeArea(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_usesBottomSafeArea():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_usesBottomSafeArea(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var keyboardDismissPadding(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_keyboardDismissPadding():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_keyboardDismissPadding(v:Float):Float;
 	override function init():UIKeyboardLayoutGuide;
 	override function initWithCoder(coder:NSCoder):Null<UIKeyboardLayoutGuide>;

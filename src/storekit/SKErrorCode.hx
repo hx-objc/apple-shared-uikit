@@ -10,8 +10,11 @@ enum abstract SKErrorCode(I64) to I64 {
 	var PaymentInvalid = 3;
 	var PaymentNotAllowed = 4;
 	var StoreProductNotAvailable = 5;
+	@:hxmc.available(macos >= 11.0)
 	var CloudServicePermissionDenied = 6;
+	@:hxmc.available(macos >= 11.0)
 	var CloudServiceNetworkConnectionFailed = 7;
+	@:hxmc.available(macos >= 11.0)
 	var CloudServiceRevoked = 8;
 	var PrivacyAcknowledgementRequired = 9;
 	var UnauthorizedRequestData = 10;
@@ -22,9 +25,12 @@ enum abstract SKErrorCode(I64) to I64 {
 	var OverlayCancelled = 15;
 	var OverlayInvalidConfiguration = 16;
 	var OverlayTimeout = 17;
+	@:hxmc.available(macos >= 11.0)
 	var IneligibleForOffer = 18;
+	@:hxmc.available(macos >= 11.0)
 	var UnsupportedPlatform = 19;
 	var OverlayPresentedInBackgroundScene = 20;
+	@:hxmc.available(macos >= 26.5, ios >= 26.5, maccatalyst >= 26.5)
 	var PaymentMethodBindingConfigurationRequired = 21;
 	inline function new(v:I64) this = v;
 }

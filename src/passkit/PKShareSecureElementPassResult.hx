@@ -4,8 +4,11 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKShareSecureElementPassResult(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Canceled = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Shared = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Failed = 2;
 	inline function new(v:I64) this = v;
 }

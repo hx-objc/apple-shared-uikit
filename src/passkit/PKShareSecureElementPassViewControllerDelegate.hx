@@ -5,10 +5,12 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PKShareSecureElementPassViewControllerDelegate") extern interface PKShareSecureElementPassViewControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("PKShareSecureElementPassViewControllerDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface PKShareSecureElementPassViewControllerDelegate extends NSObjectProtocol {
 	@:selector("shareSecureElementPassViewController:didFinishWithResult:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function shareSecureElementPassViewControllerDidFinishWithResult(controller:PKShareSecureElementPassViewController, didFinishWithResult:PKShareSecureElementPassResult):Void;
 	@:selector("shareSecureElementPassViewController:didCreateShareURL:activationCode:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function shareSecureElementPassViewControllerDidCreateShareURLActivationCode(controller:PKShareSecureElementPassViewController, didCreateShareURL:Null<NSURL>, activationCode:Null<NSStringArg>):Void;
 }

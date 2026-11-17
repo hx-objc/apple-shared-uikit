@@ -4,16 +4,22 @@ package intents;
 import foundation.NSArray;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("INStartCallIntentHandling") extern interface INStartCallIntentHandling extends NSObjectProtocol {
+@:hxmc.objc("INStartCallIntentHandling") @:hxmc.available(macos >= 12.0) extern interface INStartCallIntentHandling extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	function handleStartCall(intent:INStartCallIntent, completion:INStartCallIntentResponse -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function confirmStartCall(intent:INStartCallIntent, completion:INStartCallIntentResponse -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveCallRecordToCallBackForStartCall(intent:INStartCallIntent, withCompletion:INCallRecordResolutionResult -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveDestinationTypeForStartCall(intent:INStartCallIntent, withCompletion:INCallDestinationTypeResolutionResult -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveContactsForStartCall(intent:INStartCallIntent, withCompletion:NSArray<INStartCallContactResolutionResult> -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function resolveCallCapabilityForStartCall(intent:INStartCallIntent, withCompletion:INStartCallCallCapabilityResolutionResult -> Void):Void;
 }

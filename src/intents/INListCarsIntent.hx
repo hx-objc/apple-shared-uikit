@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INListCarsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INListCarsIntent;
 	override function init():INListCarsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INListCarsIntent>;

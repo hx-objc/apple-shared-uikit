@@ -7,38 +7,68 @@ import foundation.NSError;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextContentManager extends NSObject implements NSTextElementProvider implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextContentManager extends NSObject implements NSTextElementProvider implements NSSecureCoding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextContentManager;
+	@:hxmc.available(macos >= 12.0)
 	var delegate(get, set) : Null<NSTextContentManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function get_delegate():Null<NSTextContentManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function set_delegate(v:Null<NSTextContentManagerDelegate>):Null<NSTextContentManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	var textLayoutManagers(get, never) : NSArray<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLayoutManagers():NSArray<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	var primaryTextLayoutManager(get, set) : Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_primaryTextLayoutManager():Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function set_primaryTextLayoutManager(v:Null<NSTextLayoutManager>):Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	var hasEditingTransaction(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_hasEditingTransaction():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var automaticallySynchronizesTextLayoutManagers(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_automaticallySynchronizesTextLayoutManagers():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_automaticallySynchronizesTextLayoutManagers(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var automaticallySynchronizesToBackingStore(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_automaticallySynchronizesToBackingStore():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_automaticallySynchronizesToBackingStore(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var documentRange(get, never) : NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_documentRange():NSTextRange;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	override function init():NSTextContentManager;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCoder(coder:NSCoder):Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	function addTextLayoutManager(textLayoutManager:NSTextLayoutManager):Void;
+	@:hxmc.available(macos >= 12.0)
 	function removeTextLayoutManager(textLayoutManager:NSTextLayoutManager):Void;
+	@:hxmc.available(macos >= 12.0)
 	function synchronizeTextLayoutManagers(completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function textElementsForRange(range:NSTextRange):NSArray<NSTextElement>;
+	@:hxmc.available(macos >= 12.0)
 	function performEditingTransactionUsingBlock(transaction:() -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function recordEditActionInRange(originalTextRange:NSTextRange, newTextRange:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateTextElementsFromLocation(textLocation:Null<NSTextLocation>, options:NSTextContentManagerEnumerationOptions, usingBlock:NSTextElement -> Bool):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function replaceContentsInRange(range:NSTextRange, withTextElements:Null<NSArray<NSTextElement>>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function synchronizeToBackingStore(completionHandler:Null<Null<NSError> -> Void>):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
 }

@@ -4,13 +4,21 @@ package avkit;
 import hxmc.I64;
 
 enum abstract AVPlaybackUserInterfaceTimelineSegmentType(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Primary = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Advertisement = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Bonus = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Credits = 3;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Intro = 4;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Recap = 5;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Trailer = 6;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Other = 7;
 	inline function new(v:I64) this = v;
 }

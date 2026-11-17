@@ -10,18 +10,24 @@ import objc.NSObject;
 
 @:hxmc.framework("CarPlay") @:hxmc.objc extern class CPTravelEstimates extends NSObject implements NSSecureCoding {
 	static function alloc():CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var distanceRemainingToDisplay(get, never) : NSMeasurement<NSUnitLength>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_distanceRemainingToDisplay():NSMeasurement<NSUnitLength>;
 	var distanceRemaining(get, never) : NSMeasurement<NSUnitLength>;
 	function get_distanceRemaining():NSMeasurement<NSUnitLength>;
 	var timeRemaining(get, never) : Float;
 	function get_timeRemaining():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeDetails(get, never) : NSArray<CPRouteDetail>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeDetails():NSArray<CPRouteDetail>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	overload function initWithDistanceRemaining(distance:NSMeasurement<NSUnitLength>, timeRemaining:Float):CPTravelEstimates;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	overload function initWithDistanceRemaining(distanceRemaining:NSMeasurement<NSUnitLength>, distanceRemainingToDisplay:NSMeasurement<NSUnitLength>, timeRemaining:Float):CPTravelEstimates;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithDistanceRemaining(distanceRemaining:NSMeasurement<NSUnitLength>, distanceRemainingToDisplay:NSMeasurement<NSUnitLength>, timeRemaining:Float, routeDetails:NSArray<CPRouteDetail>):CPTravelEstimates;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPTravelEstimates>;

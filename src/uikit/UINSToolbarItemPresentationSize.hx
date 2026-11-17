@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UINSToolbarItemPresentationSize(I64) to I64 {
+	@:hxmc.available(maccatalyst >= 16.0)
 	var Unspecified = -1;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var Regular = 0;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var Small = 1;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var Large = 3;
 	inline function new(v:I64) this = v;
 }

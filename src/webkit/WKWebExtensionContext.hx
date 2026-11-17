@@ -14,114 +14,221 @@ import objc.NSObject;
 import uikit.UIKeyCommand;
 import uikit.UIMenuElement;
 
-@:hxmc.framework("WebKit") @:hxmc.objc extern class WKWebExtensionContext extends NSObject {
+@:hxmc.framework("WebKit") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class WKWebExtensionContext extends NSObject {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():WKWebExtensionContext;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var webExtension(get, never) : WKWebExtension;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_webExtension():WKWebExtension;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var webExtensionController(get, never) : Null<WKWebExtensionController>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_webExtensionController():Null<WKWebExtensionController>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var loaded(get, never) : Bool;
 	@:selector("isLoaded")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_loaded():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var errors(get, never) : NSArray<NSError>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_errors():NSArray<NSError>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var baseURL(get, set) : NSURL;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_baseURL():NSURL;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_baseURL(v:NSURL):NSURL;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var uniqueIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_uniqueIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_uniqueIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var inspectable(get, set) : Bool;
 	@:selector("isInspectable")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_inspectable():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_inspectable(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var inspectionName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_inspectionName():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_inspectionName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var unsupportedAPIs(get, set) : NSSet<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_unsupportedAPIs():NSSet<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_unsupportedAPIs(v:NSSet<NSString>):NSSet<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var webViewConfiguration(get, never) : Null<WKWebViewConfiguration>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_webViewConfiguration():Null<WKWebViewConfiguration>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var optionsPageURL(get, never) : Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_optionsPageURL():Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var overrideNewTabPageURL(get, never) : Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_overrideNewTabPageURL():Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var grantedPermissions(get, set) : NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_grantedPermissions():NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_grantedPermissions(v:NSDictionary<NSString, NSDate>):NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var grantedPermissionMatchPatterns(get, set) : NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_grantedPermissionMatchPatterns():NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_grantedPermissionMatchPatterns(v:NSDictionary<WKWebExtensionMatchPattern, NSDate>):NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var deniedPermissions(get, set) : NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_deniedPermissions():NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_deniedPermissions(v:NSDictionary<NSString, NSDate>):NSDictionary<NSString, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var deniedPermissionMatchPatterns(get, set) : NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_deniedPermissionMatchPatterns():NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_deniedPermissionMatchPatterns(v:NSDictionary<WKWebExtensionMatchPattern, NSDate>):NSDictionary<WKWebExtensionMatchPattern, NSDate>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasRequestedOptionalAccessToAllHosts(get, set) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasRequestedOptionalAccessToAllHosts():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_hasRequestedOptionalAccessToAllHosts(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasAccessToPrivateData(get, set) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasAccessToPrivateData():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_hasAccessToPrivateData(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var currentPermissions(get, never) : NSSet<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_currentPermissions():NSSet<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var currentPermissionMatchPatterns(get, never) : NSSet<WKWebExtensionMatchPattern>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_currentPermissionMatchPatterns():NSSet<WKWebExtensionMatchPattern>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasAccessToAllURLs(get, never) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasAccessToAllURLs():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasAccessToAllHosts(get, never) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasAccessToAllHosts():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasInjectedContent(get, never) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasInjectedContent():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var hasContentModificationRules(get, never) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_hasContentModificationRules():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var commands(get, never) : NSArray<WKWebExtensionCommand>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_commands():NSArray<WKWebExtensionCommand>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var openWindows(get, never) : NSArray<WKWebExtensionWindow>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_openWindows():NSArray<WKWebExtensionWindow>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var focusedWindow(get, never) : Null<WKWebExtensionWindow>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_focusedWindow():Null<WKWebExtensionWindow>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var openTabs(get, never) : NSSet<WKWebExtensionTab>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_openTabs():NSSet<WKWebExtensionTab>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function contextForExtension(extension:WKWebExtension):WKWebExtensionContext;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initForExtension(extension:WKWebExtension):WKWebExtensionContext;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function hasPermission(permission:NSStringArg):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function hasPermission(permission:NSStringArg, inTab:Null<WKWebExtensionTab>):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function hasAccessToURL(url:NSURL):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function hasAccessToURL(url:NSURL, inTab:Null<WKWebExtensionTab>):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function hasInjectedContentForURL(url:NSURL):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForPermission(permission:NSStringArg):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForPermission(permission:NSStringArg, inTab:Null<WKWebExtensionTab>):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forPermission:NSStringArg):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forPermission:NSStringArg, expirationDate:Null<NSDate>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForURL(url:NSURL):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForURL(url:NSURL, inTab:Null<WKWebExtensionTab>):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forURL:NSURL):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forURL:NSURL, expirationDate:Null<NSDate>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForMatchPattern(pattern:WKWebExtensionMatchPattern):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function permissionStatusForMatchPattern(pattern:WKWebExtensionMatchPattern, inTab:Null<WKWebExtensionTab>):WKWebExtensionContextPermissionStatus;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forMatchPattern:WKWebExtensionMatchPattern):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	overload function setPermissionStatus(status:WKWebExtensionContextPermissionStatus, forMatchPattern:WKWebExtensionMatchPattern, expirationDate:Null<NSDate>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function loadBackgroundContentWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function actionForTab(tab:Null<WKWebExtensionTab>):Null<WKWebExtensionAction>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function performActionForTab(tab:Null<WKWebExtensionTab>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function performCommand(command:WKWebExtensionCommand):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function performCommandForKeyCommand(keyCommand:UIKeyCommand):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function menuItemsForTab(tab:WKWebExtensionTab):NSArray<UIMenuElement>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function userGesturePerformedInTab(tab:WKWebExtensionTab):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function hasActiveUserGestureInTab(tab:WKWebExtensionTab):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function clearUserGestureInTab(tab:WKWebExtensionTab):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didOpenWindow(newWindow:WKWebExtensionWindow):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didCloseWindow(closedWindow:WKWebExtensionWindow):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didFocusWindow(focusedWindow:Null<WKWebExtensionWindow>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didOpenTab(newTab:WKWebExtensionTab):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didCloseTab(closedTab:WKWebExtensionTab, windowIsClosing:Bool):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didActivateTab(activatedTab:WKWebExtensionTab, previousActiveTab:Null<WKWebExtensionTab>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didSelectTabs(selectedTabs:NSArray<WKWebExtensionTab>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didDeselectTabs(deselectedTabs:NSArray<WKWebExtensionTab>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didMoveTab(movedTab:WKWebExtensionTab, fromIndex:I64, inWindow:Null<WKWebExtensionWindow>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didReplaceTab(oldTab:WKWebExtensionTab, withTab:WKWebExtensionTab):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function didChangeTabProperties(properties:WKWebExtensionTabChangedProperties, forTab:WKWebExtensionTab):Void;
 }

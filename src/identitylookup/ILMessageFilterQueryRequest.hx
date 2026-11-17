@@ -12,7 +12,9 @@ import objc.NSObject;
 	function get_sender():Null<NSStringArg>;
 	var messageBody(get, never) : Null<NSStringArg>;
 	function get_messageBody():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var receiverISOCountryCode(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_receiverISOCountryCode():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

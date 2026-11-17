@@ -29,11 +29,17 @@ import uikit.UIViewController;
 	var leaderboardCategory(get, set) : Null<NSStringArg>;
 	function get_leaderboardCategory():Null<NSStringArg>;
 	function set_leaderboardCategory(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function initWithState(state:GKGameCenterViewControllerState):GKGameCenterViewController;
+	@:hxmc.available(macos >= 11.0)
 	function initWithLeaderboardID(leaderboardID:NSStringArg, playerScope:GKLeaderboardPlayerScope, timeScope:GKLeaderboardTimeScope):GKGameCenterViewController;
+	@:hxmc.available(macos >= 11.0)
 	function initWithLeaderboard(leaderboard:GKLeaderboard, playerScope:GKLeaderboardPlayerScope):GKGameCenterViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function initWithLeaderboardSetID(leaderboardSetID:NSStringArg):GKGameCenterViewController;
+	@:hxmc.available(macos >= 11.0)
 	function initWithAchievementID(achievementID:NSStringArg):GKGameCenterViewController;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function initWithPlayer(player:GKPlayer):GKGameCenterViewController;
 	override function init():GKGameCenterViewController;
 	override function initWithCoder(coder:NSCoder):Null<GKGameCenterViewController>;

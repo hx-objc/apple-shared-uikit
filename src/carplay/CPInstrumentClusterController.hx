@@ -7,21 +7,37 @@ import foundation.NSString;
 import objc.NSObject;
 import uikit.UIWindow;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPInstrumentClusterController extends NSObject {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 15.4, maccatalyst >= 15.4) extern class CPInstrumentClusterController extends NSObject {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	static function alloc():CPInstrumentClusterController;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var delegate(get, set) : Null<CPInstrumentClusterControllerDelegate>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_delegate():Null<CPInstrumentClusterControllerDelegate>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_delegate(v:Null<CPInstrumentClusterControllerDelegate>):Null<CPInstrumentClusterControllerDelegate>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var instrumentClusterWindow(get, never) : Null<UIWindow>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_instrumentClusterWindow():Null<UIWindow>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var speedLimitSetting(get, never) : CPInstrumentClusterSetting;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_speedLimitSetting():CPInstrumentClusterSetting;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var compassSetting(get, never) : CPInstrumentClusterSetting;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_compassSetting():CPInstrumentClusterSetting;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var inactiveDescriptionVariants(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_inactiveDescriptionVariants():NSArray<NSString>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_inactiveDescriptionVariants(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var attributedInactiveDescriptionVariants(get, set) : NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_attributedInactiveDescriptionVariants():NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_attributedInactiveDescriptionVariants(v:NSArray<NSAttributedString>):NSArray<NSAttributedString>;
 }

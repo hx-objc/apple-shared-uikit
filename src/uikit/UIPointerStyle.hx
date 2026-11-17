@@ -5,7 +5,9 @@ import foundation.NSArray;
 import uiutilities.UIAxis;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIPointerStyle extends UIHoverStyle {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIPointerStyle;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function automaticStyle():UIPointerStyle;
 	var accessories(get, set) : NSArray<UIPointerAccessory>;
 	function get_accessories():NSArray<UIPointerAccessory>;

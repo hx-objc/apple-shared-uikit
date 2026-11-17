@@ -23,6 +23,7 @@ import hxmc.I64;
 	@:optional
 	function searchBarShouldChangeTextInRangeReplacementText(searchBar:UISearchBar, shouldChangeTextInRange:NSRange, replacementText:NSStringArg):Bool;
 	@:selector("searchBar:shouldChangeTextInRanges:replacementText:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function searchBarShouldChangeTextInRangesReplacementText(searchBar:UISearchBar, shouldChangeTextInRanges:NSArray<NSValue>, replacementText:NSStringArg):Bool;
 	@:optional

@@ -32,7 +32,9 @@ import foundation.NSCoder;
 	var rootViewController(get, set) : Null<UIViewController>;
 	function get_rootViewController():Null<UIViewController>;
 	function set_rootViewController(v:Null<UIViewController>):Null<UIViewController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var safeAreaAspectFitLayoutGuide(get, never) : UILayoutGuide;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_safeAreaAspectFitLayoutGuide():UILayoutGuide;
 	function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
 	@:deprecated

@@ -10,10 +10,12 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneClosureConfirmation extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UISceneClosureConfirmation extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UISceneClosureConfirmation;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function confirmationWithTitle(title:Null<NSStringArg>, message:Null<NSStringArg>, actions:NSArray<UIAlertAction>):UISceneClosureConfirmation;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

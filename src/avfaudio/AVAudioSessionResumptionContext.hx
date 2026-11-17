@@ -3,8 +3,11 @@ package avfaudio;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVFAudio") @:hxmc.objc extern class AVAudioSessionResumptionContext extends NSObject {
+@:hxmc.framework("AVFAudio") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVAudioSessionResumptionContext extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVAudioSessionResumptionContext;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var recommendation(get, never) : AVAudioSessionResumptionRecommendation;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_recommendation():AVAudioSessionResumptionRecommendation;
 }

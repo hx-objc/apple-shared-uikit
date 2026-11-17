@@ -4,7 +4,9 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRAcousticSettingsSampleLifetime(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var EightDays = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var UntilUserDeletes = 2;
 	inline function new(v:I64) this = v;
 }

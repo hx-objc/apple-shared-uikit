@@ -4,13 +4,21 @@ package mapkit;
 import objc.NSObject;
 import uikit.UIViewController;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapItemDetailSelectionAccessoryPresentationStyle extends NSObject {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0) extern class MKMapItemDetailSelectionAccessoryPresentationStyle extends NSObject {
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static var callout(get, never) : MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function get_callout():MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static var openInMaps(get, never) : MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function get_openInMaps():MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function automaticWithPresentationViewController(presentationViewController:Null<UIViewController>):MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function calloutWithCalloutStyle(style:MKMapItemDetailSelectionAccessoryCalloutStyle):MKMapItemDetailSelectionAccessoryPresentationStyle;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function sheetPresentedFromViewController(viewController:UIViewController):MKMapItemDetailSelectionAccessoryPresentationStyle;
 }

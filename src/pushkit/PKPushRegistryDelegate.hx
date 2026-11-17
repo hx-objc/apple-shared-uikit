@@ -15,6 +15,7 @@ import objc.NSObjectProtocol;
 	@:optional
 	function pushRegistryDidReceiveIncomingPushWithPayloadForTypeWithCompletionHandler(registry:PKPushRegistry, didReceiveIncomingPushWithPayload:PKPushPayload, forType:NSStringArg, withCompletionHandler:() -> Void):Void;
 	@:selector("pushRegistry:didReceiveIncomingVoIPPushWithPayload:metadata:withCompletionHandler:")
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function pushRegistryDidReceiveIncomingVoIPPushWithPayloadMetadataWithCompletionHandler(registry:PKPushRegistry, didReceiveIncomingVoIPPushWithPayload:PKPushPayload, metadata:PKVoIPPushMetadata, withCompletionHandler:() -> Void):Void;
 	@:selector("pushRegistry:didInvalidatePushTokenForType:")

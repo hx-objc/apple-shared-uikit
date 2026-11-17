@@ -8,18 +8,24 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRAcousticSettingsMusicEQ extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SRAcousticSettingsMusicEQ extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SRAcousticSettingsMusicEQ;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var soundCheckEnabled(get, never) : Bool;
 	@:selector("isSoundCheckEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_soundCheckEnabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var lateNightModeEnabled(get, never) : Bool;
 	@:selector("isLateNightModeEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_lateNightModeEnabled():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<SRAcousticSettingsMusicEQ>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():SRAcousticSettingsMusicEQ;
 }

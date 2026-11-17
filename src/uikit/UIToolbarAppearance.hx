@@ -8,8 +8,11 @@ import foundation.NSCoder;
 	var buttonAppearance(get, set) : UIBarButtonItemAppearance;
 	function get_buttonAppearance():UIBarButtonItemAppearance;
 	function set_buttonAppearance(v:UIBarButtonItemAppearance):UIBarButtonItemAppearance;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var prominentButtonAppearance(get, set) : UIBarButtonItemAppearance;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_prominentButtonAppearance():UIBarButtonItemAppearance;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_prominentButtonAppearance(v:UIBarButtonItemAppearance):UIBarButtonItemAppearance;
 	@:deprecated
 	var doneButtonAppearance(get, set) : UIBarButtonItemAppearance;

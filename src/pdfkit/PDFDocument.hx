@@ -92,6 +92,7 @@ import objc.NSObject;
 	@:selector("selectionFromPage:atPoint:toPage:atPoint:")
 	overload function selectionFromPage(startPage:PDFPage, atPoint:CGPoint, toPage:PDFPage, atPoint_:CGPoint):Null<PDFSelection>;
 	@:selector("selectionFromPage:atPoint:toPage:atPoint:withGranularity:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	overload function selectionFromPage(startPage:PDFPage, atPoint:CGPoint, toPage:PDFPage, atPoint_:CGPoint, withGranularity:PDFSelectionGranularity):Null<PDFSelection>;
 	@:selector("selectionFromPage:atCharacterIndex:toPage:atCharacterIndex:")
 	overload function selectionFromPage(startPage:PDFPage, atCharacterIndex:I64, toPage:PDFPage, atCharacterIndex_:I64):Null<PDFSelection>;

@@ -8,31 +8,55 @@ import hxmc.objc.Id;
 import hxmc.objc.Selector;
 import objc.NSObject;
 
-@:hxmc.framework("QuartzCore") @:hxmc.objc extern class CADisplayLink extends NSObject {
+@:hxmc.framework("QuartzCore") @:hxmc.objc @:hxmc.available(macos >= 14.0) extern class CADisplayLink extends NSObject {
+	@:hxmc.available(macos >= 14.0)
 	static function alloc():CADisplayLink;
+	@:hxmc.available(macos >= 14.0)
 	var timestamp(get, never) : Float;
+	@:hxmc.available(macos >= 14.0)
 	function get_timestamp():Float;
+	@:hxmc.available(macos >= 14.0)
 	var duration(get, never) : Float;
+	@:hxmc.available(macos >= 14.0)
 	function get_duration():Float;
+	@:hxmc.available(macos >= 14.0)
 	var targetTimestamp(get, never) : Float;
+	@:hxmc.available(macos >= 14.0)
 	function get_targetTimestamp():Float;
+	@:hxmc.available(macos >= 14.0)
 	var paused(get, set) : Bool;
 	@:selector("isPaused")
+	@:hxmc.available(macos >= 14.0)
 	function get_paused():Bool;
+	@:hxmc.available(macos >= 14.0)
 	function set_paused(v:Bool):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 14.0)
 	var frameInterval(get, set) : I64;
+	@:hxmc.available(macos >= 14.0)
 	function get_frameInterval():I64;
+	@:hxmc.available(macos >= 14.0)
 	function set_frameInterval(v:I64):I64;
+	@:hxmc.available(macos >= 14.0)
 	var preferredFramesPerSecond(get, set) : I64;
+	@:hxmc.available(macos >= 14.0)
 	function get_preferredFramesPerSecond():I64;
+	@:hxmc.available(macos >= 14.0)
 	function set_preferredFramesPerSecond(v:I64):I64;
+	@:hxmc.available(macos >= 14.0)
 	var preferredFrameRateRange(get, set) : CAFrameRateRange;
+	@:hxmc.available(macos >= 14.0)
 	function get_preferredFrameRateRange():CAFrameRateRange;
+	@:hxmc.available(macos >= 14.0)
 	function set_preferredFrameRateRange(v:CAFrameRateRange):CAFrameRateRange;
+	@:hxmc.available(macos >= 14.0)
 	static function displayLinkWithTarget(target:Id, selector:Selector):CADisplayLink;
+	@:hxmc.available(macos >= 14.0)
 	function addToRunLoop(runloop:NSRunLoop, forMode:NSStringArg):Void;
+	@:hxmc.available(macos >= 14.0)
 	function removeFromRunLoop(runloop:NSRunLoop, forMode:NSStringArg):Void;
+	@:hxmc.available(macos >= 14.0)
 	function invalidate():Void;
+	@:hxmc.available(macos >= 14.0)
 	override function init():CADisplayLink;
 }

@@ -14,20 +14,34 @@ import objc.NSObject;
 import pdfkit.PDFDocument;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("QuickLook") @:hxmc.objc extern class QLPreviewReply extends NSObject {
+@:hxmc.framework("QuickLook") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class QLPreviewReply extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():QLPreviewReply;
+	@:hxmc.available(macos >= 12.0)
 	var stringEncoding(get, set) : I64;
+	@:hxmc.available(macos >= 12.0)
 	function get_stringEncoding():I64;
+	@:hxmc.available(macos >= 12.0)
 	function set_stringEncoding(v:I64):I64;
+	@:hxmc.available(macos >= 12.0)
 	var attachments(get, set) : NSDictionary<NSString, QLPreviewReplyAttachment>;
+	@:hxmc.available(macos >= 12.0)
 	function get_attachments():NSDictionary<NSString, QLPreviewReplyAttachment>;
+	@:hxmc.available(macos >= 12.0)
 	function set_attachments(v:NSDictionary<NSString, QLPreviewReplyAttachment>):NSDictionary<NSString, QLPreviewReplyAttachment>;
+	@:hxmc.available(macos >= 12.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function initWithContextSize(contextSize:CGSize, isBitmap:Bool, drawingBlock:(CGContext, QLPreviewReply, Ptr) -> Bool):QLPreviewReply;
+	@:hxmc.available(macos >= 12.0)
 	function initWithFileURL(fileURL:NSURL):QLPreviewReply;
+	@:hxmc.available(macos >= 12.0)
 	function initWithDataOfContentType(contentType:UTType, contentSize:CGSize, dataCreationBlock:(QLPreviewReply, Ptr) -> Null<NSData>):QLPreviewReply;
 	function initForPDFWithPageSize(defaultPageSize:CGSize, documentCreationBlock:(QLPreviewReply, Ptr) -> Null<PDFDocument>):QLPreviewReply;
+	@:hxmc.available(macos >= 12.0)
 	override function init():QLPreviewReply;
 }

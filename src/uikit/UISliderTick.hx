@@ -10,16 +10,26 @@ import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISliderTick extends NSObject implements NSCopying implements NSCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UISliderTick extends NSObject implements NSCopying implements NSCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UISliderTick;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var position(get, never) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_position():Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var image(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_image(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function tickWithPosition(position:Float32, title:Null<NSStringArg>, image:Null<UIImage>):UISliderTick;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

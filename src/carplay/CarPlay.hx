@@ -6,10 +6,15 @@ import foundation.NSString;
 import hxmc.I64;
 
 @:hxmc.c @:hxmc.framework("CarPlay") extern class CarPlay {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static function NSStringFromCPJunctionType(junctionType:CPJunctionType):NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static function NSStringFromCPLaneStatus(laneStatus:CPLaneStatus):NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static function NSStringFromCPManeuverType(maneuverType:CPManeuverType):NSString;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	public static function NSStringFromCPRerouteReason(reason:CPRerouteReason):NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static function NSStringFromCPTrafficSide(trafficSide:CPTrafficSide):NSString;
 	public static final CPButtonMaximumImageSize : CGSize;
 	public static final CPGridTemplateMaximumItems : I64;
@@ -19,6 +24,7 @@ import hxmc.I64;
 	public static final CPMaximumNumberOfGridImages : I64;
 	public static final CPNowPlayingButtonMaximumImageSize : CGSize;
 	public static final CPTemplateApplicationDashboardSceneSessionRoleApplication : NSString;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final CPTemplateApplicationInstrumentClusterSceneSessionRoleApplication : NSString;
 	public static final CPTemplateApplicationSceneSessionRoleApplication : NSString;
 	public static final CarPlayErrorDomain : NSString;

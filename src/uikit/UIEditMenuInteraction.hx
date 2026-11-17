@@ -4,17 +4,26 @@ package uikit;
 import coregraphics.CGPoint;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIEditMenuInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIEditMenuInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIEditMenuInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, never) : Null<UIEditMenuInteractionDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<UIEditMenuInteractionDelegate>;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithDelegate(delegate:Null<UIEditMenuInteractionDelegate>):UIEditMenuInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function presentEditMenuWithConfiguration(configuration:UIEditMenuConfiguration):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function dismissMenu():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function reloadVisibleMenu():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function updateVisibleMenuPositionAnimated(animated:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function locationInView(view:Null<UIView>):CGPoint;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

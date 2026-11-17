@@ -19,6 +19,7 @@ import objc.NSObject;
 	overload function evaluateWithObject(object:Null<Id>):Bool;
 	overload function evaluateWithObject(object:Null<Id>, substitutionVariables:Null<NSDictionary<NSString, Id>>):Bool;
 	function allowEvaluation():Void;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function allowEvaluationWithValidator(validator:NSPredicateValidating, error:Ptr):Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<NSPredicate>;

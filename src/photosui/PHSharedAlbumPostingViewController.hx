@@ -6,12 +6,19 @@ import foundation.NSStringArg;
 import photos.PHPhotoLibrary;
 import uikit.UIViewController;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHSharedAlbumPostingViewController extends UIViewController {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27) extern class PHSharedAlbumPostingViewController extends UIViewController {
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	static function alloc():PHSharedAlbumPostingViewController;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var delegate(get, set) : Null<PHSharedAlbumPostingViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_delegate():Null<PHSharedAlbumPostingViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_delegate(v:Null<PHSharedAlbumPostingViewControllerDelegate>):Null<PHSharedAlbumPostingViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var albumIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_albumIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function initWithItems(items:NSArray<PHPickerResult>, defaultAlbumIdentifier:Null<NSStringArg>, photoLibrary:PHPhotoLibrary):PHSharedAlbumPostingViewController;
 }

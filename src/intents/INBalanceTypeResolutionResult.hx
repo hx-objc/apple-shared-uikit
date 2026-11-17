@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INBalanceTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INBalanceTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INBalanceTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INBalanceTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INBalanceTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INBalanceTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INBalanceTypeResolutionResult;
 	static function successWithResolvedBalanceType(resolvedBalanceType:INBalanceType):INBalanceTypeResolutionResult;
 	static function confirmationRequiredWithBalanceTypeToConfirm(balanceTypeToConfirm:INBalanceType):INBalanceTypeResolutionResult;

@@ -8,19 +8,28 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("CoreML") @:hxmc.objc @:deprecated extern class MLModelCollection extends NSObject {
+@:hxmc.framework("CoreML") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 11.0) extern class MLModelCollection extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MLModelCollection;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_identifier():NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var entries(get, never) : NSDictionary<NSString, MLModelCollectionEntry>;
+	@:hxmc.available(macos >= 11.0)
 	function get_entries():NSDictionary<NSString, MLModelCollectionEntry>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var deploymentID(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_deploymentID():NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function beginAccessingModelCollectionWithIdentifier(identifier:NSStringArg, completionHandler:(Null<MLModelCollection>, Null<NSError>) -> Void):NSProgress;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function endAccessingModelCollectionWithIdentifier(identifier:NSStringArg, completionHandler:(Bool, Null<NSError>) -> Void):Void;
 }

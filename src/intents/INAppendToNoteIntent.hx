@@ -4,12 +4,14 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INAppendToNoteIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAppendToNoteIntent;
 	var targetNote(get, never) : Null<INNote>;
 	function get_targetNote():Null<INNote>;
 	var content(get, never) : Null<INNoteContent>;
 	function get_content():Null<INNoteContent>;
 	function initWithTargetNote(targetNote:Null<INNote>, content:Null<INNoteContent>):INAppendToNoteIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INAppendToNoteIntent;
 	override function initWithCoder(coder:NSCoder):Null<INAppendToNoteIntent>;
 }

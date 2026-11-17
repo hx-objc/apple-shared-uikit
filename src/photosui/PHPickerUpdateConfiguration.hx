@@ -8,17 +8,28 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.NSDirectionalRectEdge;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHPickerUpdateConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17) extern class PHPickerUpdateConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	static function alloc():PHPickerUpdateConfiguration;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var selectionLimit(get, set) : I64;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_selectionLimit():I64;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_selectionLimit(v:I64):I64;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	var edgesWithoutContentMargins(get, set) : NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function get_edgesWithoutContentMargins():NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	function set_edgesWithoutContentMargins(v:NSDirectionalRectEdge):NSDirectionalRectEdge;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var searchText(get, set) : Null<PHPickerSearchText>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_searchText():Null<PHPickerSearchText>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_searchText(v:Null<PHPickerSearchText>):Null<PHPickerSearchText>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14, ios >= 17, maccatalyst >= 17)
 	override function init():PHPickerUpdateConfiguration;
 }

@@ -22,11 +22,15 @@ import uniformtypeidentifiers.UTType;
 	var previewImageHandler(get, set) : Null<((Null<NSSecureCoding>, NSError) -> Void, ObjCClass, NSDictionary) -> Void>;
 	function get_previewImageHandler():Null<((Null<NSSecureCoding>, NSError) -> Void, ObjCClass, NSDictionary) -> Void>;
 	function set_previewImageHandler(v:Null<((Null<NSSecureCoding>, NSError) -> Void, ObjCClass, NSDictionary) -> Void>):Null<((Null<NSSecureCoding>, NSError) -> Void, ObjCClass, NSDictionary) -> Void>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var registeredContentTypes(get, never) : NSArray<UTType>;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_registeredContentTypes():NSArray<UTType>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var registeredContentTypesForOpenInPlace(get, never) : NSArray<UTType>;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_registeredContentTypesForOpenInPlace():NSArray<UTType>;
 	var teamData(get, set) : Null<NSData>;
 	@:hxmc.framework("UIKit")
@@ -66,20 +70,28 @@ import uniformtypeidentifiers.UTType;
 	function loadItemForTypeIdentifier(typeIdentifier:NSStringArg, options:Null<NSDictionary>, completionHandler:Null<(Null<NSSecureCoding>, NSError) -> Void>):Void;
 	function loadPreviewImageWithOptions(options:NSDictionary, completionHandler:(Null<NSSecureCoding>, NSError) -> Void):Void;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithContentsOfURL(fileURL:NSURL, contentType:Null<UTType>, openInPlace:Bool, coordinated:Bool, visibility:NSItemProviderRepresentationVisibility):NSItemProvider;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function registerDataRepresentationForContentType(contentType:UTType, visibility:NSItemProviderRepresentationVisibility, loadHandler:((Null<NSData>, Null<NSError>) -> Void) -> Null<NSProgress>):Void;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function registerFileRepresentationForContentType(contentType:UTType, visibility:NSItemProviderRepresentationVisibility, openInPlace:Bool, loadHandler:((Null<NSURL>, Bool, Null<NSError>) -> Void) -> Null<NSProgress>):Void;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function registeredContentTypesConformingToContentType(contentType:UTType):NSArray<UTType>;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function loadDataRepresentationForContentType(contentType:UTType, completionHandler:(Null<NSData>, Null<NSError>) -> Void):NSProgress;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function loadFileRepresentationForContentType(contentType:UTType, openInPlace:Bool, completionHandler:(Null<NSURL>, Bool, Null<NSError>) -> Void):NSProgress;
 	@:hxmc.framework("CloudKit")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function registerCKShareWithContainer(container:CKContainer, allowedSharingOptions:CKAllowedSharingOptions, preparationHandler:((Null<CKShare>, Null<NSError>) -> Void) -> Void):Void;
 	@:hxmc.framework("CloudKit")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function registerCKShare(share:CKShare, container:CKContainer, allowedSharingOptions:CKAllowedSharingOptions):Void;
 	function copyWithZone(zone:Ptr):Id;
 }

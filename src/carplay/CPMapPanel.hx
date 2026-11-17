@@ -5,18 +5,31 @@ import foundation.NSArray;
 import foundation.NSCoder;
 import foundation.NSStringArg;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMapPanel extends CPPanel {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPMapPanel extends CPPanel {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPMapPanel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var title(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var sections(get, set) : NSArray<CPMapPanelSection>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_sections():NSArray<CPMapPanelSection>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_sections(v:NSArray<CPMapPanelSection>):NSArray<CPMapPanelSection>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var buttonConfiguration(get, never) : Null<CPMapPanelButtonConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_buttonConfiguration():Null<CPMapPanelButtonConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var delegate(get, set) : Null<CPMapPanelDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_delegate():Null<CPMapPanelDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_delegate(v:Null<CPMapPanelDelegate>):Null<CPMapPanelDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTitle(title:Null<NSStringArg>, sections:NSArray<CPMapPanelSection>, buttonConfiguration:Null<CPMapPanelButtonConfiguration>):CPMapPanel;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithCoder(coder:NSCoder):Null<CPMapPanel>;
 }

@@ -4,8 +4,11 @@ package homekit;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("HomeKit") @:hxmc.objc extern class HMAccessorySetupPayload extends NSObject {
+@:hxmc.framework("HomeKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, maccatalyst >= 27.0) extern class HMAccessorySetupPayload extends NSObject {
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	static function alloc():HMAccessorySetupPayload;
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	overload function initWithURL(setupPayloadURL:Null<NSURL>):Null<HMAccessorySetupPayload>;
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	overload function initWithURL(setupPayloadURL:NSURL, ownershipToken:Null<HMAccessoryOwnershipToken>):Null<HMAccessorySetupPayload>;
 }

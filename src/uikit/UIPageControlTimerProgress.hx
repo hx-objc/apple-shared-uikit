@@ -3,20 +3,34 @@ package uikit;
 
 import hxmc.I64;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPageControlTimerProgress extends UIPageControlProgress {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIPageControlTimerProgress extends UIPageControlProgress {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIPageControlTimerProgress;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var resetsToInitialPageAfterEnd(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_resetsToInitialPageAfterEnd():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_resetsToInitialPageAfterEnd(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var running(get, never) : Bool;
 	@:selector("isRunning")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_running():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredDuration(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredDuration():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredDuration(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithPreferredDuration(preferredDuration:Float):UIPageControlTimerProgress;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resumeTimer():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function pauseTimer():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setDuration(duration:Float, forPage:I64):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function durationForPage(page:I64):Float;
 }

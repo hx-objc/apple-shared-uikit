@@ -4,7 +4,9 @@ package carplay;
 import hxmc.I64;
 
 enum abstract CPJunctionType(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Intersection = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Roundabout = 1;
 	inline function new(v:I64) this = v;
 }

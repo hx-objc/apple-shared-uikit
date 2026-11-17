@@ -3,9 +3,13 @@ package corelocation;
 
 import objc.NSObject;
 
-@:hxmc.framework("CoreLocation") @:hxmc.objc extern class CLBackgroundActivitySession extends NSObject {
+@:hxmc.framework("CoreLocation") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class CLBackgroundActivitySession extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():CLBackgroundActivitySession;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function invalidate():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function backgroundActivitySession():CLBackgroundActivitySession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function backgroundActivitySessionWithQueue(queue:NSObject, handler:CLBackgroundActivitySessionDiagnostic -> Void):CLBackgroundActivitySession;
 }

@@ -6,15 +6,25 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKShareSecureElementPassViewController extends UIViewController {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKShareSecureElementPassViewController extends UIViewController {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKShareSecureElementPassViewController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<PKShareSecureElementPassViewControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<PKShareSecureElementPassViewControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<PKShareSecureElementPassViewControllerDelegate>):Null<PKShareSecureElementPassViewControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var promptToShareURL(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_promptToShareURL():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_promptToShareURL(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithSecureElementPass(pass:PKSecureElementPass, delegate:Null<PKShareSecureElementPassViewControllerDelegate>):PKShareSecureElementPassViewController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<PKShareSecureElementPassViewController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):PKShareSecureElementPassViewController;
 }

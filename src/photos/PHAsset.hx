@@ -21,7 +21,9 @@ import uniformtypeidentifiers.UTType;
 	function get_mediaType():PHAssetMediaType;
 	var mediaSubtypes(get, never) : PHAssetMediaSubtype;
 	function get_mediaSubtypes():PHAssetMediaSubtype;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var contentType(get, never) : UTType;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentType():UTType;
 	var pixelWidth(get, never) : I64;
 	function get_pixelWidth():I64;
@@ -31,7 +33,9 @@ import uniformtypeidentifiers.UTType;
 	function get_creationDate():Null<NSDate>;
 	var modificationDate(get, never) : Null<NSDate>;
 	function get_modificationDate():Null<NSDate>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var addedDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_addedDate():Null<NSDate>;
 	var location(get, never) : Null<CLLocation>;
 	function get_location():Null<CLLocation>;
@@ -43,7 +47,9 @@ import uniformtypeidentifiers.UTType;
 	var favorite(get, never) : Bool;
 	@:selector("isFavorite")
 	function get_favorite():Bool;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var rating(get, never) : PHAssetRating;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_rating():PHAssetRating;
 	var burstIdentifier(get, never) : Null<NSStringArg>;
 	function get_burstIdentifier():Null<NSStringArg>;
@@ -53,17 +59,29 @@ import uniformtypeidentifiers.UTType;
 	function get_representsBurst():Bool;
 	var sourceType(get, never) : PHAssetSourceType;
 	function get_sourceType():PHAssetSourceType;
+	@:hxmc.available(macos >= 12)
 	var hasAdjustments(get, never) : Bool;
+	@:hxmc.available(macos >= 12)
 	function get_hasAdjustments():Bool;
+	@:hxmc.available(macos >= 12)
 	var adjustmentFormatIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12)
 	function get_adjustmentFormatIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var originalResourceChoice(get, never) : PHOriginalResourceChoice;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_originalResourceChoice():PHOriginalResourceChoice;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var extendedMetadata(get, never) : PHAssetExtendedMetadata;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_extendedMetadata():PHAssetExtendedMetadata;
+	@:hxmc.available(macos >= 15, ios >= 18, maccatalyst >= 18)
 	var adjustmentsState(get, never) : PHAssetAdjustmentsState;
+	@:hxmc.available(macos >= 15, ios >= 18, maccatalyst >= 18)
 	function get_adjustmentsState():PHAssetAdjustmentsState;
+	@:hxmc.available(macos >= 15, ios >= 18, maccatalyst >= 18)
 	var adjustmentTimestamp(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 15, ios >= 18, maccatalyst >= 18)
 	function get_adjustmentTimestamp():Null<NSDate>;
 	function canPerformEditOperation(editOperation:PHAssetEditOperation):Bool;
 	static function fetchAssetsInAssetCollection(assetCollection:PHAssetCollection, options:Null<PHFetchOptions>):PHFetchResult<PHAsset>;

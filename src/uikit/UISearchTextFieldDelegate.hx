@@ -8,6 +8,7 @@ import foundation.NSItemProvider;
 	@:optional
 	function searchTextFieldItemProviderForCopyingToken(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):NSItemProvider;
 	@:selector("searchTextField:didSelectSuggestion:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function searchTextFieldDidSelectSuggestion(searchTextField:UISearchTextField, didSelectSuggestion:UISearchSuggestion):Void;
 }

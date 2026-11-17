@@ -6,13 +6,20 @@ import foundation.NSError;
 import foundation.NSPredicate;
 import hxmc.I64;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKAnchoredObjectQuery extends HKQuery {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKAnchoredObjectQuery extends HKQuery {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKAnchoredObjectQuery;
+	@:hxmc.available(macos >= 13.0)
 	var updateHandler(get, set) : Null<(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void>;
+	@:hxmc.available(macos >= 13.0)
 	function get_updateHandler():Null<(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void>;
+	@:hxmc.available(macos >= 13.0)
 	function set_updateHandler(v:Null<(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void>):Null<(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void>;
+	@:hxmc.available(macos >= 13.0)
 	overload function initWithType(type:HKSampleType, predicate:Null<NSPredicate>, anchor:Null<HKQueryAnchor>, limit:I64, resultsHandler:(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void):HKAnchoredObjectQuery;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	overload function initWithType(type:HKSampleType, predicate:Null<NSPredicate>, anchor:I64, limit:I64, completionHandler:(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, I64, Null<NSError>) -> Void):HKAnchoredObjectQuery;
+	@:hxmc.available(macos >= 13.0)
 	function initWithQueryDescriptors(queryDescriptors:NSArray<HKQueryDescriptor>, anchor:Null<HKQueryAnchor>, limit:I64, resultsHandler:(HKAnchoredObjectQuery, Null<NSArray<HKSample>>, Null<NSArray<HKDeletedObject>>, Null<HKQueryAnchor>, Null<NSError>) -> Void):HKAnchoredObjectQuery;
 }

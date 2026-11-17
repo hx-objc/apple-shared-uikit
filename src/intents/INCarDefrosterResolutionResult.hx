@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCarDefrosterResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCarDefrosterResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INCarDefrosterResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INCarDefrosterResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INCarDefrosterResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INCarDefrosterResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INCarDefrosterResolutionResult;
 	static function successWithResolvedCarDefroster(resolvedCarDefroster:INCarDefroster):INCarDefrosterResolutionResult;
 	@:deprecated

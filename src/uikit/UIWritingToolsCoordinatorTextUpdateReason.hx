@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorTextUpdateReason(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Typing = 0;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var UndoRedo = 1;
 	inline function new(v:I64) this = v;
 }

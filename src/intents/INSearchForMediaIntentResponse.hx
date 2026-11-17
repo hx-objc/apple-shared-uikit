@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSearchForMediaIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForMediaIntentResponse;
 	var code(get, never) : INSearchForMediaIntentResponseCode;
 	function get_code():INSearchForMediaIntentResponseCode;

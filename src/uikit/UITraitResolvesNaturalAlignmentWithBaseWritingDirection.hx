@@ -4,9 +4,13 @@ package uikit;
 import objc.NSObject;
 import objc.NSObjectProtocol;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITraitResolvesNaturalAlignmentWithBaseWritingDirection extends NSObject implements UIObjectTraitDefinition {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UITraitResolvesNaturalAlignmentWithBaseWritingDirection extends NSObject implements UIObjectTraitDefinition {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UITraitResolvesNaturalAlignmentWithBaseWritingDirection;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultValue(get, never) : Null<NSObjectProtocol>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():Null<NSObjectProtocol>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UITraitResolvesNaturalAlignmentWithBaseWritingDirection;
 }

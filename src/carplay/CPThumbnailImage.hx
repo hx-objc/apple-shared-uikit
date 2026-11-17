@@ -7,21 +7,34 @@ import foundation.NSSecureCoding;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPThumbnailImage extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPThumbnailImage extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPThumbnailImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var image(get, set) : UIImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_image():UIImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_image(v:UIImage):UIImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var imageOverlay(get, set) : Null<CPImageOverlay>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_imageOverlay():Null<CPImageOverlay>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_imageOverlay(v:Null<CPImageOverlay>):Null<CPImageOverlay>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var sportsOverlay(get, set) : Null<CPSportsOverlay>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_sportsOverlay():Null<CPSportsOverlay>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_sportsOverlay(v:Null<CPSportsOverlay>):Null<CPSportsOverlay>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithImage(image:UIImage):CPThumbnailImage;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithImage(image:UIImage, imageOverlay:Null<CPImageOverlay>, sportsOverlay:Null<CPSportsOverlay>):CPThumbnailImage;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function maximumImageSizeForAspectRatio(aspectRatio:Float):CGSize;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPThumbnailImage>;

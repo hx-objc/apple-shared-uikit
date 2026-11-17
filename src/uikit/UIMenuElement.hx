@@ -18,11 +18,17 @@ import objc.NSObject;
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
 	var image(get, never) : Null<UIImage>;
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var preferredImageVisibility(get, set) : UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_preferredImageVisibility():UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_preferredImageVisibility(v:UIMenuElementImageVisibility):UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var highlightStateUpdateHandler(get, set) : (UIMenuElement, Bool) -> Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_highlightStateUpdateHandler():(UIMenuElement, Bool) -> Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_highlightStateUpdateHandler(v:(UIMenuElement, Bool) -> Void):(UIMenuElement, Bool) -> Void;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

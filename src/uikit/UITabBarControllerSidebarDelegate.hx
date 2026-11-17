@@ -4,44 +4,57 @@ package uikit;
 import foundation.NSArray;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITabBarControllerSidebarDelegate") extern interface UITabBarControllerSidebarDelegate extends NSObjectProtocol {
+@:hxmc.objc("UITabBarControllerSidebarDelegate") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface UITabBarControllerSidebarDelegate extends NSObjectProtocol {
 	@:selector("tabBarController:sidebarAvailabilityDidChange:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function tabBarControllerSidebarAvailabilityDidChange(tabBarController:UITabBarController, sidebarAvailabilityDidChange:UITabBarControllerSidebar):Void;
 	@:selector("tabBarController:sidebarVisibilityWillChange:animator:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarVisibilityWillChangeAnimator(tabBarController:UITabBarController, sidebarVisibilityWillChange:UITabBarControllerSidebar, animator:UITabBarControllerSidebarAnimating):Void;
 	@:selector("tabBarController:sidebar:itemForRequest:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarItemForRequest(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, itemForRequest:UITabSidebarItemRequest):UITabSidebarItem;
 	@:selector("tabBarController:sidebar:updateItem:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarUpdateItem(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, updateItem:UITabSidebarItem):Void;
 	@:selector("tabBarController:sidebar:willBeginDisplayingTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarWillBeginDisplayingTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, willBeginDisplayingTab:UITab):Void;
 	@:selector("tabBarController:sidebar:didEndDisplayingTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarDidEndDisplayingTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, didEndDisplayingTab:UITab):Void;
 	@:selector("tabBarController:sidebar:leadingSwipeActionsConfigurationForTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarLeadingSwipeActionsConfigurationForTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, leadingSwipeActionsConfigurationForTab:UITab):Null<UISwipeActionsConfiguration>;
 	@:selector("tabBarController:sidebar:trailingSwipeActionsConfigurationForTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarTrailingSwipeActionsConfigurationForTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, trailingSwipeActionsConfigurationForTab:UITab):Null<UISwipeActionsConfiguration>;
 	@:selector("tabBarController:sidebar:contextMenuConfigurationForTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerSidebarContextMenuConfigurationForTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, contextMenuConfigurationForTab:UITab):Null<UIContextMenuConfiguration>;
 	@:selector("tabBarController:sidebar:itemsForBeginningDragSession:tab:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function tabBarControllerSidebarItemsForBeginningDragSessionTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, itemsForBeginningDragSession:UIDragSession, tab:UITab):NSArray<UIDragItem>;
 	@:selector("tabBarController:sidebar:itemsForAddingToDragSession:tab:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function tabBarControllerSidebarItemsForAddingToDragSessionTab(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, itemsForAddingToDragSession:UIDragSession, tab:UITab):NSArray<UIDragItem>;
 	@:selector("tabBarController:sidebar:sidebarAction:group:operationForAcceptingItemsFromDropSession:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function tabBarControllerSidebarSidebarActionGroupOperationForAcceptingItemsFromDropSession(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, sidebarAction:UIAction, group:UITabGroup, operationForAcceptingItemsFromDropSession:UIDropSession):UIDropOperation;
 	@:selector("tabBarController:sidebar:sidebarAction:group:acceptItemsFromDropSession:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function tabBarControllerSidebarSidebarActionGroupAcceptItemsFromDropSession(tabBarController:UITabBarController, sidebar:UITabBarControllerSidebar, sidebarAction:UIAction, group:UITabGroup, acceptItemsFromDropSession:UIDropSession):Void;
 }

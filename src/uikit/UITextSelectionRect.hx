@@ -17,7 +17,9 @@ import objc.NSObject;
 	function get_containsEnd():Bool;
 	var isVertical(get, never) : Bool;
 	function get_isVertical():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var transform(get, never) : CGAffineTransform;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_transform():CGAffineTransform;
 	override function init():UITextSelectionRect;
 }

@@ -11,34 +11,62 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIBezierPath;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKStroke extends NSObject implements NSCopying {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKStroke extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKStroke;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var requiredContentVersion(get, never) : PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_requiredContentVersion():PKContentVersion;
+	@:hxmc.available(macos >= 11.0)
 	var ink(get, never) : PKInk;
+	@:hxmc.available(macos >= 11.0)
 	function get_ink():PKInk;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var strokeID(get, never) : NSUUID;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_strokeID():NSUUID;
+	@:hxmc.available(macos >= 11.0)
 	var transform(get, never) : CGAffineTransform;
+	@:hxmc.available(macos >= 11.0)
 	function get_transform():CGAffineTransform;
+	@:hxmc.available(macos >= 11.0)
 	var path(get, never) : PKStrokePath;
+	@:hxmc.available(macos >= 11.0)
 	function get_path():PKStrokePath;
+	@:hxmc.available(macos >= 11.0)
 	var mask(get, never) : Null<UIBezierPath>;
+	@:hxmc.available(macos >= 11.0)
 	function get_mask():Null<UIBezierPath>;
+	@:hxmc.available(macos >= 11.0)
 	var renderBounds(get, never) : CGRect;
+	@:hxmc.available(macos >= 11.0)
 	function get_renderBounds():CGRect;
+	@:hxmc.available(macos >= 11.0)
 	var maskedPathRanges(get, never) : NSArray<PKFloatRange>;
+	@:hxmc.available(macos >= 11.0)
 	function get_maskedPathRanges():NSArray<PKFloatRange>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var randomSeed(get, never) : Int;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_randomSeed():Int;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var renderGroupID(get, never) : Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_renderGroupID():Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var renderState(get, never) : Null<PKStrokeRenderState>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_renderState():Null<PKStrokeRenderState>;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithInk(ink:PKInk, strokePath:PKStrokePath, transform:CGAffineTransform, mask:Null<UIBezierPath>):PKStroke;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithInk(ink:PKInk, strokePath:PKStrokePath, transform:CGAffineTransform, mask:Null<UIBezierPath>, randomSeed:Int):PKStroke;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithInk(ink:PKInk, strokePath:PKStrokePath, transform:CGAffineTransform, mask:Null<UIBezierPath>, randomSeed:Int, strokeID:NSUUID, renderGroupID:Null<NSUUID>, renderState:Null<PKStrokeRenderState>):PKStroke;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function substrokeWithRange(range:PKFloatRange):PKStroke;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKStroke;
 }

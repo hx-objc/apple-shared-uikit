@@ -16,7 +16,9 @@ import objc.NSObject;
 	function get_isAbsolute():Bool;
 	var isEstimated(get, never) : Bool;
 	function get_isEstimated():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var isUniformAcrossSiblings(get, never) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_isUniformAcrossSiblings():Bool;
 	var dimension(get, never) : Float;
 	function get_dimension():Float;
@@ -24,6 +26,7 @@ import objc.NSObject;
 	static function fractionalHeightDimension(fractionalHeight:Float):NSCollectionLayoutDimension;
 	static function absoluteDimension(absoluteDimension:Float):NSCollectionLayoutDimension;
 	static function estimatedDimension(estimatedDimension:Float):NSCollectionLayoutDimension;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function uniformAcrossSiblingsWithEstimate(estimatedDimension:Float):NSCollectionLayoutDimension;
 	function copyWithZone(zone:Ptr):Id;
 }

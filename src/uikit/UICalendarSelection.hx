@@ -3,7 +3,9 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarSelection extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICalendarSelection extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICalendarSelection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function updateSelectableDates():Void;
 }

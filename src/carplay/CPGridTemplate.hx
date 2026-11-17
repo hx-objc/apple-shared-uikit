@@ -8,7 +8,9 @@ import foundation.NSStringArg;
 
 @:hxmc.framework("CarPlay") @:hxmc.objc extern class CPGridTemplate extends CPTemplate implements CPBarButtonProviding {
 	static function alloc():CPGridTemplate;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumGridButtonImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumGridButtonImageSize():CGSize;
 	var gridButtons(get, never) : NSArray<CPGridButton>;
 	function get_gridButtons():NSArray<CPGridButton>;

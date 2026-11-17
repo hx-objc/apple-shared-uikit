@@ -6,15 +6,19 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UINavigationItemRenameDelegate") extern interface UINavigationItemRenameDelegate extends NSObjectProtocol {
+@:hxmc.objc("UINavigationItemRenameDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UINavigationItemRenameDelegate extends NSObjectProtocol {
 	@:selector("navigationItem:didEndRenamingWithTitle:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function navigationItemDidEndRenamingWithTitle(navigationItem:UINavigationItem, didEndRenamingWithTitle:NSStringArg):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function navigationItemShouldBeginRenaming(navigationItem:UINavigationItem):Bool;
 	@:selector("navigationItem:willBeginRenamingWithSuggestedTitle:selectedRange:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function navigationItemWillBeginRenamingWithSuggestedTitleSelectedRange(navigationItem:UINavigationItem, willBeginRenamingWithSuggestedTitle:NSStringArg, selectedRange:Ptr):NSString;
 	@:selector("navigationItem:shouldEndRenamingWithTitle:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function navigationItemShouldEndRenamingWithTitle(navigationItem:UINavigationItem, shouldEndRenamingWithTitle:NSStringArg):Bool;
 }

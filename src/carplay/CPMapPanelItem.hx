@@ -5,15 +5,25 @@ import foundation.NSArray;
 import foundation.NSCoder;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMapPanelItem extends CPPanelItem {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPMapPanelItem extends CPPanelItem {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTrip(trip:CPTrip, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTravelEstimates(travelEstimates:CPTravelEstimates, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithRouteChoice(routeChoice:CPRouteChoice, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithRouteDetails(routeDetails:NSArray<CPRouteDetail>, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithChargingStationConnection(chargingStationConnection:CPChargingStationConnection, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithMapTemplateWaypoint(mapTemplateWaypoint:CPMapTemplateWaypoint, image:Null<UIImage>, handler:Null<(CPMapPanelItem, () -> Void) -> Void>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithCoder(coder:NSCoder):Null<CPMapPanelItem>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithGridButtons(gridButtons:NSArray<CPGridButton>):CPMapPanelItem;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithListItem(listItem:CPListItem):CPMapPanelItem;
 }

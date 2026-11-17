@@ -4,17 +4,25 @@ package uikit;
 import objc.NSObject;
 import uiutilities.UIRectEdge;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIScrollEdgeElementContainerInteraction extends NSObject implements UIInteraction {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIScrollEdgeElementContainerInteraction extends NSObject implements UIInteraction {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIScrollEdgeElementContainerInteraction;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var scrollView(get, set) : Null<UIScrollView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_scrollView():Null<UIScrollView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_scrollView(v:Null<UIScrollView>):Null<UIScrollView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var edge(get, set) : UIRectEdge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_edge():UIRectEdge;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_edge(v:UIRectEdge):UIRectEdge;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIScrollEdgeElementContainerInteraction;
 }

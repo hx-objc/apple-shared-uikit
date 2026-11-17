@@ -5,14 +5,23 @@ import coregraphics.CGPoint;
 import foundation.NSCopying;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIEditMenuConfiguration extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIEditMenuConfiguration extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIEditMenuConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var identifier(get, never) : NSCopying;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_identifier():NSCopying;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var sourcePoint(get, never) : CGPoint;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_sourcePoint():CGPoint;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredArrowDirection(get, set) : UIEditMenuArrowDirection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredArrowDirection():UIEditMenuArrowDirection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredArrowDirection(v:UIEditMenuArrowDirection):UIEditMenuArrowDirection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function configurationWithIdentifier(identifier:Null<NSCopying>, sourcePoint:CGPoint):UIEditMenuConfiguration;
 }

@@ -20,6 +20,7 @@ import objc.NSObjectProtocol;
 	function savePresentedItemChangesWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
 	@:optional
 	function accommodatePresentedItemDeletionWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function accommodatePresentedItemEvictionWithCompletionHandler(completionHandler:Null<NSError> -> Void):Void;
 	@:optional

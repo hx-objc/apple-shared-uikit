@@ -51,9 +51,11 @@ import objc.NSObjectProtocol;
 	@:optional
 	function peripheralDidOpenL2CAPChannelError(peripheral:CBPeripheral, didOpenL2CAPChannel:Null<CBL2CAPChannel>, error:Null<NSError>):Void;
 	@:selector("peripheral:didReceiveChannelSoundingProcedureResults:error:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function peripheralDidReceiveChannelSoundingProcedureResultsError(peripheral:CBPeripheral, didReceiveChannelSoundingProcedureResults:Null<CBChannelSoundingProcedureResults>, error:Null<NSError>):Void;
 	@:selector("peripheral:didCompleteChannelSoundingSession:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function peripheralDidCompleteChannelSoundingSession(peripheral:CBPeripheral, didCompleteChannelSoundingSession:Null<NSError>):Void;
 }

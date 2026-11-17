@@ -7,11 +7,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INNotebookItemTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INNotebookItemTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INNotebookItemTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INNotebookItemTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INNotebookItemTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INNotebookItemTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INNotebookItemTypeResolutionResult;
 	static function successWithResolvedNotebookItemType(resolvedNotebookItemType:INNotebookItemType):INNotebookItemTypeResolutionResult;
 	static function disambiguationWithNotebookItemTypesToDisambiguate(notebookItemTypesToDisambiguate:NSArray<NSNumber>):INNotebookItemTypeResolutionResult;

@@ -7,6 +7,7 @@ import objc.NSObjectProtocol;
 	@:deprecated
 	@:optional
 	function toolPickerSelectedToolDidChange(toolPicker:PKToolPicker):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function toolPickerSelectedToolItemDidChange(toolPicker:PKToolPicker):Void;
 	@:optional

@@ -11,8 +11,11 @@ import hxmc.I64;
 
 @:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListTemplate extends CPTemplate implements CPBarButtonProviding {
 	static function alloc():CPListTemplate;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var listHeader(get, set) : Null<CPListTemplateDetailsHeader>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_listHeader():Null<CPListTemplateDetailsHeader>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_listHeader(v:Null<CPListTemplateDetailsHeader>):Null<CPListTemplateDetailsHeader>;
 	@:deprecated
 	var delegate(get, set) : Null<CPListTemplateDelegate>;
@@ -36,18 +39,28 @@ import hxmc.I64;
 	var emptyViewSubtitleVariants(get, set) : NSArray<NSString>;
 	function get_emptyViewSubtitleVariants():NSArray<NSString>;
 	function set_emptyViewSubtitleVariants(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var showsSpinnerWhileEmpty(get, set) : Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_showsSpinnerWhileEmpty():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function set_showsSpinnerWhileEmpty(v:Bool):Bool;
 	var assistantCellConfiguration(get, set) : Null<CPAssistantCellConfiguration>;
 	function get_assistantCellConfiguration():Null<CPAssistantCellConfiguration>;
 	function set_assistantCellConfiguration(v:Null<CPAssistantCellConfiguration>):Null<CPAssistantCellConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumHeaderGridButtonCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumHeaderGridButtonCount():I64;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumGridButtonImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumGridButtonImageSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var headerGridButtons(get, set) : Null<NSArray<CPGridButton>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_headerGridButtons():Null<NSArray<CPGridButton>>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_headerGridButtons(v:Null<NSArray<CPGridButton>>):Null<NSArray<CPGridButton>>;
 	var leadingNavigationBarButtons(get, set) : NSArray<CPBarButton>;
 	function get_leadingNavigationBarButtons():NSArray<CPBarButton>;
@@ -60,7 +73,9 @@ import hxmc.I64;
 	function set_backButton(v:Null<CPBarButton>):Null<CPBarButton>;
 	overload function initWithTitle(title:Null<NSStringArg>, sections:NSArray<CPListSection>):CPListTemplate;
 	overload function initWithTitle(title:Null<NSStringArg>, sections:NSArray<CPListSection>, assistantCellConfiguration:Null<CPAssistantCellConfiguration>):CPListTemplate;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithTitle(title:Null<NSStringArg>, sections:NSArray<CPListSection>, assistantCellConfiguration:Null<CPAssistantCellConfiguration>, headerGridButtons:Null<NSArray<CPGridButton>>):CPListTemplate;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithTitle(title:Null<NSStringArg>, listHeader:Null<CPListTemplateDetailsHeader>, sections:NSArray<CPListSection>, assistantCellConfiguration:Null<CPAssistantCellConfiguration>):CPListTemplate;
 	function updateSections(sections:NSArray<CPListSection>):Void;
 	function indexPathForItem(item:CPListTemplateItem):Null<NSIndexPath>;

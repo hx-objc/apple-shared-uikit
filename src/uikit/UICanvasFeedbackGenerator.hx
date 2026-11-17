@@ -3,10 +3,15 @@ package uikit;
 
 import coregraphics.CGPoint;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICanvasFeedbackGenerator extends UIFeedbackGenerator {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.5, maccatalyst >= 17.5) extern class UICanvasFeedbackGenerator extends UIFeedbackGenerator {
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function alloc():UICanvasFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function feedbackGeneratorForView(view:UIView):UICanvasFeedbackGenerator;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function alignmentOccurredAtLocation(location:CGPoint):Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function pathCompletedAtLocation(location:CGPoint):Void;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	override function init():UICanvasFeedbackGenerator;
 }

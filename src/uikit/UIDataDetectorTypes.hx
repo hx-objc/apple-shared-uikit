@@ -11,7 +11,9 @@ enum abstract UIDataDetectorTypes(I64) to I64 {
 	var ShipmentTrackingNumber = 16;
 	var FlightNumber = 32;
 	var LookupSuggestion = 64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Money = 128;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PhysicalValue = 256;
 	var None = 0;
 	var All = -1;

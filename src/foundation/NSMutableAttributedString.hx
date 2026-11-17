@@ -10,8 +10,10 @@ import uikit.NSTextAttachment;
 @:hxmc.framework("Foundation") @:hxmc.objc extern class NSMutableAttributedString extends NSAttributedString {
 	static function alloc():NSMutableAttributedString;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function attributedStringWithAdaptiveImageGlyph(adaptiveImageGlyph:NSAdaptiveImageGlyph, attributes:NSDictionary<NSString, Id>):NSMutableAttributedString;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static overload function attributedStringWithAttachment(attachment:NSTextAttachment, attributes:NSDictionary<NSString, Id>):NSMutableAttributedString;
 	@:hxmc.framework("UIKit")
 	static function objectWithItemProviderData(data:NSData, typeIdentifier:NSStringArg, error:Ptr):Null<NSMutableAttributedString>;
@@ -41,15 +43,20 @@ import uikit.NSTextAttachment;
 	override function init():NSMutableAttributedString;
 	override function initWithAttributedString(attrStr:NSAttributedString):NSMutableAttributedString;
 	override function initWithCoder(coder:NSCoder):Null<NSMutableAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithContentsOfMarkdownFileAtURL(markdownFile:NSURL, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSMutableAttributedString>;
 	@:hxmc.framework("UIKit")
 	override function initWithData(data:NSData, options:NSDictionary<NSString, Id>, documentAttributes:Ptr, error:Ptr):Null<NSMutableAttributedString>;
 	@:hxmc.framework("UIKit")
 	@:deprecated
 	override function initWithFileURL(url:NSURL, options:NSDictionary, documentAttributes:Ptr, error:Ptr):Null<NSMutableAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	override overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, arguments:Ptr):NSMutableAttributedString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, context:NSDictionary<NSString, Id>, arguments:Ptr):NSMutableAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithMarkdown(markdown:NSData, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSMutableAttributedString>;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithMarkdownString(markdownString:NSStringArg, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSMutableAttributedString>;
 	override overload function initWithString(str:NSStringArg):NSMutableAttributedString;
 	override overload function initWithString(str:NSStringArg, attributes:Null<NSDictionary<NSString, Id>>):NSMutableAttributedString;

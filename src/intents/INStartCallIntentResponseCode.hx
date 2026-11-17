@@ -16,6 +16,7 @@ enum abstract INStartCallIntentResponseCode(I64) to I64 {
 	var FailureUnableToHandOff = 9;
 	var FailureAppConfigurationRequired = 10;
 	var FailureCallInProgress = 11;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var FailureRequiringInAppAuthentication = 13;
 	inline function new(v:I64) this = v;
 }

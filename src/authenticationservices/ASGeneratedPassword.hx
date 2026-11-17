@@ -9,16 +9,24 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASGeneratedPassword extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(ios >= 26.2, maccatalyst >= 26.2) extern class ASGeneratedPassword extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():ASGeneratedPassword;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var kind(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_kind():NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var localizedName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_localizedName():NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var value(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_value():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function initWithKind(kind:NSStringArg, value:NSStringArg):ASGeneratedPassword;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

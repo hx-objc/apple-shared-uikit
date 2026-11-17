@@ -30,6 +30,7 @@ import objc.NSObject;
 	static function configurationWithName(name:Null<NSStringArg>, sessionRole:NSStringArg):UISceneConfiguration;
 	overload function initWithName(name:Null<NSStringArg>, sessionRole:NSStringArg):UISceneConfiguration;
 	override function init():UISceneConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithName(name:Null<NSStringArg>):UISceneConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

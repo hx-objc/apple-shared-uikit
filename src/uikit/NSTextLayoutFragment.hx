@@ -10,43 +10,78 @@ import foundation.NSOperationQueue;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextLayoutFragment extends NSObject implements NSSecureCoding implements NSTextViewportRenderingSurfaceKey {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextLayoutFragment extends NSObject implements NSSecureCoding implements NSTextViewportRenderingSurfaceKey {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextLayoutFragment;
+	@:hxmc.available(macos >= 12.0)
 	var textLayoutManager(get, never) : Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLayoutManager():Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	var textElement(get, never) : Null<NSTextElement>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textElement():Null<NSTextElement>;
+	@:hxmc.available(macos >= 12.0)
 	var rangeInElement(get, never) : NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_rangeInElement():NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	var textLineFragments(get, never) : NSArray<NSTextLineFragment>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLineFragments():NSArray<NSTextLineFragment>;
+	@:hxmc.available(macos >= 12.0)
 	var layoutQueue(get, set) : Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	function get_layoutQueue():Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	function set_layoutQueue(v:Null<NSOperationQueue>):Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	var state(get, never) : NSTextLayoutFragmentState;
+	@:hxmc.available(macos >= 12.0)
 	function get_state():NSTextLayoutFragmentState;
+	@:hxmc.available(macos >= 12.0)
 	var layoutFragmentFrame(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_layoutFragmentFrame():CGRect;
+	@:hxmc.available(macos >= 12.0)
 	var renderingSurfaceBounds(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_renderingSurfaceBounds():CGRect;
+	@:hxmc.available(macos >= 12.0)
 	var leadingPadding(get, never) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_leadingPadding():Float;
+	@:hxmc.available(macos >= 12.0)
 	var trailingPadding(get, never) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_trailingPadding():Float;
+	@:hxmc.available(macos >= 12.0)
 	var topMargin(get, never) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_topMargin():Float;
+	@:hxmc.available(macos >= 12.0)
 	var bottomMargin(get, never) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_bottomMargin():Float;
+	@:hxmc.available(macos >= 12.0)
 	var textAttachmentViewProviders(get, never) : NSArray<NSTextAttachmentViewProvider>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textAttachmentViewProviders():NSArray<NSTextAttachmentViewProvider>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithTextElement(textElement:NSTextElement, range:Null<NSTextRange>):NSTextLayoutFragment;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCoder(coder:NSCoder):Null<NSTextLayoutFragment>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function textLineFragmentForVerticalOffset(verticalOffset:Float, requiresExactMatch:Bool):Null<NSTextLineFragment>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function textLineFragmentForTextLocation(textLocation:NSTextLocation, isUpstreamAffinity:Bool):Null<NSTextLineFragment>;
+	@:hxmc.available(macos >= 12.0)
 	function invalidateLayout():Void;
+	@:hxmc.available(macos >= 12.0)
 	function drawAtPoint(point:CGPoint, inContext:CGContext):Void;
+	@:hxmc.available(macos >= 12.0)
 	function frameForTextAttachmentAtLocation(location:NSTextLocation):CGRect;
 	function encodeWithCoder(coder:NSCoder):Void;
 }

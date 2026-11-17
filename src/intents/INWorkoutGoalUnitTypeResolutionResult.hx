@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INWorkoutGoalUnitTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INWorkoutGoalUnitTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INWorkoutGoalUnitTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INWorkoutGoalUnitTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INWorkoutGoalUnitTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INWorkoutGoalUnitTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INWorkoutGoalUnitTypeResolutionResult;
 	static function successWithResolvedWorkoutGoalUnitType(resolvedWorkoutGoalUnitType:INWorkoutGoalUnitType):INWorkoutGoalUnitTypeResolutionResult;
 	@:deprecated

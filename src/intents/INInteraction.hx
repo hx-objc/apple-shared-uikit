@@ -13,32 +13,56 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INInteraction extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INInteraction extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INInteraction;
+	@:hxmc.available(macos >= 11.0)
 	var intent(get, never) : INIntent;
+	@:hxmc.available(macos >= 11.0)
 	function get_intent():INIntent;
+	@:hxmc.available(macos >= 11.0)
 	var intentResponse(get, never) : Null<INIntentResponse>;
+	@:hxmc.available(macos >= 11.0)
 	function get_intentResponse():Null<INIntentResponse>;
+	@:hxmc.available(macos >= 11.0)
 	var intentHandlingStatus(get, never) : INIntentHandlingStatus;
+	@:hxmc.available(macos >= 11.0)
 	function get_intentHandlingStatus():INIntentHandlingStatus;
+	@:hxmc.available(macos >= 11.0)
 	var direction(get, set) : INInteractionDirection;
+	@:hxmc.available(macos >= 11.0)
 	function get_direction():INInteractionDirection;
+	@:hxmc.available(macos >= 11.0)
 	function set_direction(v:INInteractionDirection):INInteractionDirection;
+	@:hxmc.available(macos >= 11.0)
 	var dateInterval(get, set) : Null<NSDateInterval>;
+	@:hxmc.available(macos >= 11.0)
 	function get_dateInterval():Null<NSDateInterval>;
+	@:hxmc.available(macos >= 11.0)
 	function set_dateInterval(v:Null<NSDateInterval>):Null<NSDateInterval>;
+	@:hxmc.available(macos >= 11.0)
 	var identifier(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function set_identifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var groupIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_groupIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function set_groupIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function initWithIntent(intent:INIntent, response:Null<INIntentResponse>):INInteraction;
+	@:hxmc.available(macos >= 11.0)
 	function donateInteractionWithCompletion(completion:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function deleteAllInteractionsWithCompletion(completion:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function deleteInteractionsWithIdentifiers(identifiers:NSArray<NSString>, completion:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	static function deleteInteractionsWithGroupIdentifier(groupIdentifier:NSStringArg, completion:Null<Null<NSError> -> Void>):Void;
 	function parameterValueForParameter(parameter:INParameter):Null<Id>;
 	function encodeWithCoder(coder:NSCoder):Void;

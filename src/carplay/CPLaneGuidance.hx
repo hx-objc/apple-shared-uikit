@@ -10,18 +10,26 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPLaneGuidance extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class CPLaneGuidance extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var lanes(get, set) : NSArray<CPLane>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_lanes():NSArray<CPLane>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_lanes(v:NSArray<CPLane>):NSArray<CPLane>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var instructionVariants(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_instructionVariants():NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_instructionVariants(v:NSArray<NSString>):NSArray<NSString>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	override function init():CPLaneGuidance;
 }

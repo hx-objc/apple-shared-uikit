@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INRestaurantResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRestaurantResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INRestaurantResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INRestaurantResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INRestaurantResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INRestaurantResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INRestaurantResolutionResult;
 	static function successWithResolvedRestaurant(resolvedRestaurant:INRestaurant):INRestaurantResolutionResult;
 	static function disambiguationWithRestaurantsToDisambiguate(restaurantsToDisambiguate:NSArray<INRestaurant>):INRestaurantResolutionResult;

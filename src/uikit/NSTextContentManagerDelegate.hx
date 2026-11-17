@@ -3,11 +3,13 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextContentManagerDelegate") extern interface NSTextContentManagerDelegate extends NSObjectProtocol {
+@:hxmc.objc("NSTextContentManagerDelegate") @:hxmc.available(macos >= 12.0) extern interface NSTextContentManagerDelegate extends NSObjectProtocol {
 	@:selector("textContentManager:textElementAtLocation:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textContentManagerTextElementAtLocation(textContentManager:NSTextContentManager, textElementAtLocation:NSTextLocation):Null<NSTextElement>;
 	@:selector("textContentManager:shouldEnumerateTextElement:options:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textContentManagerShouldEnumerateTextElementOptions(textContentManager:NSTextContentManager, shouldEnumerateTextElement:NSTextElement, options:NSTextContentManagerEnumerationOptions):Bool;
 }

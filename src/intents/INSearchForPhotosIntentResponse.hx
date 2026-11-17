@@ -6,6 +6,7 @@ import foundation.NSNumberArg;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForPhotosIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForPhotosIntentResponse;
 	var code(get, never) : INSearchForPhotosIntentResponseCode;
 	function get_code():INSearchForPhotosIntentResponseCode;

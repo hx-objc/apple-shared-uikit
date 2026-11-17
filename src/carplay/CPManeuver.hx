@@ -23,8 +23,11 @@ import uikit.UIImage;
 	var symbolSet(get, set) : Null<CPImageSet>;
 	function get_symbolSet():Null<CPImageSet>;
 	function set_symbolSet(v:Null<CPImageSet>):Null<CPImageSet>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var cardBackgroundColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_cardBackgroundColor():Null<UIColor>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_cardBackgroundColor(v:Null<UIColor>):Null<UIColor>;
 	var symbolImage(get, set) : Null<UIImage>;
 	function get_symbolImage():Null<UIImage>;
@@ -62,29 +65,53 @@ import uikit.UIImage;
 	var notificationAttributedInstructionVariants(get, set) : NSArray<NSAttributedString>;
 	function get_notificationAttributedInstructionVariants():NSArray<NSAttributedString>;
 	function set_notificationAttributedInstructionVariants(v:NSArray<NSAttributedString>):NSArray<NSAttributedString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var maneuverType(get, set) : CPManeuverType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_maneuverType():CPManeuverType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_maneuverType(v:CPManeuverType):CPManeuverType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var roadFollowingManeuverVariants(get, set) : Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_roadFollowingManeuverVariants():Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_roadFollowingManeuverVariants(v:Null<NSArray<NSString>>):Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var trafficSide(get, set) : CPTrafficSide;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_trafficSide():CPTrafficSide;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_trafficSide(v:CPTrafficSide):CPTrafficSide;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var junctionType(get, set) : CPJunctionType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_junctionType():CPJunctionType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_junctionType(v:CPJunctionType):CPJunctionType;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var junctionExitAngle(get, set) : Null<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_junctionExitAngle():Null<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_junctionExitAngle(v:Null<NSMeasurement<NSUnitAngle>>):Null<NSMeasurement<NSUnitAngle>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var junctionElementAngles(get, set) : Null<NSSet<NSMeasurement<NSUnitAngle>>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_junctionElementAngles():Null<NSSet<NSMeasurement<NSUnitAngle>>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_junctionElementAngles(v:Null<NSSet<NSMeasurement<NSUnitAngle>>>):Null<NSSet<NSMeasurement<NSUnitAngle>>>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var linkedLaneGuidance(get, set) : CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_linkedLaneGuidance():CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_linkedLaneGuidance(v:CPLaneGuidance):CPLaneGuidance;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var highwayExitLabel(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_highwayExitLabel():NSStringArg;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_highwayExitLabel(v:NSStringArg):NSStringArg;
 	var userInfo(get, set) : Null<Id>;
 	function get_userInfo():Null<Id>;

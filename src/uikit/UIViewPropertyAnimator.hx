@@ -33,8 +33,11 @@ import objc.NSObject;
 	var pausesOnCompletion(get, set) : Bool;
 	function get_pausesOnCompletion():Bool;
 	function set_pausesOnCompletion(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var flushUpdates(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_flushUpdates():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_flushUpdates(v:Bool):Bool;
 	var state(get, never) : UIViewAnimatingState;
 	function get_state():UIViewAnimatingState;

@@ -6,14 +6,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICollectionLayoutSectionOrthogonalScrollingProperties extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UICollectionLayoutSectionOrthogonalScrollingProperties extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UICollectionLayoutSectionOrthogonalScrollingProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var decelerationRate(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_decelerationRate():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_decelerationRate(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var bounce(get, set) : UICollectionLayoutSectionOrthogonalScrollingBounce;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_bounce():UICollectionLayoutSectionOrthogonalScrollingBounce;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_bounce(v:UICollectionLayoutSectionOrthogonalScrollingBounce):UICollectionLayoutSectionOrthogonalScrollingBounce;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UICollectionLayoutSectionOrthogonalScrollingProperties;
 }

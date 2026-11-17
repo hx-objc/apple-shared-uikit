@@ -4,8 +4,11 @@ package avkit;
 import hxmc.I64;
 
 enum abstract AVCaptureEventPhase(I64) to I64 {
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var Began = 0;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var Ended = 1;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	var Cancelled = 2;
 	inline function new(v:I64) this = v;
 }

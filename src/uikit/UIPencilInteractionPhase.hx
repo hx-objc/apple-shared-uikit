@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIPencilInteractionPhase(I64) to I64 {
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var Began = 0;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var Changed = 1;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var Ended = 2;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var Cancelled = 3;
 	inline function new(v:I64) this = v;
 }

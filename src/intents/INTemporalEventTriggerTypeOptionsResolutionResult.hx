@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INTemporalEventTriggerTypeOptionsResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTemporalEventTriggerTypeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INTemporalEventTriggerTypeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INTemporalEventTriggerTypeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INTemporalEventTriggerTypeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INTemporalEventTriggerTypeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INTemporalEventTriggerTypeOptionsResolutionResult;
 	static function successWithResolvedTemporalEventTriggerTypeOptions(resolvedTemporalEventTriggerTypeOptions:INTemporalEventTriggerTypeOptions):INTemporalEventTriggerTypeOptionsResolutionResult;
 	static function confirmationRequiredWithTemporalEventTriggerTypeOptionsToConfirm(temporalEventTriggerTypeOptionsToConfirm:INTemporalEventTriggerTypeOptions):INTemporalEventTriggerTypeOptionsResolutionResult;

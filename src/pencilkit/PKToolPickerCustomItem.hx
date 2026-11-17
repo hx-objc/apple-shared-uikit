@@ -3,19 +3,33 @@ package pencilkit;
 
 import uikit.UIColor;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKToolPickerCustomItem extends PKToolPickerItem {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class PKToolPickerCustomItem extends PKToolPickerItem {
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():PKToolPickerCustomItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var configuration(get, never) : PKToolPickerCustomItemConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_configuration():PKToolPickerCustomItemConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var color(get, set) : UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_color():UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_color(v:UIColor):UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var allowsColorSelection(get, set) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowsColorSelection():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsColorSelection(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var width(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_width():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_width(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithConfiguration(configuration:PKToolPickerCustomItemConfiguration):PKToolPickerCustomItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function reloadImage():Void;
 }

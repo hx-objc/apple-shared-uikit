@@ -4,9 +4,13 @@ package coremotion;
 import hxmc.I64;
 
 enum abstract CMHighFrequencyHeartRateDataConfidence(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Low = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Medium = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var High = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Highest = 3;
 	inline function new(v:I64) this = v;
 }

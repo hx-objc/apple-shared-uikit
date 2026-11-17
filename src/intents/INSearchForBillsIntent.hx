@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForBillsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForBillsIntent;
 	var billPayee(get, never) : Null<INBillPayee>;
 	function get_billPayee():Null<INBillPayee>;
@@ -16,6 +17,7 @@ import foundation.NSCoder;
 	var dueDateRange(get, never) : Null<INDateComponentsRange>;
 	function get_dueDateRange():Null<INDateComponentsRange>;
 	function initWithBillPayee(billPayee:Null<INBillPayee>, paymentDateRange:Null<INDateComponentsRange>, billType:INBillType, status:INPaymentStatus, dueDateRange:Null<INDateComponentsRange>):INSearchForBillsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForBillsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForBillsIntent>;
 }

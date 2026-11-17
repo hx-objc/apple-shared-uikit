@@ -30,7 +30,9 @@ import objc.NSObject;
 	function set_startPage(v:I64):I64;
 	var pageCount(get, never) : I64;
 	function get_pageCount():I64;
+	@:hxmc.available(ios >= 16, maccatalyst >= 16)
 	var requiresMainThread(get, never) : Bool;
+	@:hxmc.available(ios >= 16, maccatalyst >= 16)
 	function get_requiresMainThread():Bool;
 	function removeFromPrintPageRenderer():Void;
 	function rectForPageAtIndex(pageIndex:I64):CGRect;

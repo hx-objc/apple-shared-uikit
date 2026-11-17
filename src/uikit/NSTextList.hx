@@ -20,13 +20,18 @@ import objc.NSObject;
 	var startingItemNumber(get, set) : I64;
 	function get_startingItemNumber():I64;
 	function set_startingItemNumber(v:I64):I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var ordered(get, never) : Bool;
 	@:selector("isOrdered")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_ordered():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static var includesTextListMarkers(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function get_includesTextListMarkers():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithMarkerFormat(markerFormat:NSStringArg, options:NSTextListOptions, startingItemNumber:I64):NSTextList;
 	overload function initWithMarkerFormat(markerFormat:NSStringArg, options:I64):NSTextList;
 	function initWithCoder(coder:NSCoder):Null<NSTextList>;

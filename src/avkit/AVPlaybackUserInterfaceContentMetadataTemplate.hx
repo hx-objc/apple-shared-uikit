@@ -10,24 +10,38 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceContentMetadataTemplate extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceContentMetadataTemplate extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceContentMetadataTemplate;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var videoProperties(get, set) : Null<AVPlaybackUserInterfaceContentVideoProperties>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_videoProperties():Null<AVPlaybackUserInterfaceContentVideoProperties>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_videoProperties(v:Null<AVPlaybackUserInterfaceContentVideoProperties>):Null<AVPlaybackUserInterfaceContentVideoProperties>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var title(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var artworkRepresentations(get, set) : NSArray<AVPlaybackUserInterfaceContentArtwork>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_artworkRepresentations():NSArray<AVPlaybackUserInterfaceContentArtwork>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_artworkRepresentations(v:NSArray<AVPlaybackUserInterfaceContentArtwork>):NSArray<AVPlaybackUserInterfaceContentArtwork>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<AVPlaybackUserInterfaceContentMetadataTemplate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():AVPlaybackUserInterfaceContentMetadataTemplate;
 }

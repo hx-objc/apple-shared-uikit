@@ -5,16 +5,24 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPSportsOverlay extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPSportsOverlay extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPSportsOverlay;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var leftTeam(get, never) : CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_leftTeam():CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var rightTeam(get, never) : CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_rightTeam():CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var eventStatus(get, never) : Null<CPNowPlayingSportsEventStatus>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_eventStatus():Null<CPNowPlayingSportsEventStatus>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithLeftTeam(leftTeam:CPNowPlayingSportsTeam, rightTeam:CPNowPlayingSportsTeam, eventStatus:Null<CPNowPlayingSportsEventStatus>):CPSportsOverlay;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPSportsOverlay>;

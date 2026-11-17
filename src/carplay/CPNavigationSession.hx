@@ -12,40 +12,68 @@ import uikit.UIColor;
 	var upcomingManeuvers(get, set) : NSArray<CPManeuver>;
 	function get_upcomingManeuvers():NSArray<CPManeuver>;
 	function set_upcomingManeuvers(v:NSArray<CPManeuver>):NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var currentLaneGuidance(get, set) : Null<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_currentLaneGuidance():Null<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_currentLaneGuidance(v:Null<CPLaneGuidance>):Null<CPLaneGuidance>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var currentRoadNameVariants(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_currentRoadNameVariants():NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_currentRoadNameVariants(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var maneuverState(get, set) : CPManeuverState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_maneuverState():CPManeuverState;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_maneuverState(v:CPManeuverState):CPManeuverState;
 	var trip(get, never) : CPTrip;
 	function get_trip():CPTrip;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var optionsPanel(get, set) : Null<CPMapPanel>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_optionsPanel():Null<CPMapPanel>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_optionsPanel(v:Null<CPMapPanel>):Null<CPMapPanel>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var routeSegments(get, never) : NSArray<CPRouteSegment>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_routeSegments():NSArray<CPRouteSegment>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var currentSegment(get, set) : CPRouteSegment;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_currentSegment():CPRouteSegment;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_currentSegment(v:CPRouteSegment):CPRouteSegment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeSharingEnabled(get, never) : Bool;
 	@:selector("isRouteSharingEnabled")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeSharingEnabled():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var routeSharingSupported(get, never) : Bool;
 	@:selector("isRouteSharingSupported")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_routeSharingSupported():Bool;
 	overload function pauseTripForReason(reason:CPTripPauseReason, description:Null<NSStringArg>):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	overload function pauseTripForReason(reason:CPTripPauseReason, description:Null<NSStringArg>, turnCardColor:Null<UIColor>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function resumeTripWithUpdatedRouteInformation(routeInformation:CPRouteInformation):Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function resumeTripWithUpdatedRouteSegments(routeSegments:NSArray<CPRouteSegment>, currentSegment:CPRouteSegment, rerouteReason:CPRerouteReason):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function resumeNavigationWithUpdatedTrip(trip:CPTrip, routeSegments:NSArray<CPRouteSegment>, currentSegment:CPRouteSegment, rerouteReason:CPRerouteReason):Void;
 	function finishTrip():Void;
 	function cancelTrip():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addManeuvers(maneuvers:NSArray<CPManeuver>):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function addLaneGuidances(laneGuidances:NSArray<CPLaneGuidance>):Void;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function addRouteSegments(routeSegments:NSArray<CPRouteSegment>):Void;
 	function updateTravelEstimates(estimates:CPTravelEstimates, forManeuver:CPManeuver):Void;
 }

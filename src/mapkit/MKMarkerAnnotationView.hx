@@ -9,37 +9,69 @@ import uikit.UIColor;
 import uikit.UIImage;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKMarkerAnnotationView extends MKAnnotationView {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class MKMarkerAnnotationView extends MKAnnotationView {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	static function appearance():MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	var titleVisibility(get, set) : MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function get_titleVisibility():MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function set_titleVisibility(v:MKFeatureVisibility):MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	var subtitleVisibility(get, set) : MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function get_subtitleVisibility():MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	function set_subtitleVisibility(v:MKFeatureVisibility):MKFeatureVisibility;
+	@:hxmc.available(macos >= 11.0)
 	var markerTintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function get_markerTintColor():Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function set_markerTintColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	var glyphTintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function get_glyphTintColor():Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function set_glyphTintColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	var glyphText(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_glyphText():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function set_glyphText(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var glyphImage(get, set) : Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	function get_glyphImage():Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	function set_glyphImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	var selectedGlyphImage(get, set) : Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	function get_selectedGlyphImage():Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	function set_selectedGlyphImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(macos >= 11.0)
 	var animatesWhenAdded(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_animatesWhenAdded():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_animatesWhenAdded(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	override function init():MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithAnnotation(annotation:Null<MKAnnotation>, reuseIdentifier:Null<NSStringArg>):MKMarkerAnnotationView;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<MKMarkerAnnotationView>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithFrame(frame:CGRect):MKMarkerAnnotationView;
 }

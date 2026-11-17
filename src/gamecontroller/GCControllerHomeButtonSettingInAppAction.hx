@@ -4,8 +4,11 @@ package gamecontroller;
 import hxmc.I64;
 
 enum abstract GCControllerHomeButtonSettingInAppAction(I64) to I64 {
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var Unavailable = -1;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var Default = 0;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var Defer = 1;
 	inline function new(v:I64) this = v;
 }

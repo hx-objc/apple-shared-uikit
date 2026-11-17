@@ -7,20 +7,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIZoomTransitionOptions extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIZoomTransitionOptions extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIZoomTransitionOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var interactiveDismissShouldBegin(get, set) : Null<UIZoomTransitionInteractionContext -> Bool>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_interactiveDismissShouldBegin():Null<UIZoomTransitionInteractionContext -> Bool>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_interactiveDismissShouldBegin(v:Null<UIZoomTransitionInteractionContext -> Bool>):Null<UIZoomTransitionInteractionContext -> Bool>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alignmentRectProvider(get, set) : UIZoomTransitionAlignmentRectContext -> CGRect;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alignmentRectProvider():UIZoomTransitionAlignmentRectContext -> CGRect;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_alignmentRectProvider(v:UIZoomTransitionAlignmentRectContext -> CGRect):UIZoomTransitionAlignmentRectContext -> CGRect;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var dimmingColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_dimmingColor():Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_dimmingColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var dimmingVisualEffect(get, set) : Null<UIBlurEffect>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_dimmingVisualEffect():Null<UIBlurEffect>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_dimmingVisualEffect(v:Null<UIBlurEffect>):Null<UIBlurEffect>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UIZoomTransitionOptions;
 }

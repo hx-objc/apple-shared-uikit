@@ -9,6 +9,7 @@ enum abstract AVCaptureSessionInterruptionReason(I64) to I64 {
 	var VideoDeviceInUseByAnotherClient = 3;
 	var VideoDeviceNotAvailableWithMultipleForegroundApps = 4;
 	var VideoDeviceNotAvailableDueToSystemPressure = 5;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var SensitiveContentMitigationActivated = 6;
 	inline function new(v:I64) this = v;
 }

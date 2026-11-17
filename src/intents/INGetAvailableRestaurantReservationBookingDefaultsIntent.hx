@@ -4,11 +4,13 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetAvailableRestaurantReservationBookingDefaultsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetAvailableRestaurantReservationBookingDefaultsIntent;
 	var restaurant(get, set) : Null<INRestaurant>;
 	function get_restaurant():Null<INRestaurant>;
 	function set_restaurant(v:Null<INRestaurant>):Null<INRestaurant>;
 	function initWithRestaurant(restaurant:Null<INRestaurant>):INGetAvailableRestaurantReservationBookingDefaultsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetAvailableRestaurantReservationBookingDefaultsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetAvailableRestaurantReservationBookingDefaultsIntent>;
 }

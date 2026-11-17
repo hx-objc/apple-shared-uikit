@@ -10,67 +10,126 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uiutilities.UIAxis;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableConfiguration extends NSObject implements UIContentConfiguration implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableConfiguration extends NSObject implements UIContentConfiguration implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var image(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_image(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var imageProperties(get, never) : UIContentUnavailableImageProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_imageProperties():UIContentUnavailableImageProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var text(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_text():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_text(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var attributedText(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_attributedText():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_attributedText(v:Null<NSAttributedString>):Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var textProperties(get, never) : UIContentUnavailableTextProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_textProperties():UIContentUnavailableTextProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var secondaryText(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_secondaryText():Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_secondaryText(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var secondaryAttributedText(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_secondaryAttributedText():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_secondaryAttributedText(v:Null<NSAttributedString>):Null<NSAttributedString>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var secondaryTextProperties(get, never) : UIContentUnavailableTextProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_secondaryTextProperties():UIContentUnavailableTextProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var button(get, set) : UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_button():UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_button(v:UIButtonConfiguration):UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var buttonProperties(get, never) : UIContentUnavailableButtonProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_buttonProperties():UIContentUnavailableButtonProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var secondaryButton(get, set) : UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_secondaryButton():UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_secondaryButton(v:UIButtonConfiguration):UIButtonConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var secondaryButtonProperties(get, never) : UIContentUnavailableButtonProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_secondaryButtonProperties():UIContentUnavailableButtonProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var alignment(get, set) : UIContentUnavailableAlignment;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_alignment():UIContentUnavailableAlignment;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_alignment(v:UIContentUnavailableAlignment):UIContentUnavailableAlignment;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var axesPreservingSuperviewLayoutMargins(get, set) : UIAxis;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_axesPreservingSuperviewLayoutMargins():UIAxis;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_axesPreservingSuperviewLayoutMargins(v:UIAxis):UIAxis;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var directionalLayoutMargins(get, set) : NSDirectionalEdgeInsets;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_directionalLayoutMargins():NSDirectionalEdgeInsets;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_directionalLayoutMargins(v:NSDirectionalEdgeInsets):NSDirectionalEdgeInsets;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var imageToTextPadding(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_imageToTextPadding():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_imageToTextPadding(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var textToSecondaryTextPadding(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_textToSecondaryTextPadding():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_textToSecondaryTextPadding(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var textToButtonPadding(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_textToButtonPadding():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_textToButtonPadding(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var buttonToSecondaryButtonPadding(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_buttonToSecondaryButtonPadding():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_buttonToSecondaryButtonPadding(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var background(get, set) : UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_background():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_background(v:UIBackgroundConfiguration):UIBackgroundConfiguration;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function emptyConfiguration():UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function loadingConfiguration():UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function searchConfiguration():UIContentUnavailableConfiguration;
 	function makeContentView():UIView;
 	function updatedConfigurationForState(state:UIConfigurationState):UIContentUnavailableConfiguration;

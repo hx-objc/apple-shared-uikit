@@ -14,19 +14,30 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSAdaptiveImageGlyph extends NSObject implements NSCopying implements NSSecureCoding implements CTAdaptiveImageProviding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0) extern class NSAdaptiveImageGlyph extends NSObject implements NSCopying implements NSSecureCoding implements CTAdaptiveImageProviding {
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():NSAdaptiveImageGlyph;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var imageContent(get, never) : NSData;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_imageContent():NSData;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var contentIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var contentDescription(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentDescription():NSStringArg;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static var contentType(get, never) : UTType;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function get_contentType():UTType;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function initWithImageContent(imageContent:NSData):NSAdaptiveImageGlyph;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function initWithCoder(coder:NSCoder):NSAdaptiveImageGlyph;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

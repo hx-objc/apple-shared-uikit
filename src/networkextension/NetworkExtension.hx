@@ -8,18 +8,24 @@ import foundation.NSString;
 	public static final NEAppPushErrorDomain : NSString;
 	public static final NEDNSProxyConfigurationDidChangeNotification : NSString;
 	public static final NEDNSProxyErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NEDNSSettingsConfigurationDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NEDNSSettingsErrorDomain : NSString;
 	public static final NEFilterConfigurationDidChangeNotification : NSString;
 	public static final NEFilterErrorDomain : NSString;
 	public static final NEFilterProviderRemediationMapRemediationButtonTexts : NSString;
 	public static final NEFilterProviderRemediationMapRemediationURLs : NSString;
 	public static final NEHotspotConfigurationErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NERelayClientErrorDomain : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NERelayConfigurationDidChangeNotification : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NERelayErrorDomain : NSString;
 	public static final NETunnelProviderErrorDomain : NSString;
 	public static final NEVPNConfigurationChangeNotification : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final NEVPNConnectionErrorDomain : NSString;
 	public static final NEVPNConnectionStartOptionPassword : NSString;
 	public static final NEVPNConnectionStartOptionUsername : NSString;

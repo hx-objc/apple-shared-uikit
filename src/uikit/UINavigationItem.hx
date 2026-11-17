@@ -13,32 +13,56 @@ import objc.NSObject;
 	var title(get, set) : Null<NSStringArg>;
 	function get_title():Null<NSStringArg>;
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var attributedTitle(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_attributedTitle():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_attributedTitle(v:Null<NSAttributedString>):Null<NSAttributedString>;
 	var titleView(get, set) : Null<UIView>;
 	function get_titleView():Null<UIView>;
 	function set_titleView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var attributedSubtitle(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_attributedSubtitle():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_attributedSubtitle(v:Null<NSAttributedString>):Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitleView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitleView():Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitleView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var largeTitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_largeTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_largeTitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var largeSubtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_largeSubtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_largeSubtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var largeAttributedSubtitle(get, set) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_largeAttributedSubtitle():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_largeAttributedSubtitle(v:Null<NSAttributedString>):Null<NSAttributedString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var largeSubtitleView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_largeSubtitleView():Null<UIView>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_largeSubtitleView(v:Null<UIView>):Null<UIView>;
 	var prompt(get, set) : Null<NSStringArg>;
 	function get_prompt():Null<NSStringArg>;
@@ -55,17 +79,29 @@ import objc.NSObject;
 	var backButtonDisplayMode(get, set) : UINavigationItemBackButtonDisplayMode;
 	function get_backButtonDisplayMode():UINavigationItemBackButtonDisplayMode;
 	function set_backButtonDisplayMode(v:UINavigationItemBackButtonDisplayMode):UINavigationItemBackButtonDisplayMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var backAction(get, set) : Null<UIAction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_backAction():Null<UIAction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_backAction(v:Null<UIAction>):Null<UIAction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var titleMenuProvider(get, set) : NSArray<UIMenuElement> -> Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_titleMenuProvider():NSArray<UIMenuElement> -> Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_titleMenuProvider(v:NSArray<UIMenuElement> -> Null<UIMenu>):NSArray<UIMenuElement> -> Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var renameDelegate(get, set) : UINavigationItemRenameDelegate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_renameDelegate():UINavigationItemRenameDelegate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_renameDelegate(v:UINavigationItemRenameDelegate):UINavigationItemRenameDelegate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var documentProperties(get, set) : Null<UIDocumentProperties>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_documentProperties():Null<UIDocumentProperties>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_documentProperties(v:Null<UIDocumentProperties>):Null<UIDocumentProperties>;
 	var leftBarButtonItems(get, set) : Null<NSArray<UIBarButtonItem>>;
 	function get_leftBarButtonItems():Null<NSArray<UIBarButtonItem>>;
@@ -82,34 +118,60 @@ import objc.NSObject;
 	var rightBarButtonItem(get, set) : Null<UIBarButtonItem>;
 	function get_rightBarButtonItem():Null<UIBarButtonItem>;
 	function set_rightBarButtonItem(v:Null<UIBarButtonItem>):Null<UIBarButtonItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var customizationIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_customizationIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_customizationIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var leadingItemGroups(get, set) : NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_leadingItemGroups():NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_leadingItemGroups(v:NSArray<UIBarButtonItemGroup>):NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var centerItemGroups(get, set) : NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_centerItemGroups():NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_centerItemGroups(v:NSArray<UIBarButtonItemGroup>):NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var trailingItemGroups(get, set) : NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_trailingItemGroups():NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_trailingItemGroups(v:NSArray<UIBarButtonItemGroup>):NSArray<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var pinnedTrailingGroup(get, set) : Null<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_pinnedTrailingGroup():Null<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_pinnedTrailingGroup(v:Null<UIBarButtonItemGroup>):Null<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var additionalOverflowItems(get, set) : Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_additionalOverflowItems():Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_additionalOverflowItems(v:Null<UIDeferredMenuElement>):Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var overflowPresentationSource(get, never) : Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_overflowPresentationSource():Null<UIPopoverPresentationControllerSourceItem>;
 	var largeTitleDisplayMode(get, set) : UINavigationItemLargeTitleDisplayMode;
 	function get_largeTitleDisplayMode():UINavigationItemLargeTitleDisplayMode;
 	function set_largeTitleDisplayMode(v:UINavigationItemLargeTitleDisplayMode):UINavigationItemLargeTitleDisplayMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var style(get, set) : UINavigationItemStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_style():UINavigationItemStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_style(v:UINavigationItemStyle):UINavigationItemStyle;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	var titleAlignment(get, set) : UINavigationItemTitleAlignment;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	function get_titleAlignment():UINavigationItemTitleAlignment;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	function set_titleAlignment(v:UINavigationItemTitleAlignment):UINavigationItemTitleAlignment;
 	var searchController(get, set) : Null<UISearchController>;
 	function get_searchController():Null<UISearchController>;
@@ -117,18 +179,31 @@ import objc.NSObject;
 	var hidesSearchBarWhenScrolling(get, set) : Bool;
 	function get_hidesSearchBarWhenScrolling():Bool;
 	function set_hidesSearchBarWhenScrolling(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredSearchBarPlacement(get, set) : UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredSearchBarPlacement():UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredSearchBarPlacement(v:UINavigationItemSearchBarPlacement):UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchBarPlacement(get, never) : UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchBarPlacement():UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var searchBarPlacementBarButtonItem(get, never) : UIBarButtonItem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_searchBarPlacementBarButtonItem():UIBarButtonItem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var searchBarPlacementAllowsToolbarIntegration(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_searchBarPlacementAllowsToolbarIntegration():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_searchBarPlacementAllowsToolbarIntegration(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var searchBarPlacementAllowsExternalIntegration(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_searchBarPlacementAllowsExternalIntegration():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_searchBarPlacementAllowsExternalIntegration(v:Bool):Bool;
 	var standardAppearance(get, set) : Null<UINavigationBarAppearance>;
 	function get_standardAppearance():Null<UINavigationBarAppearance>;
@@ -142,11 +217,17 @@ import objc.NSObject;
 	var compactScrollEdgeAppearance(get, set) : Null<UINavigationBarAppearance>;
 	function get_compactScrollEdgeAppearance():Null<UINavigationBarAppearance>;
 	function set_compactScrollEdgeAppearance(v:Null<UINavigationBarAppearance>):Null<UINavigationBarAppearance>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var navigationBarMinimization(get, set) : UIBarMinimization;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_navigationBarMinimization():UIBarMinimization;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_navigationBarMinimization(v:UIBarMinimization):UIBarMinimization;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var verticalBarCompressionBehavior(get, set) : UIVerticalBarCompressionBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_verticalBarCompressionBehavior():UIVerticalBarCompressionBehavior;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_verticalBarCompressionBehavior(v:UIVerticalBarCompressionBehavior):UIVerticalBarCompressionBehavior;
 	function initWithTitle(title:NSStringArg):UINavigationItem;
 	function initWithCoder(coder:NSCoder):Null<UINavigationItem>;

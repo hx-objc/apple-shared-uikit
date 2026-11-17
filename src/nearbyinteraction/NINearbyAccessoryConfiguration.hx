@@ -10,12 +10,17 @@ import hxmc.unsafe.Ptr;
 	static function alloc():NINearbyAccessoryConfiguration;
 	var accessoryDiscoveryToken(get, never) : NIDiscoveryToken;
 	function get_accessoryDiscoveryToken():NIDiscoveryToken;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cameraAssistanceEnabled(get, set) : Bool;
 	@:selector("isCameraAssistanceEnabled")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cameraAssistanceEnabled():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cameraAssistanceEnabled(v:Bool):Bool;
 	function initWithData(data:NSData, error:Ptr):Null<NINearbyAccessoryConfiguration>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithAccessoryData(accessoryData:NSData, bluetoothPeerIdentifier:NSUUID, error:Ptr):Null<NINearbyAccessoryConfiguration>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithBluetoothChannelSoundingIdentifier(bluetoothIdentifier:NSUUID, previousBluetoothIdentifier:Null<NSUUID>):NINearbyAccessoryConfiguration;
 	override function initWithCoder(coder:NSCoder):Null<NINearbyAccessoryConfiguration>;
 }

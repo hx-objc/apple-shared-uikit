@@ -29,8 +29,11 @@ import hxmc.I64;
 	var detectionObjects(get, set) : NSSet<ARReferenceObject>;
 	function get_detectionObjects():NSSet<ARReferenceObject>;
 	function set_detectionObjects(v:NSSet<ARReferenceObject>):NSSet<ARReferenceObject>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var trackingObjects(get, set) : NSSet<ARReferenceObject>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_trackingObjects():NSSet<ARReferenceObject>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_trackingObjects(v:NSSet<ARReferenceObject>):NSSet<ARReferenceObject>;
 	var appClipCodeTrackingEnabled(get, set) : Bool;
 	function get_appClipCodeTrackingEnabled():Bool;

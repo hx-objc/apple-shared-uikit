@@ -28,18 +28,29 @@ import hxmc.objc.Selector;
 	function set_state(v:UIMenuElementState):UIMenuElementState;
 	var alternates(get, never) : NSArray<UICommandAlternate>;
 	function get_alternates():NSArray<UICommandAlternate>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var selectedImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_selectedImage():Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_selectedImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var repeatBehavior(get, set) : UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_repeatBehavior():UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_repeatBehavior(v:UIMenuElementRepeatBehavior):UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var sender(get, never) : Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_sender():Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var presentationSourceItem(get, never) : Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_presentationSourceItem():Null<UIPopoverPresentationControllerSourceItem>;
 	static overload function commandWithTitle(title:NSStringArg, image:Null<UIImage>, action:Selector, propertyList:Null<Id>):UICommand;
 	static overload function commandWithTitle(title:NSStringArg, image:Null<UIImage>, action:Selector, propertyList:Null<Id>, alternates:NSArray<UICommandAlternate>):UICommand;
 	override function initWithCoder(coder:NSCoder):Null<UICommand>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performWithSender(sender:Null<Id>, target:Null<Id>):Void;
 }

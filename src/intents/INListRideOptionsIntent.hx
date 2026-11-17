@@ -5,12 +5,14 @@ import corelocation.CLPlacemark;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INListRideOptionsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INListRideOptionsIntent;
 	var pickupLocation(get, never) : Null<CLPlacemark>;
 	function get_pickupLocation():Null<CLPlacemark>;
 	var dropOffLocation(get, never) : Null<CLPlacemark>;
 	function get_dropOffLocation():Null<CLPlacemark>;
 	function initWithPickupLocation(pickupLocation:Null<CLPlacemark>, dropOffLocation:Null<CLPlacemark>):INListRideOptionsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INListRideOptionsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INListRideOptionsIntent>;
 }

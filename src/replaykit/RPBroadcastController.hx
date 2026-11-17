@@ -8,27 +8,46 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("ReplayKit") @:hxmc.objc @:deprecated extern class RPBroadcastController extends NSObject {
+@:hxmc.framework("ReplayKit") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 11.0) extern class RPBroadcastController extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():RPBroadcastController;
+	@:hxmc.available(macos >= 11.0)
 	var broadcasting(get, never) : Bool;
 	@:selector("isBroadcasting")
+	@:hxmc.available(macos >= 11.0)
 	function get_broadcasting():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var paused(get, never) : Bool;
 	@:selector("isPaused")
+	@:hxmc.available(macos >= 11.0)
 	function get_paused():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var broadcastURL(get, never) : NSURL;
+	@:hxmc.available(macos >= 11.0)
 	function get_broadcastURL():NSURL;
+	@:hxmc.available(macos >= 11.0)
 	var serviceInfo(get, never) : Null<NSDictionary<NSString, NSObject>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_serviceInfo():Null<NSDictionary<NSString, NSObject>>;
+	@:hxmc.available(macos >= 11.0)
 	var delegate(get, set) : Null<RPBroadcastControllerDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_delegate():Null<RPBroadcastControllerDelegate>;
+	@:hxmc.available(macos >= 11.0)
 	function set_delegate(v:Null<RPBroadcastControllerDelegate>):Null<RPBroadcastControllerDelegate>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var broadcastExtensionBundleID(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_broadcastExtensionBundleID():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function startBroadcastWithHandler(handler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function pauseBroadcast():Void;
+	@:hxmc.available(macos >= 11.0)
 	function resumeBroadcast():Void;
+	@:hxmc.available(macos >= 11.0)
 	function finishBroadcastWithHandler(handler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():RPBroadcastController;
 }

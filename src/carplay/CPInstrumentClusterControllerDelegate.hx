@@ -4,17 +4,23 @@ package carplay;
 import objc.NSObjectProtocol;
 import uikit.UIWindow;
 
-@:hxmc.objc("CPInstrumentClusterControllerDelegate") extern interface CPInstrumentClusterControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("CPInstrumentClusterControllerDelegate") @:hxmc.available(ios >= 15.4, maccatalyst >= 15.4) extern interface CPInstrumentClusterControllerDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function instrumentClusterControllerDidConnectWindow(instrumentClusterWindow:UIWindow):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function instrumentClusterControllerDidDisconnectWindow(instrumentClusterWindow:UIWindow):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function instrumentClusterControllerDidZoomIn(instrumentClusterController:CPInstrumentClusterController):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function instrumentClusterControllerDidZoomOut(instrumentClusterController:CPInstrumentClusterController):Void;
 	@:selector("instrumentClusterController:didChangeCompassSetting:")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function instrumentClusterControllerDidChangeCompassSetting(instrumentClusterController:CPInstrumentClusterController, didChangeCompassSetting:CPInstrumentClusterSetting):Void;
 	@:selector("instrumentClusterController:didChangeSpeedLimitSetting:")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function instrumentClusterControllerDidChangeSpeedLimitSetting(instrumentClusterController:CPInstrumentClusterController, didChangeSpeedLimitSetting:CPInstrumentClusterSetting):Void;
 }

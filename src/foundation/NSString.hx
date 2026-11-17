@@ -167,6 +167,7 @@ import uniformtypeidentifiers.UTType;
 	function initWithString(aString:NSStringArg):NSString;
 	overload function initWithFormat(format:NSStringArg, arguments:Ptr):NSString;
 	overload function initWithFormat(format:NSStringArg, locale:Null<Id>, arguments:Ptr):NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithValidatedFormat(format:NSStringArg, validFormatSpecifiers:NSStringArg, arguments:Ptr, error:Ptr):Null<NSString>;
 	overload function initWithValidatedFormat(format:NSStringArg, validFormatSpecifiers:NSStringArg, locale:Null<Id>, arguments:Ptr, error:Ptr):Null<NSString>;
 	function initWithData(data:NSData, encoding:I64):Null<NSString>;
@@ -242,8 +243,10 @@ import uniformtypeidentifiers.UTType;
 	function linguisticTagsInRange(range:NSRange, scheme:NSStringArg, options:NSLinguisticTaggerOptions, orthography:Null<NSOrthography>, tokenRanges:Ptr):NSArray<NSString>;
 	function enumerateLinguisticTagsInRange(range:NSRange, scheme:NSStringArg, options:NSLinguisticTaggerOptions, orthography:Null<NSOrthography>, usingBlock:(Null<NSString>, NSRange, NSRange, Ptr) -> Void):Void;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 11.0)
 	overload function stringByAppendingPathComponent(partialName:NSStringArg, conformingToType:UTType):NSString;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 11.0)
 	function stringByAppendingPathExtensionForType(contentType:UTType):NSString;
 	@:hxmc.framework("UIKit")
 	function sizeWithAttributes(attrs:Null<NSDictionary<NSString, Id>>):CGSize;

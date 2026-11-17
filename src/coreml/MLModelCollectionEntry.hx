@@ -5,14 +5,20 @@ import foundation.NSStringArg;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("CoreML") @:hxmc.objc @:deprecated extern class MLModelCollectionEntry extends NSObject {
+@:hxmc.framework("CoreML") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 11.0) extern class MLModelCollectionEntry extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MLModelCollectionEntry;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var modelIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_modelIdentifier():NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var modelURL(get, never) : NSURL;
+	@:hxmc.available(macos >= 11.0)
 	function get_modelURL():NSURL;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	function isEqualToModelCollectionEntry(entry:MLModelCollectionEntry):Bool;
 }

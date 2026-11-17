@@ -12,7 +12,9 @@ import objc.NSObject;
 	function get_sample():SampleType;
 	var timestamp(get, never) : Float;
 	function get_timestamp():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var sourceDevice(get, never) : Null<SRSourceDevice>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_sourceDevice():Null<SRSourceDevice>;
 	function copyWithZone(zone:Ptr):Id;
 }

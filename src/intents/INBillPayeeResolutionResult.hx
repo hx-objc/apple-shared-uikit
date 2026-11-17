@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INBillPayeeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INBillPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INBillPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INBillPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INBillPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INBillPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INBillPayeeResolutionResult;
 	static function successWithResolvedBillPayee(resolvedBillPayee:INBillPayee):INBillPayeeResolutionResult;
 	static function disambiguationWithBillPayeesToDisambiguate(billPayeesToDisambiguate:NSArray<INBillPayee>):INBillPayeeResolutionResult;

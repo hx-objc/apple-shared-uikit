@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForNotebookItemsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForNotebookItemsIntentResponse;
 	var code(get, never) : INSearchForNotebookItemsIntentResponseCode;
 	function get_code():INSearchForNotebookItemsIntentResponseCode;

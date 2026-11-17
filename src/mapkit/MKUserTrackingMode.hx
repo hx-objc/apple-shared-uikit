@@ -4,8 +4,11 @@ package mapkit;
 import hxmc.I64;
 
 enum abstract MKUserTrackingMode(I64) to I64 {
+	@:hxmc.available(macos >= 11.0)
 	var None = 0;
+	@:hxmc.available(macos >= 11.0)
 	var Follow = 1;
+	@:hxmc.available(macos >= 11.0)
 	var FollowWithHeading = 2;
 	inline function new(v:I64) this = v;
 }

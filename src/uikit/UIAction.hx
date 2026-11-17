@@ -24,17 +24,26 @@ import hxmc.objc.Id;
 	function set_state(v:UIMenuElementState):UIMenuElementState;
 	var sender(get, never) : Null<Id>;
 	function get_sender():Null<Id>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var selectedImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_selectedImage():Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_selectedImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var repeatBehavior(get, set) : UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_repeatBehavior():UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_repeatBehavior(v:UIMenuElementRepeatBehavior):UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var presentationSourceItem(get, never) : Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_presentationSourceItem():Null<UIPopoverPresentationControllerSourceItem>;
 	static function actionWithHandler(handler:UIAction -> Void):UIAction;
 	static function actionWithTitle(title:NSStringArg, image:Null<UIImage>, identifier:Null<NSStringArg>, handler:UIAction -> Void):UIAction;
 	static function captureTextFromCameraActionForResponder(responder:UIResponder, identifier:Null<NSStringArg>):UIAction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performWithSender(sender:Null<Id>, target:Null<Id>):Void;
 	override function initWithCoder(coder:NSCoder):Null<UIAction>;
 }

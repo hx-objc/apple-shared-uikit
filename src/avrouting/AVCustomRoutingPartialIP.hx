@@ -4,11 +4,17 @@ package avrouting;
 import foundation.NSData;
 import objc.NSObject;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVCustomRoutingPartialIP extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 16.1, maccatalyst >= 16.1) extern class AVCustomRoutingPartialIP extends NSObject {
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():AVCustomRoutingPartialIP;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var address(get, never) : NSData;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_address():NSData;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var mask(get, never) : NSData;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_mask():NSData;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function initWithAddress(address:NSData, mask:NSData):AVCustomRoutingPartialIP;
 }

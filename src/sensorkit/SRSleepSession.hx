@@ -10,13 +10,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRSleepSession extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SRSleepSession extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SRSleepSession;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var startDate(get, never) : NSDate;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_startDate():NSDate;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var duration(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_duration():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_identifier():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

@@ -4,8 +4,11 @@ package avkit;
 import hxmc.I64;
 
 enum abstract AVPlaybackUserInterfacePlaybackState(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Normal = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Scanning = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Scrubbing = 2;
 	inline function new(v:I64) this = v;
 }

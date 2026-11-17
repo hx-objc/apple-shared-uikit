@@ -4,7 +4,9 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueClosedCaptions(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Disabled = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Enabled = 1;
 	inline function new(v:I64) this = v;
 }

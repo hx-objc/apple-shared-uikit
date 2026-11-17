@@ -3,8 +3,11 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextItemMenuConfiguration extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITextItemMenuConfiguration extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITextItemMenuConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithMenu(menu:UIMenu):UITextItemMenuConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithPreview(preview:Null<UITextItemMenuPreview>, menu:UIMenu):UITextItemMenuConfiguration;
 }

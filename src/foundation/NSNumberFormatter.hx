@@ -10,8 +10,11 @@ import hxmc.unsafe.Ptr;
 	var formattingContext(get, set) : NSFormattingContext;
 	function get_formattingContext():NSFormattingContext;
 	function set_formattingContext(v:NSFormattingContext):NSFormattingContext;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var minimumGroupingDigits(get, set) : I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_minimumGroupingDigits():I64;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_minimumGroupingDigits(v:I64):I64;
 	var numberStyle(get, set) : NSNumberFormatterStyle;
 	function get_numberStyle():NSNumberFormatterStyle;

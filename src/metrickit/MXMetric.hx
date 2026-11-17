@@ -13,6 +13,7 @@ import objc.NSObject;
 	static function get_supportsSecureCoding():Bool;
 	function JSONRepresentation():NSData;
 	function DictionaryRepresentation():NSDictionary;
+	@:hxmc.available(macos >= 11.0)
 	function dictionaryRepresentation():NSDictionary;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MXMetric>;

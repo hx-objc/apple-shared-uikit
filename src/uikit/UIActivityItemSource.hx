@@ -25,6 +25,7 @@ import objc.NSObjectProtocol;
 	function activityViewControllerThumbnailImageForActivityTypeSuggestedSize(activityViewController:UIActivityViewController, thumbnailImageForActivityType:Null<NSStringArg>, suggestedSize:CGSize):Null<UIImage>;
 	@:optional
 	function activityViewControllerLinkMetadata(activityViewController:UIActivityViewController):Null<LPLinkMetadata>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function activityViewControllerShareRecipients(activityViewController:UIActivityViewController):NSArray<INPerson>;
 }

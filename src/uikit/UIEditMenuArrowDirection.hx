@@ -4,10 +4,15 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIEditMenuArrowDirection(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Up = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Down = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Left = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Right = 4;
 	inline function new(v:I64) this = v;
 }

@@ -6,11 +6,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISplitArrangementDimension extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UISplitArrangementDimension extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function automaticDimension():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function intrinsicDimension():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function fractionalDimension(fraction:Float):UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function absoluteDimension(absoluteValue:Float):UISplitArrangementDimension;
 	function copyWithZone(zone:Ptr):Id;
 }

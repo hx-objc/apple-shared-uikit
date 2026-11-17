@@ -3,9 +3,13 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITraitDisplayScale extends NSObject implements UICGFloatTraitDefinition {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITraitDisplayScale extends NSObject implements UICGFloatTraitDefinition {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITraitDisplayScale;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultValue(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UITraitDisplayScale;
 }

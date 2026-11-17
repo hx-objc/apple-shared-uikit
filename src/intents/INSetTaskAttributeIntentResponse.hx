@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetTaskAttributeIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetTaskAttributeIntentResponse;
 	var code(get, never) : INSetTaskAttributeIntentResponseCode;
 	function get_code():INSetTaskAttributeIntentResponseCode;

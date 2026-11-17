@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIMenuElementSize(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Small = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Medium = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Large = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Automatic = -1;
 	inline function new(v:I64) this = v;
 }

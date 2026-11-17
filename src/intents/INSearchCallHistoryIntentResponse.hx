@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchCallHistoryIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchCallHistoryIntentResponse;
 	var code(get, never) : INSearchCallHistoryIntentResponseCode;
 	function get_code():INSearchCallHistoryIntentResponseCode;

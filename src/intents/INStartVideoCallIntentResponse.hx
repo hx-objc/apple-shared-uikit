@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartVideoCallIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartVideoCallIntentResponse;
 	var code(get, never) : INStartVideoCallIntentResponseCode;
 	function get_code():INStartVideoCallIntentResponseCode;

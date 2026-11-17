@@ -5,7 +5,9 @@ import foundation.NSString;
 import hxmc.unsafe.Float32;
 
 @:hxmc.c @:hxmc.framework("AVFAudio") extern class AVFAudio {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVAudioApplicationInputMuteStateChangeNotification : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVAudioApplicationMuteStateKey : NSString;
 	public static final AVAudioBitRateStrategy_Constant : NSString;
 	public static final AVAudioBitRateStrategy_LongTermAverage : NSString;
@@ -13,28 +15,51 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioBitRateStrategy_VariableConstrained : NSString;
 	public static final AVAudioEngineConfigurationChangeNotification : NSString;
 	public static final AVAudioFileTypeKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyAlbum : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyApproximateDurationInSeconds : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyArtist : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyChannelLayout : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyComments : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyComposer : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyCopyright : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyEncodingApplication : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyGenre : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyISRC : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyKeySignature : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyLyricist : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyNominalBitRate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyRecordedDate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeySourceBitDepth : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeySourceEncoder : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeySubTitle : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyTempo : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyTimeSignature : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyTitle : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyTrackNumber : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVAudioSequencerInfoDictionaryKeyYear : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAudioSessionAvailableInputsChangeNotification : NSString;
 	public static final AVAudioSessionCategoryAmbient : NSString;
 	@:deprecated
@@ -44,8 +69,11 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionCategoryPlayback : NSString;
 	public static final AVAudioSessionCategoryRecord : NSString;
 	public static final AVAudioSessionCategorySoloAmbient : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionDeactivationContextKey : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionDidBecomeActiveNotification : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionDidBecomeInactiveNotification : NSString;
 	public static final AVAudioSessionInterruptionNotification : NSString;
 	public static final AVAudioSessionInterruptionOptionKey : NSString;
@@ -57,19 +85,24 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionLocationUpper : NSString;
 	public static final AVAudioSessionMediaServicesWereLostNotification : NSString;
 	public static final AVAudioSessionMediaServicesWereResetNotification : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final AVAudioSessionMicrophoneInjectionCapabilitiesChangeNotification : NSString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	public static final AVAudioSessionMicrophoneInjectionIsAvailableKey : NSString;
 	public static final AVAudioSessionModeDefault : NSString;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	public static final AVAudioSessionModeDualRoute : NSString;
 	public static final AVAudioSessionModeGameChat : NSString;
 	public static final AVAudioSessionModeMeasurement : NSString;
 	public static final AVAudioSessionModeMoviePlayback : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAudioSessionModeShortFormVideo : NSString;
 	public static final AVAudioSessionModeSpokenAudio : NSString;
 	public static final AVAudioSessionModeVideoChat : NSString;
 	public static final AVAudioSessionModeVideoRecording : NSString;
 	public static final AVAudioSessionModeVoiceChat : NSString;
 	public static final AVAudioSessionModeVoicePrompt : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAudioSessionMuteStateKey : NSString;
 	public static final AVAudioSessionOrientationBack : NSString;
 	public static final AVAudioSessionOrientationBottom : NSString;
@@ -77,6 +110,7 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionOrientationLeft : NSString;
 	public static final AVAudioSessionOrientationRight : NSString;
 	public static final AVAudioSessionOrientationTop : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAudioSessionOutputMuteStateChangeNotification : NSString;
 	public static final AVAudioSessionPolarPatternCardioid : NSString;
 	public static final AVAudioSessionPolarPatternOmnidirectional : NSString;
@@ -91,6 +125,7 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionPortBuiltInReceiver : NSString;
 	public static final AVAudioSessionPortBuiltInSpeaker : NSString;
 	public static final AVAudioSessionPortCarAudio : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVAudioSessionPortContinuityMicrophone : NSString;
 	public static final AVAudioSessionPortDisplayPort : NSString;
 	public static final AVAudioSessionPortFireWire : NSString;
@@ -99,15 +134,21 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionPortHeadsetMic : NSString;
 	public static final AVAudioSessionPortLineIn : NSString;
 	public static final AVAudioSessionPortLineOut : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionPortMediaDeviceExtension : NSString;
 	public static final AVAudioSessionPortPCI : NSString;
 	public static final AVAudioSessionPortThunderbolt : NSString;
 	public static final AVAudioSessionPortUSBAudio : NSString;
 	public static final AVAudioSessionPortVirtual : NSString;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	public static final AVAudioSessionRenderingCapabilitiesChangeNotification : NSString;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	public static final AVAudioSessionRenderingModeChangeNotification : NSString;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	public static final AVAudioSessionRenderingModeNewRenderingModeKey : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionResumptionContextKey : NSString;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	public static final AVAudioSessionResumptionRecommendationNotification : NSString;
 	public static final AVAudioSessionRouteChangeNotification : NSString;
 	public static final AVAudioSessionRouteChangePreviousRouteKey : NSString;
@@ -116,6 +157,7 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioSessionSilenceSecondaryAudioHintTypeKey : NSString;
 	public static final AVAudioSessionSpatialAudioEnabledKey : NSString;
 	public static final AVAudioSessionSpatialPlaybackCapabilitiesChangedNotification : NSString;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVAudioSessionUserIntentToUnmuteOutputNotification : NSString;
 	public static final AVAudioUnitComponentManagerRegistrationsChangedNotification : NSString;
 	public static final AVAudioUnitComponentTagsDidChangeNotification : NSString;
@@ -131,6 +173,7 @@ import hxmc.unsafe.Float32;
 	public static final AVAudioUnitTypeOutput : NSString;
 	public static final AVAudioUnitTypePanner : NSString;
 	public static final AVChannelLayoutKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVEncoderASPFrequencyKey : NSString;
 	public static final AVEncoderAudioQualityForVBRKey : NSString;
 	public static final AVEncoderAudioQualityKey : NSString;
@@ -138,8 +181,11 @@ import hxmc.unsafe.Float32;
 	public static final AVEncoderBitRateKey : NSString;
 	public static final AVEncoderBitRatePerChannelKey : NSString;
 	public static final AVEncoderBitRateStrategyKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVEncoderContentSourceKey : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final AVEncoderDynamicRangeControlConfigurationKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final AVExtendedNoteOnEventDefaultInstrument : Int;
 	public static final AVFormatIDKey : NSString;
 	public static final AVLinearPCMBitDepthKey : NSString;
@@ -153,6 +199,7 @@ import hxmc.unsafe.Float32;
 	public static final AVSampleRateConverterAlgorithm_Normal : NSString;
 	public static final AVSampleRateConverterAudioQualityKey : NSString;
 	public static final AVSampleRateKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final AVSpeechSynthesisAvailableVoicesDidChangeNotification : NSString;
 	public static final AVSpeechSynthesisIPANotationAttribute : NSString;
 	public static final AVSpeechSynthesisVoiceIdentifierAlex : NSString;

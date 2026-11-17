@@ -8,6 +8,7 @@ import foundation.NSUserActivity;
 import hxmc.I64;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetAvailableRestaurantReservationBookingDefaultsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetAvailableRestaurantReservationBookingDefaultsIntentResponse;
 	var defaultPartySize(get, never) : I64;
 	function get_defaultPartySize():I64;
@@ -25,6 +26,7 @@ import hxmc.I64;
 	var code(get, never) : INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCode;
 	function get_code():INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCode;
 	function initWithDefaultPartySize(defaultPartySize:I64, defaultBookingDate:NSDate, code:INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCode, userActivity:Null<NSUserActivity>):INGetAvailableRestaurantReservationBookingDefaultsIntentResponse;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetAvailableRestaurantReservationBookingDefaultsIntentResponse;
 	override function initWithCoder(coder:NSCoder):Null<INGetAvailableRestaurantReservationBookingDefaultsIntentResponse>;
 }

@@ -7,18 +7,29 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIViewReservedRegion extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIViewReservedRegion extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIViewReservedRegion;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var identifier(get, never) : UIViewReservedRegionIdentifier;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_identifier():UIViewReservedRegionIdentifier;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var kind(get, never) : UIViewReservedRegionKind;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_kind():UIViewReservedRegionKind;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var frame(get, never) : CGRect;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_frame():CGRect;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var margins(get, never) : UIEdgeInsets;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_margins():UIEdgeInsets;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var active(get, never) : Bool;
 	@:selector("isActive")
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_active():Bool;
 	function copyWithZone(zone:Ptr):Id;
 }

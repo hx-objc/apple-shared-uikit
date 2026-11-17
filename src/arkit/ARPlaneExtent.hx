@@ -6,17 +6,25 @@ import foundation.NSSecureCoding;
 import hxmc.unsafe.Float32;
 import objc.NSObject;
 
-@:hxmc.framework("ARKit") @:hxmc.objc extern class ARPlaneExtent extends NSObject implements NSSecureCoding {
+@:hxmc.framework("ARKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class ARPlaneExtent extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():ARPlaneExtent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var rotationOnYAxis(get, never) : Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_rotationOnYAxis():Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var width(get, never) : Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_width():Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var height(get, never) : Float32;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_height():Float32;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<ARPlaneExtent>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():ARPlaneExtent;
 }

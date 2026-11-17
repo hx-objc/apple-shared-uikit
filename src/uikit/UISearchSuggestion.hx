@@ -6,20 +6,31 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UISearchSuggestion") extern interface UISearchSuggestion extends NSObjectProtocol {
+@:hxmc.objc("UISearchSuggestion") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UISearchSuggestion extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var localizedSuggestion(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_localizedSuggestion():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var localizedDescription(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_localizedDescription():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var iconImage(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_iconImage():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var localizedAttributedSuggestion(get, never) : Null<NSAttributedString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_localizedAttributedSuggestion():Null<NSAttributedString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var representedObject(get, set) : Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_representedObject():Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_representedObject(v:Null<Id>):Null<Id>;
 }

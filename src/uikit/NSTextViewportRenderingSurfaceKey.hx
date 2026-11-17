@@ -3,6 +3,6 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextViewportRenderingSurfaceKey") extern interface NSTextViewportRenderingSurfaceKey extends NSObjectProtocol {
+@:hxmc.objc("NSTextViewportRenderingSurfaceKey") @:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0) extern interface NSTextViewportRenderingSurfaceKey extends NSObjectProtocol {
 
 }

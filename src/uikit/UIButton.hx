@@ -46,8 +46,11 @@ import hxmc.objc.Selector;
 	var menu(get, set) : Null<UIMenu>;
 	function get_menu():Null<UIMenu>;
 	function set_menu(v:Null<UIMenu>):Null<UIMenu>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredMenuElementOrder(get, set) : UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredMenuElementOrder():UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredMenuElementOrder(v:UIContextMenuConfigurationElementOrder):UIContextMenuConfigurationElementOrder;
 	var changesSelectionAsPrimaryAction(get, set) : Bool;
 	function get_changesSelectionAsPrimaryAction():Bool;

@@ -7,25 +7,44 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabSidebarItem extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITabSidebarItem extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITabSidebarItem;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tab(get, never) : Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tab():Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var action(get, never) : Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_action():Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var configurationState(get, never) : UICellConfigurationState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_configurationState():UICellConfigurationState;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var contentConfiguration(get, set) : UIContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_contentConfiguration():UIContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_contentConfiguration(v:UIContentConfiguration):UIContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var backgroundConfiguration(get, set) : UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_backgroundConfiguration():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_backgroundConfiguration(v:UIBackgroundConfiguration):UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var accessories(get, set) : NSArray<UICellAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_accessories():NSArray<UICellAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_accessories(v:NSArray<UICellAccessory>):NSArray<UICellAccessory>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function defaultContentConfiguration():UIListContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function defaultBackgroundConfiguration():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function itemFromRequest(request:UITabSidebarItemRequest):UITabSidebarItem;
 	function copyWithZone(zone:Ptr):Id;
 }

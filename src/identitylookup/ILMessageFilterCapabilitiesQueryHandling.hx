@@ -3,6 +3,7 @@ package identitylookup;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("ILMessageFilterCapabilitiesQueryHandling") extern interface ILMessageFilterCapabilitiesQueryHandling extends NSObjectProtocol {
+@:hxmc.objc("ILMessageFilterCapabilitiesQueryHandling") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface ILMessageFilterCapabilitiesQueryHandling extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function handleCapabilitiesQueryRequest(capabilitiesQueryRequest:ILMessageFilterCapabilitiesQueryRequest, context:ILMessageFilterExtensionContext, completion:ILMessageFilterCapabilitiesQueryResponse -> Void):Void;
 }

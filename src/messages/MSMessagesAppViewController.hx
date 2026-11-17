@@ -16,9 +16,13 @@ import uikit.UIViewController;
 	function get_presentationStyle():MSMessagesAppPresentationStyle;
 	var presentationContext(get, never) : MSMessagesAppPresentationContext;
 	function get_presentationContext():MSMessagesAppPresentationContext;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var messageTintColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_messageTintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var messageCornerRadius(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_messageCornerRadius():Float;
 	function requestPresentationStyle(presentationStyle:MSMessagesAppPresentationStyle):Void;
 	function willBecomeActiveWithConversation(conversation:MSConversation):Void;
@@ -34,6 +38,7 @@ import uikit.UIViewController;
 	function willTransitionToPresentationStyle(presentationStyle:MSMessagesAppPresentationStyle):Void;
 	function didTransitionToPresentationStyle(presentationStyle:MSMessagesAppPresentationStyle):Void;
 	function contentSizeThatFits(size:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function invalidateMessageTintColor():Void;
 	override function init():MSMessagesAppViewController;
 	override function initWithCoder(coder:NSCoder):Null<MSMessagesAppViewController>;

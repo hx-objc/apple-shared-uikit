@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPlaybackQueueLocationResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPlaybackQueueLocationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INPlaybackQueueLocationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INPlaybackQueueLocationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INPlaybackQueueLocationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INPlaybackQueueLocationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INPlaybackQueueLocationResolutionResult;
 	static function successWithResolvedPlaybackQueueLocation(resolvedPlaybackQueueLocation:INPlaybackQueueLocation):INPlaybackQueueLocationResolutionResult;
 	static function confirmationRequiredWithPlaybackQueueLocationToConfirm(playbackQueueLocationToConfirm:INPlaybackQueueLocation):INPlaybackQueueLocationResolutionResult;

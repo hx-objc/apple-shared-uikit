@@ -62,6 +62,7 @@ import uikit.UIViewController;
 	@:deprecated
 	static overload function reportScores(scores:NSArray<GKScore>, withEligibleChallenges:NSArray<GKChallenge>, withCompletionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	static function reportLeaderboardScores(scores:NSArray<GKLeaderboardScore>, withEligibleChallenges:NSArray<GKChallenge>, withCompletionHandler:Null<Null<NSError> -> Void>):Void;
 	@:deprecated
 	function issueChallengeToPlayers(playerIDs:Null<NSArray<NSString>>, message:Null<NSStringArg>):Void;
@@ -69,6 +70,7 @@ import uikit.UIViewController;
 	function challengeComposeControllerWithMessage(message:Null<NSStringArg>, players:Null<NSArray<GKPlayer>>, completionHandler:Null<(UIViewController, Bool, Null<NSArray<NSString>>) -> Void>):UIViewController;
 	@:selector("challengeComposeControllerWithMessage:players:completion:")
 	@:deprecated
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function challengeComposeControllerWithMessagePlayersCompletion(message:Null<NSStringArg>, players:Null<NSArray<GKPlayer>>, completion:Null<(UIViewController, Bool, Null<NSArray<GKPlayer>>) -> Void>):UIViewController;
 	@:deprecated
 	function challengeComposeControllerWithPlayers(playerIDs:Null<NSArray<NSString>>, message:Null<NSStringArg>, completionHandler:Null<(UIViewController, Bool, Null<NSArray<NSString>>) -> Void>):Null<UIViewController>;

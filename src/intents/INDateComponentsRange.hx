@@ -10,19 +10,30 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INDateComponentsRange extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INDateComponentsRange extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDateComponentsRange;
+	@:hxmc.available(macos >= 11.0)
 	var startDateComponents(get, never) : Null<NSDateComponents>;
+	@:hxmc.available(macos >= 11.0)
 	function get_startDateComponents():Null<NSDateComponents>;
+	@:hxmc.available(macos >= 11.0)
 	var endDateComponents(get, never) : Null<NSDateComponents>;
+	@:hxmc.available(macos >= 11.0)
 	function get_endDateComponents():Null<NSDateComponents>;
+	@:hxmc.available(macos >= 11.0)
 	var recurrenceRule(get, never) : Null<INRecurrenceRule>;
+	@:hxmc.available(macos >= 11.0)
 	function get_recurrenceRule():Null<INRecurrenceRule>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithStartDateComponents(startDateComponents:Null<NSDateComponents>, endDateComponents:Null<NSDateComponents>):INDateComponentsRange;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithStartDateComponents(startDateComponents:Null<NSDateComponents>, endDateComponents:Null<NSDateComponents>, recurrenceRule:Null<INRecurrenceRule>):INDateComponentsRange;
+	@:hxmc.available(macos >= 11.0)
 	function initWithEKRecurrenceRule(recurrenceRule:EKRecurrenceRule):INDateComponentsRange;
+	@:hxmc.available(macos >= 11.0)
 	function EKRecurrenceRule():Null<EKRecurrenceRule>;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

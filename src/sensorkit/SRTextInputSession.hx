@@ -10,7 +10,9 @@ import objc.NSObject;
 	function get_duration():Float;
 	var sessionType(get, never) : SRTextInputSessionType;
 	function get_sessionType():SRTextInputSessionType;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var sessionIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_sessionIdentifier():NSStringArg;
 	override function init():SRTextInputSession;
 }

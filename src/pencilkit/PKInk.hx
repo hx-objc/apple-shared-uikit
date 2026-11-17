@@ -8,15 +8,24 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import uikit.UIColor;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKInk extends NSObject implements NSCopying {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKInk extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKInk;
+	@:hxmc.available(macos >= 11.0)
 	var inkType(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_inkType():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var color(get, never) : UIColor;
+	@:hxmc.available(macos >= 11.0)
 	function get_color():UIColor;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var requiredContentVersion(get, never) : PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_requiredContentVersion():PKContentVersion;
+	@:hxmc.available(macos >= 11.0)
 	function initWithInkType(type:NSStringArg, color:UIColor):PKInk;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKInk;
 }

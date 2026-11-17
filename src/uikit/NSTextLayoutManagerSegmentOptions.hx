@@ -4,11 +4,17 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextLayoutManagerSegmentOptions(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var None = 0;
+	@:hxmc.available(macos >= 12.0)
 	var RangeNotRequired = 1;
+	@:hxmc.available(macos >= 12.0)
 	var MiddleFragmentsExcluded = 2;
+	@:hxmc.available(macos >= 12.0)
 	var HeadSegmentExtended = 4;
+	@:hxmc.available(macos >= 12.0)
 	var TailSegmentExtended = 8;
+	@:hxmc.available(macos >= 12.0)
 	var UpstreamAffinity = 16;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

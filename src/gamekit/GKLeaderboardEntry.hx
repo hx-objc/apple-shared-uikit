@@ -9,23 +9,37 @@ import hxmc.I64;
 import objc.NSObject;
 import uikit.UIViewController;
 
-@:hxmc.framework("GameKit") @:hxmc.objc extern class GKLeaderboardEntry extends NSObject {
+@:hxmc.framework("GameKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class GKLeaderboardEntry extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():GKLeaderboardEntry;
+	@:hxmc.available(macos >= 11.0)
 	var player(get, never) : GKPlayer;
+	@:hxmc.available(macos >= 11.0)
 	function get_player():GKPlayer;
+	@:hxmc.available(macos >= 11.0)
 	var rank(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_rank():I64;
+	@:hxmc.available(macos >= 11.0)
 	var score(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_score():I64;
+	@:hxmc.available(macos >= 11.0)
 	var formattedScore(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_formattedScore():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var context(get, never) : I64;
+	@:hxmc.available(macos >= 11.0)
 	function get_context():I64;
+	@:hxmc.available(macos >= 11.0)
 	var date(get, never) : NSDate;
+	@:hxmc.available(macos >= 11.0)
 	function get_date():NSDate;
 	@:deprecated
 	function challengeComposeControllerWithMessage(message:Null<NSStringArg>, players:Null<NSArray<GKPlayer>>, completionHandler:Null<(UIViewController, Bool, Null<NSArray<NSString>>) -> Void>):UIViewController;
 	@:selector("challengeComposeControllerWithMessage:players:completion:")
 	@:deprecated
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function challengeComposeControllerWithMessagePlayersCompletion(message:Null<NSStringArg>, players:Null<NSArray<GKPlayer>>, completion:Null<(UIViewController, Bool, Null<NSArray<GKPlayer>>) -> Void>):UIViewController;
 }

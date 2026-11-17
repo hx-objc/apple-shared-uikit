@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INDeleteTasksIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDeleteTasksIntentResponse;
 	var code(get, never) : INDeleteTasksIntentResponseCode;
 	function get_code():INDeleteTasksIntentResponseCode;

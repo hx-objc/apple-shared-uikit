@@ -24,7 +24,9 @@ import objc.NSObject;
 	function get_totalUnlocks():I64;
 	var totalUnlockDuration(get, never) : Float;
 	function get_totalUnlockDuration():Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var version(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_version():NSStringArg;
 	override function init():SRDeviceUsageReport;
 }

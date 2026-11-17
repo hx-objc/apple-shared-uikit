@@ -3,10 +3,15 @@ package apptrackingtransparency;
 
 import objc.NSObject;
 
-@:hxmc.framework("AppTrackingTransparency") @:hxmc.objc extern class ATTrackingManager extends NSObject {
+@:hxmc.framework("AppTrackingTransparency") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class ATTrackingManager extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():ATTrackingManager;
+	@:hxmc.available(macos >= 11.0)
 	static var trackingAuthorizationStatus(get, never) : ATTrackingManagerAuthorizationStatus;
+	@:hxmc.available(macos >= 11.0)
 	static function get_trackingAuthorizationStatus():ATTrackingManagerAuthorizationStatus;
+	@:hxmc.available(macos >= 11.0)
 	static function requestTrackingAuthorizationWithCompletionHandler(completion:ATTrackingManagerAuthorizationStatus -> Void):Void;
+	@:hxmc.available(macos >= 11.0, ios >= 27.2, maccatalyst >= 27.2)
 	static function requestTrackingAuthorizationPreferringExpandedInterface(preferExpandedInterface:Bool, additionalInformationAction:Null<() -> Void>, completionHandler:ATTrackingManagerAuthorizationStatus -> Void):Void;
 }

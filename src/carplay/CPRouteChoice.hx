@@ -21,11 +21,14 @@ import objc.NSObject;
 	var userInfo(get, set) : Null<Id>;
 	function get_userInfo():Null<Id>;
 	function set_userInfo(v:Null<Id>):Null<Id>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var travelEstimates(get, never) : Null<CPTravelEstimates>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_travelEstimates():Null<CPTravelEstimates>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	overload function initWithSummaryVariants(summaryVariants:NSArray<NSString>, additionalInformationVariants:NSArray<NSString>, selectionSummaryVariants:NSArray<NSString>):CPRouteChoice;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	overload function initWithSummaryVariants(summaryVariants:NSArray<NSString>, additionalInformationVariants:NSArray<NSString>, selectionSummaryVariants:NSArray<NSString>, travelEstimates:Null<CPTravelEstimates>):CPRouteChoice;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

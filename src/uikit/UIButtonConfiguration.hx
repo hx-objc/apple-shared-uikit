@@ -41,8 +41,11 @@ import objc.NSObject;
 	var preferredSymbolConfigurationForImage(get, set) : Null<UIImageSymbolConfiguration>;
 	function get_preferredSymbolConfigurationForImage():Null<UIImageSymbolConfiguration>;
 	function set_preferredSymbolConfigurationForImage(v:Null<UIImageSymbolConfiguration>):Null<UIImageSymbolConfiguration>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var symbolContentTransition(get, set) : Null<UISymbolContentTransition>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_symbolContentTransition():Null<UISymbolContentTransition>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_symbolContentTransition(v:Null<UISymbolContentTransition>):Null<UISymbolContentTransition>;
 	var showsActivityIndicator(get, set) : Bool;
 	function get_showsActivityIndicator():Bool;
@@ -74,11 +77,17 @@ import objc.NSObject;
 	var subtitleLineBreakMode(get, set) : NSLineBreakMode;
 	function get_subtitleLineBreakMode():NSLineBreakMode;
 	function set_subtitleLineBreakMode(v:NSLineBreakMode):NSLineBreakMode;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var indicator(get, set) : UIButtonConfigurationIndicator;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_indicator():UIButtonConfigurationIndicator;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_indicator(v:UIButtonConfigurationIndicator):UIButtonConfigurationIndicator;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var indicatorColorTransformer(get, set) : Null<UIColor -> UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_indicatorColorTransformer():Null<UIColor -> UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_indicatorColorTransformer(v:Null<UIColor -> UIColor>):Null<UIColor -> UIColor>;
 	var contentInsets(get, set) : NSDirectionalEdgeInsets;
 	function get_contentInsets():NSDirectionalEdgeInsets;
@@ -108,9 +117,13 @@ import objc.NSObject;
 	static function borderedButtonConfiguration():UIButtonConfiguration;
 	static function borderedTintedButtonConfiguration():UIButtonConfiguration;
 	static function borderedProminentButtonConfiguration():UIButtonConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function glassButtonConfiguration():UIButtonConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function prominentGlassButtonConfiguration():UIButtonConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function clearGlassButtonConfiguration():UIButtonConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function prominentClearGlassButtonConfiguration():UIButtonConfiguration;
 	function updatedConfigurationForButton(button:UIButton):UIButtonConfiguration;
 	function setDefaultContentInsets():Void;

@@ -31,9 +31,11 @@ import hxmc.objc.Selector;
 	@:optional
 	function collectionViewDidDeselectItemAtIndexPath(collectionView:UICollectionView, didDeselectItemAtIndexPath:NSIndexPath):Void;
 	@:selector("collectionView:canPerformPrimaryActionForItemAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function collectionViewCanPerformPrimaryActionForItemAtIndexPath(collectionView:UICollectionView, canPerformPrimaryActionForItemAtIndexPath:NSIndexPath):Bool;
 	@:selector("collectionView:performPrimaryActionForItemAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function collectionViewPerformPrimaryActionForItemAtIndexPath(collectionView:UICollectionView, performPrimaryActionForItemAtIndexPath:NSIndexPath):Void;
 	@:selector("collectionView:willDisplayCell:forItemAtIndexPath:")
@@ -102,12 +104,15 @@ import hxmc.objc.Selector;
 	@:optional
 	function collectionViewDidEndMultipleSelectionInteraction(collectionView:UICollectionView):Void;
 	@:selector("collectionView:contextMenuConfigurationForItemsAtIndexPaths:point:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function collectionViewContextMenuConfigurationForItemsAtIndexPathsPoint(collectionView:UICollectionView, contextMenuConfigurationForItemsAtIndexPaths:NSArray<NSIndexPath>, point:CGPoint):Null<UIContextMenuConfiguration>;
 	@:selector("collectionView:contextMenuConfiguration:highlightPreviewForItemAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function collectionViewContextMenuConfigurationHighlightPreviewForItemAtIndexPath(collectionView:UICollectionView, contextMenuConfiguration:UIContextMenuConfiguration, highlightPreviewForItemAtIndexPath:NSIndexPath):Null<UITargetedPreview>;
 	@:selector("collectionView:contextMenuConfiguration:dismissalPreviewForItemAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function collectionViewContextMenuConfigurationDismissalPreviewForItemAtIndexPath(collectionView:UICollectionView, contextMenuConfiguration:UIContextMenuConfiguration, dismissalPreviewForItemAtIndexPath:NSIndexPath):Null<UITargetedPreview>;
 	@:selector("collectionView:willPerformPreviewActionForMenuWithConfiguration:animator:")

@@ -4,7 +4,9 @@ package homekit;
 import foundation.NSData;
 import objc.NSObject;
 
-@:hxmc.framework("HomeKit") @:hxmc.objc extern class HMAccessoryOwnershipToken extends NSObject {
+@:hxmc.framework("HomeKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, maccatalyst >= 27.0) extern class HMAccessoryOwnershipToken extends NSObject {
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	static function alloc():HMAccessoryOwnershipToken;
+	@:hxmc.available(macos >= 27.0, maccatalyst >= 27.0)
 	function initWithData(data:NSData):Null<HMAccessoryOwnershipToken>;
 }

@@ -3,10 +3,15 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPencilInteractionTap extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.5, maccatalyst >= 17.5) extern class UIPencilInteractionTap extends NSObject {
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function alloc():UIPencilInteractionTap;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var timestamp(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_timestamp():Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var hoverPose(get, never) : Null<UIPencilHoverPose>;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_hoverPose():Null<UIPencilHoverPose>;
 }

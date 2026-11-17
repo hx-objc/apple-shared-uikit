@@ -7,6 +7,7 @@ import foundation.NSPersonNameComponents;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INRideDriver extends INPerson {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRideDriver;
 	var rating(get, never) : Null<NSStringArg>;
 	function get_rating():Null<NSStringArg>;
@@ -31,11 +32,16 @@ import foundation.NSStringArg;
 	override overload function initWithHandle(handle:NSStringArg, nameComponents:NSPersonNameComponents, contactIdentifier:Null<NSStringArg>):INRideDriver;
 	@:deprecated
 	override overload function initWithHandle(handle:NSStringArg, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>):INRideDriver;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>):INRideDriver;
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, aliases:Null<NSArray<INPersonHandle>>, suggestionType:INPersonSuggestionType):INRideDriver;
 	@:selector("initWithPersonHandle:nameComponents:displayName:image:contactIdentifier:customIdentifier:isContactSuggestion:suggestionType:")
+	@:hxmc.available(macos >= 12.0)
 	override function initWithPersonHandleNameComponentsDisplayNameImageContactIdentifierCustomIdentifierIsContactSuggestionSuggestionType(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isContactSuggestion:Bool, suggestionType:INPersonSuggestionType):INRideDriver;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool):INRideDriver;
+	@:hxmc.available(macos >= 12.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool, suggestionType:INPersonSuggestionType):INRideDriver;
+	@:hxmc.available(macos >= 11.0)
 	override overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, relationship:Null<NSStringArg>):INRideDriver;
 }

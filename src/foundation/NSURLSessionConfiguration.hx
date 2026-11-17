@@ -37,11 +37,17 @@ import security.Tls_protocol_version_t;
 	var allowsConstrainedNetworkAccess(get, set) : Bool;
 	function get_allowsConstrainedNetworkAccess():Bool;
 	function set_allowsConstrainedNetworkAccess(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var allowsUltraConstrainedNetworkAccess(get, set) : Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_allowsUltraConstrainedNetworkAccess():Bool;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function set_allowsUltraConstrainedNetworkAccess(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var requiresDNSSECValidation(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_requiresDNSSECValidation():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_requiresDNSSECValidation(v:Bool):Bool;
 	var waitsForConnectivity(get, set) : Bool;
 	function get_waitsForConnectivity():Bool;
@@ -53,8 +59,11 @@ import security.Tls_protocol_version_t;
 	var sharedContainerIdentifier(get, set) : Null<NSStringArg>;
 	function get_sharedContainerIdentifier():Null<NSStringArg>;
 	function set_sharedContainerIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var sessionSendsLaunchEvents(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_sessionSendsLaunchEvents():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_sessionSendsLaunchEvents(v:Bool):Bool;
 	var connectionProxyDictionary(get, set) : Null<NSDictionary>;
 	function get_connectionProxyDictionary():Null<NSDictionary>;
@@ -106,11 +115,17 @@ import security.Tls_protocol_version_t;
 	var multipathServiceType(get, set) : NSURLSessionMultipathServiceType;
 	function get_multipathServiceType():NSURLSessionMultipathServiceType;
 	function set_multipathServiceType(v:NSURLSessionMultipathServiceType):NSURLSessionMultipathServiceType;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var usesClassicLoadingMode(get, set) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_usesClassicLoadingMode():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_usesClassicLoadingMode(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var enablesEarlyData(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_enablesEarlyData():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_enablesEarlyData(v:Bool):Bool;
 	static function backgroundSessionConfigurationWithIdentifier(identifier:NSStringArg):NSURLSessionConfiguration;
 	@:deprecated

@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INCarSignalOptionsResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCarSignalOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INCarSignalOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INCarSignalOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INCarSignalOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INCarSignalOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INCarSignalOptionsResolutionResult;
 	static function successWithResolvedCarSignalOptions(resolvedCarSignalOptions:INCarSignalOptions):INCarSignalOptionsResolutionResult;
 	@:deprecated

@@ -4,13 +4,16 @@ package carplay;
 import uikit.UISceneDelegate;
 import uikit.UIUserInterfaceStyle;
 
-@:hxmc.objc("CPTemplateApplicationInstrumentClusterSceneDelegate") extern interface CPTemplateApplicationInstrumentClusterSceneDelegate extends UISceneDelegate {
+@:hxmc.objc("CPTemplateApplicationInstrumentClusterSceneDelegate") @:hxmc.available(ios >= 15.4, maccatalyst >= 15.4) extern interface CPTemplateApplicationInstrumentClusterSceneDelegate extends UISceneDelegate {
 	@:selector("templateApplicationInstrumentClusterScene:didConnectInstrumentClusterController:")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function templateApplicationInstrumentClusterSceneDidConnectInstrumentClusterController(templateApplicationInstrumentClusterScene:CPTemplateApplicationInstrumentClusterScene, didConnectInstrumentClusterController:CPInstrumentClusterController):Void;
 	@:selector("templateApplicationInstrumentClusterScene:didDisconnectInstrumentClusterController:")
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function templateApplicationInstrumentClusterSceneDidDisconnectInstrumentClusterController(templateApplicationInstrumentClusterScene:CPTemplateApplicationInstrumentClusterScene, didDisconnectInstrumentClusterController:CPInstrumentClusterController):Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	@:optional
 	function contentStyleDidChange(contentStyle:UIUserInterfaceStyle):Void;
 }

@@ -14,6 +14,7 @@ enum abstract UNAuthorizationOptions(I64) to I64 {
 	@:deprecated
 	var Announcement = 128;
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	var TimeSensitive = 256;
 	inline function new(v:I64) this = v;
 	var None = 0;

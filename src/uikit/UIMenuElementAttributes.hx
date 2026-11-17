@@ -7,6 +7,7 @@ enum abstract UIMenuElementAttributes(I64) to I64 {
 	var Disabled = 1;
 	var Destructive = 2;
 	var Hidden = 4;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var KeepsMenuPresented = 8;
 	inline function new(v:I64) this = v;
 	var None = 0;

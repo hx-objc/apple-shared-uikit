@@ -24,7 +24,9 @@ import uikit.UIInterfaceOrientation;
 	function get_timestamp():Float;
 	var capturedImage(get, never) : CVBuffer;
 	function get_capturedImage():CVBuffer;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var exifData(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_exifData():NSDictionary<NSString, Id>;
 	var cameraGrainTexture(get, never) : Null<MTLTexture>;
 	function get_cameraGrainTexture():Null<MTLTexture>;
@@ -56,13 +58,16 @@ import uikit.UIInterfaceOrientation;
 	function get_sceneDepth():Null<ARDepthData>;
 	var smoothedSceneDepth(get, never) : Null<ARDepthData>;
 	function get_smoothedSceneDepth():Null<ARDepthData>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var metadataObjects(get, never) : NSArray<AVMetadataObject>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_metadataObjects():NSArray<AVMetadataObject>;
 	@:deprecated
 	function hitTest(point:CGPoint, types:ARHitTestResultType):NSArray<ARHitTestResult>;
 	function raycastQueryFromPoint(point:CGPoint, allowingTarget:ARRaycastTarget, alignment:ARRaycastTargetAlignment):ARRaycastQuery;
 	@:deprecated
 	function displayTransformForOrientation(orientation:UIInterfaceOrientation, viewportSize:CGSize):CGAffineTransform;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function displayTransformForViewRotationAngle(viewRotationAngle:Float, viewportSize:CGSize):CGAffineTransform;
 	function copyWithZone(zone:Ptr):Id;
 }

@@ -28,21 +28,30 @@ import objc.NSObject;
 	function get_callerBundleIdentifier():NSStringArg;
 	var authorizationOptions(get, never) : NSDictionary;
 	function get_authorizationOptions():NSDictionary;
+	@:hxmc.available(macos >= 11.0)
 	var callerManaged(get, never) : Bool;
 	@:selector("isCallerManaged")
+	@:hxmc.available(macos >= 11.0)
 	function get_callerManaged():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var callerTeamIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_callerTeamIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var localizedCallerDisplayName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_localizedCallerDisplayName():NSStringArg;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4)
 	var userInterfaceEnabled(get, never) : Bool;
 	@:selector("isUserInterfaceEnabled")
+	@:hxmc.available(macos >= 12.3, ios >= 15.4)
 	function get_userInterfaceEnabled():Bool;
 	function doNotHandle():Void;
 	function cancel():Void;
 	function complete():Void;
 	function completeWithHTTPAuthorizationHeaders(httpAuthorizationHeaders:NSDictionary<NSString, NSString>):Void;
 	function completeWithHTTPResponse(httpResponse:NSHTTPURLResponse, httpBody:Null<NSData>):Void;
+	@:hxmc.available(macos >= 12)
 	function completeWithAuthorizationResult(authorizationResult:ASAuthorizationProviderExtensionAuthorizationResult):Void;
 	function completeWithError(error:NSError):Void;
 	function presentAuthorizationViewControllerWithCompletion(completion:(Bool, Null<NSError>) -> Void):Void;

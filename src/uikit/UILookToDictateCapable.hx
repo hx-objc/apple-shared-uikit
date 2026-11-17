@@ -4,8 +4,11 @@ package uikit;
 import objc.NSObjectProtocol;
 
 @:hxmc.objc("UILookToDictateCapable") extern interface UILookToDictateCapable extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var lookToDictateEnabled(get, set) : Bool;
 	@:selector("isLookToDictateEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_lookToDictateEnabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_lookToDictateEnabled(v:Bool):Bool;
 }

@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INDateSearchTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDateSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INDateSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INDateSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INDateSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INDateSearchTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INDateSearchTypeResolutionResult;
 	static function successWithResolvedDateSearchType(resolvedDateSearchType:INDateSearchType):INDateSearchTypeResolutionResult;
 	static function confirmationRequiredWithDateSearchTypeToConfirm(dateSearchTypeToConfirm:INDateSearchType):INDateSearchTypeResolutionResult;

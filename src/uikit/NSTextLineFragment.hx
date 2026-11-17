@@ -15,24 +15,40 @@ import hxmc.I64;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextLineFragment extends NSObject implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextLineFragment extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextLineFragment;
+	@:hxmc.available(macos >= 12.0)
 	var attributedString(get, never) : NSAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	function get_attributedString():NSAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	var characterRange(get, never) : NSRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_characterRange():NSRange;
+	@:hxmc.available(macos >= 12.0)
 	var typographicBounds(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_typographicBounds():CGRect;
+	@:hxmc.available(macos >= 12.0)
 	var glyphOrigin(get, never) : CGPoint;
+	@:hxmc.available(macos >= 12.0)
 	function get_glyphOrigin():CGPoint;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithAttributedString(attributedString:NSAttributedString, range:NSRange):NSTextLineFragment;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCoder(aDecoder:NSCoder):Null<NSTextLineFragment>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithString(string:NSStringArg, attributes:NSDictionary<NSString, Id>, range:NSRange):NSTextLineFragment;
+	@:hxmc.available(macos >= 12.0)
 	function drawAtPoint(point:CGPoint, inContext:CGContext):Void;
+	@:hxmc.available(macos >= 12.0)
 	function locationForCharacterAtIndex(index:I64):CGPoint;
+	@:hxmc.available(macos >= 12.0)
 	function characterIndexForPoint(point:CGPoint):I64;
+	@:hxmc.available(macos >= 12.0)
 	function fractionOfDistanceThroughGlyphForPoint(point:CGPoint):Float;
 	function encodeWithCoder(coder:NSCoder):Void;
 }

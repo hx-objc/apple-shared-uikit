@@ -5,11 +5,16 @@ import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("StoreKit") extern class StoreKit {
 	public static function SKTerminateForInvalidReceipt():Void;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	public static final SKANErrorDomain : NSString;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	public static final SKAdNetworkCoarseConversionValueHigh : NSString;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	public static final SKAdNetworkCoarseConversionValueLow : NSString;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	public static final SKAdNetworkCoarseConversionValueMedium : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final SKCloudServiceCapabilitiesDidChangeNotification : NSString;
 	@:deprecated
 	public static final SKCloudServiceSetupActionSubscribe : NSString;
@@ -45,18 +50,28 @@ import foundation.NSString;
 	public static final SKStoreProductParameterAdNetworkIdentifier : NSString;
 	public static final SKStoreProductParameterAdNetworkNonce : NSString;
 	public static final SKStoreProductParameterAdNetworkSourceAppStoreIdentifier : NSString;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	public static final SKStoreProductParameterAdNetworkSourceIdentifier : NSString;
 	public static final SKStoreProductParameterAdNetworkTimestamp : NSString;
 	public static final SKStoreProductParameterAdNetworkVersion : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterAdvertisingPartnerToken : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterAffiliateToken : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterCampaignToken : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final SKStoreProductParameterCustomProductPageIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterITunesItemIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterProductIdentifier : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStoreProductParameterProviderToken : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStorefrontCountryCodeDidChangeNotification : NSString;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	public static final SKStorefrontIdentifierDidChangeNotification : NSString;
 }

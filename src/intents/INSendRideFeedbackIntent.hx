@@ -6,6 +6,7 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSendRideFeedbackIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSendRideFeedbackIntent;
 	var rideIdentifier(get, never) : NSStringArg;
 	function get_rideIdentifier():NSStringArg;

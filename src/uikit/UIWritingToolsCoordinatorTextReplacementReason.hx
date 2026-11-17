@@ -4,10 +4,15 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorTextReplacementReason(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Interactive = 0;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Noninteractive = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Accepted = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Rejected = 3;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Temporary = 4;
 	inline function new(v:I64) this = v;
 }

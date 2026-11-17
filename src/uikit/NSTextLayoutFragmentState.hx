@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextLayoutFragmentState(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var None = 0;
+	@:hxmc.available(macos >= 12.0)
 	var EstimatedUsageBounds = 1;
+	@:hxmc.available(macos >= 12.0)
 	var CalculatedUsageBounds = 2;
+	@:hxmc.available(macos >= 12.0)
 	var LayoutAvailable = 3;
 	inline function new(v:I64) this = v;
 }

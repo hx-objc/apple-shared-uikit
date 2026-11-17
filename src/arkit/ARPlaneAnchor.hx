@@ -10,7 +10,9 @@ import foundation.NSCoder;
 	static function get_classificationSupported():Bool;
 	var alignment(get, never) : ARPlaneAnchorAlignment;
 	function get_alignment():ARPlaneAnchorAlignment;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var planeExtent(get, never) : ARPlaneExtent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_planeExtent():ARPlaneExtent;
 	var geometry(get, never) : ARPlaneGeometry;
 	function get_geometry():ARPlaneGeometry;

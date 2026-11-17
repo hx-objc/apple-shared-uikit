@@ -2,6 +2,8 @@
 package os;
 
 import hxmc.I64;
+import hxmc.ReadOnlySpan;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.unsafe.CString;
 import hxmc.unsafe.Ptr;
@@ -9,12 +11,14 @@ import objc.NSObject;
 
 @:hxmc.c @:hxmc.lib("/usr/lib/libSystem.B.dylib") extern class Os {
 	public static function os_activity_apply(activity:NSObject, block:Block<() -> Void>):Void;
-	public static function os_activity_apply_f(activity:NSObject, context:Ptr, function_:Ptr):Void;
+	public static function os_activity_apply_f(activity:NSObject, context:Ptr, function_:Ptr -> Void):Void;
 	@:deprecated
 	public static function os_activity_end(activity:NSObject):Void;
 	@:deprecated
-	public static function os_activity_get_active(entries:Ptr, count:Ptr):Int;
-	public static function os_activity_get_identifier(activity:NSObject, parent_id:Ptr):I64;
+	@:hxmc.len(count, 1)
+	public static function os_activity_get_active(entries:Ptr, count:Span<Int>):Int;
+	@:hxmc.len(parent_id, 1)
+	public static function os_activity_get_identifier(activity:NSObject, parent_id:Span<I64>):I64;
 	public static function os_activity_scope_enter(activity:NSObject, state:Ptr):Void;
 	public static function os_activity_scope_leave(state:Ptr):Void;
 	@:hxmc.retained
@@ -33,24 +37,40 @@ import objc.NSObject;
 	public static function os_trace_debug_enabled():Bool;
 	@:deprecated
 	public static function os_trace_info_enabled():Bool;
-	public static function os_unfair_lock_assert_not_owner(lock:Ptr):Void;
-	public static function os_unfair_lock_assert_owner(lock:Ptr):Void;
+	@:hxmc.len(lock, 1)
+	public static function os_unfair_lock_assert_not_owner(lock:ReadOnlySpan<Os_unfair_lock_s>):Void;
+	@:hxmc.len(lock, 1)
+	public static function os_unfair_lock_assert_owner(lock:ReadOnlySpan<Os_unfair_lock_s>):Void;
 	public static function os_unfair_lock_lock(lock:Ptr):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function os_unfair_lock_lock_with_flags(lock:Ptr, flags:Os_unfair_lock_flags_t):Void;
 	public static function os_unfair_lock_trylock(lock:Ptr):Bool;
 	public static function os_unfair_lock_unlock(lock:Ptr):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_cancel(wg:OS_os_workgroup):Void;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function os_workgroup_create_with_workgroup(name:CString, wg:OS_os_workgroup):Null<OS_os_workgroup>;
-	public static function os_workgroup_get_working_arena(wg:OS_os_workgroup, index_out:Ptr):Ptr;
+	@:hxmc.available(macos >= 11.0)
+	@:hxmc.len(index_out, 1)
+	public static function os_workgroup_get_working_arena(wg:OS_os_workgroup, index_out:Span<Int>):Ptr;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_interval_finish(wg:OS_os_workgroup, data:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_interval_start(wg:OS_os_workgroup, start:I64, deadline:I64, data:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_interval_update(wg:OS_os_workgroup, deadline:I64, data:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_join(wg:OS_os_workgroup, token_out:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_leave(wg:OS_os_workgroup, token:Ptr):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_max_parallel_threads(wg:OS_os_workgroup, attr:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	@:hxmc.retained
 	public static function os_workgroup_parallel_create(name:CString, attr:Ptr):Null<OS_os_workgroup>;
-	public static function os_workgroup_set_working_arena(wg:OS_os_workgroup, arena:Ptr, max_workers:Int, destructor:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
+	public static function os_workgroup_set_working_arena(wg:OS_os_workgroup, arena:Ptr, max_workers:Int, destructor:Ptr -> Void):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function os_workgroup_testcancel(wg:OS_os_workgroup):Bool;
 }

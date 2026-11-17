@@ -12,11 +12,17 @@ import uikit.UIImage;
 	static function alloc():PHAssetChangeRequest;
 	var placeholderForCreatedAsset(get, never) : Null<PHObjectPlaceholder>;
 	function get_placeholderForCreatedAsset():Null<PHObjectPlaceholder>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var rating(get, set) : PHAssetRating;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_rating():PHAssetRating;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_rating(v:PHAssetRating):PHAssetRating;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var caption(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_caption():Null<NSStringArg>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_caption(v:Null<NSStringArg>):Null<NSStringArg>;
 	var creationDate(get, set) : Null<NSDate>;
 	function get_creationDate():Null<NSDate>;
@@ -40,10 +46,14 @@ import uikit.UIImage;
 	static function creationRequestForAssetFromVideoAtFileURL(fileURL:NSURL):Null<PHAssetChangeRequest>;
 	static function deleteAssets(assets:NSFastEnumeration):Void;
 	static function changeRequestForAsset(asset:PHAsset):PHAssetChangeRequest;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function setLivePhotoVideoPlaybackEnabled(enabled:Bool):Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function addKeyword(keyword:NSStringArg):Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function removeKeyword(keyword:NSStringArg):Void;
 	function revertAssetContentToOriginal():Void;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function revertAssetContentToOriginalResourceChoice(choice:PHOriginalResourceChoice):Void;
 	override function init():PHAssetChangeRequest;
 }

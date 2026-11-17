@@ -16,8 +16,10 @@ import uiutilities.UICoordinateSpace;
 	@:optional
 	function windowSceneDidUpdateCoordinateSpaceInterfaceOrientationTraitCollection(windowScene:UIWindowScene, didUpdateCoordinateSpace:UICoordinateSpace, interfaceOrientation:UIInterfaceOrientation, traitCollection:UITraitCollection):Void;
 	@:selector("windowScene:didUpdateEffectiveGeometry:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function windowSceneDidUpdateEffectiveGeometry(windowScene:UIWindowScene, didUpdateEffectiveGeometry:UIWindowSceneGeometry):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function supportedInterfaceOrientationsForWindowScene(windowScene:UIWindowScene):UIInterfaceOrientationMask;
 	@:selector("windowScene:performActionForShortcutItem:completionHandler:")
@@ -26,6 +28,7 @@ import uiutilities.UICoordinateSpace;
 	@:selector("windowScene:userDidAcceptCloudKitShareWithMetadata:")
 	@:optional
 	function windowSceneUserDidAcceptCloudKitShareWithMetadata(windowScene:UIWindowScene, userDidAcceptCloudKitShareWithMetadata:CKShareMetadata):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function preferredWindowingControlStyleForScene(windowScene:UIWindowScene):UISceneWindowingControlStyle;
 }

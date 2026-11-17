@@ -4,16 +4,27 @@ package uikit;
 import hxmc.unsafe.Float32;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIWritingToolsCoordinatorAnimationParameters extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class UIWritingToolsCoordinatorAnimationParameters extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():UIWritingToolsCoordinatorAnimationParameters;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var duration(get, never) : Float;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_duration():Float;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var delay(get, never) : Float;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_delay():Float;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var progressHandler(get, set) : Null<Float32 -> Void>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_progressHandler():Null<Float32 -> Void>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_progressHandler(v:Null<Float32 -> Void>):Null<Float32 -> Void>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var completionHandler(get, set) : Null<() -> Void>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_completionHandler():Null<() -> Void>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_completionHandler(v:Null<() -> Void>):Null<() -> Void>;
 }

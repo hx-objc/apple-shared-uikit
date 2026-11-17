@@ -6,6 +6,7 @@ import foundation.NSStringArg;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INPayBillIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPayBillIntentResponse;
 	var code(get, never) : INPayBillIntentResponseCode;
 	function get_code():INPayBillIntentResponseCode;

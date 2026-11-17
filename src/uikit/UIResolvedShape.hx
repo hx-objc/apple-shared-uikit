@@ -7,15 +7,24 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIResolvedShape extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIResolvedShape extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIResolvedShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var shape(get, never) : UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_shape():UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var boundingRect(get, never) : CGRect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_boundingRect():CGRect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var path(get, never) : UIBezierPath;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_path():UIBezierPath;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function shapeByApplyingInsets(insets:UIEdgeInsets):UIResolvedShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function shapeByApplyingInset(inset:Float):UIResolvedShape;
 	function copyWithZone(zone:Ptr):Id;
 }

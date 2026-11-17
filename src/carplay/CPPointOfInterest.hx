@@ -12,9 +12,13 @@ import uikit.UIImage;
 
 @:hxmc.framework("CarPlay") @:hxmc.objc extern class CPPointOfInterest extends NSObject implements NSSecureCoding {
 	static function alloc():CPPointOfInterest;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var pinImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_pinImageSize():CGSize;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var selectedPinImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_selectedPinImageSize():CGSize;
 	var location(get, set) : MKMapItem;
 	function get_location():MKMapItem;
@@ -40,8 +44,11 @@ import uikit.UIImage;
 	var pinImage(get, set) : Null<UIImage>;
 	function get_pinImage():Null<UIImage>;
 	function set_pinImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedPinImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedPinImage():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectedPinImage(v:Null<UIImage>):Null<UIImage>;
 	var primaryButton(get, set) : Null<CPTextButton>;
 	function get_primaryButton():Null<CPTextButton>;
@@ -54,6 +61,7 @@ import uikit.UIImage;
 	function set_userInfo(v:Null<Id>):Null<Id>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithLocation(location:MKMapItem, title:NSStringArg, subtitle:Null<NSStringArg>, summary:Null<NSStringArg>, detailTitle:Null<NSStringArg>, detailSubtitle:Null<NSStringArg>, detailSummary:Null<NSStringArg>, pinImage:Null<UIImage>, selectedPinImage:Null<UIImage>):CPPointOfInterest;
 	overload function initWithLocation(location:MKMapItem, title:NSStringArg, subtitle:Null<NSStringArg>, summary:Null<NSStringArg>, detailTitle:Null<NSStringArg>, detailSubtitle:Null<NSStringArg>, detailSummary:Null<NSStringArg>, pinImage:Null<UIImage>):CPPointOfInterest;
 	function encodeWithCoder(coder:NSCoder):Void;

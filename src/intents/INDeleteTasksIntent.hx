@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INDeleteTasksIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INDeleteTasksIntent;
 	var taskList(get, never) : Null<INTaskList>;
 	function get_taskList():Null<INTaskList>;
@@ -14,6 +15,7 @@ import foundation.NSNumberArg;
 	var all(get, never) : Null<NSNumberArg>;
 	function get_all():Null<NSNumberArg>;
 	function initWithTaskList(taskList:Null<INTaskList>, tasks:Null<NSArray<INTask>>, all:Null<NSNumberArg>):INDeleteTasksIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INDeleteTasksIntent;
 	override function initWithCoder(coder:NSCoder):Null<INDeleteTasksIntent>;
 }

@@ -3,21 +3,36 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextRange extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextRange extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	var empty(get, never) : Bool;
 	@:selector("isEmpty")
+	@:hxmc.available(macos >= 12.0)
 	function get_empty():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var location(get, never) : NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	function get_location():NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	var endLocation(get, never) : NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	function get_endLocation():NSTextLocation;
+	@:hxmc.available(macos >= 12.0)
 	overload function initWithLocation(location:NSTextLocation, endLocation:Null<NSTextLocation>):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	overload function initWithLocation(location:NSTextLocation):NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function isEqualToTextRange(textRange:NSTextRange):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function containsLocation(location:NSTextLocation):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function containsRange(textRange:NSTextRange):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function intersectsWithTextRange(textRange:NSTextRange):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function textRangeByIntersectingWithTextRange(textRange:NSTextRange):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function textRangeByFormingUnionWithTextRange(textRange:NSTextRange):NSTextRange;
 }

@@ -7,12 +7,18 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityIntentToStore extends NSObject implements NSCopying {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityIntentToStore extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityIntentToStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var willNotStoreIntent(get, never) : PKIdentityIntentToStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_willNotStoreIntent():PKIdentityIntentToStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var mayStoreIntent(get, never) : PKIdentityIntentToStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_mayStoreIntent():PKIdentityIntentToStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function mayStoreIntentForDays(days:I64):PKIdentityIntentToStore;
 	function copyWithZone(zone:Ptr):Id;
 }

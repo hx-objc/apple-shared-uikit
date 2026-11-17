@@ -7,16 +7,27 @@ import foundation.NSArray;
 import foundation.NSValue;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVPlaybackUserInterfaceTimeControllable") extern interface AVPlaybackUserInterfaceTimeControllable extends NSObjectProtocol {
+@:hxmc.objc("AVPlaybackUserInterfaceTimeControllable") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVPlaybackUserInterfaceTimeControllable extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var timeRange(get, never) : CMTimeRange;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_timeRange():CMTimeRange;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var playbackPosition(get, never) : AVPlaybackUserInterfacePlaybackPosition;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_playbackPosition():AVPlaybackUserInterfacePlaybackPosition;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var segments(get, never) : NSArray<AVPlaybackUserInterfaceTimelineSegment>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_segments():NSArray<AVPlaybackUserInterfaceTimelineSegment>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var currentSegment(get, never) : AVPlaybackUserInterfaceTimelineSegment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_currentSegment():AVPlaybackUserInterfaceTimelineSegment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var seekableTimeRanges(get, never) : Null<NSArray<NSValue>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_seekableTimeRanges():Null<NSArray<NSValue>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function seekToPosition(position:CMTime, tolerance:CMTime):Void;
 }

@@ -17,6 +17,7 @@ import foundation.NSString;
 	public static final CSSearchQueryString : NSString;
 	public static final CSSearchableItemActionType : NSString;
 	public static final CSSearchableItemActivityIdentifier : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final CSSuggestionHighlightAttributeName : NSString;
 	public static var CoreSpotlightVersionNumber : Float;
 }

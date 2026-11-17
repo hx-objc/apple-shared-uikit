@@ -29,6 +29,7 @@ enum abstract UIViewAnimationOptions(I64) to I64 {
 	var PreferredFramesPerSecondDefault = 0;
 	var PreferredFramesPerSecond60 = 50331648;
 	var PreferredFramesPerSecond30 = 117440512;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var FlushUpdates = 268435456;
 	inline function new(v:I64) this = v;
 	var None = 0;

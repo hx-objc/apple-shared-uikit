@@ -9,25 +9,42 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASSavePasswordRequest extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(ios >= 26.2, maccatalyst >= 26.2) extern class ASSavePasswordRequest extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():ASSavePasswordRequest;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var serviceIdentifier(get, never) : ASCredentialServiceIdentifier;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_serviceIdentifier():ASCredentialServiceIdentifier;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var credential(get, never) : ASPasswordCredential;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_credential():ASPasswordCredential;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var title(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var sessionID(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_sessionID():NSStringArg;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var event(get, never) : ASSavePasswordRequestEvent;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_event():ASSavePasswordRequestEvent;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var passwordKind(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_passwordKind():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	overload function initWithServiceIdentifier(serviceIdentifier:ASCredentialServiceIdentifier, credential:ASPasswordCredential, sessionID:NSStringArg, event:ASSavePasswordRequestEvent):ASSavePasswordRequest;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	overload function initWithServiceIdentifier(serviceIdentifier:ASCredentialServiceIdentifier, credential:ASPasswordCredential, title:Null<NSStringArg>, sessionID:NSStringArg, event:ASSavePasswordRequestEvent):ASSavePasswordRequest;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	overload function initWithServiceIdentifier(serviceIdentifier:ASCredentialServiceIdentifier, credential:ASPasswordCredential, sessionID:NSStringArg, event:ASSavePasswordRequestEvent, passwordKind:Null<NSStringArg>):ASSavePasswordRequest;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	overload function initWithServiceIdentifier(serviceIdentifier:ASCredentialServiceIdentifier, credential:ASPasswordCredential, title:Null<NSStringArg>, sessionID:NSStringArg, event:ASSavePasswordRequestEvent, passwordKind:Null<NSStringArg>):ASSavePasswordRequest;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

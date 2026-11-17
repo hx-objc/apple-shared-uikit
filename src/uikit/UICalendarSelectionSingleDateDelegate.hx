@@ -4,10 +4,12 @@ package uikit;
 import foundation.NSDateComponents;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UICalendarSelectionSingleDateDelegate") extern interface UICalendarSelectionSingleDateDelegate extends NSObjectProtocol {
+@:hxmc.objc("UICalendarSelectionSingleDateDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UICalendarSelectionSingleDateDelegate extends NSObjectProtocol {
 	@:selector("dateSelection:didSelectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function dateSelectionDidSelectDate(selection:UICalendarSelectionSingleDate, didSelectDate:Null<NSDateComponents>):Void;
 	@:selector("dateSelection:canSelectDate:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function dateSelectionCanSelectDate(selection:UICalendarSelectionSingleDate, canSelectDate:Null<NSDateComponents>):Bool;
 }

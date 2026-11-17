@@ -25,9 +25,13 @@ import foundation.NSString;
 	public static final ICDeleteFailed : NSString;
 	public static final ICDeleteSuccessful : NSString;
 	public static final ICDeviceCanEjectOrDisconnect : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final ICDeviceLocationDescriptionBluetooth : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final ICDeviceLocationDescriptionFireWire : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final ICDeviceLocationDescriptionMassStorage : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final ICDeviceLocationDescriptionUSB : NSString;
 	public static final ICDownloadSidecarFiles : NSString;
 	public static final ICDownloadsDirectoryURL : NSString;
@@ -42,8 +46,10 @@ import foundation.NSString;
 	public static final ICStatusNotificationKey : NSString;
 	public static final ICTransportTypeExFAT : NSString;
 	public static final ICTransportTypeMassStorage : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final ICTransportTypeProximity : NSString;
 	public static final ICTransportTypeTCPIP : NSString;
 	public static final ICTransportTypeUSB : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final ICTruncateAfterSuccessfulDownload : NSString;
 }

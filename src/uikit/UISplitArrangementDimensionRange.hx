@@ -6,17 +6,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISplitArrangementDimensionRange extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UISplitArrangementDimensionRange extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var minimum(get, set) : UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_minimum():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_minimum(v:UISplitArrangementDimension):UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var preferred(get, set) : UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_preferred():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_preferred(v:UISplitArrangementDimension):UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var maximum(get, set) : UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_maximum():UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_maximum(v:UISplitArrangementDimension):UISplitArrangementDimension;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function init():UISplitArrangementDimensionRange;
 	function copyWithZone(zone:Ptr):Id;
 }

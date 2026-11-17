@@ -6,14 +6,20 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INAddTasksTemporalEventTriggerResolutionResult extends INTemporalEventTriggerResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddTasksTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INAddTasksTemporalEventTriggerResolutionResult;
 	static function confirmationRequiredWithTemporalEventTriggerToConfirm(temporalEventTriggerToConfirm:Null<INTemporalEventTrigger>):INAddTasksTemporalEventTriggerResolutionResult;
 	static function disambiguationWithTemporalEventTriggersToDisambiguate(temporalEventTriggersToDisambiguate:NSArray<INTemporalEventTrigger>):INAddTasksTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INAddTasksTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INAddTasksTemporalEventTriggerResolutionResult;
 	static function successWithResolvedTemporalEventTrigger(resolvedTemporalEventTrigger:INTemporalEventTrigger):INAddTasksTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INAddTasksTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INAddTasksTemporalEventTriggerResolutionResult;
 	static function unsupportedForReason(reason:INAddTasksTemporalEventTriggerUnsupportedReason):INAddTasksTemporalEventTriggerResolutionResult;
 	function initWithTemporalEventTriggerResolutionResult(temporalEventTriggerResolutionResult:INTemporalEventTriggerResolutionResult):INAddTasksTemporalEventTriggerResolutionResult;

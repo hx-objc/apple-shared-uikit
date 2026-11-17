@@ -6,18 +6,24 @@ import foundation.NSDictionary;
 import foundation.NSString;
 import foundation.NSStringArg;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.unsafe.Ptr;
 import hxmc.unsafe.UInt8;
 
 @:hxmc.c @:hxmc.framework("CoreMIDI") extern class CoreMIDI {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function MIDIBluetoothDriverActivateAllConnections():Int;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function MIDIBluetoothDriverDisconnect(uuid:NSStringArg):Int;
-	public static function MIDIClientCreate(name:NSStringArg, notifyProc:Ptr, notifyRefCon:Ptr, outClient:Ptr):Int;
-	public static function MIDIClientCreateWithBlock(name:NSStringArg, outClient:Ptr, notifyBlock:Null<Block<Ptr -> Void>>):Int;
+	@:hxmc.len(outClient, 1)
+	public static function MIDIClientCreate(name:NSStringArg, notifyProc:Ptr, notifyRefCon:Ptr, outClient:Span<Int>):Int;
+	@:hxmc.len(outClient, 1)
+	public static function MIDIClientCreateWithBlock(name:NSStringArg, outClient:Span<Int>, notifyBlock:Null<Block<Ptr -> Void>>):Int;
 	public static function MIDIClientDispose(client:Int):Int;
 	public static function MIDIDeviceAddEntity(device:Int, name:NSStringArg, embedded:Bool, numSourceEndpoints:I64, numDestinationEndpoints:I64, newEntity:Ptr):Int;
-	public static function MIDIDeviceCreate(owner:Ptr, name:NSStringArg, manufacturer:NSStringArg, model:NSStringArg, outDevice:Ptr):Int;
+	@:hxmc.len(outDevice, 1)
+	public static function MIDIDeviceCreate(owner:Ptr, name:NSStringArg, manufacturer:NSStringArg, model:NSStringArg, outDevice:Span<Int>):Int;
 	public static function MIDIDeviceDispose(device:Int):Int;
 	public static function MIDIDeviceGetEntity(device:Int, entityIndex0:I64):Int;
 	public static function MIDIDeviceGetNumberOfEntities(device:Int):I64;
@@ -25,23 +31,31 @@ import hxmc.unsafe.UInt8;
 	public static function MIDIDeviceListDispose(devList:Int):Int;
 	public static function MIDIDeviceListGetDevice(devList:Int, index0:I64):Int;
 	public static function MIDIDeviceListGetNumberOfDevices(devList:Int):I64;
+	@:hxmc.available(macos >= 11.0)
 	public static function MIDIDeviceNewEntity(device:Int, name:NSStringArg, protocol:MIDIProtocolID, embedded:Bool, numSourceEndpoints:I64, numDestinationEndpoints:I64, newEntity:Ptr):Int;
 	public static function MIDIDeviceRemoveEntity(device:Int, entity:Int):Int;
 	public static function MIDIEndpointDispose(endpt:Int):Int;
-	public static function MIDIEndpointGetEntity(inEndpoint:Int, outEntity:Ptr):Int;
+	@:hxmc.len(outEntity, 1)
+	public static function MIDIEndpointGetEntity(inEndpoint:Int, outEntity:Span<Int>):Int;
 	public static function MIDIEndpointGetRefCons(endpt:Int, ref1:Ptr, ref2:Ptr):Int;
 	public static function MIDIEndpointSetRefCons(endpt:Int, ref1:Ptr, ref2:Ptr):Int;
 	public static function MIDIEntityAddOrRemoveEndpoints(entity:Int, numSourceEndpoints:I64, numDestinationEndpoints:I64):Int;
 	public static function MIDIEntityGetDestination(entity:Int, destIndex0:I64):Int;
-	public static function MIDIEntityGetDevice(inEntity:Int, outDevice:Ptr):Int;
+	@:hxmc.len(outDevice, 1)
+	public static function MIDIEntityGetDevice(inEntity:Int, outDevice:Span<Int>):Int;
 	public static function MIDIEntityGetNumberOfDestinations(entity:Int):I64;
 	public static function MIDIEntityGetNumberOfSources(entity:Int):I64;
 	public static function MIDIEntityGetSource(entity:Int, sourceIndex0:I64):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function MIDIEventListAdd(evtlist:Ptr, listSize:I64, curPacket:Ptr, time:I64, wordCount:I64, words:Ptr):Ptr;
+	@:hxmc.available(macos >= 12.0)
 	public static function MIDIEventListForEachEvent(evtlist:Ptr, visitor:Ptr, visitorContext:Ptr):Void;
+	@:hxmc.available(macos >= 11.0)
 	public static function MIDIEventListInit(evtlist:Ptr, protocol:MIDIProtocolID):Ptr;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function MIDIEventPacketSysexBytesForGroup(pkt:Ptr, groupIndex:UInt8, outData:Ptr):Int;
-	public static function MIDIExternalDeviceCreate(name:NSStringArg, manufacturer:NSStringArg, model:NSStringArg, outDevice:Ptr):Int;
+	@:hxmc.len(outDevice, 1)
+	public static function MIDIExternalDeviceCreate(name:NSStringArg, manufacturer:NSStringArg, model:NSStringArg, outDevice:Span<Int>):Int;
 	public static function MIDIFlushOutput(dest:Int):Int;
 	public static function MIDIGetDestination(destIndex0:I64):Int;
 	public static function MIDIGetDevice(deviceIndex0:I64):Int;
@@ -52,10 +66,13 @@ import hxmc.unsafe.UInt8;
 	public static function MIDIGetNumberOfExternalDevices():I64;
 	public static function MIDIGetNumberOfSources():I64;
 	public static function MIDIGetSource(sourceIndex0:I64):Int;
-	public static function MIDIObjectFindByUniqueID(inUniqueID:Int, outObject:Ptr, outObjectType:Ptr):Int;
+	@:hxmc.len(outObject, 1)
+	@:hxmc.len(outObjectType, 1)
+	public static function MIDIObjectFindByUniqueID(inUniqueID:Int, outObject:Span<Int>, outObjectType:Span<Int>):Int;
 	public static function MIDIObjectGetDataProperty(obj:Int, propertyID:NSStringArg, outData:Ptr):Int;
 	public static function MIDIObjectGetDictionaryProperty(obj:Int, propertyID:NSStringArg, outDict:Ptr):Int;
-	public static function MIDIObjectGetIntegerProperty(obj:Int, propertyID:NSStringArg, outValue:Ptr):Int;
+	@:hxmc.len(outValue, 1)
+	public static function MIDIObjectGetIntegerProperty(obj:Int, propertyID:NSStringArg, outValue:Span<Int>):Int;
 	public static function MIDIObjectGetProperties(obj:Int, outProperties:Ptr, deep:Bool):Int;
 	public static function MIDIObjectGetStringProperty(obj:Int, propertyID:NSStringArg, str:Ptr):Int;
 	public static function MIDIObjectRemoveProperty(obj:Int, propertyID:NSStringArg):Int;
@@ -63,48 +80,72 @@ import hxmc.unsafe.UInt8;
 	public static function MIDIObjectSetDictionaryProperty(obj:Int, propertyID:NSStringArg, dict:NSDictionary):Int;
 	public static function MIDIObjectSetIntegerProperty(obj:Int, propertyID:NSStringArg, value:Int):Int;
 	public static function MIDIObjectSetStringProperty(obj:Int, propertyID:NSStringArg, str:NSStringArg):Int;
-	public static function MIDIOutputPortCreate(client:Int, portName:NSStringArg, outPort:Ptr):Int;
+	@:hxmc.len(outPort, 1)
+	public static function MIDIOutputPortCreate(client:Int, portName:NSStringArg, outPort:Span<Int>):Int;
 	public static function MIDIPacketListAdd(pktlist:Ptr, listSize:I64, curPacket:Ptr, time:I64, nData:I64, data:Ptr):Ptr;
 	public static function MIDIPacketListInit(pktlist:Ptr):Ptr;
 	public static function MIDIPortConnectSource(port:Int, source:Int, connRefCon:Ptr):Int;
 	public static function MIDIPortDisconnectSource(port:Int, source:Int):Int;
 	public static function MIDIPortDispose(port:Int):Int;
 	public static function MIDIReceived(src:Int, pktlist:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function MIDIReceivedEventList(src:Int, evtlist:Ptr):Int;
 	public static function MIDIRestart():Int;
 	public static function MIDISend(port:Int, dest:Int, pktlist:Ptr):Int;
+	@:hxmc.available(macos >= 11.0)
 	public static function MIDISendEventList(port:Int, dest:Int, evtlist:Ptr):Int;
 	public static function MIDISendSysex(request:Ptr):Int;
-	public static function MIDISendUMPSysex(umpRequest:Ptr):Int;
-	public static function MIDISendUMPSysex8(umpRequest:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(umpRequest, 1)
+	public static function MIDISendUMPSysex(umpRequest:Span<MIDISysexSendRequestUMP>):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(umpRequest, 1)
+	public static function MIDISendUMPSysex8(umpRequest:Span<MIDISysexSendRequestUMP>):Int;
 	public static function MIDISetupAddDevice(device:Int):Int;
 	public static function MIDISetupAddExternalDevice(device:Int):Int;
 	public static function MIDISetupRemoveDevice(device:Int):Int;
 	public static function MIDISetupRemoveExternalDevice(device:Int):Int;
-	public static function MIDISourceCreate(client:Int, name:NSStringArg, outSrc:Ptr):Int;
-	public static function MIDISourceCreateWithProtocol(client:Int, name:NSStringArg, protocol:MIDIProtocolID, outSrc:Ptr):Int;
-	public static function MIDIThruConnectionCreate(inPersistentOwnerID:Null<NSStringArg>, inConnectionParams:NSData, outConnection:Ptr):Int;
+	@:hxmc.len(outSrc, 1)
+	public static function MIDISourceCreate(client:Int, name:NSStringArg, outSrc:Span<Int>):Int;
+	@:hxmc.available(macos >= 11.0)
+	@:hxmc.len(outSrc, 1)
+	public static function MIDISourceCreateWithProtocol(client:Int, name:NSStringArg, protocol:MIDIProtocolID, outSrc:Span<Int>):Int;
+	@:hxmc.len(outConnection, 1)
+	public static function MIDIThruConnectionCreate(inPersistentOwnerID:Null<NSStringArg>, inConnectionParams:NSData, outConnection:Span<Int>):Int;
 	public static function MIDIThruConnectionDispose(connection:Int):Int;
 	public static function MIDIThruConnectionFind(inPersistentOwnerID:NSStringArg, outConnectionList:Ptr):Int;
 	public static function MIDIThruConnectionGetParams(connection:Int, outConnectionParams:Ptr):Int;
 	public static function MIDIThruConnectionParamsInitialize(inConnectionParams:Ptr):Void;
 	public static function MIDIThruConnectionSetParams(connection:Int, inConnectionParams:NSData):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIDeviceObjectKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIDeviceWasAddedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIDeviceWasRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIProfileObjectKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIProfileWasRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDICIProfileWasUpdatedNotification : NSString;
 	public static final MIDINetworkBonjourServiceType : NSString;
 	public static final MIDINetworkNotificationContactsDidChange : NSString;
 	public static final MIDINetworkNotificationSessionDidChange : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPEndpointObjectKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPEndpointWasAddedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPEndpointWasRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPEndpointWasUpdatedNotification : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPFunctionBlockObjectKey : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final MIDIUMPFunctionBlockWasUpdatedNotification : NSString;
 	public static final kMIDIPropertyAdvanceScheduleTimeMuSec : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kMIDIPropertyAssociatedEndpoint : NSString;
 	public static final kMIDIPropertyCanRoute : NSString;
 	public static final kMIDIPropertyConnectionUniqueID : NSString;
@@ -132,6 +173,7 @@ import hxmc.unsafe.UInt8;
 	public static final kMIDIPropertyOffline : NSString;
 	public static final kMIDIPropertyPanDisruptsStereo : NSString;
 	public static final kMIDIPropertyPrivate : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kMIDIPropertyProtocolID : NSString;
 	public static final kMIDIPropertyReceiveChannels : NSString;
 	public static final kMIDIPropertyReceivesBankSelectLSB : NSString;
@@ -151,7 +193,9 @@ import hxmc.unsafe.UInt8;
 	public static final kMIDIPropertyTransmitsMTC : NSString;
 	public static final kMIDIPropertyTransmitsNotes : NSString;
 	public static final kMIDIPropertyTransmitsProgramChanges : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kMIDIPropertyUMPActiveGroupBitmap : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kMIDIPropertyUMPCanTransmitGroupless : NSString;
 	public static final kMIDIPropertyUniqueID : NSString;
 }

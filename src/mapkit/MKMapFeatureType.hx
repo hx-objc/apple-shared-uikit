@@ -4,8 +4,11 @@ package mapkit;
 import hxmc.I64;
 
 enum abstract MKMapFeatureType(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PointOfInterest = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Territory = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var PhysicalFeature = 2;
 	inline function new(v:I64) this = v;
 }

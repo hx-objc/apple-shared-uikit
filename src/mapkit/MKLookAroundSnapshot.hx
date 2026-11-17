@@ -4,9 +4,13 @@ package mapkit;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKLookAroundSnapshot extends NSObject {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern class MKLookAroundSnapshot extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKLookAroundSnapshot;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var image(get, never) : UIImage;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_image():UIImage;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	override function init():MKLookAroundSnapshot;
 }

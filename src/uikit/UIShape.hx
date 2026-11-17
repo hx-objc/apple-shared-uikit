@@ -7,24 +7,42 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIShape extends NSObject implements UIShapeProvider implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIShape extends NSObject implements UIShapeProvider implements NSCopying {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var rectShape(get, never) : UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_rectShape():UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var capsuleShape(get, never) : UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_capsuleShape():UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var circleShape(get, never) : UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_circleShape():UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function rectShapeWithCornerRadius(cornerRadius:Float):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function rectShapeWithCornerRadius(cornerRadius:Float, cornerCurve:UICornerCurve):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function rectShapeWithCornerRadius(cornerRadius:Float, cornerCurve:UICornerCurve, maskedCorners:UIRectCorner):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function fixedRectShapeWithRect(rect:CGRect):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function fixedRectShapeWithRect(rect:CGRect, cornerRadius:Float):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function fixedRectShapeWithRect(rect:CGRect, cornerRadius:Float, cornerCurve:UICornerCurve, maskedCorners:UIRectCorner):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function shapeWithBezierPath(path:UIBezierPath):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function shapeWithProvider(provider:UIShapeProvider):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function shapeByApplyingInsets(insets:UIEdgeInsets):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function shapeByApplyingInset(inset:Float):UIShape;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resolvedShapeInContext(context:UIShapeResolutionContext):UIResolvedShape;
 	function copyWithZone(zone:Ptr):Id;
 }

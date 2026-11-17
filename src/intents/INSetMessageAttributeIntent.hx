@@ -6,12 +6,14 @@ import foundation.NSCoder;
 import foundation.NSString;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSetMessageAttributeIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetMessageAttributeIntent;
 	var identifiers(get, never) : Null<NSArray<NSString>>;
 	function get_identifiers():Null<NSArray<NSString>>;
 	var attribute(get, never) : INMessageAttribute;
 	function get_attribute():INMessageAttribute;
 	function initWithIdentifiers(identifiers:Null<NSArray<NSString>>, attribute:INMessageAttribute):INSetMessageAttributeIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetMessageAttributeIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetMessageAttributeIntent>;
 }

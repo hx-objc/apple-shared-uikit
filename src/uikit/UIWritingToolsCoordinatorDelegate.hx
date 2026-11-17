@@ -10,43 +10,58 @@ import foundation.NSUUID;
 import foundation.NSValue;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIWritingToolsCoordinatorDelegate") extern interface UIWritingToolsCoordinatorDelegate extends NSObjectProtocol {
+@:hxmc.objc("UIWritingToolsCoordinatorDelegate") @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern interface UIWritingToolsCoordinatorDelegate extends NSObjectProtocol {
 	@:selector("writingToolsCoordinator:requestsContextsForScope:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorRequestsContextsForScopeCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsContextsForScope:UIWritingToolsCoordinatorContextScope, completion:NSArray<UIWritingToolsCoordinatorContext> -> Void):Void;
 	@:selector("writingToolsCoordinator:replaceRange:inContext:proposedText:reason:animationParameters:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorReplaceRangeInContextProposedTextReasonAnimationParametersCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, replaceRange:NSRange, inContext:UIWritingToolsCoordinatorContext, proposedText:NSAttributedString, reason:UIWritingToolsCoordinatorTextReplacementReason, animationParameters:Null<UIWritingToolsCoordinatorAnimationParameters>, completion:Null<NSAttributedString> -> Void):Void;
 	@:selector("writingToolsCoordinator:selectRanges:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorSelectRangesInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, selectRanges:NSArray<NSValue>, inContext:UIWritingToolsCoordinatorContext, completion:() -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsBoundingBezierPathsForRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorRequestsBoundingBezierPathsForRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsBoundingBezierPathsForRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:NSArray<UIBezierPath> -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsUnderlinePathsForRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorRequestsUnderlinePathsForRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsUnderlinePathsForRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:NSArray<UIBezierPath> -> Void):Void;
 	@:selector("writingToolsCoordinator:prepareForTextAnimation:forRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorPrepareForTextAnimationForRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, prepareForTextAnimation:UIWritingToolsCoordinatorTextAnimation, forRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:() -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsPreviewForTextAnimation:ofRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorRequestsPreviewForTextAnimationOfRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsPreviewForTextAnimation:UIWritingToolsCoordinatorTextAnimation, ofRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:Null<UITargetedPreview> -> Void):Void;
 	@:selector("writingToolsCoordinator:finishTextAnimation:forRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function writingToolsCoordinatorFinishTextAnimationForRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, finishTextAnimation:UIWritingToolsCoordinatorTextAnimation, forRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:() -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsSingleContainerSubrangesOfRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function writingToolsCoordinatorRequestsSingleContainerSubrangesOfRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsSingleContainerSubrangesOfRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:NSArray<NSValue> -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsDecorationContainerViewForRange:inContext:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function writingToolsCoordinatorRequestsDecorationContainerViewForRangeInContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsDecorationContainerViewForRange:NSRange, inContext:UIWritingToolsCoordinatorContext, completion:UIView -> Void):Void;
 	@:selector("writingToolsCoordinator:willChangeToState:completion:")
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function writingToolsCoordinatorWillChangeToStateCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, willChangeToState:UIWritingToolsCoordinatorState, completion:() -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsPreviewForTextAnimation:ofRange:inContext:textDecoration:completion:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function writingToolsCoordinatorRequestsPreviewForTextAnimationOfRangeInContextTextDecorationCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsPreviewForTextAnimation:UIWritingToolsCoordinatorTextAnimation, ofRange:NSRange, inContext:UIWritingToolsCoordinatorContext, textDecoration:UIWritingToolsCoordinatorTextDecoration, completion:Null<UITargetedPreview> -> Void):Void;
 	@:selector("writingToolsCoordinator:requestsGrammarResultsForContext:completion:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function writingToolsCoordinatorRequestsGrammarResultsForContextCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsGrammarResultsForContext:UIWritingToolsCoordinatorContext, completion:NSArray<NSTextCheckingResult> -> Void):Void;
 	@:selector("writingToolsCoordinator:setGrammarCheckingEnabled:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function writingToolsCoordinatorSetGrammarCheckingEnabled(writingToolsCoordinator:UIWritingToolsCoordinator, setGrammarCheckingEnabled:Bool):Void;
 	@:selector("writingToolsCoordinator:requestsRangeInContextWithIdentifierForPoint:completion:")
 	@:deprecated
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function writingToolsCoordinatorRequestsRangeInContextWithIdentifierForPointCompletion(writingToolsCoordinator:UIWritingToolsCoordinator, requestsRangeInContextWithIdentifierForPoint:CGPoint, completion:(NSRange, NSUUID) -> Void):Void;
 }

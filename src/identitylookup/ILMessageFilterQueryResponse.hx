@@ -10,8 +10,11 @@ import objc.NSObject;
 	var action(get, set) : ILMessageFilterAction;
 	function get_action():ILMessageFilterAction;
 	function set_action(v:ILMessageFilterAction):ILMessageFilterAction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var subAction(get, set) : ILMessageFilterSubAction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_subAction():ILMessageFilterSubAction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_subAction(v:ILMessageFilterSubAction):ILMessageFilterSubAction;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

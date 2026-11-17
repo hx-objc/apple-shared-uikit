@@ -34,11 +34,17 @@ import objc.NSObject;
 	function get_providesAppNotificationSettings():Bool;
 	var announcementSetting(get, never) : UNNotificationSetting;
 	function get_announcementSetting():UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	var timeSensitiveSetting(get, never) : UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	function get_timeSensitiveSetting():UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	var scheduledDeliverySetting(get, never) : UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	function get_scheduledDeliverySetting():UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	var directMessagesSetting(get, never) : UNNotificationSetting;
+	@:hxmc.available(macos >= 12.0)
 	function get_directMessagesSetting():UNNotificationSetting;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

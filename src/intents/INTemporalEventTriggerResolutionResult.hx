@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INTemporalEventTriggerResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INTemporalEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INTemporalEventTriggerResolutionResult;
 	static function successWithResolvedTemporalEventTrigger(resolvedTemporalEventTrigger:INTemporalEventTrigger):INTemporalEventTriggerResolutionResult;
 	static function disambiguationWithTemporalEventTriggersToDisambiguate(temporalEventTriggersToDisambiguate:NSArray<INTemporalEventTrigger>):INTemporalEventTriggerResolutionResult;

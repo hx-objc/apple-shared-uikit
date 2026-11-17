@@ -7,6 +7,7 @@ import objc.NSObjectProtocol;
 	var configuration(get, set) : UIContentConfiguration;
 	function get_configuration():UIContentConfiguration;
 	function set_configuration(v:UIContentConfiguration):UIContentConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function supportsConfiguration(configuration:UIContentConfiguration):Bool;
 }

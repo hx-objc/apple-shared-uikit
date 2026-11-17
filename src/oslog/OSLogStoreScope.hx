@@ -4,6 +4,7 @@ package oslog;
 import hxmc.I64;
 
 enum abstract OSLogStoreScope(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var CurrentProcessIdentifier = 1;
 	inline function new(v:I64) this = v;
 }

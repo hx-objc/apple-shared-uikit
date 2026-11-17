@@ -7,6 +7,7 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetUserCurrentRestaurantReservationBookingsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetUserCurrentRestaurantReservationBookingsIntent;
 	var restaurant(get, set) : Null<INRestaurant>;
 	function get_restaurant():Null<INRestaurant>;
@@ -21,6 +22,7 @@ import foundation.NSStringArg;
 	function get_earliestBookingDateForResults():Null<NSDate>;
 	function set_earliestBookingDateForResults(v:Null<NSDate>):Null<NSDate>;
 	function initWithRestaurant(restaurant:Null<INRestaurant>, reservationIdentifier:Null<NSStringArg>, maximumNumberOfResults:Null<NSNumberArg>, earliestBookingDateForResults:Null<NSDate>):INGetUserCurrentRestaurantReservationBookingsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetUserCurrentRestaurantReservationBookingsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetUserCurrentRestaurantReservationBookingsIntent>;
 }

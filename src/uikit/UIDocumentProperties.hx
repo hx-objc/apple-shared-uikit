@@ -6,20 +6,35 @@ import foundation.NSURL;
 import linkpresentation.LPLinkMetadata;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIDocumentProperties extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UIDocumentProperties extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIDocumentProperties;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var metadata(get, set) : LPLinkMetadata;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_metadata():LPLinkMetadata;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_metadata(v:LPLinkMetadata):LPLinkMetadata;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var dragItemsProvider(get, set) : Null<UIDragSession -> NSArray<UIDragItem>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_dragItemsProvider():Null<UIDragSession -> NSArray<UIDragItem>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_dragItemsProvider(v:Null<UIDragSession -> NSArray<UIDragItem>>):Null<UIDragSession -> NSArray<UIDragItem>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var activityViewControllerProvider(get, set) : Null<() -> UIActivityViewController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_activityViewControllerProvider():Null<() -> UIActivityViewController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_activityViewControllerProvider(v:Null<() -> UIActivityViewController>):Null<() -> UIActivityViewController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var wantsIconRepresentation(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_wantsIconRepresentation():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_wantsIconRepresentation(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithURL(url:NSURL):UIDocumentProperties;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithMetadata(metadata:LPLinkMetadata):UIDocumentProperties;
 }

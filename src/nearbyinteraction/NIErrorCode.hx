@@ -10,9 +10,13 @@ enum abstract NIErrorCode(I64) to I64 {
 	var ResourceUsageTimeout = -5886;
 	var ActiveSessionsLimitExceeded = -5885;
 	var UserDidNotAllow = -5884;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var InvalidARConfiguration = -5883;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var AccessoryPeerDeviceUnavailable = -5882;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var IncompatiblePeerDevice = -5881;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var ActiveExtendedDistanceSessionsLimitExceeded = -5880;
 	inline function new(v:I64) this = v;
 }

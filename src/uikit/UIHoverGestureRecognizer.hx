@@ -8,13 +8,21 @@ import hxmc.objc.Selector;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIHoverGestureRecognizer extends UIGestureRecognizer {
 	static function alloc():UIHoverGestureRecognizer;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var zOffset(get, never) : Float;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_zOffset():Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var altitudeAngle(get, never) : Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_altitudeAngle():Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var rollAngle(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_rollAngle():Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function azimuthAngleInView(view:Null<UIView>):Float;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function azimuthUnitVectorInView(view:Null<UIView>):CGVector;
 	override function init():UIHoverGestureRecognizer;
 	override function initWithCoder(coder:NSCoder):Null<UIHoverGestureRecognizer>;

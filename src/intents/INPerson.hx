@@ -11,24 +11,41 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INPerson extends NSObject implements NSCopying implements NSSecureCoding implements INSpeakable {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INPerson extends NSObject implements NSCopying implements NSSecureCoding implements INSpeakable {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPerson;
+	@:hxmc.available(macos >= 11.0)
 	var personHandle(get, never) : Null<INPersonHandle>;
+	@:hxmc.available(macos >= 11.0)
 	function get_personHandle():Null<INPersonHandle>;
+	@:hxmc.available(macos >= 11.0)
 	var nameComponents(get, never) : Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	function get_nameComponents():Null<NSPersonNameComponents>;
+	@:hxmc.available(macos >= 11.0)
 	var displayName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var image(get, never) : Null<INImage>;
+	@:hxmc.available(macos >= 11.0)
 	function get_image():Null<INImage>;
+	@:hxmc.available(macos >= 11.0)
 	var contactIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_contactIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var customIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_customIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var relationship(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_relationship():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var contactSuggestion(get, never) : Bool;
 	@:selector("isContactSuggestion")
+	@:hxmc.available(macos >= 12.0)
 	function get_contactSuggestion():Bool;
 	var aliases(get, never) : Null<NSArray<INPersonHandle>>;
 	function get_aliases():Null<NSArray<INPersonHandle>>;
@@ -43,19 +60,32 @@ import objc.NSObject;
 	function get_handle():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var spokenPhrase(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_spokenPhrase():NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	var pronunciationHint(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_pronunciationHint():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var vocabularyIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_vocabularyIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var alternativeSpeakableMatches(get, never) : Null<NSArray<INSpeakable>>;
+	@:hxmc.available(macos >= 11.0)
 	function get_alternativeSpeakableMatches():Null<NSArray<INSpeakable>>;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>):INPerson;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, relationship:Null<NSStringArg>):INPerson;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool):INPerson;
+	@:hxmc.available(macos >= 12.0)
 	overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isMe:Bool, suggestionType:INPersonSuggestionType):INPerson;
 	@:selector("initWithPersonHandle:nameComponents:displayName:image:contactIdentifier:customIdentifier:isContactSuggestion:suggestionType:")
+	@:hxmc.available(macos >= 12.0)
 	function initWithPersonHandleNameComponentsDisplayNameImageContactIdentifierCustomIdentifierIsContactSuggestionSuggestionType(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, isContactSuggestion:Bool, suggestionType:INPersonSuggestionType):INPerson;
 	overload function initWithPersonHandle(personHandle:INPersonHandle, nameComponents:Null<NSPersonNameComponents>, displayName:Null<NSStringArg>, image:Null<INImage>, contactIdentifier:Null<NSStringArg>, customIdentifier:Null<NSStringArg>, aliases:Null<NSArray<INPersonHandle>>, suggestionType:INPersonSuggestionType):INPerson;
 	@:deprecated

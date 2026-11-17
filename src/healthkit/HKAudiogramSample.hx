@@ -8,12 +8,18 @@ import foundation.NSDictionary;
 import foundation.NSString;
 import hxmc.objc.Id;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKAudiogramSample extends HKSample {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKAudiogramSample extends HKSample {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKAudiogramSample;
+	@:hxmc.available(macos >= 13.0)
 	var sensitivityPoints(get, never) : NSArray<HKAudiogramSensitivityPoint>;
+	@:hxmc.available(macos >= 13.0)
 	function get_sensitivityPoints():NSArray<HKAudiogramSensitivityPoint>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	static overload function audiogramSampleWithSensitivityPoints(sensitivityPoints:NSArray<HKAudiogramSensitivityPoint>, startDate:NSDate, endDate:NSDate, metadata:Null<NSDictionary<NSString, Id>>):HKAudiogramSample;
+	@:hxmc.available(macos >= 15.1, ios >= 18.1, maccatalyst >= 18.1)
 	static overload function audiogramSampleWithSensitivityPoints(sensitivityPoints:NSArray<HKAudiogramSensitivityPoint>, startDate:NSDate, endDate:NSDate, device:Null<HKDevice>, metadata:Null<NSDictionary<NSString, Id>>):HKAudiogramSample;
+	@:hxmc.available(macos >= 13.0)
 	override function initWithCoder(coder:NSCoder):Null<HKAudiogramSample>;
 }

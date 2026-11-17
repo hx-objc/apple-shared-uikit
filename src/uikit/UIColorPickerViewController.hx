@@ -14,11 +14,17 @@ import foundation.NSCoder;
 	var supportsAlpha(get, set) : Bool;
 	function get_supportsAlpha():Bool;
 	function set_supportsAlpha(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var supportsEyedropper(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_supportsEyedropper():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_supportsEyedropper(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var maximumLinearExposure(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_maximumLinearExposure():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_maximumLinearExposure(v:Float):Float;
 	override function init():UIColorPickerViewController;
 	override function initWithCoder(coder:NSCoder):Null<UIColorPickerViewController>;

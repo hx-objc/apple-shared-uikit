@@ -10,11 +10,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("NearbyInteraction") @:hxmc.objc extern class NIAlgorithmConvergence extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("NearbyInteraction") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class NIAlgorithmConvergence extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():NIAlgorithmConvergence;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var status(get, never) : NIAlgorithmConvergenceStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_status():NIAlgorithmConvergenceStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var reasons(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_reasons():NSArray<NSString>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

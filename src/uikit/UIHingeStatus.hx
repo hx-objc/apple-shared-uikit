@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIHingeStatus(I64) to I64 {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Closed = 1;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var PartiallyOpen = 2;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var FullyOpen = 3;
 	inline function new(v:I64) this = v;
 }

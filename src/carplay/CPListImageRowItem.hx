@@ -29,12 +29,19 @@ import uikit.UIImage;
 	var gridImages(get, never) : NSArray<UIImage>;
 	function get_gridImages():NSArray<UIImage>;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var imageTitles(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_imageTitles():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var elements(get, set) : NSArray<CPListImageRowItemElement>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_elements():NSArray<CPListImageRowItemElement>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_elements(v:NSArray<CPListImageRowItemElement>):NSArray<CPListImageRowItemElement>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var allowsMultipleLines(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_allowsMultipleLines():Bool;
 	var listImageRowHandler(get, set) : Null<(CPListImageRowItem, I64, () -> Void) -> Void>;
 	function get_listImageRowHandler():Null<(CPListImageRowItem, I64, () -> Void) -> Void>;
@@ -45,15 +52,21 @@ import uikit.UIImage;
 	@:deprecated
 	overload function initWithText(text:NSStringArg, images:NSArray<UIImage>):CPListImageRowItem;
 	@:deprecated
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	overload function initWithText(text:NSStringArg, images:NSArray<UIImage>, imageTitles:NSArray<NSString>):CPListImageRowItem;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithText(text:Null<NSStringArg>, elements:NSArray<CPListImageRowItemRowElement>, allowsMultipleLines:Bool):CPListImageRowItem;
 	@:selector("initWithText:cardElements:allowsMultipleLines:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithTextCardElementsAllowsMultipleLines(text:Null<NSStringArg>, cardElements:NSArray<CPListImageRowItemCardElement>, allowsMultipleLines:Bool):CPListImageRowItem;
 	@:selector("initWithText:condensedElements:allowsMultipleLines:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithTextCondensedElementsAllowsMultipleLines(text:Null<NSStringArg>, condensedElements:NSArray<CPListImageRowItemCondensedElement>, allowsMultipleLines:Bool):CPListImageRowItem;
 	@:selector("initWithText:gridElements:allowsMultipleLines:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithTextGridElementsAllowsMultipleLines(text:Null<NSStringArg>, gridElements:NSArray<CPListImageRowItemGridElement>, allowsMultipleLines:Bool):CPListImageRowItem;
 	@:selector("initWithText:imageGridElements:allowsMultipleLines:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithTextImageGridElementsAllowsMultipleLines(text:Null<NSStringArg>, imageGridElements:NSArray<CPListImageRowItemImageGridElement>, allowsMultipleLines:Bool):CPListImageRowItem;
 	@:deprecated
 	function updateImages(gridImages:NSArray<UIImage>):Void;

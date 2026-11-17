@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorTextDecoration(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var None = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var GrammarUnderline = 1;
 	inline function new(v:I64) this = v;
 }

@@ -23,8 +23,11 @@ import uikit.UIView;
 	var prioritizesVideoDevices(get, set) : Bool;
 	function get_prioritizesVideoDevices():Bool;
 	function set_prioritizesVideoDevices(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var customRoutingController(get, set) : Null<AVCustomRoutingController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_customRoutingController():Null<AVCustomRoutingController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_customRoutingController(v:Null<AVCustomRoutingController>):Null<AVCustomRoutingController>;
 	override function init():AVRoutePickerView;
 	override function initWithCoder(coder:NSCoder):Null<AVRoutePickerView>;

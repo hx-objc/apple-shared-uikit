@@ -32,18 +32,28 @@ import objc.NSObject;
 	var accessibilityIgnoresInvertColors(get, set) : Bool;
 	function get_accessibilityIgnoresInvertColors():Bool;
 	function set_accessibilityIgnoresInvertColors(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var strokeWidth(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_strokeWidth():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_strokeWidth(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var strokeColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_strokeColor():Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_strokeColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var strokeColorTransformer(get, set) : Null<UIColor -> UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_strokeColorTransformer():Null<UIColor -> UIColor>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_strokeColorTransformer(v:Null<UIColor -> UIColor>):Null<UIColor -> UIColor>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function resolvedTintColorForTintColor(tintColor:UIColor):UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

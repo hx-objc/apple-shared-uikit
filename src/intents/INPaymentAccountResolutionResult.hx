@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPaymentAccountResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPaymentAccountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INPaymentAccountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INPaymentAccountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INPaymentAccountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INPaymentAccountResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INPaymentAccountResolutionResult;
 	static function successWithResolvedPaymentAccount(resolvedPaymentAccount:INPaymentAccount):INPaymentAccountResolutionResult;
 	static function disambiguationWithPaymentAccountsToDisambiguate(paymentAccountsToDisambiguate:NSArray<INPaymentAccount>):INPaymentAccountResolutionResult;

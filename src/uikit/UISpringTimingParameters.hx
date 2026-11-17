@@ -22,7 +22,9 @@ import objc.NSObject;
 	overload function initWithDampingRatio(ratio:Float, initialVelocity:CGVector):UISpringTimingParameters;
 	function initWithMass(mass:Float, stiffness:Float, damping:Float, initialVelocity:CGVector):UISpringTimingParameters;
 	overload function initWithDampingRatio(ratio:Float):UISpringTimingParameters;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithDuration(duration:Float, bounce:Float, initialVelocity:CGVector):UISpringTimingParameters;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithDuration(duration:Float, bounce:Float):UISpringTimingParameters;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function copyWithZone(zone:Ptr):Id;

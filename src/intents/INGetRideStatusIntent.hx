@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetRideStatusIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetRideStatusIntent;
 	override function init():INGetRideStatusIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetRideStatusIntent>;

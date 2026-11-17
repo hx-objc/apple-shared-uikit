@@ -3,13 +3,16 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIFindInteractionDelegate") extern interface UIFindInteractionDelegate extends NSObjectProtocol {
+@:hxmc.objc("UIFindInteractionDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UIFindInteractionDelegate extends NSObjectProtocol {
 	@:selector("findInteraction:sessionForView:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function findInteractionSessionForView(interaction:UIFindInteraction, sessionForView:UIView):Null<UIFindSession>;
 	@:selector("findInteraction:didBeginFindSession:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function findInteractionDidBeginFindSession(interaction:UIFindInteraction, didBeginFindSession:UIFindSession):Void;
 	@:selector("findInteraction:didEndFindSession:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function findInteractionDidEndFindSession(interaction:UIFindInteraction, didEndFindSession:UIFindSession):Void;
 }

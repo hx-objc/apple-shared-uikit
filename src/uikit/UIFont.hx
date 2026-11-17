@@ -54,6 +54,7 @@ import objc.NSObject;
 	static function italicSystemFontOfSize(fontSize:Float):UIFont;
 	static overload function systemFontOfSize(fontSize:Float, weight:Float):UIFont;
 	static function monospacedDigitSystemFontOfSize(fontSize:Float, weight:Float):UIFont;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function systemFontOfSize(fontSize:Float, weight:Float, width:Float):UIFont;
 	static function monospacedSystemFontOfSize(fontSize:Float, weight:Float):UIFont;
 	function fontWithSize(fontSize:Float):UIFont;

@@ -44,6 +44,7 @@ import foundation.NSStringArg;
 	function setNeedsUpdateConfiguration():Void;
 	function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
 	function defaultContentConfiguration():UIListContentConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function defaultBackgroundConfiguration():UIBackgroundConfiguration;
 	function prepareForReuse():Void;
 	override function init():UITableViewHeaderFooterView;

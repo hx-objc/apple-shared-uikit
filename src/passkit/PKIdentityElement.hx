@@ -7,56 +7,106 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityElement extends NSObject implements NSCopying {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityElement extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var givenNameElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_givenNameElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var familyNameElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_familyNameElement():PKIdentityElement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static var nameElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function get_nameElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var portraitElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_portraitElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var addressElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_addressElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var heightElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_heightElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var weightElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_weightElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var eyeColorElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_eyeColorElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var hairColorElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_hairColorElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var organDonorStatusElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_organDonorStatusElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var veteranStatusElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_veteranStatusElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var issuingAuthorityElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_issuingAuthorityElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var documentIssueDateElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_documentIssueDateElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var documentExpirationDateElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_documentExpirationDateElement():PKIdentityElement;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static var documentDHSComplianceStatusElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static function get_documentDHSComplianceStatusElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var documentNumberElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_documentNumberElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var drivingPrivilegesElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_drivingPrivilegesElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var ageElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_ageElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var dateOfBirthElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_dateOfBirthElement():PKIdentityElement;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static var sexElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 17.2, maccatalyst >= 17.2)
 	static function get_sexElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var signatureUsualMarkElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_signatureUsualMarkElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var placeOfBirthElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_placeOfBirthElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var nationalityElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_nationalityElement():PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var dhsTemporaryLawfulStatusElement(get, never) : PKIdentityElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_dhsTemporaryLawfulStatusElement():PKIdentityElement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function ageThresholdElementWithAge(age:I64):PKIdentityElement;
 	function copyWithZone(zone:Ptr):Id;
 }

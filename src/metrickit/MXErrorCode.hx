@@ -4,11 +4,17 @@ package metrickit;
 import hxmc.I64;
 
 enum abstract MXErrorCode(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskInvalidID = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskMaxCount = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskPastDeadline = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskDuplicated = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskUnknown = 4;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var LaunchTaskInternalFailure = 5;
 	inline function new(v:I64) this = v;
 }

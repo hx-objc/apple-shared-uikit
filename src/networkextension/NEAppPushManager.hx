@@ -17,11 +17,17 @@ import objc.NSObject;
 	var matchPrivateLTENetworks(get, set) : NSArray<NEPrivateLTENetwork>;
 	function get_matchPrivateLTENetworks():NSArray<NEPrivateLTENetwork>;
 	function set_matchPrivateLTENetworks(v:NSArray<NEPrivateLTENetwork>):NSArray<NEPrivateLTENetwork>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var matchEthernet(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_matchEthernet():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_matchEthernet(v:Bool):Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var matchMissionCriticalService(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_matchMissionCriticalService():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_matchMissionCriticalService(v:Bool):Bool;
 	var providerConfiguration(get, set) : NSDictionary<NSString, Id>;
 	function get_providerConfiguration():NSDictionary<NSString, Id>;

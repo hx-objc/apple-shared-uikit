@@ -198,6 +198,7 @@ import quartzcore.CAAnimation;
 	function addAnimation(animation:SCNAnimationProtocol, forKey:Null<NSStringArg>):Void;
 	function addAnimationPlayer(player:SCNAnimationPlayer, forKey:Null<NSStringArg>):Void;
 	function removeAllAnimations():Void;
+	@:hxmc.available(macos >= 12.0)
 	function removeAllAnimationsWithBlendOutDuration(duration:Float):Void;
 	overload function removeAnimationForKey(key:NSStringArg):Void;
 	overload function removeAnimationForKey(key:NSStringArg, blendOutDuration:Float):Void;

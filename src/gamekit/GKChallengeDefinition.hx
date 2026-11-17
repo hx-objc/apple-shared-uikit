@@ -8,26 +8,47 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("GameKit") @:hxmc.objc extern class GKChallengeDefinition extends NSObject {
+@:hxmc.framework("GameKit") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern class GKChallengeDefinition extends NSObject {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():GKChallengeDefinition;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var groupIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_groupIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var details(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_details():Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var durationOptions(get, never) : NSArray<NSDateComponents>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_durationOptions():NSArray<NSDateComponents>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var isRepeatable(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_isRepeatable():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var leaderboard(get, never) : Null<GKLeaderboard>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_leaderboard():Null<GKLeaderboard>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var releaseState(get, never) : GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_releaseState():GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function loadImageWithCompletionHandler(completionHandler:(Null<UIImage>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function loadChallengeDefinitionsWithCompletionHandler(completionHandler:(Null<NSArray<GKChallengeDefinition>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function hasActiveChallengesWithCompletionHandler(completionHandler:(Bool, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	override function init():GKChallengeDefinition;
 }

@@ -3,35 +3,64 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabBarControllerSidebar extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UITabBarControllerSidebar extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UITabBarControllerSidebar;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var delegate(get, set) : Null<UITabBarControllerSidebarDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_delegate():Null<UITabBarControllerSidebarDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_delegate(v:Null<UITabBarControllerSidebarDelegate>):Null<UITabBarControllerSidebarDelegate>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var isAvailable(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_isAvailable():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var preferredPlacement(get, set) : UITabBarControllerSidebarPlacement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_preferredPlacement():UITabBarControllerSidebarPlacement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_preferredPlacement(v:UITabBarControllerSidebarPlacement):UITabBarControllerSidebarPlacement;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_hidden(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var preferredLayout(get, set) : UITabBarControllerSidebarLayout;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_preferredLayout():UITabBarControllerSidebarLayout;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_preferredLayout(v:UITabBarControllerSidebarLayout):UITabBarControllerSidebarLayout;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var navigationOverflowItems(get, set) : Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_navigationOverflowItems():Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function set_navigationOverflowItems(v:Null<UIDeferredMenuElement>):Null<UIDeferredMenuElement>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var headerContentConfiguration(get, set) : Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_headerContentConfiguration():Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_headerContentConfiguration(v:Null<UIContentConfiguration>):Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var footerContentConfiguration(get, set) : Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_footerContentConfiguration():Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_footerContentConfiguration(v:Null<UIContentConfiguration>):Null<UIContentConfiguration>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var bottomBarView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_bottomBarView():Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_bottomBarView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function scrollToTarget(target:UITabSidebarScrollTarget, animated:Bool):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function reconfigureItemForTab(tab:UITab):Void;
 }

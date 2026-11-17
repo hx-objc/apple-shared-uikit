@@ -8,21 +8,32 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIBarMinimization extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UIBarMinimization extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UIBarMinimization;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var minimizationBehavior(get, set) : UIBarMinimizationBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_minimizationBehavior():UIBarMinimizationBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_minimizationBehavior(v:UIBarMinimizationBehavior):UIBarMinimizationBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var safeAreaAdjustment(get, set) : UIBarMinimizationSafeAreaAdjustment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_safeAreaAdjustment():UIBarMinimizationSafeAreaAdjustment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_safeAreaAdjustment(v:UIBarMinimizationSafeAreaAdjustment):UIBarMinimizationSafeAreaAdjustment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var restorationBehavior(get, set) : UIBarMinimizationRestorationBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_restorationBehavior():UIBarMinimizationRestorationBehavior;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_restorationBehavior(v:UIBarMinimizationRestorationBehavior):UIBarMinimizationRestorationBehavior;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIBarMinimization>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():UIBarMinimization;
 }

@@ -31,7 +31,9 @@ import uikit.UITraitCollection;
 	overload function popToTemplate(targetTemplate:CPTemplate, animated:Bool, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
 	overload function presentTemplate(templateToPresent:CPTemplate, animated:Bool, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
 	overload function dismissTemplateAnimated(animated:Bool, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function showOverlayTemplate(templateToShow:CPTemplate, animated:Bool, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function hideOverlayTemplateAnimated(animated:Bool, completion:Null<(Bool, Null<NSError>) -> Void>):Void;
 	@:deprecated
 	overload function setRootTemplate(rootTemplate:CPTemplate, animated:Bool):Void;

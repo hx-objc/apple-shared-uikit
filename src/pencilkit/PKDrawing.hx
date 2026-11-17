@@ -16,22 +16,29 @@ import uikit.UIImage;
 
 @:hxmc.framework("PencilKit") @:hxmc.objc extern class PKDrawing extends NSObject implements NSCopying implements NSSecureCoding {
 	static function alloc():PKDrawing;
+	@:hxmc.available(macos >= 11.0)
 	var strokes(get, never) : NSArray<PKStroke>;
+	@:hxmc.available(macos >= 11.0)
 	function get_strokes():NSArray<PKStroke>;
 	var bounds(get, never) : CGRect;
 	function get_bounds():CGRect;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var requiredContentVersion(get, never) : PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_requiredContentVersion():PKContentVersion;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	override function init():PKDrawing;
+	@:hxmc.available(macos >= 11.0)
 	function initWithStrokes(strokes:NSArray<PKStroke>):PKDrawing;
 	function initWithData(data:NSData, error:Ptr):Null<PKDrawing>;
 	function dataRepresentation():NSData;
 	function imageFromRect(rect:CGRect, scale:Float):UIImage;
 	function drawingByApplyingTransform(transform:CGAffineTransform):PKDrawing;
 	function drawingByAppendingDrawing(drawing:PKDrawing):PKDrawing;
+	@:hxmc.available(macos >= 11.0)
 	function drawingByAppendingStrokes(strokes:NSArray<PKStroke>):PKDrawing;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function drawingByErasingStrokePath(eraserPath:PKStrokePath, mask:Null<UIBezierPath>, transform:CGAffineTransform):PKDrawing;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

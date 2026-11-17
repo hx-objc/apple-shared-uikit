@@ -13,13 +13,18 @@ import objc.NSObject;
 	static function alloc():UIImageConfiguration;
 	var traitCollection(get, never) : Null<UITraitCollection>;
 	function get_traitCollection():Null<UITraitCollection>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var locale(get, never) : Null<NSLocale>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_locale():Null<NSLocale>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function configurationWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImageConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImageConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function configurationWithLocale(locale:Null<NSLocale>):UIImageConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithLocale(locale:Null<NSLocale>):UIImageConfiguration;
 	function configurationByApplyingConfiguration(otherConfiguration:Null<UIImageConfiguration>):UIImageConfiguration;
 	function copyWithZone(zone:Ptr):Id;

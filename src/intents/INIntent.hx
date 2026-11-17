@@ -9,28 +9,46 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INIntent extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class INIntent extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INIntent;
+	@:hxmc.available(macos >= 11.0)
 	var identifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_identifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var intentDescription(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_intentDescription():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var suggestedInvocationPhrase(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_suggestedInvocationPhrase():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function set_suggestedInvocationPhrase(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	var shortcutAvailability(get, set) : INShortcutAvailabilityOptions;
+	@:hxmc.available(macos >= 11.0)
 	function get_shortcutAvailability():INShortcutAvailabilityOptions;
+	@:hxmc.available(macos >= 11.0)
 	function set_shortcutAvailability(v:INShortcutAvailabilityOptions):INShortcutAvailabilityOptions;
+	@:hxmc.available(macos >= 12.0)
 	var donationMetadata(get, set) : Null<INIntentDonationMetadata>;
+	@:hxmc.available(macos >= 12.0)
 	function get_donationMetadata():Null<INIntentDonationMetadata>;
+	@:hxmc.available(macos >= 12.0)
 	function set_donationMetadata(v:Null<INIntentDonationMetadata>):Null<INIntentDonationMetadata>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function setImage(image:Null<INImage>, forParameterNamed:NSStringArg):Void;
+	@:hxmc.available(macos >= 11.0)
 	function imageForParameterNamed(parameterName:NSStringArg):Null<INImage>;
+	@:hxmc.available(macos >= 11.0)
 	function keyImage():Null<INImage>;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<INIntent>;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INIntent;
 }

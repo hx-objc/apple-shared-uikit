@@ -15,8 +15,10 @@ import hxmc.I64;
 	function set_interItemSpacing(v:Null<NSCollectionLayoutSpacing>):Null<NSCollectionLayoutSpacing>;
 	var subitems(get, never) : NSArray<NSCollectionLayoutItem>;
 	function get_subitems():NSArray<NSCollectionLayoutItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, repeatingSubitem:NSCollectionLayoutItem, count:I64):NSCollectionLayoutGroup;
 	static overload function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):NSCollectionLayoutGroup;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, repeatingSubitem:NSCollectionLayoutItem, count:I64):NSCollectionLayoutGroup;
 	static overload function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):NSCollectionLayoutGroup;
 	static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutEnvironment -> NSArray<NSCollectionLayoutGroupCustomItem>):NSCollectionLayoutGroup;

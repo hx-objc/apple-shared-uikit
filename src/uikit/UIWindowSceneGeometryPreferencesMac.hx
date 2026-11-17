@@ -3,11 +3,17 @@ package uikit;
 
 import coregraphics.CGRect;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIWindowSceneGeometryPreferencesMac extends UIWindowSceneGeometryPreferences {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(maccatalyst >= 16.0) extern class UIWindowSceneGeometryPreferencesMac extends UIWindowSceneGeometryPreferences {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UIWindowSceneGeometryPreferencesMac;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var systemFrame(get, set) : CGRect;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function get_systemFrame():CGRect;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function set_systemFrame(v:CGRect):CGRect;
+	@:hxmc.available(maccatalyst >= 16.0)
 	override function init():UIWindowSceneGeometryPreferencesMac;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function initWithSystemFrame(systemFrame:CGRect):UIWindowSceneGeometryPreferencesMac;
 }

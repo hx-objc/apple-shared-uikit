@@ -5,16 +5,24 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMapTemplateWaypoint extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPMapTemplateWaypoint extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPMapTemplateWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var waypoint(get, set) : CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_waypoint():CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_waypoint(v:CPNavigationWaypoint):CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var travelEstimates(get, set) : CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_travelEstimates():CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_travelEstimates(v:CPTravelEstimates):CPTravelEstimates;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithWaypoint(waypoint:CPNavigationWaypoint, travelEstimates:CPTravelEstimates):CPMapTemplateWaypoint;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPMapTemplateWaypoint>;

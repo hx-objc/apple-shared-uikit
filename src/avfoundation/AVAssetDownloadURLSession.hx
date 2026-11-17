@@ -21,5 +21,6 @@ import hxmc.objc.Id;
 	overload function assetDownloadTaskWithURLAsset(URLAsset:AVURLAsset, assetTitle:NSStringArg, assetArtworkData:Null<NSData>, options:Null<NSDictionary<NSString, Id>>):Null<AVAssetDownloadTask>;
 	@:deprecated
 	function aggregateAssetDownloadTaskWithURLAsset(URLAsset:AVURLAsset, mediaSelections:NSArray<AVMediaSelection>, assetTitle:NSStringArg, assetArtworkData:Null<NSData>, options:Null<NSDictionary<NSString, Id>>):Null<AVAggregateAssetDownloadTask>;
+	@:hxmc.available(macos >= 12.0)
 	function assetDownloadTaskWithConfiguration(downloadConfiguration:AVAssetDownloadConfiguration):AVAssetDownloadTask;
 }

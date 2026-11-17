@@ -5,9 +5,11 @@ import hxmc.I64;
 import hxmc.unsafe.Float32;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIPageControlProgressDelegate") extern interface UIPageControlProgressDelegate extends NSObjectProtocol {
+@:hxmc.objc("UIPageControlProgressDelegate") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIPageControlProgressDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function pageControlProgress(progress:UIPageControlProgress, initialProgressForPage:I64):Float32;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function pageControlProgressVisibilityDidChange(progress:UIPageControlProgress):Void;
 }

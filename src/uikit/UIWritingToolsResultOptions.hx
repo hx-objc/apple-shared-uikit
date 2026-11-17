@@ -4,11 +4,17 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsResultOptions(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Default = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var PlainText = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var RichText = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var List = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Table = 8;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var PresentationIntent = 16;
 	inline function new(v:I64) this = v;
 	var None = 0;

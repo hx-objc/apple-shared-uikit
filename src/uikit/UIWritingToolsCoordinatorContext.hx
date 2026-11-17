@@ -6,15 +6,25 @@ import foundation.NSRange;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIWritingToolsCoordinatorContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.2, maccatalyst >= 18.2) extern class UIWritingToolsCoordinatorContext extends NSObject {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():UIWritingToolsCoordinatorContext;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var attributedString(get, never) : NSAttributedString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_attributedString():NSAttributedString;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var range(get, never) : NSRange;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_range():NSRange;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var identifier(get, never) : NSUUID;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_identifier():NSUUID;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var resolvedRange(get, never) : NSRange;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function get_resolvedRange():NSRange;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	function initWithAttributedString(attributedString:NSAttributedString, range:NSRange):UIWritingToolsCoordinatorContext;
 }

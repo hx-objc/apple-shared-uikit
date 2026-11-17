@@ -68,26 +68,47 @@ import foundation.NSStringArg;
 	function set_maximumSupplementaryColumnWidth(v:Float):Float;
 	var supplementaryColumnWidth(get, never) : Float;
 	function get_supplementaryColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredSecondaryColumnWidthFraction(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredSecondaryColumnWidthFraction():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredSecondaryColumnWidthFraction(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredSecondaryColumnWidth(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredSecondaryColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredSecondaryColumnWidth(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var minimumSecondaryColumnWidth(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_minimumSecondaryColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_minimumSecondaryColumnWidth(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredInspectorColumnWidthFraction(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredInspectorColumnWidthFraction():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredInspectorColumnWidthFraction(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredInspectorColumnWidth(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredInspectorColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredInspectorColumnWidth(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var minimumInspectorColumnWidth(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_minimumInspectorColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_minimumInspectorColumnWidth(v:Float):Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var maximumInspectorColumnWidth(get, set) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_maximumInspectorColumnWidth():Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_maximumInspectorColumnWidth(v:Float):Float;
 	var primaryEdge(get, set) : UISplitViewControllerPrimaryEdge;
 	function get_primaryEdge():UISplitViewControllerPrimaryEdge;
@@ -102,6 +123,7 @@ import foundation.NSStringArg;
 	function viewControllerForColumn(column:UISplitViewControllerColumn):Null<UIViewController>;
 	function hideColumn(column:UISplitViewControllerColumn):Void;
 	function showColumn(column:UISplitViewControllerColumn):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function isShowingColumn(column:UISplitViewControllerColumn):Bool;
 	override function init():UISplitViewController;
 }

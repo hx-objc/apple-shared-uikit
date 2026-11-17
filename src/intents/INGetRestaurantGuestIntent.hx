@@ -4,7 +4,9 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetRestaurantGuestIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetRestaurantGuestIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetRestaurantGuestIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetRestaurantGuestIntent>;
 }

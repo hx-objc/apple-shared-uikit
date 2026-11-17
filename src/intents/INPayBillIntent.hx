@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INPayBillIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPayBillIntent;
 	var billPayee(get, never) : Null<INBillPayee>;
 	function get_billPayee():Null<INBillPayee>;
@@ -21,6 +22,7 @@ import foundation.NSStringArg;
 	var dueDate(get, never) : Null<INDateComponentsRange>;
 	function get_dueDate():Null<INDateComponentsRange>;
 	function initWithBillPayee(billPayee:Null<INBillPayee>, fromAccount:Null<INPaymentAccount>, transactionAmount:Null<INPaymentAmount>, transactionScheduledDate:Null<INDateComponentsRange>, transactionNote:Null<NSStringArg>, billType:INBillType, dueDate:Null<INDateComponentsRange>):INPayBillIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INPayBillIntent;
 	override function initWithCoder(coder:NSCoder):Null<INPayBillIntent>;
 }

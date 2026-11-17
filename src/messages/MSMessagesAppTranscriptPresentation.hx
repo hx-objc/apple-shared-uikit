@@ -5,10 +5,15 @@ import coregraphics.CGSize;
 import uikit.UIColor;
 
 @:hxmc.objc("MSMessagesAppTranscriptPresentation") extern interface MSMessagesAppTranscriptPresentation extends hxmc.objc.Id {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var messageTintColor(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_messageTintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var messageCornerRadius(get, never) : Float;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_messageCornerRadius():Float;
 	function contentSizeThatFits(size:CGSize):CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function invalidateMessageTintColor():Void;
 }

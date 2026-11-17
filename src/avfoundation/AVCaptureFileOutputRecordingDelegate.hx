@@ -12,12 +12,15 @@ import objc.NSObjectProtocol;
 	@:optional
 	function captureOutputDidStartRecordingToOutputFileAtURLFromConnections(output:AVCaptureFileOutput, didStartRecordingToOutputFileAtURL:NSURL, fromConnections:NSArray<AVCaptureConnection>):Void;
 	@:selector("captureOutput:didStartRecordingToOutputFileAtURL:startPTS:fromConnections:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function captureOutputDidStartRecordingToOutputFileAtURLStartPTSFromConnections(output:AVCaptureFileOutput, didStartRecordingToOutputFileAtURL:NSURL, startPTS:CMTime, fromConnections:NSArray<AVCaptureConnection>):Void;
 	@:selector("captureOutput:didPauseRecordingToOutputFileAtURL:fromConnections:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function captureOutputDidPauseRecordingToOutputFileAtURLFromConnections(output:AVCaptureFileOutput, didPauseRecordingToOutputFileAtURL:NSURL, fromConnections:NSArray<AVCaptureConnection>):Void;
 	@:selector("captureOutput:didResumeRecordingToOutputFileAtURL:fromConnections:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function captureOutputDidResumeRecordingToOutputFileAtURLFromConnections(output:AVCaptureFileOutput, didResumeRecordingToOutputFileAtURL:NSURL, fromConnections:NSArray<AVCaptureConnection>):Void;
 	@:selector("captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:")

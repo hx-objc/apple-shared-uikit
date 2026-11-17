@@ -4,6 +4,8 @@ package sharedwithyou;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("SharedWithYou") extern class SharedWithYou {
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final SWCollaborationMetadataTypeIdentifier : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final SWCopyRepresentationTypeIdentifier : NSString;
 }

@@ -4,13 +4,16 @@ package pdfkit;
 import objc.NSObjectProtocol;
 import uikit.UIView;
 
-@:hxmc.objc("PDFPageOverlayViewProvider") extern interface PDFPageOverlayViewProvider extends NSObjectProtocol {
+@:hxmc.objc("PDFPageOverlayViewProvider") @:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0) extern interface PDFPageOverlayViewProvider extends NSObjectProtocol {
 	@:selector("pdfView:overlayViewForPage:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function pdfViewOverlayViewForPage(view:PDFView, overlayViewForPage:PDFPage):Null<UIView>;
 	@:selector("pdfView:willDisplayOverlayView:forPage:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function pdfViewWillDisplayOverlayViewForPage(pdfView:PDFView, willDisplayOverlayView:UIView, forPage:PDFPage):Void;
 	@:selector("pdfView:willEndDisplayingOverlayView:forPage:")
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function pdfViewWillEndDisplayingOverlayViewForPage(pdfView:PDFView, willEndDisplayingOverlayView:UIView, forPage:PDFPage):Void;
 }

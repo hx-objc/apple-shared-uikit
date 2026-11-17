@@ -15,7 +15,9 @@ import objc.NSObject;
 	var storefront(get, never) : Null<SKStorefront>;
 	function get_storefront():Null<SKStorefront>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var transactionObservers(get, never) : NSArray<SKPaymentTransactionObserver>;
+	@:hxmc.available(macos >= 11.0)
 	function get_transactionObservers():NSArray<SKPaymentTransactionObserver>;
 	@:deprecated
 	var transactions(get, never) : NSArray<SKPaymentTransaction>;

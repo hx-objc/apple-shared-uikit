@@ -5,16 +5,27 @@ import foundation.NSData;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIImageReader extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIImageReader extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIImageReader;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultReader(get, never) : UIImageReader;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultReader():UIImageReader;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var configuration(get, never) : UIImageReaderConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_configuration():UIImageReaderConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function readerWithConfiguration(configuration:UIImageReaderConfiguration):UIImageReader;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function imageWithContentsOfFileURL(url:NSURL):UIImage;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function imageWithData(data:NSData):UIImage;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function imageWithContentsOfFileURL(url:NSURL, completion:Null<UIImage> -> Void):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	overload function imageWithData(data:NSData, completion:Null<UIImage> -> Void):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIImageReader;
 }

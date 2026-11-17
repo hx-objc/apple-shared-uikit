@@ -155,6 +155,7 @@ import hxmc.objc.Selector;
 	function setNeedsUpdateConfiguration():Void;
 	function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 	function defaultContentConfiguration():UIListContentConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function defaultBackgroundConfiguration():UIBackgroundConfiguration;
 	function prepareForReuse():Void;
 	function setSelected(selected:Bool, animated:Bool):Void;

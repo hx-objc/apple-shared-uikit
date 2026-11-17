@@ -9,11 +9,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRFaceMetricsExpression extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class SRFaceMetricsExpression extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SRFaceMetricsExpression;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var value(get, never) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_value():Float;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

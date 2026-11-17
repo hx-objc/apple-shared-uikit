@@ -4,19 +4,30 @@ package carplay;
 import foundation.NSCoder;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingModeSports extends CPNowPlayingMode {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingModeSports extends CPNowPlayingMode {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingModeSports;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var leftTeam(get, never) : CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_leftTeam():CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var rightTeam(get, never) : CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_rightTeam():CPNowPlayingSportsTeam;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var eventStatus(get, never) : Null<CPNowPlayingSportsEventStatus>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_eventStatus():Null<CPNowPlayingSportsEventStatus>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var backgroundArtwork(get, never) : Null<UIImage>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_backgroundArtwork():Null<UIImage>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithLeftTeam(leftTeam:CPNowPlayingSportsTeam, rightTeam:CPNowPlayingSportsTeam, eventStatus:Null<CPNowPlayingSportsEventStatus>, backgroundArtwork:Null<UIImage>):CPNowPlayingModeSports;
 	override function initWithCoder(coder:NSCoder):Null<CPNowPlayingModeSports>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():CPNowPlayingModeSports;
 }

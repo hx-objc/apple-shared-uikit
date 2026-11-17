@@ -5,9 +5,12 @@ import foundation.NSCoder;
 import foundation.NSDate;
 
 @:hxmc.framework("HealthKit") @:hxmc.objc @:deprecated extern class HKCumulativeQuantitySeriesSample extends HKCumulativeQuantitySample {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKCumulativeQuantitySeriesSample;
+	@:hxmc.available(macos >= 13.0)
 	static overload function quantitySampleWithType(quantityType:HKQuantityType, quantity:HKQuantity, startDate:NSDate, endDate:NSDate):HKCumulativeQuantitySeriesSample;
 	var sum(get, never) : HKQuantity;
 	function get_sum():HKQuantity;
+	@:hxmc.available(macos >= 13.0)
 	override function initWithCoder(coder:NSCoder):Null<HKCumulativeQuantitySeriesSample>;
 }

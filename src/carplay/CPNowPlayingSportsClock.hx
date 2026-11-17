@@ -5,18 +5,27 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingSportsClock extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingSportsClock extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingSportsClock;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var timeValue(get, never) : Float;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_timeValue():Float;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var paused(get, never) : Bool;
 	@:selector("isPaused")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_paused():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var countsUp(get, never) : Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function get_countsUp():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithElapsedTime(elapsedTime:Float, paused:Bool):CPNowPlayingSportsClock;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function initWithTimeRemaining(timeRemaining:Float, paused:Bool):CPNowPlayingSportsClock;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNowPlayingSportsClock>;

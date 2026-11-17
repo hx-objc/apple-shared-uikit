@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INAccountTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAccountTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INAccountTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INAccountTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INAccountTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INAccountTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INAccountTypeResolutionResult;
 	static function successWithResolvedAccountType(resolvedAccountType:INAccountType):INAccountTypeResolutionResult;
 	@:deprecated

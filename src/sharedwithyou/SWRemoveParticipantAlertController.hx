@@ -7,9 +7,13 @@ import foundation.NSStringArg;
 import sharedwithyoucore.SWPerson;
 import uikit.UIViewController;
 
-@:hxmc.framework("SharedWithYou") @:hxmc.objc extern class SWRemoveParticipantAlertController extends UIViewController {
+@:hxmc.framework("SharedWithYou") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class SWRemoveParticipantAlertController extends UIViewController {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():SWRemoveParticipantAlertController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alertControllerWithParticipant(participant:SWPerson, highlight:SWCollaborationHighlight):SWRemoveParticipantAlertController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<SWRemoveParticipantAlertController>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):SWRemoveParticipantAlertController;
 }

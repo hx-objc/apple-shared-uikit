@@ -6,11 +6,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIHinge extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIHinge extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIHinge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var status(get, never) : UIHingeStatus;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_status():UIHingeStatus;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var angle(get, never) : Float;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_angle():Float;
 	function copyWithZone(zone:Ptr):Id;
 }

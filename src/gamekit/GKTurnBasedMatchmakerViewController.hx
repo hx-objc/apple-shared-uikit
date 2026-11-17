@@ -17,8 +17,11 @@ import uikit.UIViewController;
 	var showExistingMatches(get, set) : Bool;
 	function get_showExistingMatches():Bool;
 	function set_showExistingMatches(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var matchmakingMode(get, set) : GKMatchmakingMode;
+	@:hxmc.available(macos >= 12.0)
 	function get_matchmakingMode():GKMatchmakingMode;
+	@:hxmc.available(macos >= 12.0)
 	function set_matchmakingMode(v:GKMatchmakingMode):GKMatchmakingMode;
 	function initWithMatchRequest(request:GKMatchRequest):Id;
 	override function init():GKTurnBasedMatchmakerViewController;

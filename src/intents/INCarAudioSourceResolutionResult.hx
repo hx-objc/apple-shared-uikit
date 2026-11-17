@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCarAudioSourceResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCarAudioSourceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INCarAudioSourceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INCarAudioSourceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INCarAudioSourceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INCarAudioSourceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INCarAudioSourceResolutionResult;
 	static function successWithResolvedCarAudioSource(resolvedCarAudioSource:INCarAudioSource):INCarAudioSourceResolutionResult;
 	@:deprecated

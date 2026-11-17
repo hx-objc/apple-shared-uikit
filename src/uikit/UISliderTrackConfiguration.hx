@@ -11,23 +11,40 @@ import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISliderTrackConfiguration extends NSObject implements NSCopying implements NSCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UISliderTrackConfiguration extends NSObject implements NSCopying implements NSCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UISliderTrackConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var allowsTickValuesOnly(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_allowsTickValuesOnly():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_allowsTickValuesOnly(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var neutralValue(get, set) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_neutralValue():Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_neutralValue(v:Float32):Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var minimumEnabledValue(get, set) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_minimumEnabledValue():Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_minimumEnabledValue(v:Float32):Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var maximumEnabledValue(get, set) : Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_maximumEnabledValue():Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_maximumEnabledValue(v:Float32):Float32;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var ticks(get, never) : NSArray<UISliderTick>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_ticks():NSArray<UISliderTick>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithTicks(ticks:NSArray<UISliderTick>):UISliderTrackConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithNumberOfTicks(ticks:I64):UISliderTrackConfiguration;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

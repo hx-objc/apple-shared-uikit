@@ -5,13 +5,21 @@ import coregraphics.CGPoint;
 import coregraphics.CGVector;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIZoomTransitionInteractionContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIZoomTransitionInteractionContext extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIZoomTransitionInteractionContext;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var location(get, never) : CGPoint;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_location():CGPoint;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var velocity(get, never) : CGVector;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_velocity():CGVector;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var willBegin(get, never) : Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_willBegin():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UIZoomTransitionInteractionContext;
 }

@@ -5,17 +5,21 @@ import coregraphics.CGRect;
 import foundation.NSArray;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIEditMenuInteractionDelegate") extern interface UIEditMenuInteractionDelegate extends NSObjectProtocol {
+@:hxmc.objc("UIEditMenuInteractionDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UIEditMenuInteractionDelegate extends NSObjectProtocol {
 	@:selector("editMenuInteraction:menuForConfiguration:suggestedActions:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function editMenuInteractionMenuForConfigurationSuggestedActions(interaction:UIEditMenuInteraction, menuForConfiguration:UIEditMenuConfiguration, suggestedActions:NSArray<UIMenuElement>):Null<UIMenu>;
 	@:selector("editMenuInteraction:targetRectForConfiguration:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function editMenuInteractionTargetRectForConfiguration(interaction:UIEditMenuInteraction, targetRectForConfiguration:UIEditMenuConfiguration):CGRect;
 	@:selector("editMenuInteraction:willPresentMenuForConfiguration:animator:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function editMenuInteractionWillPresentMenuForConfigurationAnimator(interaction:UIEditMenuInteraction, willPresentMenuForConfiguration:UIEditMenuConfiguration, animator:UIEditMenuInteractionAnimating):Void;
 	@:selector("editMenuInteraction:willDismissMenuForConfiguration:animator:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function editMenuInteractionWillDismissMenuForConfigurationAnimator(interaction:UIEditMenuInteraction, willDismissMenuForConfiguration:UIEditMenuConfiguration, animator:UIEditMenuInteractionAnimating):Void;
 }

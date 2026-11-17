@@ -5,12 +5,19 @@ import foundation.NSArray;
 import foundation.NSData;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PKIdentityDocumentDescriptor") extern interface PKIdentityDocumentDescriptor extends NSObjectProtocol {
+@:hxmc.objc("PKIdentityDocumentDescriptor") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface PKIdentityDocumentDescriptor extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var elements(get, never) : NSArray<PKIdentityElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_elements():NSArray<PKIdentityElement>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var issuerIdentifiers(get, set) : NSArray<NSData>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_issuerIdentifiers():NSArray<NSData>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_issuerIdentifiers(v:NSArray<NSData>):NSArray<NSData>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function intentToStoreForElement(element:PKIdentityElement):Null<PKIdentityIntentToStore>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function addElements(elements:NSArray<PKIdentityElement>, withIntentToStore:PKIdentityIntentToStore):Void;
 }

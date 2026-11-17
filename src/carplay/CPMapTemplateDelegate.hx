@@ -6,34 +6,45 @@ import foundation.NSError;
 import objc.NSObjectProtocol;
 
 @:hxmc.objc("CPMapTemplateDelegate") extern interface CPMapTemplateDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	@:optional
 	function mapTemplateShouldProvideNavigationMetadata(mapTemplate:CPMapTemplate):Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateShouldProvideRouteSharing(mapTemplate:CPMapTemplate):Bool;
 	@:selector("mapTemplate:didRequestToInsertWaypoint:intoSegment:completion:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateDidRequestToInsertWaypointIntoSegmentCompletion(mapTemplate:CPMapTemplate, didRequestToInsertWaypoint:CPNavigationWaypoint, intoSegment:CPRouteSegment, completion:CPTravelEstimates -> Void):Void;
 	@:selector("mapTemplate:mapTemplateWaypoint:accepted:forSegment:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateMapTemplateWaypointAcceptedForSegment(mapTemplate:CPMapTemplate, mapTemplateWaypoint:CPNavigationWaypoint, accepted:Bool, forSegment:Null<CPRouteSegment>):Void;
 	@:selector("mapTemplate:didReceiveUpdatedRouteSource:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateDidReceiveUpdatedRouteSource(mapTemplate:CPMapTemplate, didReceiveUpdatedRouteSource:CPRouteSource):Void;
 	@:selector("mapTemplate:didReceiveRequestForDestination:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateDidReceiveRequestForDestination(mapTemplate:CPMapTemplate, didReceiveRequestForDestination:CPNavigationWaypoint):Void;
 	@:selector("mapTemplate:didUpdateRouteSharingEnabled:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function mapTemplateDidUpdateRouteSharingEnabled(mapTemplate:CPMapTemplate, didUpdateRouteSharingEnabled:Bool):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function mapTemplateShouldProvideMultiStopRouting(mapTemplate:CPMapTemplate):Bool;
 	@:selector("mapTemplate:didRequestToRemoveWaypoint:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function mapTemplateDidRequestToRemoveWaypoint(mapTemplate:CPMapTemplate, didRequestToRemoveWaypoint:CPNavigationWaypoint):Void;
 	@:selector("mapTemplate:didRequestToRemoveDestination:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function mapTemplateDidRequestToRemoveDestination(mapTemplate:CPMapTemplate, didRequestToRemoveDestination:CPNavigationWaypoint):Void;
 	@:selector("mapTemplate:didRequestMultiStopCardConfigurationWithCompletion:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function mapTemplateDidRequestMultiStopCardConfigurationWithCompletion(mapTemplate:CPMapTemplate, didRequestMultiStopCardConfigurationWithCompletion:CPMultiStopCardConfiguration -> Void):Void;
 	@:selector("mapTemplate:shouldShowNotificationForManeuver:")
@@ -46,12 +57,15 @@ import objc.NSObjectProtocol;
 	@:optional
 	function mapTemplateShouldShowNotificationForNavigationAlert(mapTemplate:CPMapTemplate, shouldShowNotificationForNavigationAlert:CPNavigationAlert):Bool;
 	@:selector("mapTemplate:willShareDestinationForTrip:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateWillShareDestinationForTrip(mapTemplate:CPMapTemplate, willShareDestinationForTrip:CPTrip):Void;
 	@:selector("mapTemplate:didFailToShareDestinationForTrip:error:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateDidFailToShareDestinationForTripError(mapTemplate:CPMapTemplate, didFailToShareDestinationForTrip:CPTrip, error:NSError):Void;
 	@:selector("mapTemplate:didShareDestinationForTrip:")
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	@:optional
 	function mapTemplateDidShareDestinationForTrip(mapTemplate:CPMapTemplate, didShareDestinationForTrip:CPTrip):Void;
 	@:optional
@@ -77,28 +91,37 @@ import objc.NSObjectProtocol;
 	@:selector("mapTemplate:didEndPanGestureWithVelocity:")
 	@:optional
 	function mapTemplateDidEndPanGestureWithVelocity(mapTemplate:CPMapTemplate, didEndPanGestureWithVelocity:CGPoint):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidBeginZoomGesture(mapTemplate:CPMapTemplate):Void;
 	@:selector("mapTemplate:didUpdateZoomGestureWithCenter:scale:velocity:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidUpdateZoomGestureWithCenterScaleVelocity(mapTemplate:CPMapTemplate, didUpdateZoomGestureWithCenter:CGPoint, scale:Float, velocity:Float):Void;
 	@:selector("mapTemplate:didEndZoomGestureWithVelocity:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidEndZoomGestureWithVelocity(mapTemplate:CPMapTemplate, didEndZoomGestureWithVelocity:Float):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidBeginRotationGesture(mapTemplate:CPMapTemplate):Void;
 	@:selector("mapTemplate:didRotateWithCenter:rotation:velocity:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidRotateWithCenterRotationVelocity(mapTemplate:CPMapTemplate, didRotateWithCenter:CGPoint, rotation:Float, velocity:Float):Void;
 	@:selector("mapTemplate:rotationDidEndWithVelocity:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateRotationDidEndWithVelocity(mapTemplate:CPMapTemplate, rotationDidEndWithVelocity:Float):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplateDidBeginPitchGesture(mapTemplate:CPMapTemplate):Void;
 	@:selector("mapTemplate:pitchWithCenter:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplatePitchWithCenter(mapTemplate:CPMapTemplate, pitchWithCenter:CGPoint):Void;
 	@:selector("mapTemplate:pitchEndedWithCenter:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	@:optional
 	function mapTemplatePitchEndedWithCenter(mapTemplate:CPMapTemplate, pitchEndedWithCenter:CGPoint):Void;
 	@:selector("mapTemplate:willShowNavigationAlert:")

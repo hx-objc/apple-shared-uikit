@@ -6,14 +6,20 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSnoozeTasksTaskResolutionResult extends INTaskResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSnoozeTasksTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INSnoozeTasksTaskResolutionResult;
 	static function confirmationRequiredWithTaskToConfirm(taskToConfirm:Null<INTask>):INSnoozeTasksTaskResolutionResult;
 	static function disambiguationWithTasksToDisambiguate(tasksToDisambiguate:NSArray<INTask>):INSnoozeTasksTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INSnoozeTasksTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INSnoozeTasksTaskResolutionResult;
 	static function successWithResolvedTask(resolvedTask:INTask):INSnoozeTasksTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INSnoozeTasksTaskResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INSnoozeTasksTaskResolutionResult;
 	static function unsupportedForReason(reason:INSnoozeTasksTaskUnsupportedReason):INSnoozeTasksTaskResolutionResult;
 	function initWithTaskResolutionResult(taskResolutionResult:INTaskResolutionResult):INSnoozeTasksTaskResolutionResult;

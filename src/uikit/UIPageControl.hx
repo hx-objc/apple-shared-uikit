@@ -21,8 +21,11 @@ import hxmc.I64;
 	var hidesForSinglePage(get, set) : Bool;
 	function get_hidesForSinglePage():Bool;
 	function set_hidesForSinglePage(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var progress(get, set) : Null<UIPageControlProgress>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_progress():Null<UIPageControlProgress>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_progress(v:Null<UIPageControlProgress>):Null<UIPageControlProgress>;
 	var pageIndicatorTintColor(get, set) : Null<UIColor>;
 	function get_pageIndicatorTintColor():Null<UIColor>;
@@ -33,8 +36,11 @@ import hxmc.I64;
 	var backgroundStyle(get, set) : UIPageControlBackgroundStyle;
 	function get_backgroundStyle():UIPageControlBackgroundStyle;
 	function set_backgroundStyle(v:UIPageControlBackgroundStyle):UIPageControlBackgroundStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var direction(get, set) : UIPageControlDirection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_direction():UIPageControlDirection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_direction(v:UIPageControlDirection):UIPageControlDirection;
 	var interactionState(get, never) : UIPageControlInteractionState;
 	function get_interactionState():UIPageControlInteractionState;
@@ -44,8 +50,11 @@ import hxmc.I64;
 	var preferredIndicatorImage(get, set) : Null<UIImage>;
 	function get_preferredIndicatorImage():Null<UIImage>;
 	function set_preferredIndicatorImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredCurrentPageIndicatorImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredCurrentPageIndicatorImage():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredCurrentPageIndicatorImage(v:Null<UIImage>):Null<UIImage>;
 	@:deprecated
 	var defersCurrentPageDisplay(get, set) : Bool;
@@ -53,7 +62,9 @@ import hxmc.I64;
 	function set_defersCurrentPageDisplay(v:Bool):Bool;
 	function indicatorImageForPage(page:I64):Null<UIImage>;
 	function setIndicatorImage(image:Null<UIImage>, forPage:I64):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function currentPageIndicatorImageForPage(page:I64):Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setCurrentPageIndicatorImage(image:Null<UIImage>, forPage:I64):Void;
 	function sizeForNumberOfPages(pageCount:I64):CGSize;
 	@:deprecated

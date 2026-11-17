@@ -7,7 +7,9 @@ import objc.NSObject;
 
 @:hxmc.framework("CoreMotion") @:hxmc.objc extern class CMMotionManager extends NSObject {
 	static function alloc():CMMotionManager;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	static var authorizationStatus(get, never) : CMAuthorizationStatus;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	static function get_authorizationStatus():CMAuthorizationStatus;
 	var accelerometerUpdateInterval(get, set) : Float;
 	function get_accelerometerUpdateInterval():Float;
@@ -47,8 +49,11 @@ import objc.NSObject;
 	function set_deviceMotionUpdateInterval(v:Float):Float;
 	var attitudeReferenceFrame(get, never) : CMAttitudeReferenceFrame;
 	function get_attitudeReferenceFrame():CMAttitudeReferenceFrame;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var deviceMotionBody(get, set) : Null<CMBodyIdentifiable>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_deviceMotionBody():Null<CMBodyIdentifiable>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_deviceMotionBody(v:Null<CMBodyIdentifiable>):Null<CMBodyIdentifiable>;
 	var deviceMotionAvailable(get, never) : Bool;
 	@:selector("isDeviceMotionAvailable")

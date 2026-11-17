@@ -9,30 +9,54 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPRouteSegment extends NSObject implements NSCopying {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPRouteSegment extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPRouteSegment;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var identifier(get, never) : NSUUID;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_identifier():NSUUID;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var origin(get, never) : CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_origin():CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var destination(get, never) : CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_destination():CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var coordinates(get, never) : Ptr;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_coordinates():Ptr;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var coordinatesCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_coordinatesCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var maneuvers(get, never) : NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_maneuvers():NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var laneGuidances(get, never) : NSArray<CPLaneGuidance>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_laneGuidances():NSArray<CPLaneGuidance>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var currentManeuvers(get, never) : NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_currentManeuvers():NSArray<CPManeuver>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var currentLaneGuidance(get, never) : CPLaneGuidance;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_currentLaneGuidance():CPLaneGuidance;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var tripTravelEstimates(get, never) : CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_tripTravelEstimates():CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var maneuverTravelEstimates(get, never) : CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_maneuverTravelEstimates():CPTravelEstimates;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithOrigin(origin:CPNavigationWaypoint, destination:CPNavigationWaypoint, maneuvers:NSArray<CPManeuver>, laneGuidances:NSArray<CPLaneGuidance>, currentManeuvers:NSArray<CPManeuver>, currentLaneGuidance:CPLaneGuidance, tripTravelEstimates:CPTravelEstimates, maneuverTravelEstimates:CPTravelEstimates, coordinates:Ptr, coordinatesCount:I64):CPRouteSegment;
 	function copyWithZone(zone:Ptr):Id;
 }

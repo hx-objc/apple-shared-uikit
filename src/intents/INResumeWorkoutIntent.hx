@@ -4,10 +4,12 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INResumeWorkoutIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INResumeWorkoutIntent;
 	var workoutName(get, never) : Null<INSpeakableString>;
 	function get_workoutName():Null<INSpeakableString>;
 	function initWithWorkoutName(workoutName:Null<INSpeakableString>):INResumeWorkoutIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INResumeWorkoutIntent;
 	override function initWithCoder(coder:NSCoder):Null<INResumeWorkoutIntent>;
 }

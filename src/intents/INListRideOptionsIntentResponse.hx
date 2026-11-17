@@ -7,6 +7,7 @@ import foundation.NSDate;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INListRideOptionsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INListRideOptionsIntentResponse;
 	var code(get, never) : INListRideOptionsIntentResponseCode;
 	function get_code():INListRideOptionsIntentResponseCode;

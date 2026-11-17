@@ -40,12 +40,18 @@ import objc.NSObject;
 	function get_photoCount():I64;
 	var sourceDeviceType(get, never) : Null<NSStringArg>;
 	function get_sourceDeviceType():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorConfidenceMap(get, never) : Null<CVBuffer>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorConfidenceMap():Null<CVBuffer>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorCenterWeightedMeanConfidenceLevel(get, never) : Float32;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorCenterWeightedMeanConfidenceLevel():Float32;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorFallbackPhoto(get, never) : Bool;
 	@:selector("isConstantColorFallbackPhoto")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorFallbackPhoto():Bool;
 	var bracketSettings(get, never) : Null<AVCaptureBracketedStillImageSettings>;
 	function get_bracketSettings():Null<AVCaptureBracketedStillImageSettings>;

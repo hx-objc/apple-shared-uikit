@@ -207,8 +207,11 @@ import uikit.UIColor;
 	var fresnelExponent(get, set) : Float;
 	function get_fresnelExponent():Float;
 	function set_fresnelExponent(v:Float):Float;
+	@:hxmc.available(macos >= 12.0)
 	var writesToDepthBuffer(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_writesToDepthBuffer():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_writesToDepthBuffer(v:Bool):Bool;
 	var propertyControllers(get, set) : Null<NSDictionary<NSString, SCNParticlePropertyController>>;
 	function get_propertyControllers():Null<NSDictionary<NSString, SCNParticlePropertyController>>;
@@ -230,6 +233,7 @@ import uikit.UIColor;
 	function addAnimation(animation:SCNAnimationProtocol, forKey:Null<NSStringArg>):Void;
 	function addAnimationPlayer(player:SCNAnimationPlayer, forKey:Null<NSStringArg>):Void;
 	function removeAllAnimations():Void;
+	@:hxmc.available(macos >= 12.0)
 	function removeAllAnimationsWithBlendOutDuration(duration:Float):Void;
 	overload function removeAnimationForKey(key:NSStringArg):Void;
 	overload function removeAnimationForKey(key:NSStringArg, blendOutDuration:Float):Void;

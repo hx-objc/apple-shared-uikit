@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITraitSystemPrefersReducedResourceUsage extends NSObject implements UINSIntegerTraitDefinition {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class UITraitSystemPrefersReducedResourceUsage extends NSObject implements UINSIntegerTraitDefinition {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():UITraitSystemPrefersReducedResourceUsage;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultValue(get, never) : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():I64;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():UITraitSystemPrefersReducedResourceUsage;
 }

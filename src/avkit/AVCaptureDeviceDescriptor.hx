@@ -7,16 +7,27 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureDeviceDescriptor extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class AVCaptureDeviceDescriptor extends NSObject {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():AVCaptureDeviceDescriptor;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var deviceType(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_deviceType():NSStringArg;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var mediaTypes(get, never) : NSSet<NSString>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_mediaTypes():NSSet<NSString>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var position(get, never) : AVCaptureDevicePosition;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_position():AVCaptureDevicePosition;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var uniqueID(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_uniqueID():NSStringArg;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var localizedName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_localizedName():NSStringArg;
 }

@@ -9,7 +9,9 @@ import objc.NSObject;
 	var connectedTag(get, never) : Null<NFCTag>;
 	function get_connectedTag():Null<NFCTag>;
 	function initWithPollingOption(pollingOption:NFCPollingOption, delegate:NFCTagReaderSessionDelegate, queue:Null<NSObject>):NFCTagReaderSession;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithConfiguration(configuration:NFCTagReaderSessionConfiguration, delegate:NFCTagReaderSessionDelegate, queue:NSObject):NFCTagReaderSession;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function restartPollingWithConfiguration(configuration:NFCTagReaderSessionConfiguration):Void;
 	function restartPolling():Void;
 	function connectToTag(tag:NFCTag, completionHandler:Null<NSError> -> Void):Void;

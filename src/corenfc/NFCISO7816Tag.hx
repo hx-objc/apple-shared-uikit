@@ -17,7 +17,9 @@ import hxmc.unsafe.UInt8;
 	function get_applicationData():Null<NSData>;
 	var proprietaryApplicationDataCoding(get, never) : Bool;
 	function get_proprietaryApplicationDataCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var supportsPACE(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_supportsPACE():Bool;
 	function sendCommandAPDU(apdu:NFCISO7816APDU, completionHandler:(NSData, UInt8, UInt8, Null<NSError>) -> Void):Void;
 }

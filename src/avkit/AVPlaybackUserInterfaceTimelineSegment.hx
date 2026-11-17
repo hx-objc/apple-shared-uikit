@@ -10,21 +10,33 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceTimelineSegment extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceTimelineSegment extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceTimelineSegment;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var timeRange(get, never) : CMTimeRange;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_timeRange():CMTimeRange;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var segmentType(get, never) : AVPlaybackUserInterfaceTimelineSegmentType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_segmentType():AVPlaybackUserInterfaceTimelineSegmentType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var marked(get, never) : Bool;
 	@:selector("isMarked")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_marked():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var requiresLinearPlayback(get, never) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_requiresLinearPlayback():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var identifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_identifier():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTimeRange(timeRange:CMTimeRange, segmentType:AVPlaybackUserInterfaceTimelineSegmentType, marked:Bool, requiresLinearPlayback:Bool, identifier:Null<NSStringArg>):AVPlaybackUserInterfaceTimelineSegment;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

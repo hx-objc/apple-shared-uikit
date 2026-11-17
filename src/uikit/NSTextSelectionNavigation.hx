@@ -6,22 +6,39 @@ import coregraphics.CGRect;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextSelectionNavigation extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextSelectionNavigation extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextSelectionNavigation;
+	@:hxmc.available(macos >= 12.0)
 	var textSelectionDataSource(get, never) : Null<NSTextSelectionDataSource>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textSelectionDataSource():Null<NSTextSelectionDataSource>;
+	@:hxmc.available(macos >= 12.0)
 	var allowsNonContiguousRanges(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_allowsNonContiguousRanges():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_allowsNonContiguousRanges(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var rotatesCoordinateSystemForLayoutOrientation(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_rotatesCoordinateSystemForLayoutOrientation():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_rotatesCoordinateSystemForLayoutOrientation(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithDataSource(dataSource:NSTextSelectionDataSource):NSTextSelectionNavigation;
+	@:hxmc.available(macos >= 12.0)
 	function flushLayoutCache():Void;
+	@:hxmc.available(macos >= 12.0)
 	function destinationSelectionForTextSelection(textSelection:NSTextSelection, direction:NSTextSelectionNavigationDirection, destination:NSTextSelectionNavigationDestination, extending:Bool, confined:Bool):Null<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	function textSelectionsInteractingAtPoint(point:CGPoint, inContainerAtLocation:NSTextLocation, anchors:NSArray<NSTextSelection>, modifiers:NSTextSelectionNavigationModifier, selecting:Bool, bounds:CGRect):NSArray<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	overload function textSelectionForSelectionGranularity(selectionGranularity:NSTextSelectionGranularity, enclosingTextSelection:NSTextSelection):NSTextSelection;
+	@:hxmc.available(macos >= 12.0)
 	overload function textSelectionForSelectionGranularity(selectionGranularity:NSTextSelectionGranularity, enclosingPoint:CGPoint, inContainerAtLocation:NSTextLocation):Null<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	function resolvedInsertionLocationForTextSelection(textSelection:NSTextSelection, writingDirection:NSTextSelectionNavigationWritingDirection):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function deletionRangesForTextSelection(textSelection:NSTextSelection, direction:NSTextSelectionNavigationDirection, destination:NSTextSelectionNavigationDestination, allowsDecomposition:Bool):NSArray<NSTextRange>;
 }

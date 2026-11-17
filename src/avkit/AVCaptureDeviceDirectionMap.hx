@@ -4,10 +4,15 @@ package avkit;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVCaptureDeviceDirectionMap extends NSObject {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class AVCaptureDeviceDirectionMap extends NSObject {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():AVCaptureDeviceDirectionMap;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var forwardFacingDeviceDescriptors(get, never) : NSArray<AVCaptureDeviceDescriptor>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_forwardFacingDeviceDescriptors():NSArray<AVCaptureDeviceDescriptor>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var backwardFacingDeviceDescriptors(get, never) : NSArray<AVCaptureDeviceDescriptor>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_backwardFacingDeviceDescriptors():NSArray<AVCaptureDeviceDescriptor>;
 }

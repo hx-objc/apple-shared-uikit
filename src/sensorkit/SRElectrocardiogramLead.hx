@@ -4,7 +4,9 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRElectrocardiogramLead(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RightArmMinusLeftArm = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var LeftArmMinusRightArm = 2;
 	inline function new(v:I64) this = v;
 }

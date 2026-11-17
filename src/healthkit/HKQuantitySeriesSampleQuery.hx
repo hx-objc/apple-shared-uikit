@@ -6,15 +6,24 @@ import foundation.NSDateInterval;
 import foundation.NSError;
 import foundation.NSPredicate;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKQuantitySeriesSampleQuery extends HKQuery {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKQuantitySeriesSampleQuery extends HKQuery {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKQuantitySeriesSampleQuery;
+	@:hxmc.available(macos >= 13.0)
 	var includeSample(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0)
 	function get_includeSample():Bool;
+	@:hxmc.available(macos >= 13.0)
 	function set_includeSample(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0)
 	var orderByQuantitySampleStartDate(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0)
 	function get_orderByQuantitySampleStartDate():Bool;
+	@:hxmc.available(macos >= 13.0)
 	function set_orderByQuantitySampleStartDate(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0)
 	function initWithQuantityType(quantityType:HKQuantityType, predicate:Null<NSPredicate>, quantityHandler:(HKQuantitySeriesSampleQuery, Null<HKQuantity>, Null<NSDateInterval>, Null<HKQuantitySample>, Bool, Null<NSError>) -> Void):HKQuantitySeriesSampleQuery;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	function initWithSample(quantitySample:HKQuantitySample, quantityHandler:(HKQuantitySeriesSampleQuery, Null<HKQuantity>, Null<NSDate>, Bool, Null<NSError>) -> Void):HKQuantitySeriesSampleQuery;
 }

@@ -6,25 +6,45 @@ import foundation.NSURL;
 import hxmc.unsafe.Ptr;
 import uikit.UIViewController;
 
-@:hxmc.framework("ScreenTime") @:hxmc.objc extern class STWebpageController extends UIViewController {
+@:hxmc.framework("ScreenTime") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class STWebpageController extends UIViewController {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():STWebpageController;
+	@:hxmc.available(macos >= 11.0)
 	var suppressUsageRecording(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_suppressUsageRecording():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_suppressUsageRecording(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var URL(get, set) : Null<NSURL>;
+	@:hxmc.available(macos >= 11.0)
 	function get_URL():Null<NSURL>;
+	@:hxmc.available(macos >= 11.0)
 	function set_URL(v:Null<NSURL>):Null<NSURL>;
+	@:hxmc.available(macos >= 11.0)
 	var URLIsPlayingVideo(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_URLIsPlayingVideo():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_URLIsPlayingVideo(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var URLIsPictureInPicture(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_URLIsPictureInPicture():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_URLIsPictureInPicture(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var URLIsBlocked(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_URLIsBlocked():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var profileIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_profileIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_profileIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function setBundleIdentifier(bundleIdentifier:NSStringArg, error:Ptr):Bool;
+	@:hxmc.available(macos >= 11.0)
 	override function init():STWebpageController;
 }

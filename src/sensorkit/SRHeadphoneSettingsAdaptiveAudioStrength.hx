@@ -2,7 +2,10 @@
 package sensorkit;
 
 enum abstract SRHeadphoneSettingsAdaptiveAudioStrength(Int) to Int {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Low = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Medium = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var High = 3;
 }

@@ -5,21 +5,37 @@ import foundation.NSBundle;
 import foundation.NSCoder;
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIDocumentViewController extends UIViewController {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIDocumentViewController extends UIViewController {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIDocumentViewController;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var document(get, set) : Null<UIDocument>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_document():Null<UIDocument>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_document(v:Null<UIDocument>):Null<UIDocument>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var launchOptions(get, set) : UIDocumentViewControllerLaunchOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_launchOptions():UIDocumentViewControllerLaunchOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_launchOptions(v:UIDocumentViewControllerLaunchOptions):UIDocumentViewControllerLaunchOptions;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var undoRedoItemGroup(get, never) : UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_undoRedoItemGroup():UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithDocument(document:Null<UIDocument>):UIDocumentViewController;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function navigationItemDidUpdate():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function openDocumentWithCompletionHandler(completionHandler:Bool -> Void):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function documentDidOpen():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIDocumentViewController;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithCoder(coder:NSCoder):Null<UIDocumentViewController>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):UIDocumentViewController;
 }

@@ -6,11 +6,17 @@ import foundation.NSURL;
 import objc.NSObject;
 import uikit.UIWindowScene;
 
-@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc extern class SCRecordingEditor extends NSObject {
+@:hxmc.framework("ScreenCaptureKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0) extern class SCRecordingEditor extends NSObject {
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():SCRecordingEditor;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var delegate(get, set) : Null<SCRecordingEditorDelegate>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_delegate():Null<SCRecordingEditorDelegate>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_delegate(v:Null<SCRecordingEditorDelegate>):Null<SCRecordingEditorDelegate>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function initWithURL(url:NSURL):SCRecordingEditor;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function presentFromWindowScene(windowScene:UIWindowScene, completionHandler:Null<NSError> -> Void):Void;
 }

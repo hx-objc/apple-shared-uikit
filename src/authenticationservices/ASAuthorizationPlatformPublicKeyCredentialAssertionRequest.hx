@@ -6,25 +6,44 @@ import foundation.NSCoder;
 import foundation.NSData;
 import foundation.NSStringArg;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASAuthorizationPlatformPublicKeyCredentialAssertionRequest extends ASAuthorizationRequest implements ASAuthorizationPublicKeyCredentialAssertionRequest {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class ASAuthorizationPlatformPublicKeyCredentialAssertionRequest extends ASAuthorizationRequest implements ASAuthorizationPublicKeyCredentialAssertionRequest {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():ASAuthorizationPlatformPublicKeyCredentialAssertionRequest;
+	@:hxmc.available(macos >= 12.0)
 	var allowedCredentials(get, set) : NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>;
+	@:hxmc.available(macos >= 12.0)
 	function get_allowedCredentials():NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>;
+	@:hxmc.available(macos >= 12.0)
 	function set_allowedCredentials(v:NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>):NSArray<ASAuthorizationPlatformPublicKeyCredentialDescriptor>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var largeBlob(get, set) : Null<ASAuthorizationPublicKeyCredentialLargeBlobAssertionInput>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_largeBlob():Null<ASAuthorizationPublicKeyCredentialLargeBlobAssertionInput>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_largeBlob(v:Null<ASAuthorizationPublicKeyCredentialLargeBlobAssertionInput>):Null<ASAuthorizationPublicKeyCredentialLargeBlobAssertionInput>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var prf(get, set) : Null<ASAuthorizationPublicKeyCredentialPRFAssertionInput>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_prf():Null<ASAuthorizationPublicKeyCredentialPRFAssertionInput>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_prf(v:Null<ASAuthorizationPublicKeyCredentialPRFAssertionInput>):Null<ASAuthorizationPublicKeyCredentialPRFAssertionInput>;
+	@:hxmc.available(macos >= 12.0)
 	var challenge(get, set) : NSData;
+	@:hxmc.available(macos >= 12.0)
 	function get_challenge():NSData;
+	@:hxmc.available(macos >= 12.0)
 	function set_challenge(v:NSData):NSData;
+	@:hxmc.available(macos >= 12.0)
 	var relyingPartyIdentifier(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_relyingPartyIdentifier():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function set_relyingPartyIdentifier(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	var userVerificationPreference(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function get_userVerificationPreference():NSStringArg;
+	@:hxmc.available(macos >= 12.0)
 	function set_userVerificationPreference(v:NSStringArg):NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

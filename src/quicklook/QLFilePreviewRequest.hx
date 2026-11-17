@@ -4,9 +4,13 @@ package quicklook;
 import foundation.NSURL;
 import objc.NSObject;
 
-@:hxmc.framework("QuickLook") @:hxmc.objc extern class QLFilePreviewRequest extends NSObject {
+@:hxmc.framework("QuickLook") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class QLFilePreviewRequest extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():QLFilePreviewRequest;
+	@:hxmc.available(macos >= 12.0)
 	var fileURL(get, never) : NSURL;
+	@:hxmc.available(macos >= 12.0)
 	function get_fileURL():NSURL;
+	@:hxmc.available(macos >= 12.0)
 	override function init():QLFilePreviewRequest;
 }

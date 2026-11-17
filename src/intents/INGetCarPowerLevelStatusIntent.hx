@@ -4,10 +4,12 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetCarPowerLevelStatusIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetCarPowerLevelStatusIntent;
 	var carName(get, never) : Null<INSpeakableString>;
 	function get_carName():Null<INSpeakableString>;
 	function initWithCarName(carName:Null<INSpeakableString>):INGetCarPowerLevelStatusIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetCarPowerLevelStatusIntent;
 	override function initWithCoder(coder:NSCoder):Null<INGetCarPowerLevelStatusIntent>;
 }

@@ -17,8 +17,11 @@ import objc.NSObject;
 	var suspended(get, never) : Bool;
 	@:selector("isSuspended")
 	function get_suspended():Bool;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var browsedDeviceTypeMask(get, set) : ICDeviceTypeMask;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function get_browsedDeviceTypeMask():ICDeviceTypeMask;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function set_browsedDeviceTypeMask(v:ICDeviceTypeMask):ICDeviceTypeMask;
 	var devices(get, never) : Null<NSArray<ICDevice>>;
 	function get_devices():Null<NSArray<ICDevice>>;

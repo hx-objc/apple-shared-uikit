@@ -8,20 +8,32 @@ import hxmc.I64;
 import hxmc.unsafe.Ptr;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextSelectionDataSource") extern interface NSTextSelectionDataSource extends NSObjectProtocol {
+@:hxmc.objc("NSTextSelectionDataSource") @:hxmc.available(macos >= 12.0) extern interface NSTextSelectionDataSource extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	var documentRange(get, never) : NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_documentRange():NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateSubstringsFromLocation(location:NSTextLocation, options:NSStringEnumerationOptions, usingBlock:(Null<NSString>, NSTextRange, Null<NSTextRange>, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function textRangeForSelectionGranularity(selectionGranularity:NSTextSelectionGranularity, enclosingLocation:NSTextLocation):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function locationFromLocation(location:NSTextLocation, withOffset:I64):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function offsetFromLocation(from:NSTextLocation, toLocation:NSTextLocation):I64;
+	@:hxmc.available(macos >= 12.0)
 	function baseWritingDirectionAtLocation(location:NSTextLocation):NSTextSelectionNavigationWritingDirection;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateCaretOffsetsInLineFragmentAtLocation(location:NSTextLocation, usingBlock:(Float, NSTextLocation, Bool, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function lineFragmentRangeForPoint(point:CGPoint, inContainerAtLocation:NSTextLocation):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function enumerateContainerBoundariesFromLocation(location:NSTextLocation, reverse:Bool, usingBlock:(NSTextLocation, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textLayoutOrientationAtLocation(location:NSTextLocation):NSTextSelectionNavigationLayoutOrientation;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function convertInteractionPoint(point:CGPoint, toContainerAtLocation:NSTextLocation):CGPoint;
 }

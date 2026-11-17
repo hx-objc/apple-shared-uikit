@@ -13,8 +13,11 @@ import uikit.UIImage;
 	static function creationRequestForAssetFromImage(image:UIImage):PHAssetCreationRequest;
 	static function creationRequestForAssetFromImageAtFileURL(fileURL:NSURL):Null<PHAssetCreationRequest>;
 	static function creationRequestForAssetFromVideoAtFileURL(fileURL:NSURL):Null<PHAssetCreationRequest>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var originalResourceChoice(get, set) : PHOriginalResourceChoice;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_originalResourceChoice():PHOriginalResourceChoice;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_originalResourceChoice(v:PHOriginalResourceChoice):PHOriginalResourceChoice;
 	static function creationRequestForAsset():PHAssetCreationRequest;
 	static function supportsAssetResourceTypes(types:NSArray<NSNumber>):Bool;

@@ -3,15 +3,25 @@ package uikit;
 
 import foundation.NSAttributedString;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextParagraph extends NSTextElement {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextParagraph extends NSTextElement {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextParagraph;
+	@:hxmc.available(macos >= 12.0)
 	var attributedString(get, never) : NSAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	function get_attributedString():NSAttributedString;
+	@:hxmc.available(macos >= 12.0)
 	var paragraphContentRange(get, never) : Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_paragraphContentRange():Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	var paragraphSeparatorRange(get, never) : Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_paragraphSeparatorRange():Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithAttributedString(attributedString:Null<NSAttributedString>):NSTextParagraph;
+	@:hxmc.available(macos >= 12.0)
 	override function init():NSTextParagraph;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithTextContentManager(textContentManager:Null<NSTextContentManager>):NSTextParagraph;
 }

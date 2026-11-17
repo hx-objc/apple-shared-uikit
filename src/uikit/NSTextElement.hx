@@ -4,20 +4,35 @@ package uikit;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextElement extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextElement extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextElement;
+	@:hxmc.available(macos >= 12.0)
 	var textContentManager(get, set) : Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textContentManager():Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textContentManager(v:Null<NSTextContentManager>):Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	var elementRange(get, set) : Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_elementRange():Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function set_elementRange(v:Null<NSTextRange>):Null<NSTextRange>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var childElements(get, never) : NSArray<NSTextElement>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_childElements():NSArray<NSTextElement>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var parentElement(get, never) : Null<NSTextElement>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_parentElement():Null<NSTextElement>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var isRepresentedElement(get, never) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_isRepresentedElement():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithTextContentManager(textContentManager:Null<NSTextContentManager>):NSTextElement;
+	@:hxmc.available(macos >= 12.0)
 	override function init():NSTextElement;
 }

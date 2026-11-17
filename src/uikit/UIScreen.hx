@@ -57,11 +57,17 @@ import uiutilities.UICoordinateSpace;
 	function get_maximumFramesPerSecond():I64;
 	var calibratedLatency(get, never) : Float;
 	function get_calibratedLatency():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var referenceDisplayModeStatus(get, never) : UIScreenReferenceDisplayModeStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_referenceDisplayModeStatus():UIScreenReferenceDisplayModeStatus;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var currentEDRHeadroom(get, never) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_currentEDRHeadroom():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var potentialEDRHeadroom(get, never) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_potentialEDRHeadroom():Float;
 	@:deprecated
 	var focusedItem(get, never) : Null<UIFocusItem>;

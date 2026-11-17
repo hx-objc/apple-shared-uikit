@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextSelectionNavigationWritingDirection(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var LeftToRight = 0;
+	@:hxmc.available(macos >= 12.0)
 	var RightToLeft = 1;
 	inline function new(v:I64) this = v;
 }

@@ -8,6 +8,7 @@ enum abstract NSStringDrawingOptions(I64) to I64 {
 	var UsesFontLeading = 2;
 	var UsesDeviceMetrics = 8;
 	var TruncatesLastVisibleLine = 32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var OptionsResolvesNaturalAlignmentWithBaseWritingDirection = 512;
 	inline function new(v:I64) this = v;
 	var None = 0;

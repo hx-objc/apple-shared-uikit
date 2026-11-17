@@ -3,13 +3,21 @@ package avrouting;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVRoutingPlaybackArbiter extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class AVRoutingPlaybackArbiter extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():AVRoutingPlaybackArbiter;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var preferredParticipantForNonMixableAudioRoutes(get, set) : Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_preferredParticipantForNonMixableAudioRoutes():Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_preferredParticipantForNonMixableAudioRoutes(v:Null<AVRoutingPlaybackParticipant>):Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredParticipantForExternalPlayback(get, set) : Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredParticipantForExternalPlayback():Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredParticipantForExternalPlayback(v:Null<AVRoutingPlaybackParticipant>):Null<AVRoutingPlaybackParticipant>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function sharedRoutingPlaybackArbiter():AVRoutingPlaybackArbiter;
 }

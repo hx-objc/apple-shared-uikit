@@ -7,6 +7,7 @@ import foundation.NSError;
 import foundation.NSString;
 import foundation.NSStringArg;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.unsafe.CString;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
@@ -15,7 +16,8 @@ import objc.NSObject;
 	@:hxmc.retained
 	public static function SCCopyLastError():NSError;
 	public static function SCError():Int;
-	public static function SCErrorString(status:Int):CString;
+	@:hxmc.safe
+	public static function SCErrorString(status:Int):String;
 	@:deprecated
 	@:hxmc.retained
 	public static function SCNetworkReachabilityCreateWithAddress(allocator:Null<CFAllocator>, address:Ptr):Null<SCNetworkReachability>;
@@ -32,7 +34,8 @@ import objc.NSObject;
 	@:deprecated
 	public static function SCNetworkReachabilityScheduleWithRunLoop(target:SCNetworkReachability, runLoop:CFRunLoop, runLoopMode:NSStringArg):Bool;
 	@:deprecated
-	public static function SCNetworkReachabilitySetCallback(target:SCNetworkReachability, callout:Ptr, context:Ptr):Bool;
+	@:hxmc.len(context, 1)
+	public static function SCNetworkReachabilitySetCallback(target:SCNetworkReachability, callout:Ptr, context:Span<SCNetworkReachabilityContext>):Bool;
 	@:deprecated
 	public static function SCNetworkReachabilitySetDispatchQueue(target:SCNetworkReachability, queue:Null<NSObject>):Bool;
 	@:deprecated

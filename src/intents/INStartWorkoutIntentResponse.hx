@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INStartWorkoutIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartWorkoutIntentResponse;
 	var code(get, never) : INStartWorkoutIntentResponseCode;
 	function get_code():INStartWorkoutIntentResponseCode;

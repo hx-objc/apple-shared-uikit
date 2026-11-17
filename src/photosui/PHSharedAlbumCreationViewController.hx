@@ -3,12 +3,19 @@ package photosui;
 
 import uikit.UIViewController;
 
-@:hxmc.framework("PhotosUI") @:hxmc.objc extern class PHSharedAlbumCreationViewController extends UIViewController {
+@:hxmc.framework("PhotosUI") @:hxmc.objc @:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27) extern class PHSharedAlbumCreationViewController extends UIViewController {
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	static function alloc():PHSharedAlbumCreationViewController;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var delegate(get, set) : Null<PHSharedAlbumCreationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_delegate():Null<PHSharedAlbumCreationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function set_delegate(v:Null<PHSharedAlbumCreationViewControllerDelegate>):Null<PHSharedAlbumCreationViewControllerDelegate>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	var creationResult(get, never) : Null<PHSharedAlbumCreationResult>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function get_creationResult():Null<PHSharedAlbumCreationResult>;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	function initWithConfiguration(configuration:PHSharedAlbumCreationConfiguration):PHSharedAlbumCreationViewController;
 }

@@ -5,18 +5,31 @@ import coregraphics.CGPoint;
 import coregraphics.CGVector;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIPencilHoverPose extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.5, maccatalyst >= 17.5) extern class UIPencilHoverPose extends NSObject {
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function alloc():UIPencilHoverPose;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var location(get, never) : CGPoint;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_location():CGPoint;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var zOffset(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_zOffset():Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var azimuthAngle(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_azimuthAngle():Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var azimuthUnitVector(get, never) : CGVector;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_azimuthUnitVector():CGVector;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var altitudeAngle(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_altitudeAngle():Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var rollAngle(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_rollAngle():Float;
 }

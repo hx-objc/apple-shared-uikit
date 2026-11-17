@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetAudioSourceInCarIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetAudioSourceInCarIntentResponse;
 	var code(get, never) : INSetAudioSourceInCarIntentResponseCode;
 	function get_code():INSetAudioSourceInCarIntentResponseCode;

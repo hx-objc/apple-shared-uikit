@@ -4,18 +4,30 @@ package uikit;
 import foundation.NSArray;
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableView extends UIView implements UIContentView {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableView extends UIView implements UIContentView {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function appearance():UIContentUnavailableView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):UIContentUnavailableView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIContentUnavailableView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var configuration(get, set) : UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_configuration():UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_configuration(v:UIContentUnavailableConfiguration):UIContentUnavailableConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var scrollEnabled(get, set) : Bool;
 	@:selector("isScrollEnabled")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_scrollEnabled():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_scrollEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithConfiguration(configuration:UIContentUnavailableConfiguration):UIContentUnavailableView;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithCoder(coder:NSCoder):UIContentUnavailableView;
 }

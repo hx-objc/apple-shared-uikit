@@ -3,7 +3,9 @@ package avkit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVPlaybackUserInterfaceMetadataProviding") extern interface AVPlaybackUserInterfaceMetadataProviding extends NSObjectProtocol {
+@:hxmc.objc("AVPlaybackUserInterfaceMetadataProviding") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVPlaybackUserInterfaceMetadataProviding extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var metadata(get, never) : AVPlaybackUserInterfaceContentMetadata;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_metadata():AVPlaybackUserInterfaceContentMetadata;
 }

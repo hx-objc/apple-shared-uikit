@@ -6,6 +6,7 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSaveProfileInCarIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSaveProfileInCarIntent;
 	var profileNumber(get, never) : Null<NSNumberArg>;
 	function get_profileNumber():Null<NSNumberArg>;
@@ -18,6 +19,7 @@ import foundation.NSStringArg;
 	@:selector("initWithProfileNumber:profileLabel:")
 	@:deprecated
 	function initWithProfileNumberProfileLabel(profileNumber:Null<NSNumberArg>, profileLabel:Null<NSStringArg>):INSaveProfileInCarIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSaveProfileInCarIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSaveProfileInCarIntent>;
 }

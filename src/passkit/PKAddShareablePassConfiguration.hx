@@ -16,5 +16,6 @@ import foundation.NSStringArg;
 	function get_provisioningPolicyIdentifier():NSStringArg;
 	@:deprecated
 	static overload function configurationForPassMetadata(passMetadata:NSArray<PKShareablePassMetadata>, provisioningPolicyIdentifier:NSStringArg, primaryAction:PKAddShareablePassConfigurationPrimaryAction, completion:(Null<PKAddShareablePassConfiguration>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function configurationForPassMetadata(passMetadata:NSArray<PKShareablePassMetadata>, primaryAction:PKAddShareablePassConfigurationPrimaryAction, completion:(Null<PKAddShareablePassConfiguration>, Null<NSError>) -> Void):Void;
 }

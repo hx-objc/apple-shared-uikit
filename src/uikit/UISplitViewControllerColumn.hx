@@ -8,6 +8,7 @@ enum abstract UISplitViewControllerColumn(I64) to I64 {
 	var Supplementary = 1;
 	var Secondary = 2;
 	var Compact = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Inspector = 4;
 	inline function new(v:I64) this = v;
 }

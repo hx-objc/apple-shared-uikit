@@ -6,7 +6,9 @@ import hxmc.I64;
 enum abstract UISceneErrorCode(I64) to I64 {
 	var MultipleScenesNotSupported = 0;
 	var RequestDenied = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var GeometryRequestUnsupported = 100;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var GeometryRequestDenied = 101;
 	inline function new(v:I64) this = v;
 }

@@ -6,7 +6,9 @@ import hxmc.I64;
 enum abstract NSLineBreakStrategy(I64) to I64 {
 	var None = 0;
 	var PushOut = 1;
+	@:hxmc.available(macos >= 11.0)
 	var HangulWordPriority = 2;
+	@:hxmc.available(macos >= 11.0)
 	var Standard = 65535;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

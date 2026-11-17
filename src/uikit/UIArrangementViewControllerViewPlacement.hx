@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIArrangementViewControllerViewPlacement(I64) to I64 {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var None = 0;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Primary = 1;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Secondary = 2;
 	inline function new(v:I64) this = v;
 }

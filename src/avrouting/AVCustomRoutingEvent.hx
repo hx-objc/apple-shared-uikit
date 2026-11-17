@@ -3,11 +3,17 @@ package avrouting;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVCustomRoutingEvent extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVCustomRoutingEvent extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVCustomRoutingEvent;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var reason(get, never) : AVCustomRoutingEventReason;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_reason():AVCustomRoutingEventReason;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var route(get, never) : AVCustomDeviceRoute;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_route():AVCustomDeviceRoute;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AVCustomRoutingEvent;
 }

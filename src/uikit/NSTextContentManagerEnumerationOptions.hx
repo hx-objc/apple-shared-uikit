@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextContentManagerEnumerationOptions(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var None = 0;
+	@:hxmc.available(macos >= 12.0)
 	var Reverse = 1;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

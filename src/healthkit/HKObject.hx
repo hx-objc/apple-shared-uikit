@@ -9,18 +9,29 @@ import foundation.NSUUID;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("HealthKit") @:hxmc.objc extern class HKObject extends NSObject implements NSSecureCoding {
+@:hxmc.framework("HealthKit") @:hxmc.objc @:hxmc.available(macos >= 13.0) extern class HKObject extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 13.0)
 	static function alloc():HKObject;
+	@:hxmc.available(macos >= 13.0)
 	var UUID(get, never) : NSUUID;
+	@:hxmc.available(macos >= 13.0)
 	function get_UUID():NSUUID;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var source(get, never) : HKSource;
+	@:hxmc.available(macos >= 13.0)
 	function get_source():HKSource;
+	@:hxmc.available(macos >= 13.0)
 	var sourceRevision(get, never) : HKSourceRevision;
+	@:hxmc.available(macos >= 13.0)
 	function get_sourceRevision():HKSourceRevision;
+	@:hxmc.available(macos >= 13.0)
 	var device(get, never) : Null<HKDevice>;
+	@:hxmc.available(macos >= 13.0)
 	function get_device():Null<HKDevice>;
+	@:hxmc.available(macos >= 13.0)
 	var metadata(get, never) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0)
 	function get_metadata():Null<NSDictionary<NSString, Id>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

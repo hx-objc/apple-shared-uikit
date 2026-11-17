@@ -3,6 +3,6 @@ package pencilkit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("PKToolPickerDelegate") extern interface PKToolPickerDelegate extends NSObjectProtocol {
+@:hxmc.objc("PKToolPickerDelegate") @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern interface PKToolPickerDelegate extends NSObjectProtocol {
 
 }

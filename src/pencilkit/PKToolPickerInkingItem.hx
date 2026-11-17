@@ -4,17 +4,29 @@ package pencilkit;
 import foundation.NSStringArg;
 import uikit.UIColor;
 
-@:hxmc.framework("PencilKit") @:hxmc.objc extern class PKToolPickerInkingItem extends PKToolPickerItem {
+@:hxmc.framework("PencilKit") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0) extern class PKToolPickerInkingItem extends PKToolPickerItem {
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var inkingTool(get, never) : PKInkingTool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_inkingTool():PKInkingTool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	var allowsColorSelection(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_allowsColorSelection():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_allowsColorSelection(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithInkType(inkType:NSStringArg):PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithInkType(inkType:NSStringArg, color:UIColor):PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithInkType(inkType:NSStringArg, width:Float):PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithInkType(inkType:NSStringArg, color:UIColor, width:Float):PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function initWithInkType(inkType:NSStringArg, color:UIColor, width:Float, identifier:Null<NSStringArg>):PKToolPickerInkingItem;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithInkType(inkType:NSStringArg, color:UIColor, width:Float, azimuth:Float, identifier:Null<NSStringArg>):PKToolPickerInkingItem;
 }

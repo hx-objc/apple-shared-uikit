@@ -5,12 +5,14 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSetCarLockStatusIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetCarLockStatusIntent;
 	var locked(get, never) : Null<NSNumberArg>;
 	function get_locked():Null<NSNumberArg>;
 	var carName(get, never) : Null<INSpeakableString>;
 	function get_carName():Null<INSpeakableString>;
 	function initWithLocked(locked:Null<NSNumberArg>, carName:Null<INSpeakableString>):INSetCarLockStatusIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetCarLockStatusIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetCarLockStatusIntent>;
 }

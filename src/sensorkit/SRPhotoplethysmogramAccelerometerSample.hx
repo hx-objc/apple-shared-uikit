@@ -12,17 +12,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRPhotoplethysmogramAccelerometerSample extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRPhotoplethysmogramAccelerometerSample extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRPhotoplethysmogramAccelerometerSample;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var nanosecondsSinceStart(get, never) : I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_nanosecondsSinceStart():I64;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var samplingFrequency(get, never) : NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_samplingFrequency():NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var x(get, never) : NSMeasurement<NSUnitAcceleration>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_x():NSMeasurement<NSUnitAcceleration>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var y(get, never) : NSMeasurement<NSUnitAcceleration>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_y():NSMeasurement<NSUnitAcceleration>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var z(get, never) : NSMeasurement<NSUnitAcceleration>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_z():NSMeasurement<NSUnitAcceleration>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UINavigationItemTitleAlignment(I64) to I64 {
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	var Leading = 1;
+	@:hxmc.available(ios >= 27.2, maccatalyst >= 27.2)
 	var Center = 2;
 	inline function new(v:I64) this = v;
 }

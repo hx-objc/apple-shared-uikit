@@ -28,6 +28,7 @@ import objc.NSObjectProtocol;
 	@:optional
 	function sessionDidChangeGeoTrackingStatus(session:ARSession, didChangeGeoTrackingStatus:ARGeoTrackingStatus):Void;
 	@:selector("session:didChangeViewRotationAngle:")
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function sessionDidChangeViewRotationAngle(session:ARSession, didChangeViewRotationAngle:Float):Void;
 }

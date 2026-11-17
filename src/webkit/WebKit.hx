@@ -14,53 +14,93 @@ import foundation.NSString;
 	public static final WKPreviewActionItemIdentifierOpen : NSString;
 	@:deprecated
 	public static final WKPreviewActionItemIdentifierShare : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextDeniedPermissionMatchPatternsWereRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextDeniedPermissionsWereRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextErrorsDidUpdateNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextGrantedPermissionMatchPatternsWereRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextGrantedPermissionsWereRemovedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextNotificationUserInfoKeyMatchPatterns : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextNotificationUserInfoKeyPermissions : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextPermissionMatchPatternsWereDeniedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextPermissionMatchPatternsWereGrantedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextPermissionsWereDeniedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionContextPermissionsWereGrantedNotification : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionDataRecordErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionDataTypeLocal : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionDataTypeSession : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionDataTypeSynchronized : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionMatchPatternErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionMessagePortErrorDomain : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionActiveTab : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionAlarms : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionClipboardWrite : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionContextMenus : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionCookies : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionDeclarativeNetRequest : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionDeclarativeNetRequestFeedback : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionDeclarativeNetRequestWithHostAccess : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionMenus : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionNativeMessaging : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionScripting : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionStorage : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionTabs : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionUnlimitedStorage : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionWebNavigation : NSString;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	public static final WKWebExtensionPermissionWebRequest : NSString;
 	public static final WKWebsiteDataTypeCookies : NSString;
 	public static final WKWebsiteDataTypeDiskCache : NSString;
 	public static final WKWebsiteDataTypeFetchCache : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final WKWebsiteDataTypeFileSystem : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final WKWebsiteDataTypeHashSalt : NSString;
 	public static final WKWebsiteDataTypeIndexedDBDatabases : NSString;
 	public static final WKWebsiteDataTypeLocalStorage : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final WKWebsiteDataTypeMediaKeys : NSString;
 	public static final WKWebsiteDataTypeMemoryCache : NSString;
 	@:deprecated
 	public static final WKWebsiteDataTypeOfflineWebApplicationCache : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final WKWebsiteDataTypeScreenTime : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final WKWebsiteDataTypeSearchFieldRecentSearches : NSString;
 	public static final WKWebsiteDataTypeServiceWorkerRegistrations : NSString;
 	public static final WKWebsiteDataTypeSessionStorage : NSString;

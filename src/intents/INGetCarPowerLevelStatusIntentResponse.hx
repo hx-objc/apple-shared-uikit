@@ -14,6 +14,7 @@ import foundation.NSUserActivity;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetCarPowerLevelStatusIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetCarPowerLevelStatusIntentResponse;
 	var code(get, never) : INGetCarPowerLevelStatusIntentResponseCode;
 	function get_code():INGetCarPowerLevelStatusIntentResponseCode;

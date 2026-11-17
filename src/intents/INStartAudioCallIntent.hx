@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartAudioCallIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartAudioCallIntent;
 	var destinationType(get, never) : INCallDestinationType;
 	function get_destinationType():INCallDestinationType;
@@ -13,6 +14,7 @@ import foundation.NSCoder;
 	function initWithDestinationType(destinationType:INCallDestinationType, contacts:Null<NSArray<INPerson>>):INStartAudioCallIntent;
 	@:deprecated
 	function initWithContacts(contacts:Null<NSArray<INPerson>>):INStartAudioCallIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INStartAudioCallIntent;
 	override function initWithCoder(coder:NSCoder):Null<INStartAudioCallIntent>;
 }

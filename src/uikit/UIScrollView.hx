@@ -22,8 +22,11 @@ import foundation.NSSet;
 	var contentInset(get, set) : UIEdgeInsets;
 	function get_contentInset():UIEdgeInsets;
 	function set_contentInset(v:UIEdgeInsets):UIEdgeInsets;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var contentAlignmentPoint(get, set) : CGPoint;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_contentAlignmentPoint():CGPoint;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_contentAlignmentPoint(v:CGPoint):CGPoint;
 	var adjustedContentInset(get, never) : UIEdgeInsets;
 	function get_adjustedContentInset():UIEdgeInsets;
@@ -47,11 +50,17 @@ import foundation.NSSet;
 	var bounces(get, set) : Bool;
 	function get_bounces():Bool;
 	function set_bounces(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var bouncesHorizontally(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_bouncesHorizontally():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_bouncesHorizontally(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var bouncesVertically(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_bouncesVertically():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_bouncesVertically(v:Bool):Bool;
 	var alwaysBounceVertical(get, set) : Bool;
 	function get_alwaysBounceVertical():Bool;
@@ -67,11 +76,17 @@ import foundation.NSSet;
 	@:selector("isScrollEnabled")
 	function get_scrollEnabled():Bool;
 	function set_scrollEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var transfersHorizontalScrollingToParent(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_transfersHorizontalScrollingToParent():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_transfersHorizontalScrollingToParent(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var transfersVerticalScrollingToParent(get, set) : Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_transfersVerticalScrollingToParent():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function set_transfersVerticalScrollingToParent(v:Bool):Bool;
 	var showsVerticalScrollIndicator(get, set) : Bool;
 	function get_showsVerticalScrollIndicator():Bool;
@@ -97,13 +112,21 @@ import foundation.NSSet;
 	var indexDisplayMode(get, set) : UIScrollViewIndexDisplayMode;
 	function get_indexDisplayMode():UIScrollViewIndexDisplayMode;
 	function set_indexDisplayMode(v:UIScrollViewIndexDisplayMode):UIScrollViewIndexDisplayMode;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var topEdgeEffect(get, never) : UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_topEdgeEffect():UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var leftEdgeEffect(get, never) : UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_leftEdgeEffect():UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var bottomEdgeEffect(get, never) : UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_bottomEdgeEffect():UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var rightEdgeEffect(get, never) : UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_rightEdgeEffect():UIScrollEdgeEffect;
 	var tracking(get, never) : Bool;
 	@:selector("isTracking")
@@ -114,8 +137,10 @@ import foundation.NSSet;
 	var decelerating(get, never) : Bool;
 	@:selector("isDecelerating")
 	function get_decelerating():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var scrollAnimating(get, never) : Bool;
 	@:selector("isScrollAnimating")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_scrollAnimating():Bool;
 	var delaysContentTouches(get, set) : Bool;
 	function get_delaysContentTouches():Bool;
@@ -141,8 +166,10 @@ import foundation.NSSet;
 	var zoomBouncing(get, never) : Bool;
 	@:selector("isZoomBouncing")
 	function get_zoomBouncing():Bool;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var zoomAnimating(get, never) : Bool;
 	@:selector("isZoomAnimating")
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_zoomAnimating():Bool;
 	var scrollsToTop(get, set) : Bool;
 	function get_scrollsToTop():Bool;
@@ -159,8 +186,11 @@ import foundation.NSSet;
 	var refreshControl(get, set) : Null<UIRefreshControl>;
 	function get_refreshControl():Null<UIRefreshControl>;
 	function set_refreshControl(v:Null<UIRefreshControl>):Null<UIRefreshControl>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var allowsKeyboardScrolling(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_allowsKeyboardScrolling():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_allowsKeyboardScrolling(v:Bool):Bool;
 	var visibleSize(get, never) : CGSize;
 	function get_visibleSize():CGSize;
@@ -168,11 +198,13 @@ import foundation.NSSet;
 	function setContentOffset(contentOffset:CGPoint, animated:Bool):Void;
 	function scrollRectToVisible(rect:CGRect, animated:Bool):Void;
 	function flashScrollIndicators():Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function withScrollIndicatorsShownForContentOffsetChanges(changes:() -> Void):Void;
 	function touchesShouldBegin(touches:NSSet<UITouch>, withEvent:Null<UIEvent>, inContentView:UIView):Bool;
 	function touchesShouldCancelInContentView(view:UIView):Bool;
 	function setZoomScale(scale:Float, animated:Bool):Void;
 	function zoomToRect(rect:CGRect, animated:Bool):Void;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function stopScrollingAndZooming():Void;
 	override function initWithCoder(coder:NSCoder):Null<UIScrollView>;
 	override function init():UIScrollView;

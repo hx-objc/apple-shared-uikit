@@ -6,14 +6,23 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSendPaymentPayeeResolutionResult extends INPersonResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithPersonToConfirm(personToConfirm:Null<INPerson>):INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function disambiguationWithPeopleToDisambiguate(peopleToDisambiguate:NSArray<INPerson>):INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function successWithResolvedPerson(resolvedPerson:INPerson):INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INSendPaymentPayeeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INSendPaymentPayeeResolutionResult;
 	static function unsupportedForReason(reason:INSendPaymentPayeeUnsupportedReason):INSendPaymentPayeeResolutionResult;
 	function initWithPersonResolutionResult(personResolutionResult:INPersonResolutionResult):INSendPaymentPayeeResolutionResult;

@@ -11,14 +11,23 @@ import foundation.NSStringArg;
 	function get_voiceControlStates():NSArray<CPVoiceControlState>;
 	var activeStateIdentifier(get, never) : Null<NSStringArg>;
 	function get_activeStateIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var leadingNavigationBarButtons(get, set) : NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_leadingNavigationBarButtons():NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_leadingNavigationBarButtons(v:NSArray<CPBarButton>):NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var trailingNavigationBarButtons(get, set) : NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_trailingNavigationBarButtons():NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_trailingNavigationBarButtons(v:NSArray<CPBarButton>):NSArray<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var backButton(get, set) : Null<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_backButton():Null<CPBarButton>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_backButton(v:Null<CPBarButton>):Null<CPBarButton>;
 	function initWithVoiceControlStates(voiceControlStates:NSArray<CPVoiceControlState>):CPVoiceControlTemplate;
 	function activateVoiceControlStateWithIdentifier(identifier:NSStringArg):Void;

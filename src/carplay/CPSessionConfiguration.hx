@@ -12,7 +12,9 @@ import objc.NSObject;
 	var delegate(get, set) : Null<CPSessionConfigurationDelegate>;
 	function get_delegate():Null<CPSessionConfigurationDelegate>;
 	function set_delegate(v:Null<CPSessionConfigurationDelegate>):Null<CPSessionConfigurationDelegate>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var supportsVideoPlayback(get, never) : Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_supportsVideoPlayback():Bool;
 	function initWithDelegate(delegate:CPSessionConfigurationDelegate):CPSessionConfiguration;
 }

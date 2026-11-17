@@ -13,37 +13,68 @@ import hxmc.I64;
 	var delegate(get, set) : Null<UITabBarControllerDelegate>;
 	function get_delegate():Null<UITabBarControllerDelegate>;
 	function set_delegate(v:Null<UITabBarControllerDelegate>):Null<UITabBarControllerDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var mode(get, set) : UITabBarControllerMode;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_mode():UITabBarControllerMode;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_mode(v:UITabBarControllerMode):UITabBarControllerMode;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sidebar(get, never) : UITabBarControllerSidebar;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sidebar():UITabBarControllerSidebar;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var customizationIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_customizationIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_customizationIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var compactTabIdentifiers(get, set) : Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_compactTabIdentifiers():Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_compactTabIdentifiers(v:Null<NSArray<NSString>>):Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var prominentTabIdentifier(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_prominentTabIdentifier():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_prominentTabIdentifier(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var selectedTab(get, set) : Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_selectedTab():Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_selectedTab(v:Null<UITab>):Null<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tabs(get, set) : NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tabs():NSArray<UITab>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_tabs(v:NSArray<UITab>):NSArray<UITab>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tabBarMinimizeBehavior(get, set) : UITabBarMinimizeBehavior;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tabBarMinimizeBehavior():UITabBarMinimizeBehavior;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_tabBarMinimizeBehavior(v:UITabBarMinimizeBehavior):UITabBarMinimizeBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var tabBarHidden(get, set) : Bool;
 	@:selector("isTabBarHidden")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_tabBarHidden():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_tabBarHidden(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var contentLayoutGuide(get, never) : UILayoutGuide;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentLayoutGuide():UILayoutGuide;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var bottomAccessory(get, set) : Null<UITabAccessory>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_bottomAccessory():Null<UITabAccessory>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_bottomAccessory(v:Null<UITabAccessory>):Null<UITabAccessory>;
 	var viewControllers(get, set) : Null<NSArray<UIViewController>>;
 	function get_viewControllers():Null<NSArray<UIViewController>>;
@@ -61,12 +92,19 @@ import hxmc.I64;
 	function set_customizableViewControllers(v:Null<NSArray<UIViewController>>):Null<NSArray<UIViewController>>;
 	var tabBar(get, never) : UITabBar;
 	function get_tabBar():UITabBar;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function setProminentTabIdentifier(identifier:Null<NSStringArg>, animated:Bool):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function setTabs(tabs:NSArray<UITab>, animated:Bool):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function tabForIdentifier(identifier:NSStringArg):Null<UITab>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function performBatchUpdates(updates:() -> Void):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithTabs(tabs:NSArray<UITab>):UITabBarController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function setTabBarHidden(hidden:Bool, animated:Bool):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function setBottomAccessory(bottomAccessory:Null<UITabAccessory>, animated:Bool):Void;
 	function setViewControllers(viewControllers:Null<NSArray<UIViewController>>, animated:Bool):Void;
 	override function initWithCoder(coder:NSCoder):Null<UITabBarController>;

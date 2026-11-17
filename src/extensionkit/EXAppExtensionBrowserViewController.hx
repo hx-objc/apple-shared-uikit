@@ -6,9 +6,13 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import uikit.UIViewController;
 
-@:hxmc.framework("ExtensionKit") @:hxmc.objc extern class EXAppExtensionBrowserViewController extends UIViewController {
+@:hxmc.framework("ExtensionKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 18, maccatalyst >= 18) extern class EXAppExtensionBrowserViewController extends UIViewController {
+	@:hxmc.available(macos >= 13.0, ios >= 18, maccatalyst >= 18)
 	static function alloc():EXAppExtensionBrowserViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 18, maccatalyst >= 18)
 	override function init():EXAppExtensionBrowserViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 18, maccatalyst >= 18)
 	override function initWithCoder(coder:NSCoder):Null<EXAppExtensionBrowserViewController>;
+	@:hxmc.available(macos >= 13.0, ios >= 18, maccatalyst >= 18)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):EXAppExtensionBrowserViewController;
 }

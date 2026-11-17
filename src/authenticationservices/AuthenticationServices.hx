@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSString;
 
 @:hxmc.c @:hxmc.framework("AuthenticationServices") extern class AuthenticationServices {
+	@:hxmc.available(macos >= 12.0)
 	public static function ASAuthorizationAllSupportedPublicKeyCredentialDescriptorTransports():NSArray<NSString>;
 	public static final ASAuthorizationAppleIDProviderCredentialRevokedNotification : NSString;
 	public static final ASAuthorizationErrorDomain : NSString;
@@ -12,28 +13,48 @@ import foundation.NSString;
 	public static final ASAuthorizationOperationLogin : NSString;
 	public static final ASAuthorizationOperationLogout : NSString;
 	public static final ASAuthorizationOperationRefresh : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final ASAuthorizationProviderAuthorizationOperationConfigurationRemoved : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final ASAuthorizationProviderAuthorizationOperationDirectRequest : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialAttestationKindDirect : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialAttestationKindEnterprise : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialAttestationKindIndirect : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialAttestationKindNone : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialResidentKeyPreferenceDiscouraged : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialResidentKeyPreferencePreferred : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialResidentKeyPreferenceRequired : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialUserVerificationPreferenceDiscouraged : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialUserVerificationPreferencePreferred : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationPublicKeyCredentialUserVerificationPreferenceRequired : NSString;
 	public static final ASAuthorizationScopeEmail : NSString;
 	public static final ASAuthorizationScopeFullName : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportBluetooth : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportNFC : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportUSB : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final ASCredentialIdentityStoreErrorDomain : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final ASExtensionErrorDomain : NSString;
 	public static final ASExtensionLocalizedFailureReasonErrorKey : NSString;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	public static final ASGeneratedPasswordKindAlphanumeric : NSString;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	public static final ASGeneratedPasswordKindPassphrase : NSString;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	public static final ASGeneratedPasswordKindStrong : NSString;
 	public static final ASWebAuthenticationSessionErrorDomain : NSString;
 }

@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForNotebookItemsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForNotebookItemsIntent;
 	var title(get, never) : Null<INSpeakableString>;
 	function get_title():Null<INSpeakableString>;
@@ -34,6 +35,7 @@ import foundation.NSStringArg;
 	overload function initWithTitle(title:Null<INSpeakableString>, content:Null<NSStringArg>, itemType:INNotebookItemType, status:INTaskStatus, location:Null<CLPlacemark>, locationSearchType:INLocationSearchType, dateTime:Null<INDateComponentsRange>, dateSearchType:INDateSearchType):INSearchForNotebookItemsIntent;
 	@:deprecated
 	overload function initWithTitle(title:Null<INSpeakableString>, content:Null<NSStringArg>, itemType:INNotebookItemType, status:INTaskStatus, location:Null<CLPlacemark>, locationSearchType:INLocationSearchType, dateTime:Null<INDateComponentsRange>, dateSearchType:INDateSearchType, notebookItemIdentifier:Null<NSStringArg>):INSearchForNotebookItemsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForNotebookItemsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForNotebookItemsIntent>;
 }

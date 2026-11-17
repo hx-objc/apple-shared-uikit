@@ -27,8 +27,11 @@ import objc.NSObject;
 	var actionHandler(get, set) : Null<UIAccessibilityCustomAction -> Bool>;
 	function get_actionHandler():Null<UIAccessibilityCustomAction -> Bool>;
 	function set_actionHandler(v:Null<UIAccessibilityCustomAction -> Bool>):Null<UIAccessibilityCustomAction -> Bool>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var category(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_category():Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_category(v:Null<NSStringArg>):Null<NSStringArg>;
 	overload function initWithName(name:NSStringArg, target:Null<Id>, selector:Selector):UIAccessibilityCustomAction;
 	overload function initWithAttributedName(attributedName:NSAttributedString, target:Null<Id>, selector:Selector):UIAccessibilityCustomAction;

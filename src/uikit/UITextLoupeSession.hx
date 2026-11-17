@@ -5,10 +5,15 @@ import coregraphics.CGPoint;
 import coregraphics.CGRect;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextLoupeSession extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITextLoupeSession extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITextLoupeSession;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function beginLoupeSessionAtPoint(point:CGPoint, fromSelectionWidgetView:Null<UIView>, inView:UIView):Null<UITextLoupeSession>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function moveToPoint(point:CGPoint, withCaretRect:CGRect, trackingCaret:Bool):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function invalidate():Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UITextLoupeSession;
 }

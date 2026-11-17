@@ -12,24 +12,42 @@ import uikit.UIButtonConfiguration;
 import uikit.UIImage;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKPaymentButton extends UIButton {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class PKPaymentButton extends UIButton {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static function appearance():PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static function buttonWithConfiguration(configuration:UIButtonConfiguration, primaryAction:Null<UIAction>):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static function systemButtonWithImage(image:UIImage, target:Null<Id>, action:Selector):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	static function systemButtonWithPrimaryAction(primaryAction:Null<UIAction>):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	var cornerRadius(get, set) : Float;
+	@:hxmc.available(macos >= 11.0)
 	function get_cornerRadius():Float;
+	@:hxmc.available(macos >= 11.0)
 	function set_cornerRadius(v:Float):Float;
+	@:hxmc.available(macos >= 11.0)
 	static overload function buttonWithType(buttonType:PKPaymentButtonType, style:PKPaymentButtonStyle):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithPaymentButtonType(type:PKPaymentButtonType, paymentButtonStyle:PKPaymentButtonStyle):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0, ios >= 26.0, maccatalyst >= 26.0)
 	static overload function buttonWithType(buttonType:PKPaymentButtonType, style:PKPaymentButtonStyle, disableCardArt:Bool):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithPaymentButtonType(type:PKPaymentButtonType, paymentButtonStyle:PKPaymentButtonStyle, disableCardArt:Bool):PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	override function init():PKPaymentButton;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<PKPaymentButton>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithFrame(frame:CGRect):PKPaymentButton;
 	@:selector("initWithFrame:primaryAction:")
+	@:hxmc.available(macos >= 11.0)
 	override function initWithFramePrimaryAction(frame:CGRect, primaryAction:Null<UIAction>):PKPaymentButton;
 }

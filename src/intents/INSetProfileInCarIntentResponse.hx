@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetProfileInCarIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetProfileInCarIntentResponse;
 	var code(get, never) : INSetProfileInCarIntentResponseCode;
 	function get_code():INSetProfileInCarIntentResponseCode;

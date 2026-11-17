@@ -38,13 +38,21 @@ import uikit.UIViewController;
 	var allowsPictureInPicturePlayback(get, set) : Bool;
 	function get_allowsPictureInPicturePlayback():Bool;
 	function set_allowsPictureInPicturePlayback(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 18.0)
 	var allowsVideoFrameAnalysis(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 18.0)
 	function get_allowsVideoFrameAnalysis():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 18.0)
 	function set_allowsVideoFrameAnalysis(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 18.0)
 	var videoFrameAnalysisTypes(get, set) : AVVideoFrameAnalysisType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 18.0)
 	function get_videoFrameAnalysisTypes():AVVideoFrameAnalysisType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 18.0)
 	function set_videoFrameAnalysisTypes(v:AVVideoFrameAnalysisType):AVVideoFrameAnalysisType;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 18.0)
 	var toggleLookupAction(get, never) : UIAction;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 18.0)
 	function get_toggleLookupAction():UIAction;
 	var canStartPictureInPictureAutomaticallyFromInline(get, set) : Bool;
 	function get_canStartPictureInPictureAutomaticallyFromInline():Bool;
@@ -67,16 +75,27 @@ import uikit.UIViewController;
 	var delegate(get, set) : Null<AVPlayerViewControllerDelegate>;
 	function get_delegate():Null<AVPlayerViewControllerDelegate>;
 	function set_delegate(v:Null<AVPlayerViewControllerDelegate>):Null<AVPlayerViewControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var speeds(get, set) : NSArray<AVPlaybackSpeed>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_speeds():NSArray<AVPlaybackSpeed>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_speeds(v:NSArray<AVPlaybackSpeed>):NSArray<AVPlaybackSpeed>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedSpeed(get, never) : Null<AVPlaybackSpeed>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedSpeed():Null<AVPlaybackSpeed>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var preferredDisplayDynamicRange(get, set) : AVDisplayDynamicRange;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_preferredDisplayDynamicRange():AVDisplayDynamicRange;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_preferredDisplayDynamicRange(v:AVDisplayDynamicRange):AVDisplayDynamicRange;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var mediaCharacteristicsForSupportedCustomMediaSelectionSchemes(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_mediaCharacteristicsForSupportedCustomMediaSelectionSchemes():NSArray<NSString>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function selectSpeed(speed:AVPlaybackSpeed):Void;
 	override function init():AVPlayerViewController;
 	override function initWithCoder(coder:NSCoder):Null<AVPlayerViewController>;

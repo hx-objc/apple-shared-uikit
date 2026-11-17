@@ -6,13 +6,21 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INPlayMediaPlaybackSpeedResolutionResult extends INDoubleResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithValueToConfirm(valueToConfirm:Null<NSNumberArg>):INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function successWithResolvedValue(resolvedValue:Float):INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INPlayMediaPlaybackSpeedResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INPlayMediaPlaybackSpeedResolutionResult;
 	static function unsupportedForReason(reason:INPlayMediaPlaybackSpeedUnsupportedReason):INPlayMediaPlaybackSpeedResolutionResult;
 	function initWithDoubleResolutionResult(doubleResolutionResult:INDoubleResolutionResult):INPlayMediaPlaybackSpeedResolutionResult;

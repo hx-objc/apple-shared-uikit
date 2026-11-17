@@ -15,11 +15,14 @@ import uikit.UIColor;
 	function get_style():CPAlertActionStyle;
 	var handler(get, never) : CPAlertAction -> Void;
 	function get_handler():CPAlertAction -> Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var color(get, never) : Null<UIColor>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_color():Null<UIColor>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	overload function initWithTitle(title:NSStringArg, style:CPAlertActionStyle, handler:CPAlertAction -> Void):CPAlertAction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithTitle(title:NSStringArg, color:UIColor, handler:CPAlertAction -> Void):CPAlertAction;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPAlertAction>;

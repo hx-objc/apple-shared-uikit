@@ -17,6 +17,7 @@ import hxmc.unsafe.UInt8;
 @:hxmc.framework("Foundation") @:hxmc.objc extern class NSNumber extends NSValue implements CKRecordValue implements NSFetchRequestResult {
 	static function alloc():NSNumber;
 	@:hxmc.framework("GameController")
+	@:hxmc.available(macos >= 14.3, ios >= 17.4, maccatalyst >= 17.4)
 	static function valueWithGCPoint2(point:GCPoint2):NSNumber;
 	var charValue(get, never) : Int8;
 	function get_charValue():Int8;

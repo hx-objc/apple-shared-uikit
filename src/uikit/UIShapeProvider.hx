@@ -3,6 +3,7 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIShapeProvider") extern interface UIShapeProvider extends NSObjectProtocol {
+@:hxmc.objc("UIShapeProvider") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UIShapeProvider extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resolvedShapeInContext(context:UIShapeResolutionContext):UIResolvedShape;
 }

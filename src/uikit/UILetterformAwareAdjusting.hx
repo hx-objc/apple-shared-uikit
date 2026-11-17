@@ -3,8 +3,11 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UILetterformAwareAdjusting") extern interface UILetterformAwareAdjusting extends NSObjectProtocol {
+@:hxmc.objc("UILetterformAwareAdjusting") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UILetterformAwareAdjusting extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sizingRule(get, set) : UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sizingRule():UILetterformAwareSizingRule;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_sizingRule(v:UILetterformAwareSizingRule):UILetterformAwareSizingRule;
 }

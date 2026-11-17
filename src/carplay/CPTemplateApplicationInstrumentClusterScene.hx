@@ -6,11 +6,17 @@ import uikit.UISceneConnectionOptions;
 import uikit.UISceneSession;
 import uikit.UIUserInterfaceStyle;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPTemplateApplicationInstrumentClusterScene extends UIScene {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 15.4, maccatalyst >= 15.4) extern class CPTemplateApplicationInstrumentClusterScene extends UIScene {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	static function alloc():CPTemplateApplicationInstrumentClusterScene;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var instrumentClusterController(get, never) : CPInstrumentClusterController;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_instrumentClusterController():CPInstrumentClusterController;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var contentStyle(get, never) : UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_contentStyle():UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	override function initWithSession(session:UISceneSession, connectionOptions:UISceneConnectionOptions):CPTemplateApplicationInstrumentClusterScene;
 }

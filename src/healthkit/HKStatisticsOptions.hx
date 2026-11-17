@@ -4,15 +4,24 @@ package healthkit;
 import hxmc.I64;
 
 enum abstract HKStatisticsOptions(I64) to I64 {
+	@:hxmc.available(macos >= 13.0)
 	var None = 0;
+	@:hxmc.available(macos >= 13.0)
 	var SeparateBySource = 1;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteAverage = 2;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteMin = 4;
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteMax = 8;
+	@:hxmc.available(macos >= 13.0)
 	var CumulativeSum = 16;
+	@:hxmc.available(macos >= 13.0)
 	var MostRecent = 32;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var DiscreteMostRecent = 32;
+	@:hxmc.available(macos >= 13.0)
 	var Duration = 64;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

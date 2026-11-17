@@ -13,13 +13,18 @@ import uikit.UIUserInterfaceStyle;
 	function get_color():UIColor;
 	var width(get, never) : Float;
 	function get_width():Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var azimuth(get, never) : Float;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_azimuth():Float;
 	var ink(get, never) : PKInk;
 	function get_ink():PKInk;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var requiredContentVersion(get, never) : PKContentVersion;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_requiredContentVersion():PKContentVersion;
 	overload function initWithInkType(type:NSStringArg, color:UIColor, width:Float):PKInkingTool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	overload function initWithInkType(type:NSStringArg, color:UIColor, width:Float, azimuth:Float):PKInkingTool;
 	overload function initWithInkType(type:NSStringArg, color:UIColor):PKInkingTool;
 	function initWithInk(ink:PKInk, width:Float):PKInkingTool;

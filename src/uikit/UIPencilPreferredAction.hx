@@ -8,8 +8,11 @@ enum abstract UIPencilPreferredAction(I64) to I64 {
 	var SwitchEraser = 1;
 	var SwitchPrevious = 2;
 	var ShowColorPalette = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ShowInkAttributes = 4;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var ShowContextualPalette = 5;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var RunSystemShortcut = 6;
 	inline function new(v:I64) this = v;
 }

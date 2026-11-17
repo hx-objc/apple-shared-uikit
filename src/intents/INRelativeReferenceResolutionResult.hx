@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INRelativeReferenceResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRelativeReferenceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INRelativeReferenceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INRelativeReferenceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INRelativeReferenceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INRelativeReferenceResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INRelativeReferenceResolutionResult;
 	static function successWithResolvedRelativeReference(resolvedRelativeReference:INRelativeReference):INRelativeReferenceResolutionResult;
 	@:deprecated

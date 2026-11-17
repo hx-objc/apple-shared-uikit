@@ -4,7 +4,9 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIVerticalBarBehavior(I64) to I64 {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var Disabled = 1;
 	inline function new(v:I64) this = v;
 }

@@ -4,8 +4,11 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRElectrocardiogramSessionState(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Begin = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Active = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var End = 3;
 	inline function new(v:I64) this = v;
 }

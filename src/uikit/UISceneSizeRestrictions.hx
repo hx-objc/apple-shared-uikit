@@ -12,7 +12,10 @@ import objc.NSObject;
 	var maximumSize(get, set) : CGSize;
 	function get_maximumSize():CGSize;
 	function set_maximumSize(v:CGSize):CGSize;
+	@:hxmc.available(maccatalyst >= 16.0)
 	var allowsFullScreen(get, set) : Bool;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function get_allowsFullScreen():Bool;
+	@:hxmc.available(maccatalyst >= 16.0)
 	function set_allowsFullScreen(v:Bool):Bool;
 }

@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetDefrosterSettingsInCarIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetDefrosterSettingsInCarIntent;
 	var enable(get, never) : Null<NSNumberArg>;
 	function get_enable():Null<NSNumberArg>;
@@ -15,6 +16,7 @@ import foundation.NSNumberArg;
 	overload function initWithEnable(enable:Null<NSNumberArg>, defroster:INCarDefroster, carName:Null<INSpeakableString>):INSetDefrosterSettingsInCarIntent;
 	@:deprecated
 	overload function initWithEnable(enable:Null<NSNumberArg>, defroster:INCarDefroster):INSetDefrosterSettingsInCarIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetDefrosterSettingsInCarIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetDefrosterSettingsInCarIntent>;
 }

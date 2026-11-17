@@ -22,8 +22,11 @@ import uikit.UIWritingToolsBehavior;
 	var userContentController(get, set) : WKUserContentController;
 	function get_userContentController():WKUserContentController;
 	function set_userContentController(v:WKUserContentController):WKUserContentController;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var webExtensionController(get, set) : Null<WKWebExtensionController>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_webExtensionController():Null<WKWebExtensionController>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_webExtensionController(v:Null<WKWebExtensionController>):Null<WKWebExtensionController>;
 	var websiteDataStore(get, set) : WKWebsiteDataStore;
 	function get_websiteDataStore():WKWebsiteDataStore;
@@ -37,11 +40,17 @@ import uikit.UIWritingToolsBehavior;
 	var allowsAirPlayForMediaPlayback(get, set) : Bool;
 	function get_allowsAirPlayForMediaPlayback():Bool;
 	function set_allowsAirPlayForMediaPlayback(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var showsSystemScreenTimeBlockingView(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_showsSystemScreenTimeBlockingView():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_showsSystemScreenTimeBlockingView(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.3)
 	var upgradeKnownHostsToHTTPS(get, set) : Bool;
+	@:hxmc.available(macos >= 11.3)
 	function get_upgradeKnownHostsToHTTPS():Bool;
+	@:hxmc.available(macos >= 11.3)
 	function set_upgradeKnownHostsToHTTPS(v:Bool):Bool;
 	var mediaTypesRequiringUserActionForPlayback(get, set) : WKAudiovisualMediaTypes;
 	function get_mediaTypesRequiringUserActionForPlayback():WKAudiovisualMediaTypes;
@@ -49,11 +58,17 @@ import uikit.UIWritingToolsBehavior;
 	var defaultWebpagePreferences(get, set) : WKWebpagePreferences;
 	function get_defaultWebpagePreferences():WKWebpagePreferences;
 	function set_defaultWebpagePreferences(v:WKWebpagePreferences):WKWebpagePreferences;
+	@:hxmc.available(macos >= 11.0)
 	var limitsNavigationsToAppBoundDomains(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_limitsNavigationsToAppBoundDomains():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_limitsNavigationsToAppBoundDomains(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var allowsInlinePredictions(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_allowsInlinePredictions():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_allowsInlinePredictions(v:Bool):Bool;
 	var allowsInlineMediaPlayback(get, set) : Bool;
 	function get_allowsInlineMediaPlayback():Bool;
@@ -71,11 +86,17 @@ import uikit.UIWritingToolsBehavior;
 	var ignoresViewportScaleLimits(get, set) : Bool;
 	function get_ignoresViewportScaleLimits():Bool;
 	function set_ignoresViewportScaleLimits(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var supportsAdaptiveImageGlyph(get, set) : Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_supportsAdaptiveImageGlyph():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_supportsAdaptiveImageGlyph(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var writingToolsBehavior(get, set) : UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_writingToolsBehavior():UIWritingToolsBehavior;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_writingToolsBehavior(v:UIWritingToolsBehavior):UIWritingToolsBehavior;
 	@:deprecated
 	var mediaPlaybackRequiresUserAction(get, set) : Bool;

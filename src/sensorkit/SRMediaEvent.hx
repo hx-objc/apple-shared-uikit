@@ -9,16 +9,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRMediaEvent extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 16.4, maccatalyst >= 16.4) extern class SRMediaEvent extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():SRMediaEvent;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var mediaIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_mediaIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	var eventType(get, never) : SRMediaEventType;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	function get_eventType():SRMediaEventType;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<SRMediaEvent>;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	override function init():SRMediaEvent;
 }

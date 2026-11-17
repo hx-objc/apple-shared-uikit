@@ -3,7 +3,8 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITextSelectionDisplayInteractionDelegate") extern interface UITextSelectionDisplayInteractionDelegate extends NSObjectProtocol {
+@:hxmc.objc("UITextSelectionDisplayInteractionDelegate") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITextSelectionDisplayInteractionDelegate extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function selectionContainerViewBelowTextForSelectionDisplayInteraction(interaction:UITextSelectionDisplayInteraction):Null<UIView>;
 }

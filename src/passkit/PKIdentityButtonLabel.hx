@@ -4,9 +4,13 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKIdentityButtonLabel(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var VerifyIdentity = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Verify = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var VerifyAge = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Continue = 3;
 	inline function new(v:I64) this = v;
 }

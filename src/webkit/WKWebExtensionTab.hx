@@ -10,71 +10,104 @@ import hxmc.I64;
 import objc.NSObjectProtocol;
 import uikit.UIImage;
 
-@:hxmc.objc("WKWebExtensionTab") extern interface WKWebExtensionTab extends NSObjectProtocol {
+@:hxmc.objc("WKWebExtensionTab") @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern interface WKWebExtensionTab extends NSObjectProtocol {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function windowForWebExtensionContext(context:WKWebExtensionContext):Null<WKWebExtensionWindow>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function indexInWindowForWebExtensionContext(context:WKWebExtensionContext):I64;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function parentTabForWebExtensionContext(context:WKWebExtensionContext):Null<WKWebExtensionTab>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setParentTab(parentTab:Null<WKWebExtensionTab>, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function webViewForWebExtensionContext(context:WKWebExtensionContext):Null<WKWebView>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function titleForWebExtensionContext(context:WKWebExtensionContext):Null<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isPinnedForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setPinned(pinned:Bool, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isReaderModeAvailableForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isReaderModeActiveForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setReaderModeActive(active:Bool, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isPlayingAudioForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isMutedForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setMuted(muted:Bool, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function sizeForWebExtensionContext(context:WKWebExtensionContext):CGSize;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function zoomFactorForWebExtensionContext(context:WKWebExtensionContext):Float;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setZoomFactor(zoomFactor:Float, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function urlForWebExtensionContext(context:WKWebExtensionContext):Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function pendingURLForWebExtensionContext(context:WKWebExtensionContext):Null<NSURL>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isLoadingCompleteForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function detectWebpageLocaleForWebExtensionContext(context:WKWebExtensionContext, completionHandler:(Null<NSLocale>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function takeSnapshotUsingConfiguration(configuration:WKSnapshotConfiguration, forWebExtensionContext:WKWebExtensionContext, completionHandler:(Null<UIImage>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function loadURL(url:NSURL, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function reloadFromOrigin(fromOrigin:Bool, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function goBackForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function goForwardForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function activateForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isSelectedForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setSelected(selected:Bool, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function duplicateUsingConfiguration(configuration:WKWebExtensionTabConfiguration, forWebExtensionContext:WKWebExtensionContext, completionHandler:(Null<WKWebExtensionTab>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function closeForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function shouldGrantPermissionsOnUserGestureForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function shouldBypassPermissionsForWebExtensionContext(context:WKWebExtensionContext):Bool;
 }

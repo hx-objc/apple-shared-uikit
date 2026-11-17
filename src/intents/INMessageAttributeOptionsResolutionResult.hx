@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INMessageAttributeOptionsResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INMessageAttributeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INMessageAttributeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INMessageAttributeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INMessageAttributeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INMessageAttributeOptionsResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INMessageAttributeOptionsResolutionResult;
 	static function successWithResolvedMessageAttributeOptions(resolvedMessageAttributeOptions:INMessageAttributeOptions):INMessageAttributeOptionsResolutionResult;
 	@:deprecated

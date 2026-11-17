@@ -6,16 +6,27 @@ import foundation.NSCoder;
 import uikit.UIControl;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityButton extends UIControl {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityButton extends UIControl {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearance():PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cornerRadius(get, set) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cornerRadius():Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cornerRadius(v:Float):Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function buttonWithLabel(label:PKIdentityButtonLabel, style:PKIdentityButtonStyle):PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithLabel(label:PKIdentityButtonLabel, style:PKIdentityButtonStyle):PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():PKIdentityButton;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<PKIdentityButton>;
 }

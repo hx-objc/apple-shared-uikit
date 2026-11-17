@@ -4,12 +4,14 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INActivateCarSignalIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INActivateCarSignalIntent;
 	var carName(get, never) : Null<INSpeakableString>;
 	function get_carName():Null<INSpeakableString>;
 	var signals(get, never) : INCarSignalOptions;
 	function get_signals():INCarSignalOptions;
 	function initWithCarName(carName:Null<INSpeakableString>, signals:INCarSignalOptions):INActivateCarSignalIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INActivateCarSignalIntent;
 	override function initWithCoder(coder:NSCoder):Null<INActivateCarSignalIntent>;
 }

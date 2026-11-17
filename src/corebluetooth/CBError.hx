@@ -23,7 +23,9 @@ enum abstract CBError(I64) to I64 {
 	var PeerRemovedPairingInformation = 14;
 	var EncryptionTimedOut = 15;
 	var TooManyLEPairedDevices = 16;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ChannelSoundingConfigurationFailed = 19;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ChannelSoundingProcedureFailed = 20;
 	inline function new(v:I64) this = v;
 }

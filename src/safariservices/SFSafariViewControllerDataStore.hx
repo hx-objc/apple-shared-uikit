@@ -3,9 +3,13 @@ package safariservices;
 
 import objc.NSObject;
 
-@:hxmc.framework("SafariServices") @:hxmc.objc extern class SFSafariViewControllerDataStore extends NSObject {
+@:hxmc.framework("SafariServices") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class SFSafariViewControllerDataStore extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():SFSafariViewControllerDataStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var defaultDataStore(get, never) : SFSafariViewControllerDataStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_defaultDataStore():SFSafariViewControllerDataStore;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function clearWebsiteDataWithCompletionHandler(completion:Null<() -> Void>):Void;
 }

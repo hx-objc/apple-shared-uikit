@@ -4,10 +4,15 @@ package passkit;
 import foundation.NSError;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityAuthorizationController extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityAuthorizationController extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityAuthorizationController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function checkCanRequestDocument(descriptor:PKIdentityDocumentDescriptor, completion:Bool -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function requestDocument(request:PKIdentityRequest, completion:(Null<PKIdentityDocument>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function cancelRequest():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():PKIdentityAuthorizationController;
 }

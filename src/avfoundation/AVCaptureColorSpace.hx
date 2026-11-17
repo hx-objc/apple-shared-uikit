@@ -7,7 +7,9 @@ enum abstract AVCaptureColorSpace(I64) to I64 {
 	var Space_sRGB = 0;
 	var Space_P3_D65 = 1;
 	var Space_HLG_BT2020 = 2;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Space_AppleLog = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Space_AppleLog2 = 4;
 	inline function new(v:I64) this = v;
 }

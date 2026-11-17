@@ -15,9 +15,11 @@ import objc.NSObjectProtocol;
 	@:optional
 	function presentSearchController(searchController:UISearchController):Void;
 	@:selector("searchController:willChangeToSearchBarPlacement:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function searchControllerWillChangeToSearchBarPlacement(searchController:UISearchController, willChangeToSearchBarPlacement:UINavigationItemSearchBarPlacement):Void;
 	@:selector("searchController:didChangeFromSearchBarPlacement:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function searchControllerDidChangeFromSearchBarPlacement(searchController:UISearchController, didChangeFromSearchBarPlacement:UINavigationItemSearchBarPlacement):Void;
 }

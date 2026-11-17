@@ -8,8 +8,10 @@ import foundation.NSString;
 	public static final HMAccessoryCategoryTypeAirDehumidifier : NSString;
 	public static final HMAccessoryCategoryTypeAirHeater : NSString;
 	public static final HMAccessoryCategoryTypeAirHumidifier : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeAirPort : NSString;
 	public static final HMAccessoryCategoryTypeAirPurifier : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeAudioReceiver : NSString;
 	public static final HMAccessoryCategoryTypeBridge : NSString;
 	public static final HMAccessoryCategoryTypeDoor : NSString;
@@ -26,14 +28,19 @@ import foundation.NSString;
 	public static final HMAccessoryCategoryTypeSecuritySystem : NSString;
 	public static final HMAccessoryCategoryTypeSensor : NSString;
 	public static final HMAccessoryCategoryTypeShowerHead : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeSpeaker : NSString;
 	public static final HMAccessoryCategoryTypeSprinkler : NSString;
 	public static final HMAccessoryCategoryTypeSwitch : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeTelevision : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeTelevisionSetTopBox : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeTelevisionStreamingStick : NSString;
 	public static final HMAccessoryCategoryTypeThermostat : NSString;
 	public static final HMAccessoryCategoryTypeVideoDoorbell : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMAccessoryCategoryTypeWiFiRouter : NSString;
 	public static final HMAccessoryCategoryTypeWindow : NSString;
 	public static final HMAccessoryCategoryTypeWindowCovering : NSString;
@@ -66,10 +73,12 @@ import foundation.NSString;
 	public static final HMCharacteristicMetadataUnitsSeconds : NSString;
 	public static final HMCharacteristicPropertyHidden : NSString;
 	public static final HMCharacteristicPropertyReadable : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicPropertyRequiresAuthorizationData : NSString;
 	public static final HMCharacteristicPropertySupportsEventNotification : NSString;
 	public static final HMCharacteristicPropertyWritable : NSString;
 	public static final HMCharacteristicTypeActive : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeActiveIdentifier : NSString;
 	public static final HMCharacteristicTypeAdminOnlyAccess : NSString;
 	public static final HMCharacteristicTypeAirParticulateDensity : NSString;
@@ -85,8 +94,10 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeCarbonMonoxideLevel : NSString;
 	public static final HMCharacteristicTypeCarbonMonoxidePeakLevel : NSString;
 	public static final HMCharacteristicTypeChargingState : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeClosedCaptions : NSString;
 	public static final HMCharacteristicTypeColorTemperature : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeConfiguredName : NSString;
 	public static final HMCharacteristicTypeContactState : NSString;
 	public static final HMCharacteristicTypeCoolingThreshold : NSString;
@@ -99,6 +110,7 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeCurrentHumidifierDehumidifierState : NSString;
 	public static final HMCharacteristicTypeCurrentLightLevel : NSString;
 	public static final HMCharacteristicTypeCurrentLockMechanismState : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeCurrentMediaState : NSString;
 	public static final HMCharacteristicTypeCurrentPosition : NSString;
 	public static final HMCharacteristicTypeCurrentRelativeHumidity : NSString;
@@ -107,6 +119,7 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeCurrentTemperature : NSString;
 	public static final HMCharacteristicTypeCurrentTilt : NSString;
 	public static final HMCharacteristicTypeCurrentVerticalTilt : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeCurrentVisibilityState : NSString;
 	public static final HMCharacteristicTypeDehumidifierThreshold : NSString;
 	public static final HMCharacteristicTypeDigitalZoom : NSString;
@@ -120,13 +133,16 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeHoldPosition : NSString;
 	public static final HMCharacteristicTypeHue : NSString;
 	public static final HMCharacteristicTypeHumidifierThreshold : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeIdentifier : NSString;
 	public static final HMCharacteristicTypeIdentify : NSString;
 	public static final HMCharacteristicTypeImageMirroring : NSString;
 	public static final HMCharacteristicTypeImageRotation : NSString;
 	public static final HMCharacteristicTypeInUse : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeInputDeviceType : NSString;
 	public static final HMCharacteristicTypeInputEvent : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeInputSourceType : NSString;
 	public static final HMCharacteristicTypeIsConfigured : NSString;
 	public static final HMCharacteristicTypeLabelIndex : NSString;
@@ -154,15 +170,19 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeOzoneDensity : NSString;
 	public static final HMCharacteristicTypePM10Density : NSString;
 	public static final HMCharacteristicTypePM2_5Density : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypePictureMode : NSString;
 	public static final HMCharacteristicTypePositionState : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypePowerModeSelection : NSString;
 	public static final HMCharacteristicTypePowerState : NSString;
 	public static final HMCharacteristicTypeProgramMode : NSString;
 	public static final HMCharacteristicTypeRemainingDuration : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeRemoteKey : NSString;
 	public static final HMCharacteristicTypeRotationDirection : NSString;
 	public static final HMCharacteristicTypeRotationSpeed : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeRouterStatus : NSString;
 	public static final HMCharacteristicTypeSaturation : NSString;
 	public static final HMCharacteristicTypeSecuritySystemAlarmType : NSString;
@@ -193,6 +213,7 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeTargetHorizontalTilt : NSString;
 	public static final HMCharacteristicTypeTargetHumidifierDehumidifierState : NSString;
 	public static final HMCharacteristicTypeTargetLockMechanismState : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeTargetMediaState : NSString;
 	public static final HMCharacteristicTypeTargetPosition : NSString;
 	public static final HMCharacteristicTypeTargetRelativeHumidity : NSString;
@@ -200,16 +221,21 @@ import foundation.NSString;
 	public static final HMCharacteristicTypeTargetTemperature : NSString;
 	public static final HMCharacteristicTypeTargetTilt : NSString;
 	public static final HMCharacteristicTypeTargetVerticalTilt : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeTargetVisibilityState : NSString;
 	public static final HMCharacteristicTypeTemperatureUnits : NSString;
 	public static final HMCharacteristicTypeValveType : NSString;
 	public static final HMCharacteristicTypeVersion : NSString;
 	public static final HMCharacteristicTypeVolatileOrganicCompoundDensity : NSString;
 	public static final HMCharacteristicTypeVolume : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeVolumeControlType : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeVolumeSelector : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeWANStatusList : NSString;
 	public static final HMCharacteristicTypeWaterLevel : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMCharacteristicTypeWiFiSatelliteStatus : NSString;
 	public static final HMCharacteristicValueKeyPath : NSString;
 	public static final HMErrorDomain : NSString;
@@ -232,6 +258,7 @@ import foundation.NSString;
 	public static final HMServiceTypeHeaterCooler : NSString;
 	public static final HMServiceTypeHumidifierDehumidifier : NSString;
 	public static final HMServiceTypeHumiditySensor : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMServiceTypeInputSource : NSString;
 	public static final HMServiceTypeIrrigationSystem : NSString;
 	public static final HMServiceTypeLabel : NSString;
@@ -251,12 +278,15 @@ import foundation.NSString;
 	public static final HMServiceTypeStatefulProgrammableSwitch : NSString;
 	public static final HMServiceTypeStatelessProgrammableSwitch : NSString;
 	public static final HMServiceTypeSwitch : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMServiceTypeTelevision : NSString;
 	public static final HMServiceTypeTemperatureSensor : NSString;
 	public static final HMServiceTypeThermostat : NSString;
 	public static final HMServiceTypeValve : NSString;
 	public static final HMServiceTypeVentilationFan : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMServiceTypeWiFiRouter : NSString;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	public static final HMServiceTypeWiFiSatellite : NSString;
 	public static final HMServiceTypeWindow : NSString;
 	public static final HMServiceTypeWindowCovering : NSString;

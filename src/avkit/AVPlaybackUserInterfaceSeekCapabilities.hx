@@ -4,9 +4,13 @@ package avkit;
 import hxmc.I64;
 
 enum abstract AVPlaybackUserInterfaceSeekCapabilities(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var None = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ScanForward = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ScanBackward = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Seek = 4;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

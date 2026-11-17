@@ -8,32 +8,54 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRHeadphoneSettingsHearingAssistance extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class SRHeadphoneSettingsHearingAssistance extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():SRHeadphoneSettingsHearingAssistance;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingAidEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingAidEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var mediaAssistEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_mediaAssistEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var adjustMediaEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_adjustMediaEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var adjustVoiceEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_adjustVoiceEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingProtectionEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingProtectionEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var conversationBoostEnabled(get, never) : SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_conversationBoostEnabled():SRHeadphoneSettingsSettingEnablement;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingAidAmplification(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingAidAmplification():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingAidBalance(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingAidBalance():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hearingAidTone(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hearingAidTone():Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ambientNoiseReduction(get, never) : Float;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_ambientNoiseReduction():Float;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<SRHeadphoneSettingsHearingAssistance>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function init():SRHeadphoneSettingsHearingAssistance;
 }

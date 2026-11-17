@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSearchForBillsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForBillsIntentResponse;
 	var code(get, never) : INSearchForBillsIntentResponseCode;
 	function get_code():INSearchForBillsIntentResponseCode;

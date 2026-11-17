@@ -6,15 +6,24 @@ import objc.NSObject;
 import symbols.NSSymbolContentTransition;
 import symbols.NSSymbolEffect;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISymbolEffectCompletionContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UISymbolEffectCompletionContext extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UISymbolEffectCompletionContext;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var finished(get, never) : Bool;
 	@:selector("isFinished")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_finished():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var sender(get, never) : Null<Id>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_sender():Null<Id>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var effect(get, never) : Null<NSSymbolEffect>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_effect():Null<NSSymbolEffect>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var contentTransition(get, never) : Null<NSSymbolContentTransition>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_contentTransition():Null<NSSymbolContentTransition>;
 }

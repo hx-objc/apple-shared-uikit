@@ -3,9 +3,13 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITabAccessory extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UITabAccessory extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UITabAccessory;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var contentView(get, never) : UIView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentView():UIView;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithContentView(contentView:UIView):UITabAccessory;
 }

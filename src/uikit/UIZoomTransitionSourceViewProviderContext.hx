@@ -3,10 +3,15 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIZoomTransitionSourceViewProviderContext extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIZoomTransitionSourceViewProviderContext extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIZoomTransitionSourceViewProviderContext;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var sourceViewController(get, never) : UIViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_sourceViewController():UIViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var zoomedViewController(get, never) : UIViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_zoomedViewController():UIViewController;
 }

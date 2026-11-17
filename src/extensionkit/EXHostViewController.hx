@@ -9,16 +9,27 @@ import hxmc.unsafe.Ptr;
 import uikit.UIView;
 import uikit.UIViewController;
 
-@:hxmc.framework("ExtensionKit") @:hxmc.objc extern class EXHostViewController extends UIViewController {
+@:hxmc.framework("ExtensionKit") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0) extern class EXHostViewController extends UIViewController {
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():EXHostViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	var delegate(get, set) : Null<EXHostViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_delegate():Null<EXHostViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_delegate(v:Null<EXHostViewControllerDelegate>):Null<EXHostViewControllerDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	var placeholderView(get, set) : UIView;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_placeholderView():UIView;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_placeholderView(v:UIView):UIView;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	function makeXPCConnectionWithError(error:Ptr):Null<NSXPCConnection>;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	override function init():EXHostViewController;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(coder:NSCoder):Null<EXHostViewController>;
+	@:hxmc.available(macos >= 13.0, ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):EXHostViewController;
 }

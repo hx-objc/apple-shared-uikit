@@ -27,6 +27,7 @@ import uikit.UIViewController;
 	@:optional
 	function webViewRunJavaScriptTextInputPanelWithPromptDefaultTextInitiatedByFrameCompletionHandler(webView:WKWebView, runJavaScriptTextInputPanelWithPrompt:NSStringArg, defaultText:Null<NSStringArg>, initiatedByFrame:WKFrameInfo, completionHandler:Null<NSString> -> Void):Void;
 	@:selector("webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function webViewRequestMediaCapturePermissionForOriginInitiatedByFrameTypeDecisionHandler(webView:WKWebView, requestMediaCapturePermissionForOrigin:WKSecurityOrigin, initiatedByFrame:WKFrameInfo, type:WKMediaCaptureType, decisionHandler:WKPermissionDecision -> Void):Void;
 	@:selector("webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:")
@@ -57,18 +58,23 @@ import uikit.UIViewController;
 	@:optional
 	function webViewContextMenuDidEndForElement(webView:WKWebView, contextMenuDidEndForElement:WKContextMenuElementInfo):Void;
 	@:selector("webView:showLockdownModeFirstUseMessage:completionHandler:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function webViewShowLockdownModeFirstUseMessageCompletionHandler(webView:WKWebView, showLockdownModeFirstUseMessage:NSStringArg, completionHandler:WKDialogResult -> Void):Void;
 	@:selector("webView:willPresentEditMenuWithAnimator:")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function webViewWillPresentEditMenuWithAnimator(webView:WKWebView, willPresentEditMenuWithAnimator:UIEditMenuInteractionAnimating):Void;
 	@:selector("webView:willDismissEditMenuWithAnimator:")
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function webViewWillDismissEditMenuWithAnimator(webView:WKWebView, willDismissEditMenuWithAnimator:UIEditMenuInteractionAnimating):Void;
 	@:selector("webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:")
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function webViewRunOpenPanelWithParametersInitiatedByFrameCompletionHandler(webView:WKWebView, runOpenPanelWithParameters:WKOpenPanelParameters, initiatedByFrame:WKFrameInfo, completionHandler:Null<NSArray<NSURL>> -> Void):Void;
 	@:selector("webView:requestGeolocationPermissionForOrigin:initiatedByFrame:decisionHandler:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function webViewRequestGeolocationPermissionForOriginInitiatedByFrameDecisionHandler(webView:WKWebView, requestGeolocationPermissionForOrigin:WKSecurityOrigin, initiatedByFrame:WKFrameInfo, decisionHandler:WKPermissionDecision -> Void):Void;
 }

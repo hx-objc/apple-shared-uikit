@@ -46,6 +46,7 @@ import foundation.NSCoder;
 	function setNeedsUpdateConfiguration():Void;
 	function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 	function dragStateDidChange(dragState:UICollectionViewCellDragState):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function defaultBackgroundConfiguration():UIBackgroundConfiguration;
 	override function init():UICollectionViewCell;
 	override function initWithCoder(coder:NSCoder):Null<UICollectionViewCell>;

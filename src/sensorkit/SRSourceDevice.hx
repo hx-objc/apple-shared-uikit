@@ -9,17 +9,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRSourceDevice extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class SRSourceDevice extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():SRSourceDevice;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var localIdentifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_localIdentifier():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var manufacturer(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_manufacturer():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var model(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_model():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var hardwareVersion(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_hardwareVersion():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var firmwareVersion(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_firmwareVersion():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

@@ -7,16 +7,24 @@ import foundation.NSSecureCoding;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPMapPanelSection extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPMapPanelSection extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPMapPanelSection;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var title(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_title(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var items(get, set) : NSArray<CPMapPanelItem>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_items():NSArray<CPMapPanelItem>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_items(v:NSArray<CPMapPanelItem>):NSArray<CPMapPanelItem>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTitle(title:Null<NSStringArg>, items:NSArray<CPMapPanelItem>):CPMapPanelSection;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPMapPanelSection>;

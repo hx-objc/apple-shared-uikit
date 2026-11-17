@@ -3,9 +3,13 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UISheetPresentationControllerDetentResolutionContext") extern interface UISheetPresentationControllerDetentResolutionContext extends NSObjectProtocol {
+@:hxmc.objc("UISheetPresentationControllerDetentResolutionContext") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UISheetPresentationControllerDetentResolutionContext extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var containerTraitCollection(get, never) : UITraitCollection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_containerTraitCollection():UITraitCollection;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var maximumDetentValue(get, never) : Float;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_maximumDetentValue():Float;
 }

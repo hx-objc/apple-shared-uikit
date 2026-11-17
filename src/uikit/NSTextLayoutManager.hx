@@ -17,74 +17,140 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextLayoutManager extends NSObject implements NSSecureCoding implements NSTextSelectionDataSource {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextLayoutManager extends NSObject implements NSSecureCoding implements NSTextSelectionDataSource {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextLayoutManager;
+	@:hxmc.available(macos >= 12.0)
 	var delegate(get, set) : Null<NSTextLayoutManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function get_delegate():Null<NSTextLayoutManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function set_delegate(v:Null<NSTextLayoutManagerDelegate>):Null<NSTextLayoutManagerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	var usesFontLeading(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_usesFontLeading():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_usesFontLeading(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var limitsLayoutForSuspiciousContents(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_limitsLayoutForSuspiciousContents():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_limitsLayoutForSuspiciousContents(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var usesHyphenation(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_usesHyphenation():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_usesHyphenation(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var resolvesNaturalAlignmentWithBaseWritingDirection(get, set) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_resolvesNaturalAlignmentWithBaseWritingDirection():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_resolvesNaturalAlignmentWithBaseWritingDirection(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var textContentManager(get, never) : Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textContentManager():Null<NSTextContentManager>;
+	@:hxmc.available(macos >= 12.0)
 	var textContainer(get, set) : Null<NSTextContainer>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textContainer():Null<NSTextContainer>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textContainer(v:Null<NSTextContainer>):Null<NSTextContainer>;
+	@:hxmc.available(macos >= 12.0)
 	var usageBoundsForTextContainer(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_usageBoundsForTextContainer():CGRect;
+	@:hxmc.available(macos >= 12.0)
 	var textViewportLayoutController(get, never) : NSTextViewportLayoutController;
+	@:hxmc.available(macos >= 12.0)
 	function get_textViewportLayoutController():NSTextViewportLayoutController;
+	@:hxmc.available(macos >= 12.0)
 	var layoutQueue(get, set) : Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	function get_layoutQueue():Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	function set_layoutQueue(v:Null<NSOperationQueue>):Null<NSOperationQueue>;
+	@:hxmc.available(macos >= 12.0)
 	var textSelections(get, set) : NSArray<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textSelections():NSArray<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textSelections(v:NSArray<NSTextSelection>):NSArray<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	var textSelectionNavigation(get, set) : NSTextSelectionNavigation;
+	@:hxmc.available(macos >= 12.0)
 	function get_textSelectionNavigation():NSTextSelectionNavigation;
+	@:hxmc.available(macos >= 12.0)
 	function set_textSelectionNavigation(v:NSTextSelectionNavigation):NSTextSelectionNavigation;
+	@:hxmc.available(macos >= 12.0)
 	var renderingAttributesValidator(get, set) : Null<(NSTextLayoutManager, NSTextLayoutFragment) -> Void>;
+	@:hxmc.available(macos >= 12.0)
 	function get_renderingAttributesValidator():Null<(NSTextLayoutManager, NSTextLayoutFragment) -> Void>;
+	@:hxmc.available(macos >= 12.0)
 	function set_renderingAttributesValidator(v:Null<(NSTextLayoutManager, NSTextLayoutFragment) -> Void>):Null<(NSTextLayoutManager, NSTextLayoutFragment) -> Void>;
+	@:hxmc.available(macos >= 12.0)
 	static var linkRenderingAttributes(get, never) : NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 12.0)
 	static function get_linkRenderingAttributes():NSDictionary<NSString, Id>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var documentRange(get, never) : NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_documentRange():NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	override function init():NSTextLayoutManager;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCoder(coder:NSCoder):Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function replaceTextContentManager(textContentManager:NSTextContentManager):Void;
+	@:hxmc.available(macos >= 12.0)
 	function ensureLayoutForRange(range:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function ensureLayoutForBounds(bounds:CGRect):Void;
+	@:hxmc.available(macos >= 12.0)
 	function invalidateLayoutForRange(range:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function textLayoutFragmentForPosition(position:CGPoint):Null<NSTextLayoutFragment>;
+	@:hxmc.available(macos >= 12.0)
 	function textLayoutFragmentForLocation(location:NSTextLocation):Null<NSTextLayoutFragment>;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateTextLayoutFragmentsFromLocation(location:Null<NSTextLocation>, options:NSTextLayoutFragmentEnumerationOptions, usingBlock:NSTextLayoutFragment -> Bool):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateRenderingAttributesFromLocation(location:NSTextLocation, reverse:Bool, usingBlock:(NSTextLayoutManager, NSDictionary<NSString, Id>, NSTextRange) -> Bool):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setRenderingAttributes(renderingAttributes:NSDictionary<NSString, Id>, forTextRange:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function addRenderingAttribute(renderingAttribute:NSStringArg, value:Null<Id>, forTextRange:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function removeRenderingAttribute(renderingAttribute:NSStringArg, forTextRange:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function invalidateRenderingAttributesForTextRange(textRange:NSTextRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function renderingAttributesForLink(link:Id, atLocation:NSTextLocation):NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateTextSegmentsInRange(textRange:NSTextRange, type:NSTextLayoutManagerSegmentType, options:NSTextLayoutManagerSegmentOptions, usingBlock:(Null<NSTextRange>, CGRect, Float, NSTextContainer) -> Bool):Void;
+	@:hxmc.available(macos >= 12.0)
 	overload function replaceContentsInRange(range:NSTextRange, withTextElements:NSArray<NSTextElement>):Void;
+	@:hxmc.available(macos >= 12.0)
 	overload function replaceContentsInRange(range:NSTextRange, withAttributedString:NSAttributedString):Void;
 	function encodeWithCoder(coder:NSCoder):Void;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateSubstringsFromLocation(location:NSTextLocation, options:NSStringEnumerationOptions, usingBlock:(Null<NSString>, NSTextRange, Null<NSTextRange>, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function textRangeForSelectionGranularity(selectionGranularity:NSTextSelectionGranularity, enclosingLocation:NSTextLocation):Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function locationFromLocation(location:NSTextLocation, withOffset:I64):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function offsetFromLocation(from:NSTextLocation, toLocation:NSTextLocation):I64;
+	@:hxmc.available(macos >= 12.0)
 	function baseWritingDirectionAtLocation(location:NSTextLocation):NSTextSelectionNavigationWritingDirection;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateCaretOffsetsInLineFragmentAtLocation(location:NSTextLocation, usingBlock:(Float, NSTextLocation, Bool, Ptr) -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function lineFragmentRangeForPoint(point:CGPoint, inContainerAtLocation:NSTextLocation):Null<NSTextRange>;
 }

@@ -44,8 +44,11 @@ import hxmc.objc.ObjCClass;
 	var reorderingCadence(get, set) : UICollectionViewReorderingCadence;
 	function get_reorderingCadence():UICollectionViewReorderingCadence;
 	function set_reorderingCadence(v:UICollectionViewReorderingCadence):UICollectionViewReorderingCadence;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selfSizingInvalidation(get, set) : UICollectionViewSelfSizingInvalidation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selfSizingInvalidation():UICollectionViewSelfSizingInvalidation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selfSizingInvalidation(v:UICollectionViewSelfSizingInvalidation):UICollectionViewSelfSizingInvalidation;
 	var backgroundView(get, set) : Null<UIView>;
 	function get_backgroundView():Null<UIView>;

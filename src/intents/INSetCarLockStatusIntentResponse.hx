@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSetCarLockStatusIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetCarLockStatusIntentResponse;
 	var code(get, never) : INSetCarLockStatusIntentResponseCode;
 	function get_code():INSetCarLockStatusIntentResponseCode;

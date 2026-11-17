@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetSeatSettingsInCarIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetSeatSettingsInCarIntent;
 	var enableHeating(get, never) : Null<NSNumberArg>;
 	function get_enableHeating():Null<NSNumberArg>;
@@ -23,6 +24,7 @@ import foundation.NSNumberArg;
 	overload function initWithEnableHeating(enableHeating:Null<NSNumberArg>, enableCooling:Null<NSNumberArg>, enableMassage:Null<NSNumberArg>, seat:INCarSeat, level:Null<NSNumberArg>, relativeLevelSetting:INRelativeSetting, carName:Null<INSpeakableString>):INSetSeatSettingsInCarIntent;
 	@:deprecated
 	overload function initWithEnableHeating(enableHeating:Null<NSNumberArg>, enableCooling:Null<NSNumberArg>, enableMassage:Null<NSNumberArg>, seat:INCarSeat, level:Null<NSNumberArg>, relativeLevelSetting:INRelativeSetting):INSetSeatSettingsInCarIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetSeatSettingsInCarIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetSeatSettingsInCarIntent>;
 }

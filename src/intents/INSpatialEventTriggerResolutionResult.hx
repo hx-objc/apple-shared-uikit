@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSpatialEventTriggerResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSpatialEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INSpatialEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INSpatialEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INSpatialEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INSpatialEventTriggerResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INSpatialEventTriggerResolutionResult;
 	static function successWithResolvedSpatialEventTrigger(resolvedSpatialEventTrigger:INSpatialEventTrigger):INSpatialEventTriggerResolutionResult;
 	static function disambiguationWithSpatialEventTriggersToDisambiguate(spatialEventTriggersToDisambiguate:NSArray<INSpatialEventTrigger>):INSpatialEventTriggerResolutionResult;

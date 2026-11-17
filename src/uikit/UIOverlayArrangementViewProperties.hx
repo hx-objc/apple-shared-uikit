@@ -6,11 +6,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIOverlayArrangementViewProperties extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIOverlayArrangementViewProperties extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIOverlayArrangementViewProperties;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var edge(get, set) : NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_edge():NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_edge(v:NSDirectionalRectEdge):NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function init():UIOverlayArrangementViewProperties;
 	function copyWithZone(zone:Ptr):Id;
 }

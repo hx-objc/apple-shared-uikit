@@ -43,14 +43,19 @@ import hxmc.unsafe.Ptr;
 	function get_batteryLevel():I64;
 	var tetheredCaptureEnabled(get, never) : Bool;
 	function get_tetheredCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var ptpEventHandler(get, set) : NSData -> Void;
+	@:hxmc.available(macos >= 12.0)
 	function get_ptpEventHandler():NSData -> Void;
+	@:hxmc.available(macos >= 12.0)
 	function set_ptpEventHandler(v:NSData -> Void):NSData -> Void;
 	function filesOfType(fileUTType:NSStringArg):Null<NSArray<NSString>>;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function requestReadDataFromFile(file:ICCameraFile, atOffset:I64, length:I64, readDelegate:Id, didReadDataSelector:Selector, contextInfo:Ptr):Void;
 	function requestDownloadFile(file:ICCameraFile, options:NSDictionary<NSString, Id>, downloadDelegate:ICCameraDeviceDownloadDelegate, didDownloadSelector:Selector, contextInfo:Ptr):Void;
 	overload function requestDeleteFiles(files:NSArray<ICCameraItem>):Void;
 	overload function requestDeleteFiles(files:NSArray<ICCameraItem>, deleteFailed:NSDictionary<NSString, ICCameraItem> -> Void, completion:(NSDictionary<NSString, NSArray<ICCameraItem>>, Null<NSError>) -> Void):Null<NSProgress>;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	overload function requestSendPTPCommand(command:NSData, outData:Null<NSData>, sendCommandDelegate:Id, didSendCommandSelector:Selector, contextInfo:Ptr):Void;
 	overload function requestSendPTPCommand(ptpCommand:NSData, outData:Null<NSData>, completion:(NSData, NSData, Null<NSError>) -> Void):Void;
 	override function init():ICCameraDevice;

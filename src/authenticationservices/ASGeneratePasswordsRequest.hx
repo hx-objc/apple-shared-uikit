@@ -9,18 +9,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AuthenticationServices") @:hxmc.objc extern class ASGeneratePasswordsRequest extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AuthenticationServices") @:hxmc.objc @:hxmc.available(ios >= 26.2, maccatalyst >= 26.2) extern class ASGeneratePasswordsRequest extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():ASGeneratePasswordsRequest;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var serviceIdentifier(get, never) : ASCredentialServiceIdentifier;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_serviceIdentifier():ASCredentialServiceIdentifier;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var passwordFieldPasswordRules(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_passwordFieldPasswordRules():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var confirmPasswordFieldPasswordRules(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_confirmPasswordFieldPasswordRules():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var passwordRulesFromQuirks(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function get_passwordRulesFromQuirks():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	function initWithServiceIdentifier(serviceIdentifier:ASCredentialServiceIdentifier, passwordFieldPasswordRules:Null<NSStringArg>, confirmPasswordFieldPasswordRules:Null<NSStringArg>, passwordRulesFromQuirks:Null<NSStringArg>):ASGeneratePasswordsRequest;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

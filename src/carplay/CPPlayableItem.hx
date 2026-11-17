@@ -3,8 +3,11 @@ package carplay;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("CPPlayableItem") extern interface CPPlayableItem extends NSObjectProtocol {
+@:hxmc.objc("CPPlayableItem") @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern interface CPPlayableItem extends NSObjectProtocol {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var playbackConfiguration(get, set) : Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_playbackConfiguration():Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_playbackConfiguration(v:Null<CPPlaybackConfiguration>):Null<CPPlaybackConfiguration>;
 }

@@ -10,7 +10,9 @@ import objc.NSObject;
 
 @:hxmc.framework("NearbyInteraction") @:hxmc.objc extern class NIDiscoveryToken extends NSObject implements NSCopying implements NSSecureCoding {
 	static function alloc():NIDiscoveryToken;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var deviceCapabilities(get, never) : NIDeviceCapability;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_deviceCapabilities():NIDeviceCapability;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

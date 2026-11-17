@@ -9,36 +9,62 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextSelection extends NSObject implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextSelection extends NSObject implements NSSecureCoding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextSelection;
+	@:hxmc.available(macos >= 12.0)
 	var textRanges(get, never) : NSArray<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textRanges():NSArray<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	var granularity(get, never) : NSTextSelectionGranularity;
+	@:hxmc.available(macos >= 12.0)
 	function get_granularity():NSTextSelectionGranularity;
+	@:hxmc.available(macos >= 12.0)
 	var affinity(get, never) : NSTextSelectionAffinity;
+	@:hxmc.available(macos >= 12.0)
 	function get_affinity():NSTextSelectionAffinity;
+	@:hxmc.available(macos >= 12.0)
 	var transient(get, never) : Bool;
 	@:selector("isTransient")
+	@:hxmc.available(macos >= 12.0)
 	function get_transient():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var anchorPositionOffset(get, set) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_anchorPositionOffset():Float;
+	@:hxmc.available(macos >= 12.0)
 	function set_anchorPositionOffset(v:Float):Float;
+	@:hxmc.available(macos >= 12.0)
 	var logical(get, set) : Bool;
 	@:selector("isLogical")
+	@:hxmc.available(macos >= 12.0)
 	function get_logical():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_logical(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var secondarySelectionLocation(get, set) : Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function get_secondarySelectionLocation():Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function set_secondarySelectionLocation(v:Null<NSTextLocation>):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	var typingAttributes(get, set) : NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 12.0)
 	function get_typingAttributes():NSDictionary<NSString, Id>;
+	@:hxmc.available(macos >= 12.0)
 	function set_typingAttributes(v:NSDictionary<NSString, Id>):NSDictionary<NSString, Id>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function initWithRanges(textRanges:NSArray<NSTextRange>, affinity:NSTextSelectionAffinity, granularity:NSTextSelectionGranularity):NSTextSelection;
+	@:hxmc.available(macos >= 12.0)
 	function initWithCoder(coder:NSCoder):Null<NSTextSelection>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithRange(range:NSTextRange, affinity:NSTextSelectionAffinity, granularity:NSTextSelectionGranularity):NSTextSelection;
+	@:hxmc.available(macos >= 12.0)
 	function initWithLocation(location:NSTextLocation, affinity:NSTextSelectionAffinity):NSTextSelection;
+	@:hxmc.available(macos >= 12.0)
 	function textSelectionWithTextRanges(textRanges:NSArray<NSTextRange>):NSTextSelection;
 	function encodeWithCoder(coder:NSCoder):Void;
 }

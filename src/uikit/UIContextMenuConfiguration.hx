@@ -11,17 +11,29 @@ import objc.NSObject;
 	static function alloc():UIContextMenuConfiguration;
 	var identifier(get, never) : NSCopying;
 	function get_identifier():NSCopying;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var secondaryItemIdentifiers(get, set) : NSSet<NSCopying>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_secondaryItemIdentifiers():NSSet<NSCopying>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_secondaryItemIdentifiers(v:NSSet<NSCopying>):NSSet<NSCopying>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var badgeCount(get, set) : I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_badgeCount():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_badgeCount(v:I64):I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var preferredMenuElementOrder(get, set) : UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_preferredMenuElementOrder():UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_preferredMenuElementOrder(v:UIContextMenuConfigurationElementOrder):UIContextMenuConfigurationElementOrder;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var allowsTypeSelect(get, set) : Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_allowsTypeSelect():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_allowsTypeSelect(v:Bool):Bool;
 	static function configurationWithIdentifier(identifier:Null<NSCopying>, previewProvider:Null<() -> Null<UIViewController>>, actionProvider:Null<NSArray<UIMenuElement> -> Null<UIMenu>>):UIContextMenuConfiguration;
 	override function init():UIContextMenuConfiguration;

@@ -5,6 +5,7 @@ import hxmc.I64;
 
 enum abstract AVAudioSessionDeactivationOptions(I64) to I64 {
 	var None = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var NotifyOthersOnDeactivation = 1;
 	inline function new(v:I64) this = v;
 	@:op(A | B)

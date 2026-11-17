@@ -8,8 +8,11 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextAttachmentLayout") extern interface NSTextAttachmentLayout extends NSObjectProtocol {
+@:hxmc.objc("NSTextAttachmentLayout") @:hxmc.available(macos >= 12.0) extern interface NSTextAttachmentLayout extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	function imageForBounds(bounds:CGRect, attributes:NSDictionary<NSString, Id>, location:NSTextLocation, textContainer:Null<NSTextContainer>):Null<UIImage>;
+	@:hxmc.available(macos >= 12.0)
 	function attachmentBoundsForAttributes(attributes:NSDictionary<NSString, Id>, location:NSTextLocation, textContainer:Null<NSTextContainer>, proposedLineFragment:CGRect, position:CGPoint):CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function viewProviderForParentView(parentView:Null<UIView>, location:NSTextLocation, textContainer:Null<NSTextContainer>):Null<NSTextAttachmentViewProvider>;
 }

@@ -5,14 +5,20 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPPanelButtonConfiguration extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CPPanelButtonConfiguration extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CPPanelButtonConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var primaryAction(get, never) : CPTextButton;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_primaryAction():CPTextButton;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var secondaryAction(get, never) : Null<CPTextButton>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_secondaryAction():Null<CPTextButton>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithPrimaryAction(primaryAction:CPTextButton, secondaryAction:Null<CPTextButton>):CPPanelButtonConfiguration;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPPanelButtonConfiguration>;

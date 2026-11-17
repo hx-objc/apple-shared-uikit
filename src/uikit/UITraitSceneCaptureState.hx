@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITraitSceneCaptureState extends NSObject implements UINSIntegerTraitDefinition {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITraitSceneCaptureState extends NSObject implements UINSIntegerTraitDefinition {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITraitSceneCaptureState;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static var defaultValue(get, never) : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function get_defaultValue():I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UITraitSceneCaptureState;
 }

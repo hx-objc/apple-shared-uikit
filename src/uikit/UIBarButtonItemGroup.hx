@@ -18,21 +18,34 @@ import objc.NSObject;
 	var displayingRepresentativeItem(get, never) : Bool;
 	@:selector("isDisplayingRepresentativeItem")
 	function get_displayingRepresentativeItem():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var alwaysAvailable(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_alwaysAvailable():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_alwaysAvailable(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var menuRepresentation(get, set) : Null<UIMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_menuRepresentation():Null<UIMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_menuRepresentation(v:Null<UIMenuElement>):Null<UIMenuElement>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_hidden(v:Bool):Bool;
 	function initWithBarButtonItems(barButtonItems:NSArray<UIBarButtonItem>, representativeItem:Null<UIBarButtonItem>):UIBarButtonItemGroup;
 	function initWithCoder(coder:NSCoder):Null<UIBarButtonItemGroup>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function fixedGroupWithRepresentativeItem(representativeItem:Null<UIBarButtonItem>, items:NSArray<UIBarButtonItem>):UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function movableGroupWithCustomizationIdentifier(customizationIdentifier:NSStringArg, representativeItem:Null<UIBarButtonItem>, items:NSArray<UIBarButtonItem>):UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function optionalGroupWithCustomizationIdentifier(customizationIdentifier:NSStringArg, inDefaultCustomization:Bool, representativeItem:Null<UIBarButtonItem>, items:NSArray<UIBarButtonItem>):UIBarButtonItemGroup;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function groupWithFixedSpace():UIBarButtonItemGroup;
 	function encodeWithCoder(coder:NSCoder):Void;
 	override function init():UIBarButtonItemGroup;

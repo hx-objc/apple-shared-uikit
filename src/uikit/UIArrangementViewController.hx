@@ -5,16 +5,27 @@ import foundation.NSBundle;
 import foundation.NSCoder;
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIArrangementViewController extends UIViewController {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UIArrangementViewController extends UIViewController {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UIArrangementViewController;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function init():UIArrangementViewController;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function updateArrangement(arrangement:UIArrangement, animated:Bool):Void;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function updateArrangement(arrangement:UIArrangement):Void;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function stateForPlacement(placement:UIArrangementViewControllerViewPlacement):Null<UIArrangementViewState>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function viewControllerForPlacement(placement:UIArrangementViewControllerViewPlacement):Null<UIViewController>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function placementForViewController(viewController:UIViewController):UIArrangementViewControllerViewPlacement;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function setViewController(viewController:Null<UIViewController>, forPlacement:UIArrangementViewControllerViewPlacement, animated:Bool):Void;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	overload function setViewController(viewController:Null<UIViewController>, forPlacement:UIArrangementViewControllerViewPlacement):Void;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function initWithCoder(coder:NSCoder):Null<UIArrangementViewController>;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):UIArrangementViewController;
 }

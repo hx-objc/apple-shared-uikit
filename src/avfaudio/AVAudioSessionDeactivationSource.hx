@@ -4,7 +4,9 @@ package avfaudio;
 import hxmc.I64;
 
 enum abstract AVAudioSessionDeactivationSource(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var App = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var System = 2;
 	inline function new(v:I64) this = v;
 }

@@ -27,9 +27,12 @@ import uikit.UITraitCollection;
 	function set_rulerActive(v:Bool):Bool;
 	var drawingGestureRecognizer(get, never) : UIGestureRecognizer;
 	function get_drawingGestureRecognizer():UIGestureRecognizer;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var drawingEnabled(get, set) : Bool;
 	@:selector("isDrawingEnabled")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_drawingEnabled():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_drawingEnabled(v:Bool):Bool;
 	@:deprecated
 	var allowsFingerDrawing(get, set) : Bool;
@@ -38,11 +41,17 @@ import uikit.UITraitCollection;
 	var drawingPolicy(get, set) : PKCanvasViewDrawingPolicy;
 	function get_drawingPolicy():PKCanvasViewDrawingPolicy;
 	function set_drawingPolicy(v:PKCanvasViewDrawingPolicy):PKCanvasViewDrawingPolicy;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var maximumSupportedContentVersion(get, set) : PKContentVersion;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_maximumSupportedContentVersion():PKContentVersion;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_maximumSupportedContentVersion(v:PKContentVersion):PKContentVersion;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var selectedStrokeIDs(get, set) : NSSet<NSUUID>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_selectedStrokeIDs():NSSet<NSUUID>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_selectedStrokeIDs(v:NSSet<NSUUID>):NSSet<NSUUID>;
 	override function init():PKCanvasView;
 	override function initWithCoder(coder:NSCoder):Null<PKCanvasView>;

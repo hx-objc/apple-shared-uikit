@@ -3,7 +3,9 @@ package uikit;
 
 import hxmc.objc.ObjCClass;
 
-@:hxmc.objc("UITraitOverrides") extern interface UITraitOverrides extends UIMutableTraits {
+@:hxmc.objc("UITraitOverrides") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITraitOverrides extends UIMutableTraits {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function containsTrait(trait:ObjCClass):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function removeTrait(trait:ObjCClass):Void;
 }

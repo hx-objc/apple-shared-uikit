@@ -10,11 +10,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRElectrocardiogramData extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRElectrocardiogramData extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRElectrocardiogramData;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var flags(get, never) : SRElectrocardiogramDataFlags;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_flags():SRElectrocardiogramDataFlags;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var value(get, never) : NSMeasurement<NSUnitElectricPotentialDifference>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_value():NSMeasurement<NSUnitElectricPotentialDifference>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

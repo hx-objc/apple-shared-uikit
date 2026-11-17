@@ -32,13 +32,21 @@ import objc.NSObject;
 	var fileWrapper(get, set) : Null<NSFileWrapper>;
 	function get_fileWrapper():Null<NSFileWrapper>;
 	function set_fileWrapper(v:Null<NSFileWrapper>):Null<NSFileWrapper>;
+	@:hxmc.available(macos >= 12.0)
 	var lineLayoutPadding(get, set) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_lineLayoutPadding():Float;
+	@:hxmc.available(macos >= 12.0)
 	function set_lineLayoutPadding(v:Float):Float;
+	@:hxmc.available(macos >= 12.0)
 	var allowsTextAttachmentView(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_allowsTextAttachmentView():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_allowsTextAttachmentView(v:Bool):Bool;
+	@:hxmc.available(macos >= 12.0)
 	var usesTextAttachmentView(get, never) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_usesTextAttachmentView():Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
@@ -46,11 +54,16 @@ import objc.NSObject;
 	function get_adjustsImageSizeForAccessibilityContentSizeCategory():Bool;
 	function set_adjustsImageSizeForAccessibilityContentSizeCategory(v:Bool):Bool;
 	function initWithData(contentData:Null<NSData>, ofType:Null<NSStringArg>):NSTextAttachment;
+	@:hxmc.available(macos >= 12.0)
 	static function textAttachmentViewProviderClassForFileType(fileType:NSStringArg):ObjCClass;
+	@:hxmc.available(macos >= 12.0)
 	static function registerTextAttachmentViewProviderClass(textAttachmentViewProviderClass:ObjCClass, forFileType:NSStringArg):Void;
 	static function textAttachmentWithImage(image:UIImage):NSTextAttachment;
+	@:hxmc.available(macos >= 12.0)
 	overload function imageForBounds(bounds:CGRect, attributes:NSDictionary<NSString, Id>, location:NSTextLocation, textContainer:Null<NSTextContainer>):Null<UIImage>;
+	@:hxmc.available(macos >= 12.0)
 	function attachmentBoundsForAttributes(attributes:NSDictionary<NSString, Id>, location:NSTextLocation, textContainer:Null<NSTextContainer>, proposedLineFragment:CGRect, position:CGPoint):CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function viewProviderForParentView(parentView:Null<UIView>, location:NSTextLocation, textContainer:Null<NSTextContainer>):Null<NSTextAttachmentViewProvider>;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<NSTextAttachment>;

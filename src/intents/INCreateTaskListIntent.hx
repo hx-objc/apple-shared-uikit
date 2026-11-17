@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCreateTaskListIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCreateTaskListIntent;
 	var title(get, never) : Null<INSpeakableString>;
 	function get_title():Null<INSpeakableString>;
@@ -13,6 +14,7 @@ import foundation.NSCoder;
 	var groupName(get, never) : Null<INSpeakableString>;
 	function get_groupName():Null<INSpeakableString>;
 	function initWithTitle(title:Null<INSpeakableString>, taskTitles:Null<NSArray<INSpeakableString>>, groupName:Null<INSpeakableString>):INCreateTaskListIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INCreateTaskListIntent;
 	override function initWithCoder(coder:NSCoder):Null<INCreateTaskListIntent>;
 }

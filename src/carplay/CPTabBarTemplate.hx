@@ -18,7 +18,9 @@ import hxmc.I64;
 	function get_selectedTemplate():Null<CPTemplate>;
 	function initWithTemplates(templates:NSArray<CPTemplate>):CPTabBarTemplate;
 	function updateTemplates(newTemplates:NSArray<CPTemplate>):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function selectTemplate(newTemplate:CPTemplate):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function selectTemplateAtIndex(index:I64):Void;
 	override function initWithCoder(coder:NSCoder):Null<CPTabBarTemplate>;
 }

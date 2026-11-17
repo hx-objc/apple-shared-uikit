@@ -4,6 +4,7 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKAddSecureElementPassErrorCode(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var GenericError = 0;
 	@:deprecated
 	var UnknownError = 0;

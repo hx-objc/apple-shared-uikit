@@ -15,7 +15,9 @@ package uikit;
 	var prefersExtendedRange(get, set) : Bool;
 	function get_prefersExtendedRange():Bool;
 	function set_prefersExtendedRange(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var supportsHighDynamicRange(get, never) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_supportsHighDynamicRange():Bool;
 	var preferredRange(get, set) : UIGraphicsImageRendererFormatRange;
 	function get_preferredRange():UIGraphicsImageRendererFormatRange;

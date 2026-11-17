@@ -4,12 +4,18 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UINavigationItemSearchBarPlacement(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Integrated = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Stacked = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var IntegratedCentered = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var IntegratedButton = 4;
 	@:deprecated
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Inline = 1;
 	inline function new(v:I64) this = v;
 }

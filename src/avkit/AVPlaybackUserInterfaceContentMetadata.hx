@@ -10,19 +10,30 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceContentMetadata extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceContentMetadata extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceContentMetadata;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var videoProperties(get, never) : Null<AVPlaybackUserInterfaceContentVideoProperties>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_videoProperties():Null<AVPlaybackUserInterfaceContentVideoProperties>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var title(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_title():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var subtitle(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var artworkRepresentations(get, never) : NSArray<AVPlaybackUserInterfaceContentArtwork>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_artworkRepresentations():NSArray<AVPlaybackUserInterfaceContentArtwork>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithVideoProperties(videoProperties:Null<AVPlaybackUserInterfaceContentVideoProperties>, title:Null<NSStringArg>, subtitle:Null<NSStringArg>, artworkRepresentations:NSArray<AVPlaybackUserInterfaceContentArtwork>):AVPlaybackUserInterfaceContentMetadata;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithTemplate(metadataTemplate:Null<AVPlaybackUserInterfaceContentMetadataTemplate>):AVPlaybackUserInterfaceContentMetadata;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

@@ -5,8 +5,10 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIHoverAutomaticEffect extends NSObject implements UIHoverEffect {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIHoverAutomaticEffect extends NSObject implements UIHoverEffect {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIHoverAutomaticEffect;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function effect():UIHoverAutomaticEffect;
 	function copyWithZone(zone:Ptr):Id;
 }

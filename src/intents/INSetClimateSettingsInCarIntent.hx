@@ -7,6 +7,7 @@ import foundation.NSNumberArg;
 import foundation.NSUnitTemperature;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetClimateSettingsInCarIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetClimateSettingsInCarIntent;
 	var enableFan(get, never) : Null<NSNumberArg>;
 	function get_enableFan():Null<NSNumberArg>;
@@ -35,6 +36,7 @@ import foundation.NSUnitTemperature;
 	overload function initWithEnableFan(enableFan:Null<NSNumberArg>, enableAirConditioner:Null<NSNumberArg>, enableClimateControl:Null<NSNumberArg>, enableAutoMode:Null<NSNumberArg>, airCirculationMode:INCarAirCirculationMode, fanSpeedIndex:Null<NSNumberArg>, fanSpeedPercentage:Null<NSNumberArg>, relativeFanSpeedSetting:INRelativeSetting, temperature:Null<NSMeasurement<NSUnitTemperature>>, relativeTemperatureSetting:INRelativeSetting, climateZone:INCarSeat, carName:Null<INSpeakableString>):INSetClimateSettingsInCarIntent;
 	@:deprecated
 	overload function initWithEnableFan(enableFan:Null<NSNumberArg>, enableAirConditioner:Null<NSNumberArg>, enableClimateControl:Null<NSNumberArg>, enableAutoMode:Null<NSNumberArg>, airCirculationMode:INCarAirCirculationMode, fanSpeedIndex:Null<NSNumberArg>, fanSpeedPercentage:Null<NSNumberArg>, relativeFanSpeedSetting:INRelativeSetting, temperature:Null<NSMeasurement<NSUnitTemperature>>, relativeTemperatureSetting:INRelativeSetting, climateZone:INCarSeat):INSetClimateSettingsInCarIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetClimateSettingsInCarIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetClimateSettingsInCarIntent>;
 }

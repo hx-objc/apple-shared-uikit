@@ -3,12 +3,19 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIViewControllerTransition extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIViewControllerTransition extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIViewControllerTransition;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function zoomWithOptions(options:Null<UIZoomTransitionOptions>, sourceViewProvider:UIZoomTransitionSourceViewProviderContext -> Null<UIView>):UIViewControllerTransition;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static overload function zoomWithOptions(options:Null<UIZoomTransitionOptions>, sourceBarButtonItemProvider:UIZoomTransitionSourceViewProviderContext -> Null<UIBarButtonItem>):UIViewControllerTransition;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function coverVerticalTransition():UIViewControllerTransition;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function flipHorizontalTransition():UIViewControllerTransition;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function crossDissolveTransition():UIViewControllerTransition;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function partialCurlTransition():UIViewControllerTransition;
 }

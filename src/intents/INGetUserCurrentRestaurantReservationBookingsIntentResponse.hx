@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INGetUserCurrentRestaurantReservationBookingsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INGetUserCurrentRestaurantReservationBookingsIntentResponse;
 	var code(get, never) : INGetUserCurrentRestaurantReservationBookingsIntentResponseCode;
 	function get_code():INGetUserCurrentRestaurantReservationBookingsIntentResponseCode;
@@ -13,6 +14,7 @@ import foundation.NSUserActivity;
 	function get_userCurrentBookings():NSArray<INRestaurantReservationUserBooking>;
 	function set_userCurrentBookings(v:NSArray<INRestaurantReservationUserBooking>):NSArray<INRestaurantReservationUserBooking>;
 	function initWithUserCurrentBookings(userCurrentBookings:NSArray<INRestaurantReservationUserBooking>, code:INGetUserCurrentRestaurantReservationBookingsIntentResponseCode, userActivity:Null<NSUserActivity>):INGetUserCurrentRestaurantReservationBookingsIntentResponse;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INGetUserCurrentRestaurantReservationBookingsIntentResponse;
 	override function initWithCoder(coder:NSCoder):Null<INGetUserCurrentRestaurantReservationBookingsIntentResponse>;
 }

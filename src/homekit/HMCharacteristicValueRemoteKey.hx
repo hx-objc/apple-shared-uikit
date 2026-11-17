@@ -4,22 +4,39 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueRemoteKey(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Rewind = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var FastForward = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var NextTrack = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var PreviousTrack = 3;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ArrowUp = 4;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ArrowDown = 5;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ArrowLeft = 6;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var ArrowRight = 7;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Select = 8;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Back = 9;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Exit = 10;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var PlayPause = 11;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Play = 12;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Pause = 13;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Menu = 14;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Info = 15;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Home = 16;
 	inline function new(v:I64) this = v;
 }

@@ -9,33 +9,56 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableTextProperties extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableTextProperties extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableTextProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var font(get, set) : UIFont;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_font():UIFont;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_font(v:UIFont):UIFont;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var color(get, set) : UIColor;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_color():UIColor;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_color(v:UIColor):UIColor;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var lineBreakMode(get, set) : NSLineBreakMode;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_lineBreakMode():NSLineBreakMode;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_lineBreakMode(v:NSLineBreakMode):NSLineBreakMode;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var numberOfLines(get, set) : I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_numberOfLines():I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_numberOfLines(v:I64):I64;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var adjustsFontSizeToFitWidth(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_adjustsFontSizeToFitWidth():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_adjustsFontSizeToFitWidth(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var minimumScaleFactor(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_minimumScaleFactor():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_minimumScaleFactor(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var allowsDefaultTighteningForTruncation(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_allowsDefaultTighteningForTruncation():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_allowsDefaultTighteningForTruncation(v:Bool):Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIContentUnavailableTextProperties>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIContentUnavailableTextProperties;
 }

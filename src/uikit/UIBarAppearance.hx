@@ -30,8 +30,11 @@ import objc.NSObject;
 	var shadowImage(get, set) : Null<UIImage>;
 	function get_shadowImage():Null<UIImage>;
 	function set_shadowImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var overrideUserInterfaceStyle(get, set) : UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_overrideUserInterfaceStyle():UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_overrideUserInterfaceStyle(v:UIUserInterfaceStyle):UIUserInterfaceStyle;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

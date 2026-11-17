@@ -5,7 +5,8 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("IdentityLookup") @:hxmc.objc extern class ILMessageFilterCapabilitiesQueryRequest extends NSObject implements NSSecureCoding {
+@:hxmc.framework("IdentityLookup") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class ILMessageFilterCapabilitiesQueryRequest extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():ILMessageFilterCapabilitiesQueryRequest;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

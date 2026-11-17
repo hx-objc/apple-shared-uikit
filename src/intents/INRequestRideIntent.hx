@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INRequestRideIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INRequestRideIntent;
 	var pickupLocation(get, never) : Null<CLPlacemark>;
 	function get_pickupLocation():Null<CLPlacemark>;
@@ -22,6 +23,7 @@ import foundation.NSNumberArg;
 	overload function initWithPickupLocation(pickupLocation:Null<CLPlacemark>, dropOffLocation:Null<CLPlacemark>, rideOptionName:Null<INSpeakableString>, partySize:Null<NSNumberArg>, paymentMethod:Null<INPaymentMethod>, scheduledPickupTime:Null<INDateComponentsRange>):INRequestRideIntent;
 	@:deprecated
 	overload function initWithPickupLocation(pickupLocation:Null<CLPlacemark>, dropOffLocation:Null<CLPlacemark>, rideOptionName:Null<INSpeakableString>, partySize:Null<NSNumberArg>, paymentMethod:Null<INPaymentMethod>):INRequestRideIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INRequestRideIntent;
 	override function initWithCoder(coder:NSCoder):Null<INRequestRideIntent>;
 }

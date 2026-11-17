@@ -9,23 +9,40 @@ import hxmc.unsafe.Ptr;
 import matter.MTRSetupPayload;
 import objc.NSObject;
 
-@:hxmc.framework("HomeKit") @:hxmc.objc extern class HMAccessorySetupRequest extends NSObject implements NSCopying {
+@:hxmc.framework("HomeKit") @:hxmc.objc @:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0) extern class HMAccessorySetupRequest extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	static function alloc():HMAccessorySetupRequest;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var payload(get, set) : Null<HMAccessorySetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_payload():Null<HMAccessorySetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function set_payload(v:Null<HMAccessorySetupPayload>):Null<HMAccessorySetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var homeUniqueIdentifier(get, set) : Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_homeUniqueIdentifier():Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function set_homeUniqueIdentifier(v:Null<NSUUID>):Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var suggestedRoomUniqueIdentifier(get, set) : Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_suggestedRoomUniqueIdentifier():Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function set_suggestedRoomUniqueIdentifier(v:Null<NSUUID>):Null<NSUUID>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var suggestedAccessoryName(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_suggestedAccessoryName():Null<NSStringArg>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function set_suggestedAccessoryName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	var matterPayload(get, set) : Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function get_matterPayload():Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	function set_matterPayload(v:Null<MTRSetupPayload>):Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 27.0, ios >= 15.4, maccatalyst >= 27.0)
 	override function init():HMAccessorySetupRequest;
 	function copyWithZone(zone:Ptr):Id;
 }

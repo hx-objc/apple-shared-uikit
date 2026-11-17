@@ -4,19 +4,33 @@ package uikit;
 import coregraphics.CGRect;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextViewportLayoutController extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class NSTextViewportLayoutController extends NSObject {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():NSTextViewportLayoutController;
+	@:hxmc.available(macos >= 12.0)
 	var delegate(get, set) : Null<NSTextViewportLayoutControllerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function get_delegate():Null<NSTextViewportLayoutControllerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	function set_delegate(v:Null<NSTextViewportLayoutControllerDelegate>):Null<NSTextViewportLayoutControllerDelegate>;
+	@:hxmc.available(macos >= 12.0)
 	var textLayoutManager(get, never) : Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textLayoutManager():Null<NSTextLayoutManager>;
+	@:hxmc.available(macos >= 12.0)
 	var viewportBounds(get, never) : CGRect;
+	@:hxmc.available(macos >= 12.0)
 	function get_viewportBounds():CGRect;
+	@:hxmc.available(macos >= 12.0)
 	var viewportRange(get, never) : Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function get_viewportRange():Null<NSTextRange>;
+	@:hxmc.available(macos >= 12.0)
 	function initWithTextLayoutManager(textLayoutManager:NSTextLayoutManager):NSTextViewportLayoutController;
+	@:hxmc.available(macos >= 12.0)
 	function layoutViewport():Void;
+	@:hxmc.available(macos >= 12.0)
 	function relocateViewportToTextLocation(textLocation:NSTextLocation):Float;
+	@:hxmc.available(macos >= 12.0)
 	function adjustViewportByVerticalOffset(verticalOffset:Float):Void;
 }

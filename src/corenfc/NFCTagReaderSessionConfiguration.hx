@@ -5,17 +5,29 @@ import foundation.NSArray;
 import foundation.NSString;
 import objc.NSObject;
 
-@:hxmc.framework("CoreNFC") @:hxmc.objc extern class NFCTagReaderSessionConfiguration extends NSObject {
+@:hxmc.framework("CoreNFC") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class NFCTagReaderSessionConfiguration extends NSObject {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():NFCTagReaderSessionConfiguration;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var polling(get, set) : NFCPollingOption;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_polling():NFCPollingOption;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_polling(v:NFCPollingOption):NFCPollingOption;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var iso7816SelectIdentifiers(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_iso7816SelectIdentifiers():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_iso7816SelectIdentifiers(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var felicaSystemCodes(get, set) : NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_felicaSystemCodes():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_felicaSystemCodes(v:NSArray<NSString>):NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithPollingOption(option:NFCPollingOption, iso7816SelectIdentifiers:NSArray<NSString>, felicaSystemCodes:NSArray<NSString>):NFCTagReaderSessionConfiguration;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	override function init():NFCTagReaderSessionConfiguration;
 }

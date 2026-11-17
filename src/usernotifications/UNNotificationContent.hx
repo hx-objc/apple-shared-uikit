@@ -44,14 +44,21 @@ import objc.NSObject;
 	function get_summaryArgumentCount():I64;
 	var targetContentIdentifier(get, never) : Null<NSStringArg>;
 	function get_targetContentIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var interruptionLevel(get, never) : UNNotificationInterruptionLevel;
+	@:hxmc.available(macos >= 12.0)
 	function get_interruptionLevel():UNNotificationInterruptionLevel;
+	@:hxmc.available(macos >= 12.0)
 	var relevanceScore(get, never) : Float;
+	@:hxmc.available(macos >= 12.0)
 	function get_relevanceScore():Float;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var filterCriteria(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_filterCriteria():Null<NSStringArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function contentByUpdatingWithProvider(provider:UNNotificationContentProviding, error:Ptr):Null<UNNotificationContent>;
 	function copyWithZone(zone:Ptr):Id;
 	function mutableCopyWithZone(zone:Ptr):Id;

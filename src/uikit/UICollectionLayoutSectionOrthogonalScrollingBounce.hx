@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UICollectionLayoutSectionOrthogonalScrollingBounce(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Always = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Never = 2;
 	inline function new(v:I64) this = v;
 }

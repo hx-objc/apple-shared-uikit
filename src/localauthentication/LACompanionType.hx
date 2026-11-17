@@ -4,7 +4,9 @@ package localauthentication;
 import hxmc.I64;
 
 enum abstract LACompanionType(I64) to I64 {
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var Mac = 2;
+	@:hxmc.available(macos >= 15.0, ios >= 26.0, maccatalyst >= 26.0)
 	var Vision = 4;
 	inline function new(v:I64) this = v;
 }

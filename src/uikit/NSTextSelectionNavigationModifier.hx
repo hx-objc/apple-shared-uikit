@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextSelectionNavigationModifier(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var Extend = 1;
+	@:hxmc.available(macos >= 12.0)
 	var Visual = 2;
+	@:hxmc.available(macos >= 12.0)
 	var Multiple = 4;
 	inline function new(v:I64) this = v;
 	var None = 0;

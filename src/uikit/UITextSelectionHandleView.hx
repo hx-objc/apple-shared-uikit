@@ -4,15 +4,24 @@ package uikit;
 import coregraphics.CGRect;
 import uiutilities.UICoordinateSpace;
 
-@:hxmc.objc("UITextSelectionHandleView") extern interface UITextSelectionHandleView extends UICoordinateSpace {
+@:hxmc.objc("UITextSelectionHandleView") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITextSelectionHandleView extends UICoordinateSpace {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var direction(get, set) : NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_direction():NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_direction(v:NSDirectionalRectEdge):NSDirectionalRectEdge;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var vertical(get, never) : Bool;
 	@:selector("isVertical")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_vertical():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var customShape(get, set) : Null<UIBezierPath>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_customShape():Null<UIBezierPath>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_customShape(v:Null<UIBezierPath>):Null<UIBezierPath>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function preferredFrameForRect(rect:CGRect):CGRect;
 }

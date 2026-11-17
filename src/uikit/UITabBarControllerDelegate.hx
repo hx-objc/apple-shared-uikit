@@ -6,28 +6,37 @@ import objc.NSObjectProtocol;
 
 @:hxmc.objc("UITabBarControllerDelegate") extern interface UITabBarControllerDelegate extends NSObjectProtocol {
 	@:selector("tabBarController:shouldSelectTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerShouldSelectTab(tabBarController:UITabBarController, shouldSelectTab:UITab):Bool;
 	@:selector("tabBarController:didSelectTab:previousTab:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerDidSelectTabPreviousTab(tabBarController:UITabBarController, didSelectTab:UITab, previousTab:Null<UITab>):Void;
 	@:selector("tabBarController:tab:operationForAcceptingItemsFromDropSession:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerTabOperationForAcceptingItemsFromDropSession(tabBarController:UITabBarController, tab:UITab, operationForAcceptingItemsFromDropSession:UIDropSession):UIDropOperation;
 	@:selector("tabBarController:tab:acceptItemsFromDropSession:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerTabAcceptItemsFromDropSession(tabBarController:UITabBarController, tab:UITab, acceptItemsFromDropSession:UIDropSession):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerWillBeginEditing(tabBarController:UITabBarController):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerDidEndEditing(tabBarController:UITabBarController):Void;
 	@:selector("tabBarController:visibilityDidChangeForTabs:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerVisibilityDidChangeForTabs(tabBarController:UITabBarController, visibilityDidChangeForTabs:NSArray<UITab>):Void;
 	@:selector("tabBarController:displayOrderDidChangeForGroup:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerDisplayOrderDidChangeForGroup(tabBarController:UITabBarController, displayOrderDidChangeForGroup:UITabGroup):Void;
 	@:selector("tabBarController:displayedViewControllersForTab:proposedViewControllers:")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	@:optional
 	function tabBarControllerDisplayedViewControllersForTabProposedViewControllers(tabBarController:UITabBarController, displayedViewControllersForTab:UITab, proposedViewControllers:NSArray<UIViewController>):NSArray<UIViewController>;
 	@:selector("tabBarController:shouldSelectViewController:")

@@ -5,13 +5,17 @@ import foundation.NSCoder;
 import foundation.NSSecureCoding;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNowPlayingMode extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 18.4, maccatalyst >= 18.4) extern class CPNowPlayingMode extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():CPNowPlayingMode;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static var defaultNowPlayingMode(get, never) : CPNowPlayingMode;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	static function get_defaultNowPlayingMode():CPNowPlayingMode;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNowPlayingMode>;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	override function init():CPNowPlayingMode;
 }

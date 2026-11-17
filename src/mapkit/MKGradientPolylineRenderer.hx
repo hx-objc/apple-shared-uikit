@@ -5,14 +5,23 @@ import foundation.NSArray;
 import foundation.NSNumber;
 import uikit.UIColor;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKGradientPolylineRenderer extends MKPolylineRenderer {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class MKGradientPolylineRenderer extends MKPolylineRenderer {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MKGradientPolylineRenderer;
+	@:hxmc.available(macos >= 11.0)
 	var locations(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(macos >= 11.0)
 	function get_locations():NSArray<NSNumber>;
+	@:hxmc.available(macos >= 11.0)
 	var colors(get, never) : NSArray<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function get_colors():NSArray<UIColor>;
+	@:hxmc.available(macos >= 11.0)
 	function setColors(colors:NSArray<UIColor>, atLocations:NSArray<NSNumber>):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():MKGradientPolylineRenderer;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithOverlay(overlay:MKOverlay):MKGradientPolylineRenderer;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithPolyline(polyline:MKPolyline):MKGradientPolylineRenderer;
 }

@@ -3,13 +3,21 @@ package uikit;
 
 import foundation.NSStringArg;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISearchTab extends UITab {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UISearchTab extends UITab {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UISearchTab;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var automaticallyActivatesSearch(get, set) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_automaticallyActivatesSearch():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_automaticallyActivatesSearch(v:Bool):Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithViewControllerProvider(viewControllerProvider:Null<UITab -> UIViewController>):UISearchTab;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function initWithTitle(title:NSStringArg, image:Null<UIImage>, identifier:NSStringArg, viewControllerProvider:Null<UITab -> UIViewController>):UISearchTab;
 }

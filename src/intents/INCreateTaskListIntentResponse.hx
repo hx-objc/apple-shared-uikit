@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INCreateTaskListIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INCreateTaskListIntentResponse;
 	var code(get, never) : INCreateTaskListIntentResponseCode;
 	function get_code():INCreateTaskListIntentResponseCode;

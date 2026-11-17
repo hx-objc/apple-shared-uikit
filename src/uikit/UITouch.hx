@@ -41,7 +41,9 @@ import spritekit.SKNode;
 	function get_estimatedProperties():UITouchProperties;
 	var estimatedPropertiesExpectingUpdates(get, never) : UITouchProperties;
 	function get_estimatedPropertiesExpectingUpdates():UITouchProperties;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	var rollAngle(get, never) : Float;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function get_rollAngle():Float;
 	function locationInView(view:Null<UIView>):CGPoint;
 	function previousLocationInView(view:Null<UIView>):CGPoint;

@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSearchForMessagesIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForMessagesIntentResponse;
 	var code(get, never) : INSearchForMessagesIntentResponseCode;
 	function get_code():INSearchForMessagesIntentResponseCode;

@@ -46,6 +46,7 @@ import uikit.UIImage;
 	var dataRepresentation(get, never) : Null<NSData>;
 	function get_dataRepresentation():Null<NSData>;
 	override function init():PDFPage;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function initWithImage(image:UIImage, options:NSDictionary<NSString, Id>):Null<PDFPage>;
 	overload function initWithImage(image:UIImage):Null<PDFPage>;
 	function boundsForBox(box:PDFDisplayBox):CGRect;

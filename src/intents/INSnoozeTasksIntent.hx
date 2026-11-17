@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSnoozeTasksIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSnoozeTasksIntent;
 	var tasks(get, never) : Null<NSArray<INTask>>;
 	function get_tasks():Null<NSArray<INTask>>;
@@ -14,6 +15,7 @@ import foundation.NSNumberArg;
 	var all(get, never) : Null<NSNumberArg>;
 	function get_all():Null<NSNumberArg>;
 	function initWithTasks(tasks:Null<NSArray<INTask>>, nextTriggerTime:Null<INDateComponentsRange>, all:Null<NSNumberArg>):INSnoozeTasksIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSnoozeTasksIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSnoozeTasksIntent>;
 }

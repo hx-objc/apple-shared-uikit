@@ -75,8 +75,11 @@ import uikit.UIView;
 	var delegate(get, set) : Null<PDFViewDelegate>;
 	function get_delegate():Null<PDFViewDelegate>;
 	function set_delegate(v:Null<PDFViewDelegate>):Null<PDFViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var pageOverlayViewProvider(get, set) : Null<PDFPageOverlayViewProvider>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_pageOverlayViewProvider():Null<PDFPageOverlayViewProvider>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_pageOverlayViewProvider(v:Null<PDFPageOverlayViewProvider>):Null<PDFPageOverlayViewProvider>;
 	var scaleFactor(get, set) : Float;
 	function get_scaleFactor():Float;
@@ -110,15 +113,23 @@ import uikit.UIView;
 	var enableDataDetectors(get, set) : Bool;
 	function get_enableDataDetectors():Bool;
 	function set_enableDataDetectors(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var inMarkupMode(get, set) : Bool;
 	@:selector("isInMarkupMode")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_inMarkupMode():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_inMarkupMode(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteraction(get, never) : UIFindInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteraction():UIFindInteraction;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteractionEnabled(get, set) : Bool;
 	@:selector("isFindInteractionEnabled")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteractionEnabled():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_findInteractionEnabled(v:Bool):Bool;
 	function goToFirstPage(sender:Null<Id>):Void;
 	function goToLastPage(sender:Null<Id>):Void;
@@ -157,6 +168,7 @@ import uikit.UIView;
 	function annotationsChangedOnPage(page:PDFPage):Void;
 	function rowSizeForPage(page:PDFPage):CGSize;
 	@:selector("findInteraction:sessionForView:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function findInteractionSessionForView(interaction:UIFindInteraction, sessionForView:UIView):Null<UIFindSession>;
 	override function init():PDFView;
 	override function initWithCoder(coder:NSCoder):Null<PDFView>;

@@ -6,8 +6,11 @@ import foundation.NSCoder;
 @:hxmc.framework("UIKit") @:hxmc.objc extern class NSLayoutYAxisAnchor extends NSLayoutAnchor<NSLayoutYAxisAnchor> {
 	static function alloc():NSLayoutYAxisAnchor;
 	function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension;
+	@:hxmc.available(macos >= 11.0)
 	function constraintEqualToSystemSpacingBelowAnchor(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
+	@:hxmc.available(macos >= 11.0)
 	function constraintGreaterThanOrEqualToSystemSpacingBelowAnchor(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
+	@:hxmc.available(macos >= 11.0)
 	function constraintLessThanOrEqualToSystemSpacingBelowAnchor(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
 	override function init():NSLayoutYAxisAnchor;
 	override function initWithCoder(coder:NSCoder):Null<NSLayoutYAxisAnchor>;

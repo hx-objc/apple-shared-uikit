@@ -32,7 +32,9 @@ import foundation.NSStringArg;
 	function get_searchResultsController():Null<UIViewController>;
 	var searchBar(get, never) : UISearchBar;
 	function get_searchBar():UISearchBar;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchBarPlacement(get, never) : UINavigationItemSearchBarPlacement;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchBarPlacement():UINavigationItemSearchBarPlacement;
 	var automaticallyShowsSearchResultsController(get, set) : Bool;
 	function get_automaticallyShowsSearchResultsController():Bool;
@@ -46,14 +48,23 @@ import foundation.NSStringArg;
 	var automaticallyShowsScopeBar(get, set) : Bool;
 	function get_automaticallyShowsScopeBar():Bool;
 	function set_automaticallyShowsScopeBar(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var scopeBarActivation(get, set) : UISearchControllerScopeBarActivation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_scopeBarActivation():UISearchControllerScopeBarActivation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_scopeBarActivation(v:UISearchControllerScopeBarActivation):UISearchControllerScopeBarActivation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var searchSuggestions(get, set) : Null<NSArray<UISearchSuggestion>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_searchSuggestions():Null<NSArray<UISearchSuggestion>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_searchSuggestions(v:Null<NSArray<UISearchSuggestion>>):Null<NSArray<UISearchSuggestion>>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var ignoresSearchSuggestionsForSearchBarPlacementStacked(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_ignoresSearchSuggestionsForSearchBarPlacementStacked():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_ignoresSearchSuggestionsForSearchBarPlacementStacked(v:Bool):Bool;
 	function initWithSearchResultsController(searchResultsController:Null<UIViewController>):UISearchController;
 	override function initWithNibName(nibNameOrNil:Null<NSStringArg>, bundle:Null<NSBundle>):UISearchController;

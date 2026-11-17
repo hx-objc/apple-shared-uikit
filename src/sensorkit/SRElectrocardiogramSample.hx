@@ -12,17 +12,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRElectrocardiogramSample extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.4, maccatalyst >= 17.4) extern class SRElectrocardiogramSample extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():SRElectrocardiogramSample;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var date(get, never) : NSDate;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_date():NSDate;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var frequency(get, never) : NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_frequency():NSMeasurement<NSUnitFrequency>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var session(get, never) : SRElectrocardiogramSession;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_session():SRElectrocardiogramSession;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var lead(get, never) : SRElectrocardiogramLead;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_lead():SRElectrocardiogramLead;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var data(get, never) : NSArray<SRElectrocardiogramData>;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function get_data():NSArray<SRElectrocardiogramData>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

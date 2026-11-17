@@ -4,11 +4,16 @@ package healthkit;
 import hxmc.I64;
 
 enum abstract HKCategoryValueOvulationTestResult(I64) to I64 {
+	@:hxmc.available(macos >= 13.0)
 	var Negative = 1;
+	@:hxmc.available(macos >= 13.0)
 	var LuteinizingHormoneSurge = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0)
 	var Positive = 2;
+	@:hxmc.available(macos >= 13.0)
 	var Indeterminate = 3;
+	@:hxmc.available(macos >= 13.0)
 	var EstrogenSurge = 4;
 	inline function new(v:I64) this = v;
 }

@@ -6,14 +6,23 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INStartCallContactResolutionResult extends INPersonResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithPersonToConfirm(personToConfirm:Null<INPerson>):INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function disambiguationWithPeopleToDisambiguate(peopleToDisambiguate:NSArray<INPerson>):INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function successWithResolvedPerson(resolvedPerson:INPerson):INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INStartCallContactResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INStartCallContactResolutionResult;
 	static function unsupportedForReason(reason:INStartCallContactUnsupportedReason):INStartCallContactResolutionResult;
 	function initWithPersonResolutionResult(personResolutionResult:INPersonResolutionResult):INStartCallContactResolutionResult;

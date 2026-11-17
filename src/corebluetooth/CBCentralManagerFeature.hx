@@ -5,6 +5,7 @@ import hxmc.I64;
 
 enum abstract CBCentralManagerFeature(I64) to I64 {
 	var ExtendedScanAndConnect = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var ChannelSounding = 1024;
 	inline function new(v:I64) this = v;
 	var None = 0;

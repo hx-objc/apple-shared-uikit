@@ -20,11 +20,17 @@ import uikit.UIViewController;
 	@:selector("isHosted")
 	function get_hosted():Bool;
 	function set_hosted(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var matchmakingMode(get, set) : GKMatchmakingMode;
+	@:hxmc.available(macos >= 11.0)
 	function get_matchmakingMode():GKMatchmakingMode;
+	@:hxmc.available(macos >= 11.0)
 	function set_matchmakingMode(v:GKMatchmakingMode):GKMatchmakingMode;
+	@:hxmc.available(macos >= 12.0)
 	var canStartWithMinimumPlayers(get, set) : Bool;
+	@:hxmc.available(macos >= 12.0)
 	function get_canStartWithMinimumPlayers():Bool;
+	@:hxmc.available(macos >= 12.0)
 	function set_canStartWithMinimumPlayers(v:Bool):Bool;
 	@:deprecated
 	var defaultInvitationMessage(get, set) : Null<NSStringArg>;

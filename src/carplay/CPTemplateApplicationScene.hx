@@ -12,7 +12,9 @@ import uikit.UIUserInterfaceStyle;
 	function get_interfaceController():CPInterfaceController;
 	var carWindow(get, never) : CPWindow;
 	function get_carWindow():CPWindow;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var contentStyle(get, never) : UIUserInterfaceStyle;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_contentStyle():UIUserInterfaceStyle;
 	override function initWithSession(session:UISceneSession, connectionOptions:UISceneConnectionOptions):CPTemplateApplicationScene;
 }

@@ -4,12 +4,14 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetAudioSourceInCarIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetAudioSourceInCarIntent;
 	var audioSource(get, never) : INCarAudioSource;
 	function get_audioSource():INCarAudioSource;
 	var relativeAudioSourceReference(get, never) : INRelativeReference;
 	function get_relativeAudioSourceReference():INRelativeReference;
 	function initWithAudioSource(audioSource:INCarAudioSource, relativeAudioSourceReference:INRelativeReference):INSetAudioSourceInCarIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetAudioSourceInCarIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetAudioSourceInCarIntent>;
 }

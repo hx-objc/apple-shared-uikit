@@ -4,20 +4,35 @@ package avkit;
 import foundation.NSArray;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("AVPlaybackUserInterfaceMediaSelectionControllable") extern interface AVPlaybackUserInterfaceMediaSelectionControllable extends NSObjectProtocol {
+@:hxmc.objc("AVPlaybackUserInterfaceMediaSelectionControllable") @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern interface AVPlaybackUserInterfaceMediaSelectionControllable extends NSObjectProtocol {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var currentAudioOption(get, set) : Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_currentAudioOption():Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_currentAudioOption(v:Null<AVPlaybackUserInterfaceMediaSelectionOption>):Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var currentAudioDescriptionOption(get, set) : Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_currentAudioDescriptionOption():Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_currentAudioDescriptionOption(v:Null<AVPlaybackUserInterfaceMediaSelectionOption>):Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var currentLegibleOption(get, set) : Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_currentLegibleOption():Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_currentLegibleOption(v:Null<AVPlaybackUserInterfaceMediaSelectionOption>):Null<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var audioOptions(get, never) : NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_audioOptions():NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var audioDescriptionOptions(get, never) : NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_audioDescriptionOptions():NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var legibleOptions(get, never) : NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_legibleOptions():NSArray<AVPlaybackUserInterfaceMediaSelectionOption>;
 }

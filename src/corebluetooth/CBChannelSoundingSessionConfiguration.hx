@@ -3,9 +3,13 @@ package corebluetooth;
 
 import objc.NSObject;
 
-@:hxmc.framework("CoreBluetooth") @:hxmc.objc extern class CBChannelSoundingSessionConfiguration extends NSObject {
+@:hxmc.framework("CoreBluetooth") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class CBChannelSoundingSessionConfiguration extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():CBChannelSoundingSessionConfiguration;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var role(get, never) : CBChannelSoundingSessionConfigurationRole;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_role():CBChannelSoundingSessionConfigurationRole;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithRole(role:CBChannelSoundingSessionConfigurationRole):CBChannelSoundingSessionConfiguration;
 }

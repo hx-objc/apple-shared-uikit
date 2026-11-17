@@ -7,13 +7,21 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import uikit.UITraitCollection;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKUserLocationView extends MKAnnotationView {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class MKUserLocationView extends MKAnnotationView {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	static function appearance():MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	override function init():MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithAnnotation(annotation:Null<MKAnnotation>, reuseIdentifier:Null<NSStringArg>):MKUserLocationView;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithCoder(coder:NSCoder):Null<MKUserLocationView>;
+	@:hxmc.available(macos >= 11.0)
 	override function initWithFrame(frame:CGRect):MKUserLocationView;
 }

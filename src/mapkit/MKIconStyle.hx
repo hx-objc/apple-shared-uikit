@@ -5,10 +5,15 @@ import objc.NSObject;
 import uikit.UIColor;
 import uikit.UIImage;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKIconStyle extends NSObject {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class MKIconStyle extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKIconStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var backgroundColor(get, never) : UIColor;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_backgroundColor():UIColor;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var image(get, never) : UIImage;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_image():UIImage;
 }

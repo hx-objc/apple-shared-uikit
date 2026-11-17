@@ -4,6 +4,7 @@ package browserkit;
 import hxmc.I64;
 
 enum abstract BEEligibilityContext(I64) to I64 {
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	var WebBrowser = 0;
 	inline function new(v:I64) this = v;
 }

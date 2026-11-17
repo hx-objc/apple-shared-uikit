@@ -20,7 +20,9 @@ import uniformtypeidentifiers.UTType;
 	function get_creationDate():Null<NSDate>;
 	var location(get, never) : Null<CLLocation>;
 	function get_location():Null<CLLocation>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var contentType(get, never) : Null<UTType>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_contentType():Null<UTType>;
 	var uniformTypeIdentifier(get, never) : Null<NSStringArg>;
 	function get_uniformTypeIdentifier():Null<NSStringArg>;

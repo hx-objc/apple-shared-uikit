@@ -32,8 +32,11 @@ import objc.NSObject;
 	var automaticallyAdjustsVideoMirroring(get, set) : Bool;
 	function get_automaticallyAdjustsVideoMirroring():Bool;
 	function set_automaticallyAdjustsVideoMirroring(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var videoRotationAngle(get, set) : Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_videoRotationAngle():Float;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_videoRotationAngle(v:Float):Float;
 	@:deprecated
 	var supportsVideoOrientation(get, never) : Bool;
@@ -87,19 +90,28 @@ import objc.NSObject;
 	@:selector("isCameraIntrinsicMatrixDeliveryEnabled")
 	function get_cameraIntrinsicMatrixDeliveryEnabled():Bool;
 	function set_cameraIntrinsicMatrixDeliveryEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var lowLightVideoNoiseReductionSupported(get, never) : Bool;
 	@:selector("isLowLightVideoNoiseReductionSupported")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_lowLightVideoNoiseReductionSupported():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var automaticallyEnablesLowLightVideoNoiseReduction(get, set) : Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_automaticallyEnablesLowLightVideoNoiseReduction():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_automaticallyEnablesLowLightVideoNoiseReduction(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var lowLightVideoNoiseReductionEnabled(get, set) : Bool;
 	@:selector("isLowLightVideoNoiseReductionEnabled")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_lowLightVideoNoiseReductionEnabled():Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_lowLightVideoNoiseReductionEnabled(v:Bool):Bool;
 	static function connectionWithInputPorts(ports:NSArray<AVCaptureInputPort>, output:AVCaptureOutput):AVCaptureConnection;
 	static function connectionWithInputPort(port:AVCaptureInputPort, videoPreviewLayer:AVCaptureVideoPreviewLayer):AVCaptureConnection;
 	function initWithInputPorts(ports:NSArray<AVCaptureInputPort>, output:AVCaptureOutput):AVCaptureConnection;
 	function initWithInputPort(port:AVCaptureInputPort, videoPreviewLayer:AVCaptureVideoPreviewLayer):AVCaptureConnection;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function isVideoRotationAngleSupported(videoRotationAngle:Float):Bool;
 }

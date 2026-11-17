@@ -13,11 +13,17 @@ import uikit.UIImage;
 
 @:hxmc.framework("PassKit") @:hxmc.objc extern class PKPass extends PKObject {
 	static function alloc():PKPass;
+	@:hxmc.available(macos >= 11.0)
 	var passType(get, never) : PKPassType;
+	@:hxmc.available(macos >= 11.0)
 	function get_passType():PKPassType;
+	@:hxmc.available(macos >= 11.0)
 	var paymentPass(get, never) : Null<PKPaymentPass>;
+	@:hxmc.available(macos >= 11.0)
 	function get_paymentPass():Null<PKPaymentPass>;
+	@:hxmc.available(macos >= 11.0)
 	var secureElementPass(get, never) : Null<PKSecureElementPass>;
+	@:hxmc.available(macos >= 11.0)
 	function get_secureElementPass():Null<PKSecureElementPass>;
 	var serialNumber(get, never) : NSStringArg;
 	function get_serialNumber():NSStringArg;
@@ -36,18 +42,28 @@ import uikit.UIImage;
 	var organizationName(get, never) : NSStringArg;
 	function get_organizationName():NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var relevantDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_relevantDate():Null<NSDate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var relevantDates(get, never) : NSArray<PKPassRelevantDate>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_relevantDates():NSArray<PKPassRelevantDate>;
+	@:hxmc.available(macos >= 11.0)
 	var userInfo(get, never) : Null<NSDictionary>;
+	@:hxmc.available(macos >= 11.0)
 	function get_userInfo():Null<NSDictionary>;
 	var passURL(get, never) : Null<NSURL>;
 	function get_passURL():Null<NSURL>;
+	@:hxmc.available(macos >= 11.0)
 	var remotePass(get, never) : Bool;
 	@:selector("isRemotePass")
+	@:hxmc.available(macos >= 11.0)
 	function get_remotePass():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var deviceName(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 11.0)
 	function get_deviceName():NSStringArg;
 	function initWithData(data:NSData, error:Ptr):Null<PKPass>;
 	function localizedValueForFieldKey(key:NSStringArg):Null<Id>;

@@ -14,22 +14,33 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import foundation.NSURL;
 import hxmc.I64;
+import hxmc.Span;
 import hxmc.objc.Block;
 import hxmc.objc.Id;
 import hxmc.unsafe.Float32;
 import hxmc.unsafe.Ptr;
 
 @:hxmc.c @:hxmc.framework("VideoToolbox") extern class VideoToolbox {
-	public static function VTCompressionSessionBeginPass(session:VTCompressionSession, beginPassFlags:VTCompressionSessionOptionFlags, reserved:Ptr):Int;
+	@:hxmc.len(reserved, 1)
+	public static function VTCompressionSessionBeginPass(session:VTCompressionSession, beginPassFlags:VTCompressionSessionOptionFlags, reserved:Span<Int>):Int;
 	public static function VTCompressionSessionCompleteFrames(session:VTCompressionSession, completeUntilPresentationTimeStamp:CMTime):Int;
 	public static function VTCompressionSessionCreate(allocator:Null<CFAllocator>, width:Int, height:Int, codecType:Int, encoderSpecification:Null<NSDictionary>, sourceImageBufferAttributes:Null<NSDictionary>, compressedDataAllocator:Null<CFAllocator>, outputCallback:Ptr, outputCallbackRefCon:Ptr, compressionSessionOut:Ptr):Int;
-	public static function VTCompressionSessionEncodeFrame(session:VTCompressionSession, imageBuffer:CVBuffer, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, sourceFrameRefcon:Ptr, infoFlagsOut:Ptr):Int;
-	public static function VTCompressionSessionEncodeFrameWithOutputHandler(session:VTCompressionSession, imageBuffer:CVBuffer, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, infoFlagsOut:Ptr, outputHandler:Block<(Int, VTEncodeInfoFlags, Null<CMSampleBuffer>) -> Void>):Int;
-	public static function VTCompressionSessionEncodeMultiImageFrame(session:VTCompressionSession, taggedBufferGroup:CMTaggedBufferGroup, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, sourceFrameRefcon:Ptr, infoFlagsOut:Ptr):Int;
-	public static function VTCompressionSessionEncodeMultiImageFrameWithOutputHandler(session:VTCompressionSession, taggedBufferGroup:CMTaggedBufferGroup, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, infoFlagsOut:Ptr, outputHandler:Block<(Int, VTEncodeInfoFlags, Null<CMSampleBuffer>) -> Void>):Int;
-	public static function VTCompressionSessionEndPass(session:VTCompressionSession, furtherPassesRequestedOut:Ptr, reserved:Ptr):Int;
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTCompressionSessionEncodeFrame(session:VTCompressionSession, imageBuffer:CVBuffer, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, sourceFrameRefcon:Ptr, infoFlagsOut:Span<Int>):Int;
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTCompressionSessionEncodeFrameWithOutputHandler(session:VTCompressionSession, imageBuffer:CVBuffer, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, infoFlagsOut:Span<Int>, outputHandler:Block<(Int, VTEncodeInfoFlags, Null<CMSampleBuffer>) -> Void>):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTCompressionSessionEncodeMultiImageFrame(session:VTCompressionSession, taggedBufferGroup:CMTaggedBufferGroup, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, sourceFrameRefcon:Ptr, infoFlagsOut:Span<Int>):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTCompressionSessionEncodeMultiImageFrameWithOutputHandler(session:VTCompressionSession, taggedBufferGroup:CMTaggedBufferGroup, presentationTimeStamp:CMTime, duration:CMTime, frameProperties:Null<NSDictionary>, infoFlagsOut:Span<Int>, outputHandler:Block<(Int, VTEncodeInfoFlags, Null<CMSampleBuffer>) -> Void>):Int;
+	@:hxmc.len(furtherPassesRequestedOut, 1)
+	@:hxmc.len(reserved, 1)
+	public static function VTCompressionSessionEndPass(session:VTCompressionSession, furtherPassesRequestedOut:Span<Bool>, reserved:Span<Int>):Int;
 	public static function VTCompressionSessionGetPixelBufferPool(session:VTCompressionSession):Null<CVPixelBufferPool>;
-	public static function VTCompressionSessionGetTimeRangesForNextPass(session:VTCompressionSession, timeRangeCountOut:Ptr, timeRangeArrayOut:Ptr):Int;
+	@:hxmc.len(timeRangeCountOut, 1)
+	public static function VTCompressionSessionGetTimeRangesForNextPass(session:VTCompressionSession, timeRangeCountOut:Span<I64>, timeRangeArrayOut:Ptr):Int;
 	public static function VTCompressionSessionGetTypeID():I64;
 	public static function VTCompressionSessionInvalidate(session:VTCompressionSession):Void;
 	public static function VTCompressionSessionPrepareToEncodeFrames(session:VTCompressionSession):Int;
@@ -39,78 +50,133 @@ import hxmc.unsafe.Ptr;
 	public static function VTDecompressionSessionCanAcceptFormatDescription(session:VTDecompressionSession, newFormatDesc:CMAudioFormatDescription):Bool;
 	public static function VTDecompressionSessionCopyBlackPixelBuffer(session:VTDecompressionSession, pixelBufferOut:Ptr):Int;
 	public static function VTDecompressionSessionCreate(allocator:Null<CFAllocator>, videoFormatDescription:CMAudioFormatDescription, videoDecoderSpecification:Null<NSDictionary>, destinationImageBufferAttributes:Null<NSDictionary>, outputCallback:Ptr, decompressionSessionOut:Ptr):Int;
-	public static function VTDecompressionSessionDecodeFrame(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, sourceFrameRefCon:Ptr, infoFlagsOut:Ptr):Int;
-	public static function VTDecompressionSessionDecodeFrameWithMultiImageCapableOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, infoFlagsOut:Ptr, multiImageCapableOutputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, Null<CMTaggedBufferGroup>, CMTime, CMTime) -> Void>):Int;
-	public static function VTDecompressionSessionDecodeFrameWithOptions(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, frameOptions:Null<NSDictionary>, sourceFrameRefCon:Ptr, infoFlagsOut:Ptr):Int;
-	public static function VTDecompressionSessionDecodeFrameWithOptionsAndOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, frameOptions:Null<NSDictionary>, infoFlagsOut:Ptr, outputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, CMTime, CMTime) -> Void>):Int;
-	public static function VTDecompressionSessionDecodeFrameWithOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, infoFlagsOut:Ptr, outputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, CMTime, CMTime) -> Void>):Int;
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTDecompressionSessionDecodeFrame(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, sourceFrameRefCon:Ptr, infoFlagsOut:Span<Int>):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTDecompressionSessionDecodeFrameWithMultiImageCapableOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, infoFlagsOut:Span<Int>, multiImageCapableOutputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, Null<CMTaggedBufferGroup>, CMTime, CMTime) -> Void>):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTDecompressionSessionDecodeFrameWithOptions(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, frameOptions:Null<NSDictionary>, sourceFrameRefCon:Ptr, infoFlagsOut:Span<Int>):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTDecompressionSessionDecodeFrameWithOptionsAndOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, frameOptions:Null<NSDictionary>, infoFlagsOut:Span<Int>, outputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, CMTime, CMTime) -> Void>):Int;
+	@:hxmc.len(infoFlagsOut, 1)
+	public static function VTDecompressionSessionDecodeFrameWithOutputHandler(session:VTDecompressionSession, sampleBuffer:CMSampleBuffer, decodeFlags:VTDecodeFrameFlags, infoFlagsOut:Span<Int>, outputHandler:Block<(Int, VTDecodeInfoFlags, Null<CVBuffer>, CMTime, CMTime) -> Void>):Int;
 	public static function VTDecompressionSessionFinishDelayedFrames(session:VTDecompressionSession):Int;
 	public static function VTDecompressionSessionGetTypeID():I64;
 	public static function VTDecompressionSessionInvalidate(session:VTDecompressionSession):Void;
-	public static function VTDecompressionSessionSetMultiImageCallback(decompressionSession:VTDecompressionSession, outputMultiImageCallback:Ptr, outputMultiImageRefcon:Ptr):Int;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
+	public static function VTDecompressionSessionSetMultiImageCallback(decompressionSession:VTDecompressionSession, outputMultiImageCallback:(Ptr, Ptr, Int, VTDecodeInfoFlags, Null<CMTaggedBufferGroup>, CMTime, CMTime) -> Void, outputMultiImageRefcon:Ptr):Int;
 	public static function VTDecompressionSessionWaitForAsynchronousFrames(session:VTDecompressionSession):Int;
 	public static function VTFrameSiloAddSampleBuffer(silo:VTFrameSilo, sampleBuffer:CMSampleBuffer):Int;
 	public static function VTFrameSiloCallBlockForEachSampleBuffer(silo:VTFrameSilo, timeRange:CMTimeRange, handler:Block<CMSampleBuffer -> Int>):Int;
-	public static function VTFrameSiloCallFunctionForEachSampleBuffer(silo:VTFrameSilo, timeRange:CMTimeRange, refcon:Ptr, callback:Ptr):Int;
+	public static function VTFrameSiloCallFunctionForEachSampleBuffer(silo:VTFrameSilo, timeRange:CMTimeRange, refcon:Ptr, callback:(Ptr, CMSampleBuffer) -> Int):Int;
 	public static function VTFrameSiloCreate(allocator:Null<CFAllocator>, fileURL:Null<NSURL>, timeRange:CMTimeRange, options:Null<NSDictionary>, frameSiloOut:Ptr):Int;
-	public static function VTFrameSiloGetProgressOfCurrentPass(silo:VTFrameSilo, progressOut:Ptr):Int;
+	@:hxmc.len(progressOut, 1)
+	public static function VTFrameSiloGetProgressOfCurrentPass(silo:VTFrameSilo, progressOut:Span<Float32>):Int;
 	public static function VTFrameSiloGetTypeID():I64;
 	public static function VTFrameSiloSetTimeRangesForNextPass(silo:VTFrameSilo, timeRangeCount:I64, timeRangeArray:Ptr):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function VTHDRPerFrameMetadataGenerationSessionAttachMetadata(hdrPerFrameMetadataGenerationSession:VTHDRPerFrameMetadataGenerationSession, pixelBuffer:CVBuffer, sceneChange:Bool):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function VTHDRPerFrameMetadataGenerationSessionCreate(allocator:Null<CFAllocator>, framesPerSecond:Float32, options:Null<NSDictionary>, hdrPerFrameMetadataGenerationSessionOut:Ptr):Int;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static function VTHDRPerFrameMetadataGenerationSessionGetTypeID():I64;
 	public static function VTIsHardwareDecodeSupported(codecType:Int):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function VTIsStereoMVHEVCDecodeSupported():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static function VTIsStereoMVHEVCEncodeSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionCompleteFrames(session:VTMotionEstimationSession):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionCopySourcePixelBufferAttributes(motionEstimationSession:VTMotionEstimationSession, attributesOut:Ptr):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionCreate(allocator:Null<CFAllocator>, motionVectorProcessorSelectionOptions:Null<NSDictionary>, width:Int, height:Int, motionEstimationSessionOut:Ptr):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionEstimateMotionVectors(session:VTMotionEstimationSession, referenceImage:CVBuffer, currentImage:CVBuffer, motionEstimationFrameFlags:VTMotionEstimationFrameFlags, additionalFrameOptions:Null<NSDictionary>, outputHandler:Block<(Int, VTMotionEstimationInfoFlags, Null<NSDictionary>, Null<CVBuffer>) -> Void>):Int;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionGetTypeID():I64;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static function VTMotionEstimationSessionInvalidate(session:VTMotionEstimationSession):Void;
 	public static function VTMultiPassStorageClose(multiPassStorage:VTMultiPassStorage):Int;
 	public static function VTMultiPassStorageCreate(allocator:Null<CFAllocator>, fileURL:Null<NSURL>, timeRange:CMTimeRange, options:Null<NSDictionary>, multiPassStorageOut:Ptr):Int;
 	public static function VTMultiPassStorageGetTypeID():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelRotationSessionCreate(allocator:Null<CFAllocator>, pixelRotationSessionOut:Ptr):Int;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelRotationSessionGetTypeID():I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelRotationSessionInvalidate(session:VTPixelRotationSession):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelRotationSessionRotateImage(session:VTPixelRotationSession, sourceBuffer:CVBuffer, destinationBuffer:CVBuffer):Int;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelTransferSessionCreate(allocator:Null<CFAllocator>, pixelTransferSessionOut:Ptr):Int;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelTransferSessionGetTypeID():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelTransferSessionInvalidate(session:VTPixelTransferSession):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static function VTPixelTransferSessionTransferImage(session:VTPixelTransferSession, sourceBuffer:CVBuffer, destinationBuffer:CVBuffer):Int;
+	@:hxmc.available(macos >= 11.0, ios >= 26.2, maccatalyst >= 26.2)
 	public static function VTRegisterSupplementalVideoDecoderIfAvailable(codecType:Int):Void;
 	public static function VTSessionCopyProperty(session:Ptr, propertyKey:NSStringArg, allocator:Null<CFAllocator>, propertyValueOut:Ptr):Int;
 	public static function VTSessionCopySerializableProperties(session:Ptr, allocator:Null<CFAllocator>, dictionaryOut:Ptr):Int;
 	public static function VTSessionCopySupportedPropertyDictionary(session:Ptr, supportedPropertyDictionaryOut:Ptr):Int;
 	public static function VTSessionSetProperties(session:Ptr, propertyDictionary:NSDictionary):Int;
 	public static function VTSessionSetProperty(session:Ptr, propertyKey:NSStringArg, propertyValue:Null<Id>):Int;
+	@:hxmc.available(macos >= 15.4, ios >= 26.0, maccatalyst >= 26.0)
 	public static final VTFrameProcessorErrorDomain : NSString;
 	public static final kVTAlphaChannelMode_PremultipliedAlpha : NSString;
 	public static final kVTAlphaChannelMode_StraightAlpha : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationExtrinsicOriginSource_StereoCameraSystemBaseline : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationLensAlgorithmKind_ParametricLens : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationLensDomain_Color : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationLensRole_Left : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationLensRole_Mono : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCameraCalibrationLensRole_Right : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPreset_Balanced : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kVTCompressionPreset_ConsistentQuality : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPreset_HighQuality : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPreset_HighSpeed : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPreset_VideoConferencing : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOrientationQuaternion : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOriginSource : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrix : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixProjectionOffset : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixReferenceDimensions : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensAlgorithmKind : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensDistortions : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensDomain : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialX : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialY : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensIdentifier : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_LensRole : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyCameraCalibrationKey_RadialAngleLimit : NSString;
 	public static final kVTCompressionPropertyKey_AllowFrameReordering : NSString;
 	public static final kVTCompressionPropertyKey_AllowOpenGOP : NSString;
@@ -118,20 +184,28 @@ import hxmc.unsafe.Ptr;
 	public static final kVTCompressionPropertyKey_AlphaChannelMode : NSString;
 	public static final kVTCompressionPropertyKey_AspectRatio16x9 : NSString;
 	public static final kVTCompressionPropertyKey_AverageBitRate : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTCompressionPropertyKey_BaseLayerBitRateFraction : NSString;
 	public static final kVTCompressionPropertyKey_BaseLayerFrameRate : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final kVTCompressionPropertyKey_BaseLayerFrameRateFraction : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTCompressionPropertyKey_CalculateMeanSquaredError : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_CameraCalibrationDataLensCollection : NSString;
 	public static final kVTCompressionPropertyKey_CleanAperture : NSString;
 	public static final kVTCompressionPropertyKey_ColorPrimaries : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTCompressionPropertyKey_ConstantBitRate : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kVTCompressionPropertyKey_ConstantQualityFactor : NSString;
 	public static final kVTCompressionPropertyKey_ContentLightLevelInfo : NSString;
 	public static final kVTCompressionPropertyKey_DataRateLimits : NSString;
 	public static final kVTCompressionPropertyKey_Depth : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTCompressionPropertyKey_EnableLTR : NSString;
 	public static final kVTCompressionPropertyKey_EncoderID : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTCompressionPropertyKey_EstimatedAverageBytesPerFrame : NSString;
 	public static final kVTCompressionPropertyKey_ExpectedDuration : NSString;
 	public static final kVTCompressionPropertyKey_ExpectedFrameRate : NSString;
@@ -139,66 +213,100 @@ import hxmc.unsafe.Ptr;
 	public static final kVTCompressionPropertyKey_FieldDetail : NSString;
 	public static final kVTCompressionPropertyKey_GammaLevel : NSString;
 	public static final kVTCompressionPropertyKey_H264EntropyMode : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTCompressionPropertyKey_HDRMetadataInsertionMode : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_HasLeftStereoEyeView : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_HasRightStereoEyeView : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_HeroEye : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_HorizontalDisparityAdjustment : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTCompressionPropertyKey_HorizontalFieldOfView : NSString;
 	public static final kVTCompressionPropertyKey_ICCProfile : NSString;
+	@:hxmc.available(macos >= 27, ios >= 27, maccatalyst >= 27)
 	public static final kVTCompressionPropertyKey_LogTransferFunction : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_MVHEVCLeftAndRightViewIDs : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_MVHEVCVideoLayerIDs : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_MVHEVCViewIDs : NSString;
 	public static final kVTCompressionPropertyKey_MasteringDisplayColorVolume : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTCompressionPropertyKey_MaxAllowedFrameQP : NSString;
 	public static final kVTCompressionPropertyKey_MaxFrameDelayCount : NSString;
 	public static final kVTCompressionPropertyKey_MaxH264SliceBytes : NSString;
 	public static final kVTCompressionPropertyKey_MaxKeyFrameInterval : NSString;
 	public static final kVTCompressionPropertyKey_MaxKeyFrameIntervalDuration : NSString;
 	public static final kVTCompressionPropertyKey_MaximizePowerEfficiency : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTCompressionPropertyKey_MaximumRealTimeFrameRate : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTCompressionPropertyKey_MinAllowedFrameQP : NSString;
 	public static final kVTCompressionPropertyKey_MoreFramesAfterEnd : NSString;
 	public static final kVTCompressionPropertyKey_MoreFramesBeforeStart : NSString;
 	public static final kVTCompressionPropertyKey_MultiPassStorage : NSString;
 	public static final kVTCompressionPropertyKey_NumberOfPendingFrames : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final kVTCompressionPropertyKey_OutputBitDepth : NSString;
 	public static final kVTCompressionPropertyKey_PixelAspectRatio : NSString;
 	public static final kVTCompressionPropertyKey_PixelBufferPoolIsShared : NSString;
 	public static final kVTCompressionPropertyKey_PixelTransferProperties : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTCompressionPropertyKey_PreserveAlphaChannel : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTCompressionPropertyKey_PreserveDynamicHDRMetadata : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTCompressionPropertyKey_PrioritizeEncodingSpeedOverQuality : NSString;
 	public static final kVTCompressionPropertyKey_ProfileLevel : NSString;
 	public static final kVTCompressionPropertyKey_ProgressiveScan : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTCompressionPropertyKey_ProjectionKind : NSString;
 	public static final kVTCompressionPropertyKey_Quality : NSString;
 	public static final kVTCompressionPropertyKey_RealTime : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_RecommendedParallelizedSubdivisionMinimumDuration : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_RecommendedParallelizedSubdivisionMinimumFrameCount : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTCompressionPropertyKey_ReferenceBufferCount : NSString;
 	public static final kVTCompressionPropertyKey_SourceFrameCount : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTCompressionPropertyKey_StereoCameraBaseline : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_SupportedPresetDictionaries : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTCompressionPropertyKey_SupportsBaseFrameQP : NSString;
 	public static final kVTCompressionPropertyKey_TargetQualityForAlpha : NSString;
 	public static final kVTCompressionPropertyKey_TransferFunction : NSString;
 	public static final kVTCompressionPropertyKey_UsingGPURegistryID : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTCompressionPropertyKey_UsingHardwareAcceleratedVideoEncoder : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_VBVBufferDuration : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_VBVInitialDelayPercentage : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_VBVMaxBitRate : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTCompressionPropertyKey_VariableBitRate : NSString;
 	public static final kVTCompressionPropertyKey_VideoEncoderPixelBufferAttributes : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTCompressionPropertyKey_ViewPackingKind : NSString;
 	public static final kVTCompressionPropertyKey_YCbCrMatrix : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTDecodeFrameOptionKey_ContentAnalyzerCropRectangle : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTDecodeFrameOptionKey_ContentAnalyzerRotation : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTDecompressionPropertyKey_AllowBitstreamToChangeFrameDimensions : NSString;
 	public static final kVTDecompressionPropertyKey_ContentHasInterframeDependencies : NSString;
 	public static final kVTDecompressionPropertyKey_DeinterlaceMode : NSString;
 	public static final kVTDecompressionPropertyKey_FieldMode : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTDecompressionPropertyKey_GeneratePerFrameHDRDisplayMetadata : NSString;
 	public static final kVTDecompressionPropertyKey_MaxOutputPresentationTimeStampOfFramesBeingDecoded : NSString;
 	public static final kVTDecompressionPropertyKey_MaximizePowerEfficiency : NSString;
@@ -210,17 +318,20 @@ import hxmc.unsafe.Ptr;
 	public static final kVTDecompressionPropertyKey_PixelBufferPoolIsShared : NSString;
 	public static final kVTDecompressionPropertyKey_PixelFormatsWithReducedResolutionSupport : NSString;
 	public static final kVTDecompressionPropertyKey_PixelTransferProperties : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTDecompressionPropertyKey_PropagatePerFrameHDRDisplayMetadata : NSString;
 	public static final kVTDecompressionPropertyKey_RealTime : NSString;
 	public static final kVTDecompressionPropertyKey_ReducedCoefficientDecode : NSString;
 	public static final kVTDecompressionPropertyKey_ReducedFrameDelivery : NSString;
 	public static final kVTDecompressionPropertyKey_ReducedResolutionDecode : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTDecompressionPropertyKey_RequestedMVHEVCVideoLayerIDs : NSString;
 	public static final kVTDecompressionPropertyKey_SuggestedQualityOfServiceTiers : NSString;
 	public static final kVTDecompressionPropertyKey_SupportedPixelFormatsOrderedByPerformance : NSString;
 	public static final kVTDecompressionPropertyKey_SupportedPixelFormatsOrderedByQuality : NSString;
 	public static final kVTDecompressionPropertyKey_ThreadCount : NSString;
 	public static final kVTDecompressionPropertyKey_UsingGPURegistryID : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTDecompressionPropertyKey_UsingHardwareAcceleratedVideoDecoder : NSString;
 	public static final kVTDecompressionProperty_DeinterlaceMode_Temporal : NSString;
 	public static final kVTDecompressionProperty_DeinterlaceMode_VerticalFilter : NSString;
@@ -238,25 +349,41 @@ import hxmc.unsafe.Ptr;
 	public static final kVTDecompressionResolutionKey_Width : NSString;
 	public static final kVTDownsamplingMode_Average : NSString;
 	public static final kVTDownsamplingMode_Decimate : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTEncodeFrameOptionKey_AcknowledgedLTRTokens : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTEncodeFrameOptionKey_BaseFrameQP : NSString;
 	public static final kVTEncodeFrameOptionKey_ForceKeyFrame : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTEncodeFrameOptionKey_ForceLTRRefresh : NSString;
 	public static final kVTH264EntropyMode_CABAC : NSString;
 	public static final kVTH264EntropyMode_CAVLC : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTHDRMetadataInsertionMode_Auto : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTHDRMetadataInsertionMode_None : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTHDRMetadataInsertionMode_RequestSDRRangePreservation : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTHDRPerFrameMetadataGenerationHDRFormatType_DolbyVision : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final kVTHDRPerFrameMetadataGenerationOptionsKey_HDRFormats : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTHeroEye_Left : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTHeroEye_Right : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTMotionEstimationSessionCreationOption_Label : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTMotionEstimationSessionCreationOption_MotionVectorSize : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTMotionEstimationSessionCreationOption_UseMultiPassSearch : NSString;
 	public static final kVTMultiPassStorageCreationOption_DoNotDelete : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTPixelRotationPropertyKey_FlipHorizontalOrientation : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTPixelRotationPropertyKey_FlipVerticalOrientation : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTPixelRotationPropertyKey_Rotation : NSString;
 	public static final kVTPixelTransferPropertyKey_DestinationCleanAperture : NSString;
 	public static final kVTPixelTransferPropertyKey_DestinationColorPrimaries : NSString;
@@ -281,7 +408,9 @@ import hxmc.unsafe.Ptr;
 	public static final kVTProfileLevel_H264_Baseline_5_1 : NSString;
 	public static final kVTProfileLevel_H264_Baseline_5_2 : NSString;
 	public static final kVTProfileLevel_H264_Baseline_AutoLevel : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTProfileLevel_H264_ConstrainedBaseline_AutoLevel : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTProfileLevel_H264_ConstrainedHigh_AutoLevel : NSString;
 	public static final kVTProfileLevel_H264_Extended_5_0 : NSString;
 	public static final kVTProfileLevel_H264_Extended_AutoLevel : NSString;
@@ -306,6 +435,7 @@ import hxmc.unsafe.Ptr;
 	public static final kVTProfileLevel_H264_Main_5_2 : NSString;
 	public static final kVTProfileLevel_H264_Main_AutoLevel : NSString;
 	public static final kVTProfileLevel_HEVC_Main10_AutoLevel : NSString;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	public static final kVTProfileLevel_HEVC_Main42210_AutoLevel : NSString;
 	public static final kVTProfileLevel_HEVC_Main_AutoLevel : NSString;
 	public static final kVTProfileLevel_HEVC_Monochrome10_AutoLevel : NSString;
@@ -322,10 +452,15 @@ import hxmc.unsafe.Ptr;
 	public static final kVTProfileLevel_MP4V_Simple_L1 : NSString;
 	public static final kVTProfileLevel_MP4V_Simple_L2 : NSString;
 	public static final kVTProfileLevel_MP4V_Simple_L3 : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final kVTProjectionKind_AppleImmersiveVideo : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTProjectionKind_Equirectangular : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTProjectionKind_HalfEquirectangular : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTProjectionKind_ParametricImmersive : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTProjectionKind_Rectilinear : NSString;
 	public static final kVTPropertyDocumentationKey : NSString;
 	public static final kVTPropertyReadWriteStatusKey : NSString;
@@ -339,23 +474,35 @@ import hxmc.unsafe.Ptr;
 	public static final kVTPropertyType_Boolean : NSString;
 	public static final kVTPropertyType_Enumeration : NSString;
 	public static final kVTPropertyType_Number : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTRotation_0 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTRotation_180 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTRotation_CCW90 : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final kVTRotation_CW90 : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTSampleAttachmentKey_QualityMetrics : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTSampleAttachmentKey_RequireLTRAcknowledgementToken : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTSampleAttachmentQualityMetricsKey_ChromaBlueMeanSquaredError : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTSampleAttachmentQualityMetricsKey_ChromaRedMeanSquaredError : NSString;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTSampleAttachmentQualityMetricsKey_LumaMeanSquaredError : NSString;
 	public static final kVTScalingMode_CropSourceToCleanAperture : NSString;
 	public static final kVTScalingMode_Letterbox : NSString;
 	public static final kVTScalingMode_Normal : NSString;
 	public static final kVTScalingMode_Trim : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTVideoDecoderSpecification_EnableHardwareAcceleratedVideoDecoder : NSString;
 	public static final kVTVideoDecoderSpecification_PreferredDecoderGPURegistryID : NSString;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	public static final kVTVideoDecoderSpecification_RequireHardwareAcceleratedVideoDecoder : NSString;
 	public static final kVTVideoDecoderSpecification_RequiredDecoderGPURegistryID : NSString;
+	@:hxmc.available(macos >= 12.0)
 	public static final kVTVideoEncoderListOption_IncludeStandardDefinitionDVEncoders : NSString;
 	public static final kVTVideoEncoderList_CodecName : NSString;
 	public static final kVTVideoEncoderList_CodecType : NSString;
@@ -368,13 +515,19 @@ import hxmc.unsafe.Ptr;
 	public static final kVTVideoEncoderList_PerformanceRating : NSString;
 	public static final kVTVideoEncoderList_QualityRating : NSString;
 	public static final kVTVideoEncoderList_SupportedSelectionProperties : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final kVTVideoEncoderList_SupportsFrameReordering : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTVideoEncoderSpecification_EnableHardwareAcceleratedVideoEncoder : NSString;
+	@:hxmc.available(macos >= 11.3)
 	public static final kVTVideoEncoderSpecification_EnableLowLatencyRateControl : NSString;
 	public static final kVTVideoEncoderSpecification_EncoderID : NSString;
 	public static final kVTVideoEncoderSpecification_PreferredEncoderGPURegistryID : NSString;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	public static final kVTVideoEncoderSpecification_RequireHardwareAcceleratedVideoEncoder : NSString;
 	public static final kVTVideoEncoderSpecification_RequiredEncoderGPURegistryID : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTViewPackingKind_OverUnder : NSString;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	public static final kVTViewPackingKind_SideBySide : NSString;
 }

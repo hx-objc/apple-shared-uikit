@@ -4,8 +4,11 @@ package passkit;
 import foundation.NSData;
 import objc.NSObject;
 
-@:hxmc.framework("PassKit") @:hxmc.objc extern class PKIdentityDocument extends NSObject {
+@:hxmc.framework("PassKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class PKIdentityDocument extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():PKIdentityDocument;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var encryptedData(get, never) : NSData;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_encryptedData():NSData;
 }

@@ -14,33 +14,55 @@ import hxmc.unsafe.Ptr;
 import mapkit.MKMapItem;
 import objc.NSObject;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPNavigationWaypoint extends NSObject implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.4, maccatalyst >= 26.4) extern class CPNavigationWaypoint extends NSObject implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	static function alloc():CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var centerPoint(get, never) : CPLocationCoordinate3D;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_centerPoint():CPLocationCoordinate3D;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var locationThreshold(get, never) : Null<NSMeasurement<NSUnitLength>>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_locationThreshold():Null<NSMeasurement<NSUnitLength>>;
 	@:deprecated
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var name(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_name():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var nameVariants(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_nameVariants():NSArray<NSString>;
 	@:deprecated
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var address(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_address():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var addressVariants(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_addressVariants():NSArray<NSString>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var entryPoints(get, never) : Ptr;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_entryPoints():Ptr;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var entryPointsCount(get, never) : I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_entryPointsCount():I64;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var timeZone(get, never) : Null<NSTimeZone>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_timeZone():Null<NSTimeZone>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithCenterPoint(centerPoint:CPLocationCoordinate3D, locationThreshold:Null<NSMeasurement<NSUnitLength>>, nameVariants:NSArray<NSString>, addressVariants:NSArray<NSString>, entryPoints:Ptr, entryPointsCount:I64, timeZone:Null<NSTimeZone>):CPNavigationWaypoint;
 	@:deprecated
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	overload function initWithCenterPoint(centerPoint:CPLocationCoordinate3D, locationThreshold:Null<NSMeasurement<NSUnitLength>>, name:Null<NSStringArg>, address:Null<NSStringArg>, entryPoints:Ptr, entryPointsCount:I64, timeZone:Null<NSTimeZone>):CPNavigationWaypoint;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithMapItem(mapItem:MKMapItem, locationThreshold:Null<NSMeasurement<NSUnitLength>>, entryPoints:Ptr, entryPointsCount:I64):CPNavigationWaypoint;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPNavigationWaypoint>;

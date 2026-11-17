@@ -3,10 +3,15 @@ package backgroundtasks;
 
 import foundation.NSStringArg;
 
-@:hxmc.framework("BackgroundTasks") @:hxmc.objc extern class BGHealthResearchTaskRequest extends BGProcessingTaskRequest {
+@:hxmc.framework("BackgroundTasks") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class BGHealthResearchTaskRequest extends BGProcessingTaskRequest {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():BGHealthResearchTaskRequest;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var protectionTypeOfRequiredData(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_protectionTypeOfRequiredData():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_protectionTypeOfRequiredData(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithIdentifier(identifier:NSStringArg):BGHealthResearchTaskRequest;
 }

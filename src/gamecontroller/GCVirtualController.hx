@@ -15,6 +15,8 @@ import objc.NSObject;
 	function connectWithReplyHandler(reply:Null<Null<NSError> -> Void>):Void;
 	function disconnect():Void;
 	function updateConfigurationForElement(element:NSStringArg, configuration:GCVirtualControllerElementConfiguration -> GCVirtualControllerElementConfiguration):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setValue(value:Float, forButtonElement:NSStringArg):Void;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function setPosition(position:CGPoint, forDirectionPadElement:NSStringArg):Void;
 }

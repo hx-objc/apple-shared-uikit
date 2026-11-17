@@ -38,6 +38,8 @@ import hxmc.unsafe.UInt16;
 	function readValueForDescriptor(descriptor:CBDescriptor):Void;
 	overload function writeValue(data:NSData, forDescriptor:CBDescriptor):Void;
 	function openL2CAPChannel(PSM:UInt16):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function startChannelSoundingSession(configuration:CBChannelSoundingSessionConfiguration):Void;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function cancelChannelSoundingSession():Void;
 }

@@ -4,35 +4,65 @@ package uikit;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIDocumentViewControllerLaunchOptions extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIDocumentViewControllerLaunchOptions extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIDocumentViewControllerLaunchOptions;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var browserViewController(get, set) : UIDocumentBrowserViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_browserViewController():UIDocumentBrowserViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_browserViewController(v:UIDocumentBrowserViewController):UIDocumentBrowserViewController;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var primaryAction(get, set) : Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_primaryAction():Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_primaryAction(v:Null<UIAction>):Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var secondaryAction(get, set) : Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_secondaryAction():Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_secondaryAction(v:Null<UIAction>):Null<UIAction>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var documentTargetView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_documentTargetView():Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_documentTargetView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var foregroundAccessoryView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_foregroundAccessoryView():Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_foregroundAccessoryView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var backgroundAccessoryView(get, set) : Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_backgroundAccessoryView():Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_backgroundAccessoryView(v:Null<UIView>):Null<UIView>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var background(get, set) : UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_background():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_background(v:UIBackgroundConfiguration):UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function createDocumentActionWithIntent(intent:NSStringArg):UIAction;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UIDocumentViewControllerLaunchOptions;
 }

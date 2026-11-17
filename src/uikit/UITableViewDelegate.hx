@@ -82,9 +82,11 @@ import objc.NSObjectProtocol;
 	@:optional
 	function tableViewDidDeselectRowAtIndexPath(tableView:UITableView, didDeselectRowAtIndexPath:NSIndexPath):Void;
 	@:selector("tableView:canPerformPrimaryActionForRowAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function tableViewCanPerformPrimaryActionForRowAtIndexPath(tableView:UITableView, canPerformPrimaryActionForRowAtIndexPath:NSIndexPath):Bool;
 	@:selector("tableView:performPrimaryActionForRowAtIndexPath:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function tableViewPerformPrimaryActionForRowAtIndexPath(tableView:UITableView, performPrimaryActionForRowAtIndexPath:NSIndexPath):Void;
 	@:selector("tableView:editingStyleForRowAtIndexPath:")

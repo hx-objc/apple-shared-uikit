@@ -3,16 +3,26 @@ package uikit;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIGlassEffect extends UIVisualEffect {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIGlassEffect extends UIVisualEffect {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIGlassEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var interactive(get, set) : Bool;
 	@:selector("isInteractive")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_interactive():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_interactive(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_tintColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function effectWithStyle(style:UIGlassEffectStyle):UIGlassEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function init():UIGlassEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	override function initWithCoder(coder:NSCoder):Null<UIGlassEffect>;
 }

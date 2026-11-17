@@ -8,7 +8,9 @@ import foundation.NSStringArg;
 
 @:hxmc.framework("UIKit") @:hxmc.objc extern class UIImageSymbolConfiguration extends UIImageConfiguration {
 	static function alloc():UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithLocale(locale:Null<NSLocale>):UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function configurationWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImageSymbolConfiguration;
 	static var unspecifiedConfiguration(get, never) : UIImageSymbolConfiguration;
 	static function get_unspecifiedConfiguration():UIImageSymbolConfiguration;
@@ -24,8 +26,11 @@ import foundation.NSStringArg;
 	static function configurationWithHierarchicalColor(hierarchicalColor:UIColor):UIImageSymbolConfiguration;
 	static function configurationWithPaletteColors(paletteColors:NSArray<UIColor>):UIImageSymbolConfiguration;
 	static function configurationPreferringMulticolor():UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function configurationPreferringMonochrome():UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithVariableValueMode(variableValueMode:UIImageSymbolVariableValueMode):UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function configurationWithColorRenderingMode(mode:UIImageSymbolColorRenderingMode):UIImageSymbolConfiguration;
 	function configurationWithoutTextStyle():UIImageSymbolConfiguration;
 	function configurationWithoutScale():UIImageSymbolConfiguration;
@@ -33,6 +38,7 @@ import foundation.NSStringArg;
 	function configurationWithoutPointSizeAndWeight():UIImageSymbolConfiguration;
 	function isEqualToConfiguration(otherConfiguration:Null<UIImageSymbolConfiguration>):Bool;
 	override function configurationByApplyingConfiguration(otherConfiguration:Null<UIImageConfiguration>):UIImageSymbolConfiguration;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function configurationWithLocale(locale:Null<NSLocale>):UIImageSymbolConfiguration;
 	override function configurationWithTraitCollection(traitCollection:Null<UITraitCollection>):UIImageSymbolConfiguration;
 	override function initWithCoder(coder:NSCoder):Null<UIImageSymbolConfiguration>;

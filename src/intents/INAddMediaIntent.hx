@@ -5,6 +5,7 @@ import foundation.NSArray;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INAddMediaIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INAddMediaIntent;
 	var mediaItems(get, never) : Null<NSArray<INMediaItem>>;
 	function get_mediaItems():Null<NSArray<INMediaItem>>;
@@ -13,6 +14,7 @@ import foundation.NSCoder;
 	var mediaDestination(get, never) : Null<INMediaDestination>;
 	function get_mediaDestination():Null<INMediaDestination>;
 	function initWithMediaItems(mediaItems:Null<NSArray<INMediaItem>>, mediaSearch:Null<INMediaSearch>, mediaDestination:Null<INMediaDestination>):INAddMediaIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INAddMediaIntent;
 	override function initWithCoder(coder:NSCoder):Null<INAddMediaIntent>;
 }

@@ -7,13 +7,19 @@ import foundation.NSCoder;
 	static function alloc():NINearbyPeerConfiguration;
 	var peerDiscoveryToken(get, never) : NIDiscoveryToken;
 	function get_peerDiscoveryToken():NIDiscoveryToken;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cameraAssistanceEnabled(get, set) : Bool;
 	@:selector("isCameraAssistanceEnabled")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cameraAssistanceEnabled():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cameraAssistanceEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var extendedDistanceMeasurementEnabled(get, set) : Bool;
 	@:selector("isExtendedDistanceMeasurementEnabled")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_extendedDistanceMeasurementEnabled():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_extendedDistanceMeasurementEnabled(v:Bool):Bool;
 	function initWithPeerToken(peerToken:NIDiscoveryToken):NINearbyPeerConfiguration;
 	override function initWithCoder(coder:NSCoder):Null<NINearbyPeerConfiguration>;

@@ -4,7 +4,9 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRElectrocardiogramSessionGuidance(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Guided = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Unguided = 2;
 	inline function new(v:I64) this = v;
 }

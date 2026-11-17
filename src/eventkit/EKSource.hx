@@ -15,7 +15,9 @@ import foundation.NSStringArg;
 	@:deprecated
 	var calendars(get, never) : NSSet<EKCalendar>;
 	function get_calendars():NSSet<EKCalendar>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var isDelegate(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_isDelegate():Bool;
 	function calendarsForEntityType(entityType:EKEntityType):NSSet<EKCalendar>;
 	override function init():EKSource;

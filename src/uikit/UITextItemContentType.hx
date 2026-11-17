@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITextItemContentType(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Link = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var TextAttachment = 1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Tag = 2;
 	inline function new(v:I64) this = v;
 }

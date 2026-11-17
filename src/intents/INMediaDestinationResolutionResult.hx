@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INMediaDestinationResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INMediaDestinationResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INMediaDestinationResolutionResult;
 	static function successWithResolvedMediaDestination(resolvedMediaDestination:INMediaDestination):INMediaDestinationResolutionResult;
 	static function disambiguationWithMediaDestinationsToDisambiguate(mediaDestinationsToDisambiguate:NSArray<INMediaDestination>):INMediaDestinationResolutionResult;

@@ -20,8 +20,11 @@ import objc.NSObject;
 	function get_uniqueID():I64;
 	var format(get, never) : Null<NSDictionary<NSString, Id>>;
 	function get_format():Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var rawFileFormat(get, set) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_rawFileFormat():Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_rawFileFormat(v:Null<NSDictionary<NSString, Id>>):Null<NSDictionary<NSString, Id>>;
 	var processedFileType(get, never) : Null<NSStringArg>;
 	function get_processedFileType():Null<NSStringArg>;
@@ -29,15 +32,21 @@ import objc.NSObject;
 	function get_rawPhotoPixelFormatType():Int;
 	var rawFileType(get, never) : Null<NSStringArg>;
 	function get_rawFileType():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0)
 	var flashMode(get, set) : AVCaptureFlashMode;
+	@:hxmc.available(macos >= 13.0)
 	function get_flashMode():AVCaptureFlashMode;
+	@:hxmc.available(macos >= 13.0)
 	function set_flashMode(v:AVCaptureFlashMode):AVCaptureFlashMode;
 	var autoRedEyeReductionEnabled(get, set) : Bool;
 	@:selector("isAutoRedEyeReductionEnabled")
 	function get_autoRedEyeReductionEnabled():Bool;
 	function set_autoRedEyeReductionEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0)
 	var photoQualityPrioritization(get, set) : AVCapturePhotoQualityPrioritization;
+	@:hxmc.available(macos >= 13.0)
 	function get_photoQualityPrioritization():AVCapturePhotoQualityPrioritization;
+	@:hxmc.available(macos >= 13.0)
 	function set_photoQualityPrioritization(v:AVCapturePhotoQualityPrioritization):AVCapturePhotoQualityPrioritization;
 	@:deprecated
 	var autoStillImageStabilizationEnabled(get, set) : Bool;
@@ -66,8 +75,11 @@ import objc.NSObject;
 	@:selector("isHighResolutionPhotoEnabled")
 	function get_highResolutionPhotoEnabled():Bool;
 	function set_highResolutionPhotoEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var maxPhotoDimensions(get, set) : CMVideoDimensions;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_maxPhotoDimensions():CMVideoDimensions;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_maxPhotoDimensions(v:CMVideoDimensions):CMVideoDimensions;
 	var depthDataDeliveryEnabled(get, set) : Bool;
 	@:selector("isDepthDataDeliveryEnabled")
@@ -128,17 +140,26 @@ import objc.NSObject;
 	@:selector("isAutoContentAwareDistortionCorrectionEnabled")
 	function get_autoContentAwareDistortionCorrectionEnabled():Bool;
 	function set_autoContentAwareDistortionCorrectionEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorEnabled(get, set) : Bool;
 	@:selector("isConstantColorEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_constantColorEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var constantColorFallbackPhotoDeliveryEnabled(get, set) : Bool;
 	@:selector("isConstantColorFallbackPhotoDeliveryEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_constantColorFallbackPhotoDeliveryEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_constantColorFallbackPhotoDeliveryEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var shutterSoundSuppressionEnabled(get, set) : Bool;
 	@:selector("isShutterSoundSuppressionEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_shutterSoundSuppressionEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_shutterSoundSuppressionEnabled(v:Bool):Bool;
 	static function photoSettings():AVCapturePhotoSettings;
 	static function photoSettingsWithFormat(format:Null<NSDictionary<NSString, Id>>):AVCapturePhotoSettings;

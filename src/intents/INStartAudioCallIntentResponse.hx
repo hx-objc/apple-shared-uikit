@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INStartAudioCallIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartAudioCallIntentResponse;
 	var code(get, never) : INStartAudioCallIntentResponseCode;
 	function get_code():INStartAudioCallIntentResponseCode;

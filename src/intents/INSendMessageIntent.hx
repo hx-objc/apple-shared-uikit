@@ -6,34 +6,55 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 import usernotifications.UNNotificationContentProviding;
 
-@:hxmc.framework("Intents") @:hxmc.objc extern class INSendMessageIntent extends INIntent implements UNNotificationContentProviding {
+@:hxmc.framework("Intents") @:hxmc.objc @:hxmc.available(macos >= 12.0) extern class INSendMessageIntent extends INIntent implements UNNotificationContentProviding {
+	@:hxmc.available(macos >= 12.0)
 	static function alloc():INSendMessageIntent;
+	@:hxmc.available(macos >= 12.0)
 	var recipients(get, never) : Null<NSArray<INPerson>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_recipients():Null<NSArray<INPerson>>;
+	@:hxmc.available(macos >= 12.0)
 	var outgoingMessageType(get, never) : INOutgoingMessageType;
+	@:hxmc.available(macos >= 12.0)
 	function get_outgoingMessageType():INOutgoingMessageType;
+	@:hxmc.available(macos >= 12.0)
 	var content(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	function get_content():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var speakableGroupName(get, never) : Null<INSpeakableString>;
+	@:hxmc.available(macos >= 12.0)
 	function get_speakableGroupName():Null<INSpeakableString>;
+	@:hxmc.available(macos >= 12.0)
 	var conversationIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	function get_conversationIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var serviceName(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	function get_serviceName():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var sender(get, never) : Null<INPerson>;
+	@:hxmc.available(macos >= 12.0)
 	function get_sender():Null<INPerson>;
+	@:hxmc.available(macos >= 12.0)
 	var attachments(get, never) : Null<NSArray<INSendMessageAttachment>>;
+	@:hxmc.available(macos >= 12.0)
 	function get_attachments():Null<NSArray<INSendMessageAttachment>>;
 	@:deprecated
 	var groupName(get, never) : Null<NSStringArg>;
 	function get_groupName():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	overload function initWithRecipients(recipients:Null<NSArray<INPerson>>, outgoingMessageType:INOutgoingMessageType, content:Null<NSStringArg>, speakableGroupName:Null<INSpeakableString>, conversationIdentifier:Null<NSStringArg>, serviceName:Null<NSStringArg>, sender:Null<INPerson>, attachments:Null<NSArray<INSendMessageAttachment>>):INSendMessageIntent;
 	@:deprecated
 	overload function initWithRecipients(recipients:Null<NSArray<INPerson>>, content:Null<NSStringArg>, groupName:Null<NSStringArg>, serviceName:Null<NSStringArg>, sender:Null<INPerson>):INSendMessageIntent;
 	@:deprecated
 	overload function initWithRecipients(recipients:Null<NSArray<INPerson>>, content:Null<NSStringArg>, speakableGroupName:Null<INSpeakableString>, conversationIdentifier:Null<NSStringArg>, serviceName:Null<NSStringArg>, sender:Null<INPerson>):INSendMessageIntent;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	overload function initWithRecipients(recipients:Null<NSArray<INPerson>>, outgoingMessageType:INOutgoingMessageType, content:Null<NSStringArg>, speakableGroupName:Null<INSpeakableString>, conversationIdentifier:Null<NSStringArg>, serviceName:Null<NSStringArg>, sender:Null<INPerson>):INSendMessageIntent;
+	@:hxmc.available(macos >= 12.0)
 	override function init():INSendMessageIntent;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithCoder(coder:NSCoder):Null<INSendMessageIntent>;
 }

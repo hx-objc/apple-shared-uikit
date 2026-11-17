@@ -5,27 +5,48 @@ import avfoundation.AVPlayer;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("MediaPlayer") @:hxmc.objc extern class MPNowPlayingSession extends NSObject {
+@:hxmc.framework("MediaPlayer") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class MPNowPlayingSession extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MPNowPlayingSession;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var players(get, never) : NSArray<AVPlayer>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_players():NSArray<AVPlayer>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<MPNowPlayingSessionDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<MPNowPlayingSessionDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<MPNowPlayingSessionDelegate>):Null<MPNowPlayingSessionDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var automaticallyPublishesNowPlayingInfo(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_automaticallyPublishesNowPlayingInfo():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_automaticallyPublishesNowPlayingInfo(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var nowPlayingInfoCenter(get, never) : MPNowPlayingInfoCenter;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_nowPlayingInfoCenter():MPNowPlayingInfoCenter;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var remoteCommandCenter(get, never) : MPRemoteCommandCenter;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_remoteCommandCenter():MPRemoteCommandCenter;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var canBecomeActive(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_canBecomeActive():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var active(get, never) : Bool;
 	@:selector("isActive")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_active():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithPlayers(players:NSArray<AVPlayer>):MPNowPlayingSession;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function becomeActiveIfPossibleWithCompletion(completion:Null<Bool -> Void>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function addPlayer(player:AVPlayer):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function removePlayer(player:AVPlayer):Void;
 }

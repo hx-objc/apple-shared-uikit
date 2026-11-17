@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITabBarControllerSidebarPlacement(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Sidebar = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var TabBar = 2;
 	inline function new(v:I64) this = v;
 }

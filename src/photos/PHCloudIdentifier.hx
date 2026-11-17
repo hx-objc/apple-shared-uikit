@@ -11,13 +11,16 @@ import objc.NSObject;
 
 @:hxmc.framework("Photos") @:hxmc.objc extern class PHCloudIdentifier extends NSObject implements NSSecureCoding implements NSCopying {
 	static function alloc():PHCloudIdentifier;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var archivalStringValue(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function get_archivalStringValue():NSStringArg;
 	@:deprecated
 	var stringValue(get, never) : NSStringArg;
 	function get_stringValue():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function initWithArchivalStringValue(archivalString:NSStringArg):Null<PHCloudIdentifier>;
 	@:deprecated
 	function initWithStringValue(stringValue:NSStringArg):PHCloudIdentifier;

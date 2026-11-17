@@ -6,6 +6,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INListCarsIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INListCarsIntentResponse;
 	var code(get, never) : INListCarsIntentResponseCode;
 	function get_code():INListCarsIntentResponseCode;

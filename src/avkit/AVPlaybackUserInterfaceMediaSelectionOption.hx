@@ -11,18 +11,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceMediaSelectionOption extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceMediaSelectionOption extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceMediaSelectionOption;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var displayName(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_displayName():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var extendedLanguageTag(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_extendedLanguageTag():Null<NSStringArg>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var mediaCharacteristics(get, never) : NSArray<NSString>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_mediaCharacteristics():NSArray<NSString>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function initWithDisplayName(displayName:NSStringArg, identifier:NSStringArg, extendedLanguageTag:Null<NSStringArg>, mediaCharacteristics:NSArray<NSString>):AVPlaybackUserInterfaceMediaSelectionOption;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

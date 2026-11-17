@@ -27,7 +27,9 @@ import objc.NSObject;
 	function get_selectedDataSource():Null<AVAudioSessionDataSourceDescription>;
 	var preferredDataSource(get, never) : Null<AVAudioSessionDataSourceDescription>;
 	function get_preferredDataSource():Null<AVAudioSessionDataSourceDescription>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var bluetoothMicrophoneExtension(get, never) : Null<AVAudioSessionPortExtensionBluetoothMicrophone>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_bluetoothMicrophoneExtension():Null<AVAudioSessionPortExtensionBluetoothMicrophone>;
 	function setPreferredDataSource(dataSource:Null<AVAudioSessionDataSourceDescription>, error:Ptr):Bool;
 	override function init():AVAudioSessionPortDescription;

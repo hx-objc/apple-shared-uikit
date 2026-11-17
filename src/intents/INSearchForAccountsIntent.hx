@@ -4,6 +4,7 @@ package intents;
 import foundation.NSCoder;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSearchForAccountsIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSearchForAccountsIntent;
 	var accountNickname(get, never) : Null<INSpeakableString>;
 	function get_accountNickname():Null<INSpeakableString>;
@@ -14,6 +15,7 @@ import foundation.NSCoder;
 	var requestedBalanceType(get, never) : INBalanceType;
 	function get_requestedBalanceType():INBalanceType;
 	function initWithAccountNickname(accountNickname:Null<INSpeakableString>, accountType:INAccountType, organizationName:Null<INSpeakableString>, requestedBalanceType:INBalanceType):INSearchForAccountsIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSearchForAccountsIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSearchForAccountsIntent>;
 }

@@ -60,10 +60,15 @@ import os.OS_os_workgroup;
 	function get_MIDIOutputNames():NSArray<NSString>;
 	var providesUserInterface(get, never) : Bool;
 	function get_providesUserInterface():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var AudioUnitMIDIProtocol(get, never) : MIDIProtocolID;
+	@:hxmc.available(macos >= 12.0)
 	function get_AudioUnitMIDIProtocol():MIDIProtocolID;
+	@:hxmc.available(macos >= 12.0)
 	var hostMIDIProtocol(get, set) : MIDIProtocolID;
+	@:hxmc.available(macos >= 12.0)
 	function get_hostMIDIProtocol():MIDIProtocolID;
+	@:hxmc.available(macos >= 12.0)
 	function set_hostMIDIProtocol(v:MIDIProtocolID):MIDIProtocolID;
 	var fullState(get, set) : Null<NSDictionary<NSString, Id>>;
 	function get_fullState():Null<NSDictionary<NSString, Id>>;
@@ -101,7 +106,9 @@ import os.OS_os_workgroup;
 	var contextName(get, set) : Null<NSStringArg>;
 	function get_contextName():Null<NSStringArg>;
 	function set_contextName(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var migrateFromPlugin(get, never) : NSArray;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_migrateFromPlugin():NSArray;
 	var supportsMPE(get, never) : Bool;
 	function get_supportsMPE():Bool;
@@ -126,7 +133,9 @@ import os.OS_os_workgroup;
 	var running(get, never) : Bool;
 	@:selector("isRunning")
 	function get_running():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var osWorkgroup(get, never) : OS_os_workgroup;
+	@:hxmc.available(macos >= 11.0)
 	function get_osWorkgroup():OS_os_workgroup;
 	var MIDIOutputBufferSizeHint(get, set) : I64;
 	function get_MIDIOutputBufferSizeHint():I64;
@@ -145,6 +154,7 @@ import os.OS_os_workgroup;
 	function profileStateForCable(cable:UInt8, channel:UInt8):MIDICIProfileState;
 	function enableProfile(profile:MIDICIProfile, cable:UInt8, onChannel:UInt8, error:Ptr):Bool;
 	function disableProfile(profile:MIDICIProfile, cable:UInt8, onChannel:UInt8, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function messageChannelFor(channelName:NSStringArg):AUMessageChannel;
 	function startHardwareAndReturnError(outError:Ptr):Bool;
 	function stopHardware():Void;

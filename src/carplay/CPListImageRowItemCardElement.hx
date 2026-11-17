@@ -8,29 +8,50 @@ import foundation.NSStringArg;
 import uikit.UIColor;
 import uikit.UIImage;
 
-@:hxmc.framework("CarPlay") @:hxmc.objc extern class CPListImageRowItemCardElement extends CPListImageRowItemElement implements NSSecureCoding {
+@:hxmc.framework("CarPlay") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class CPListImageRowItemCardElement extends CPListImageRowItemElement implements NSSecureCoding {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():CPListImageRowItemCardElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var thumbnail(get, set) : Null<CPThumbnailImage>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_thumbnail():Null<CPThumbnailImage>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_thumbnail(v:Null<CPThumbnailImage>):Null<CPThumbnailImage>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var showsImageFullHeight(get, never) : Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_showsImageFullHeight():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var tintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_tintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_tintColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumImageSize():CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var maximumFullHeightImageSize(get, never) : CGSize;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_maximumFullHeightImageSize():CGSize;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function initWithImage(image:UIImage, showsImageFullHeight:Bool, title:Null<NSStringArg>, subtitle:Null<NSStringArg>, tintColor:Null<UIColor>):CPListImageRowItemCardElement;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function initWithThumbnail(thumbnail:CPThumbnailImage, title:Null<NSStringArg>, subtitle:Null<NSStringArg>, tintColor:Null<UIColor>):CPListImageRowItemCardElement;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<CPListImageRowItemCardElement>;

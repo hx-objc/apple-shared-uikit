@@ -6,6 +6,7 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INSetRadioStationIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetRadioStationIntent;
 	var radioType(get, never) : INRadioType;
 	function get_radioType():INRadioType;
@@ -18,6 +19,7 @@ import foundation.NSStringArg;
 	var presetNumber(get, never) : Null<NSNumberArg>;
 	function get_presetNumber():Null<NSNumberArg>;
 	function initWithRadioType(radioType:INRadioType, frequency:Null<NSNumberArg>, stationName:Null<NSStringArg>, channel:Null<NSStringArg>, presetNumber:Null<NSNumberArg>):INSetRadioStationIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSetRadioStationIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSetRadioStationIntent>;
 }

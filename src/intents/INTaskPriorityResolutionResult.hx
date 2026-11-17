@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INTaskPriorityResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INTaskPriorityResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INTaskPriorityResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INTaskPriorityResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INTaskPriorityResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INTaskPriorityResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INTaskPriorityResolutionResult;
 	static function successWithResolvedTaskPriority(resolvedTaskPriority:INTaskPriority):INTaskPriorityResolutionResult;
 	static function confirmationRequiredWithTaskPriorityToConfirm(taskPriorityToConfirm:INTaskPriority):INTaskPriorityResolutionResult;

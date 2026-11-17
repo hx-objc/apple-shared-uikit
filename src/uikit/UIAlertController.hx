@@ -20,8 +20,11 @@ import foundation.NSStringArg;
 	function set_message(v:Null<NSStringArg>):Null<NSStringArg>;
 	var preferredStyle(get, never) : UIAlertControllerStyle;
 	function get_preferredStyle():UIAlertControllerStyle;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var severity(get, set) : UIAlertControllerSeverity;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_severity():UIAlertControllerSeverity;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_severity(v:UIAlertControllerSeverity):UIAlertControllerSeverity;
 	var springLoaded(get, set) : Bool;
 	@:selector("isSpringLoaded")

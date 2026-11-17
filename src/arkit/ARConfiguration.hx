@@ -30,14 +30,23 @@ import objc.NSObject;
 	var frameSemantics(get, set) : ARFrameSemantics;
 	function get_frameSemantics():ARFrameSemantics;
 	function set_frameSemantics(v:ARFrameSemantics):ARFrameSemantics;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var configurableCaptureDeviceForPrimaryCamera(get, never) : Null<AVCaptureDevice>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_configurableCaptureDeviceForPrimaryCamera():Null<AVCaptureDevice>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var recommendedVideoFormatFor4KResolution(get, never) : Null<ARVideoFormat>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_recommendedVideoFormatFor4KResolution():Null<ARVideoFormat>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static var recommendedVideoFormatForHighResolutionFrameCapturing(get, never) : Null<ARVideoFormat>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function get_recommendedVideoFormatForHighResolutionFrameCapturing():Null<ARVideoFormat>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var videoHDRAllowed(get, set) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_videoHDRAllowed():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_videoHDRAllowed(v:Bool):Bool;
 	static function supportsFrameSemantics(frameSemantics:ARFrameSemantics):Bool;
 	function copyWithZone(zone:Ptr):Id;

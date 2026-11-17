@@ -6,11 +6,17 @@ import objc.NSObject;
 
 @:hxmc.framework("Contacts") @:hxmc.objc extern class CNSaveRequest extends NSObject {
 	static function alloc():CNSaveRequest;
+	@:hxmc.available(macos >= 12)
 	var transactionAuthor(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 12)
 	function get_transactionAuthor():Null<NSStringArg>;
+	@:hxmc.available(macos >= 12)
 	function set_transactionAuthor(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	var shouldRefetchContacts(get, set) : Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function get_shouldRefetchContacts():Bool;
+	@:hxmc.available(macos >= 12.3, ios >= 15.4, maccatalyst >= 15.4)
 	function set_shouldRefetchContacts(v:Bool):Bool;
 	function addContact(contact:CNMutableContact, toContainerWithIdentifier:Null<NSStringArg>):Void;
 	function updateContact(contact:CNMutableContact):Void;

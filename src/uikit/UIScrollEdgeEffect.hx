@@ -3,13 +3,20 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIScrollEdgeEffect extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIScrollEdgeEffect extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIScrollEdgeEffect;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var style(get, set) : UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_style():UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_style(v:UIScrollEdgeEffectStyle):UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var hidden(get, set) : Bool;
 	@:selector("isHidden")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_hidden():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_hidden(v:Bool):Bool;
 }

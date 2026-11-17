@@ -3,11 +3,17 @@ package uikit;
 
 import foundation.NSCoder;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICellAccessoryDetail extends UICellAccessory {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 15.4, maccatalyst >= 15.4) extern class UICellAccessoryDetail extends UICellAccessory {
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	static function alloc():UICellAccessoryDetail;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	var actionHandler(get, set) : Null<() -> Void>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function get_actionHandler():Null<() -> Void>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	function set_actionHandler(v:Null<() -> Void>):Null<() -> Void>;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	override function init():UICellAccessoryDetail;
+	@:hxmc.available(ios >= 15.4, maccatalyst >= 15.4)
 	override function initWithCoder(coder:NSCoder):Null<UICellAccessoryDetail>;
 }

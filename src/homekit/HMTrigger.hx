@@ -18,7 +18,9 @@ import objc.NSObject;
 	var actionSets(get, never) : NSArray<HMActionSet>;
 	function get_actionSets():NSArray<HMActionSet>;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var lastFireDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 11.0)
 	function get_lastFireDate():Null<NSDate>;
 	var uniqueIdentifier(get, never) : NSUUID;
 	function get_uniqueIdentifier():NSUUID;

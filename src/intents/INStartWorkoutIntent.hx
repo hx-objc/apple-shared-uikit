@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSNumberArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INStartWorkoutIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INStartWorkoutIntent;
 	var workoutName(get, never) : Null<INSpeakableString>;
 	function get_workoutName():Null<INSpeakableString>;
@@ -17,6 +18,7 @@ import foundation.NSNumberArg;
 	var isOpenEnded(get, never) : Null<NSNumberArg>;
 	function get_isOpenEnded():Null<NSNumberArg>;
 	function initWithWorkoutName(workoutName:Null<INSpeakableString>, goalValue:Null<NSNumberArg>, workoutGoalUnitType:INWorkoutGoalUnitType, workoutLocationType:INWorkoutLocationType, isOpenEnded:Null<NSNumberArg>):INStartWorkoutIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INStartWorkoutIntent;
 	override function initWithCoder(coder:NSCoder):Null<INStartWorkoutIntent>;
 }

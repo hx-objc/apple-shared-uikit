@@ -5,11 +5,17 @@ import foundation.NSCoder;
 import foundation.NSURL;
 import uniformtypeidentifiers.UTType;
 
-@:hxmc.framework("AVKit") @:hxmc.objc extern class AVPlaybackUserInterfaceContentURLArtwork extends AVPlaybackUserInterfaceContentArtwork {
+@:hxmc.framework("AVKit") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVPlaybackUserInterfaceContentURLArtwork extends AVPlaybackUserInterfaceContentArtwork {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVPlaybackUserInterfaceContentURLArtwork;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var url(get, never) : NSURL;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_url():NSURL;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var contentType(get, never) : UTType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_contentType():UTType;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	override function initWithCoder(coder:NSCoder):Null<AVPlaybackUserInterfaceContentURLArtwork>;
 }

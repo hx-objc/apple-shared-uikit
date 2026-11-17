@@ -18,8 +18,11 @@ import uikit.UIEventAttribution;
 	var activityButton(get, set) : Null<SFSafariViewControllerActivityButton>;
 	function get_activityButton():Null<SFSafariViewControllerActivityButton>;
 	function set_activityButton(v:Null<SFSafariViewControllerActivityButton>):Null<SFSafariViewControllerActivityButton>;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	var eventAttribution(get, set) : Null<UIEventAttribution>;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function get_eventAttribution():Null<UIEventAttribution>;
+	@:hxmc.available(ios >= 15.2, maccatalyst >= 15.2)
 	function set_eventAttribution(v:Null<UIEventAttribution>):Null<UIEventAttribution>;
 	function copyWithZone(zone:Ptr):Id;
 	override function init():SFSafariViewControllerConfiguration;

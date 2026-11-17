@@ -21,7 +21,9 @@ import objc.NSObject;
 	function get_systemName():NSStringArg;
 	var systemVersion(get, never) : NSStringArg;
 	function get_systemVersion():NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var productType(get, never) : NSStringArg;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_productType():NSStringArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

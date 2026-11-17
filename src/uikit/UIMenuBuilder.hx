@@ -16,34 +16,47 @@ import hxmc.objc.Selector;
 	function replaceMenuForIdentifierWithMenu(replacedIdentifier:NSStringArg, withMenu:UIMenu):Void;
 	function replaceChildrenOfMenuForIdentifier(parentIdentifier:NSStringArg, fromChildrenBlock:NSArray<UIMenuElement> -> NSArray<UIMenuElement>):Void;
 	@:selector("replaceMenuForIdentifier:withElements:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function replaceMenuForIdentifierWithElements(replacedIdentifier:NSStringArg, withElements:NSArray<UIMenuElement>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function replaceActionForIdentifier(replacedIdentifier:NSStringArg, withElements:NSArray<UIMenuElement>):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function replaceCommandForAction(replacedAction:Selector, propertyList:Null<Id>, withElements:NSArray<UIMenuElement>):Void;
 	@:selector("insertSiblingMenu:beforeMenuForIdentifier:")
 	function insertSiblingMenuBeforeMenuForIdentifier(siblingMenu:UIMenu, beforeMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:beforeMenuForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsBeforeMenuForIdentifier(insertedElements:NSArray<UIMenuElement>, beforeMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:afterMenuForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsAfterMenuForIdentifier(insertedElements:NSArray<UIMenuElement>, afterMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertSiblingMenu:afterMenuForIdentifier:")
 	function insertSiblingMenuAfterMenuForIdentifier(siblingMenu:UIMenu, afterMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertChildMenu:atStartOfMenuForIdentifier:")
 	function insertChildMenuAtStartOfMenuForIdentifier(childMenu:UIMenu, atStartOfMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:beforeActionForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsBeforeActionForIdentifier(insertedElements:NSArray<UIMenuElement>, beforeActionForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:afterActionForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsAfterActionForIdentifier(insertedElements:NSArray<UIMenuElement>, afterActionForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:beforeCommandForAction:propertyList:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsBeforeCommandForActionPropertyList(insertedElements:NSArray<UIMenuElement>, beforeCommandForAction:Selector, propertyList:Null<Id>):Void;
 	@:selector("insertElements:afterCommandForAction:propertyList:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsAfterCommandForActionPropertyList(insertedElements:NSArray<UIMenuElement>, afterCommandForAction:Selector, propertyList:Null<Id>):Void;
 	@:selector("insertElements:atStartOfMenuForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsAtStartOfMenuForIdentifier(childElements:NSArray<UIMenuElement>, atStartOfMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertChildMenu:atEndOfMenuForIdentifier:")
 	function insertChildMenuAtEndOfMenuForIdentifier(childMenu:UIMenu, atEndOfMenuForIdentifier:NSStringArg):Void;
 	@:selector("insertElements:atEndOfMenuForIdentifier:")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function insertElementsAtEndOfMenuForIdentifier(childElements:NSArray<UIMenuElement>, atEndOfMenuForIdentifier:NSStringArg):Void;
 	function removeMenuForIdentifier(removedIdentifier:NSStringArg):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function removeActionForIdentifier(removedIdentifier:NSStringArg):Void;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function removeCommandForAction(removedAction:Selector, propertyList:Null<Id>):Void;
 }

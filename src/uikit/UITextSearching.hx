@@ -6,31 +6,47 @@ import foundation.NSCopying;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITextSearching") extern interface UITextSearching extends NSObjectProtocol {
+@:hxmc.objc("UITextSearching") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UITextSearching extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedTextRange(get, never) : Null<UITextRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedTextRange():Null<UITextRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var supportsTextReplacement(get, never) : Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_supportsTextReplacement():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	var selectedTextSearchDocument(get, never) : Null<NSCopying>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function get_selectedTextSearchDocument():Null<NSCopying>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function compareFoundRange(foundRange:UITextRange, toRange:UITextRange, inDocument:Null<NSCopying>):NSComparisonResult;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performTextSearchWithQueryString(string:NSStringArg, usingOptions:UITextSearchOptions, resultAggregator:UITextSearchAggregator):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function decorateFoundTextRange(range:UITextRange, inDocument:Null<NSCopying>, usingStyle:UITextSearchFoundTextStyle):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function clearAllDecoratedFoundText():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function shouldReplaceFoundTextInRange(range:UITextRange, inDocument:Null<NSCopying>, withText:NSStringArg):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function replaceFoundTextInRange(range:UITextRange, inDocument:Null<NSCopying>, withText:NSStringArg):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function replaceAllOccurrencesOfQueryString(queryString:NSStringArg, usingOptions:UITextSearchOptions, withText:NSStringArg):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function willHighlightFoundTextRange(range:UITextRange, inDocument:Null<NSCopying>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function scrollRangeToVisible(range:UITextRange, inDocument:Null<NSCopying>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function compareOrderFromDocument(fromDocument:NSCopying, toDocument:NSCopying):NSComparisonResult;
 }

@@ -5,37 +5,69 @@ import foundation.NSStringArg;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIMenuLeaf") extern interface UIMenuLeaf extends NSObjectProtocol {
+@:hxmc.objc("UIMenuLeaf") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UIMenuLeaf extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var title(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_title(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var subtitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_subtitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_subtitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var image(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_image():Null<UIImage>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_image(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var selectedImage(get, set) : Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_selectedImage():Null<UIImage>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_selectedImage(v:Null<UIImage>):Null<UIImage>;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var preferredImageVisibility(get, set) : UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_preferredImageVisibility():UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function set_preferredImageVisibility(v:UIMenuElementImageVisibility):UIMenuElementImageVisibility;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var discoverabilityTitle(get, set) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_discoverabilityTitle():Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_discoverabilityTitle(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var attributes(get, set) : UIMenuElementAttributes;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_attributes():UIMenuElementAttributes;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_attributes(v:UIMenuElementAttributes):UIMenuElementAttributes;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var state(get, set) : UIMenuElementState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_state():UIMenuElementState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_state(v:UIMenuElementState):UIMenuElementState;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var repeatBehavior(get, set) : UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_repeatBehavior():UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_repeatBehavior(v:UIMenuElementRepeatBehavior):UIMenuElementRepeatBehavior;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var sender(get, never) : Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_sender():Null<Id>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var presentationSourceItem(get, never) : Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_presentationSourceItem():Null<UIPopoverPresentationControllerSourceItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function performWithSender(sender:Null<Id>, target:Null<Id>):Void;
 }

@@ -91,6 +91,7 @@ import foundation.NSString;
 	public static final PDFBorderKeyStyle : NSString;
 	public static final PDFDocumentAccessPermissionsOption : NSString;
 	public static final PDFDocumentAuthorAttribute : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFDocumentBurnInAnnotationsOption : NSString;
 	public static final PDFDocumentCreationDateAttribute : NSString;
 	public static final PDFDocumentCreatorAttribute : NSString;
@@ -107,18 +108,25 @@ import foundation.NSString;
 	public static final PDFDocumentFoundSelectionKey : NSString;
 	public static final PDFDocumentKeywordsAttribute : NSString;
 	public static final PDFDocumentModificationDateAttribute : NSString;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	public static final PDFDocumentOptimizeImagesForScreenOption : NSString;
 	public static final PDFDocumentOwnerPasswordOption : NSString;
 	public static final PDFDocumentPageIndexKey : NSString;
 	public static final PDFDocumentProducerAttribute : NSString;
+	@:hxmc.available(ios >= 16.4, maccatalyst >= 16.4)
 	public static final PDFDocumentSaveImagesAsJPEGOption : NSString;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFDocumentSaveTextFromOCROption : NSString;
 	public static final PDFDocumentSubjectAttribute : NSString;
 	public static final PDFDocumentTitleAttribute : NSString;
 	public static final PDFDocumentUserPasswordOption : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFPageImageInitializationOptionCompressionQuality : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFPageImageInitializationOptionMediaBox : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFPageImageInitializationOptionRotation : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	public static final PDFPageImageInitializationOptionUpscaleIfSmaller : NSString;
 	public static final PDFThumbnailViewDocumentEditedNotification : NSString;
 	public static final PDFViewAnnotationHitNotification : NSString;

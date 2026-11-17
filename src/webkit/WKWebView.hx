@@ -54,9 +54,13 @@ import uikit.UIView;
 	function get_canGoBack():Bool;
 	var canGoForward(get, never) : Bool;
 	function get_canGoForward():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var cameraCaptureState(get, never) : WKMediaCaptureState;
+	@:hxmc.available(macos >= 12.0)
 	function get_cameraCaptureState():WKMediaCaptureState;
+	@:hxmc.available(macos >= 12.0)
 	var microphoneCaptureState(get, never) : WKMediaCaptureState;
+	@:hxmc.available(macos >= 12.0)
 	function get_microphoneCaptureState():WKMediaCaptureState;
 	var allowsBackForwardNavigationGestures(get, set) : Bool;
 	function get_allowsBackForwardNavigationGestures():Bool;
@@ -69,43 +73,73 @@ import uikit.UIView;
 	function set_allowsLinkPreview(v:Bool):Bool;
 	var scrollView(get, never) : UIScrollView;
 	function get_scrollView():UIScrollView;
+	@:hxmc.available(macos >= 11.0)
 	var pageZoom(get, set) : Float;
+	@:hxmc.available(macos >= 11.0)
 	function get_pageZoom():Float;
+	@:hxmc.available(macos >= 11.0)
 	function set_pageZoom(v:Float):Float;
+	@:hxmc.available(macos >= 11.0)
 	var mediaType(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_mediaType():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function set_mediaType(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 12.0)
 	var interactionState(get, set) : Null<Id>;
+	@:hxmc.available(macos >= 12.0)
 	function get_interactionState():Null<Id>;
+	@:hxmc.available(macos >= 12.0)
 	function set_interactionState(v:Null<Id>):Null<Id>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var isBlockedByScreenTime(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_isBlockedByScreenTime():Bool;
 	var themeColor(get, never) : Null<UIColor>;
 	function get_themeColor():Null<UIColor>;
 	var underPageBackgroundColor(get, set) : Null<UIColor>;
 	function get_underPageBackgroundColor():Null<UIColor>;
 	function set_underPageBackgroundColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var fullscreenState(get, never) : WKFullscreenState;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_fullscreenState():WKFullscreenState;
+	@:hxmc.available(ios >= 15.5, maccatalyst >= 15.5)
 	var minimumViewportInset(get, never) : UIEdgeInsets;
+	@:hxmc.available(ios >= 15.5, maccatalyst >= 15.5)
 	function get_minimumViewportInset():UIEdgeInsets;
+	@:hxmc.available(ios >= 15.5, maccatalyst >= 15.5)
 	var maximumViewportInset(get, never) : UIEdgeInsets;
+	@:hxmc.available(ios >= 15.5, maccatalyst >= 15.5)
 	function get_maximumViewportInset():UIEdgeInsets;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteractionEnabled(get, set) : Bool;
 	@:selector("isFindInteractionEnabled")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteractionEnabled():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_findInteractionEnabled(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var findInteraction(get, never) : Null<UIFindInteraction>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_findInteraction():Null<UIFindInteraction>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var inspectable(get, set) : Bool;
 	@:selector("isInspectable")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_inspectable():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_inspectable(v:Bool):Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var writingToolsActive(get, never) : Bool;
 	@:selector("isWritingToolsActive")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_writingToolsActive():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var obscuredContentInsets(get, set) : UIEdgeInsets;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_obscuredContentInsets():UIEdgeInsets;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function set_obscuredContentInsets(v:UIEdgeInsets):UIEdgeInsets;
 	@:deprecated
 	var certificateChain(get, never) : NSArray;
@@ -114,6 +148,7 @@ import uikit.UIView;
 	function initWithFrameConfiguration(frame:CGRect, configuration:WKWebViewConfiguration):WKWebView;
 	override function initWithCoder(coder:NSCoder):Null<WKWebView>;
 	function loadRequest(request:NSURLRequest):Null<WKNavigation>;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function loadURL(url:NSURL):Null<WKNavigation>;
 	function loadFileURL(URL:NSURL, allowingReadAccessToURL:NSURL):Null<WKNavigation>;
 	function loadHTMLString(string:NSStringArg, baseURL:Null<NSURL>):Null<WKNavigation>;
@@ -125,42 +160,68 @@ import uikit.UIView;
 	function reloadFromOrigin():Null<WKNavigation>;
 	function stopLoading():Void;
 	overload function evaluateJavaScript(javaScriptString:NSStringArg, completionHandler:Null<(Null<Id>, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	overload function evaluateJavaScript(javaScriptString:NSStringArg, inFrame:Null<WKFrameInfo>, inContentWorld:WKContentWorld, completionHandler:Null<(Null<Id>, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	function callAsyncJavaScript(functionBody:NSStringArg, arguments:Null<NSDictionary<NSString, Id>>, inFrame:Null<WKFrameInfo>, inContentWorld:WKContentWorld, completionHandler:Null<(Null<Id>, Null<NSError>) -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function closeAllMediaPresentationsWithCompletionHandler(completionHandler:Null<() -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	function closeAllMediaPresentations():Void;
+	@:hxmc.available(macos >= 12.0)
 	function pauseAllMediaPlaybackWithCompletionHandler(completionHandler:Null<() -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	function pauseAllMediaPlayback(completionHandler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setAllMediaPlaybackSuspended(suspended:Bool, completionHandler:Null<() -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	function resumeAllMediaPlayback(completionHandler:Null<() -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	function suspendAllMediaPlayback(completionHandler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function requestMediaPlaybackStateWithCompletionHandler(completionHandler:WKMediaPlaybackState -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 11.3)
 	function requestMediaPlaybackState(completionHandler:WKMediaPlaybackState -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setCameraCaptureState(state:WKMediaCaptureState, completionHandler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function setMicrophoneCaptureState(state:WKMediaCaptureState, completionHandler:Null<() -> Void>):Void;
 	function takeSnapshotWithConfiguration(snapshotConfiguration:Null<WKSnapshotConfiguration>, completionHandler:(Null<UIImage>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function createPDFWithConfiguration(pdfConfiguration:Null<WKPDFConfiguration>, completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function createWebArchiveDataWithCompletionHandler(completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function findString(string:NSStringArg, withConfiguration:Null<WKFindConfiguration>, completionHandler:WKFindResult -> Void):Void;
 	static function handlesURLScheme(urlScheme:NSStringArg):Bool;
+	@:hxmc.available(macos >= 11.3)
 	function startDownloadUsingRequest(request:NSURLRequest, completionHandler:WKDownload -> Void):Void;
+	@:hxmc.available(macos >= 11.3)
 	function resumeDownloadFromResumeData(resumeData:NSData, completionHandler:WKDownload -> Void):Void;
+	@:hxmc.available(macos >= 12.0)
 	overload function loadSimulatedRequest(request:NSURLRequest, response:NSURLResponse, responseData:NSData):WKNavigation;
 	@:selector("loadSimulatedRequest:withResponse:responseData:")
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	function loadSimulatedRequestWithResponseResponseData(request:NSURLRequest, withResponse:NSURLResponse, responseData:NSData):WKNavigation;
+	@:hxmc.available(macos >= 12.0)
 	function loadFileRequest(request:NSURLRequest, allowingReadAccessToURL:NSURL):WKNavigation;
+	@:hxmc.available(macos >= 12.0)
 	overload function loadSimulatedRequest(request:NSURLRequest, responseHTMLString:NSStringArg):WKNavigation;
 	@:selector("loadSimulatedRequest:withResponseHTMLString:")
 	@:deprecated
+	@:hxmc.available(macos >= 12.0)
 	function loadSimulatedRequestWithResponseHTMLString(request:NSURLRequest, withResponseHTMLString:NSStringArg):WKNavigation;
+	@:hxmc.available(ios >= 15.5, maccatalyst >= 15.5)
 	function setMinimumViewportInset(minimumViewportInset:UIEdgeInsets, maximumViewportInset:UIEdgeInsets):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function fetchDataOfTypes(dataTypes:WKWebViewDataType, completionHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function restoreData(data:NSData, completionHandler:Null<NSError> -> Void):Void;
 	override function init():WKWebView;
 	override function initWithFrame(frame:CGRect):WKWebView;

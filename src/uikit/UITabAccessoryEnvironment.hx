@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UITabAccessoryEnvironment(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Unspecified = 0;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var None = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Regular = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Inline = 3;
 	inline function new(v:I64) this = v;
 }

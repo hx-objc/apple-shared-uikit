@@ -9,13 +9,21 @@ import objc.NSObject;
 	static function alloc():NEAppProxyFlow;
 	var metaData(get, never) : NEFlowMetaData;
 	function get_metaData():NEFlowMetaData;
+	@:hxmc.available(macos >= version("10.15.4"))
 	var networkInterface(get, set) : Null<NSObject>;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function get_networkInterface():Null<NSObject>;
+	@:hxmc.available(macos >= version("10.15.4"))
 	function set_networkInterface(v:Null<NSObject>):Null<NSObject>;
+	@:hxmc.available(macos >= 11.0)
 	var remoteHostname(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.0)
 	function get_remoteHostname():Null<NSStringArg>;
+	@:hxmc.available(macos >= 11.1)
 	var isBound(get, never) : Bool;
+	@:hxmc.available(macos >= 11.1)
 	function get_isBound():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function openWithLocalFlowEndpoint(localEndpoint:Null<NSObject>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
 	function openWithLocalEndpoint(localEndpoint:Null<NWHostEndpoint>, completionHandler:Null<NSError> -> Void):Void;

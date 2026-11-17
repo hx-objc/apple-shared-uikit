@@ -21,8 +21,10 @@ import hxmc.unsafe.Ptr;
 @:hxmc.framework("UIKit") @:hxmc.objc extern class NSTextStorage extends NSMutableAttributedString {
 	static function alloc():NSTextStorage;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static function attributedStringWithAdaptiveImageGlyph(adaptiveImageGlyph:NSAdaptiveImageGlyph, attributes:NSDictionary<NSString, Id>):NSTextStorage;
 	@:hxmc.framework("UIKit")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	static overload function attributedStringWithAttachment(attachment:NSTextAttachment, attributes:NSDictionary<NSString, Id>):NSTextStorage;
 	@:hxmc.framework("UIKit")
 	static function objectWithItemProviderData(data:NSData, typeIdentifier:NSStringArg, error:Ptr):Null<NSTextStorage>;
@@ -37,8 +39,11 @@ import hxmc.unsafe.Ptr;
 	function set_delegate(v:Null<NSTextStorageDelegate>):Null<NSTextStorageDelegate>;
 	var fixesAttributesLazily(get, never) : Bool;
 	function get_fixesAttributesLazily():Bool;
+	@:hxmc.available(macos >= 12.0)
 	var textStorageObserver(get, set) : Null<NSTextStorageObserving>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textStorageObserver():Null<NSTextStorageObserving>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textStorageObserver(v:Null<NSTextStorageObserving>):Null<NSTextStorageObserving>;
 	var layoutManagers(get, never) : NSArray<NSLayoutManager>;
 	function get_layoutManagers():NSArray<NSLayoutManager>;
@@ -53,15 +58,20 @@ import hxmc.unsafe.Ptr;
 	override function initWithCoder(coder:NSCoder):Null<NSTextStorage>;
 	override function init():NSTextStorage;
 	override function initWithAttributedString(attrStr:NSAttributedString):NSTextStorage;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithContentsOfMarkdownFileAtURL(markdownFile:NSURL, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSTextStorage>;
 	@:hxmc.framework("UIKit")
 	override function initWithData(data:NSData, options:NSDictionary<NSString, Id>, documentAttributes:Ptr, error:Ptr):Null<NSTextStorage>;
 	@:hxmc.framework("UIKit")
 	@:deprecated
 	override function initWithFileURL(url:NSURL, options:NSDictionary, documentAttributes:Ptr, error:Ptr):Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	override overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, arguments:Ptr):NSTextStorage;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override overload function initWithFormat(format:NSAttributedString, options:NSAttributedStringFormattingOptions, locale:Null<NSLocale>, context:NSDictionary<NSString, Id>, arguments:Ptr):NSTextStorage;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithMarkdown(markdown:NSData, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	override function initWithMarkdownString(markdownString:NSStringArg, options:Null<NSAttributedStringMarkdownParsingOptions>, baseURL:Null<NSURL>, error:Ptr):Null<NSTextStorage>;
 	override overload function initWithString(str:NSStringArg):NSTextStorage;
 	override overload function initWithString(str:NSStringArg, attributes:Null<NSDictionary<NSString, Id>>):NSTextStorage;

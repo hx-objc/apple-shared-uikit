@@ -4,11 +4,17 @@ package corelocation;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("CoreLocation") @:hxmc.objc extern class CLServiceSession extends NSObject {
+@:hxmc.framework("CoreLocation") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class CLServiceSession extends NSObject {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():CLServiceSession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function sessionRequiringAuthorization(authorizationRequirement:CLServiceSessionAuthorizationRequirement):CLServiceSession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function sessionRequiringAuthorization(authorizationRequirement:CLServiceSessionAuthorizationRequirement, queue:NSObject, handler:CLServiceSessionDiagnostic -> Void):CLServiceSession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function sessionRequiringAuthorization(authorizationRequirement:CLServiceSessionAuthorizationRequirement, fullAccuracyPurposeKey:NSStringArg):CLServiceSession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static overload function sessionRequiringAuthorization(authorizationRequirement:CLServiceSessionAuthorizationRequirement, fullAccuracyPurposeKey:NSStringArg, queue:NSObject, handler:CLServiceSessionDiagnostic -> Void):CLServiceSession;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function invalidate():Void;
 }

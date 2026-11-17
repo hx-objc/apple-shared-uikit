@@ -4,13 +4,21 @@ package uikit;
 import foundation.NSArray;
 import foundation.NSDateComponents;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarSelectionMultiDate extends UICalendarSelection {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UICalendarSelectionMultiDate extends UICalendarSelection {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UICalendarSelectionMultiDate;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var selectedDates(get, set) : NSArray<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_selectedDates():NSArray<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_selectedDates(v:NSArray<NSDateComponents>):NSArray<NSDateComponents>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, never) : Null<UICalendarSelectionMultiDateDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<UICalendarSelectionMultiDateDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setSelectedDates(selectedDates:NSArray<NSDateComponents>, animated:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithDelegate(delegate:Null<UICalendarSelectionMultiDateDelegate>):UICalendarSelectionMultiDate;
 }

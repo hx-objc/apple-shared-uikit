@@ -6,11 +6,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INMediaItemResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INMediaItemResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INMediaItemResolutionResult;
 	static function successWithResolvedMediaItem(resolvedMediaItem:INMediaItem):INMediaItemResolutionResult;
 	static function successesWithResolvedMediaItems(resolvedMediaItems:NSArray<INMediaItem>):NSArray<INMediaItemResolutionResult>;

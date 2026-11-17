@@ -49,13 +49,18 @@ import objc.NSObject;
 	var strokeOutset(get, set) : Float;
 	function get_strokeOutset():Float;
 	function set_strokeOutset(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var shadowProperties(get, never) : UIShadowProperties;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_shadowProperties():UIShadowProperties;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	static function clearConfiguration():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function listCellConfiguration():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function listHeaderConfiguration():UIBackgroundConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function listFooterConfiguration():UIBackgroundConfiguration;
 	static function listAccompaniedSidebarCellConfiguration():UIBackgroundConfiguration;
 	function updatedConfigurationForState(state:UIConfigurationState):UIBackgroundConfiguration;

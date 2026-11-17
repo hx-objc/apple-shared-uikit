@@ -17,50 +17,85 @@ import hxmc.unsafe.Ptr;
 	var videoMinFrameDurationOverride(get, set) : CMTime;
 	function get_videoMinFrameDurationOverride():CMTime;
 	function set_videoMinFrameDurationOverride(v:CMTime):CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var lockedVideoFrameDurationSupported(get, never) : Bool;
 	@:selector("isLockedVideoFrameDurationSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_lockedVideoFrameDurationSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activeLockedVideoFrameDuration(get, set) : CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activeLockedVideoFrameDuration():CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_activeLockedVideoFrameDuration(v:CMTime):CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var externalSyncSupported(get, never) : Bool;
 	@:selector("isExternalSyncSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_externalSyncSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var activeExternalSyncVideoFrameDuration(get, never) : CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_activeExternalSyncVideoFrameDuration():CMTime;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var externalSyncDevice(get, never) : Null<AVExternalSyncDevice>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_externalSyncDevice():Null<AVExternalSyncDevice>;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var multichannelAudioMode(get, set) : AVCaptureMultichannelAudioMode;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_multichannelAudioMode():AVCaptureMultichannelAudioMode;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_multichannelAudioMode(v:AVCaptureMultichannelAudioMode):AVCaptureMultichannelAudioMode;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var windNoiseRemovalSupported(get, never) : Bool;
 	@:selector("isWindNoiseRemovalSupported")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_windNoiseRemovalSupported():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	var windNoiseRemovalEnabled(get, set) : Bool;
 	@:selector("isWindNoiseRemovalEnabled")
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function get_windNoiseRemovalEnabled():Bool;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function set_windNoiseRemovalEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var audioZoomSupported(get, never) : Bool;
 	@:selector("isAudioZoomSupported")
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_audioZoomSupported():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var audioZoomEnabled(get, set) : Bool;
 	@:selector("isAudioZoomEnabled")
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_audioZoomEnabled():Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function set_audioZoomEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cinematicVideoCaptureSupported(get, never) : Bool;
 	@:selector("isCinematicVideoCaptureSupported")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cinematicVideoCaptureSupported():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var cinematicVideoCaptureEnabled(get, set) : Bool;
 	@:selector("isCinematicVideoCaptureEnabled")
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_cinematicVideoCaptureEnabled():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_cinematicVideoCaptureEnabled(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var simulatedAperture(get, set) : Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_simulatedAperture():Float32;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function set_simulatedAperture(v:Float32):Float32;
 	static function deviceInputWithDevice(device:AVCaptureDevice, error:Ptr):Null<AVCaptureDeviceInput>;
 	function initWithDevice(device:AVCaptureDevice, error:Ptr):Null<AVCaptureDeviceInput>;
 	function portsWithMediaType(mediaType:Null<NSStringArg>, sourceDeviceType:Null<NSStringArg>, sourceDevicePosition:AVCaptureDevicePosition):NSArray<AVCaptureInputPort>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function followExternalSyncDevice(externalSyncDevice:AVExternalSyncDevice, videoFrameDuration:CMTime, delegate:Null<AVExternalSyncDeviceDelegate>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function unfollowExternalSyncDevice():Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function isMultichannelAudioModeSupported(multichannelAudioMode:AVCaptureMultichannelAudioMode):Bool;
 }

@@ -4,8 +4,11 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UISceneCaptureState(I64) to I64 {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Unspecified = -1;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Inactive = 0;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var Active = 1;
 	inline function new(v:I64) this = v;
 }

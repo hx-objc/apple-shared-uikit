@@ -43,6 +43,7 @@ import objc.NSObject;
 	function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<NSLayoutConstraint>;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UILayoutGuide>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 	override function init():UILayoutGuide;
 }

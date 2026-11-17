@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIColorProminence(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Primary = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Secondary = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Tertiary = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Quaternary = 3;
 	inline function new(v:I64) this = v;
 }

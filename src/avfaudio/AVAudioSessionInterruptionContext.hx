@@ -3,8 +3,11 @@ package avfaudio;
 
 import objc.NSObject;
 
-@:hxmc.framework("AVFAudio") @:hxmc.objc extern class AVAudioSessionInterruptionContext extends NSObject {
+@:hxmc.framework("AVFAudio") @:hxmc.objc @:hxmc.available(ios >= 27.0, maccatalyst >= 27.0) extern class AVAudioSessionInterruptionContext extends NSObject {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	static function alloc():AVAudioSessionInterruptionContext;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var reason(get, never) : AVAudioSessionInterruptionReason;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	function get_reason():AVAudioSessionInterruptionReason;
 }

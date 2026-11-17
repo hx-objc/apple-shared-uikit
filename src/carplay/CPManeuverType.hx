@@ -4,59 +4,113 @@ package carplay;
 import hxmc.I64;
 
 enum abstract CPManeuverType(I64) to I64 {
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var NoTurn = 0;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var LeftTurn = 1;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RightTurn = 2;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var StraightAhead = 3;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var UTurn = 4;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var FollowRoad = 5;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var EnterRoundabout = 6;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ExitRoundabout = 7;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OffRamp = 8;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var OnRamp = 9;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ArriveEndOfNavigation = 10;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var StartRoute = 11;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ArriveAtDestination = 12;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var KeepLeft = 13;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var KeepRight = 14;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var Enter_Ferry = 15;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ExitFerry = 16;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ChangeFerry = 17;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var StartRouteWithUTurn = 18;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var UTurnAtRoundabout = 19;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var LeftTurnAtEnd = 20;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RightTurnAtEnd = 21;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var HighwayOffRampLeft = 22;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var HighwayOffRampRight = 23;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ArriveAtDestinationLeft = 24;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ArriveAtDestinationRight = 25;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var UTurnWhenPossible = 26;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ArriveEndOfDirections = 27;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit1 = 28;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit2 = 29;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit3 = 30;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit4 = 31;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit5 = 32;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit6 = 33;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit7 = 34;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit8 = 35;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit9 = 36;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit10 = 37;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit11 = 38;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit12 = 39;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit13 = 40;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit14 = 41;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit15 = 42;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit16 = 43;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit17 = 44;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit18 = 45;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var RoundaboutExit19 = 46;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SharpLeftTurn = 47;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SharpRightTurn = 48;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SlightLeftTurn = 49;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var SlightRightTurn = 50;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ChangeHighway = 51;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ChangeHighwayLeft = 52;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	var ChangeHighwayRight = 53;
 	inline function new(v:I64) this = v;
 }

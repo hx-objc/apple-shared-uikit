@@ -4,6 +4,7 @@ package uikit;
 import coregraphics.CGRect;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIPopoverPresentationControllerSourceItem") extern interface UIPopoverPresentationControllerSourceItem extends NSObjectProtocol {
+@:hxmc.objc("UIPopoverPresentationControllerSourceItem") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UIPopoverPresentationControllerSourceItem extends NSObjectProtocol {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function frameInView(referenceView:UIView):CGRect;
 }

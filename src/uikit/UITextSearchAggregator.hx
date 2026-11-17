@@ -6,11 +6,17 @@ import foundation.NSOrderedSet;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UITextSearchAggregator") extern interface UITextSearchAggregator extends NSObjectProtocol {
+@:hxmc.objc("UITextSearchAggregator") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UITextSearchAggregator extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var allFoundRanges(get, never) : NSOrderedSet<UITextRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_allFoundRanges():NSOrderedSet<UITextRange>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function foundRange(range:UITextRange, forSearchString:NSStringArg, inDocument:Null<NSCopying>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function invalidateFoundRange(range:UITextRange, inDocument:Null<NSCopying>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function invalidate():Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function finishedSearching():Void;
 }

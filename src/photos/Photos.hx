@@ -18,6 +18,7 @@ import foundation.NSString;
 	public static final PHLivePhotoInfoErrorKey : NSString;
 	public static final PHLivePhotoInfoIsDegradedKey : NSString;
 	public static final PHLivePhotoShouldRenderAtPlaybackTime : NSString;
+	@:hxmc.available(macos >= 12)
 	public static final PHLocalIdentifiersErrorKey : NSString;
 	public static final PHPhotosErrorDomain : NSString;
 }

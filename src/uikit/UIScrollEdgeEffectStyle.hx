@@ -3,12 +3,19 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIScrollEdgeEffectStyle extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class UIScrollEdgeEffectStyle extends NSObject {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var automaticStyle(get, never) : UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_automaticStyle():UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var softStyle(get, never) : UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_softStyle():UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static var hardStyle(get, never) : UIScrollEdgeEffectStyle;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function get_hardStyle():UIScrollEdgeEffectStyle;
 }

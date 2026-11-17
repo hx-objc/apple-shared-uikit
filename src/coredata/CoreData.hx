@@ -11,6 +11,7 @@ import hxmc.objc.Id;
 	public static final NSBinaryStoreInsecureDecodingCompatibilityOption : NSString;
 	public static final NSBinaryStoreSecureDecodingClasses : NSString;
 	public static final NSBinaryStoreType : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSCoreDataCoreSpotlightDelegateIndexDidUpdateNotification : NSString;
 	public static final NSCoreDataCoreSpotlightExporter : NSString;
 	public static var NSCoreDataVersionNumber : Float;
@@ -42,7 +43,9 @@ import hxmc.objc.Id;
 	public static final NSMigrationPropertyMappingKey : NSString;
 	public static final NSMigrationSourceObjectKey : NSString;
 	public static final NSOverwriteMergePolicy : Id;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSPersistentCloudKitContainerEventChangedNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSPersistentCloudKitContainerEventUserInfoKey : NSString;
 	public static final NSPersistentHistoryTokenKey : NSString;
 	public static final NSPersistentHistoryTrackingKey : NSString;
@@ -50,11 +53,13 @@ import hxmc.objc.Id;
 	public static final NSPersistentStoreCoordinatorStoresDidChangeNotification : NSString;
 	public static final NSPersistentStoreCoordinatorStoresWillChangeNotification : NSString;
 	public static final NSPersistentStoreCoordinatorWillRemoveStoreNotification : NSString;
+	@:hxmc.available(macos >= 11.0)
 	public static final NSPersistentStoreDeferredLightweightMigrationOptionKey : NSString;
 	@:deprecated
 	public static final NSPersistentStoreDidImportUbiquitousContentChangesNotification : NSString;
 	public static final NSPersistentStoreFileProtectionKey : NSString;
 	public static final NSPersistentStoreForceDestroyOption : NSString;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	public static final NSPersistentStoreModelVersionChecksumKey : NSString;
 	public static final NSPersistentStoreOSCompatibility : NSString;
 	@:deprecated
@@ -64,6 +69,7 @@ import hxmc.objc.Id;
 	@:deprecated
 	public static final NSPersistentStoreRemoveUbiquitousMetadataOption : NSString;
 	public static final NSPersistentStoreSaveConflictsErrorKey : NSString;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	public static final NSPersistentStoreStagedMigrationManagerOptionKey : NSString;
 	public static final NSPersistentStoreTimeoutOption : NSString;
 	public static final NSPersistentStoreURLKey : NSString;

@@ -4,9 +4,13 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueVolumeControlType(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var None = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Relative = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var RelativeWithCurrent = 2;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Absolute = 3;
 	inline function new(v:I64) this = v;
 }

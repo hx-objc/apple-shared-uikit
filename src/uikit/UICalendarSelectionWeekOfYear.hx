@@ -3,13 +3,21 @@ package uikit;
 
 import foundation.NSDateComponents;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UICalendarSelectionWeekOfYear extends UICalendarSelection {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UICalendarSelectionWeekOfYear extends UICalendarSelection {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UICalendarSelectionWeekOfYear;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var selectedWeekOfYear(get, set) : Null<NSDateComponents>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_selectedWeekOfYear():Null<NSDateComponents>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_selectedWeekOfYear(v:Null<NSDateComponents>):Null<NSDateComponents>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var delegate(get, never) : Null<UICalendarSelectionWeekOfYearDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_delegate():Null<UICalendarSelectionWeekOfYearDelegate>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function setSelectedWeekOfYear(selectedWeekOfYear:Null<NSDateComponents>, animated:Bool):Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function initWithDelegate(delegate:Null<UICalendarSelectionWeekOfYearDelegate>):UICalendarSelectionWeekOfYear;
 }

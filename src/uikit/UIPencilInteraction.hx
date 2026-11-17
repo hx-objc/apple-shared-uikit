@@ -7,11 +7,15 @@ import objc.NSObject;
 	static function alloc():UIPencilInteraction;
 	static var preferredTapAction(get, never) : UIPencilPreferredAction;
 	static function get_preferredTapAction():UIPencilPreferredAction;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static var preferredSqueezeAction(get, never) : UIPencilPreferredAction;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function get_preferredSqueezeAction():UIPencilPreferredAction;
 	static var prefersPencilOnlyDrawing(get, never) : Bool;
 	static function get_prefersPencilOnlyDrawing():Bool;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static var prefersHoverToolPreview(get, never) : Bool;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	static function get_prefersHoverToolPreview():Bool;
 	var delegate(get, set) : Null<UIPencilInteractionDelegate>;
 	function get_delegate():Null<UIPencilInteractionDelegate>;
@@ -22,6 +26,7 @@ import objc.NSObject;
 	function set_enabled(v:Bool):Bool;
 	var view(get, never) : Null<UIView>;
 	function get_view():Null<UIView>;
+	@:hxmc.available(ios >= 17.5, maccatalyst >= 17.5)
 	function initWithDelegate(delegate:UIPencilInteractionDelegate):UIPencilInteraction;
 	function willMoveToView(view:Null<UIView>):Void;
 	function didMoveToView(view:Null<UIView>):Void;

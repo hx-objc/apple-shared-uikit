@@ -12,8 +12,10 @@ import hxmc.I64;
 	var recording(get, never) : Bool;
 	@:selector("isRecording")
 	function get_recording():Bool;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var recordingPaused(get, never) : Bool;
 	@:selector("isRecordingPaused")
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_recordingPaused():Bool;
 	var recordedDuration(get, never) : CMTime;
 	function get_recordedDuration():CMTime;
@@ -30,6 +32,8 @@ import hxmc.I64;
 	function set_minFreeDiskSpaceLimit(v:I64):I64;
 	function startRecordingToOutputFileURL(outputFileURL:NSURL, recordingDelegate:AVCaptureFileOutputRecordingDelegate):Void;
 	function stopRecording():Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function pauseRecording():Void;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function resumeRecording():Void;
 }

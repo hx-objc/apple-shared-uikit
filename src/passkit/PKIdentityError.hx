@@ -4,14 +4,23 @@ package passkit;
 import hxmc.I64;
 
 enum abstract PKIdentityError(I64) to I64 {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Unknown = 0;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var NotSupported = 1;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var Cancelled = 2;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var NetworkUnavailable = 3;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var NoElementsRequested = 4;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var RequestAlreadyInProgress = 5;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var InvalidNonce = 6;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var InvalidElement = 7;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var RegionNotSupported = 8;
 	inline function new(v:I64) this = v;
 }

@@ -16,5 +16,6 @@ import objc.NSObject;
 	function get_previewProvider():Null<() -> Null<UIDragPreview>>;
 	function set_previewProvider(v:Null<() -> Null<UIDragPreview>>):Null<() -> Null<UIDragPreview>>;
 	function initWithItemProvider(itemProvider:NSItemProvider):UIDragItem;
+	@:hxmc.available(ios >= 17.4, maccatalyst >= 17.4)
 	function setNeedsDropPreviewUpdate():Void;
 }

@@ -11,35 +11,65 @@ import foundation.NSURL;
 import objc.NSObject;
 import uikit.UIImage;
 
-@:hxmc.framework("GameKit") @:hxmc.objc extern class GKGameActivityDefinition extends NSObject {
+@:hxmc.framework("GameKit") @:hxmc.objc @:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0) extern class GKGameActivityDefinition extends NSObject {
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():GKGameActivityDefinition;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var identifier(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_identifier():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var groupIdentifier(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_groupIdentifier():Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var title(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_title():NSStringArg;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var details(get, never) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_details():Null<NSStringArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var defaultProperties(get, never) : NSDictionary<NSString, NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_defaultProperties():NSDictionary<NSString, NSString>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var fallbackURL(get, never) : Null<NSURL>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_fallbackURL():Null<NSURL>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var supportsPartyCode(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_supportsPartyCode():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var maxPlayers(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_maxPlayers():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var minPlayers(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_minPlayers():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var supportsUnlimitedPlayers(get, never) : Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_supportsUnlimitedPlayers():Bool;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var playStyle(get, never) : GKGameActivityPlayStyle;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_playStyle():GKGameActivityPlayStyle;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var releaseState(get, never) : GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_releaseState():GKReleaseState;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function loadAchievementDescriptionsWithCompletionHandler(completionHandler:(Null<NSArray<GKAchievementDescription>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function loadLeaderboardsWithCompletionHandler(completionHandler:(Null<NSArray<GKLeaderboard>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function loadImageWithCompletionHandler(completionHandler:(Null<UIImage>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function loadGameActivityDefinitionsWithCompletionHandler(completionHandler:(Null<NSArray<GKGameActivityDefinition>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	static function loadGameActivityDefinitionsWithIDs(activityDefinitionIDs:Null<NSArray<NSString>>, completionHandler:(Null<NSArray<GKGameActivityDefinition>>, Null<NSError>) -> Void):Void;
 }

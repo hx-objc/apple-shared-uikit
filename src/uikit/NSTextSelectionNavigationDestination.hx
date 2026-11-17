@@ -4,12 +4,19 @@ package uikit;
 import hxmc.I64;
 
 enum abstract NSTextSelectionNavigationDestination(I64) to I64 {
+	@:hxmc.available(macos >= 12.0)
 	var Character = 0;
+	@:hxmc.available(macos >= 12.0)
 	var Word = 1;
+	@:hxmc.available(macos >= 12.0)
 	var Line = 2;
+	@:hxmc.available(macos >= 12.0)
 	var Sentence = 3;
+	@:hxmc.available(macos >= 12.0)
 	var Paragraph = 4;
+	@:hxmc.available(macos >= 12.0)
 	var Container = 5;
+	@:hxmc.available(macos >= 12.0)
 	var Document = 6;
 	inline function new(v:I64) this = v;
 }

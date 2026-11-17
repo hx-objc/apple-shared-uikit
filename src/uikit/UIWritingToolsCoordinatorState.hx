@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UIWritingToolsCoordinatorState(I64) to I64 {
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Inactive = 0;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var Noninteractive = 1;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var InteractiveResting = 2;
+	@:hxmc.available(ios >= 18.2, maccatalyst >= 18.2)
 	var InteractiveStreaming = 3;
 	inline function new(v:I64) this = v;
 }

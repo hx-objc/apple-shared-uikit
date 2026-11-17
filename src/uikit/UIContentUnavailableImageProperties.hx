@@ -9,27 +9,44 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIContentUnavailableImageProperties extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UIContentUnavailableImageProperties extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UIContentUnavailableImageProperties;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var preferredSymbolConfiguration(get, set) : Null<UIImageSymbolConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredSymbolConfiguration():Null<UIImageSymbolConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredSymbolConfiguration(v:Null<UIImageSymbolConfiguration>):Null<UIImageSymbolConfiguration>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var tintColor(get, set) : Null<UIColor>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_tintColor():Null<UIColor>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_tintColor(v:Null<UIColor>):Null<UIColor>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var cornerRadius(get, set) : Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_cornerRadius():Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_cornerRadius(v:Float):Float;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var maximumSize(get, set) : CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_maximumSize():CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_maximumSize(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var accessibilityIgnoresInvertColors(get, set) : Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_accessibilityIgnoresInvertColors():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_accessibilityIgnoresInvertColors(v:Bool):Bool;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIContentUnavailableImageProperties>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	override function init():UIContentUnavailableImageProperties;
 }

@@ -5,11 +5,17 @@ import hxmc.I64;
 import hxmc.objc.Id;
 
 @:hxmc.framework("Intents") @:hxmc.objc @:deprecated extern class INVisualCodeTypeResolutionResult extends INIntentResolutionResult {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INVisualCodeTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function confirmationRequiredWithItemToConfirm(itemToConfirm:Id, forReason:I64):INVisualCodeTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function needsValue():INVisualCodeTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function notRequired():INVisualCodeTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupported():INVisualCodeTypeResolutionResult;
+	@:hxmc.available(macos >= 11.0)
 	static function unsupportedWithReason(reason:I64):INVisualCodeTypeResolutionResult;
 	static function successWithResolvedVisualCodeType(resolvedVisualCodeType:INVisualCodeType):INVisualCodeTypeResolutionResult;
 	static function confirmationRequiredWithVisualCodeTypeToConfirm(visualCodeTypeToConfirm:INVisualCodeType):INVisualCodeTypeResolutionResult;

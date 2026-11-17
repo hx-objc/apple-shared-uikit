@@ -4,21 +4,37 @@ package avrouting;
 import foundation.NSArray;
 import objc.NSObject;
 
-@:hxmc.framework("AVRouting") @:hxmc.objc extern class AVCustomRoutingController extends NSObject {
+@:hxmc.framework("AVRouting") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVCustomRoutingController extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVCustomRoutingController;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<AVCustomRoutingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<AVCustomRoutingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<AVCustomRoutingControllerDelegate>):Null<AVCustomRoutingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var authorizedRoutes(get, never) : NSArray<AVCustomDeviceRoute>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_authorizedRoutes():NSArray<AVCustomDeviceRoute>;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	var knownRouteIPs(get, set) : NSArray<AVCustomRoutingPartialIP>;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function get_knownRouteIPs():NSArray<AVCustomRoutingPartialIP>;
+	@:hxmc.available(ios >= 16.1, maccatalyst >= 16.1)
 	function set_knownRouteIPs(v:NSArray<AVCustomRoutingPartialIP>):NSArray<AVCustomRoutingPartialIP>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var customActionItems(get, set) : NSArray<AVCustomRoutingActionItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_customActionItems():NSArray<AVCustomRoutingActionItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_customActionItems(v:NSArray<AVCustomRoutingActionItem>):NSArray<AVCustomRoutingActionItem>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function invalidateAuthorizationForRoute(route:AVCustomDeviceRoute):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setActive(active:Bool, forRoute:AVCustomDeviceRoute):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function isRouteActive(route:AVCustomDeviceRoute):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():AVCustomRoutingController;
 }

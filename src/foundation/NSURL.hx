@@ -94,7 +94,9 @@ import uniformtypeidentifiers.UTType;
 	overload function initWithString(URLString:NSStringArg, relativeToURL:Null<NSURL>):Null<NSURL>;
 	static overload function URLWithString(URLString:NSStringArg):Null<NSURL>;
 	static overload function URLWithString(URLString:NSStringArg, relativeToURL:Null<NSURL>):Null<NSURL>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	overload function initWithString(URLString:NSStringArg, encodingInvalidCharacters:Bool):Null<NSURL>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static overload function URLWithString(URLString:NSStringArg, encodingInvalidCharacters:Bool):Null<NSURL>;
 	function initWithDataRepresentation(data:NSData, relativeToURL:Null<NSURL>):NSURL;
 	static function URLWithDataRepresentation(data:NSData, relativeToURL:Null<NSURL>):NSURL;
@@ -128,8 +130,10 @@ import uniformtypeidentifiers.UTType;
 	function URLByAppendingPathExtension(pathExtension:NSStringArg):Null<NSURL>;
 	function checkResourceIsReachableAndReturnError(error:Ptr):Bool;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 11.0)
 	overload function URLByAppendingPathComponent(partialName:NSStringArg, conformingToType:UTType):NSURL;
 	@:hxmc.framework("UniformTypeIdentifiers")
+	@:hxmc.available(macos >= 11.0)
 	function URLByAppendingPathExtensionForType(contentType:UTType):NSURL;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<NSURL>;

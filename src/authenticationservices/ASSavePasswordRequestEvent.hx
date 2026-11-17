@@ -4,8 +4,11 @@ package authenticationservices;
 import hxmc.I64;
 
 enum abstract ASSavePasswordRequestEvent(I64) to I64 {
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var UserInitiated = 0;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var FormDidDisappear = 1;
+	@:hxmc.available(ios >= 26.2, maccatalyst >= 26.2)
 	var GeneratedPasswordFilled = 2;
 	inline function new(v:I64) this = v;
 }

@@ -3,10 +3,14 @@ package uikit;
 
 import uiutilities.UICoordinateSpace;
 
-@:hxmc.objc("UITextCursorView") extern interface UITextCursorView extends UICoordinateSpace {
+@:hxmc.objc("UITextCursorView") @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern interface UITextCursorView extends UICoordinateSpace {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var blinking(get, set) : Bool;
 	@:selector("isBlinking")
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_blinking():Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function set_blinking(v:Bool):Bool;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function resetBlinkAnimation():Void;
 }

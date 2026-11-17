@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSUserActivity;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSetMessageAttributeIntentResponse extends INIntentResponse {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSetMessageAttributeIntentResponse;
 	var code(get, never) : INSetMessageAttributeIntentResponseCode;
 	function get_code():INSetMessageAttributeIntentResponseCode;

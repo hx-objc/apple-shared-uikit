@@ -4,9 +4,13 @@ package uikit;
 import hxmc.I64;
 
 enum abstract UISheetPresentationControllerPlacement(I64) to I64 {
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Automatic = 0;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Leading = 1;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Center = 2;
+	@:hxmc.available(ios >= 27.0, maccatalyst >= 27.0)
 	var Trailing = 3;
 	inline function new(v:I64) this = v;
 }

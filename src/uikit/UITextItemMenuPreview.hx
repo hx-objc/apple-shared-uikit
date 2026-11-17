@@ -3,8 +3,11 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UITextItemMenuPreview extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class UITextItemMenuPreview extends NSObject {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():UITextItemMenuPreview;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function defaultPreview():UITextItemMenuPreview;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function initWithView(view:UIView):UITextItemMenuPreview;
 }

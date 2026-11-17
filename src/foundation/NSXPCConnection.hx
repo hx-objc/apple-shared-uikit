@@ -40,6 +40,7 @@ import objc.NSObject;
 	function synchronousRemoteObjectProxyWithErrorHandler(handler:NSError -> Void):Id;
 	function resume():Void;
 	function suspend():Void;
+	@:hxmc.available(macos >= 11.0)
 	function activate():Void;
 	function invalidate():Void;
 	static function currentConnection():Null<NSXPCConnection>;

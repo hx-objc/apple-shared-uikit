@@ -3,14 +3,21 @@ package uikit;
 
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISceneWindowingBehaviors extends NSObject {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class UISceneWindowingBehaviors extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():UISceneWindowingBehaviors;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var closable(get, set) : Bool;
 	@:selector("isClosable")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_closable():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_closable(v:Bool):Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var miniaturizable(get, set) : Bool;
 	@:selector("isMiniaturizable")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_miniaturizable():Bool;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_miniaturizable(v:Bool):Bool;
 }

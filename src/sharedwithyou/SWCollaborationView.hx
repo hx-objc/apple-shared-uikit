@@ -12,46 +12,87 @@ import uikit.UIImage;
 import uikit.UITraitCollection;
 import uikit.UIView;
 
-@:hxmc.framework("SharedWithYou") @:hxmc.objc extern class SWCollaborationView extends UIView {
+@:hxmc.framework("SharedWithYou") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class SWCollaborationView extends UIView {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearance():SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static overload function appearanceForTraitCollection(trait:UITraitCollection):SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cloudSharingDelegate(get, set) : Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cloudSharingDelegate():Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cloudSharingDelegate(v:Null<UICloudSharingControllerDelegate>):Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var activeParticipantCount(get, set) : I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_activeParticipantCount():I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_activeParticipantCount(v:I64):I64;
+	@:hxmc.available(macos >= 27.2, ios >= 27.2, maccatalyst >= 27.2)
 	var showsParticipantCount(get, set) : Bool;
+	@:hxmc.available(macos >= 27.2, ios >= 27.2, maccatalyst >= 27.2)
 	function get_showsParticipantCount():Bool;
+	@:hxmc.available(macos >= 27.2, ios >= 27.2, maccatalyst >= 27.2)
 	function set_showsParticipantCount(v:Bool):Bool;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var pendingAccessRequestsCount(get, set) : I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function get_pendingAccessRequestsCount():I64;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	function set_pendingAccessRequestsCount(v:I64):I64;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var delegate(get, set) : Null<SWCollaborationViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_delegate():Null<SWCollaborationViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_delegate(v:Null<SWCollaborationViewDelegate>):Null<SWCollaborationViewDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var headerTitle(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_headerTitle():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_headerTitle(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var headerSubtitle(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_headerSubtitle():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_headerSubtitle(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var headerImage(get, set) : UIImage;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_headerImage():UIImage;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_headerImage(v:UIImage):UIImage;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var cloudSharingControllerDelegate(get, set) : Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_cloudSharingControllerDelegate():Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_cloudSharingControllerDelegate(v:Null<UICloudSharingControllerDelegate>):Null<UICloudSharingControllerDelegate>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var manageButtonTitle(get, set) : NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_manageButtonTitle():NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function set_manageButtonTitle(v:NSStringArg):NSStringArg;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setContentView(detailViewListContentView:UIView):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithItemProvider(itemProvider:NSItemProvider):SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function dismissPopover(completion:Null<() -> Void>):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function setShowManageButton(showManageButton:Bool):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function init():SWCollaborationView;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithCoder(coder:NSCoder):Null<SWCollaborationView>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	override function initWithFrame(frame:CGRect):SWCollaborationView;
 }

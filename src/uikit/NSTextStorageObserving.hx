@@ -5,10 +5,15 @@ import foundation.NSRange;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextStorageObserving") extern interface NSTextStorageObserving extends NSObjectProtocol {
+@:hxmc.objc("NSTextStorageObserving") @:hxmc.available(macos >= 12.0) extern interface NSTextStorageObserving extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	var textStorage(get, set) : Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function get_textStorage():Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function set_textStorage(v:Null<NSTextStorage>):Null<NSTextStorage>;
+	@:hxmc.available(macos >= 12.0)
 	function processEditingForTextStorage(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:NSRange, changeInLength:I64, invalidatedRange:NSRange):Void;
+	@:hxmc.available(macos >= 12.0)
 	function performEditingTransactionForTextStorage(textStorage:NSTextStorage, usingBlock:() -> Void):Void;
 }

@@ -5,6 +5,7 @@ import foundation.NSCoder;
 import foundation.NSStringArg;
 
 @:hxmc.framework("Intents") @:hxmc.objc extern class INSendPaymentIntent extends INIntent {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():INSendPaymentIntent;
 	var payee(get, never) : Null<INPerson>;
 	function get_payee():Null<INPerson>;
@@ -13,6 +14,7 @@ import foundation.NSStringArg;
 	var note(get, never) : Null<NSStringArg>;
 	function get_note():Null<NSStringArg>;
 	function initWithPayee(payee:Null<INPerson>, currencyAmount:Null<INCurrencyAmount>, note:Null<NSStringArg>):INSendPaymentIntent;
+	@:hxmc.available(macos >= 11.0)
 	override function init():INSendPaymentIntent;
 	override function initWithCoder(coder:NSCoder):Null<INSendPaymentIntent>;
 }

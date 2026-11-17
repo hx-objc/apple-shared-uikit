@@ -3,7 +3,9 @@ package uikit;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UIEditMenuInteractionAnimating") extern interface UIEditMenuInteractionAnimating extends NSObjectProtocol {
+@:hxmc.objc("UIEditMenuInteractionAnimating") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UIEditMenuInteractionAnimating extends NSObjectProtocol {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function addAnimations(animations:() -> Void):Void;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function addCompletion(completion:() -> Void):Void;
 }

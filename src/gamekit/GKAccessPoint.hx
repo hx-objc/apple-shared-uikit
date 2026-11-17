@@ -6,43 +6,78 @@ import foundation.NSStringArg;
 import objc.NSObject;
 import uikit.UIWindow;
 
-@:hxmc.framework("GameKit") @:hxmc.objc extern class GKAccessPoint extends NSObject {
+@:hxmc.framework("GameKit") @:hxmc.objc @:hxmc.available(macos >= 11.0) extern class GKAccessPoint extends NSObject {
+	@:hxmc.available(macos >= 11.0)
 	static function alloc():GKAccessPoint;
+	@:hxmc.available(macos >= 11.0)
 	static var shared(get, never) : GKAccessPoint;
+	@:hxmc.available(macos >= 11.0)
 	static function get_shared():GKAccessPoint;
+	@:hxmc.available(macos >= 11.0)
 	var active(get, set) : Bool;
 	@:selector("isActive")
+	@:hxmc.available(macos >= 11.0)
 	function get_active():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_active(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var visible(get, never) : Bool;
 	@:selector("isVisible")
+	@:hxmc.available(macos >= 11.0)
 	function get_visible():Bool;
+	@:hxmc.available(macos >= 11.0)
 	var isPresentingGameCenter(get, never) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_isPresentingGameCenter():Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 11.0)
 	var showHighlights(get, set) : Bool;
+	@:hxmc.available(macos >= 11.0)
 	function get_showHighlights():Bool;
+	@:hxmc.available(macos >= 11.0)
 	function set_showHighlights(v:Bool):Bool;
+	@:hxmc.available(macos >= 11.0)
 	var location(get, set) : GKAccessPointLocation;
+	@:hxmc.available(macos >= 11.0)
 	function get_location():GKAccessPointLocation;
+	@:hxmc.available(macos >= 11.0)
 	function set_location(v:GKAccessPointLocation):GKAccessPointLocation;
+	@:hxmc.available(macos >= 11.0)
 	var frameInScreenCoordinates(get, never) : CGRect;
+	@:hxmc.available(macos >= 11.0)
 	function get_frameInScreenCoordinates():CGRect;
+	@:hxmc.available(macos >= 11.0)
 	var parentWindow(get, set) : Null<UIWindow>;
+	@:hxmc.available(macos >= 11.0)
 	function get_parentWindow():Null<UIWindow>;
+	@:hxmc.available(macos >= 11.0)
 	function set_parentWindow(v:Null<UIWindow>):Null<UIWindow>;
+	@:hxmc.available(macos >= 11.0)
 	function triggerAccessPointWithHandler(handler:() -> Void):Void;
+	@:hxmc.available(macos >= 11.0)
 	function triggerAccessPointWithState(state:GKGameCenterViewControllerState, handler:() -> Void):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function triggerAccessPointWithAchievementID(achievementID:NSStringArg, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function triggerAccessPointWithLeaderboardSetID(leaderboardSetID:NSStringArg, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function triggerAccessPointWithLeaderboardID(leaderboardID:NSStringArg, playerScope:GKLeaderboardPlayerScope, timeScope:GKLeaderboardTimeScope, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function triggerAccessPointWithPlayer(player:GKPlayer, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointForPlayTogetherWithHandler(handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointForChallengesWithHandler(handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointWithChallengeDefinitionID(challengeDefinitionID:NSStringArg, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointWithGameActivityDefinitionID(gameActivityDefinitionID:NSStringArg, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointWithGameActivity(gameActivity:GKGameActivity, handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function triggerAccessPointForFriendingWithHandler(handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function triggerAccessPointForArcadeWithHandler(handler:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 11.0)
 	override function init():GKAccessPoint;
 }

@@ -4,8 +4,11 @@ package homekit;
 import hxmc.I64;
 
 enum abstract HMCharacteristicValueTargetMediaState(I64) to I64 {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Play = 0;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Pause = 1;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var Stop = 2;
 	inline function new(v:I64) this = v;
 }

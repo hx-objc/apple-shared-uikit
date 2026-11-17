@@ -51,15 +51,20 @@ import uiutilities.UIAxis;
 	var textToSecondaryTextVerticalPadding(get, set) : Float;
 	function get_textToSecondaryTextVerticalPadding():Float;
 	function set_textToSecondaryTextVerticalPadding(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var alpha(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_alpha():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_alpha(v:Float):Float;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	static function cellConfiguration():UIListContentConfiguration;
 	static function subtitleCellConfiguration():UIListContentConfiguration;
 	static function valueCellConfiguration():UIListContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function headerConfiguration():UIListContentConfiguration;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function footerConfiguration():UIListContentConfiguration;
 	static function prominentInsetGroupedHeaderConfiguration():UIListContentConfiguration;
 	static function extraProminentInsetGroupedHeaderConfiguration():UIListContentConfiguration;

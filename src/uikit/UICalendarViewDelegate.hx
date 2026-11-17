@@ -4,11 +4,13 @@ package uikit;
 import foundation.NSDateComponents;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("UICalendarViewDelegate") extern interface UICalendarViewDelegate extends NSObjectProtocol {
+@:hxmc.objc("UICalendarViewDelegate") @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern interface UICalendarViewDelegate extends NSObjectProtocol {
 	@:selector("calendarView:decorationForDateComponents:")
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	@:optional
 	function calendarViewDecorationForDateComponents(calendarView:UICalendarView, decorationForDateComponents:NSDateComponents):Null<UICalendarViewDecoration>;
 	@:selector("calendarView:didChangeVisibleDateComponentsFrom:")
+	@:hxmc.available(ios >= 16.2, maccatalyst >= 16.2)
 	@:optional
 	function calendarViewDidChangeVisibleDateComponentsFrom(calendarView:UICalendarView, didChangeVisibleDateComponentsFrom:NSDateComponents):Void;
 }

@@ -5,13 +5,20 @@ import _locationessentials.CLLocationCoordinate2D;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapFeatureAnnotation extends NSObject implements MKAnnotation {
+@:hxmc.framework("MapKit") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class MKMapFeatureAnnotation extends NSObject implements MKAnnotation {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():MKMapFeatureAnnotation;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var featureType(get, never) : MKMapFeatureType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_featureType():MKMapFeatureType;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var iconStyle(get, never) : Null<MKIconStyle>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_iconStyle():Null<MKIconStyle>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	var pointOfInterestCategory(get, never) : Null<NSStringArg>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function get_pointOfInterestCategory():Null<NSStringArg>;
 	var coordinate(get, never) : CLLocationCoordinate2D;
 	function get_coordinate():CLLocationCoordinate2D;

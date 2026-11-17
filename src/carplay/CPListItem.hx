@@ -53,8 +53,11 @@ import uikit.UIImage;
 	var showsExplicitLabel(get, set) : Bool;
 	function get_showsExplicitLabel():Bool;
 	function set_showsExplicitLabel(v:Bool):Bool;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	var playbackConfiguration(get, set) : Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function get_playbackConfiguration():Null<CPPlaybackConfiguration>;
+	@:hxmc.available(ios >= 26.4, maccatalyst >= 26.4)
 	function set_playbackConfiguration(v:Null<CPPlaybackConfiguration>):Null<CPPlaybackConfiguration>;
 	overload function initWithText(text:Null<NSStringArg>, detailText:Null<NSStringArg>, image:Null<UIImage>, accessoryImage:Null<UIImage>, accessoryType:CPListItemAccessoryType):CPListItem;
 	overload function initWithText(text:Null<NSStringArg>, detailText:Null<NSStringArg>, image:Null<UIImage>):CPListItem;

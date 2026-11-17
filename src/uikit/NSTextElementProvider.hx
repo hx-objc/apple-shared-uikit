@@ -6,16 +6,24 @@ import foundation.NSError;
 import hxmc.I64;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextElementProvider") extern interface NSTextElementProvider extends NSObjectProtocol {
+@:hxmc.objc("NSTextElementProvider") @:hxmc.available(macos >= 12.0) extern interface NSTextElementProvider extends NSObjectProtocol {
+	@:hxmc.available(macos >= 12.0)
 	var documentRange(get, never) : NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function get_documentRange():NSTextRange;
+	@:hxmc.available(macos >= 12.0)
 	function enumerateTextElementsFromLocation(textLocation:Null<NSTextLocation>, options:NSTextContentManagerEnumerationOptions, usingBlock:NSTextElement -> Bool):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	function replaceContentsInRange(range:NSTextRange, withTextElements:Null<NSArray<NSTextElement>>):Void;
+	@:hxmc.available(macos >= 12.0)
 	function synchronizeToBackingStore(completionHandler:Null<Null<NSError> -> Void>):Void;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function locationFromLocation(location:NSTextLocation, withOffset:I64):Null<NSTextLocation>;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function offsetFromLocation(from:NSTextLocation, toLocation:NSTextLocation):I64;
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function adjustedRangeFromRange(textRange:NSTextRange, forEditingTextSelection:Bool):Null<NSTextRange>;
 }

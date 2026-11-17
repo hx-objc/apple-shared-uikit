@@ -6,20 +6,25 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("NSTextLayoutManagerDelegate") extern interface NSTextLayoutManagerDelegate extends NSObjectProtocol {
+@:hxmc.objc("NSTextLayoutManagerDelegate") @:hxmc.available(macos >= 12.0) extern interface NSTextLayoutManagerDelegate extends NSObjectProtocol {
 	@:selector("textLayoutManager:textLayoutFragmentForLocation:inTextElement:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textLayoutManagerTextLayoutFragmentForLocationInTextElement(textLayoutManager:NSTextLayoutManager, textLayoutFragmentForLocation:NSTextLocation, inTextElement:NSTextElement):NSTextLayoutFragment;
 	@:selector("textLayoutManager:shouldBreakLineBeforeLocation:hyphenating:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textLayoutManagerShouldBreakLineBeforeLocationHyphenating(textLayoutManager:NSTextLayoutManager, shouldBreakLineBeforeLocation:NSTextLocation, hyphenating:Bool):Bool;
 	@:selector("textLayoutManager:renderingAttributesForLink:atLocation:defaultAttributes:")
+	@:hxmc.available(macos >= 12.0)
 	@:optional
 	function textLayoutManagerRenderingAttributesForLinkAtLocationDefaultAttributes(textLayoutManager:NSTextLayoutManager, renderingAttributesForLink:Id, atLocation:NSTextLocation, defaultAttributes:NSDictionary<NSString, Id>):Null<NSDictionary<NSString, Id>>;
 	@:selector("textLayoutManager:cacheTextAttachmentViewProvider:forTextAttachment:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function textLayoutManagerCacheTextAttachmentViewProviderForTextAttachment(textLayoutManager:NSTextLayoutManager, cacheTextAttachmentViewProvider:NSTextAttachmentViewProvider, forTextAttachment:NSTextAttachment):Void;
 	@:selector("textLayoutManager:retrieveCachedTextAttachmentViewProviderForTextAttachment:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function textLayoutManagerRetrieveCachedTextAttachmentViewProviderForTextAttachment(textLayoutManager:NSTextLayoutManager, retrieveCachedTextAttachmentViewProviderForTextAttachment:NSTextAttachment):Null<NSTextAttachmentViewProvider>;
 }

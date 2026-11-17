@@ -25,6 +25,7 @@ import uikit.UIViewController;
 	function setMessageBody(body:NSStringArg, isHTML:Bool):Void;
 	function addAttachmentData(attachment:NSData, mimeType:NSStringArg, fileName:NSStringArg):Void;
 	function setPreferredSendingEmailAddress(emailAddress:NSStringArg):Void;
+	@:hxmc.available(ios >= 18.4, maccatalyst >= 18.4)
 	function insertCollaborationItemProvider(itemProvider:NSItemProvider, completionHandler:Bool -> Void):Void;
 	override function init():MFMailComposeViewController;
 	override function initWithCoder(coder:NSCoder):Null<MFMailComposeViewController>;

@@ -50,8 +50,11 @@ import uikit.UIView;
 	var depthStencilPixelFormat(get, set) : MTLPixelFormat;
 	function get_depthStencilPixelFormat():MTLPixelFormat;
 	function set_depthStencilPixelFormat(v:MTLPixelFormat):MTLPixelFormat;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	var depthStencilStorageMode(get, set) : MTLStorageMode;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function get_depthStencilStorageMode():MTLStorageMode;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function set_depthStencilStorageMode(v:MTLStorageMode):MTLStorageMode;
 	var sampleCount(get, set) : I64;
 	function get_sampleCount():I64;
@@ -71,7 +74,9 @@ import uikit.UIView;
 	function get_multisampleColorTexture():Null<MTLTexture>;
 	var currentRenderPassDescriptor(get, never) : Null<MTLRenderPassDescriptor>;
 	function get_currentRenderPassDescriptor():Null<MTLRenderPassDescriptor>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	var currentMTL4RenderPassDescriptor(get, never) : Null<MTL4RenderPassDescriptor>;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function get_currentMTL4RenderPassDescriptor():Null<MTL4RenderPassDescriptor>;
 	var preferredFramesPerSecond(get, set) : I64;
 	function get_preferredFramesPerSecond():I64;
@@ -93,7 +98,9 @@ import uikit.UIView;
 	@:selector("isPaused")
 	function get_paused():Bool;
 	function set_paused(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	var residencySet(get, never) : MTLResidencySet;
+	@:hxmc.available(macos >= 26.4, ios >= 26.4, maccatalyst >= 26.4)
 	function get_residencySet():MTLResidencySet;
 	@:selector("initWithFrame:device:")
 	function initWithFrameDevice(frameRect:CGRect, device:Null<MTLDevice>):MTKView;

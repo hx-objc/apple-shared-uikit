@@ -7,11 +7,17 @@ import foundation.NSError;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("AVFoundation") @:hxmc.objc extern class AVSampleBufferGenerator extends NSObject {
+@:hxmc.framework("AVFoundation") @:hxmc.objc @:hxmc.available(ios >= 16.0, maccatalyst >= 16.0) extern class AVSampleBufferGenerator extends NSObject {
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function alloc():AVSampleBufferGenerator;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	function initWithAsset(asset:AVAsset, timebase:Null<CMTimebase>):AVSampleBufferGenerator;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function createSampleBufferForRequest(request:AVSampleBufferRequest, error:Ptr):Null<CMSampleBuffer>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	function makeBatch():AVSampleBufferGeneratorBatch;
+	@:hxmc.available(macos >= 13.0, ios >= 16.0, maccatalyst >= 16.0)
 	overload function createSampleBufferForRequest(request:AVSampleBufferRequest, addingToBatch:AVSampleBufferGeneratorBatch, error:Ptr):Null<CMSampleBuffer>;
+	@:hxmc.available(ios >= 16.0, maccatalyst >= 16.0)
 	static function notifyOfDataReadyForSampleBuffer(sbuf:CMSampleBuffer, completionHandler:(Bool, Null<NSError>) -> Void):Void;
 }

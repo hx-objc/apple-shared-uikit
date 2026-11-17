@@ -9,18 +9,29 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRAcousticSettings extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 26.0, maccatalyst >= 26.0) extern class SRAcousticSettings extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	static function alloc():SRAcousticSettings;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var environmentalSoundMeasurementsEnabled(get, never) : Bool;
 	@:selector("isEnvironmentalSoundMeasurementsEnabled")
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_environmentalSoundMeasurementsEnabled():Bool;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var audioExposureSampleLifetime(get, never) : SRAcousticSettingsSampleLifetime;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_audioExposureSampleLifetime():SRAcousticSettingsSampleLifetime;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var headphoneSafetyAudioLevel(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_headphoneSafetyAudioLevel():Null<NSNumberArg>;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var musicEQSettings(get, never) : SRAcousticSettingsMusicEQ;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_musicEQSettings():SRAcousticSettingsMusicEQ;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var accessibilitySettings(get, never) : SRAcousticSettingsAccessibility;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	function get_accessibilitySettings():SRAcousticSettingsAccessibility;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;

@@ -4,21 +4,37 @@ package sensorkit;
 import hxmc.I64;
 
 enum abstract SRAcousticSettingsAccessibilityBackgroundSoundsName(I64) to I64 {
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BalancedNoise = 1;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var BrightNoise = 2;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var DarkNoise = 3;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Ocean = 4;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Rain = 5;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Stream = 6;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Night = 7;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Fire = 8;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Babble = 9;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Steam = 10;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Airplane = 11;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Boat = 12;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Bus = 13;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var Train = 14;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var RainOnRoof = 15;
+	@:hxmc.available(ios >= 26.0, maccatalyst >= 26.0)
 	var QuietNight = 16;
 	inline function new(v:I64) this = v;
 }

@@ -9,6 +9,7 @@ import objc.NSObject;
 
 @:hxmc.framework("OSLog") @:hxmc.objc extern class OSLogStore extends NSObject {
 	static function alloc():OSLogStore;
+	@:hxmc.available(macos >= 12.0)
 	static function storeWithScope(scope:OSLogStoreScope, error:Ptr):Null<OSLogStore>;
 	static function storeWithURL(url:NSURL, error:Ptr):Null<OSLogStore>;
 	function entriesEnumeratorWithOptions(options:OSLogEnumeratorOptions, position:Null<OSLogPosition>, predicate:Null<NSPredicate>, error:Ptr):Null<OSLogEnumerator>;

@@ -6,17 +6,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UISplitArrangementViewProperties extends NSObject implements NSCopying {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 27.1, maccatalyst >= 27.1) extern class UISplitArrangementViewProperties extends NSObject implements NSCopying {
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	static function alloc():UISplitArrangementViewProperties;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var width(get, set) : UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_width():UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_width(v:UISplitArrangementDimensionRange):UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var height(get, set) : UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_height():UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_height(v:UISplitArrangementDimensionRange):UISplitArrangementDimensionRange;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	var layoutPriority(get, set) : Float;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function get_layoutPriority():Float;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	function set_layoutPriority(v:Float):Float;
+	@:hxmc.available(ios >= 27.1, maccatalyst >= 27.1)
 	override function init():UISplitArrangementViewProperties;
 	function copyWithZone(zone:Ptr):Id;
 }

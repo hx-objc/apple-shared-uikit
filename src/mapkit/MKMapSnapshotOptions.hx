@@ -10,8 +10,11 @@ import uikit.UITraitCollection;
 
 @:hxmc.framework("MapKit") @:hxmc.objc extern class MKMapSnapshotOptions extends NSObject implements NSCopying {
 	static function alloc():MKMapSnapshotOptions;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var preferredConfiguration(get, set) : MKMapConfiguration;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_preferredConfiguration():MKMapConfiguration;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_preferredConfiguration(v:MKMapConfiguration):MKMapConfiguration;
 	var camera(get, set) : MKMapCamera;
 	function get_camera():MKMapCamera;

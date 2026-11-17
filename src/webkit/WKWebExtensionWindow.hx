@@ -6,25 +6,35 @@ import foundation.NSArray;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("WKWebExtensionWindow") extern interface WKWebExtensionWindow extends NSObjectProtocol {
+@:hxmc.objc("WKWebExtensionWindow") @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern interface WKWebExtensionWindow extends NSObjectProtocol {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function tabsForWebExtensionContext(context:WKWebExtensionContext):NSArray<WKWebExtensionTab>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function activeTabForWebExtensionContext(context:WKWebExtensionContext):Null<WKWebExtensionTab>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function windowTypeForWebExtensionContext(context:WKWebExtensionContext):WKWebExtensionWindowType;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function windowStateForWebExtensionContext(context:WKWebExtensionContext):WKWebExtensionWindowState;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setWindowState(state:WKWebExtensionWindowState, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function isPrivateForWebExtensionContext(context:WKWebExtensionContext):Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function frameForWebExtensionContext(context:WKWebExtensionContext):CGRect;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function setFrame(frame:CGRect, forWebExtensionContext:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function focusForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function closeForWebExtensionContext(context:WKWebExtensionContext, completionHandler:Null<NSError> -> Void):Void;
 }

@@ -34,6 +34,7 @@ import hxmc.unsafe.Float32;
 	@:selector("setHyphenationFactor:")
 	function set_hyphenationFactor(v:Float32):Void;
 	@:selector("setUsesDefaultHyphenation:")
+	@:hxmc.available(macos >= 12.0)
 	function set_usesDefaultHyphenation(v:Bool):Void;
 	@:selector("setTabStops:")
 	function set_tabStops(v:NSArray<NSTextTab>):Void;

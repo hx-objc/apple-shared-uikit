@@ -9,27 +9,44 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("UIKit") @:hxmc.objc extern class UIShadowProperties extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("UIKit") @:hxmc.objc @:hxmc.available(ios >= 18.0, maccatalyst >= 18.0) extern class UIShadowProperties extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	static function alloc():UIShadowProperties;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var color(get, set) : UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_color():UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_color(v:UIColor):UIColor;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var opacity(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_opacity():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_opacity(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var radius(get, set) : Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_radius():Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_radius(v:Float):Float;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var offset(get, set) : CGSize;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_offset():CGSize;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_offset(v:CGSize):CGSize;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	var path(get, set) : Null<UIBezierPath>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function get_path():Null<UIBezierPath>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	function set_path(v:Null<UIBezierPath>):Null<UIBezierPath>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<UIShadowProperties>;
+	@:hxmc.available(ios >= 18.0, maccatalyst >= 18.0)
 	override function init():UIShadowProperties;
 }

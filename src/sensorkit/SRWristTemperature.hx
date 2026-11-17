@@ -11,15 +11,24 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("SensorKit") @:hxmc.objc extern class SRWristTemperature extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("SensorKit") @:hxmc.objc @:hxmc.available(ios >= 17.0, maccatalyst >= 17.0) extern class SRWristTemperature extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():SRWristTemperature;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var timestamp(get, never) : NSDate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_timestamp():NSDate;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var value(get, never) : NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_value():NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var condition(get, never) : SRWristTemperatureCondition;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_condition():SRWristTemperatureCondition;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	var errorEstimate(get, never) : NSMeasurement<NSUnitTemperature>;
+	@:hxmc.available(ios >= 17.0, maccatalyst >= 17.0)
 	function get_errorEstimate():NSMeasurement<NSUnitTemperature>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
